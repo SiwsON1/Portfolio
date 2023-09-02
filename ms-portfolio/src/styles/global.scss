@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotateAndMove {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-50vh) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+
+  .animate-your-animation {
+    animation: rotateAndMove 5s infinite linear;
+  }
+
+  .animate-orbit {
+    position: absolute;
+    animation: orbit 5s infinite linear;
+    transform-origin: 300px 300px; /* Oś rotacji, możesz dostosować */
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
