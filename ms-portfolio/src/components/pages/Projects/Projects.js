@@ -17,16 +17,16 @@ const Projects = () => {
     itemsLeft.forEach((item) => {
       gsap.fromTo(
         item,
-        { opacity: 0, x: -60 },
+        { opacity: 0, x: -70 },
         {
           opacity: 1,
-          x: 0,
-          duration: 2, // Dodane trwanie animacji
+          x: -10,
+          duration: 1,
           scrollTrigger: {
             trigger: item,
-            start: "top bottom",
+            start: "top bottom ",
             end: "bottom top",
-            scrub: 1.2, // Zmienione na 1.2 z 0.9
+            scrub: 0.5,
 
           },
         }
@@ -40,16 +40,16 @@ const Projects = () => {
     itemsRight.forEach((item) => {
       gsap.fromTo(
         item,
-        { opacity: 0, x: 60 },
+        { opacity: 0, x: 70 },
         {
           opacity: 1,
-          x: 0,
-          duration: 2, // Dodane trwanie animacji
+          x: 10,
+          duration: 1,
           scrollTrigger: {
             trigger: item,
             start: "top bottom",
-            end: "bottom top - 20",
-            scrub: 1.2, // Zmienione na 1.2 z 0.9
+            end: "bottom top",
+            scrub: 0.3,
 
           },
         }
@@ -68,7 +68,7 @@ const Projects = () => {
             </h1>
             <main className={`${styles.gallery} flex`}>
               <div
-                data-speed="0.5"
+                data-speed="0.2"
                 className={`${styles.galleryLeft} flex flex-col items-center`}
               >
                 <a
@@ -139,6 +139,57 @@ const Projects = () => {
                     </div>
                   </div>
                 </a>
+                <a
+                  href="https://github.com/SiwsON1/Weather-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                  >
+                    <img src="/Portfolio9.png" alt="Alt" />
+                    <div className={`${styles.hoverOverlay}`}>
+                      <div className={`${styles.hoverContent}`}>
+                        <p>Weather-checking App</p>
+                        <p>React / External API</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                    href="https://github.com/SiwsON1/react-product-personalizer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                    >
+                      <img src="/Portfolio11.png" alt="Alt" />
+                      <div className={`${styles.hoverOverlay}`}>
+                        <div className={`${styles.hoverContent}`}>
+                          <p>Component for customizing T-shirt products</p>
+                          <p>React</p>
+                        </div>
+                      </div>
+                    </div>
+                </a>
+                <a
+                    href="https://github.com/SiwsON1/project-pizzeria"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                    >
+                      <img src="/Portfolio13.png" alt="Alt" />
+                      <div className={`${styles.hoverOverlay}`}>
+                        <div className={`${styles.hoverContent}`}>
+                          <p>Pizzeria</p>
+                          <p>CSS / JavaScript / Html</p>
+                        </div>
+                      </div>
+                    </div>
+                </a>
               </div>
               <div
                 data-speed="0.3"
@@ -200,6 +251,57 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
+                </a>
+                <a
+                  href="https://github.com/SiwsON1/PortraitMaster-Vulnerabilities"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                  >
+                    <img src="/Portfolio8.png" alt="Alt" />
+                    <div className={`${styles.hoverOverlay}`}>
+                      <div className={`${styles.hoverContent}`}>
+                        <p>Real-Time To-Do List</p>
+                        <p>React / Socket.io</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/SiwsON1/react-prework"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                  >
+                    <img src="/Portfolio10.png" alt="Alt" />
+                    <div className={`${styles.hoverOverlay}`}>
+                      <div className={`${styles.hoverContent}`}>
+                        <p>To-do list with column-based categorization</p>
+                        <p>React / Webpack</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                    href="https://github.com/SiwsON1/Project-musicService"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`${styles.galleryItem} ${styles.hoverContainer}`}
+                    >
+                      <img src="/Portfolio12.png" alt="Alt" />
+                      <div className={`${styles.hoverOverlay}`}>
+                        <div className={`${styles.hoverContent}`}>
+                          <p>Music service application</p>
+                          <p>CSS / JavaScript / Handlebars / Bootstrap</p>
+                        </div>
+                      </div>
+                    </div>
                 </a>
               </div>
             </main>
