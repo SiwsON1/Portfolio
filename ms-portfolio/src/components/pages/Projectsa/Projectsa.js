@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import styles from "./Projects.module.scss";
+import styles from "./Projectsa.module.scss";
 import Transition from "../../features/Transition/Transition";
 import  {gsap}  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -92,7 +92,7 @@ const rightGalleryItems = [
   },
 ];
 
-const Projects = () => {
+const Projectsa = () => {
   useEffect(() => {
 
      // Dla prawej galerii
@@ -116,7 +116,7 @@ const Projects = () => {
         }
       );
     });
-    
+
     const itemsLeft = gsap.utils.toArray(
       `.${styles.galleryLeft.replace("+", "\\+")} .${styles.galleryItem.replace(
         "+",
@@ -221,4 +221,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Projectsa;
