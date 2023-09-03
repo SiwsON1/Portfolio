@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="h-full w-full rounded-full backdrop-filter backdrop-blur-sm bg-opacity-50 p-3 text-white border-b-4 border-neon">
+    <nav className="h-full w-full rounded-full backdrop-filter backdrop-blur-sm bg-opacity-50 p-3 text-white ">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <RouterLink to="/" className="text-2xl font-bold text-center md:text-left cursor-pointer">
           Marcin Siwonia
@@ -31,7 +31,7 @@ const Navbar = () => {
           ].map(({ Icon, href, tooltip, newTab }, index) => (
             <div
               key={index}
-              className={`group hover:bg-main hover:w-36 transition-all ease-in-out duration-300 active:opacity-90 focus-visible:outline-black focus-visible:outline-offset-1 flex items-center ${activeHref === href ? 'text-yellow-400' : 'text-white'}`}
+              className={`group  hover:w-36 transition-all ease-in-out duration-300 active:opacity-90 focus-visible:outline-black focus-visible:outline-offset-1 flex items-center ${activeHref === href ? 'text-yellow-400' : 'text-white'}`}
               onMouseOver={() => handleMouseOver(href)}
               onMouseOut={handleMouseOut}
             >

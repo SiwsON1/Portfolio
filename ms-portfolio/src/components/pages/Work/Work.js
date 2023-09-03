@@ -123,7 +123,7 @@ const Work = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="flex flex-col items-center p-4 transition duration-300 hover:bg-main3 rounded-lg group"
+            className="flex flex-col items-center p-4 transition duration-300 hover:bg-main rounded-lg group"
           >
             <div className="flex items-start">
               <img

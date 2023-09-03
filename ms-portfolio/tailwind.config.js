@@ -39,6 +39,7 @@ module.exports = {
         'main2':'#342a75',
         'main3':'#3c3183',
         'green1': '#1DB954',
+        'green2': '#77dd77',
         'pink':'#e838cc',
       },
       backgroundImage: {
