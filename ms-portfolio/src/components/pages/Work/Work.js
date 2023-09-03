@@ -1,5 +1,5 @@
 import React from "react";
-
+import Transition from "../../features/Transition/Transition";
 const Portfolio = [
   {
     image: "/Portfolio1.png",
@@ -109,6 +109,7 @@ const Portfolio = [
 const Work = () => {
   return (
     <div className="mt-40 items-center justify-center">
+        <Transition />
       <h1 className="text-4xl font-bold text-center mb-12">My Work</h1>
       <p className="text-center mb-24 w-1/2 mx-auto md:text-lg">
         This section showcases a curated collection of my projects, mostly
