@@ -110,8 +110,8 @@ $gallery-gap-fixed: 162px;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to right, transparent 0%, #4a22bd 15%, #e838cc 50%, #4a22bd 85%, transparent 100%);
-	opacity: 0; 
+	background: linear-gradient(to right, transparent , #e838cc, transparent);
+	opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -183,14 +183,5 @@ $gallery-gap-fixed: 162px;
 	  border-radius: 5px;
 	  font-size: 14px;
 	  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-	}
-  }
-
-  @keyframes gradient-animation {
-	0% {
-	  background: linear-gradient(90deg, transparent, #4a22bd,#e838cc, transparent);
-	}
-	100% {
-	  background: linear-gradient(0deg, transparent, #4a22bd,#e838cc, transparent);
 	}
   }

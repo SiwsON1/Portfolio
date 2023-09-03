@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <div className="font-titillium text-white bg-site1 h-full w-full bg-cover bg-center min-h-screen">
+    <div className="font-neueMontreal text-white bg-site1 h-full w-full bg-cover bg-center min-h-screen">
       <div className="container mx-auto px-4">
         <Router>
           <Header />

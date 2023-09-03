@@ -54,6 +54,7 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'titillium': ['Titillium Web', 'sans-serif'],
+        'neueMontreal': ['Neue Montreal', 'sans-serif']
       },
     },
   },
