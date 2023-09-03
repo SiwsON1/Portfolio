@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Projects.module.scss";
 import Transition from "../../features/Transition/Transition";
-gsap.registerPlugin(ScrollTrigger);
+
 
 const leftGalleryItems = [
   {
@@ -94,6 +94,8 @@ const rightGalleryItems = [
 const Projects = () => {
   useEffect(() => {
     // Dla lewej galerii
+    gsap.registerPlugin(ScrollTrigger);
+
     const itemsLeft = gsap.utils.toArray(
       `.${styles.galleryLeft.replace("+", "\\+")} .${styles.galleryItem.replace(
         "+",
@@ -125,7 +127,7 @@ const Projects = () => {
     itemsRight.forEach((item) => {
       gsap.fromTo(
         item,
-        { opacity: 0, x: 100 },
+        { opacity: 0, x: 70 },
         {
           opacity: 1,
           x: 10,
