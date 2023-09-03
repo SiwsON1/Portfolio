@@ -1,5 +1,6 @@
 import React from 'react';
 import 'devicon/devicon.min.css';
+import Transition from '../Transition/Transition';
 
 const skills = {
     frontend: [
@@ -35,6 +36,7 @@ const skills = {
 
   const Skills = () => (
     <div  className="p-8">
+      <Transition />
     <h1 className="text-4xl font-bold mb-20 mt-20 text-center">Skills</h1>
     <div className="flex flex-col sm:flex-row flex-wrap justify-center space-y-4 sm:space-y-0 sm:space-x-4">
       <div className="relative flex flex-col p-4 w-full sm:w-[calc(50%-0.5rem)] h-auto md:h-[50vh] flex-shrink-0 mb-4 sm:mb-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100">
