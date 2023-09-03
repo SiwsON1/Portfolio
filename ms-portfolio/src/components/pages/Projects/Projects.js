@@ -134,7 +134,7 @@ const Projects = () => {
             trigger: item,
             start: "top bottom",
             end: "bottom top",
-            scrub: 3,
+            scrub: 1.4,
           },
         }
       );
