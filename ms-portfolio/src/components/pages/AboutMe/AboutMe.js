@@ -1,6 +1,5 @@
 import React from 'react';
 import Transition from '../../features/Transition/Transition';
-import Skills from "../../features/Skills/Skills";
 import Avatar from '../../visuals/Avatar/Avatar';
 
 const AboutMe = () => {
