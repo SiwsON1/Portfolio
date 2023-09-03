@@ -104,7 +104,7 @@ const Projects = () => {
       )}`
     );
     itemsLeft.forEach((item) => {
-      gsap.FromTo(
+      gsap.fromTo(
         item,
         { opacity: 0, x: -70 },
         {
@@ -126,7 +126,7 @@ const Projects = () => {
       `.${styles.galleryRight} .${styles.galleryItem}`
     );
     itemsRight.forEach((item) => {
-      gsap.FromTo(
+      gsap.fromTo(
         item,
         { opacity: 0, x: 70 },
         {
