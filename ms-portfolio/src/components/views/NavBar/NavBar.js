@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="h-full w-full rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-3 text-white">
+    <nav className="h-full w-full rounded-full backdrop-filter backdrop-blur-sm bg-opacity-50 p-3 text-white border-b-4 border-neon">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <RouterLink to="/" className="text-2xl font-bold text-center md:text-left cursor-pointer">
           Marcin Siwonia
@@ -37,7 +37,7 @@ const Navbar = () => {
             >
               {newTab ? (
                 <a href={href} target="_blank" rel="noopener noreferrer" className={`flex items-center`}>
-                  <Icon size={24} className={`h-9 w-auto animate-fadeIn ${activeHref === href ? 'text-gold' : 'text-white'}`} />
+                  <Icon size={24} className={`h-9 w-auto animate-fadeIn ${activeHref === href ? 'text-neon' : 'text-white'}`} />
                   {activeHref === href && (
                     <div className={'ml-3 text-white'}>
                       {tooltip}
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </a>
               ) : (
                 <RouterLink to={href} className={`flex items-center`}>
-                  <Icon size={24} className={`h-9 w-auto animate-fadeIn ${activeHref === href ? 'text-gold' : 'text-white'}`} />
+                  <Icon size={24} className={`h-9 w-auto animate-fadeIn ${activeHref === href ? 'text-neon' : 'text-white'}`} />
                   {activeHref === href && (
                     <div className={'ml-3 text-white'}>
                       {tooltip}

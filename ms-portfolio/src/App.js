@@ -4,6 +4,7 @@ import Header from './components/views/Header/Header';
 import AboutMe from './components/pages/AboutMe/AboutMe';
 import Masik from './components/pages/Masik/Masik';
 import Skills from "./components/features/Skills/Skills";
+import Work from "./components/pages/Work/Work";
 import Projectsa from "./components/pages/Projectsa/Projectsa";
 
 
@@ -18,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Masik />} />
             <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/projects" element={<Projectsa />} />
+            <Route path="/projects" element={<Work />} />
             <Route path="/skills" element={<Skills />} />
           </Routes>
         </Router>

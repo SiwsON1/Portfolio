@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
 <>
 <Transition />
-<div className="relative flex items-center justify-center h-screen">
+<div className=" relative flex items-center justify-center h-screen">
       <div className="absolute top-0 right-0 z-0">
       </div>
       <div className="relative flex flex-col xl:flex-row p-8 w-full xl:w-[66vw] h-[66vh] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100">
@@ -19,7 +19,7 @@ const AboutMe = () => {
           <h1>About Me</h1>
         </div>
         <div className="flex flex-col items-center xl:items-start xl:ml-auto justify-center text-center xl:text-left space-y-2 sm:space-y-4 mt-6 sm:mt-6 md:mt-5 md:space-y-6 xl:space-y-8 w-full xl:w-1/2">
-          <div className="mt-2 sm:mt-4 md:mt-6 xl:mt-8 text-white text-sm sm:text-base md:text-lg max-w-xs md:max-w-sm lg:max-w-md">
+          <div className="mt-2 sm:mt-2 md:mt-6 xl:mt-8 text-white text-sm sm:text-sm md:text-base xl:text-xl max-w-xs md:max-w-sm lg:max-w-md">
             <p>
               From an early age, I've been captivated by computers, but it
               wasn't until my college years that I discovered a true passion for

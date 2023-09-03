@@ -35,6 +35,11 @@ module.exports = {
         'green': '#0f9b0f',
         'neon': '#03e9f4',
         'main': '#2e2257',
+        'main1':'#4a3f9e',
+        'main2':'#342a75',
+        'main3':'#3c3183',
+        'green1': '#1DB954',
+        'pink':'#e838cc',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
@@ -49,14 +54,20 @@ module.exports = {
         'spin-slow': 'spin 6s linear infinite',
       },
       boxShadow: {
-        'neon': '0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4'
+        'neon': '0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4',
+        'inset': 'inset 0 0 10px #000000'
+      },
+      borderWidth: {
+        '4': '4px',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'titillium': ['Titillium Web', 'sans-serif'],
         'neueMontreal': ['Neue Montreal', 'sans-serif']
       },
+
     },
+
   },
   plugins: [],
 }
