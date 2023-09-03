@@ -125,7 +125,7 @@ const Projects = () => {
     itemsRight.forEach((item) => {
       gsap.fromTo(
         item,
-        { opacity: 0, x: 70 },
+        { opacity: 0, x: 100 },
         {
           opacity: 1,
           x: 10,
@@ -134,7 +134,7 @@ const Projects = () => {
             trigger: item,
             start: "top bottom",
             end: "bottom top",
-            scrub: 0.3,
+            scrub: 3,
           },
         }
       );
@@ -177,7 +177,7 @@ const Projects = () => {
                 ))}
               </div>
               <div
-                data-speed="0.3"
+                data-speed="0.9"
                 className={`${styles.galleryRight} flex flex-col items-center`}
               >
                 <div className={`${styles.textBlock} ${styles.galleryItem}`}>
@@ -199,7 +199,7 @@ const Projects = () => {
                     <div
                       className={`${styles.galleryItem} ${styles.hoverContainer}`}
                     >
-                      <img src={item.image} alt={item.description} />
+                      <img src={item.image} alt={item.description}/>
                       <div className={`${styles.hoverOverlay}`}>
                         <div className={`${styles.hoverContent}  text-xs sm:text-xs md:text-base lg:text-xl`}>
                           <p>{item.description}</p>
