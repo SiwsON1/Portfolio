@@ -4,7 +4,7 @@ import Transition from "../../features/Transition/Transition";
 import  {gsap}  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 const leftGalleryItems = [
   {
@@ -94,7 +94,29 @@ const rightGalleryItems = [
 
 const Projects = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+
+     // Dla prawej galerii
+     const itemsRight = gsap.utils.toArray(
+      `.${styles.galleryRight} .${styles.galleryItem}`
+    );
+    itemsRight.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, x: 70 },
+        {
+          opacity: 1,
+          x: 10,
+          duration: 1,
+          scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.7,
+          },
+        }
+      );
+    });
+    
     const itemsLeft = gsap.utils.toArray(
       `.${styles.galleryLeft.replace("+", "\\+")} .${styles.galleryItem.replace(
         "+",
@@ -119,27 +141,7 @@ const Projects = () => {
       );
     });
 
-    // Dla prawej galerii
-    const itemsRight = gsap.utils.toArray(
-      `.${styles.galleryRight} .${styles.galleryItem}`
-    );
-    itemsRight.forEach((item) => {
-      gsap.fromTo(
-        item,
-        { opacity: 0, x: 70 },
-        {
-          opacity: 1,
-          x: 10,
-          duration: 1,
-          scrollTrigger: {
-            trigger: item,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.7,
-          },
-        }
-      );
-    });
+
   }, []);
 
   return (
