@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/views/Header/Header';
 import AboutMe from './components/pages/AboutMe/AboutMe';
-import Projects from "./components/pages/Projects/Projects";
 import Masik from './components/pages/Masik/Masik';
 import Skills from "./components/features/Skills/Skills";
-
+import Projects from "./components/pages/Projects/Projects";
 
 
 function App() {
