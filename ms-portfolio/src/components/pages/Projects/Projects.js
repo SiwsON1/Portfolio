@@ -5,6 +5,92 @@ import styles from "./Projects.module.scss";
 import Transition from "../../features/Transition/Transition";
 gsap.registerPlugin(ScrollTrigger);
 
+const leftGalleryItems = [
+  {
+    image: "/Portfolio1.png",
+    description: "Full-Stack e-commerce App",
+    techStack: "NestJS / React / MySQL",
+    url: "https://github.com/SiwsON1/Great_Shirt_App",
+  },
+  {
+    image: "/Portfolio3.png",
+    description: "Simple Chat-App",
+    techStack: "WebSocket / NestJS",
+    url: "https://github.com/SiwsON1/Chat-with-friends",
+  },
+  {
+    image: "/Portfolio2.png",
+    description: "Full-Stack CRUD App",
+    techStack: "NestJS / React / MongoDB",
+    url: "https://github.com/SiwsON1/Announcements_Wall/",
+  },
+  {
+    image: "/Portfolio4.png",
+    description: "Full-Stack Concert App",
+    techStack: "MongoDB / CloudDB / WebSocket",
+    url: "https://github.com/SiwsON1/rest-api-practice",
+  },
+  {
+    image: "/Portfolio9.png",
+    description: "Weather-checking App",
+    techStack: "React / External API",
+    url: "https://github.com/SiwsON1/Weather-app/",
+  },
+  {
+    image: "/Portfolio11.png",
+    description: "Component for customizing T-shirt products",
+    techStack: "React",
+    url: "https://github.com/SiwsON1/react-product-personalizer",
+  },
+  {
+    image: "/Portfolio13.png",
+    description: "Pizzeria",
+    techStack: "CSS / JavaScript / Html",
+    url: "https://github.com/SiwsON1/project-pizzeria",
+  },
+];
+
+const rightGalleryItems = [
+  {
+    image: "/Portfolio6.png",
+    description: "Frontend Blog App",
+    techStack: "React / Redux",
+    url: "https://github.com/SiwsON1/react-workshop-blog",
+  },
+  {
+    image: "/Portfolio5.png",
+    description: "Dashboard for waitstaff",
+    techStack:
+      "This application serves as an extension to existing pizzeria module",
+    extraInfo: "React / Redux",
+    url: "https://github.com/SiwsON1/pizzeria-waiters-app",
+  },
+  {
+    image: "/Portfolio7.png",
+    description: "Secured Application",
+    techStack: "React / Redux / Express",
+    url: "https://github.com/SiwsON1/PortraitMaster-Vulnerabilities",
+  },
+  {
+    image: "/Portfolio8.png",
+    description: "Real-Time To-Do List",
+    techStack: "React / Socket.io",
+    url: "https://github.com/SiwsON1/PortraitMaster-Vulnerabilities",
+  },
+  {
+    image: "/Portfolio10.png",
+    description: "To-do list with column-based categorization",
+    techStack: "React / Webpack",
+    url: "https://github.com/SiwsON1/react-prework",
+  },
+  {
+    image: "/Portfolio12.png",
+    description: "Music service application",
+    techStack: "CSS / JavaScript / Handlebars / Bootstrap",
+    url: "https://github.com/SiwsON1/Project-musicService",
+  },
+];
+
 const Projects = () => {
   useEffect(() => {
     // Dla lewej galerii
@@ -27,7 +113,6 @@ const Projects = () => {
             start: "top bottom ",
             end: "bottom top",
             scrub: 0.5,
-
           },
         }
       );
@@ -50,7 +135,6 @@ const Projects = () => {
             start: "top bottom",
             end: "bottom top",
             scrub: 0.3,
-
           },
         }
       );
@@ -71,125 +155,26 @@ const Projects = () => {
                 data-speed="0.2"
                 className={`${styles.galleryLeft} flex flex-col items-center`}
               >
-                <a
-                  href="https://github.com/SiwsON1/Great_Shirt_App"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio1.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Full-Stack e-commerce App</p>
-                        <p>NestJS / React / MySQL</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/Chat-with-friends"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio3.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Simple Chat-App</p>
-                        <p>WebSocket / NestJS</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/Announcements_Wall/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio2.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Full-Stack CRUD App</p>
-                        <p>NestJS / React / MongoDB</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/rest-api-practice"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio4.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Full-Stack Concert App</p>
-                        <p>MongoDB / CloudDB / WebSocket</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/Weather-app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio9.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Weather-checking App</p>
-                        <p>React / External API</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                    href="https://github.com/SiwsON1/react-product-personalizer"
+                {leftGalleryItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <div
                       className={`${styles.galleryItem} ${styles.hoverContainer}`}
                     >
-                      <img src="/Portfolio11.png" alt="Alt" />
+                      <img src={item.image} alt={item.description} />
                       <div className={`${styles.hoverOverlay}`}>
-                        <div className={`${styles.hoverContent}`}>
-                          <p>Component for customizing T-shirt products</p>
-                          <p>React</p>
+                        <div className={`${styles.hoverContent} text-xs sm:text-xs md:text-base lg:text-xl`}>
+                          <p>{item.description}</p>
+                          <p>{item.techStack}</p>
                         </div>
                       </div>
                     </div>
-                </a>
-                <a
-                    href="https://github.com/SiwsON1/project-pizzeria"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div
-                      className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                    >
-                      <img src="/Portfolio13.png" alt="Alt" />
-                      <div className={`${styles.hoverOverlay}`}>
-                        <div className={`${styles.hoverContent}`}>
-                          <p>Pizzeria</p>
-                          <p>CSS / JavaScript / Html</p>
-                        </div>
-                      </div>
-                    </div>
-                </a>
+                  </a>
+                ))}
               </div>
               <div
                 data-speed="0.3"
@@ -197,112 +182,33 @@ const Projects = () => {
               >
                 <div className={`${styles.textBlock} ${styles.galleryItem}`}>
                   <p>
-                  This section showcases a curated collection of my projects, mostly focused on educational growth. For more details and live demos, visit the linked GitHub repositories. Projects are listed from newest to oldest, allowing you to track my learning journey as a web developer.
+                    This section showcases a curated collection of my projects,
+                    mostly focused on educational growth. For more details and
+                    live demos, visit the linked GitHub repositories. Projects
+                    are listed from newest to oldest, allowing you to track my
+                    learning journey as a web developer.
                   </p>
                 </div>
-                <a
-                  href="https://github.com/SiwsON1/react-workshop-blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio6.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Frontend Blog App</p>
-                        <p>React / Redux</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/pizzeria-waiters-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio5.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Dashboard for waitstaff </p>
-                        <p>This application serves as an extension to existing pizzeria module</p>
-                        <p>React / Redux</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/PortraitMaster-Vulnerabilities"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio7.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Secured Application</p>
-                        <p>React / Redux / Express</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/PortraitMaster-Vulnerabilities"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio8.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>Real-Time To-Do List</p>
-                        <p>React / Socket.io</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/SiwsON1/react-prework"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className={`${styles.galleryItem} ${styles.hoverContainer}`}
-                  >
-                    <img src="/Portfolio10.png" alt="Alt" />
-                    <div className={`${styles.hoverOverlay}`}>
-                      <div className={`${styles.hoverContent}`}>
-                        <p>To-do list with column-based categorization</p>
-                        <p>React / Webpack</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                    href="https://github.com/SiwsON1/Project-musicService"
+                {rightGalleryItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <div
                       className={`${styles.galleryItem} ${styles.hoverContainer}`}
                     >
-                      <img src="/Portfolio12.png" alt="Alt" />
+                      <img src={item.image} alt={item.description} />
                       <div className={`${styles.hoverOverlay}`}>
-                        <div className={`${styles.hoverContent}`}>
-                          <p>Music service application</p>
-                          <p>CSS / JavaScript / Handlebars / Bootstrap</p>
+                        <div className={`${styles.hoverContent}  text-xs sm:text-xs md:text-base lg:text-xl`}>
+                          <p>{item.description}</p>
+                          <p>{item.techStack}</p>
                         </div>
                       </div>
                     </div>
-                </a>
+                  </a>
+                ))}
               </div>
             </main>
           </div>

@@ -128,7 +128,7 @@ $gallery-gap-fixed: 162px;
 	color: white;
 	border-radius: 5px;
 	padding: 10px;
-	font-size: 1.2em;
+	//font-size: calc(1em + 0.5vw);
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 	opacity: 0;
   transform: translateY(50%);
