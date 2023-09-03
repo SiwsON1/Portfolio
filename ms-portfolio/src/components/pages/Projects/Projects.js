@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Projects.module.scss";
 import Transition from "../../features/Transition/Transition";
 
@@ -96,6 +96,7 @@ const Projects = () => {
     // Dla lewej galerii
     gsap.registerPlugin(ScrollTrigger);
 
+    console.log("ScrollTrigger", ScrollTrigger);
     const itemsLeft = gsap.utils.toArray(
       `.${styles.galleryLeft.replace("+", "\\+")} .${styles.galleryItem.replace(
         "+",
@@ -103,7 +104,7 @@ const Projects = () => {
       )}`
     );
     itemsLeft.forEach((item) => {
-      gsap.fromTo(
+      gsap.FromTo(
         item,
         { opacity: 0, x: -70 },
         {
@@ -125,7 +126,7 @@ const Projects = () => {
       `.${styles.galleryRight} .${styles.galleryItem}`
     );
     itemsRight.forEach((item) => {
-      gsap.fromTo(
+      gsap.FromTo(
         item,
         { opacity: 0, x: 70 },
         {
@@ -134,9 +135,9 @@ const Projects = () => {
           duration: 1,
           scrollTrigger: {
             trigger: item,
-            start: "top bottom",
+            start: "top bottom-1",
             end: "bottom top",
-            scrub: 1.3,
+            scrub: 0.7,
           },
         }
       );
