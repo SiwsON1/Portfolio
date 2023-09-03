@@ -34,6 +34,7 @@ module.exports = {
         'red' : '#ff0000',
         'green': '#0f9b0f',
         'neon': '#03e9f4',
+        'main': '#2e2257',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
