@@ -5,7 +5,6 @@ import AboutMe from './components/pages/AboutMe/AboutMe';
 import Masik from './components/pages/Masik/Masik';
 import Skills from "./components/features/Skills/Skills";
 import Work from "./components/pages/Work/Work";
-import Projectsa from "./components/pages/Projectsa/Projectsa";
 
 
 function App() {
