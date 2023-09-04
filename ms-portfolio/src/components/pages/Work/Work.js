@@ -109,7 +109,7 @@ const Portfolio = [
 const Work = () => {
   return (
     <div className="mt-40 items-center justify-center">
-        <Transition />
+      <Transition />
       <h1 className="text-4xl font-bold text-center mb-12">My Work</h1>
       <p className="text-center mb-24 w-1/2 mx-auto md:text-lg">
         This section showcases a curated collection of my projects, mostly
@@ -124,15 +124,15 @@ const Work = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="flex flex-col items-center p-4 transition duration-300 hover:bg-main rounded-lg group"
+            className="flex flex-col items-center p-4 transition duration-300 hover:bg-main2 rounded-lg group"
           >
-            <div className="flex items-start">
+            <div className="sm:flex sm:flex-col md:flex-row lg:flex-row xl:flex-row items-start">
               <img
                 src={project.image}
                 alt={project.title}
-                className="object-cover h-32 w-40 mb-4 rounded border-2 border-transparent group-hover:border-main" // Dodano group-hover:border-2 i group-hover:border-blue-500
+                className="object-cover sm:h-full sm:w-full md:h-32 lg:h-32 xl:h-32 md:w-40 lg:w-40 xl:w-40 mb-4 sm:mb-4 md:mb-0 lg:mb-0 xl:mb-0 rounded border-2 border-transparent group-hover:border-main"
               />
-              <div className="w-1/2 ml-4">
+              <div className="sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-4">
                 <h3 className="text-xl font-bold mb-2 text-center text-pink">
                   {project.title}
                 </h3>
@@ -155,5 +155,6 @@ const Work = () => {
     </div>
   );
 };
+
 
 export default Work;
