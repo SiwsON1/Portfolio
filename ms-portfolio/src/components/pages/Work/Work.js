@@ -1,6 +1,13 @@
 import React from "react";
 import Transition from "../../features/Transition/Transition";
 const Portfolio = [
+   {
+    "image": "/Portfolio0.png",
+    "title": "Fence Configurator for Galabau Darius",
+    "Description": "A Next.js application for a fencing and gardening company, showcasing services and projects with an instant quote feature, gallery, and admin panel. Built with Next.js, React, and secured by Clerk.",
+    "techStack": "Next.js / React / Clerk / Tailwind",
+    "url": "https://galabau-darius.de/",
+    },
   {
     image: "/Portfolio1.png",
     title: "Full-Stack e-commerce App",
