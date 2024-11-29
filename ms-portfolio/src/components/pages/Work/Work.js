@@ -3,126 +3,113 @@ import Transition from "../../features/Transition/Transition";
 const Portfolio = [
   {
     image: "/adshop.png",
-    title: "AdShop – Exclusive Discounts and Offers",
-    Description: "A WordPress-based website created for AdShop, a platform connecting users with exclusive discounts and offers across various categories, including hotels, health & beauty, and interior design. The site features a user-friendly search system, highlighted deals, and an intuitive interface for effortless navigation and engagement.",
+    title: "AdShop – Exclusive Discounts",
+    Description: "A WordPress site for a platform offering exclusive discounts across categories like hotels and health.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://ad-shop.pl/"
-},
-
+  },
   {
     image: "/adhotel.png",
-    title: "AdAwards – Marketing and Event Services for Hotels",
-    Description: "A WordPress-based website showcasing AdAwards' expertise in providing tailored marketing and event solutions for the hospitality industry. Featuring a portfolio of successful campaigns, including Google Ads, TikTok promotions, and custom web development, the site emphasizes innovative strategies designed to elevate hotel brands and drive engagement.",
+    title: "AdAwards – Hotel Marketing",
+    Description: "Showcasing tailored marketing strategies for the hospitality industry, including campaigns and web development.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://adhotel.pl/"
-},
-
+  },
   {
     image: "/admeble.png",
-    title: "AdAwards – Furniture Industry Marketing Agency",
-    Description: "A WordPress-based website showcasing AdAwards' expertise in marketing for the furniture industry. The site highlights services such as branding, web development, SEO, e-commerce solutions, and video production. With a modern design and client-focused approach, the platform features a portfolio of successful projects, client testimonials, and detailed service descriptions tailored to elevate furniture brands.",
+    title: "AdAwards – Furniture Marketing",
+    Description: "A site focusing on branding, SEO, and e-commerce for furniture brands, featuring successful projects.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://admeble.przedprojekt.com/"
-},
-
+  },
   {
     image: "/gumarkepno.png",
-    title: "Gumar Kępno – Truck Service and Maintenance",
-    Description: "A WordPress-based website for Gumar Kępno, a trusted truck service provider with over 35 years of experience. The site highlights their comprehensive services, including tachograph calibration, truck electromechanics, mobile service, and tire vulcanization. Designed for user convenience, it features detailed service descriptions, customer reviews, and easy access to contact information.",
+    title: "Gumar Kępno – Truck Services",
+    Description: "Comprehensive services for trucks, including tachograph calibration, electromechanics, and mobile service.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://www.gumarkepno.pl/"
-},
-
+  },
   {
     image: "/queenscarlet.png",
-    title: "Queen Scarlet – Advanced Beauty Treatments",
-    Description: "A WordPress-based website created for Queen Scarlet, a modern beauty clinic specializing in innovative treatments. The site showcases their services, including cryolipolysis, endermology, and laser collagen stimulation, performed with state-of-the-art equipment like LPG, Schwarz, and CoolTech. Designed to reflect luxury and professionalism, the platform offers detailed treatment descriptions, easy appointment booking, and customer-focused navigation.",
+    title: "Queen Scarlet – Beauty Clinic",
+    Description: "A website for a modern beauty clinic offering treatments like cryolipolysis and laser collagen stimulation.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://marcin.przedprojekt.com/QueenScarlet2/"
-},
-
+  },
   {
     image: "/dombezwad.png",
-    title: "Dom Bez Wad – Thermal Modernization and Renewable Energy Solutions",
-    Description: "A WordPress-based website for Dom Bez Wad, specializing in thermal modernization and renewable energy installations. The site highlights their comprehensive services, including insulation, heat pumps, and solar panels, designed to enhance energy efficiency and comfort. With an emphasis on sustainability and tailored solutions, the platform showcases their expertise in creating eco-friendly and cost-effective spaces.",
+    title: "Dom Bez Wad – Energy Solutions",
+    Description: "Thermal modernization and renewable energy solutions, including insulation and heat pumps.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://dombezwad.przedprojekt.com/"
-},
-
+  },
   {
     image: "/multikon.png",
-    title: "Multikon – Furniture Accessories Manufacturer",
-    Description: "A WordPress-based website created for Multikon, a leading manufacturer of high-quality furniture accessories. With over 15 years of industry experience, the website showcases their extensive product range, including furniture legs, chair frames, and advanced mechanisms. The site combines a modern design with user-friendly navigation, offering detailed product descriptions and an intuitive contact form for seamless customer engagement.",
+    title: "Multikon – Furniture Accessories",
+    Description: "Showcasing a manufacturer of high-quality furniture accessories like legs and chair frames.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "http://www.multikon.eu/"
-},
-
+  },
   {
     image: "/stys-glass.png",
-    title: "Stys-Glass – Glass Processing and Production",
-    Description: "A WordPress-based website created for Stys-Glass, a leader in the glass processing industry. The site highlights their advanced services such as glass tempering, balustrade production, and custom mirror designs. Featuring a comprehensive portfolio, an overview of their cutting-edge machinery, and detailed service descriptions, the website emphasizes precision, innovation, and customer satisfaction.",
+    title: "Stys-Glass – Glass Processing",
+    Description: "Highlights advanced services like glass tempering, balustrades, and custom mirrors.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://stys-glass.pl/"
-},
-
+  },
   {
     image: "/maciejanka.png",
-    title: "Maciejanka – Guesthouse and Event Hall",
-    Description: "A WordPress-based website designed for Maciejanka, a three-star guesthouse near Kobyla Góra. The site highlights the property’s serene location, family-friendly amenities, and services for events like conferences and family gatherings. With features like a gallery, detailed pricing, and contact information, the website serves as a comprehensive platform for bookings and showcasing the charm of this picturesque destination.",
+    title: "Maciejanka – Guesthouse",
+    Description: "Features amenities and event hosting at a three-star guesthouse near Kobyla Góra.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://maciejanka.pl/"
-},
-
+  },
   {
     image: "/piwlegnica.png",
-    title: "Powiatowy Inspektorat Weterynarii w Legnicy",
-    Description: "A WordPress-based website designed for the County Veterinary Inspectorate in Legnica. The site provides essential administrative information, legal regulations, and updates on veterinary services. With a focus on accessibility, the website includes features like downloadable forms, news updates, and details on emergency animal slaughter procedures, ensuring transparency and ease of use for the public.",
+    title: "Veterinary Inspectorate",
+    Description: "Provides administrative and legal information for the Veterinary Inspectorate in Legnica.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://www.piwlegnica.pl/"
-},
-
+  },
   {
     image: "/katex.png",
-    title: "Katex – Recycling and Purchase of Catalytic Converters",
-    Description: "A WordPress-based website designed for a company specializing in the recycling of catalytic converters and ceramic monoliths. The site emphasizes their eco-friendly approach, innovative recycling methods, and transparent pricing based on the latest market rates for precious metals. Featuring detailed service descriptions, a blog for industry updates, and a user-friendly interface, it serves as an essential resource for clients interested in sustainable recycling solutions.",
+    title: "Katex – Recycling",
+    Description: "A platform for recycling catalytic converters with transparent pricing and eco-friendly methods.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://katex.info/"
-},
-
+  },
   {
     image: "/inbc.png",
-    title: "INBC – Independent Insurance Broker",
-    Description: "A WordPress-based website created for a licensed insurance broker offering professional advisory and negotiation services. The site provides comprehensive information on insurance options for various sectors, including corporate clients, transportation, renewable energy, and more. With a clear and modern design, the website features a FAQ section, detailed service descriptions, and a contact form for easy customer interaction.",
+    title: "INBC – Insurance Broker",
+    Description: "Provides tailored insurance solutions for corporate clients and various sectors.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://inbc.pl/"
-},
-
+  },
   {
     image: "/rcomservice.png",
-    title: "RCOM SERVICE – Website for IT and Security Services",
-    Description: "A WordPress-based website developed for a company specializing in IT support, security systems, and monitoring solutions. The site features detailed service descriptions, a portfolio of completed projects, and a contact form for quick customer inquiries. With a clean and professional design, it highlights the company's expertise in system installation, alarm systems, LAN networks, and server room construction.",
+    title: "RCOM SERVICE – IT Solutions",
+    Description: "Features IT and security services like LAN setup, monitoring, and server installation.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://rcom-service.pl/"
-},
-
+  },
   {
     image: "/zielonapietruszka.png",
-    title: "Zielona Pietruszka – Website for a Restaurant",
-    Description: "A WordPress-based website created for a cozy restaurant in Zgorzelec. The site highlights the restaurant’s fresh and homemade cuisine, its warm interior, and a wide variety of dishes, including vegetarian and gluten-free options. Featuring an intuitive navigation, the website includes a daily menu section, a gallery, and contact information to enhance user experience.",
+    title: "Zielona Pietruszka – Restaurant",
+    Description: "Showcases a cozy restaurant offering fresh dishes, including vegetarian and gluten-free options.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://zielonapietruszka.com.pl/"
-},
+  },
   {
     image: "/partytales.png",
-    title: "PartyTales – Website for Event Decoration Services",
-    Description: "A WordPress-based website designed for a company specializing in event decorations and themed parties. The site highlights the company’s services, such as light decorations, balloon sets, and a rental service for event accessories. With a focus on creativity and storytelling, the website features an elegant, user-friendly design, a gallery of past projects, and a blog for event inspiration.",
+    title: "PartyTales – Event Decorations",
+    Description: "Features services like balloon sets, light decorations, and accessory rentals for themed events.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://partytales.pl/"
   },
   {
     image: "/maxnetcv.png",
-    title: "Maxnet – Website for a Local Internet Provider",
-    Description: "A professional website designed for a local internet provider offering fiber-optic internet, television, and telecommunication services. Built to showcase the company’s services, pricing packages, and contact details. The site features an intuitive navigation system, service descriptions, customer support options, and a modern, responsive design tailored to the needs of individual and business clients.",
+    title: "Maxnet – Internet Provider",
+    Description: "Highlights services and pricing for a local fiber-optic internet and telecom provider.",
     techStack: "WordPress / Custom CSS / Elementor",
     url: "https://maxnetboleslawiec.pl/"
   },
@@ -130,7 +117,7 @@ const Portfolio = [
   {
     "image": "/magiaorientuCV.png",
     "title": "Magia Orientu – Website for a Massage Therapist",
-    "Description": "A WordPress-based website designed for a massage therapist specializing in oriental treatments. The site features service descriptions, a photo gallery, a pricing section, and a contact form. Built to reflect a calming and aesthetic design tailored to the theme of oriental massages.",
+    "Description": "A WordPress-based website designed for a massage therapist specializing in oriental treatments.",
     "techStack": "WordPress / Custom CSS / Elementor",
     "url": "https://magiaorientu-boleslawiec.pl/"
 },
