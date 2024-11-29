@@ -7,7 +7,7 @@ const Portfolio = [
     "description": "A WordPress-based website designed for a massage therapist specializing in oriental treatments. The site features service descriptions, a photo gallery, a pricing section, and a contact form. Built to reflect a calming and aesthetic design tailored to the theme of oriental massages.",
     "techStack": "WordPress / Custom CSS / Elementor",
     "url": "https://magiaorientu-boleslawiec.pl/"
-}
+},
    {
     "image": "/Portfolio0.png",
     "title": "Fence Configurator for Galabau Darius",
