@@ -10,7 +10,7 @@ const Portfolio = [
 },
 
    {
-  image: "/zlotagrota.png",
+  image: "/apartamentyzlotagrota.jpg",
   title: "Złota Grota Apartments with Jacuzzi",
   description: "A modern website for private apartments with in-room jacuzzi in Wroclaw, focused on romantic stays, full privacy, self check-in, and direct online booking without intermediaries.",
   techStack: "WordPress / Custom CSS / Booking Integration / SEO Optimization",
