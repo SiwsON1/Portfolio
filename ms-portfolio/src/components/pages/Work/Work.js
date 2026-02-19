@@ -2,6 +2,13 @@ import React from "react";
 import Transition from "../../features/Transition/Transition";
 const Portfolio = [
    {
+  image: "/zlotagrota.png",
+  title: "Złota Grota Apartments with Jacuzzi",
+  description: "A modern website for private apartments with in-room jacuzzi in Wroclaw, focused on romantic stays, full privacy, self check-in, and direct online booking without intermediaries.",
+  techStack: "WordPress / Custom CSS / Booking Integration / SEO Optimization",
+  url: "https://apartamentyzlotagrota.pl/"
+},
+   {
   image: "/mariapiontek.jpg",
   title: "Maria Piontek Law Office",
   description: "A modern WordPress website for a law office in Lodz, presenting legal services in criminal, civil, family, administrative, and business law, with a strong focus on individual approach, trust, and clear communication.",
