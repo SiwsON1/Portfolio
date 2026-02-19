@@ -1,6 +1,14 @@
 import React from "react";
 import Transition from "../../features/Transition/Transition";
 const Portfolio = [
+   {
+  image: "/maria-piontek.png",
+  title: "Maria Piontek Law Office",
+  description: "A modern WordPress website for a law office in Lodz, presenting legal services in criminal, civil, family, administrative, and business law, with a strong focus on individual approach, trust, and clear communication.",
+  techStack: "WordPress / Custom CSS / Contact Form / SEO Optimization",
+  url: "kancelaria-mpiontek.pl"
+},
+
   {
     image: "/adshop.png",
     title: "AdShop – Exclusive Discounts",
