@@ -31,7 +31,7 @@ export const projects: Project[] = [
     client: "BusinessTokenizer",
     year: 2024,
     category: "commercial",
-    image: "/projects/tokenizer.jpg",
+    image: "/projects-fresh/businesstokenizer-card.webp",
     url: "https://businesstokenizer.com/",
     description:
       "Strona dla agencji blockchain specjalizującej się w tokenizacji firm i aktywów, smart kontraktach, kampaniach ICO/IDO oraz strategiach Web3.",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     client: "Złota Grota",
     year: 2024,
     category: "commercial",
-    image: "/projects/apartamentyzlotagrota.jpg",
+    image: "/projects-fresh/apartamenty-zlota-grota-card.webp",
     url: "https://apartamentyzlotagrota.pl/",
     description:
       "Strona dla apartamentów z jacuzzi we Wrocławiu. Romantyczne pobyty, self check-in, rezerwacja online bez pośredników.",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     client: "Maria Piontek",
     year: 2024,
     category: "commercial",
-    image: "/projects/mariapiontek.jpg",
+    image: "/projects-fresh/kancelaria-mpiontek-card.webp",
     url: "https://kancelaria-mpiontek.pl/",
     description:
       "Strona kancelarii adwokackiej w Łodzi. Prawo karne, cywilne, rodzinne, administracyjne i gospodarcze. Indywidualne podejście, zaufanie, czytelna komunikacja.",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     client: "Queen Scarlet",
     year: 2024,
     category: "commercial",
-    image: "/projects/queenscarlet.png",
+    image: "/projects-fresh/queen-scarlet-card.webp",
     url: "https://marcin.przedprojekt.com/QueenScarlet2/",
     description:
       "Strona kliniki kosmetologii oferującej zabiegi typu kriolipoliza i laserowa stymulacja kolagenu.",
