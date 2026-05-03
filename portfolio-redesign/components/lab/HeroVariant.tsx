@@ -144,25 +144,22 @@ export function HeroVariant({
             <span className="line block">
               buduje{" "}
               <span
-                className="inline-flex items-center align-middle relative overflow-hidden"
+                className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full"
                 style={{
-                  width: "clamp(6.5rem, 2.5rem + 14vw, 11rem)",
-                  height: "1.05em",
+                  width: "clamp(6rem, 3rem + 11vw, 9.5rem)",
+                  height: "1em",
                   verticalAlign: "middle",
-                  marginInline: "0.1em",
-                  transform: "translateY(-0.05em)",
+                  marginInline: "0.15em",
+                  transform: "translateY(-0.06em)",
+                  border: "1px solid rgb(244 180 129 / 0.6)",
                 }}
               >
                 <span
                   ref={wordRef}
-                  className="absolute inset-0 inline-flex items-center justify-center font-mono not-italic font-medium text-peach text-center whitespace-nowrap"
+                  className="font-mono not-italic font-medium text-peach text-center whitespace-nowrap leading-none"
                   style={{
-                    fontSize: "clamp(1rem, 0.5rem + 1.8vw, 2.1rem)",
-                    letterSpacing: "0.02em",
-                    lineHeight: 1,
-                    border: "1px solid rgb(244 180 129 / 0.55)",
-                    borderRadius: "9999px",
-                    padding: "0",
+                    fontSize: "clamp(0.85rem, 0.45rem + 1.4vw, 1.65rem)",
+                    letterSpacing: "0.05em",
                   }}
                 >
                   {morphWords[0]}

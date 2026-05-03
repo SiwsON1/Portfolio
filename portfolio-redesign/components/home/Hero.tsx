@@ -139,43 +139,22 @@ export function Hero() {
             <span className="line block">
               buduje{" "}
               <span
-                className="inline-flex items-center align-middle relative overflow-hidden"
+                className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full"
                 style={{
-                  width: "clamp(7rem, 3rem + 14vw, 12rem)",
-                  height: "1.15em",
+                  width: "clamp(6rem, 3rem + 11vw, 9.5rem)",
+                  height: "1em",
                   verticalAlign: "middle",
                   marginInline: "0.15em",
-                  transform: "translateY(-0.05em)",
+                  transform: "translateY(-0.06em)",
+                  border: "1px solid rgb(244 180 129 / 0.6)",
                 }}
               >
-                {/* Static peach pill background — pulses subtly */}
-                <span
-                  aria-hidden
-                  className="absolute inset-0 rounded-full"
-                  style={{
-                    border: "1px solid rgb(244 180 129 / 0.7)",
-                    background:
-                      "linear-gradient(135deg, rgba(232,178,134,0.10) 0%, rgba(232,178,134,0.02) 100%)",
-                    boxShadow:
-                      "0 0 24px rgba(232,178,134,0.18), inset 0 0 12px rgba(232,178,134,0.08)",
-                  }}
-                />
-                {/* Pulsing dot left */}
-                <span
-                  aria-hidden
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-peach"
-                  style={{ animation: "pillPulse 1.6s ease-in-out infinite" }}
-                />
-                {/* Word slot — full width centered */}
                 <span
                   ref={wordRef}
-                  className="absolute inset-0 inline-flex items-center justify-center font-mono not-italic font-medium text-peach text-center whitespace-nowrap"
+                  className="font-mono not-italic font-medium text-peach text-center whitespace-nowrap leading-none"
                   style={{
-                    fontSize: "clamp(0.95rem, 0.5rem + 1.7vw, 2rem)",
-                    letterSpacing: "0.04em",
-                    lineHeight: 1,
-                    paddingLeft: "1.3em",
-                    paddingRight: "0.6em",
+                    fontSize: "clamp(0.85rem, 0.45rem + 1.4vw, 1.65rem)",
+                    letterSpacing: "0.05em",
                   }}
                 >
                   {morphWords[0]}
