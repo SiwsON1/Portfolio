@@ -1,0 +1,6 @@
+node_modules/
+output/
+public/clips/*.mp4
+public/clips/*.mov
+public/clips/*.webm
+.remotion/
