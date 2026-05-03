@@ -155,28 +155,31 @@ export function AboutTease() {
           </div>
         </div>
 
-        {/* RIGHT — clean portrait, no shadows, peach corner accent */}
+        {/* RIGHT — cutout portrait floating na peach radial glow */}
         <div className="md:col-span-4 md:col-start-9 order-1 md:order-2">
-          <figure className="at-image relative aspect-[4/5] overflow-hidden bg-bg-elev">
+          <figure className="at-image relative aspect-[4/5]">
+            {/* Soft peach glow za postacią */}
+            <div
+              aria-hidden
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 60% 50% at 50% 45%, rgba(232,178,134,0.18) 0%, rgba(58,142,200,0.10) 35%, rgba(20,19,31,0) 70%)",
+              }}
+            />
+            {/* Postać wycięta z tła */}
             <Image
-              src="/avatar.png"
+              src="/avatar-cutout.png"
               alt="Marcin Siwonia, web developer z Wrocławia"
               fill
-              className="object-cover object-top"
+              className="object-contain object-bottom relative z-[1]"
               sizes="(max-width: 768px) 100vw, 35vw"
-            />
-            {/* Subtle frame outline (peach corner top-right + bottom-left) */}
-            <span
-              aria-hidden
-              className="absolute top-4 right-4 w-8 h-8 border-t border-r border-peach/70 pointer-events-none"
-            />
-            <span
-              aria-hidden
-              className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-peach/70 pointer-events-none"
+              priority={false}
             />
             {/* Frame mark */}
-            <figcaption className="absolute bottom-4 right-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
-              [01 / 01]
+            <figcaption className="absolute -bottom-2 left-0 right-0 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute z-10">
+              <span>Marcin · Wrocław</span>
+              <span>[01 / 01]</span>
             </figcaption>
           </figure>
         </div>

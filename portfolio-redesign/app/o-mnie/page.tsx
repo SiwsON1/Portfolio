@@ -44,11 +44,24 @@ export default function OMniePage() {
             </p>
           </div>
           <div className="md:col-span-4 md:col-start-9">
-            <figure className="relative aspect-square bg-bg overflow-visible">
-              <div className="absolute inset-0">
-                <FlamePortraitClient />
-              </div>
-              <figcaption className="absolute -bottom-8 left-0 right-0 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute z-10">
+            <figure className="relative aspect-[4/5] overflow-visible">
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 60% 50% at 50% 45%, rgba(232,178,134,0.20) 0%, rgba(58,142,200,0.12) 35%, rgba(20,19,31,0) 70%)",
+                }}
+              />
+              <Image
+                src="/avatar-cutout.png"
+                alt="Marcin Siwonia"
+                fill
+                className="object-contain object-bottom relative z-[1]"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority
+              />
+              <figcaption className="absolute -bottom-2 left-0 right-0 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute z-10">
                 <span>Marcin · Wrocław</span>
                 <span>2026</span>
               </figcaption>
