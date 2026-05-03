@@ -1,0 +1,24 @@
+# Netlify config — buduje nowy Next.js redesign z portfolio-redesign/
+# zamiast starego CRA z ms-portfolio/.
+#
+# Wymaga: @netlify/plugin-nextjs zainstalowanego automatycznie przez Netlify
+# (Netlify wykrywa Next.js i instaluje plugin sam, ale tutaj wymuszamy explicit).
+
+[build]
+  base    = "portfolio-redesign"
+  command = "npm install && npm run build"
+  publish = "portfolio-redesign/.next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_SITE_URL = "https://marcinsiwonia.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Fallback dla SPA-like routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
