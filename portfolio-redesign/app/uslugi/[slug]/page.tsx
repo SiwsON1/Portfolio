@@ -4,6 +4,7 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { services } from "@/lib/services";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
+import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 
@@ -103,16 +104,24 @@ export default async function UslugaPage({
           <span className="hidden md:inline">{s.title}</span>
         </div>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-2">
             <p className="eyebrow">Usługa</p>
           </div>
-          <div className="md:col-span-10">
+          <div className="md:col-span-7">
             <h1 className="display text-display text-ink">{s.h1}</h1>
             <p className="mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1.125rem, 1rem + 0.6vw, 1.5rem)", lineHeight: 1.55 }}>
               {s.lead}
             </p>
           </div>
+          <div className="md:col-span-3 hidden md:block">
+            <ServiceHeroVisual slug={s.slug} />
+          </div>
+        </div>
+
+        {/* Mobile: visual ABOVE title — kompaktowo */}
+        <div className="md:hidden mt-12 max-w-xs mx-auto h-64">
+          <ServiceHeroVisual slug={s.slug} />
         </div>
       </header>
 
