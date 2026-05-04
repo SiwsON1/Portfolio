@@ -50,11 +50,11 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
           background:
             "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(58,142,200,0.32) 0%, rgba(232,178,134,0.10) 40%, rgba(20,19,31,0) 70%)",
           mixBlendMode: "screen",
-          animation: "svhPulse 5s ease-in-out infinite",
+          animation: "svhPulse 8s ease-in-out infinite",
         }}
       />
 
-      {/* Orbital rings (3 warstwy ze różną prędkością) */}
+      {/* Orbital rings (3 warstwy ze różną prędkością — wolniej, eleganckie) */}
       {[0, 1, 2].map((i) => (
         <svg
           key={i}
@@ -62,7 +62,7 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
           className="absolute inset-0 w-full h-full pointer-events-none"
           viewBox="-100 -100 200 200"
           style={{
-            animation: `svhOrbit ${30 + i * 12}s linear infinite ${
+            animation: `svhOrbit ${80 + i * 30}s linear infinite ${
               i % 2 === 0 ? "normal" : "reverse"
             }`,
           }}
@@ -181,29 +181,57 @@ function Icon({ icon }: { icon: IconKey }) {
     case "wordpress":
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          <circle cx="100" cy="100" r="78" fill="none" stroke="#E8B286" strokeWidth="2" opacity="0.6" />
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpinSlow 40s linear infinite" }}>
-            <text
-              x="100"
-              y="135"
-              textAnchor="middle"
-              fontFamily="ui-monospace, monospace"
-              fontSize="92"
-              fontWeight="700"
-              fill="url(#wpGrad)"
-              style={{ letterSpacing: "-0.04em" }}
-            >
-              W
-            </text>
+          {/* Outer circle */}
+          <circle cx="100" cy="100" r="76" fill="none" stroke="url(#wpGrad)" strokeWidth="3.5" />
+          {/* Real WordPress logo W — 4 strokes meeting at top */}
+          <g
+            style={{
+              transformOrigin: "100px 100px",
+              animation: "svhPulseStrong 4s ease-in-out infinite",
+            }}
+          >
+            <path
+              d="M 50 70 L 70 145 L 88 100 L 100 70 L 112 100 L 130 145 L 150 70"
+              stroke="url(#wpGrad)"
+              strokeWidth="6.5"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </g>
+          {/* Orbital subtle dashed ring */}
+          <circle
+            cx="100"
+            cy="100"
+            r="92"
+            fill="none"
+            stroke="rgba(168,218,255,0.25)"
+            strokeWidth="0.8"
+            strokeDasharray="3 6"
+            style={{
+              transformOrigin: "100px 100px",
+              animation: "svhSpin 90s linear infinite",
+            }}
+          />
+          {/* "WordPress" wordmark below */}
+          <text
+            x="100"
+            y="195"
+            textAnchor="middle"
+            fontFamily="ui-monospace, monospace"
+            fontSize="11"
+            fill="#A8DAFF"
+            letterSpacing="0.32em"
+            opacity="0.85"
+          >
+            WORDPRESS
+          </text>
           <defs>
             <linearGradient id="wpGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#A8DAFF" />
               <stop offset="100%" stopColor="#3A8EC8" />
             </linearGradient>
           </defs>
-          {/* Orbital W highlight ring */}
-          <circle cx="100" cy="100" r="58" fill="none" stroke="rgba(168,218,255,0.4)" strokeWidth="1" strokeDasharray="3 5" style={{ transformOrigin: "100px 100px", animation: "svhSpin 25s linear infinite" }} />
         </svg>
       );
 
@@ -211,7 +239,7 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* Shopping cart silhouette */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 3s ease-in-out infinite" }}>
+          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             <path
               d="M 50 70 L 60 70 L 75 130 L 145 130 L 160 85 L 70 85"
               stroke="url(#wcGrad)"
@@ -254,7 +282,7 @@ function Icon({ icon }: { icon: IconKey }) {
             <text x="142" y="105" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#E8B286" letterSpacing="0.1em">UI</text>
             {/* Connecting line with particles */}
             <line x1="85" y1="100" x2="115" y2="100" stroke="rgba(168,218,255,0.5)" strokeWidth="1" strokeDasharray="2 2" />
-            <circle cx="100" cy="100" r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 2s ease-in-out infinite" }} />
+            <circle cx="100" cy="100" r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 4s ease-in-out infinite" }} />
           </g>
         </svg>
       );
@@ -263,12 +291,12 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* Wireframe layered triangles */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 30s linear infinite" }}>
+          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 80s linear infinite" }}>
             <polygon points="100,30 170,150 30,150" fill="none" stroke="#A8DAFF" strokeWidth="1.5" opacity="0.8" />
             <polygon points="100,55 150,140 50,140" fill="none" stroke="#E8B286" strokeWidth="1.5" opacity="0.6" />
             <polygon points="100,80 130,130 70,130" fill="none" stroke="#3A8EC8" strokeWidth="1.5" opacity="0.5" />
           </g>
-          <circle cx="100" cy="115" r="8" fill="#A8DAFF" opacity="0.7" style={{ animation: "svhPulseStrong 2.5s ease-in-out infinite" }} />
+          <circle cx="100" cy="115" r="8" fill="#A8DAFF" opacity="0.7" style={{ animation: "svhPulseStrong 4.5s ease-in-out infinite" }} />
         </svg>
       );
 
@@ -289,7 +317,7 @@ function Icon({ icon }: { icon: IconKey }) {
           >
             2026
           </text>
-          <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(232,178,134,0.4)" strokeWidth="1" strokeDasharray="4 6" style={{ transformOrigin: "100px 100px", animation: "svhSpin 35s linear infinite" }} />
+          <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(232,178,134,0.4)" strokeWidth="1" strokeDasharray="4 6" style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }} />
         </svg>
       );
 
@@ -297,7 +325,7 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* Next.js triangle (rounded, like their logo) */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 40s linear infinite" }}>
+          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }}>
             <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(168,218,255,0.35)" strokeWidth="1" />
           </g>
           <g style={{ transformOrigin: "100px 100px" }}>
@@ -325,7 +353,7 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* 3 layered planes (J/A/M) */}
-          <g style={{ animation: "svhPulseStrong 3s ease-in-out infinite" }}>
+          <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             <rect x="40" y="60" width="120" height="22" rx="2" fill="none" stroke="#A8DAFF" strokeWidth="1.5" />
             <text x="100" y="76" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#A8DAFF" letterSpacing="0.3em">J · JAVASCRIPT</text>
             <rect x="40" y="92" width="120" height="22" rx="2" fill="none" stroke="#3A8EC8" strokeWidth="1.5" />
@@ -340,7 +368,7 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* Code brackets with WWW */}
-          <g style={{ animation: "svhPulseStrong 3s ease-in-out infinite" }}>
+          <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             <text x="40" y="120" fontFamily="ui-monospace, monospace" fontSize="48" fill="#E8B286">{`<`}</text>
             <text x="100" y="115" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="32" fontWeight="700" fill="#A8DAFF" letterSpacing="0.05em">WWW</text>
             <text x="160" y="120" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="48" fill="#E8B286">{`/>`}</text>
@@ -352,12 +380,12 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* React atom — 3 ellipses orbiting */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 18s linear infinite" }}>
+          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 50s linear infinite" }}>
             <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" />
             <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" transform="rotate(60 100 100)" />
             <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" transform="rotate(120 100 100)" />
           </g>
-          <circle cx="100" cy="100" r="8" fill="#E8B286" style={{ animation: "svhPulseStrong 2s ease-in-out infinite" }} />
+          <circle cx="100" cy="100" r="8" fill="#E8B286" style={{ animation: "svhPulseStrong 4s ease-in-out infinite" }} />
         </svg>
       );
 
@@ -407,8 +435,8 @@ function Icon({ icon }: { icon: IconKey }) {
               ))
             )}
             {/* Pulsing signal flowing */}
-            <circle r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 1.5s ease-in-out infinite" }}>
-              <animateMotion dur="3s" repeatCount="indefinite" path="M 50 100 L 100 90 L 150 100" />
+            <circle r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 3s ease-in-out infinite" }}>
+              <animateMotion dur="6s" repeatCount="indefinite" path="M 50 100 L 100 90 L 150 100" />
             </circle>
           </g>
         </svg>
@@ -418,7 +446,7 @@ function Icon({ icon }: { icon: IconKey }) {
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
           {/* Magnifier + ranking bars */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 3s ease-in-out infinite" }}>
+          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             {/* Bars rising */}
             <rect x="50" y="120" width="14" height="30" fill="#3A8EC8" opacity="0.7" />
             <rect x="72" y="100" width="14" height="50" fill="#A8DAFF" opacity="0.85" />
