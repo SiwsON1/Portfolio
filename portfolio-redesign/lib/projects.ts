@@ -26,6 +26,18 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "Clerk", "Tailwind"],
   },
   {
+    slug: "kosmoteka",
+    title: "Sklep internetowy kosmetyków",
+    client: "Kosmoteka",
+    year: 2026,
+    category: "commercial",
+    image: "/projects-fresh/kosmoteka-card.webp",
+    url: "https://kosmoteka.pl/",
+    description:
+      "Sklep internetowy z kosmetykami na WordPress + WooCommerce. Katalog produktów z wariantami, koszyk, integracje z bramkami płatności i systemami wysyłki, optymalizacja pod konwersję i SEO.",
+    stack: ["WordPress", "WooCommerce", "Custom CSS", "SEO"],
+  },
+  {
     slug: "businesstokenizer",
     title: "Agencja blockchain i tokenizacji",
     client: "BusinessTokenizer",
@@ -53,7 +65,7 @@ export const projects: Project[] = [
     slug: "kancelaria-mpiontek",
     title: "Kancelaria adwokacka",
     client: "Maria Piontek",
-    year: 2024,
+    year: 2026,
     category: "commercial",
     image: "/projects-fresh/kancelaria-mpiontek-card.webp",
     url: "https://kancelaria-mpiontek.pl/",
@@ -199,7 +211,7 @@ export const projects: Project[] = [
     client: "INBC",
     year: 2023,
     category: "commercial",
-    image: "/projects/inbc.png",
+    image: "/projects-fresh/inbc-card.webp",
     url: "https://inbc.pl/",
     description:
       "Dedykowane rozwiązania ubezpieczeniowe dla klientów korporacyjnych.",
@@ -211,7 +223,7 @@ export const projects: Project[] = [
     client: "RCOM Service",
     year: 2022,
     category: "commercial",
-    image: "/projects/rcomservice.png",
+    image: "/projects-fresh/rcom-service-card.webp",
     url: "https://rcom-service.pl/",
     description:
       "Usługi IT i bezpieczeństwa: konfiguracja LAN, monitoring, instalacje serwerów.",
@@ -421,9 +433,9 @@ export const projects: Project[] = [
  */
 export const FEATURED_SLUGS = [
   "kancelaria-mpiontek",
-  "apartamenty-zlota-grota",
-  "queen-scarlet",
-  "businesstokenizer",
+  "kosmoteka",
+  "inbc",
+  "rcom-service",
 ] as const;
 
 export const featuredProjects = FEATURED_SLUGS.map(

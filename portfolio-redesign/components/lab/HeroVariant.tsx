@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 
-const morphWords = ["NEXT.JS", "REACT", "AI", "SEO"];
+const morphWords = ["NEXT.JS", "REACT", "AI", "SEO", "WORDPRESS", "WOOCOMMERCE"];
 
 const PortraitCanvas = dynamic(
   () => import("@/components/home/Atmosphere").then((m) => m.PortraitCanvas),
@@ -146,7 +146,7 @@ export function HeroVariant({
               <span
                 className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full"
                 style={{
-                  width: "clamp(6rem, 3rem + 11vw, 9.5rem)",
+                  width: "clamp(7rem, 3rem + 14vw, 13rem)",
                   height: "1em",
                   verticalAlign: "middle",
                   marginInline: "0.15em",

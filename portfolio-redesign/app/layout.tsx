@@ -36,19 +36,23 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Marcin Siwonia. Strony www, Next.js, React, AI",
+    default:
+      "Tworzenie stron www Wrocław — Marcin Siwonia, freelancer Next.js, React, WordPress",
     template: "%s — Marcin Siwonia",
   },
   description:
-    "Niezależny web developer z Wrocławia. Strony www, aplikacje Next.js i React, wdrożenia AI, pozycjonowanie SEO. Ponad 30 wdrożeń komercyjnych.",
+    "Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI, pozycjonowanie SEO. Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.",
   keywords: [
     "tworzenie stron www",
+    "tworzenie stron WordPress",
+    "sklepy internetowe WooCommerce",
     "programista Next.js",
     "programista React",
     "wdrożenia AI",
-    "pozycjonowanie SEO",
+    "pozycjonowanie SEO Wrocław",
     "Marcin Siwonia",
     "freelancer Wrocław",
+    "web developer Wrocław",
   ],
   authors: [{ name: "Marcin Siwonia" }],
   creator: "Marcin Siwonia",

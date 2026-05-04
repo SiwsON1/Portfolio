@@ -14,6 +14,100 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "tworzenie-stron-wordpress",
+    title: "Tworzenie stron WordPress",
+    metaTitle: "Tworzenie stron WordPress Wrocław — szybkie, indeksowalne, edytowalne",
+    metaDescription:
+      "Strony www na WordPress: custom theme zamiast gotowca, pełna optymalizacja Core Web Vitals, panel edycji 1:1 z designem, SEO od pierwszego dnia. Wrocław i online.",
+    h1: "Strony WordPress, które klient sam edytuje",
+    lead:
+      "WordPress wybiera się gdy klient chce sam edytować treści bez zaglądania do kodu. Zrobiony dobrze, jest szybki, bezpieczny i indeksowalny. Zrobiony źle, jest lagiem, dziurą bezpieczeństwa i duplikatem 800 innych stron z Elementora.",
+    intro: [
+      "Stawiam WordPressy od 2020 roku. Zrobiłem ponad 25 wdrożeń: kancelarie, hotele, sklepy WooCommerce, portfolio prywatne. Każdy stack: custom theme + niezbędne minimum pluginów + Yoast/Rank Math SEO + LiteSpeed cache. Bez gotowych theme'ów typu Avada/Divi które dodają 200kg JavaScriptu.",
+      "Konkretne realizacje WordPressowe znajdziesz w [pełnej liście projektów](/projekty), m.in. [Kancelaria Maria Piontek](/projekty/kancelaria-mpiontek), [INBC broker ubezpieczeniowy](/projekty/inbc), [RCOM Service](/projekty/rcom-service). Sklep internetowy WooCommerce to osobna usługa, [opisana tutaj](/uslugi/sklepy-internetowe-woocommerce).",
+    ],
+    bullets: [
+      {
+        title: "Custom theme, nie gotowiec",
+        body: "Każdy projekt na własnym themie. Kod tylko ten, który wykorzystujesz. Lighthouse 95+ standard. Brak 50 nieużywanych section blocków z Elementora.",
+      },
+      {
+        title: "Edycja 1:1 z designem",
+        body: "ACF Pro lub Bricks Builder dla pól dynamicznych. Klient widzi w panelu te same nazwy sekcji co na stronie. Bez chaosu z Gutenbergiem.",
+      },
+      {
+        title: "Bezpieczeństwo standardowe",
+        body: "Wordfence, ograniczenia logowania, dwustopniowa autoryzacja, automatyczne backupy do osobnej lokalizacji, security headers w .htaccess.",
+      },
+      {
+        title: "SEO od pierwszego dnia",
+        body: "Yoast lub Rank Math, schema.org Person/Service/Article, sitemap, optymalizacja Core Web Vitals, integracja z Search Console.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Brief i wycena", body: "30-minutowa rozmowa, mailowy brief, wycena z terminem w 24h." },
+      { step: "02", title: "Projekt graficzny", body: "Makiety w Figmie. Klient akceptuje design przed rozpoczęciem kodu." },
+      { step: "03", title: "Programowanie", body: "Custom theme od zera, ACF dla pól dynamicznych, lokalny dev + środowisko staging." },
+      { step: "04", title: "Optymalizacja", body: "Core Web Vitals, schema, sitemap, robots, Search Console. Lighthouse 95+." },
+      { step: "05", title: "Wdrożenie + szkolenie", body: "Migracja na produkcję bez przerwy. 30-min szkolenie z edycji w panelu." },
+    ],
+    faq: [
+      { q: "Ile kosztuje strona WordPress?", a: "Wizytówka 4-7 tys. zł, strona usługowa z blogiem 7-15 tys., bardziej rozbudowana z customową logiką od 15 tys. wzwyż." },
+      { q: "Dlaczego nie używasz Avada / Divi / Elementor?", a: "Bo dodają 200-400 KB JS do każdej strony, są wolne, trudne w utrzymaniu, robią z każdej strony klona innej. Custom theme = lepsze metryki + brand differentiation." },
+      { q: "Czy strona będzie szybka?", a: "Tak. LiteSpeed cache + custom theme + obrazki WebP/AVIF + lazy loading. Cel: Lighthouse 95+, LCP poniżej 2.5s, INP poniżej 200ms." },
+      { q: "Czy mogę sam edytować po wdrożeniu?", a: "Tak. Na koniec dostajesz 30-min szkolenie. Pola sekcji w panelu mają te same nazwy co na stronie. Plus dokumentacja PDF." },
+      { q: "Jaki hosting polecasz?", a: "Hostinger Business lub cyber_folks Premium. Oba mają LiteSpeed cache, codzienne backupy, SSL, sensowne wsparcie." },
+    ],
+    cta: "Napisz brief, dostaniesz wycenę WordPressa w 24h",
+  },
+  {
+    slug: "sklepy-internetowe-woocommerce",
+    title: "Sklepy internetowe WooCommerce",
+    metaTitle: "Sklepy WooCommerce Wrocław — wdrożenie, integracje, optymalizacja konwersji",
+    metaDescription:
+      "Sklepy internetowe na WordPress + WooCommerce: katalog, koszyk, integracje płatności (Przelewy24, Stripe, BLIK), wysyłki (InPost, DPD, Furgonetka), B2B, multilingual, SEO.",
+    h1: "Sklepy internetowe WooCommerce — od katalogu do konwersji",
+    lead:
+      "WooCommerce robi 30% sklepów online na świecie. Działa, jest tani, integruje się ze wszystkim co potrzebujesz w polskim e-commerce. Wymaga jednak osoby która wie jak go skonfigurować pod konwersję, nie tylko jak go zainstalować.",
+    intro: [
+      "Najnowszy projekt: [Kosmoteka](/projekty/kosmoteka) — sklep z kosmetykami na WooCommerce z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów dla klientów z branż furniture, akcesoria.",
+      "WooCommerce wybiera się gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne stack-i. Jeśli zastanawiasz się czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026).",
+    ],
+    bullets: [
+      {
+        title: "Pełne integracje PL",
+        body: "Przelewy24, Stripe, BLIK, Apple Pay. InPost Paczkomaty, DPD, Furgonetka. Allegro Sync. Faktury (Fakturownia, wFirma, iFirma). Polskie wymogi RODO.",
+      },
+      {
+        title: "Optymalizacja konwersji",
+        body: "Skrócony checkout, persistent cart, product upsells, abandoned cart recovery, Google/Meta Pixel, GA4 enhanced ecommerce, A/B testy.",
+      },
+      {
+        title: "Performance",
+        body: "LiteSpeed cache + Cloudflare CDN. AJAX cart, lazy load obrazków produktów, optymalizacja query do bazy. Cel: poniżej 2s LCP nawet przy 1000+ produktach.",
+      },
+      {
+        title: "B2B + multilingual",
+        body: "Cenniki per grupa klientów (B2B vs B2C), minimum order quantity, hidden produkty. Polylang/WPML dla wersji obcojęzycznych.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Workshop produktowy", body: "Mapa produktów, kategorie, atrybuty, integracje, model rozliczeń, polityki." },
+      { step: "02", title: "Design + UX", body: "Makiety katalogu, karty produktu, koszyka, checkout. Mobile-first." },
+      { step: "03", title: "Wdrożenie WooCommerce", body: "Custom theme, konfiguracja produktów, integracje płatności i wysyłki, podatki." },
+      { step: "04", title: "Testy + GA4", body: "Testowanie zamówień end-to-end, GA4 enhanced ecommerce, Pixel, conversion tracking." },
+      { step: "05", title: "Launch + opieka", body: "Migracja produktów ze starego sklepu (jeśli jest), opieka miesięczna z monitoringiem." },
+    ],
+    faq: [
+      { q: "Ile kosztuje sklep WooCommerce?", a: "Mniejszy sklep (do 100 produktów, podstawowe integracje): 12-25 tys. zł. Średni (do 500 produktów, B2B, multilingual): 25-50 tys. Większy headless lub multistore: powyżej 50 tys." },
+      { q: "Czy mogę sam dodawać produkty?", a: "Tak. WooCommerce ma standardowy panel produktów, plus wgrasz CSV/XML masowo z Excela. Każda kategoria, atrybut i wariant edytowalny." },
+      { q: "Co z migracją z innej platformy (Shoper, IdoSell, Shopify)?", a: "Robię migracje z większości polskich platform. Eksport produktów + zamówień + klientów + przekierowania 301 starych URLi pod nowe (krytyczne dla SEO)." },
+      { q: "Czy WooCommerce nadąży przy dużym ruchu?", a: "Z dobrym hostingiem (LiteSpeed cache + Cloudflare + Redis dla object cache) wytrzymuje 10-50 tys. wizyt dziennie. Powyżej rekomenduję headless (Next.js commerce + WooCommerce jako backend)." },
+      { q: "Co z fakturowaniem i podatkami?", a: "Integracja z Fakturownia/wFirma/iFirma — automatyczne faktury po zamówieniu. Konfiguracja stawek VAT, płatności B2B z NIP, eksport do księgowej co miesiąc." },
+    ],
+    cta: "Pogadajmy o sklepie 30 minut, wycena w 48h",
+  },
+  {
     slug: "tworzenie-stron-www",
     title: "Tworzenie stron www",
     metaTitle: "Tworzenie stron www Wrocław — freelancer Next.js i WordPress",

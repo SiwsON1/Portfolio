@@ -17,6 +17,10 @@ const TARGETS = [
   { slug: "apartamenty-zlota-grota", url: "https://apartamentyzlotagrota.pl/" },
   { slug: "queen-scarlet", url: "https://marcin.przedprojekt.com/QueenScarlet2/" },
   { slug: "businesstokenizer", url: "https://businesstokenizer.com/" },
+  { slug: "inbc", url: "https://inbc.pl/" },
+  { slug: "rcom-service", url: "https://rcom-service.pl/" },
+  { slug: "dom-bez-wad", url: "https://dombezwad.przedprojekt.com/" },
+  { slug: "kosmoteka", url: "https://kosmoteka.pl/" },
 ];
 
 const OUT = path.resolve("public/projects-fresh");

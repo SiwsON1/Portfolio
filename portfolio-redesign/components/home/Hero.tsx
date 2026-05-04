@@ -10,7 +10,7 @@ const PortraitCanvas = dynamic(
   { ssr: false, loading: () => null }
 );
 
-const morphWords = ["NEXT.JS", "REACT", "AI", "SEO"];
+const morphWords = ["NEXT.JS", "REACT", "AI", "SEO", "WORDPRESS", "WOOCOMMERCE"];
 
 export function Hero() {
   const wordRef = useRef<HTMLSpanElement>(null);
@@ -141,7 +141,7 @@ export function Hero() {
               <span
                 className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full"
                 style={{
-                  width: "clamp(6rem, 3rem + 11vw, 9.5rem)",
+                  width: "clamp(7rem, 3rem + 14vw, 13rem)",
                   height: "1em",
                   verticalAlign: "middle",
                   marginInline: "0.15em",
@@ -171,15 +171,20 @@ export function Hero() {
           </span>
         </h1>
 
+        {/* Screen-reader semantic H1 — pełna fraza SEO */}
+        <h2 className="sr-only">
+          Tworzenie stron www Wrocław. Marcin Siwonia — freelancer i programista Next.js, React, WordPress, WooCommerce. Wdrożenia AI, pozycjonowanie SEO. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych w Polsce i Niemczech od 2020 roku.
+        </h2>
+
         <div className="mt-10 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
           <p
             className="prose-bound text-ink-mute"
             style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.25rem)" }}
           >
-            Niezależny web developer z Wrocławia. Tworzenie stron www,
-            aplikacje Next.js i React, wdrożenia AI, pozycjonowanie SEO.
-            Ponad trzydzieści wdrożeń komercyjnych dla klientów w Polsce
-            i Niemczech od 2020 roku.
+            Niezależny web developer z Wrocławia. <strong className="text-ink font-normal">Tworzenie stron www</strong>,
+            sklepów <strong className="text-ink font-normal">WooCommerce</strong>, aplikacji <strong className="text-ink font-normal">Next.js</strong> i <strong className="text-ink font-normal">React</strong>,
+            wdrożenia <strong className="text-ink font-normal">AI</strong>, <strong className="text-ink font-normal">pozycjonowanie SEO</strong>.
+            Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.
           </p>
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute shrink-0">
             <span className="relative flex h-2 w-2">
