@@ -1,10 +1,25 @@
 "use client";
 
 /**
- * ServiceHeroVisual — animowany SVG icon + orbital particles per usługa.
- * Każda usługa ma własny "signature" wizualny w hero.
- * Wszystko CSS+SVG, zero R3F (lekkie, bez WebGL contextu, mobile-friendly).
+ * ServiceHeroVisual — animowany visual w hero każdej usługi.
+ * Używa OFICJALNYCH paths z simple-icons (3000+ brand SVG, MIT license)
+ * zamiast ręcznie odtworzonych. Każda ikona w 24x24 viewBox.
+ *
+ * Wokół: outer plasma glow + 3 orbital rings + 14 floating particles
+ * (CSS+SVG, zero R3F, mobile-friendly).
  */
+
+import {
+  siWordpress,
+  siWoocommerce,
+  siNextdotjs,
+  siReact,
+  siTailwindcss,
+  siJavascript,
+  siGraphql,
+  siVercel,
+  type SimpleIcon,
+} from "simple-icons";
 
 type IconKey =
   | "wordpress"
@@ -54,7 +69,7 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
         }}
       />
 
-      {/* Orbital rings (3 warstwy ze różną prędkością — wolniej, eleganckie) */}
+      {/* Orbital rings (eleganckie, wolne) */}
       {[0, 1, 2].map((i) => (
         <svg
           key={i}
@@ -77,7 +92,6 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
             strokeWidth="0.4"
             strokeDasharray={i === 0 ? "2 4" : i === 1 ? "1 6" : "3 3"}
           />
-          {/* Orbital dots */}
           {Array.from({ length: 6 + i * 3 }).map((_, j) => {
             const angle = (j / (6 + i * 3)) * Math.PI * 2;
             const r = 70 + i * 12;
@@ -106,7 +120,7 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
         <Icon icon={icon} />
       </div>
 
-      {/* Floating particles emanujące na zewnątrz */}
+      {/* Floating particles */}
       <svg
         aria-hidden
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -176,134 +190,167 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
   );
 }
 
+/* === Reusable: official brand icon z simple-icons === */
+function BrandIcon({
+  icon,
+  rotateSlow = false,
+  pulseDur = "5s",
+}: {
+  icon: SimpleIcon;
+  rotateSlow?: boolean;
+  pulseDur?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="w-full h-full"
+      aria-hidden
+      style={{
+        transformOrigin: "center",
+        animation: rotateSlow
+          ? `svhSpin 120s linear infinite, svhPulseStrong ${pulseDur} ease-in-out infinite`
+          : `svhPulseStrong ${pulseDur} ease-in-out infinite`,
+      }}
+    >
+      <defs>
+        <linearGradient id={`grad-${icon.slug}`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#A8DAFF" />
+          <stop offset="100%" stopColor="#E8B286" />
+        </linearGradient>
+      </defs>
+      <path d={icon.path} fill={`url(#grad-${icon.slug})`} />
+    </svg>
+  );
+}
+
+function Wordmark({ text }: { text: string }) {
+  return (
+    <text
+      x="100"
+      y="195"
+      textAnchor="middle"
+      fontFamily="ui-monospace, monospace"
+      fontSize="11"
+      fill="#A8DAFF"
+      letterSpacing="0.32em"
+      opacity="0.85"
+    >
+      {text}
+    </text>
+  );
+}
+
 function Icon({ icon }: { icon: IconKey }) {
   switch (icon) {
     case "wordpress":
       return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Outer circle */}
-          <circle cx="100" cy="100" r="76" fill="none" stroke="url(#wpGrad)" strokeWidth="3.5" />
-          {/* Real WordPress logo W — 4 strokes meeting at top */}
-          <g
-            style={{
-              transformOrigin: "100px 100px",
-              animation: "svhPulseStrong 4s ease-in-out infinite",
-            }}
-          >
-            <path
-              d="M 50 70 L 70 145 L 88 100 L 100 70 L 112 100 L 130 145 L 150 70"
-              stroke="url(#wpGrad)"
-              strokeWidth="6.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </g>
-          {/* Orbital subtle dashed ring */}
-          <circle
-            cx="100"
-            cy="100"
-            r="92"
-            fill="none"
-            stroke="rgba(168,218,255,0.25)"
-            strokeWidth="0.8"
-            strokeDasharray="3 6"
-            style={{
-              transformOrigin: "100px 100px",
-              animation: "svhSpin 90s linear infinite",
-            }}
-          />
-          {/* "WordPress" wordmark below */}
-          <text
-            x="100"
-            y="195"
-            textAnchor="middle"
-            fontFamily="ui-monospace, monospace"
-            fontSize="11"
-            fill="#A8DAFF"
-            letterSpacing="0.32em"
-            opacity="0.85"
-          >
-            WORDPRESS
-          </text>
-          <defs>
-            <linearGradient id="wpGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#A8DAFF" />
-              <stop offset="100%" stopColor="#3A8EC8" />
-            </linearGradient>
-          </defs>
-        </svg>
+        <div className="relative w-full h-full flex items-center justify-center">
+          <BrandIcon icon={siWordpress} pulseDur="5s" rotateSlow />
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <Wordmark text="WORDPRESS" />
+          </svg>
+        </div>
       );
 
     case "woocommerce":
       return (
+        <div className="relative w-full h-full flex items-center justify-center">
+          <BrandIcon icon={siWoocommerce} pulseDur="6s" />
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <Wordmark text="WOOCOMMERCE" />
+          </svg>
+        </div>
+      );
+
+    case "nextjs":
+      return (
+        <div className="relative w-full h-full flex items-center justify-center">
+          <BrandIcon icon={siNextdotjs} pulseDur="5s" rotateSlow />
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <Wordmark text="NEXT.JS" />
+          </svg>
+        </div>
+      );
+
+    case "react":
+      return (
+        <div className="relative w-full h-full flex items-center justify-center">
+          <div style={{ animation: "svhSpin 50s linear infinite", width: "100%", height: "100%" }}>
+            <BrandIcon icon={siReact} pulseDur="6s" />
+          </div>
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <Wordmark text="REACT" />
+          </svg>
+        </div>
+      );
+
+    case "headless":
+      // WordPress (CMS) + Next.js (frontend) split, łącznik particle
+      return (
+        <div className="relative w-full h-full">
+          <div className="absolute" style={{ top: "20%", left: "5%", width: "40%", height: "60%", animation: "svhPulseStrong 5s ease-in-out infinite" }}>
+            <BrandIcon icon={siWordpress} pulseDur="100s" />
+          </div>
+          <div className="absolute" style={{ top: "20%", right: "5%", width: "40%", height: "60%", animation: "svhPulseStrong 5s ease-in-out infinite 2.5s" }}>
+            <BrandIcon icon={siNextdotjs} pulseDur="100s" />
+          </div>
+          {/* Center connector */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <line x1="80" y1="100" x2="120" y2="100" stroke="rgba(232,178,134,0.5)" strokeWidth="1" strokeDasharray="2 3" />
+            <circle cx="100" cy="100" r="4" fill="#E8B286" style={{ animation: "svhPulseStrong 3s ease-in-out infinite" }} />
+            <text x="60" y="160" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="9" fill="#A8DAFF" letterSpacing="0.2em" opacity="0.85">CMS</text>
+            <text x="140" y="160" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="9" fill="#E8B286" letterSpacing="0.2em" opacity="0.85">UI</text>
+            <Wordmark text="HEADLESS WP" />
+          </svg>
+        </div>
+      );
+
+    case "jamstack":
+      // 3 brand logos stacked: JS + GraphQL + Markdown indicator
+      return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Shopping cart silhouette */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 5s ease-in-out infinite" }}>
-            <path
-              d="M 50 70 L 60 70 L 75 130 L 145 130 L 160 85 L 70 85"
-              stroke="url(#wcGrad)"
-              strokeWidth="4"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="85" cy="148" r="6" fill="#E8B286" />
-            <circle cx="135" cy="148" r="6" fill="#E8B286" />
-          </g>
-          {/* Floating items above cart */}
-          {[0, 1, 2].map((i) => (
-            <circle
-              key={i}
-              cx={75 + i * 25}
-              cy={50}
-              r="3"
-              fill="#A8DAFF"
-              style={{ animation: `svhFloat${i} ${3 + i}s ease-in-out infinite ${i * 0.5}s` }}
-            />
-          ))}
           <defs>
-            <linearGradient id="wcGrad" x1="0" y1="0" x2="1" y2="1">
+            <linearGradient id="jamGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#A8DAFF" />
               <stop offset="100%" stopColor="#E8B286" />
             </linearGradient>
           </defs>
-        </svg>
-      );
-
-    case "headless":
-      return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Two boxes (backend + frontend) connected */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 4s ease-in-out infinite" }}>
-            <rect x="30" y="60" width="55" height="80" rx="4" fill="none" stroke="#3A8EC8" strokeWidth="2" />
-            <text x="57" y="105" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#A8DAFF" letterSpacing="0.1em">CMS</text>
-            <rect x="115" y="60" width="55" height="80" rx="4" fill="none" stroke="#E8B286" strokeWidth="2" />
-            <text x="142" y="105" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#E8B286" letterSpacing="0.1em">UI</text>
-            {/* Connecting line with particles */}
-            <line x1="85" y1="100" x2="115" y2="100" stroke="rgba(168,218,255,0.5)" strokeWidth="1" strokeDasharray="2 2" />
-            <circle cx="100" cy="100" r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 4s ease-in-out infinite" }} />
+          <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
+            {/* Layer 1: J = JavaScript */}
+            <g transform="translate(40 50) scale(2.0)">
+              <path d={siJavascript.path} fill="url(#jamGrad)" opacity="0.9" />
+            </g>
+            <text x="105" y="68" fontFamily="ui-monospace, monospace" fontSize="10" fill="#A8DAFF" letterSpacing="0.25em">J · JAVASCRIPT</text>
+            {/* Layer 2: A = APIs (GraphQL) */}
+            <g transform="translate(40 90) scale(2.0)">
+              <path d={siGraphql.path} fill="url(#jamGrad)" opacity="0.9" />
+            </g>
+            <text x="105" y="108" fontFamily="ui-monospace, monospace" fontSize="10" fill="#3A8EC8" letterSpacing="0.25em">A · APIs</text>
+            {/* Layer 3: M = Markup (Vercel triangle as proxy) */}
+            <g transform="translate(40 130) scale(2.0)">
+              <path d={siVercel.path} fill="url(#jamGrad)" opacity="0.9" />
+            </g>
+            <text x="105" y="148" fontFamily="ui-monospace, monospace" fontSize="10" fill="#E8B286" letterSpacing="0.25em">M · MARKUP</text>
           </g>
+          <Wordmark text="JAMSTACK" />
         </svg>
       );
 
     case "modern":
       return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Wireframe layered triangles */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 80s linear infinite" }}>
-            <polygon points="100,30 170,150 30,150" fill="none" stroke="#A8DAFF" strokeWidth="1.5" opacity="0.8" />
-            <polygon points="100,55 150,140 50,140" fill="none" stroke="#E8B286" strokeWidth="1.5" opacity="0.6" />
-            <polygon points="100,80 130,130 70,130" fill="none" stroke="#3A8EC8" strokeWidth="1.5" opacity="0.5" />
-          </g>
-          <circle cx="100" cy="115" r="8" fill="#A8DAFF" opacity="0.7" style={{ animation: "svhPulseStrong 4.5s ease-in-out infinite" }} />
-        </svg>
+        <div className="relative w-full h-full">
+          <div style={{ width: "100%", height: "100%", animation: "svhSpin 80s linear infinite" }}>
+            <BrandIcon icon={siVercel} pulseDur="100s" />
+          </div>
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200" aria-hidden>
+            <Wordmark text="VERCEL · EDGE · 2026" />
+          </svg>
+        </div>
       );
 
     case "year2026":
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Year 2026 with pulsing 6 */}
           <text
             x="100"
             y="125"
@@ -312,150 +359,77 @@ function Icon({ icon }: { icon: IconKey }) {
             fontStyle="italic"
             fontSize="84"
             fontWeight="400"
-            fill="#A8DAFF"
+            fill="url(#yearGrad)"
             style={{ letterSpacing: "-0.04em" }}
           >
             2026
           </text>
-          <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(232,178,134,0.4)" strokeWidth="1" strokeDasharray="4 6" style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }} />
-        </svg>
-      );
-
-    case "nextjs":
-      return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Next.js triangle (rounded, like their logo) */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }}>
-            <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(168,218,255,0.35)" strokeWidth="1" />
-          </g>
-          <g style={{ transformOrigin: "100px 100px" }}>
-            <circle cx="100" cy="100" r="62" fill="#14131F" />
-            <circle cx="100" cy="100" r="62" fill="none" stroke="url(#nxGrad)" strokeWidth="1.5" />
-            {/* N letter stylized */}
-            <path
-              d="M 75 70 L 75 130 M 75 70 L 125 130 M 125 100 L 125 130"
-              stroke="#A8DAFF"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-            />
-          </g>
           <defs>
-            <linearGradient id="nxGrad" x1="0" y1="0" x2="1" y2="1">
+            <linearGradient id="yearGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#A8DAFF" />
               <stop offset="100%" stopColor="#E8B286" />
             </linearGradient>
           </defs>
-        </svg>
-      );
-
-    case "jamstack":
-      return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* 3 layered planes (J/A/M) */}
-          <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
-            <rect x="40" y="60" width="120" height="22" rx="2" fill="none" stroke="#A8DAFF" strokeWidth="1.5" />
-            <text x="100" y="76" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#A8DAFF" letterSpacing="0.3em">J · JAVASCRIPT</text>
-            <rect x="40" y="92" width="120" height="22" rx="2" fill="none" stroke="#3A8EC8" strokeWidth="1.5" />
-            <text x="100" y="108" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#3A8EC8" letterSpacing="0.3em">A · APIs</text>
-            <rect x="40" y="124" width="120" height="22" rx="2" fill="none" stroke="#E8B286" strokeWidth="1.5" />
-            <text x="100" y="140" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="11" fill="#E8B286" letterSpacing="0.3em">M · MARKUP</text>
-          </g>
+          <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(232,178,134,0.4)" strokeWidth="1" strokeDasharray="4 6" style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }} />
+          <Wordmark text="STRONA FIRMOWA 2026" />
         </svg>
       );
 
     case "www":
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Code brackets with WWW */}
           <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             <text x="40" y="120" fontFamily="ui-monospace, monospace" fontSize="48" fill="#E8B286">{`<`}</text>
             <text x="100" y="115" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="32" fontWeight="700" fill="#A8DAFF" letterSpacing="0.05em">WWW</text>
             <text x="160" y="120" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="48" fill="#E8B286">{`/>`}</text>
           </g>
-        </svg>
-      );
-
-    case "react":
-      return (
-        <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* React atom — 3 ellipses orbiting */}
-          <g style={{ transformOrigin: "100px 100px", animation: "svhSpin 50s linear infinite" }}>
-            <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" />
-            <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" transform="rotate(60 100 100)" />
-            <ellipse cx="100" cy="100" rx="68" ry="26" fill="none" stroke="#A8DAFF" strokeWidth="1.5" transform="rotate(120 100 100)" />
-          </g>
-          <circle cx="100" cy="100" r="8" fill="#E8B286" style={{ animation: "svhPulseStrong 4s ease-in-out infinite" }} />
+          <Wordmark text="STRONY WWW" />
         </svg>
       );
 
     case "ai":
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Neural network nodes (3 layers) */}
           <g>
-            {/* Layer 1 (input) */}
             {[60, 100, 140].map((y, i) => (
               <circle key={`l1-${i}`} cx="50" cy={y} r="5" fill="#3A8EC8" />
             ))}
-            {/* Layer 2 (hidden) */}
             {[50, 90, 130, 170].map((y, i) => (
               <circle key={`l2-${i}`} cx="100" cy={y - 10} r="5" fill="#A8DAFF" />
             ))}
-            {/* Layer 3 (output) */}
             {[80, 120].map((y, i) => (
               <circle key={`l3-${i}`} cx="150" cy={y} r="6" fill="#E8B286" />
             ))}
-            {/* Connections layer 1 → 2 */}
             {[60, 100, 140].map((y1) =>
               [50, 90, 130, 170].map((y2) => (
-                <line
-                  key={`c12-${y1}-${y2}`}
-                  x1="55"
-                  y1={y1}
-                  x2="95"
-                  y2={y2 - 10}
-                  stroke="rgba(168,218,255,0.18)"
-                  strokeWidth="0.6"
-                />
+                <line key={`c12-${y1}-${y2}`} x1="55" y1={y1} x2="95" y2={y2 - 10} stroke="rgba(168,218,255,0.18)" strokeWidth="0.6" />
               ))
             )}
-            {/* Connections layer 2 → 3 */}
             {[50, 90, 130, 170].map((y1) =>
               [80, 120].map((y2) => (
-                <line
-                  key={`c23-${y1}-${y2}`}
-                  x1="105"
-                  y1={y1 - 10}
-                  x2="145"
-                  y2={y2}
-                  stroke="rgba(232,178,134,0.18)"
-                  strokeWidth="0.6"
-                />
+                <line key={`c23-${y1}-${y2}`} x1="105" y1={y1 - 10} x2="145" y2={y2} stroke="rgba(232,178,134,0.18)" strokeWidth="0.6" />
               ))
             )}
-            {/* Pulsing signal flowing */}
             <circle r="3" fill="#E8B286" style={{ animation: "svhPulseStrong 3s ease-in-out infinite" }}>
               <animateMotion dur="6s" repeatCount="indefinite" path="M 50 100 L 100 90 L 150 100" />
             </circle>
           </g>
+          <Wordmark text="AI · NEURAL NET" />
         </svg>
       );
 
     case "seo":
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          {/* Magnifier + ranking bars */}
           <g style={{ transformOrigin: "100px 100px", animation: "svhPulseStrong 5s ease-in-out infinite" }}>
-            {/* Bars rising */}
             <rect x="50" y="120" width="14" height="30" fill="#3A8EC8" opacity="0.7" />
             <rect x="72" y="100" width="14" height="50" fill="#A8DAFF" opacity="0.85" />
             <rect x="94" y="80" width="14" height="70" fill="#E8B286" opacity="0.95" />
             <rect x="116" y="60" width="14" height="90" fill="#E8B286" />
-            {/* Magnifying glass */}
             <circle cx="155" cy="55" r="20" fill="none" stroke="#A8DAFF" strokeWidth="2.5" />
             <line x1="170" y1="70" x2="180" y2="80" stroke="#A8DAFF" strokeWidth="2.5" strokeLinecap="round" />
           </g>
+          <Wordmark text="SEO · POZYCJONOWANIE" />
         </svg>
       );
 
