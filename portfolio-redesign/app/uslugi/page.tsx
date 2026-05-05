@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/lib/services";
+import { ServicesIndexList } from "@/components/service/ServicesIndexList";
 
 export const metadata: Metadata = {
   title: "Usługi",
@@ -30,34 +31,7 @@ export default function UslugiPage() {
         </div>
       </header>
 
-      <ul className="border-t border-line">
-        {services.map((s, i) => (
-          <li key={s.slug} className="border-b border-line group">
-            <Link
-              href={`/uslugi/${s.slug}`}
-              className="block py-12 md:py-16"
-              data-cursor="OTWÓRZ"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-                <span className="md:col-span-1 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint pt-3">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="md:col-span-7">
-                  <h2 className="font-display italic text-h1 leading-[0.95] text-ink group-hover:text-peach transition-colors duration-500">
-                    {s.title}
-                  </h2>
-                </div>
-                <div className="md:col-span-3">
-                  <p className="text-ink-mute">{s.lead.split(".")[0]}.</p>
-                </div>
-                <span className="md:col-span-1 text-right pt-3 font-mono text-ink-mute group-hover:text-peach group-hover:translate-x-1 transition-all inline-block">
-                  →
-                </span>
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ServicesIndexList />
     </article>
   );
 }

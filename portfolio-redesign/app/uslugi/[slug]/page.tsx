@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { services } from "@/lib/services";
+import { projects } from "@/lib/projects";
+import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
 
@@ -124,6 +127,86 @@ export default async function UslugaPage({
           <ServiceHeroVisual slug={s.slug} />
         </div>
       </header>
+
+      {/* CASE STUDY — pokaż konkretną realizację w tej technologii */}
+      {(() => {
+        const hint = SERVICE_CASE_MAP[s.slug];
+        const project = hint ? projects.find((p) => p.slug === hint.projectSlug) : null;
+        if (!hint || !project) return null;
+        return (
+          <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+              <aside className="md:col-span-3">
+                <p className="eyebrow mb-2">— Realizacja w tej technologii</p>
+                <p className="text-ink-faint text-sm font-mono leading-relaxed">
+                  Konkretny projekt który zrobiłem w tym setupie.
+                </p>
+              </aside>
+              <div className="md:col-span-9">
+                <h2 className="display text-h1 text-ink">
+                  Tak to <em>wygląda</em> w&nbsp;praktyce.
+                </h2>
+              </div>
+            </div>
+
+            <Link
+              href={`/projekty/${project.slug}`}
+              className="group block"
+              data-cursor="CASE"
+            >
+              <div className="relative aspect-[16/9] overflow-hidden bg-bg-elev mb-10">
+                <Image
+                  src={project.image}
+                  alt={`${project.client} — ${project.title}`}
+                  fill
+                  className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                  sizes="(max-width: 768px) 100vw, 90vw"
+                  priority
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-bg/40 via-transparent to-transparent pointer-events-none"
+                />
+                <div className="absolute top-5 left-5 right-5 flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink/90 mix-blend-difference">
+                  <span>{project.year} · {project.client}</span>
+                  <span>{hint.highlight}</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+                <div className="md:col-span-3">
+                  <p className="eyebrow mb-3">Klient · {project.year}</p>
+                  <h3
+                    className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
+                    style={{
+                      fontSize: "clamp(1.75rem, 1rem + 2vw, 2.75rem)",
+                      lineHeight: 1,
+                      letterSpacing: "-0.025em",
+                    }}
+                  >
+                    {project.client}
+                  </h3>
+                </div>
+                <div className="md:col-span-7 prose-bound text-ink-mute text-lg leading-relaxed">
+                  <p>{hint.context}</p>
+                  <ul className="mt-4 flex flex-wrap gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint">
+                    {project.stack.map((t) => (
+                      <li key={t} className="border border-line px-2.5 py-1 rounded-full">
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="md:col-span-2 md:text-right">
+                  <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink group-hover:text-peach transition-colors">
+                    <span>Case</span>
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </section>
+        );
+      })()}
 
       {/* INTRO — long-form copy with marginalia */}
       <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">

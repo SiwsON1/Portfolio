@@ -208,6 +208,112 @@ export default function OMniePage() {
         </ul>
       </section>
 
+      {/* SKILLE — gridowy katalog z poziomami */}
+      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+          <aside className="md:col-span-3">
+            <p className="eyebrow mb-2">03 — Skille</p>
+            <p className="text-ink-faint text-sm font-mono leading-relaxed">
+              Czego używam w produkcji, jak głęboko, od kiedy.
+            </p>
+          </aside>
+          <div className="md:col-span-9">
+            <h2 className="display text-h1 text-ink">
+              <em>30+</em> narzędzi w&nbsp;codziennym użyciu.
+            </h2>
+          </div>
+        </div>
+
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-px bg-line border-y border-line">
+          {[
+            {
+              cat: "Frontend",
+              level: "Expert · 6 lat",
+              tools: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "GSAP + ScrollTrigger", "Three.js / R3F", "Lenis", "Motion (framer-motion)", "shadcn/ui"],
+            },
+            {
+              cat: "Backend",
+              level: "Advanced · 4 lata",
+              tools: ["Node.js", "NestJS", "Express", "Postgres + Prisma", "MongoDB", "Redis", "tRPC", "REST + GraphQL"],
+            },
+            {
+              cat: "CMS / Headless",
+              level: "Expert · 5 lat",
+              tools: ["WordPress (custom theme)", "WooCommerce", "Sanity Studio", "Strapi", "Headless WP (WPGraphQL)", "Contentful"],
+            },
+            {
+              cat: "AI / LLM",
+              level: "Advanced · 2 lata",
+              tools: ["OpenAI API", "Anthropic Claude", "Vercel AI SDK", "RAG (pgvector)", "LangChain", "Embeddings + ewaluacja"],
+            },
+            {
+              cat: "DevOps / Hosting",
+              level: "Advanced · 5 lat",
+              tools: ["Vercel", "Hostinger", "cyber_folks", "VPS Hetzner", "Cloudflare", "Sentry", "OpenTelemetry", "Docker"],
+            },
+            {
+              cat: "Design / Tools",
+              level: "Working · 4 lata",
+              tools: ["Figma", "DaVinci Resolve", "Playwright", "Lighthouse CI", "Git + GitHub", "Notion", "ChatGPT Pro / Claude Pro"],
+            },
+          ].map((g) => (
+            <li
+              key={g.cat}
+              className="bg-bg p-6 md:p-8 group hover:bg-bg-elev transition-colors duration-500"
+            >
+              <div className="flex items-baseline justify-between mb-4">
+                <h3 className="font-display italic text-2xl md:text-3xl text-ink group-hover:text-peach transition-colors">
+                  {g.cat}
+                </h3>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">
+                  {g.level}
+                </span>
+              </div>
+              <ul className="flex flex-wrap gap-1.5 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-mute">
+                {g.tools.map((t) => (
+                  <li key={t} className="border border-line px-2.5 py-1 rounded-full">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* CV — download box */}
+      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-3">
+            <p className="eyebrow mb-2">04 — CV</p>
+            <p className="text-ink-faint text-sm font-mono leading-relaxed">
+              Pełen przebieg do pobrania.
+            </p>
+          </div>
+          <div className="md:col-span-6">
+            <h2 className="display text-h1 text-ink">
+              CV w <em>PDF</em>.
+            </h2>
+            <p className="mt-6 text-ink-mute max-w-prose">
+              Pełna lista projektów, technologii, edukacji, doświadczenia.
+              Wersja PDF do druku albo wysłania do rekrutera/klienta korporacyjnego.
+            </p>
+          </div>
+          <div className="md:col-span-3 md:text-right">
+            <a
+              href="/ms_cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-8 py-4"
+              data-cursor="POBIERZ"
+            >
+              <span>Pobierz CV</span>
+              <span className="transition-transform group-hover:translate-y-0.5">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line text-center">
         <p className="eyebrow mb-6">Pogadajmy</p>
