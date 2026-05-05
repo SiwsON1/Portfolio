@@ -7,6 +7,27 @@ import Script from "next/script";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 
 export default function Home() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Marcin Siwonia",
+    alternateName: "Marcin Siwonia — Web Developer Wrocław",
+    url: SITE_URL,
+    inLanguage: "pl-PL",
+    publisher: {
+      "@type": "Person",
+      name: "Marcin Siwonia",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -55,6 +76,11 @@ export default function Home() {
       <ProjectsCabinet />
       <ServicesPreview />
       <AboutTease />
+      <Script
+        id="ld-website"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <Script
         id="ld-person"
         type="application/ld+json"

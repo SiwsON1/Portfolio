@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 
@@ -51,6 +52,12 @@ export default async function ProjektPage({
   const sameCategory = projects
     .filter((x) => x.category === p.category && x.slug !== p.slug)
     .slice(0, 3);
+
+  const breadcrumbs = breadcrumbsSchema([
+    { name: "Strona główna", path: "/" },
+    { name: "Projekty", path: "/projekty" },
+    { name: `${p.client} — ${p.title}`, path: `/projekty/${p.slug}` },
+  ]);
 
   const schema = {
     "@context": "https://schema.org",
@@ -348,6 +355,11 @@ export default async function ProjektPage({
         </Link>
       </nav>
 
+      <Script
+        id="ld-breadcrumbs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <Script
         id="ld-project"
         type="application/ld+json"

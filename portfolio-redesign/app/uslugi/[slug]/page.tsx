@@ -8,6 +8,7 @@ import { projects } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 
@@ -67,6 +68,12 @@ export default async function UslugaPage({
     areaServed: { "@type": "Country", name: "Poland" },
     url: `${SITE_URL}/uslugi/${s.slug}`,
   };
+
+  const breadcrumbs = breadcrumbsSchema([
+    { name: "Strona główna", path: "/" },
+    { name: "Usługi", path: "/uslugi" },
+    { name: s.title, path: `/uslugi/${s.slug}` },
+  ]);
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -447,6 +454,11 @@ export default async function UslugaPage({
         </Link>
       </nav>
 
+      <Script
+        id="ld-breadcrumbs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <Script
         id="ld-service"
         type="application/ld+json"

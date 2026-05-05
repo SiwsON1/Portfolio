@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...staticRoutes, ...serviceRoutes, ...projectRoutes, ...postRoutes].map((r) => ({
     url: r.url,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "weekly",
     priority: r.priority,
   }));
 }

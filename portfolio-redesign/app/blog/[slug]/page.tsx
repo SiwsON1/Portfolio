@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { posts } from "@/lib/posts";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
 
@@ -46,6 +47,12 @@ export default async function PostPage({
   const idx = posts.findIndex((x) => x.slug === slug);
   const next = posts[(idx + 1) % posts.length];
   const prev = posts[(idx - 1 + posts.length) % posts.length];
+
+  const breadcrumbs = breadcrumbsSchema([
+    { name: "Strona główna", path: "/" },
+    { name: "Blog", path: "/blog" },
+    { name: p.title, path: `/blog/${p.slug}` },
+  ]);
 
   const schema = {
     "@context": "https://schema.org",
@@ -195,6 +202,11 @@ export default async function PostPage({
         </Link>
       </nav>
 
+      <Script
+        id="ld-breadcrumbs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <Script
         id="ld-article"
         type="application/ld+json"
