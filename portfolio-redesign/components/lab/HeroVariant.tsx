@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrambleText } from "@/components/ui/ScrambleText";
 
 const morphWords = ["NEXT.JS", "REACT", "AI", "SEO", "WORDPRESS", "WOOCOMMERCE"];
 
@@ -134,10 +133,7 @@ export function HeroVariant({
         >
           <span className="block overflow-hidden">
             <span className="line block">
-              <em>
-                <ScrambleText>Marcin</ScrambleText>
-              </em>{" "}
-              <ScrambleText>Siwonia</ScrambleText>
+              <em>Marcin</em> Siwonia
             </span>
           </span>
           <span className="block overflow-hidden">
@@ -169,9 +165,7 @@ export function HeroVariant({
           </span>
           <span className="block overflow-hidden">
             <span className="line block">
-              <em>
-                <ScrambleText>z polotem.</ScrambleText>
-              </em>
+              <em>z polotem.</em>
             </span>
           </span>
         </h1>
