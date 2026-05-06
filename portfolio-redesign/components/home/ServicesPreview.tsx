@@ -67,16 +67,16 @@ export function ServicesPreview() {
 
       <div className="sv-header relative mb-20 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-3">
-          <p className="eyebrow">Co robię · {String(services.length).padStart(2, "0")}</p>
+          <p className="eyebrow">Co robię · katalog</p>
         </div>
         <div className="md:col-span-9">
           <h2 className="display text-h1 text-ink">
-            Pięć <em>specjalności</em>,
+            Cztery <em>specjalności</em>,
             <br />
             jeden warsztat.
           </h2>
           <p className="mt-6 prose-bound text-ink-mute text-lead">
-            Nie rozpraszam się na wszystko. Te pięć obszarów to suma
+            Nie rozpraszam się na wszystko. Te cztery obszary to suma
             tego co potrafię dostarczyć tak, żeby się potem nie wstydzić.
           </p>
         </div>

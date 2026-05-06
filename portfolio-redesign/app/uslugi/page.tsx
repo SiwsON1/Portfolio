@@ -15,7 +15,7 @@ export default function UslugiPage() {
     <article className="px-6 pt-40 pb-32 md:px-10 md:pt-56">
       <header className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-3">
-          <p className="eyebrow">Usługi · {services.length}</p>
+          <p className="eyebrow">Usługi · katalog</p>
         </div>
         <div className="md:col-span-9">
           <h1 className="display text-display text-ink">

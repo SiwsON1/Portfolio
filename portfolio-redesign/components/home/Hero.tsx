@@ -95,17 +95,11 @@ export function Hero() {
         }}
       />
 
-      {/* PORTRAIT wrapper — lower-right, większy. z-[20] żeby pointer events docierały do canvas. */}
+      {/* PORTRAIT wrapper — lower-right. Mobile mniejsza i wyżej żeby nie kolidowała z H1. */}
       <div
         ref={portraitRef}
-        className="absolute z-[20]"
-        style={{
-          top: "16%",
-          right: "-4%",
-          width: "min(64vw, 760px)",
-          height: "min(64vw, 760px)",
-          pointerEvents: "none",
-        }}
+        className="absolute z-[20] top-[8%] md:top-[16%] -right-[12%] md:right-[-4%] w-[58vw] md:w-[min(64vw,760px)] aspect-square"
+        style={{ pointerEvents: "none" }}
       >
         {/* Outer cyan bloom — emanuje z portretu na okolicę */}
         <div
