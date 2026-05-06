@@ -74,15 +74,16 @@ export function Hero() {
         }}
       />
 
-      {/* PORTRAIT wrapper — lower-right, większy */}
+      {/* PORTRAIT wrapper — lower-right, większy. z-[20] żeby pointer events docierały do canvas. */}
       <div
         ref={portraitRef}
-        className="absolute z-[1] pointer-events-auto"
+        className="absolute z-[20]"
         style={{
           top: "16%",
           right: "-4%",
           width: "min(64vw, 760px)",
           height: "min(64vw, 760px)",
+          pointerEvents: "none",
         }}
       >
         {/* Outer cyan bloom — emanuje z portretu na okolicę */}
@@ -107,7 +108,7 @@ export function Hero() {
             animation: "portraitGlow 7s ease-in-out infinite reverse",
           }}
         />
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full" style={{ pointerEvents: "auto" }}>
           <PortraitCanvas />
         </div>
       </div>
@@ -119,8 +120,8 @@ export function Hero() {
         <span>FRAME 0001</span>
       </div>
 
-      {/* Main title — bottom-anchored left */}
-      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-28 md:pb-36 z-10">
+      {/* Main title — bottom-anchored left. pointer-events-none żeby nie blokował drag-to-rotate sfery po prawej (z-15). */}
+      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-28 md:pb-36 z-10 pointer-events-none">
         <h1
           ref={titleRef}
           className="display text-ink"

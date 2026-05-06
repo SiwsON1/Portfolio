@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { ZoomReveal } from "@/components/home/ZoomReveal";
 import { ProjectsCabinet } from "@/components/home/ProjectsCabinet";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { AboutTease } from "@/components/home/AboutTease";
@@ -72,6 +73,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ZoomReveal />
       <ProjectsCabinet />
       <ServicesPreview />
       <AboutTease />
