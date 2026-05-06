@@ -9,7 +9,7 @@ import {
   siWoocommerce,
   siNextdotjs,
   siReact,
-  siOpenai,
+  siAnthropic,
   type SimpleIcon,
 } from "simple-icons";
 
@@ -52,7 +52,7 @@ const TECH: Tech[] = [
     spin: true,
   },
   {
-    icon: siOpenai,
+    icon: siAnthropic,
     label: "AI",
     caption: "OpenAI, Anthropic, custom workflow + RAG.",
     href: "/uslugi/wdrozenia-ai",

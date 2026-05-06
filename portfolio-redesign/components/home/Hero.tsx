@@ -6,7 +6,7 @@ import gsap from "gsap";
 import {
   siNextdotjs,
   siReact,
-  siOpenai,
+  siAnthropic,
   siWordpress,
   siWoocommerce,
   type SimpleIcon,
@@ -21,7 +21,7 @@ type MorphEntry = { label: string; icon: SimpleIcon };
 const morphEntries: MorphEntry[] = [
   { label: "NEXT.JS", icon: siNextdotjs },
   { label: "REACT", icon: siReact },
-  { label: "AI", icon: siOpenai },
+  { label: "AI", icon: siAnthropic },
   { label: "WORDPRESS", icon: siWordpress },
   { label: "WOOCOMMERCE", icon: siWoocommerce },
 ];
