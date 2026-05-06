@@ -140,7 +140,7 @@ export function Hero() {
         <h1
           ref={titleRef}
           className="display text-ink"
-          style={{ fontSize: "clamp(2.75rem, 1.2rem + 8.5vw, 11rem)" }}
+          style={{ fontSize: "clamp(2.5rem, 1rem + 8vw, 11rem)", lineHeight: 1.12 }}
         >
           <span className="block overflow-hidden">
             <span className="line block">
@@ -153,14 +153,12 @@ export function Hero() {
               <span
                 className="inline-flex items-center justify-center align-middle relative rounded-full"
                 style={{
-                  width: "1.15em",
-                  height: "1.15em",
+                  width: "0.85em",
+                  height: "0.85em",
                   verticalAlign: "middle",
-                  marginInline: "0.15em",
-                  transform: "translateY(-0.04em)",
-                  border: "1px solid rgb(244 180 129 / 0.6)",
-                  background: "rgba(232, 178, 134, 0.06)",
-                  boxShadow: "0 0 24px rgba(232, 178, 134, 0.22), inset 0 0 16px rgba(168, 218, 255, 0.08)",
+                  marginInline: "0.18em",
+                  border: "1px solid rgb(244 180 129 / 0.5)",
+                  background: "rgba(232, 178, 134, 0.04)",
                 }}
                 aria-label={morphEntries[0].label}
               >
@@ -170,8 +168,8 @@ export function Hero() {
                   aria-hidden
                   className="shrink-0"
                   style={{
-                    width: "0.7em",
-                    height: "0.7em",
+                    width: "0.55em",
+                    height: "0.55em",
                   }}
                 >
                   <defs>
