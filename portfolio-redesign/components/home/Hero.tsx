@@ -3,16 +3,33 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import {
+  siNextdotjs,
+  siReact,
+  siOpenai,
+  siWordpress,
+  siWoocommerce,
+  type SimpleIcon,
+} from "simple-icons";
 
 const PortraitCanvas = dynamic(
   () => import("@/components/lab/WireframeCanvas").then((m) => m.WireframeCanvas),
   { ssr: false, loading: () => null }
 );
 
-const morphWords = ["NEXT.JS", "REACT", "AI", "SEO", "WORDPRESS", "WOOCOMMERCE"];
+type MorphEntry = { label: string; icon: SimpleIcon };
+const morphEntries: MorphEntry[] = [
+  { label: "NEXT.JS", icon: siNextdotjs },
+  { label: "REACT", icon: siReact },
+  { label: "AI", icon: siOpenai },
+  { label: "WORDPRESS", icon: siWordpress },
+  { label: "WOOCOMMERCE", icon: siWoocommerce },
+];
 
 export function Hero() {
   const wordRef = useRef<HTMLSpanElement>(null);
+  const iconRef = useRef<SVGSVGElement>(null);
+  const iconPathRef = useRef<SVGPathElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
 
@@ -39,26 +56,30 @@ export function Hero() {
       });
     }
 
-    const el = wordRef.current;
+    const wordEl = wordRef.current;
+    const iconEl = iconRef.current;
+    const pathEl = iconPathRef.current;
     let i = 0;
     const tick = () => {
-      i = (i + 1) % morphWords.length;
-      gsap.to(el, {
+      i = (i + 1) % morphEntries.length;
+      const next = morphEntries[i];
+      gsap.to([wordEl, iconEl], {
         duration: 0.4,
         y: "-100%",
         autoAlpha: 0,
         ease: "expo.in",
         onComplete: () => {
-          el.textContent = morphWords[i];
+          wordEl.textContent = next.label;
+          if (pathEl) pathEl.setAttribute("d", next.icon.path);
           gsap.fromTo(
-            el,
+            [wordEl, iconEl],
             { y: "100%", autoAlpha: 0 },
             { y: 0, autoAlpha: 1, duration: 0.7, ease: "expo.out" }
           );
         },
       });
     };
-    const id = window.setInterval(tick, 2200);
+    const id = window.setInterval(tick, 2400);
     return () => window.clearInterval(id);
   }, []);
 
@@ -136,25 +157,44 @@ export function Hero() {
             <span className="line block">
               buduje{" "}
               <span
-                className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full"
+                className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full gap-2"
                 style={{
-                  width: "clamp(7rem, 3rem + 14vw, 13rem)",
+                  width: "clamp(8rem, 3.5rem + 16vw, 15rem)",
                   height: "1em",
                   verticalAlign: "middle",
                   marginInline: "0.15em",
                   transform: "translateY(-0.06em)",
                   border: "1px solid rgb(244 180 129 / 0.6)",
+                  paddingInline: "0.6em",
                 }}
               >
+                <svg
+                  ref={iconRef}
+                  viewBox="0 0 24 24"
+                  aria-hidden
+                  className="shrink-0"
+                  style={{
+                    width: "clamp(0.9rem, 0.5rem + 1.2vw, 1.4rem)",
+                    height: "clamp(0.9rem, 0.5rem + 1.2vw, 1.4rem)",
+                  }}
+                >
+                  <defs>
+                    <linearGradient id="hero-morph-grad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#A8DAFF" />
+                      <stop offset="100%" stopColor="#E8B286" />
+                    </linearGradient>
+                  </defs>
+                  <path ref={iconPathRef} d={morphEntries[0].icon.path} fill="url(#hero-morph-grad)" />
+                </svg>
                 <span
                   ref={wordRef}
                   className="font-mono not-italic font-medium text-peach text-center whitespace-nowrap leading-none"
                   style={{
-                    fontSize: "clamp(0.85rem, 0.45rem + 1.4vw, 1.65rem)",
+                    fontSize: "clamp(0.8rem, 0.4rem + 1.3vw, 1.5rem)",
                     letterSpacing: "0.05em",
                   }}
                 >
-                  {morphWords[0]}
+                  {morphEntries[0].label}
                 </span>
               </span>
             </span>

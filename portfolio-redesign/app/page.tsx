@@ -1,7 +1,7 @@
 import { Hero } from "@/components/home/Hero";
-import { ZoomReveal } from "@/components/home/ZoomReveal";
 import { ProjectsCabinet } from "@/components/home/ProjectsCabinet";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
+import { TechStack } from "@/components/home/TechStack";
 import { AboutTease } from "@/components/home/AboutTease";
 import Script from "next/script";
 
@@ -73,9 +73,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ZoomReveal />
       <ProjectsCabinet />
       <ServicesPreview />
+      <TechStack />
       <AboutTease />
       <Script
         id="ld-website"
