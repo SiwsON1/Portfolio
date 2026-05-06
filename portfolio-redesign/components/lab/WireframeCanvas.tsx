@@ -22,16 +22,20 @@ function Wireframe({
   useFrame((state, delta) => {
     if (!ref.current) return;
 
-    // Drag rotation: kursor naciskany przeciąga sferę bezpośrednio
     if (drag.current.isDragging) {
+      // DRAG: bezpośrednia 1:1 rotacja (przeciąganie myszą przez całą szerokość = pełen obrót)
       rot.current.x = drag.current.y * Math.PI;
       rot.current.y = drag.current.x * Math.PI * 2;
     } else {
-      // Idle: hover-driven tilt + powolna autorotacja
-      const targetX = (mouse.current.y - 0.5) * 1.4;
-      const targetY = rot.current.y + delta * 0.12 + (mouse.current.x - 0.5) * 0.012;
-      rot.current.x += (targetX - rot.current.x) * 0.07;
-      rot.current.y = targetY;
+      // HOVER: ruch myszy w viewport = AKTYWNA rotacja sfery (bez wymogu klikania)
+      // Przesunięcie kursora po całej szerokości = ~180° w osi Y, po wysokości = ~120° w osi X
+      const targetY = (mouse.current.x - 0.5) * Math.PI;
+      const targetX = (mouse.current.y - 0.5) * -Math.PI * 0.7;
+      // Smooth lerp żeby nie skakało
+      rot.current.x += (targetX - rot.current.x) * 0.08;
+      rot.current.y += (targetY - rot.current.y) * 0.08;
+      // + drobna ciągła autorotacja gdy mysz nie rusza się
+      rot.current.y += delta * 0.05;
     }
 
     ref.current.rotation.x = rot.current.x;
