@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Suspense, useMemo, useRef } from "react";
+import { Suspense, useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 
 /**
@@ -141,6 +141,33 @@ export function WireframeCanvas() {
   const mouse = useRef({ x: 0.5, y: 0.5 });
   const drag = useRef({ x: 0, y: 0, isDragging: false });
   const dragStart = useRef({ x: 0, y: 0, rotX: 0, rotY: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // GLOBALNY mouse tracking — sfera reaguje na ruch w CAŁYM viewport,
+  // nie tylko nad samą sferą. Współrzędne mapujemy do 0..1 w obrębie window.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onMove = (e: MouseEvent) => {
+      mouse.current.x = e.clientX / window.innerWidth;
+      mouse.current.y = 1 - e.clientY / window.innerHeight;
+
+      if (drag.current.isDragging) {
+        const dx = (e.clientX - dragStart.current.x) / window.innerWidth;
+        const dy = (e.clientY - dragStart.current.y) / window.innerHeight;
+        drag.current.x = dragStart.current.rotY + dx * 2;
+        drag.current.y = dragStart.current.rotX + dy * 2;
+      }
+    };
+    const onUp = () => {
+      drag.current.isDragging = false;
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, []);
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     drag.current.isDragging = true;
@@ -150,38 +177,14 @@ export function WireframeCanvas() {
       rotX: drag.current.y,
       rotY: drag.current.x,
     };
-    (e.currentTarget as HTMLDivElement).setPointerCapture(e.pointerId);
-  };
-  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    mouse.current.x = (e.clientX - r.left) / r.width;
-    mouse.current.y = 1 - (e.clientY - r.top) / r.height;
-    if (drag.current.isDragging) {
-      const dx = (e.clientX - dragStart.current.x) / r.width;
-      const dy = (e.clientY - dragStart.current.y) / r.height;
-      drag.current.x = dragStart.current.rotY + dx;
-      drag.current.y = dragStart.current.rotX + dy;
-    }
-  };
-  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
-    drag.current.isDragging = false;
-    try { (e.currentTarget as HTMLDivElement).releasePointerCapture(e.pointerId); } catch {}
   };
 
   return (
     <div
+      ref={containerRef}
       className="relative w-full h-full overflow-visible select-none"
       style={{ cursor: "grab", touchAction: "none" }}
-      onPointerMove={onPointerMove}
       onPointerDown={onPointerDown}
-      onPointerUp={onPointerUp}
-      onPointerCancel={onPointerUp}
-      onMouseDown={(e) => {
-        (e.currentTarget as HTMLDivElement).style.cursor = "grabbing";
-      }}
-      onMouseUp={(e) => {
-        (e.currentTarget as HTMLDivElement).style.cursor = "grab";
-      }}
     >
       <Canvas
         dpr={[1, 1.6]}
