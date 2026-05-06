@@ -155,16 +155,16 @@ export function AboutTease() {
           </div>
         </div>
 
-        {/* RIGHT — cutout portrait floating na peach radial glow */}
-        <div className="md:col-span-4 md:col-start-9 order-1 md:order-2">
-          <figure className="at-image relative aspect-[4/5]">
+        {/* RIGHT — cutout portrait, kompaktowy (zdjecie ma slabsza jakosc, mniejsze = ostrzejsze) */}
+        <div className="md:col-span-3 md:col-start-10 order-1 md:order-2">
+          <figure className="at-image relative aspect-[3/4] max-w-[240px] mx-auto md:mx-0">
             {/* Soft peach glow za postacią */}
             <div
               aria-hidden
-              className="absolute inset-0 pointer-events-none"
+              className="absolute -inset-6 pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(ellipse 60% 50% at 50% 45%, rgba(232,178,134,0.18) 0%, rgba(58,142,200,0.10) 35%, rgba(20,19,31,0) 70%)",
+                  "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(232,178,134,0.20) 0%, rgba(58,142,200,0.10) 40%, rgba(20,19,31,0) 70%)",
               }}
             />
             {/* Postać wycięta z tła */}
@@ -173,13 +173,13 @@ export function AboutTease() {
               alt="Marcin Siwonia, web developer z Wrocławia"
               fill
               className="object-contain object-bottom relative z-[1]"
-              sizes="(max-width: 768px) 100vw, 35vw"
+              sizes="(max-width: 768px) 60vw, 240px"
               priority={false}
             />
             {/* Frame mark */}
-            <figcaption className="absolute -bottom-2 left-0 right-0 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute z-10">
+            <figcaption className="absolute -bottom-6 left-0 right-0 flex items-end justify-between font-mono text-[9px] uppercase tracking-[0.22em] text-ink-mute z-10">
               <span>Marcin · Wrocław</span>
-              <span>[01 / 01]</span>
+              <span>[01]</span>
             </figcaption>
           </figure>
         </div>
