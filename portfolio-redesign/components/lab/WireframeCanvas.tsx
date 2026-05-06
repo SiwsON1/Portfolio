@@ -9,16 +9,33 @@ import * as THREE from "three";
  * Subtle data-visualization vibe. Kursor wpływa na rotację.
  */
 
-function Wireframe({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: number }> }) {
+function Wireframe({
+  mouse,
+  drag,
+}: {
+  mouse: React.MutableRefObject<{ x: number; y: number }>;
+  drag: React.MutableRefObject<{ x: number; y: number; isDragging: boolean }>;
+}) {
   const ref = useRef<THREE.LineSegments>(null);
-  const targetRot = useRef({ x: 0, y: 0 });
+  const rot = useRef({ x: 0, y: 0 });
 
   useFrame((state, delta) => {
     if (!ref.current) return;
-    targetRot.current.x = (mouse.current.y - 0.5) * 0.4;
-    targetRot.current.y += delta * 0.18 + (mouse.current.x - 0.5) * 0.005;
-    ref.current.rotation.x += (targetRot.current.x - ref.current.rotation.x) * 0.05;
-    ref.current.rotation.y = targetRot.current.y;
+
+    // Drag rotation: kursor naciskany przeciąga sferę bezpośrednio
+    if (drag.current.isDragging) {
+      rot.current.x = drag.current.y * Math.PI;
+      rot.current.y = drag.current.x * Math.PI * 2;
+    } else {
+      // Idle: hover-driven tilt + powolna autorotacja
+      const targetX = (mouse.current.y - 0.5) * 1.4;
+      const targetY = rot.current.y + delta * 0.12 + (mouse.current.x - 0.5) * 0.012;
+      rot.current.x += (targetX - rot.current.x) * 0.07;
+      rot.current.y = targetY;
+    }
+
+    ref.current.rotation.x = rot.current.x;
+    ref.current.rotation.y = rot.current.y;
     ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.2) * 0.05;
   });
 
@@ -118,13 +135,48 @@ function OrbitalParticles({ mouse }: { mouse: React.MutableRefObject<{ x: number
 
 export function WireframeCanvas() {
   const mouse = useRef({ x: 0.5, y: 0.5 });
+  const drag = useRef({ x: 0, y: 0, isDragging: false });
+  const dragStart = useRef({ x: 0, y: 0, rotX: 0, rotY: 0 });
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    drag.current.isDragging = true;
+    dragStart.current = {
+      x: e.clientX,
+      y: e.clientY,
+      rotX: drag.current.y,
+      rotY: drag.current.x,
+    };
+    (e.currentTarget as HTMLDivElement).setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    mouse.current.x = (e.clientX - r.left) / r.width;
+    mouse.current.y = 1 - (e.clientY - r.top) / r.height;
+    if (drag.current.isDragging) {
+      const dx = (e.clientX - dragStart.current.x) / r.width;
+      const dy = (e.clientY - dragStart.current.y) / r.height;
+      drag.current.x = dragStart.current.rotY + dx;
+      drag.current.y = dragStart.current.rotX + dy;
+    }
+  };
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    drag.current.isDragging = false;
+    try { (e.currentTarget as HTMLDivElement).releasePointerCapture(e.pointerId); } catch {}
+  };
+
   return (
     <div
-      className="relative w-full h-full overflow-visible"
-      onMouseMove={(e) => {
-        const r = e.currentTarget.getBoundingClientRect();
-        mouse.current.x = (e.clientX - r.left) / r.width;
-        mouse.current.y = 1 - (e.clientY - r.top) / r.height;
+      className="relative w-full h-full overflow-visible select-none"
+      style={{ cursor: "grab", touchAction: "none" }}
+      onPointerMove={onPointerMove}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      onMouseDown={(e) => {
+        (e.currentTarget as HTMLDivElement).style.cursor = "grabbing";
+      }}
+      onMouseUp={(e) => {
+        (e.currentTarget as HTMLDivElement).style.cursor = "grab";
       }}
     >
       <Canvas
@@ -134,7 +186,7 @@ export function WireframeCanvas() {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.3} />
-          <Wireframe mouse={mouse} />
+          <Wireframe mouse={mouse} drag={drag} />
           <InnerCore />
           <OrbitalParticles mouse={mouse} />
         </Suspense>

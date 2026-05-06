@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrambleText } from "@/components/ui/ScrambleText";
 
 const PortraitCanvas = dynamic(
   () => import("@/components/lab/WireframeCanvas").then((m) => m.WireframeCanvas),
@@ -129,10 +128,7 @@ export function Hero() {
         >
           <span className="block overflow-hidden">
             <span className="line block">
-              <em>
-                <ScrambleText>Marcin</ScrambleText>
-              </em>{" "}
-              <ScrambleText>Siwonia</ScrambleText>
+              <em>Marcin</em> Siwonia
             </span>
           </span>
           <span className="block overflow-hidden">
@@ -164,9 +160,7 @@ export function Hero() {
           </span>
           <span className="block overflow-hidden">
             <span className="line block">
-              <em>
-                <ScrambleText>z polotem.</ScrambleText>
-              </em>
+              <em>z polotem.</em>
             </span>
           </span>
         </h1>
