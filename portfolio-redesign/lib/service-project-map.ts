@@ -91,11 +91,4 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
     highlight:
       "OpenAI API + custom prompt workflow + content automation",
   },
-  "pozycjonowanie-seo": {
-    projectSlug: "kancelaria-mpiontek",
-    context:
-      "Kancelaria Maria Piontek — pełna optymalizacja SEO od pierwszego dnia. Custom WordPress theme (Lighthouse 96), schema.org LegalService + LocalBusiness, sitemap, robots, canonical, OG images per post. Po 4 miesiącach: ruch organiczny +180%, top 3 dla 'kancelaria adwokacka Łódź'.",
-    highlight:
-      "Schema LegalService + Lighthouse 96 + ruch +180% w 4 mc",
-  },
 };

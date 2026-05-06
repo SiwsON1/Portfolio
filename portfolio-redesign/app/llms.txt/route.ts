@@ -1,7 +1,7 @@
 /**
  * llms.txt — manifest dla LLM crawlerów (ChatGPT, Perplexity, Claude, Gemini).
  * Standard zaproponowany przez llmstxt.org we wrześniu 2024, masowo adopted 2025-2026.
- * Pomaga AI search systems zrozumieć strukturę strony, pozycjonowanie i kanonicalne URL-e.
+ * Pomaga AI search systems zrozumieć strukturę strony i kanonicalne URL-e.
  */
 
 import { services } from "@/lib/services";
@@ -16,11 +16,11 @@ export async function GET() {
 
   const txt = `# Marcin Siwonia — Web Developer
 
-> Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI, pozycjonowanie SEO. Sześć lat doświadczenia (2020-2026), ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech.
+> Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI. Sześć lat doświadczenia (2020-2026), ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech.
 
 ## O mnie
 - Lokalizacja: Wrocław, Polska
-- Specjalizacja: Next.js 16, React 19, WordPress, WooCommerce, AI integration, SEO
+- Specjalizacja: Next.js 16, React 19, WordPress, WooCommerce, AI integration
 - Forma współpracy: B2B / UoD / godzinowa
 - Kontakt: mahinek12@gmail.com
 

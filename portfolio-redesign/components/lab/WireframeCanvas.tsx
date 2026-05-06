@@ -1,19 +1,18 @@
 "use client";
 
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Suspense, useEffect, useMemo, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
 /**
- * V1B — Rotujący wireframe icosahedron + orbital particles + cyan glow.
- * Subtle data-visualization vibe. Kursor wpływa na rotację.
+ * Drag-to-rotate sphere. Bez hovera. Bez window-tracking.
+ * Planeta stoi spokojnie z mikroskopijną autorotacją żeby było widać że żyje,
+ * a użytkownik łapie ją myszką jak kostkę Rubika i obraca.
  */
 
 function Wireframe({
-  mouse,
   drag,
 }: {
-  mouse: React.MutableRefObject<{ x: number; y: number }>;
   drag: React.MutableRefObject<{ x: number; y: number; isDragging: boolean }>;
 }) {
   const ref = useRef<THREE.LineSegments>(null);
@@ -23,19 +22,11 @@ function Wireframe({
     if (!ref.current) return;
 
     if (drag.current.isDragging) {
-      // DRAG: bezpośrednia 1:1 rotacja (przeciąganie myszą przez całą szerokość = pełen obrót)
       rot.current.x = drag.current.y * Math.PI;
       rot.current.y = drag.current.x * Math.PI * 2;
     } else {
-      // HOVER: ruch myszy w viewport = AKTYWNA rotacja sfery (bez wymogu klikania)
-      // Przesunięcie kursora po całej szerokości = ~180° w osi Y, po wysokości = ~120° w osi X
-      const targetY = (mouse.current.x - 0.5) * Math.PI;
-      const targetX = (mouse.current.y - 0.5) * -Math.PI * 0.7;
-      // Smooth lerp żeby nie skakało
-      rot.current.x += (targetX - rot.current.x) * 0.08;
-      rot.current.y += (targetY - rot.current.y) * 0.08;
-      // + drobna ciągła autorotacja gdy mysz nie rusza się
-      rot.current.y += delta * 0.05;
+      // bardzo wolna idle-rotation żeby planeta nie wyglądała jak płaski obrazek
+      rot.current.y += delta * 0.08;
     }
 
     ref.current.rotation.x = rot.current.x;
@@ -51,7 +42,6 @@ function Wireframe({
       <lineSegments ref={ref} geometry={edges}>
         <lineBasicMaterial color="#A8DAFF" transparent opacity={0.85} linewidth={2} />
       </lineSegments>
-      {/* Inner solid for depth */}
       <mesh>
         <icosahedronGeometry args={[1.55, 4]} />
         <meshBasicMaterial color="#1A1726" transparent opacity={0.85} />
@@ -89,7 +79,7 @@ function InnerCore() {
 }
 
 const ORBIT_COUNT = 220;
-function OrbitalParticles({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: number }> }) {
+function OrbitalParticles() {
   const ref = useRef<THREE.Points>(null);
   const seeds = useMemo(() => {
     const arr = new Float32Array(ORBIT_COUNT * 4);
@@ -107,14 +97,13 @@ function OrbitalParticles({ mouse }: { mouse: React.MutableRefObject<{ x: number
   useFrame((state) => {
     if (!ref.current) return;
     const t = state.clock.elapsedTime;
-    const mouseTilt = (mouse.current.x - 0.5) * 0.5;
     for (let i = 0; i < ORBIT_COUNT; i++) {
       const angle = seeds[i * 4] + t * seeds[i * 4 + 3] * 0.18;
       const yOffset = seeds[i * 4 + 1];
       const radius = seeds[i * 4 + 2];
       positions[i * 3] = Math.cos(angle) * radius;
       positions[i * 3 + 1] = yOffset + Math.sin(angle * 1.3) * 0.18;
-      positions[i * 3 + 2] = Math.sin(angle) * radius * Math.cos(mouseTilt);
+      positions[i * 3 + 2] = Math.sin(angle) * radius;
     }
     ref.current.geometry.attributes.position.needsUpdate = true;
   });
@@ -138,39 +127,39 @@ function OrbitalParticles({ mouse }: { mouse: React.MutableRefObject<{ x: number
 }
 
 export function WireframeCanvas() {
-  const mouse = useRef({ x: 0.5, y: 0.5 });
   const drag = useRef({ x: 0, y: 0, isDragging: false });
   const dragStart = useRef({ x: 0, y: 0, rotX: 0, rotY: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
-  // GLOBALNY mouse tracking — sfera reaguje na ruch w CAŁYM viewport,
-  // nie tylko nad samą sferą. Współrzędne mapujemy do 0..1 w obrębie window.
+  // Mouse tracking AKTYWUJE SIĘ DOPIERO PO CHWYCIE planety (pointerdown).
+  // Po puszczeniu nasłuchiwacz odpina się — bez ruchu globalnego.
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const onMove = (e: MouseEvent) => {
-      mouse.current.x = e.clientX / window.innerWidth;
-      mouse.current.y = 1 - e.clientY / window.innerHeight;
-
-      if (drag.current.isDragging) {
-        const dx = (e.clientX - dragStart.current.x) / window.innerWidth;
-        const dy = (e.clientY - dragStart.current.y) / window.innerHeight;
-        drag.current.x = dragStart.current.rotY + dx * 2;
-        drag.current.y = dragStart.current.rotX + dy * 2;
-      }
+    const onMove = (e: PointerEvent) => {
+      if (!drag.current.isDragging) return;
+      const dx = (e.clientX - dragStart.current.x) / window.innerWidth;
+      const dy = (e.clientY - dragStart.current.y) / window.innerHeight;
+      drag.current.x = dragStart.current.rotY + dx * 2;
+      drag.current.y = dragStart.current.rotX + dy * 2;
     };
     const onUp = () => {
+      if (!drag.current.isDragging) return;
       drag.current.isDragging = false;
+      setIsDragging(false);
     };
-    window.addEventListener("mousemove", onMove, { passive: true });
-    window.addEventListener("mouseup", onUp);
+    window.addEventListener("pointermove", onMove, { passive: true });
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
     return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseup", onUp);
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
     };
   }, []);
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     drag.current.isDragging = true;
+    setIsDragging(true);
     dragStart.current = {
       x: e.clientX,
       y: e.clientY,
@@ -181,10 +170,10 @@ export function WireframeCanvas() {
 
   return (
     <div
-      ref={containerRef}
       className="relative w-full h-full overflow-visible select-none"
-      style={{ cursor: "grab", touchAction: "none" }}
+      style={{ cursor: isDragging ? "grabbing" : "grab", touchAction: "none" }}
       onPointerDown={onPointerDown}
+      data-cursor="CHWYĆ"
     >
       <Canvas
         dpr={[1, 1.6]}
@@ -193,9 +182,9 @@ export function WireframeCanvas() {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.3} />
-          <Wireframe mouse={mouse} drag={drag} />
+          <Wireframe drag={drag} />
           <InnerCore />
-          <OrbitalParticles mouse={mouse} />
+          <OrbitalParticles />
         </Suspense>
       </Canvas>
       <div

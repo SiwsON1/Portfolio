@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s — Marcin Siwonia",
   },
   description:
-    "Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI, pozycjonowanie SEO. Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.",
+    "Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI. Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.",
   keywords: [
     "tworzenie stron www",
     "tworzenie stron WordPress",
@@ -49,7 +49,6 @@ export const metadata: Metadata = {
     "programista Next.js",
     "programista React",
     "wdrożenia AI",
-    "pozycjonowanie SEO Wrocław",
     "Marcin Siwonia",
     "freelancer Wrocław",
     "web developer Wrocław",
@@ -63,13 +62,13 @@ export const metadata: Metadata = {
     siteName: "Marcin Siwonia",
     title: "Marcin Siwonia. Strony www, Next.js, React, AI",
     description:
-      "Niezależny web developer. Strony, aplikacje, AI, SEO. 30+ wdrożeń.",
+      "Niezależny web developer. Strony, aplikacje, AI. 30+ wdrożeń.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Marcin Siwonia",
     description:
-      "Strony www, aplikacje Next.js i React, wdrożenia AI, pozycjonowanie SEO.",
+      "Strony www, aplikacje Next.js i React, wdrożenia AI.",
   },
   alternates: {
     canonical: "/",

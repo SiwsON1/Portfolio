@@ -176,7 +176,7 @@ export function HeroVariant({
             style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.25rem)" }}
           >
             Niezależny web developer z Wrocławia. Tworzenie stron www,
-            aplikacje Next.js i React, wdrożenia AI, pozycjonowanie SEO.
+            aplikacje Next.js i React, wdrożenia AI.
             Ponad trzydzieści wdrożeń komercyjnych dla klientów w Polsce
             i Niemczech od 2020 roku.
           </p>
@@ -202,8 +202,6 @@ export function HeroVariant({
               <span className="px-8">Aplikacje React</span>
               <span className="text-peach">●</span>
               <span className="px-8">Wdrożenia AI</span>
-              <span className="text-peach">●</span>
-              <span className="px-8">Pozycjonowanie SEO</span>
               <span className="text-peach">●</span>
             </div>
           ))}

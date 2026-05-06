@@ -46,7 +46,6 @@ const SLUG_TO_ICON: Record<string, IconKey> = {
   "aplikacje-nextjs": "nextjs",
   "aplikacje-react": "react",
   "wdrozenia-ai": "ai",
-  "pozycjonowanie-seo": "seo",
 };
 
 export function ServiceHeroVisual({ slug }: { slug: string }) {

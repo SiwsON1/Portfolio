@@ -1,4 +1,4 @@
-export type Service = {
+﻿export type Service = {
   slug: string;
   title: string;
   metaTitle: string;
@@ -618,79 +618,6 @@ export const services: Service[] = [
       },
     ],
     cta: "Opisz proces który chcesz odciążyć, odpowiem co da się z tym zrobić",
-  },
-  {
-    slug: "pozycjonowanie-seo",
-    title: "Pozycjonowanie SEO",
-    metaTitle: "Pozycjonowanie SEO Wrocław — technika, content i E-E-A-T",
-    metaDescription:
-      "Pozycjonowanie SEO oparte na technice, contencie i E-E-A-T. Audyt, sitemap, schema, treści. Mierzalne efekty w 3-6 miesięcy.",
-    h1: "Pozycjonowanie SEO Wrocław — od audytu do top10",
-    lead:
-      "Większość pozycjonerów daje content i linki. Ja zaczynam od tego co Google widzi: struktura strony, indeksacja, Core Web Vitals, schema. Bez tego najlepsze treści przeleżą się na 50. pozycji.",
-    intro: [
-      "Prowadzę kilka własnych blogów SEO (m.in. seomantyczny.pl o AI i SEO) oraz pomagam klientom B2B i lokalnym z pozycjonowaniem stron we Wrocławiu i online. Specjalizacja: branże usługowe i e-commerce, lokalne SEO Wrocław, treści pod intencje informacyjne. Pełen przewodnik 7 kroków pierwszego półrocza znajdziesz w [poście o pozycjonowaniu strony usługowej](/blog/pozycjonowanie-strony-uslugowej).",
-      "Nie obiecuję pierwszego miejsca w 30 dni. Konkretne kierunki działań pokazuję w audycie, mierzalne efekty zwykle widać po 3-6 miesiącach. Jeśli ciekawi Cię techniczna strona Core Web Vitals 2026, [opisałem zmiany w osobnym poście](/blog/core-web-vitals-2026).",
-    ],
-    bullets: [
-      {
-        title: "Audyt techniczny",
-        body: "Crawl Screaming Frog, analiza sitemap, indeksacji, Core Web Vitals, mobile usability. Lista poprawek z priorytetem.",
-      },
-      {
-        title: "Topical Authority",
-        body: "Mapa fraz, klastry tematyczne, hub-and-spoke. Plan contentu na 6-12 miesięcy z priorytetami pod intencje wyszukiwania.",
-      },
-      {
-        title: "On-page i E-E-A-T",
-        body: "Optymalizacja istniejących stron pod konkretne frazy. Tytuły, meta, struktura nagłówków, dane strukturalne, autorzy.",
-      },
-      {
-        title: "Linkowanie wewnętrzne",
-        body: "Najtańszy i najszybszy boost. Audyt linków wewnętrznych, plan przerzucenia mocy z hubów na strony pieniężne.",
-      },
-    ],
-    process: [
-      {
-        step: "01",
-        title: "Audyt 360",
-        body: "Tech, content, linki, konkurencja. 30-50 stron raportu z priorytetami i estymacją efektu.",
-      },
-      {
-        step: "02",
-        title: "Sprint techniczny",
-        body: "Pierwsze 4-6 tygodni: same poprawki techniczne. Często sam fakt że strona jest indeksowalna i szybka daje 20-40% wzrostu ruchu.",
-      },
-      {
-        step: "03",
-        title: "Content rolling",
-        body: "8-15 nowych tekstów miesięcznie pod konkretne frazy. Każdy mierzony w Search Console przez 6 miesięcy.",
-      },
-      {
-        step: "04",
-        title: "Raport miesięczny",
-        body: "Co miesiąc raport: wzrost ruchu, pozycje, konwersje. Plan na kolejny miesiąc na podstawie danych.",
-      },
-    ],
-    faq: [
-      {
-        q: "Ile kosztuje pozycjonowanie?",
-        a: "Audyt jednorazowy: 2-5 tys. zł. Pakiet miesięczny (audyt poprawek + content + raport): od 2,5 tys. zł. Większe e-commerce od 5 tys. zł/mc.",
-      },
-      {
-        q: "Czy podpisujemy umowę na 12 miesięcy?",
-        a: "Nie. Miesiąc do miesiąca, wypowiedzenie z 30-dniowym uprzedzeniem. Wierzę że jeśli nie ma efektów, klient powinien móc odejść.",
-      },
-      {
-        q: "Linkowanie zewnętrzne?",
-        a: "Tylko organiczne i contentowe. Bez SWLi, bez farm, bez kupowania paczek z giełd.",
-      },
-      {
-        q: "Co jeśli mam karę od Google?",
-        a: "Przeglądam, identyfikuję przyczynę (najczęściej linki lub thin content), robię plan recovery. Czasem szybciej, czasem wolniej, ale z odpowiednim podejściem da się wyjść.",
-      },
-    ],
-    cta: "Zamów audyt SEO, dostaniesz konkretny plan w tydzień",
   },
 ];
 

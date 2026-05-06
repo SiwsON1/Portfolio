@@ -6,7 +6,7 @@ import { FlamePortraitClient } from "@/components/layout/FlamePortraitClient";
 export const metadata: Metadata = {
   title: "O mnie",
   description:
-    "Marcin Siwonia — freelancer i programista Next.js z Wrocławia. Strony www, aplikacje React, wdrożenia AI, pozycjonowanie SEO. Sześć lat doświadczenia, 30+ wdrożeń.",
+    "Marcin Siwonia, freelancer i programista Next.js z Wrocławia. Strony www, aplikacje React, wdrożenia AI. Sześć lat doświadczenia, 30+ wdrożeń.",
   alternates: { canonical: "/o-mnie" },
 };
 

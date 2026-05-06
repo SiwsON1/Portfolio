@@ -16,7 +16,6 @@ const services = [
   { href: "/uslugi/aplikacje-nextjs", label: "Aplikacje Next.js" },
   { href: "/uslugi/aplikacje-react", label: "Aplikacje React" },
   { href: "/uslugi/wdrozenia-ai", label: "Wdrożenia AI" },
-  { href: "/uslugi/pozycjonowanie-seo", label: "Pozycjonowanie SEO" },
 ];
 
 export function MobileMenu() {

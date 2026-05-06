@@ -5,7 +5,7 @@ import { posts } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Notatki z pracy: ceny stron www, decyzje technologiczne Next.js vs WordPress, pozycjonowanie SEO, wdrożenia AI, Core Web Vitals.",
+    "Notatki z pracy: ceny stron www, decyzje technologiczne Next.js vs WordPress, wdrożenia AI, Core Web Vitals.",
   alternates: { canonical: "/blog" },
 };
 
@@ -35,8 +35,8 @@ export default function BlogIndex() {
               className="mt-10 max-w-2xl text-ink-mute"
               style={{ fontSize: "clamp(1.125rem, 1rem + 0.6vw, 1.5rem)", lineHeight: 1.55 }}
             >
-              Notatki z pracy. Ceny, decyzje technologiczne, pozycjonowanie,
-              AI, performance. Bez wody.
+              Notatki z pracy. Ceny, decyzje technologiczne, AI, performance.
+              Bez wody.
             </p>
           </div>
         </div>

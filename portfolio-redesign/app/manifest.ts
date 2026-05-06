@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Marcin Siwonia — Web Developer Wrocław",
     short_name: "MS Web Dev",
     description:
-      "Tworzenie stron www, aplikacji Next.js i React, wdrożenia AI, pozycjonowanie SEO. Wrocław.",
+      "Tworzenie stron www, aplikacji Next.js i React, wdrożenia AI. Wrocław.",
     start_url: "/",
     display: "standalone",
     background_color: "#14131F",

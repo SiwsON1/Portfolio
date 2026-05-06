@@ -167,7 +167,7 @@ export function Hero() {
 
         {/* Screen-reader semantic H1 — pełna fraza SEO */}
         <h2 className="sr-only">
-          Tworzenie stron www Wrocław. Marcin Siwonia — freelancer i programista Next.js, React, WordPress, WooCommerce. Wdrożenia AI, pozycjonowanie SEO. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych w Polsce i Niemczech od 2020 roku.
+          Tworzenie stron www Wrocław. Marcin Siwonia — freelancer i programista Next.js, React, WordPress, WooCommerce. Wdrożenia AI. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych w Polsce i Niemczech od 2020 roku.
         </h2>
 
         <div className="mt-10 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
@@ -177,7 +177,7 @@ export function Hero() {
           >
             Niezależny web developer z Wrocławia. <strong className="text-ink font-normal">Tworzenie stron www</strong>,
             sklepów <strong className="text-ink font-normal">WooCommerce</strong>, aplikacji <strong className="text-ink font-normal">Next.js</strong> i <strong className="text-ink font-normal">React</strong>,
-            wdrożenia <strong className="text-ink font-normal">AI</strong>, <strong className="text-ink font-normal">pozycjonowanie SEO</strong>.
+            wdrożenia <strong className="text-ink font-normal">AI</strong>.
             Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.
           </p>
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute shrink-0">
@@ -214,8 +214,6 @@ export function Hero() {
               <span className="px-8">Aplikacje React</span>
               <span className="text-peach">●</span>
               <span className="px-8">Wdrożenia AI</span>
-              <span className="text-peach">●</span>
-              <span className="px-8">Pozycjonowanie SEO</span>
               <span className="text-peach">●</span>
             </div>
           ))}

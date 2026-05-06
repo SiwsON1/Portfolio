@@ -37,7 +37,7 @@ export default function Home() {
     email: "mailto:mahinek12@gmail.com",
     jobTitle: "Web Developer",
     description:
-      "Freelancer i programista Next.js z Wrocławia. Tworzenie stron www, aplikacje React, wdrożenia AI, pozycjonowanie SEO. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech.",
+      "Freelancer i programista Next.js z Wrocławia. Tworzenie stron www, aplikacje React, wdrożenia AI. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Wrocław",
@@ -52,14 +52,13 @@ export default function Home() {
         name: "Wrocław",
       },
       skills:
-        "Next.js, React, TypeScript, Tailwind, Node.js, AI integration, SEO, WordPress",
+        "Next.js, React, TypeScript, Tailwind, Node.js, AI integration, WordPress",
     },
     knowsAbout: [
       "Next.js",
       "React",
       "TypeScript",
       "AI integration",
-      "Pozycjonowanie SEO",
       "WordPress",
       "Wdrożenia AI",
       "Tworzenie stron www",

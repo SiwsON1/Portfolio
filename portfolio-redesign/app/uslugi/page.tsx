@@ -6,7 +6,7 @@ import { ServicesIndexList } from "@/components/service/ServicesIndexList";
 export const metadata: Metadata = {
   title: "Usługi",
   description:
-    "Strony www, aplikacje Next.js i React, wdrożenia AI, pozycjonowanie SEO. Pięć specjalności, jeden warsztat.",
+    "Strony www, aplikacje Next.js i React, wdrożenia AI. Cztery specjalności, jeden warsztat.",
   alternates: { canonical: "/uslugi" },
 };
 
@@ -19,7 +19,7 @@ export default function UslugiPage() {
         </div>
         <div className="md:col-span-9">
           <h1 className="display text-display text-ink">
-            Pięć <em>specjalności</em>,
+            Cztery <em>specjalności</em>,
             <br />
             jeden warsztat.
           </h1>
