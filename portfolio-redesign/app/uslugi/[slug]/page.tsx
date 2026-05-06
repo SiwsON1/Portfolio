@@ -119,8 +119,17 @@ export default async function UslugaPage({
             <p className="eyebrow">Usługa</p>
           </div>
           <div className="md:col-span-7">
-            <h1 className="display text-display text-ink">{s.h1}</h1>
-            <p className="mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1.125rem, 1rem + 0.6vw, 1.5rem)", lineHeight: 1.55 }}>
+            <h1
+              className="display text-ink"
+              style={{
+                fontSize: "clamp(1.85rem, 0.9rem + 4vw, 5rem)",
+                lineHeight: 1.04,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              {s.h1}
+            </h1>
+            <p className="mt-8 md:mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 }}>
               {s.lead}
             </p>
           </div>

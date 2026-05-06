@@ -151,16 +151,18 @@ export function Hero() {
             <span className="line block">
               buduje{" "}
               <span
-                className="inline-flex items-center justify-center align-middle relative overflow-hidden rounded-full gap-2"
+                className="inline-flex items-center justify-center align-middle relative rounded-full"
                 style={{
-                  width: "clamp(8rem, 3.5rem + 16vw, 15rem)",
-                  height: "1em",
+                  width: "1.15em",
+                  height: "1.15em",
                   verticalAlign: "middle",
                   marginInline: "0.15em",
-                  transform: "translateY(-0.06em)",
+                  transform: "translateY(-0.04em)",
                   border: "1px solid rgb(244 180 129 / 0.6)",
-                  paddingInline: "0.6em",
+                  background: "rgba(232, 178, 134, 0.06)",
+                  boxShadow: "0 0 24px rgba(232, 178, 134, 0.22), inset 0 0 16px rgba(168, 218, 255, 0.08)",
                 }}
+                aria-label={morphEntries[0].label}
               >
                 <svg
                   ref={iconRef}
@@ -168,8 +170,8 @@ export function Hero() {
                   aria-hidden
                   className="shrink-0"
                   style={{
-                    width: "clamp(0.9rem, 0.5rem + 1.2vw, 1.4rem)",
-                    height: "clamp(0.9rem, 0.5rem + 1.2vw, 1.4rem)",
+                    width: "0.7em",
+                    height: "0.7em",
                   }}
                 >
                   <defs>
@@ -180,16 +182,8 @@ export function Hero() {
                   </defs>
                   <path ref={iconPathRef} d={morphEntries[0].icon.path} fill="url(#hero-morph-grad)" />
                 </svg>
-                <span
-                  ref={wordRef}
-                  className="font-mono not-italic font-medium text-peach text-center whitespace-nowrap leading-none"
-                  style={{
-                    fontSize: "clamp(0.8rem, 0.4rem + 1.3vw, 1.5rem)",
-                    letterSpacing: "0.05em",
-                  }}
-                >
-                  {morphEntries[0].label}
-                </span>
+                {/* SR-only label żeby zostało semantyczne nazwy */}
+                <span ref={wordRef} className="sr-only">{morphEntries[0].label}</span>
               </span>
             </span>
           </span>
