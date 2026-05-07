@@ -104,6 +104,50 @@ html.lenis body {
   }
 }
 
+/*
+ * Hero typography — explicit breakpoints co 100px szerokości viewportu.
+ * Zaprojektowane żeby na każdym typowym laptopie (1280, 1366, 1440, 1600)
+ * H1 + paragraf + scroll cue + marquee mieściły się w 100svh.
+ * Dodatkowo overrides dla niskich monitorów (max-height) — mały Mac 1280×800.
+ */
+.hero-h1 {
+  font-size: 2.25rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 360px)  { .hero-h1 { font-size: 2.4rem; } }
+@media (min-width: 420px)  { .hero-h1 { font-size: 2.65rem; } }
+@media (min-width: 520px)  { .hero-h1 { font-size: 3rem; } }
+@media (min-width: 620px)  { .hero-h1 { font-size: 3.25rem; } }
+@media (min-width: 720px)  { .hero-h1 { font-size: 3.6rem; } }
+@media (min-width: 820px)  { .hero-h1 { font-size: 4rem; } }
+@media (min-width: 920px)  { .hero-h1 { font-size: 4.4rem; } }
+@media (min-width: 1020px) { .hero-h1 { font-size: 4.8rem; } }
+@media (min-width: 1120px) { .hero-h1 { font-size: 5.2rem; } }
+@media (min-width: 1220px) { .hero-h1 { font-size: 5.5rem; } }
+@media (min-width: 1320px) { .hero-h1 { font-size: 5.9rem; } }
+@media (min-width: 1440px) { .hero-h1 { font-size: 6.4rem; } }
+@media (min-width: 1600px) { .hero-h1 { font-size: 7.1rem; } }
+@media (min-width: 1800px) { .hero-h1 { font-size: 7.8rem; } }
+@media (min-width: 1920px) { .hero-h1 { font-size: 8.4rem; } }
+@media (min-width: 2200px) { .hero-h1 { font-size: 9.2rem; } }
+@media (min-width: 2560px) { .hero-h1 { font-size: 10rem; } }
+/* Niski monitor (mały Mac, ThinkPad 13") — H1 mniejszy żeby zmieścić cały hero w 100vh */
+@media (min-width: 1020px) and (max-height: 800px) { .hero-h1 { font-size: 4.2rem; } }
+@media (min-width: 1280px) and (max-height: 800px) { .hero-h1 { font-size: 4.8rem; } }
+@media (min-width: 1440px) and (max-height: 800px) { .hero-h1 { font-size: 5.2rem; } }
+
+.hero-paragraph {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+@media (min-width: 520px)  { .hero-paragraph { font-size: 0.9375rem; } }
+@media (min-width: 720px)  { .hero-paragraph { font-size: 1rem; } }
+@media (min-width: 920px)  { .hero-paragraph { font-size: 1.0625rem; } }
+@media (min-width: 1280px) { .hero-paragraph { font-size: 1.125rem; } }
+@media (min-width: 1600px) { .hero-paragraph { font-size: 1.1875rem; } }
+@media (min-width: 1920px) { .hero-paragraph { font-size: 1.25rem; } }
+
 /* Display type utility — refined Fraunces, mniej WONK, więcej elegancji */
 .display {
   font-family: var(--font-display);

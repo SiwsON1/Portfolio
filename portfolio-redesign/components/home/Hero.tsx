@@ -139,13 +139,7 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-20 md:pb-28 z-10 pointer-events-none">
         <h1
           ref={titleRef}
-          className="display text-ink"
-          style={{
-            // fluid: bierz mniejsze z vw vs vh, żeby na niskich monitorach (np. mały Mac 1280x800) H1 nie rozjeżdżał poza viewport
-            fontSize: "clamp(2.25rem, min(6.8vw, 11.5vh), 8rem)",
-            lineHeight: 1.08,
-            letterSpacing: "-0.025em",
-          }}
+          className="display hero-h1 text-ink"
         >
           <span className="block overflow-hidden">
             <span className="line block">
@@ -203,10 +197,7 @@ export function Hero() {
         </h2>
 
         <div className="mt-6 md:mt-8 flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between">
-          <p
-            className="prose-bound text-ink-mute"
-            style={{ fontSize: "clamp(0.875rem, 0.5rem + 0.6vw, 1.125rem)", lineHeight: 1.5 }}
-          >
+          <p className="prose-bound hero-paragraph text-ink-mute">
             Niezależny web developer z Wrocławia. <strong className="text-ink font-normal">Tworzenie stron www</strong>,
             sklepów <strong className="text-ink font-normal">WooCommerce</strong>, aplikacji <strong className="text-ink font-normal">Next.js</strong> i <strong className="text-ink font-normal">React</strong>,
             wdrożenia <strong className="text-ink font-normal">AI</strong>.
