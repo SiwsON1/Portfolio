@@ -84,7 +84,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[700px] w-full overflow-hidden bg-bg">
+    <section className="relative w-full overflow-hidden bg-bg" style={{ height: "100svh", minHeight: "640px", maxHeight: "1100px" }}>
       {/* Background ambient — soft cool radial behind portrait area */}
       <div
         aria-hidden
@@ -136,11 +136,16 @@ export function Hero() {
       </div>
 
       {/* Main title — bottom-anchored left. pointer-events-none żeby nie blokował drag-to-rotate sfery po prawej (z-15). */}
-      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-28 md:pb-36 z-10 pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-20 md:pb-28 z-10 pointer-events-none">
         <h1
           ref={titleRef}
           className="display text-ink"
-          style={{ fontSize: "clamp(2.5rem, 1rem + 8vw, 11rem)", lineHeight: 1.12 }}
+          style={{
+            // fluid: bierz mniejsze z vw vs vh, żeby na niskich monitorach (np. mały Mac 1280x800) H1 nie rozjeżdżał poza viewport
+            fontSize: "clamp(2.25rem, min(6.8vw, 11.5vh), 8rem)",
+            lineHeight: 1.08,
+            letterSpacing: "-0.025em",
+          }}
         >
           <span className="block overflow-hidden">
             <span className="line block">
@@ -197,10 +202,10 @@ export function Hero() {
           Tworzenie stron www Wrocław. Marcin Siwonia — freelancer i programista Next.js, React, WordPress, WooCommerce. Wdrożenia AI. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych w Polsce i Niemczech od 2020 roku.
         </h2>
 
-        <div className="mt-10 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="mt-6 md:mt-8 flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between">
           <p
             className="prose-bound text-ink-mute"
-            style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.25rem)" }}
+            style={{ fontSize: "clamp(0.875rem, 0.5rem + 0.6vw, 1.125rem)", lineHeight: 1.5 }}
           >
             Niezależny web developer z Wrocławia. <strong className="text-ink font-normal">Tworzenie stron www</strong>,
             sklepów <strong className="text-ink font-normal">WooCommerce</strong>, aplikacji <strong className="text-ink font-normal">Next.js</strong> i <strong className="text-ink font-normal">React</strong>,
