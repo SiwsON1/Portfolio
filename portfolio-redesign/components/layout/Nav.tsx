@@ -5,6 +5,7 @@ import { services } from "@/lib/services";
 const links = [
   { href: "/projekty", label: "Projekty" },
   { href: "/uslugi", label: "Usługi", hasSubmenu: true },
+  { href: "/blog", label: "Blog" },
   { href: "/o-mnie", label: "O mnie" },
   { href: "/kontakt", label: "Kontakt" },
 ];
