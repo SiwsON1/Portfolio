@@ -13,7 +13,7 @@ import {
 } from "simple-icons";
 
 const PortraitCanvas = dynamic(
-  () => import("@/components/lab/WireframeCanvas").then((m) => m.WireframeCanvas),
+  () => import("@/components/home/WireframeCanvas").then((m) => m.WireframeCanvas),
   { ssr: false, loading: () => null }
 );
 
