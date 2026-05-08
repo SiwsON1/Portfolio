@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Napisz brief, dostaniesz wycenę w 24h. Mail, telefon, LinkedIn, GitHub. Marcin Siwonia, web developer z Wrocławia.",
+    "Napisz brief, dostaniesz wycenę w 24h. Formularz, mail, LinkedIn, GitHub. Marcin Siwonia, web developer z Wrocławia.",
   alternates: { canonical: "/kontakt" },
 };
 
@@ -17,65 +18,61 @@ export default function KontaktPage() {
         </div>
         <div className="md:col-span-9">
           <h1 className="display text-display text-ink">
-            Najszybciej <em>mailem</em>.
+            Napisz w <em>dwóch zdaniach</em>.
           </h1>
           <p className="mt-8 prose-bound text-ink-mute text-lead">
-            Opisz w dwóch zdaniach co chcesz zrobić, jaki jest deadline i
-            budżet. Odpiszę tego samego dnia roboczego z pierwszą oceną.
+            Opisz co chcesz zrobić, jaki jest deadline i budżet. Odpiszę tego
+            samego dnia roboczego z pierwszą oceną.
           </p>
         </div>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-        <div className="md:col-span-7 md:col-start-2 space-y-8">
-          <div>
-            <p className="eyebrow mb-2">E-mail</p>
-            <a
-              href="mailto:mahinek12@gmail.com"
-              className="font-display italic text-h2 text-peach hover:underline underline-offset-4"
-              data-cursor="KOPIUJ"
-            >
-              mahinek12@gmail.com
-            </a>
-          </div>
-          <hr className="hairline" />
-          <div>
-            <p className="eyebrow mb-2">Telefon</p>
-            <p className="font-display italic text-h2 text-ink">
-              +48 — — — — — —
-            </p>
-            <p className="text-sm text-ink-faint mt-1">
-              Na życzenie po pierwszej wymianie maili.
-            </p>
-          </div>
-          <hr className="hairline" />
-          <div className="grid grid-cols-2 gap-8">
+        <div className="md:col-span-7 md:col-start-2">
+          <ContactForm />
+
+          <hr className="hairline my-16" />
+
+          <div className="space-y-8">
             <div>
-              <p className="eyebrow mb-2">GitHub</p>
+              <p className="eyebrow mb-2">Wolisz bezpośrednio?</p>
               <a
-                href="https://github.com/SiwsON1"
-                target="_blank"
-                rel="noreferrer"
-                className="text-ink hover:text-peach"
+                href="mailto:marcin.siwonia.firma@gmail.com"
+                className="font-display italic text-h2 text-peach hover:underline underline-offset-4"
+                data-cursor="KOPIUJ"
               >
-                @SiwsON1 →
+                marcin.siwonia.firma@gmail.com
               </a>
             </div>
-            <div>
-              <p className="eyebrow mb-2">LinkedIn</p>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-ink hover:text-peach"
-              >
-                Profil →
-              </a>
+
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <p className="eyebrow mb-2">GitHub</p>
+                <a
+                  href="https://github.com/SiwsON1"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-ink hover:text-peach"
+                >
+                  @SiwsON1 →
+                </a>
+              </div>
+              <div>
+                <p className="eyebrow mb-2">LinkedIn</p>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-ink hover:text-peach"
+                >
+                  Profil →
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <aside className="md:col-span-3 md:col-start-10 border-l border-line pl-6">
+        <aside className="md:col-span-3 md:col-start-10 md:sticky md:top-32 md:self-start border-l border-line pl-6">
           <p className="eyebrow mb-4">Status</p>
           <p className="text-ink mb-6 flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-peach animate-pulse" />
