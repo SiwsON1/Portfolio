@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 export const runtime = "nodejs";
 
 const TO_EMAIL = "marcin.siwonia.firma@gmail.com";
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>";
+const FROM_EMAIL = "Marcin Siwonia <kontakt@marcinsiwonia.pl>";
 
 const MAX_NAME = 120;
 const MAX_EMAIL = 200;
