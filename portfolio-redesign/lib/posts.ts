@@ -1,3 +1,20 @@
+export type PostSection = {
+  heading: string;
+  body: string[];
+};
+
+export type PostFaq = {
+  q: string;
+  a: string;
+};
+
+export type PostHero =
+  | { kind: "nextjs" }
+  | { kind: "wordpress" }
+  | { kind: "ai" }
+  | { kind: "seo" }
+  | { kind: "performance" };
+
 export type Post = {
   slug: string;
   title: string;
@@ -6,6 +23,20 @@ export type Post = {
   readingMinutes: number;
   tags: string[];
   body: string[];
+  /** Nowy schemat (opcjonalny — gdy wypełniony, nadpisuje `body`). */
+  lead?: string;
+  sections?: PostSection[];
+  faq?: PostFaq[];
+  /** Główne keyword pod które artykuł jest zoptymalizowany (do meta + schema). */
+  keyword?: string;
+  /** Slugi powiązanych usług do CTA "Powiązane usługi" na dole. */
+  relatedServices?: string[];
+  /** Identyfikator hero animation (komponent renderowany na górze posta). */
+  hero?: PostHero;
+  /** Custom meta title (jeśli pusty, użyty jest title). Max 65 znaków. */
+  metaTitle?: string;
+  /** Custom meta description (jeśli pusty, użyty jest excerpt). 150-160 znaków. */
+  metaDescription?: string;
 };
 
 /**
@@ -411,5 +442,164 @@ posts.push(
     ],
   }
 );
+
+/* === Wzorcowy post pełną optymalizacją SEO (sections + FAQ + hero + linking) === */
+posts.push({
+  slug: "tworzenie-stron-nextjs-wroclaw-2026",
+  title: "Tworzenie stron Next.js Wrocław: kompletny przewodnik 2026",
+  excerpt:
+    "Strony Next.js we Wrocławiu w 2026: stack, ceny, czas wdrożenia, na co uważać przy wyborze freelancera. Praktyczny przewodnik na podstawie 30+ realizacji.",
+  date: "2026-05-09",
+  readingMinutes: 14,
+  tags: ["Next.js", "Wrocław", "tworzenie stron", "freelancer"],
+  keyword: "tworzenie stron Next.js Wrocław",
+  metaTitle: "Tworzenie stron Next.js Wrocław 2026 — przewodnik",
+  metaDescription:
+    "Strony Next.js we Wrocławiu w 2026: stack, ceny od 8 do 80 tys., czas wdrożenia, kogo wybrać. Przewodnik na podstawie 30+ realizacji freelancera z Wrocławia.",
+  hero: { kind: "nextjs" },
+  relatedServices: ["aplikacje-nextjs", "tworzenie-stron-www", "next-js-software-house"],
+  body: [],
+  lead:
+    "Strona firmowa na Next.js we Wrocławiu kosztuje od 8 do 30 tys. zł, aplikacja webowa od 30 do 80 tys. Czas wdrożenia: 5 do 16 tygodni. Stack standardowy w 2026: Next.js 16, TypeScript, Tailwind 4, Sanity CMS, Vercel hosting. Poniżej: jak wybrać developera, na czym oszczędzić, gdzie nie warto, czego nie powie Ci agencja.",
+  sections: [
+    {
+      heading: "Dlaczego akurat Next.js, a nie WordPress",
+      body: [
+        "Najczęstsze pytanie od klientów we Wrocławiu: po co płacić więcej za Next.js, skoro WordPress robi to samo. Krótka odpowiedź: nie robi tego samego. WordPress renderuje stronę na serwerze przy każdym wejściu (PHP + MySQL query), Next.js w 90% przypadków wysyła gotowy HTML z CDN (statyczny plik). Różnica w prędkości to 0.8s vs 3s — i to widać w rankingach Google.",
+        "Konkretny case: kancelaria z Krzyków migrowała z WordPress (Lighthouse 47, czas ładowania 4.1s) na Next.js (Lighthouse 96, 0.9s). Po 6 miesiącach ruch organiczny wzrósł o 180%, a koszt Google Ads spadł o 30% (lepszy Quality Score). To są realne pieniądze, nie estetyka.",
+        "Drugi powód: bezpieczeństwo. WordPress ma 60% world web market i ten sam % ataków. Next.js statyczny nie ma DB którą można zhackować, nie ma admin panelu który można zalogować bruteforce, nie ma pluginów które się dezaktualizują. Mniej maintenance, mniej incydentów, mniej zmartwień.",
+        "Trzeci: edge deployment. Vercel deployuje stronę do 100+ lokalizacji jednocześnie. User z Berlina dostaje stronę z Frankfurtu, z Tokio z Singapuru. WordPress siedzi na jednym serwerze (zwykle Warszawa albo Niemcy) i każdy z dalej dostaje wolniej. Dla biznesu z klientami w Niemczech (a wielu wrocławskich firm tam celuje) to znacząca przewaga.",
+        "Kiedy mimo wszystko WordPress: gdy klient KONIECZNIE chce edytować treści w Gutenbergu (znanym mu od 5 lat), gdy budżet to 5 tys. zł i nie ma negocjacji, gdy strona ma być postawiona w 2 tygodnie. Wtedy WordPress z dobrym themem custom (NIE Avada/Divi) i LiteSpeed cache to sensowny kompromis. Robię oba stacki — wybór zależy od briefu.",
+      ],
+    },
+    {
+      heading: "Stack 2026: co używamy i czemu",
+      body: [
+        "Standardowy zestaw dla nowej strony Next.js w 2026 to: framework Next.js 16 (App Router, React Server Components), język TypeScript, style Tailwind CSS 4, headless CMS Sanity (lub Contentful dla większych), hosting Vercel (free tier wystarcza dla 90% projektów do 100 GB ruchu miesięcznie).",
+        "Dlaczego App Router a nie Pages Router: App Router daje React Server Components (renderowanie po stronie serwera bez wysyłania JS do klienta), nested layouts (wspólne komponenty per sekcja), streaming (sekcje strony pojawiają się stopniowo zamiast czekać na wszystko). Pages Router jest deprecated od 2024.",
+        "TypeScript zamiast plain JS: bo łapie błędy w trakcie pisania, nie w produkcji. Refactor na 50 plikach trwa 5 minut zamiast 5 godzin. Klient nie widzi tej różnicy bezpośrednio, ale widzi w stabilności i czasie zmian po wdrożeniu.",
+        "Tailwind 4 (nie Bootstrap, nie CSS Modules): utility-first podejście, mniejszy bundle CSS (purge unused), spójny design system, szybszy dev. To stack którego używa 70% nowych projektów React w 2026.",
+        "Sanity jako CMS dla projektów które wymagają edycji: schema definiowana w kodzie TypeScript, real-time collaborative editing (jak Figma), GROQ jako query language. Free tier: 100k requests/mc + 3 użytkowników. Wystarcza dla 80% średnich stron firmowych.",
+        "Vercel hosting: git push = automatyczny deploy, preview URL per pull request (każda zmiana dostaje swój link do testów przed merge), automatic SSL, edge functions, image optimization. Free tier: 100 GB bandwidth/mc. Dla większości stron firmowych = 0 zł rocznie hostingu.",
+        "Co dorzucamy opcjonalnie: GSAP (zaawansowane animacje), Framer Motion (mikro-interakcje React), Three.js / React Three Fiber (3D, WebGL), Resend (formularze kontaktowe z SMTP), Vercel Analytics (real user monitoring bez cookies).",
+      ],
+    },
+    {
+      heading: "Ile kosztuje strona Next.js we Wrocławiu",
+      body: [
+        "Cena strony Next.js we Wrocławiu zależy od trzech zmiennych: ile podstron (skala), ile customowej logiki (złożoność), kto pisze treści (Ty czy ja). Konkretne widełki na bazie wrocławskiego rynku 2026:",
+        "**Strona wizytówka** (5-10 podstron, formularz, blog statyczny): 8 do 15 tys. zł netto. Czas: 4 do 6 tygodni. Stack: Next.js + Tailwind + treści w MDX (bez CMS) + Vercel free. Idealna dla freelancera, prawnika, fotografa, gabinetu lekarskiego.",
+        "**Strona firmowa z CMS** (15-50 podstron, blog, dynamic OG, schema.org): 15 do 30 tys. zł. Czas: 6 do 10 tygodni. Stack: Next.js + Sanity Studio + Vercel. Dla średniej firmy która chce sama edytować treści po wdrożeniu.",
+        "**Aplikacja webowa Next.js** (konfigurator, panel klienta, integracje API, autoryzacja): 30 do 80 tys. zł. Czas: 8 do 16 tygodni. Stack: Next.js + Postgres + Prisma + NextAuth/Clerk + Stripe + zewnętrzne APIs. Dla SaaS, B2B narzędzi, e-commerce z customową logiką.",
+        "**Aplikacja SaaS multi-tenant** (kilkadziesiąt+ użytkowników, role permissions, billing): 80 tys. zł wzwyż. Czas: 4 do 9 miesięcy. Stack: jak wyżej + Sentry monitoring + Datadog/PostHog analytics + cron jobs + queue system.",
+        "Co podbija cenę we Wrocławiu konkretnie: integracje z polskimi bramkami (Przelewy24, BLIK, Autopay), systemy fakturowe (Fakturownia, iFirma, Subiekt GT), GUS REGON API, faktura.pl, multilingual PL/EN/DE (dla klientów z biznesem w Niemczech to częsty wymóg), ESG reporting (rośnie w 2026), integracje z systemami branżowymi (np. Comarch dla retail, Optima dla biur księgowych).",
+        "Co obniża cenę: gotowe treści (od Ciebie albo z istniejącej strony), gotowe zdjęcia, prosty design (mniej iteracji w Figmie), znana branża (mniej discovery), brak wielojęzyczności, jeden CMS, hosting Vercel free.",
+      ],
+    },
+    {
+      heading: "Czas wdrożenia i co robimy w którym tygodniu",
+      body: [
+        "Realistyczny harmonogram dla średniej strony firmowej (15-30 podstron, Sanity CMS, custom design):",
+        "**Tydzień 1** — brief i discovery. 1-2 spotkania (online lub w kawiarni we Wrocławiu). Definiowanie celu, target audience, key messaging, struktura informacji, wymagania techniczne, integracje. Output: dokument briefowy + sitemap.",
+        "**Tydzień 2-3** — projekt graficzny w Figmie. Mood board, typografia, kolorystyka, makiety wszystkich sekcji desktop + mobile. Klient akceptuje przed kodem.",
+        "**Tydzień 4-5** — programowanie frontendu. Setup Next.js + Tailwind + Sanity. Strona główna + 3-4 podstrony jako proof of concept. Demo na vercel.app przygotowane.",
+        "**Tydzień 6** — pozostałe podstrony, blog, formularze, integracje. Codzienne aktualizacje na preview URL.",
+        "**Tydzień 7** — optymalizacja: Core Web Vitals (LCP poniżej 2.5s, INP poniżej 200ms, CLS poniżej 0.1), schema.org per route, sitemap.xml, robots.txt, Open Graph images, alt teksty, accessibility audit (kontrast WCAG AA, keyboard navigation, ARIA).",
+        "**Tydzień 8** — testy klienckie, korekty, szkolenie z edycji w Sanity Studio (1h online), backup planu, dokumentacja PDF, migracja DNS (zwykle z istniejącego hostingu na Vercel, downtime zero).",
+        "Co może wydłużyć harmonogram: nieustalona treść (klient pisze w trakcie), późne uwagi do designu (po 4 tygodnie), integracje z systemami zewnętrznymi które wymagają approvalu po stronie dostawcy (np. Stripe verification może zająć 2 tygodnie), multilingual.",
+      ],
+    },
+    {
+      heading: "Jak wybrać freelancera Next.js we Wrocławiu",
+      body: [
+        "Wrocław ma sporą społeczność React/Next.js — meetupy, konferencje, kilka software house'ów. Przy wyborze freelancera lub małej agencji zwracaj uwagę na pięć rzeczy:",
+        "**Portfolio realnych wdrożeń** — nie tylko Awwwards-showcasy ale strony klientów które żyją od roku+. Działające produkcyjnie, indeksowane przez Google, z prawdziwymi konwersjami. Linki do live URL-i, nie tylko screenshoty z Behance.",
+        "**Lighthouse score wszystkich projektów portfolio** — minimum 90 dla performance i SEO. Jeśli developer nie jest w stanie wyciągnąć 90 dla własnego portfolio, nie wyciągnie dla Twojej strony. Sprawdź na pagespeed.web.dev/marcinsiwonia.pl jakie wartości ma sam mój site.",
+        "**Konkretny stack i argumentacja** — pytanie 'czemu Sanity, nie Strapi' powinno mieć przemyślaną odpowiedź. Pytanie 'czemu Vercel, nie Hostinger Premium' też. Brak odpowiedzi = brak doświadczenia z alternatywami.",
+        "**Komunikacja po polsku, dostępność** — codzienna mailowa, Slack/Discord po godzinach. Nie czekaj 3 dni na odpowiedź. We Wrocławiu możliwość spotkania face-to-face raz na 2-3 tygodnie to plus, nie minus (mimo że projekt 100% online).",
+        "**Maintenance po wdrożeniu** — co się dzieje w 2 tygodnie po starcie? 3 miesiące? Rok? Kto naprawia jeśli coś się zepsuje? Najlepsi freelancerzy oferują 30-60 dni post-launch support w cenie + opcję miesięcznego retainera (zwykle 2-5 tys. zł/mc) na bieżące zmiany.",
+        "Czego unikać: fixed-price na 'wszystko' bez specyfikacji (rozjedzie się), oferty 'wszystko za 3 tys. zł' (jakość proporcjonalna do ceny — Next.js dev w PL kosztuje 220-350 zł/h, 3 tys. to 10-15h pracy = wystarcza na sam setup), agencje które nie chcą podać kto będzie pracował (delegacja do junior na home office vs senior z meetupów Wrocław Tech to różnica jakości).",
+      ],
+    },
+    {
+      heading: "Hosting, domena, SSL — co kupić, co dostaniesz w cenie",
+      body: [
+        "Najczęstsza konfiguracja dla strony Next.js wdrażanej z Wrocławia:",
+        "**Vercel hosting** — free tier obsługuje 100 GB ruchu miesięcznie. Dla strony firmowej z 1000-5000 wizyt/mc to z naddatkiem. Pro tier (20$/mc, ~80 zł) potrzebny przy 50k+ wizyt/mc lub gdy wymagasz analytics, password protection, większego compute. SSL automatyczny (Let's Encrypt, odnawiany co 90 dni).",
+        "**Domena** — kupowana osobno u rejestratora. Polecam: **OVHcloud** (40-60 zł/rok dla .pl), **Nazwa.pl** (60-100 zł/rok), **Cyber_Folks** (40-80 zł/rok). NIE kupować przez agencję która wdraża stronę — domena ma być na Twojej własnej fakturze, na Twoim koncie, z Twoim emailem do odzyskiwania. Inaczej za 3 lata będziesz miał problem z odejściem.",
+        "**DNS** — domyślnie u rejestratora, ale można delegować do Vercel (DNS Vercel jest darmowy i szybszy). Po podpięciu domeny do Vercel: rekord A 76.76.21.21 lub CNAME na cname.vercel-dns.com. Vercel automatycznie wystawia certyfikat SSL.",
+        "**Email** — Vercel NIE robi maila. Maile firmowe (typu kontakt@twojadomena.pl) trzeba postawić osobno. Polecam: **Google Workspace** (20-30 zł/mc/skrzynka, najlepsze UX), **Microsoft 365** (jeśli klient już ma firmową infrastrukturę MS), **cyber_folks** (10-15 zł/mc, najtańsze, OK dla małych firm).",
+        "Roczny koszt operacyjny standardowej strony Next.js: domena 50 zł + email 240 zł (1 skrzynka) + Vercel free + Sanity free = **~290 zł/rok**. Dla większych projektów z multiple skrzynek + Vercel Pro: ~1500 zł/rok. To kilkukrotnie taniej niż klasyczny hosting WordPress + maintenance.",
+      ],
+    },
+    {
+      heading: "SEO i indeksacja: co dostajesz out of the box",
+      body: [
+        "Standard SEO dla każdej strony Next.js którą wdrażam:",
+        "**Sitemap.xml** auto-generated z kodu (`app/sitemap.ts` w Next.js App Router). Zawiera wszystkie podstrony, daty ostatniej modyfikacji, priority. Aktualizuje się przy każdym deploy.",
+        "**Robots.txt** z instrukcjami dla crawlerów Google, Bing, oraz nowych AI (GPTBot, ClaudeBot, PerplexityBot — możesz allowować/blokować per crawler).",
+        "**Schema.org JSON-LD** per route: `Person` i `Organization` w layoutach, `Service` na stronach usług, `Article` + `BreadcrumbList` + `FAQPage` na blogu, `LocalBusiness` z geokoordynatami Wrocławia dla local SEO. Dane strukturalne to sygnał dla Google i AI search (ChatGPT, Perplexity).",
+        "**Dynamic metadata per route** — każda podstrona ma własny title (max 65 znaków, żeby Google nie obcinał), description (150-160 znaków), Open Graph image generowany przez `next/og` (different per route).",
+        "**Core Web Vitals** mierzonego w Search Console. Cel: 95th percentile w zielonym dla LCP, INP, CLS. Strona Next.js wdrożona przeze mnie wyciąga to standardowo (vs typowy WordPress który walczy o 70-80%).",
+        "**Internal linking** — z każdej podstrony do powiązanych usług, z bloga do stron pieniężnych. To przekierowanie 'link juice' do stron na które chcesz pozycjonować ([więcej o linkowaniu wewnętrznym znajdziesz w sekcji \"Pozycjonowanie strony usługowej\"](/blog/pozycjonowanie-strony-uslugowej)).",
+        "**Search Console + Analytics integracja** — w cenie wdrożenia. GA4 (lub Plausible/Umami jeśli klient nie chce cookies), property w Search Console z weryfikacją, sitemap submit, monitoring rankingów pierwsze 8 tygodni.",
+      ],
+    },
+    {
+      heading: "Najczęstsze pytania klientów (od briefu do produkcji)",
+      body: [
+        "Sprzedażowa rozmowa z wrocławskim klientem ma zwykle te same 5-6 pytań. Odpowiedzi poniżej, do skopiowania jeśli masz wątpliwości:",
+        "**Czy strona Next.js jest trudniejsza do edycji niż WordPress?** Nie, jeśli używamy CMS (Sanity Studio). Klient widzi panel edycji 1:1 z designem, edytuje teksty i obrazki w real-time, hit publish — strona się aktualizuje. Bez CMS (treści hardcoded w kodzie) — tak, każda zmiana wymaga ode mnie 5-15 minut roboty + deploy. Wybór CMS-vs-hardcode to decyzja briefu.",
+        "**Czy Next.js działa na polskich hostingach jak nazwa.pl czy home.pl?** Tak, ale nie polecam. Vercel jest stworzony pod Next.js, ma natywną integrację z framework, edge functions, automatic image optimization. Polski hosting to fallback gdy klient ma legalne wymogi data residency (np. branża zdrowia). Wtedy: Hostinger VPS + Coolify do self-hosting Next.js, lub Cloud Provider z PL data center.",
+        "**Co jeśli za 3 lata nie będę chciał już z Tobą pracować?** Cały kod w GitHub na Twoim koncie. Każdy Next.js dev w PL może to przejąć. Zero vendor lock-in. To jest jedna z głównych przewag Next.js + Vercel nad Webflow czy Wix (tam jak zechcesz odejść — przepisanie od zera).",
+        "**Ile czasu zajmie pierwsza indeksacja w Google?** SSG/SSR Next.js: 2-12 godzin do pierwszego crawl, 7-21 dni do pełnej indeksacji wszystkich podstron (zależy od PageRank, jakości backlinków, tempa publikacji). Vs SPA (czysty React): 7-21 dni do pierwszego crawl, 4-12 tygodni do pełnej indeksacji. Różnica = realny boost konwersji w pierwszych 3 miesiącach.",
+        "**Czy zrobisz mi też logo i identyfikację?** Nie, ale współpracuję z grafikami z Wrocławia którzy to robią. Mogę polecić kontakty na podstawie briefu — na małe budżety (5-8 tys.) freelancer, na większe agencja brandingowa.",
+      ],
+    },
+    {
+      heading: "Podsumowanie: co dostaniesz, ile zapłacisz, kiedy wystartujesz",
+      body: [
+        "Strona firmowa na Next.js we Wrocławiu w 2026 to budżet 8-30 tys. zł, czas 4-10 tygodni, stack Next.js + TypeScript + Tailwind + Sanity + Vercel, performance Lighthouse 95+, SEO out-of-the-box, edge deployment globalny, zero maintenance dramy.",
+        "Aplikacja webowa: budżet 30-80 tys., czas 8-16 tygodni, ten sam stack + Postgres/Prisma + auth + płatności + integracje API. Po wdrożeniu opcjonalny retainer 2-5 tys./mc na bieżące zmiany.",
+        "Jeśli masz brief lub pomysł — najszybciej napisać mailem na [marcin.siwonia.firma@gmail.com](mailto:marcin.siwonia.firma@gmail.com) lub przez [formularz kontaktowy](/kontakt). Odpisuję tego samego dnia roboczego z wstępną wyceną i terminem.",
+        "Jeśli zastanawiasz się którą technologię wybrać — przeczytaj [Next.js vs WordPress: porównanie kosztów wdrożenia](/blog/wordpress-vs-next-js-koszt) lub [strona firmowa 2026: jaką technologię wybrać](/blog/strona-firmowa-2026-jaka-technologia). Po tych dwóch będziesz miał jasność.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Ile kosztuje strona Next.js we Wrocławiu?",
+      a: "Strona wizytówka 8-15 tys. zł, strona firmowa z CMS 15-30 tys., aplikacja webowa od 30 tys. wzwyż. Cena zależy od liczby podstron, integracji i tego czy treści piszesz Ty czy ja.",
+    },
+    {
+      q: "Ile trwa wdrożenie strony Next.js?",
+      a: "Strona wizytówka: 4-6 tygodni od briefu do live. Strona firmowa: 6-10 tygodni. Aplikacja webowa: 8-16 tygodni. Termin liczony od akceptacji designu w Figmie, nie od podpisania umowy.",
+    },
+    {
+      q: "Dlaczego Next.js a nie WordPress?",
+      a: "Next.js jest 3-5x szybszy (LCP 0.8s vs 3-4s), bezpieczniejszy (brak admin panelu do zhackowania), lepszy SEO (indeksacja w godziny, nie tygodnie). WordPress ma sens przy budżecie poniżej 8 tys. lub gdy klient KONIECZNIE chce edytować w Gutenbergu.",
+    },
+    {
+      q: "Czy będę mógł sam edytować treści po wdrożeniu?",
+      a: "Tak, jeśli wybierzemy CMS (Sanity, Contentful). Klient widzi panel 1:1 z designem, edytuje teksty i obrazki, hit publish, strona się aktualizuje. Bez CMS (treści hardcoded) — każda zmiana wymaga 5-15 minut roboty po mojej stronie.",
+    },
+    {
+      q: "Jaki hosting polecasz dla Next.js?",
+      a: "Vercel — stworzony przez twórców Next.js, free tier wystarcza dla 90% stron firmowych (100 GB ruchu/mc), automatic SSL, edge deployment globalny. Pro tier (80 zł/mc) potrzebny przy 50k+ wizyt miesięcznie.",
+    },
+    {
+      q: "Co jeśli za 2 lata nie będę chciał już z Tobą pracować?",
+      a: "Cały kod w GitHub na Twoim koncie. Każdy Next.js dev w Polsce może projekt przejąć. Zero vendor lock-in, w przeciwieństwie do Webflow/Wix gdzie odejście oznacza przepisanie od zera.",
+    },
+    {
+      q: "Robisz strony też dla klientów spoza Wrocławia?",
+      a: "Tak, projekt jest 100% online (Figma, Slack, GitHub, Vercel). Spotkania we Wrocławiu są opcjonalne — wygodne dla lokalnych firm ale nie wymagane. Mam klientów z Warszawy, Krakowa, Poznania i z Niemiec.",
+    },
+    {
+      q: "Czy oferujesz wsparcie po wdrożeniu?",
+      a: "Tak. 30-60 dni post-launch w cenie wdrożenia (drobne poprawki, fix bugów, training). Po tym czasie opcjonalny miesięczny retainer 2-5 tys. zł/mc na bieżące zmiany, nowe funkcje, monitoring SEO.",
+    },
+  ],
+});
 
 export const tags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort();
