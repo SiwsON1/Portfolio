@@ -296,6 +296,109 @@ Większość konkurencji PL pisze albo **techniczne tutoriale** (typeofweb), alb
 
 ⚠️ `strona-firmowa-2026-jaka-technologia` — pokrywa keyword z `/uslugi/nowoczesna-strona-firmowa-2026`. **Decyzja**: usunąć + 301, ALBO przepisać scope ("Strona firmowa 2026 — checklist od briefu do wdrożenia" — proces zamiast technologii).
 
+# Następne 10 postów — gotowe brief + anchor linking strategy
+
+Każdy post poniżej ma sprawdzone:
+- ✅ Keyword nie pokrywa się z money page (no kanibalizacja)
+- ✅ Konkretne exact-match anchory inline do money pages
+- ✅ Konkretne cross-link do innych postów blogowych
+- ✅ Hero kind dobrany do tematyki
+
+## P0 #11 — Hosting WordPress 2026: porównanie 8 polskich providerów
+- **Slug**: `hosting-wordpress-porownanie-2026`
+- **Keyword**: "hosting WordPress" (informacyjny — money pages tego nie mają)
+- **Hero**: wordpress
+- **Sections**: Cyber_folks vs LH.pl vs dhosting vs Hostinger vs OVH vs nazwa.pl vs home.pl vs WP Engine. Cena, LiteSpeed, kopie zapasowe, wsparcie PL, max wizyt/mc.
+- **Anchor inline (5+)**:
+  - `[tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)` w kontekście "po wyborze hostingu czas na..."
+  - `[sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce)` przy sekcji o e-commerce
+  - `[Marcin Siwonia](/)` raz w lead
+  - Cross-link: `[25 must-have wtyczek WordPress](/blog/must-have-wtyczki-wordpress-2026)`, `[co po instalacji WP](/blog/co-zrobic-po-instalacji-wordpressa)`
+- **relatedServices**: tworzenie-stron-wordpress, headless-wordpress, sklepy-internetowe-woocommerce
+- **Konkurencja**: hauerpower (cena strony), swiatwp (przyspieszanie)
+
+## P0 #12 — Block Editor (Gutenberg) — kompletny przewodnik 2026
+- **Slug**: `block-editor-gutenberg-przewodnik`
+- **Keyword**: "Gutenberg block editor"
+- **Hero**: wordpress
+- **Sections**: Co to Gutenberg, wszystkie typy bloków, reusable blocks, block patterns, custom blocks (deweloperzy), Gutenberg vs Elementor, FSE
+- **Anchor inline**: `[tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)`, `[Elementor — dlaczego NIE](/blog/elementor-dlaczego-nie-warto)`, `[headless WordPress](/uslugi/headless-wordpress)`
+- **relatedServices**: tworzenie-stron-wordpress, sklepy-internetowe-woocommerce, headless-wordpress
+- **Konkurencja**: wpzen (podręcznik), swiatwp
+
+## P0 #13 — Page builders 2026: Elementor vs Bricks vs Oxygen vs Breakdance
+- **Slug**: `page-builders-wordpress-porownanie-2026`
+- **Keyword**: "page builder WordPress porównanie"
+- **Hero**: wordpress
+- **Anchor inline**: `[tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)`, cross: `[Elementor dlaczego nie](/blog/elementor-dlaczego-nie-warto)`, `[wtyczki WordPress](/blog/must-have-wtyczki-wordpress-2026)`
+- **relatedServices**: tworzenie-stron-wordpress, headless-wordpress, nowoczesne-strony-internetowe
+
+## P0 #14 — Core Web Vitals dla WordPress — kompletny przewodnik 2026
+- **Slug**: `core-web-vitals-wordpress-przewodnik`
+- **Keyword**: "Core Web Vitals WordPress" (vs ogólny `core-web-vitals-2026` który już jest — bardziej specyficzny pod WP)
+- **⚠️ CHECK**: kanibalizacja z `core-web-vitals-2026`? Nie — ten ogólny, nowy tylko WP-specific. OK.
+- **Hero**: performance
+- **Anchor inline**: `[tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)`, `[Marcin Siwonia — freelancer Wrocław](/)`, cross: `[Core Web Vitals 2026](/blog/core-web-vitals-2026)`, `[Elementor dlaczego NIE](/blog/elementor-dlaczego-nie-warto)`
+- **relatedServices**: tworzenie-stron-wordpress, headless-wordpress, aplikacje-nextjs
+
+## P0 #15 — App Router vs Pages Router — co wybrać w Next.js 2026
+- **Slug**: `app-router-vs-pages-router`
+- **Keyword**: "App Router Pages Router"
+- **Hero**: nextjs
+- **Anchor inline**: `[tworzenie stron Next.js](/uslugi/aplikacje-nextjs)`, `[Next.js software house](/uslugi/next-js-software-house)`, cross: `[Server Actions Next.js](/blog/server-actions-nextjs)`, `[Next.js co to jest](/blog/next-js-co-to-jest)`
+- **relatedServices**: aplikacje-nextjs, next-js-software-house, aplikacje-react
+
+## P0 #16 — Auth w Next.js — Clerk vs NextAuth vs Lucia
+- **Slug**: `auth-nextjs-clerk-nextauth-lucia`
+- **Keyword**: "auth Next.js"
+- **Hero**: nextjs
+- **Anchor inline**: `[aplikacje Next.js](/uslugi/aplikacje-nextjs)`, `[Marcin Siwonia](/)`, cross: `[Server Actions](/blog/server-actions-nextjs)`, `[Next.js vs React](/blog/next-js-vs-react-roznice)`
+- **relatedServices**: aplikacje-nextjs, next-js-software-house, wdrozenia-ai
+
+## P0 #17 — TypeScript dla React developera — przewodnik 2026
+- **Slug**: `typescript-dla-react-developera`
+- **Keyword**: "TypeScript React"
+- **Hero**: nextjs
+- **Anchor inline**: `[programista React](/uslugi/aplikacje-react)`, `[tworzenie stron Next.js](/uslugi/aplikacje-nextjs)`, cross: `[Next.js vs React różnice](/blog/next-js-vs-react-roznice)`
+- **relatedServices**: aplikacje-react, aplikacje-nextjs, next-js-software-house
+
+## P0 #18 — shadcn/ui — co to i jak używać z Next.js
+- **Slug**: `shadcn-ui-co-to`
+- **Keyword**: "shadcn ui"
+- **Hero**: nextjs
+- **Anchor inline**: `[tworzenie stron Next.js](/uslugi/aplikacje-nextjs)`, `[programista React](/uslugi/aplikacje-react)`, cross: `[Tailwind CSS](/blog/tailwind-css-co-to)`
+- **relatedServices**: aplikacje-nextjs, aplikacje-react, next-js-software-house
+
+## P0 #19 — Stripe vs Przelewy24 — płatności online dla polskich biznesów
+- **Slug**: `stripe-vs-przelewy24`
+- **Keyword**: "Stripe Przelewy24 porównanie"
+- **Hero**: seo (alternatywnie nextjs — hero per kategoria temat)
+- **Anchor inline**: `[sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce)`, `[aplikacje Next.js](/uslugi/aplikacje-nextjs)`, cross: `[Server Actions Next.js](/blog/server-actions-nextjs)`
+- **relatedServices**: sklepy-internetowe-woocommerce, aplikacje-nextjs, next-js-software-house
+
+## P0 #20 — RAG pipeline w 2026 — co to i jak zbudować
+- **Slug**: `rag-pipeline-co-to`
+- **Keyword**: "RAG pipeline"
+- **Hero**: ai
+- **Anchor inline**: `[wdrożenia AI w firmie](/uslugi/wdrozenia-ai)`, `[aplikacje Next.js](/uslugi/aplikacje-nextjs)`, cross: `[wdrożenia AI w małych firmach](/blog/wdrozenia-ai-w-malych-firmach)`
+- **relatedServices**: wdrozenia-ai, aplikacje-nextjs, next-js-software-house
+
+# Wzór anchor texts dla money pages (do używania w każdym poście)
+
+| Money page | Anchory exact-match (rotacja) | Anchory naturalne |
+|------------|-------------------------------|---------------------|
+| `/uslugi/aplikacje-nextjs` | "tworzenie stron Next.js", "aplikacje Next.js", "programista Next.js Wrocław" | "Next.js apps które robię", "moje wdrożenia Next.js" |
+| `/uslugi/tworzenie-stron-wordpress` | "tworzenie stron WordPress", "strony WordPress" | "WordPress projekty które robię", "moje wdrożenia WP" |
+| `/uslugi/sklepy-internetowe-woocommerce` | "sklepy internetowe WooCommerce", "sklepy WooCommerce" | "moje wdrożenia sklepu", "WooCommerce projekty" |
+| `/uslugi/headless-wordpress` | "headless WordPress", "headless WordPress + Next.js" | "WP backend + Next.js frontend" |
+| `/uslugi/aplikacje-react` | "programista React", "aplikacje React" | "React projekty" |
+| `/uslugi/wdrozenia-ai` | "wdrożenia AI w firmie", "wdrożenia AI" | "AI projekty które robię", "automatyzacja AI" |
+| `/uslugi/next-js-software-house` | "Next.js software house" | "outsourcing Next.js" |
+| `/uslugi/strony-jamstack` | "strony Jamstack" | "architektura Jamstack" |
+| `/` (homepage) | "Marcin Siwonia", "freelancer Next.js i WordPress z Wrocławia" | "moje portfolio", "moje 30+ wdrożeń" |
+
+**Reguła rotacji**: w jednym poście używaj 2-3 różne warianty anchor do tej samej money page (nie 5x ten sam dokładny). To jest natural pattern — Google nagradza różnorodność, kara za 100% exact match.
+
 # Szacunkowy timeline efektów
 
 | Czas | Co się dzieje |
