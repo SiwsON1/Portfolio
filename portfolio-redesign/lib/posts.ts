@@ -1027,4 +1027,541 @@ posts.push(
   }
 );
 
+/* === Pierwsza partia: cornerstone WordPress + Next.js (2026-05) === */
+
+posts.push({
+  slug: "wordpress-co-to-jest",
+  title: "WordPress — co to jest i jak działa w 2026",
+  excerpt:
+    "WordPress to najpopularniejszy CMS na świecie (60% rynku stron www). Co to jest, jak działa, dla kogo ma sens, ile kosztuje uruchomienie. Praktyczny przewodnik 2026.",
+  date: "2026-05-09",
+  readingMinutes: 12,
+  tags: ["WordPress", "podstawy", "CMS"],
+  keyword: "WordPress co to jest",
+  metaTitle: "WordPress — co to jest i jak działa w 2026 (pełny przewodnik)",
+  metaDescription:
+    "WordPress: 60% rynku stron www. Co to jest, jak działa, ile kosztuje, dla kogo ma sens. Block Editor, FSE, motywy, pluginy, hosting. Praktyczny przewodnik 2026.",
+  hero: { kind: "wordpress" },
+  relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "sklepy-internetowe-woocommerce"],
+  body: [],
+  lead:
+    "WordPress to system zarządzania treścią (CMS) napisany w PHP, na którym działa około 60% wszystkich stron www na świecie. Jest darmowy, open-source, można go zainstalować na własnym hostingu w 5 minut. Edytujesz treści w przeglądarce bez znajomości kodu, rozszerzasz funkcjonalność przez 60+ tysięcy wtyczek. W 2026 wciąż najczęściej wybierany dla małej i średniej firmy, blogów, sklepów online (przez WooCommerce). Niżej: jak działa technicznie, kiedy ma sens, kiedy NIE.",
+  sections: [
+    {
+      heading: "Czym technicznie jest WordPress",
+      body: [
+        "WordPress to aplikacja PHP + baza danych MySQL (lub MariaDB). Po instalacji na hostingu masz dwie warstwy: **frontend** (publiczna strona którą widzą użytkownicy) i **backend / panel admin** (interfejs do zarządzania treścią pod adresem `/wp-admin/`).",
+        "Każde wejście na stronę uruchamia PHP, który łączy się z bazą danych, pobiera treść (posty, strony, ustawienia, użytkowników), renderuje HTML i wysyła do przeglądarki. Wszystko dynamicznie, per request. Stąd waga cache (LiteSpeed, WP Rocket) — dobrze skonfigurowany cache zamienia dynamiczne PHP na statyczny HTML serwowany w milisekundach.",
+        "Architektura ma trzy warstwy customizacji:",
+        "**Motyw (theme)** decyduje o wyglądzie strony. Może być gotowy (z marketplace jak ThemeForest, AwesomeMotive) albo custom (zbudowany od zera pod konkretny projekt).",
+        "**Wtyczki (plugins)** dodają funkcjonalności: SEO (Yoast, Rank Math), bezpieczeństwo (Wordfence), formularze (WPForms), e-commerce (WooCommerce), cache (LiteSpeed, WP Rocket).",
+        "**Treść** żyje w bazie danych: posty (`wp_posts`), użytkownicy (`wp_users`), opcje (`wp_options`), meta (`wp_postmeta`). Edytowane przez Block Editor (Gutenberg, od 2018) lub Full Site Editing (FSE, od 2022 — pełna edycja motywu w przeglądarce).",
+      ],
+    },
+    {
+      heading: "Krótka historia: skąd taka popularność",
+      body: [
+        "WordPress powstał w 2003 roku jako fork narzędzia do blogowania b2/cafelog. Stworzyli go Matt Mullenweg (dziś CEO Automattic, firmy stojącej za WordPress.com) i Mike Little. Pierwsza wersja miała kilkadziesiąt linii kodu PHP i była dla geeków blogerów.",
+        "Przełom w 2010-2013: WordPress przestał być narzędziem do bloga, stał się pełnym CMS. Pojawiły się custom post types, taxonomies, REST API, ACF (Advanced Custom Fields), wzrost rynku motywów premium (ThemeForest osiąga miliony sprzedanych themów).",
+        "Drugi przełom 2018: Gutenberg / Block Editor. Edycja treści w blokach, nie w klasycznym TinyMCE. Krytykowane na start, dziś standard. W 2022 dochodzi Full Site Editing — możesz edytować nagłówek, stopkę, każdą część motywu klikając w przeglądarce.",
+        "W 2026 WordPress to dojrzały produkt. 43% wszystkich stron internetowych na świecie (W3Techs), 60% spośród tych z CMS-em (czyli wykluczając stricte custom kod). Konkurencja (Webflow, Wix, Squarespace, Shopify) urywa kawałki rynku, ale WordPress wciąż dominuje przez ekosystem (motywy, pluginy, dewelopery, agencje).",
+      ],
+    },
+    {
+      heading: "Co dostajesz w darmowym WordPress (i co kosztuje)",
+      body: [
+        "**Sam WordPress jest darmowy**. Pobierasz z [wordpress.org](https://wordpress.org), instalujesz na hostingu, używasz. Brak licencji, brak ograniczeń komercyjnych. Open-source na licencji GPL.",
+        "**Co musisz kupić** — hosting (30-100 zł/mc dla małej strony — Cyber_folks, Hostinger, LH.pl, dhosting), domena (~50 zł/rok dla .pl), SSL (zwykle gratis przez Let's Encrypt na hostingu).",
+        "**Wtyczki i motywy free vs premium** — większość kluczowych funkcjonalności masz za darmo: Yoast SEO, Wordfence, WPForms, WooCommerce, LiteSpeed Cache. Ale często warto dopłacić za wersje pro: Yoast Pro (~95$/rok), ACF Pro (~50$/rok), WP Rocket (~60$/rok), WooCommerce extensions (różne, 30-300$/rok).",
+        "**Custom theme** — jeśli nie chcesz gotowca, zatrudniasz agencję / freelancera. Cena 4-15 tys. zł za małą-średnią stronę firmową we Wrocławiu (więcej w [ile kosztuje strona www 2026](/blog/ile-kosztuje-strona-www-2026)).",
+        "**Realny roczny koszt operacyjny** dla małej strony firmowej: 360 zł hosting + 50 zł domena + 0-300 zł wtyczki premium = **400-700 zł/rok**. Dla średniej strony z e-commerce: 1500-3000 zł/rok.",
+      ],
+    },
+    {
+      heading: "Kiedy WordPress jest dobrym wyborem",
+      body: [
+        "**Strona firmowa do prezentacji oferty** (kancelaria, salon, restauracja, gabinet) — WordPress to standard. Custom theme + Bricks Builder lub ACF = pełna kontrola designu, klient sam edytuje teksty, performance OK po LiteSpeed.",
+        "**Blog firmowy lub osobisty** — z czego WordPress wziął początek, do dziś najlepszy do bloga. Block Editor, taxonomies, RSS, integracja z social, SEO out of the box po Yoast / Rank Math.",
+        "**Sklep internetowy małej-średniej skali** (do ~5000 produktów) — WooCommerce na WordPress. Płatności PL (Przelewy24, Autopay, Tpay), faktury (Subiekt GT, iFirma), eksport do feedów Google Shopping i Allegro.",
+        "**Magazyn / portal contentowy** — duże publikacje (ekonomia, sport, lifestyle) działają na WordPress (Newsweek, TIME, Variety). Skalowalny, dobrze indeksowany, integruje się z systemami redakcyjnymi.",
+        "**Strona instytucji publicznej** (urząd, szkoła) — zgodność z WCAG 2.2 AA i BIP osiągalna w WordPress, sporo gotowych theme dedykowanych pod instytucje publiczne.",
+      ],
+    },
+    {
+      heading: "Kiedy NIE WordPress (alternatywy)",
+      body: [
+        "**Aplikacja webowa z customową logiką** (konfigurator, panel klienta, system rezerwacji z complex flow) — Next.js + dedykowane backend lepsze. WordPress da się rozszerzyć ale szybko stajesz w pułapce 'PHP plugin którego nikt już nie utrzyma'.",
+        "**Strona z wymogiem performance Lighthouse 95+ z budżetu reklamowego** (Google Ads Quality Score) — Next.js z SSG dostarcza out of the box co WordPress osiąga tylko po starannej optymalizacji. Pełne porównanie: [WordPress vs Next.js — koszty wdrożenia](/blog/wordpress-vs-next-js-koszt).",
+        "**Aplikacja SaaS multi-tenant** — WordPress nie jest do tego zaprojektowany. Multisite działa dla blog network, nie dla prawdziwego SaaS z user dashboards.",
+        "**Bardzo proste landing page jednodniowe** — Framer, Carrd, lub czysty HTML+CSS będą tańsze i szybsze niż konfiguracja WP.",
+        "**Real-time aplikacja** (chat, social feed, live data) — WebSocket / SSE w WordPress to walka. Lepiej Next.js + dedykowane usługi.",
+      ],
+    },
+    {
+      heading: "Block Editor vs Full Site Editing — co używać w 2026",
+      body: [
+        "**Block Editor (Gutenberg, od 2018)** — edycja TREŚCI postów i stron w blokach. Nagłówki, paragrafy, obrazki, kolumny, listy, embed (YouTube, Twitter), reusable blocks. Standard do edycji treści.",
+        "**Full Site Editing (FSE, od 2022)** — edycja CAŁEGO motywu w przeglądarce. Header, footer, sidebar, single post template, archive template — wszystko klikalne, bez kodu. Wymaga 'block theme' (Twenty Twenty-Three+, Blockbase, Kadence, Astra). Stary 'classic theme' nie wspiera FSE.",
+        "**Wybór 2026**: dla nowej strony — block theme + FSE. Dla istniejącej na classic theme — Block Editor do treści, custom code do designu (lub migracja na block theme to projekt 4-8 tygodni).",
+        "**Page builders alternatywne** (Elementor, Bricks, Oxygen) — działają niezależnie od FSE, mają własne edytory wizualne. Bardziej intuicyjne dla nie-techników, ale zwykle dodają więcej JS do strony (Elementor 200-400 KB JS na każdej podstronie).",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Ile kosztuje uruchomienie strony na WordPressie?",
+      a: "Najtaniej: 60-200 zł rocznie (hosting + domena, sam stawiasz na gotowym themie free). Realnie dla firmy: 4-12 tys. zł za wdrożenie z custom themem + 400-700 zł/rok operacyjnie. Pełne widełki: [ile kosztuje strona www 2026](/blog/ile-kosztuje-strona-www-2026).",
+    },
+    {
+      q: "Czy WordPress nadaje się do dużych firm?",
+      a: "Tak — TIME, Newsweek, Sony Music, Reuters Blogs, Microsoft News. Skaluje się do milionów wizyt miesięcznie z dobrym hostingiem (WP Engine, Pantheon) i optymalizacją. Dla mid-sized firm w PL Cyber_folks Premium / Hostinger Business obsługuje 50-100k wizyt/mc bez problemu.",
+    },
+    {
+      q: "Czy mogę edytować WordPress bez znajomości kodu?",
+      a: "Tak, w 90% przypadków. Block Editor / FSE pozwala edytować treści, dodawać sekcje, obrazki, formularze drag-and-drop. Programista potrzebny dla custom funkcji (integracje API, niestandardowe pola, performance optymalizacje).",
+    },
+    {
+      q: "WordPress vs Wix / Squarespace — co lepsze?",
+      a: "WordPress: pełna kontrola, wszystko Twoje, no vendor lock-in, taniej długoterminowo. Wix/Squarespace: prostsze na start, drogo długoterminowo, ograniczenia (przeniesienie = przepisanie od zera). Dla biznesu poważnego — WordPress.",
+    },
+    {
+      q: "Czy WordPress jest bezpieczny?",
+      a: "Sam WordPress jest bezpieczny — Automattic regularnie wydaje security patches. Problem: stare pluginy / motywy z lukami. Reguła: aktualizuj wszystko, używaj Wordfence lub Solid Security, włącz 2FA, regularnie backup (UpdraftPlus, Migrate Guru).",
+    },
+    {
+      q: "Czy WordPress ma sens w 2026 czy lepiej Next.js?",
+      a: "Zależy od projektu. Strona firmowa do prezentacji + blog + WooCommerce dla małej-średniej firmy = WordPress (taniej, klient sam edytuje). Aplikacja webowa z customową logiką, performance-critical site z Google Ads = Next.js. Pełne porównanie kosztów: [WordPress vs Next.js](/blog/wordpress-vs-next-js-koszt).",
+    },
+    {
+      q: "Czy WordPress.com to to samo co WordPress.org?",
+      a: "NIE. WordPress.org — pobierasz oprogramowanie za darmo, instalujesz na własnym hostingu (rekomendowane). WordPress.com — usługa hostowana przez Automattic (firma za WP), darmowa z reklamami lub płatna 4-45$/mc. Mniejsza kontrola.",
+    },
+  ],
+});
+
+posts.push({
+  slug: "co-zrobic-po-instalacji-wordpressa",
+  title: "Co zrobić po instalacji WordPressa — checklist 15 czynności",
+  excerpt:
+    "Świeżo zainstalowany WordPress wymaga 15 kroków konfiguracji zanim zaczniesz publikować. Permalinks, security, cache, SEO, backup, RODO. Pełna checklist 2026.",
+  date: "2026-05-09",
+  readingMinutes: 11,
+  tags: ["WordPress", "instalacja", "konfiguracja"],
+  keyword: "po instalacji WordPress",
+  metaTitle: "Co zrobić po instalacji WordPressa — checklist 15 czynności",
+  metaDescription:
+    "Checklist 15 kroków po instalacji WordPressa: permalinks, security headers, Wordfence, cache, Yoast, backup, RODO, 2FA. Pełna konfiguracja w 60 minut.",
+  hero: { kind: "wordpress" },
+  relatedServices: ["tworzenie-stron-wordpress", "sklepy-internetowe-woocommerce", "headless-wordpress"],
+  body: [],
+  lead:
+    "Świeży WordPress po instalacji ma 15-20% tego co potrzeba do produkcji. Default settings są bezpieczne dla WordPress.com, ale dla self-hosted to mało. Niżej checklist 15 czynności które robię po każdej instalacji — od permalinks (krytyczne dla SEO), przez security headers i 2FA, po cache i backup. Cała konfiguracja w 60-90 minut, raz na zawsze.",
+  sections: [
+    {
+      heading: "Bezpieczeństwo i admin (5 czynności)",
+      body: [
+        "**1. Zmień login admin z 'admin' na coś unikalnego.** WordPress 5.0+ wymaga to przy instalacji, ale stare instalacje często mają 'admin'. Botnety próbują brute force na tym loginie. Stwórz nowego admina z nietypowym username, usuń starego.",
+        "**2. Włącz 2FA dla wszystkich kont admin/editor.** Wordfence Login Security (free) lub WP 2FA. Wymóg w 2026, brak 2FA = spora luka security.",
+        "**3. Zainstaluj Wordfence (lub Solid Security, MalCare).** Free tier wystarcza dla małej-średniej strony. Włącz: firewall, brute force protection, login lockdown po 5 nieudanych próbach, 2FA, malware scanner.",
+        "**4. Hardening wp-config.php** — dodaj `define('DISALLOW_FILE_EDIT', true);` (blokuje edytor pluginów/motywów z poziomu admin), `define('FORCE_SSL_ADMIN', true);`, klucze i salty z [api.wordpress.org/secret-key](https://api.wordpress.org/secret-key/1.1/salt/).",
+        "**5. Ustaw security headers w .htaccess** — X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Strict-Transport-Security. Sprawdź wynik na [securityheaders.com](https://securityheaders.com).",
+      ],
+    },
+    {
+      heading: "SEO podstawy (4 czynności)",
+      body: [
+        "**6. Permalinks — KRYTYCZNE.** Settings → Permalinks → wybierz 'Post name' (`/sample-post/`). Default to `?p=123` co jest SEO-killer. Zrób to PRZED publikacją pierwszego posta — zmiana później generuje 404 jeśli URL-e już zindeksowane.",
+        "**7. Zainstaluj Yoast SEO lub Rank Math** (oba free w wersji podstawowej). Yoast bardziej popularny w PL, Rank Math więcej funkcji w free. Skonfiguruj: title separator, default meta, sitemap, schema.org Organization/Person, integracja z Google Search Console.",
+        "**8. Wygeneruj i wyślij sitemap.xml** — w Yoast: SEO → General → Features → XML sitemaps ON. URL: `twojadomena.pl/sitemap_index.xml`. Wyślij do Search Console (`https://search.google.com/search-console`).",
+        "**9. Robots.txt — sprawdź lub dodaj.** WordPress generuje virtual robots.txt. Sprawdź `twojadomena.pl/robots.txt`. Powinien zawierać `Sitemap: https://twojadomena.pl/sitemap_index.xml`. Dodaj jeśli brak — przez plugin SEO lub ręcznie.",
+      ],
+    },
+    {
+      heading: "Performance i cache (3 czynności)",
+      body: [
+        "**10. Zainstaluj cache plugin.** Jeśli hosting ma LiteSpeed (Cyber_folks, dhosting, niektóre Hostinger) — LiteSpeed Cache (free, najlepszy z LiteSpeed serverem). Inaczej WP Rocket (60$/rok, najlepszy ogólnie) lub WP Optimize (free).",
+        "**11. Optymalizacja obrazków.** Smush (free, do 2 MB obrazek), ShortPixel (płatne ale lepsze, 30$ za 10k obrazków), Imagify. Konwersja JPG/PNG → WebP, lossless lossy compression, lazy loading.",
+        "**12. CDN setup** — Cloudflare (free tier wystarcza dla małej strony) lub BunnyCDN ($1/mc minimum). Skraca TTFB dla użytkowników z dalej, dodatkowy security layer.",
+      ],
+    },
+    {
+      heading: "Backup i compliance (3 czynności)",
+      body: [
+        "**13. Backup automatyczny.** UpdraftPlus (free, codzienny backup do Google Drive / Dropbox / S3), Duplicator, Migrate Guru. Minimum: codzienny backup całej strony (database + uploads), retention 30 dni, test restore raz na kwartał.",
+        "**14. Cookie consent (RODO).** Cookiebot (płatny, automatic scanning), Klaro (free, open-source), Real Cookie Banner (najpopularniejszy w PL, free podstawowy). Bez tego ryzyko kary do 3% obrotu rocznego.",
+        "**15. Polityka prywatności + regulamin.** Settings → Privacy → wygeneruj template Privacy Policy, dostosuj do RODO. Dla sklepu — regulamin sklepu zgodny z UoPK (Ustawa o Prawach Konsumenta). Generator: prywatnosc24.pl, gotowe.pl.",
+      ],
+    },
+    {
+      heading: "Bonus: czego NIE robić",
+      body: [
+        "**Nie instaluj 30 pluginów na start.** Każdy plugin to potencjalna luka security i ciężar dla performance. Reguła: minimum potrzebne, dodawaj tylko gdy realnie potrzeba.",
+        "**Nie używaj Hello Dolly i innych default pluginów-zabawek.** Usuń od razu Akismet (jeśli nie używasz Jetpack), Hello Dolly, Twenty Twenty-One/Two/Three motywy które nie używasz.",
+        "**Nie zostawiaj wp-admin.php pod default URL** dla projektów wymagających podwyższonego security. Wordfence pozwala zmienić URL admina (np. `/sekretne-wejscie/`).",
+        "**Nie używaj 'admin' jako username, '12345' jako hasła, 'admin@admin.com' jako email.** To podstawa którą botnety atakują pierwsze.",
+        "**Nie aktualizuj pluginów / motywów / WP core 'kiedyś'.** Włącz auto-update dla minor releases, manual review dla major. Czek WP-Admin → Updates raz w tygodniu.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Ile czasu zajmuje pełna konfiguracja WordPressa po instalacji?",
+      a: "60-90 minut dla doświadczonego dewelopera. Dla początkującego: 3-5 godzin (czas na research każdego pluginu, decyzje, błędy). Pojedyncze rzeczy można rozłożyć w czasie, ale permalinks i security MUSZĄ być pierwsze.",
+    },
+    {
+      q: "Czy muszę kupować pluginy premium na start?",
+      a: "Nie. Free tier większości kluczowych pluginów (Wordfence, Yoast, UpdraftPlus, LiteSpeed Cache, Smush) wystarcza dla małej-średniej strony. Premium dopiero gdy realnie potrzebujesz (np. ShortPixel dla 10k+ obrazków, Yoast Pro dla redirect manager).",
+    },
+    {
+      q: "Co jest najważniejsze gdyby mam tylko 30 minut?",
+      a: "Top 5: 1) permalinks na 'Post name', 2) Wordfence + 2FA, 3) Yoast SEO podstawowa konfiguracja + Search Console, 4) cache plugin, 5) UpdraftPlus codzienny backup do chmury.",
+    },
+    {
+      q: "Czy mogę pominąć cookie consent jeśli nie używam analytics?",
+      a: "Jeśli używasz JAKICHKOLWIEK third-party scripts (Google Fonts, YouTube embed, Twitter embed, Facebook Pixel) — nie. Praktycznie każda strona wymaga cookie consent w 2026.",
+    },
+    {
+      q: "Jak często aktualizować plugin / motyw / WP?",
+      a: "Auto-update dla minor releases (security patches). Major releases — manual review w środowisku staging, deploy w 1-2 tygodnie. Codziennie czek WP-Admin → Updates dla aktualnych projektów (1-2 minuty pracy).",
+    },
+    {
+      q: "Czy WordPress wymaga PHP 8.x?",
+      a: "WordPress 6.5+ rekomenduje PHP 8.1+. Działa na 7.4 ale wolniejszy o 30-50%. Sprawdź wersję PHP na hostingu (Cyber_folks pozwala wybrać per domena), zaktualizuj jeśli stary.",
+    },
+  ],
+});
+
+posts.push({
+  slug: "elementor-dlaczego-nie-warto",
+  title: "Elementor — dlaczego NIE warto w 2026 (opinia praktyka)",
+  excerpt:
+    "Elementor to najpopularniejszy WordPress page builder. Po 30+ wdrożeniach mówię: dla większości projektów to zła decyzja w 2026. Dlaczego, co zamiast.",
+  date: "2026-05-09",
+  readingMinutes: 10,
+  tags: ["WordPress", "Elementor", "page builder", "opinia"],
+  keyword: "Elementor dlaczego nie",
+  metaTitle: "Elementor — dlaczego NIE warto w 2026 (opinia praktyka)",
+  metaDescription:
+    "Elementor: najpopularniejszy WP page builder, ale dla większości projektów zła decyzja w 2026. Performance, lock-in, koszty, alternatywy (Bricks, FSE, custom).",
+  hero: { kind: "wordpress" },
+  relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "nowoczesne-strony-internetowe"],
+  body: [],
+  lead:
+    "Elementor jest najpopularniejszym page builderem dla WordPress (~5 mln aktywnych instalacji). Po 30+ wdrożeniach klientów (część przejętych ze starych Elementor sites) moja opinia jest jednoznaczna: dla większości projektów w 2026 to zła decyzja. Performance, vendor lock-in, koszty długoterminowe nie zwracają początkowej oszczędności. Niżej dlaczego konkretnie i co zamiast.",
+  sections: [
+    {
+      heading: "Dlaczego Elementor jest tak popularny (uczciwy obraz)",
+      body: [
+        "Drag-and-drop interface który ROZUMIE klient bez znajomości kodu. Dosłownie chwytasz, przeciągasz, widzisz efekt. Krzywa uczenia 1-2 godziny.",
+        "Ogromny ekosystem dodatków (Essential Addons, Crocoblock JetEngine, ElementsKit). Dla każdej nietypowej funkcji jest gotowy widget.",
+        "Tysiące gotowych template'ów (free + Elementor Pro). Możesz mieć stronę za 1 dzień jeśli akceptujesz design szablonowy.",
+        "Społeczność — fora, Facebook groups, YouTube tutoriale w każdym języku. Łatwo znaleźć pomoc dla problemu.",
+        "Cena — free tier wystarcza dla prostych stron. Pro 59$/rok dla 1 strony, 99$ dla 3, 199$ dla 25, 399$ unlimited.",
+      ],
+    },
+    {
+      heading: "Dlaczego NIE — performance",
+      body: [
+        "Elementor dodaje **200-400 KB JavaScript do każdej podstrony** (jQuery, Swiper, Waypoints, Elementor frontend, FontAwesome icons, własne plugin frontends). To jest baseline, niezależnie od tego ile widgetów używasz.",
+        "Z każdym dodatkiem (Essential Addons, Crocoblock) bundle rośnie. Realny case z mojej praktyki: strona klienta na Elementor + Essential Addons + Crocoblock miała **1.2 MB JS na stronie głównej**. Lighthouse Performance: 23 (na 100). LCP 6.4s. INP 480ms.",
+        "Migracja tej strony na custom theme (Bricks Builder + ACF Pro) — bundle JS spadł do 80 KB, Lighthouse 96, LCP 1.1s, INP 90ms. Te same funkcje, dziesiąta część ciężaru.",
+        "Google używa Core Web Vitals jako sygnału rankingowego od 2021. Słabe CWV = niższe pozycje na konkurencyjnych frazach. Elementor strony są strukturalnie w gorszej pozycji od kompetentnie zbudowanych alternatyw.",
+        "Pełne dane o Core Web Vitals i jak je naprawić: [Core Web Vitals 2026](/blog/core-web-vitals-2026).",
+      ],
+    },
+    {
+      heading: "Dlaczego NIE — vendor lock-in",
+      body: [
+        "Każdy widget Elementor zapisuje konfigurację w `wp_postmeta` jako shortcode-like JSON. Treść strony nie jest standardowym HTML — jest serializowanym Elementor metadata.",
+        "Konsekwencja: jeśli zdezaktywujesz Elementor, **strona przestaje renderować się normalnie**. Zostają shortcode'y w treści, surowy tekst bez formatowania, brak layoutu.",
+        "Migracja Elementor → Block Editor wymaga manual rewrite każdej podstrony. Dla 30 podstron = 30-60 godzin pracy. Dla 100+ podstron = projekt 4-8 tygodni.",
+        "Migracja Elementor → custom theme = praktycznie redesign od zera. Treści można wyciągnąć przez WP REST API, layouty trzeba przepisać.",
+        "Im dłużej używasz Elementor, tym droższy odejście. Klasyczny vendor lock-in.",
+      ],
+    },
+    {
+      heading: "Dlaczego NIE — TCO długoterminowy",
+      body: [
+        "**Elementor Pro 59$/rok** za pojedynczą stronę. **Essential Addons Pro 49$/rok**. **Crocoblock JetEngine 130$/rok**. **WP Rocket 60$/rok** żeby ratować performance. Suma: ~300$/rok = 1200 zł/rok dla jednej strony.",
+        "**Hosting silniejszy** — Elementor wymaga większego compute. Cyber_folks Premium zamiast Basic (75 zł vs 25 zł/mc = 600 zł/rok więcej). Hostinger Business zamiast Single (40 zł vs 15 zł/mc = 300 zł/rok więcej).",
+        "**Maintenance droższy** — co kwartał aktualizacje Elementor Pro + addons + WP core. Często zmiany breaking (Elementor 3.x → 3.x+1 zmieniało API), naprawa zajmuje 2-5 godzin developera.",
+        "**Migracja gdy klient odejdzie z Elementor** — 5-15 tys. zł dla średniej strony. To koszt który ostatecznie ktoś poniesie (klient lub dev).",
+        "**Realny TCO 3 lata strony Elementor**: licencje 3.6 tys. zł + hosting premium 1.8-2.4 tys. zł + maintenance 6-12 tys. zł + opcjonalna migracja na końcu 5-15 tys. zł = **17-33 tys. zł**.",
+      ],
+    },
+    {
+      heading: "Co zamiast — alternatywy 2026",
+      body: [
+        "**Bricks Builder** ($249 lifetime jednorazowo) — modern page builder, Lighthouse 95+ out of the box, jQuery-free, native flexbox/grid. Dla freelancera/agencji najlepsza zamiana.",
+        "**Block Editor + custom theme + ACF Pro** ($249/rok) — Gutenberg blocks dla treści, custom blocks dla powtarzalnych sekcji, ACF dla pól dynamicznych. Najczystszy WordPress, najlepsze performance.",
+        "**Full Site Editing (FSE) + block theme** (free) — Twenty Twenty-Six lub Blockbase / Kadence. Edycja wszystkiego w przeglądarce, zero pluginów, modern stack. Krzywa uczenia 4-8 godzin.",
+        "**Headless WordPress + Next.js** (15-30 tys. wdrożenie) — backend WP zostaje, frontend Next.js. Najlepsze performance + SEO + DX. Dla projektów które rosną. Pełen przewodnik: [migracja WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+        "**Webflow** (płatne 200-400 zł/mc) — visual builder no-code/low-code. Świetny ale vendor lock-in większy niż Elementor (cała strona na Webflow infrastructure, nie WordPress).",
+      ],
+    },
+    {
+      heading: "Kiedy Elementor MIMO WSZYSTKO ma sens",
+      body: [
+        "Klient KONIECZNIE chce sam edytować layout (nie tylko treść) i nie ma budżetu na migrację co 2 lata. Wtedy Elementor + akceptacja TCO.",
+        "Strona jednorazowa pod konkretną kampanię (3-6 miesięcy lifecycle). Wtedy szybkość uruchomienia ważniejsza od długoterminowych kosztów.",
+        "Klient już ma zespół wewnętrzny przeszkolony z Elementor. Migracja na inny stack = retraining = większy koszt ludzki niż wybór technologii.",
+        "Bardzo prosta strona (5-10 podstron, brak custom funkcji, brak ambicji performance). Dla freelancera startującego z 1000 zł budżetu klienta.",
+        "Realnie: **dla 70% projektów wybór Elementor w 2026 to dług techniczny zaciągnięty przeciwko klientowi.** Wybór dewelopera nie klienta — łatwiej, szybciej, ale długoterminowo droższe i gorsze.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Czy Elementor jest darmowy?",
+      a: "Wersja podstawowa tak. Elementor Pro 59$/rok dla 1 strony (250 zł), 99$ dla 3 (400 zł), 199$ dla 25 (800 zł), 399$ unlimited (1600 zł). Plus addons (Essential Addons, Crocoblock) — kolejne 200-500 zł/rok per strona.",
+    },
+    {
+      q: "Czy mogę zmigrować z Elementor na coś innego?",
+      a: "Tak, ale to praca. Elementor → Block Editor: manual rewrite każdej podstrony, 30-60h dla 30 podstron. Elementor → custom theme / Bricks: praktycznie redesign od zera, koszt 8-25 tys. zł dla średniej strony.",
+    },
+    {
+      q: "Czy Bricks Builder jest dużo lepszy?",
+      a: "Tak — modern stack, Lighthouse 95+ out of the box, jQuery-free, lifetime $249 jednorazowo (vs Elementor recurring). Mniej szablonów ale rosnący ekosystem. Krzywa uczenia podobna do Elementor.",
+    },
+    {
+      q: "A co z Divi, Avada, WPBakery?",
+      a: "Te same problemy co Elementor + większe (Divi i Avada to monster themes z 200-400 KB JS bazowo). W 2026 NIE polecam żadnego z nich dla nowych projektów.",
+    },
+    {
+      q: "Czy Full Site Editing to alternatywa dla Elementor?",
+      a: "Tak, jeśli akceptujesz krzywą uczenia 4-8 godzin. FSE jest darmowy, nie ma vendor lock-in (wszystko w standardowym WP), modern performance. Słabszy ekosystem template'ów niż Elementor — większy nacisk na własny design.",
+    },
+    {
+      q: "Co jeśli mam Elementor i działa OK?",
+      a: "Jeśli Lighthouse Performance 80+, Core Web Vitals zielony, klient zadowolony, brak planów rozwoju — zostaw. Migracja kosztuje. Migruj gdy: planowy redesign, dodajesz e-commerce z performance wymogami, performance spadł poniżej 70.",
+    },
+  ],
+});
+
+posts.push({
+  slug: "must-have-wtyczki-wordpress-2026",
+  title: "25 must-have wtyczek WordPress 2026 — kompletna lista",
+  excerpt:
+    "25 wtyczek WordPress które instaluję w każdym projekcie 2026. SEO, security, cache, formularze, backup, analytics, RODO. Free vs Pro, alternatywy.",
+  date: "2026-05-09",
+  readingMinutes: 13,
+  tags: ["WordPress", "wtyczki", "pluginy"],
+  keyword: "wtyczki WordPress",
+  metaTitle: "25 must-have wtyczek WordPress 2026 — kompletna lista",
+  metaDescription:
+    "25 must-have wtyczek WordPress 2026: SEO (Yoast/Rank Math), security (Wordfence), cache (LiteSpeed/WP Rocket), formularze (WPForms), backup, RODO. Free i Pro.",
+  hero: { kind: "wordpress" },
+  relatedServices: ["tworzenie-stron-wordpress", "sklepy-internetowe-woocommerce", "headless-wordpress"],
+  body: [],
+  lead:
+    "Po 30+ wdrożeniach mam stałą listę 25 pluginów które instaluję praktycznie zawsze. Niżej cała lista podzielona na 8 kategorii (SEO, security, cache, performance, formularze, backup, analytics, RODO), z konkretnymi rekomendacjami free vs pro i alternatywami. Twoja final lista będzie subset 15-20 z tych 25, w zależności od projektu.",
+  sections: [
+    {
+      heading: "SEO (3 wtyczki)",
+      body: [
+        "**1. Yoast SEO** (free, Premium 99$/rok) — najpopularniejszy w PL, dobry default. Schema.org Person/Organization, sitemap, Open Graph, breadcrumbs. Premium: redirect manager, multiple keywords, internal linking suggestions.",
+        "**2. Rank Math** (free, PRO 59$/rok) — alternatywa dla Yoast, więcej funkcji w free (schema, redirect manager, 404 monitor, Google Search Console integracja). Coraz popularniejsze, lekko zyskuje przewagę nad Yoast w 2026.",
+        "**3. Schema & Structured Data for WP & AMP** (free) — dla projektów wymagających schema.org bardziej granularnie niż Yoast. Service, Product, Recipe, Event, FAQPage, HowTo. Często dorzucam do Yoast/Rank Math gdy potrzebuję specific schema typów.",
+        "**Wybór**: Yoast dla typowych projektów (stabilność, znajomy interfejs), Rank Math dla wymagających więcej w free.",
+      ],
+    },
+    {
+      heading: "Security (3 wtyczki)",
+      body: [
+        "**4. Wordfence Security** (free, Premium 119$/rok) — most popular WAF + malware scanner. Free: firewall, brute force protection, login security, malware scanner. Premium: real-time threat intelligence, country blocking, 2FA hardware key.",
+        "**5. Solid Security (dawniej iThemes Security)** (free, Pro 99$/rok) — alternatywa dla Wordfence, lżejszy. Hide login URL, 2FA, Magic Links, file change detection.",
+        "**6. WP 2FA** (free) — jeśli używasz innego security plugin bez 2FA. Authenticator apps (Google Authenticator, Authy), backup codes, force 2FA dla admin/editor roles.",
+        "**Wybór**: Wordfence dla większości projektów. Solid Security dla performance-critical (lżejszy). WP 2FA jako uzupełnienie jeśli main plugin nie ma 2FA.",
+      ],
+    },
+    {
+      heading: "Cache i performance (3 wtyczki)",
+      body: [
+        "**7. LiteSpeed Cache** (free) — najlepszy gdy hosting ma LiteSpeed server (Cyber_folks, dhosting, niektóre Hostinger). Page cache, object cache, image optimization, CSS/JS minify, lazy loading, CDN integracja. Bezkonkurencyjny w swojej niszy.",
+        "**8. WP Rocket** (paid 59$/rok dla 1 strony, 119$ dla 3) — najlepszy ogólnie, działa na każdym hostingu. Setup w 5 minut, sensowne defaults, wsparcie polski. Dla projektów bez LiteSpeed servera.",
+        "**9. WP Optimize** (free, Premium 49$/rok) — alternatywa free. Database cleanup, image compression, page cache, lazy loading. Mniej zaawansowany od WP Rocket ale wystarczający dla małych stron.",
+        "**Wybór**: LiteSpeed Cache jeśli hosting wspiera. WP Rocket inaczej. WP Optimize jeśli budżet zerowy.",
+      ],
+    },
+    {
+      heading: "Optymalizacja obrazków (2 wtyczki)",
+      body: [
+        "**10. Smush** (free, Pro 84$/rok) — najczęściej używany, free wystarcza dla małej strony (do 2 MB per obrazek bulk). WebP convert (Pro), CDN delivery (Pro), lazy loading.",
+        "**11. ShortPixel** (paid, ~30$ za 10k obrazków) — najlepszy compression ratio. Lossless lossy compression, WebP/AVIF, automatic na upload. Dla sklepów z dużą ilością obrazków produktów.",
+        "**Wybór**: Smush dla małej strony firmowej. ShortPixel dla e-commerce / portfolio z 1000+ obrazkami.",
+      ],
+    },
+    {
+      heading: "Formularze (2 wtyczki)",
+      body: [
+        "**12. WPForms** (free Lite, Pro od 49$/rok) — najprostszy drag-and-drop builder. Free: contact form, multi-page forms, conditional logic, Akismet anti-spam. Pro: integracje (Mailchimp, GetResponse, Stripe, PayPal), file uploads, signature.",
+        "**13. Forminator** (free) — alternatywa free od WPMU DEV, więcej funkcji niż WPForms Lite. Quizzes, polls, calculators, integracje z Stripe.",
+        "**Bonus: Contact Form 7** (free) — klasyk, ale interfejs z 2010, mniej intuicyjny. Używam tylko gdy klient już go ma i działa.",
+        "**Wybór**: WPForms dla nowych projektów (lepszy UX), Forminator dla budżetu zerowego z większymi wymaganiami.",
+      ],
+    },
+    {
+      heading: "Backup (2 wtyczki)",
+      body: [
+        "**14. UpdraftPlus** (free, Premium 70$/rok) — najpopularniejszy. Codzienny backup do Google Drive / Dropbox / S3 / FTP. Free wystarcza dla małej-średniej strony. Premium: incremental backups, multisite, network backup.",
+        "**15. Duplicator** (free, Pro 99$/rok) — najlepszy do migracji. Tworzy ZIP z całą stroną + DB, instaluje na nowym hostingu w 5 minut. Pro: scheduled backups, cloud storage, multisite.",
+        "**Wybór**: UpdraftPlus dla regularnych backupów. Duplicator dla migracji + okazjonalnych backupów.",
+      ],
+    },
+    {
+      heading: "Custom fields i page building (3 wtyczki)",
+      body: [
+        "**16. Advanced Custom Fields (ACF) Pro** (paid 49$/rok) — must-have dla każdego custom theme. Dynamic content fields, repeaters, flexible content, gallery, relationship. Kombinacja ACF + custom theme = czyste WP bez Elementor.",
+        "**17. Bricks Builder** (paid $249 lifetime) — alternatywa dla Elementor, modern stack, Lighthouse 95+ out of the box. Pełen przewodnik: [Elementor — dlaczego NIE warto](/blog/elementor-dlaczego-nie-warto).",
+        "**18. Carbon Fields** (free, framework dla deweloperów) — alternatywa dla ACF Pro free. Definiowanie pól w PHP zamiast UI. Dla deweloperów którzy preferują code-first.",
+        "**Wybór**: ACF Pro dla 90% custom theme. Bricks dla page builder zamiast Elementor. Carbon Fields dla code-first developerów.",
+      ],
+    },
+    {
+      heading: "Analytics, RODO, e-commerce (7 wtyczek)",
+      body: [
+        "**19. Site Kit by Google** (free) — oficjalna integracja Google Analytics 4 + Search Console + AdSense + PageSpeed Insights w panelu admin. Wszystko w jednym widoku.",
+        "**20. Real Cookie Banner** (free, Premium 49€/rok) — najpopularniejszy w PL cookie consent. Auto-blocking third-party scripts, integracja z Cookiebot. Dla większości projektów free wystarcza.",
+        "**21. Klaro Cookie Consent** (free) — open-source alternatywa, lekka, customizable.",
+        "**22. WooCommerce** (free) — jeśli sklep online. Standard dla e-commerce na WordPress. Pełen przewodnik dla początkujących w przygotowaniu.",
+        "**23. Stripe for WooCommerce** (free) — dla płatności kartą międzynarodowych.",
+        "**24. Przelewy24 for WooCommerce** (free, opłata transakcyjna) — dla PL: BLIK, Przelewy ekspresowe, karty.",
+        "**25. WP Mail SMTP** (free, Pro 49$/rok) — KRYTYCZNE dla każdej strony z formularzem. WordPress domyślnie wysyła maile przez `wp_mail()` PHP function = często ląduje w spamie. WP Mail SMTP wysyła przez prawdziwy SMTP (Gmail, Sendgrid, Mailgun, Brevo) = doręczalność 99%.",
+      ],
+    },
+    {
+      heading: "Czego unikać (anti-recommendation)",
+      body: [
+        "**Jetpack** (Automattic) — dla małych stron za dużo funkcji bundle (analytics, security, social, contact forms — wszystko w jednym pluginie). Lepiej osobne dedykowane pluginy.",
+        "**All-in-One SEO Pack** — wyparte przez Yoast i Rank Math. Brak nowych funkcji od kilku lat.",
+        "**Slider Revolution / LayerSlider** — ciężkie sliders z 200+ KB JS. Slidery są out of fashion w 2026 (większość użytkowników nie scrolluje przez wszystkie slajdy). Dla animacji lepiej Framer Motion / GSAP w custom theme.",
+        "**Ja Aktualizuję** / Plug-and-Play darmowe SEO/security pluginy z polskich marketplaces — często porzucone, brak aktualizacji security, ryzyko vulnerabilities.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Ile pluginów to za dużo?",
+      a: "Reguła: tylko niezbędne. Średnia profesjonalna strona WP ma 15-25 pluginów. Powyżej 30 = przemyśl czy wszystkie używasz, każdy plugin to potencjalna luka security i ciężar dla performance.",
+    },
+    {
+      q: "Czy free pluginy są bezpieczne?",
+      a: "Te z oficjalnego katalogu wordpress.org tak — przechodzą review. Unikaj 'nulled' / pirated premium pluginów (z polskich forów torrent) — często mają backdoory.",
+    },
+    {
+      q: "Yoast SEO czy Rank Math — co wybrać?",
+      a: "Yoast: bardziej stabilny, znajomy interfejs, default w PL. Rank Math: więcej funkcji w free (schema, redirect manager, multi-keyword). Dla nowego projektu w 2026 lekko polecam Rank Math.",
+    },
+    {
+      q: "Czy WP Rocket jest wart 60$/rok?",
+      a: "Tak, jeśli hosting NIE ma LiteSpeed (gdzie LiteSpeed Cache free wygrywa). Setup 5 minut, sensowne defaults, wsparcie polski, regularne updates. Dla profesjonalnej strony — dobra inwestycja.",
+    },
+    {
+      q: "Czy potrzebuję cookie consent jeśli nie używam Google Analytics?",
+      a: "Jeśli używasz JAKICHKOLWIEK third-party scripts (Google Fonts CDN, YouTube embed, Twitter widget) — tak. W 2026 praktycznie każda strona wymaga cookie consent (RODO + EAA + e-Privacy).",
+    },
+    {
+      q: "Czy Wordfence wystarcza w wersji free?",
+      a: "Tak dla małej-średniej strony. Free: firewall, brute force protection, malware scanner, login security. Premium ma sens dla high-traffic stron, e-commerce z user data, projektów wymagających real-time threat intelligence.",
+    },
+  ],
+});
+
+posts.push({
+  slug: "server-actions-nextjs",
+  title: "Server Actions w Next.js — co to i jak używać w 2026",
+  excerpt:
+    "Server Actions to mutations server-side wywoływane bezpośrednio z komponentów React, bez tworzenia API routes. Co to, kiedy używać, jak zabezpieczyć.",
+  date: "2026-05-09",
+  readingMinutes: 9,
+  tags: ["Next.js", "Server Actions", "React"],
+  keyword: "Server Actions Next.js",
+  metaTitle: "Server Actions w Next.js — co to i jak używać 2026",
+  metaDescription:
+    "Server Actions Next.js: mutations server-side z komponentów React bez API routes. Jak działa, kiedy używać, walidacja, security, error handling. Przewodnik 2026.",
+  hero: { kind: "nextjs" },
+  relatedServices: ["aplikacje-nextjs", "next-js-software-house", "aplikacje-react"],
+  body: [],
+  lead:
+    "Server Actions to async funkcje wykonywane na serwerze, wywoływane bezpośrednio z komponentów React (server lub client) bez tworzenia osobnych API routes. Dostępne w Next.js 13.4+ jako stable, w 2026 standard dla mutations (form submissions, database writes, third-party API calls). Niżej jak działa, kiedy używać, jak zabezpieczyć i typowe błędy.",
+  sections: [
+    {
+      heading: "Co to są Server Actions technicznie",
+      body: [
+        "Server Action to async funkcja JavaScript / TypeScript oznaczona dyrektywą `'use server'`. Wykonuje się ZAWSZE na serwerze (Node.js runtime lub Edge), nigdy w przeglądarce. Można ją wywołać z dowolnego komponentu React.",
+        "Pod spodem Next.js generuje endpoint POST z unikalnym ID dla każdej Server Action, zarządza serializacją argumentów (z React → JSON → server), deserializacją odpowiedzi (server → JSON → React state), revalidation cache (`revalidatePath`, `revalidateTag`).",
+        "Z punktu widzenia developera: piszesz funkcję jakby była lokalna, ale wszystko po stronie HTTP zostaje obsłużone automatycznie. Type safety end-to-end (jeśli używasz TypeScript) — argumenty i return type są takie same po obu stronach.",
+        "Server Actions ZAWSZE są POST requestami. Nie używaj ich do GET / read operations — do tego są React Server Components (które renderują dane przy SSR/SSG bez round-trip).",
+      ],
+    },
+    {
+      heading: "Kiedy używać Server Actions",
+      body: [
+        "**Form submissions** — najbardziej oczywisty use case. Form akcja `<form action={mojaServerAction}>` wywołuje akcję z FormData jako argumentem. Bez API route, bez fetch, bez state management dla loading.",
+        "**Database mutations** — INSERT / UPDATE / DELETE. Wywołujesz Prisma / Drizzle / raw SQL bezpośrednio w Server Action, bez tworzenia REST endpoint.",
+        "**Third-party API calls wymagające secret keys** — wysyłka maila przez Resend/SendGrid, płatność przez Stripe API, integracja z CRM. Klucze API w server-only env vars, nigdy nie wyciekną do bundle.",
+        "**Cache invalidation** — po mutation `revalidatePath('/products')` lub `revalidateTag('products')` automatycznie odświeża strony statyczne ISR.",
+        "**Optimistic updates** — z `useOptimistic` hook React 19 robisz natychmiastowy update UI + Server Action w tle. User widzi zmianę instant, nie czeka na network.",
+      ],
+    },
+    {
+      heading: "Kiedy NIE używać Server Actions",
+      body: [
+        "**Read-only operations** — to robota React Server Components (komponenty async fetchują dane przy SSR). Server Action dla GET = zła praktyka, marnuje round-trip.",
+        "**Public API dla third-party** (Twoja aplikacja jest backendem dla cudzych frontendów) — Server Actions to internal API Next.js, nie REST. Wystaw klasyczne API routes (`app/api/.../route.ts`).",
+        "**Long-running tasks** (reportgen, video processing) — Server Action ma timeout 10s na Vercel free, 60s na Pro. Dla długich tasków: queue (Inngest, Trigger.dev, BullMQ) + webhook po zakończeniu.",
+        "**Streaming responses** (chat z AI, large data download) — Server Actions zwracają jeden response. Dla streaming: API routes z `Response` body jako stream.",
+        "**Mutations wymagające specific HTTP method** (PUT, DELETE, PATCH) z third-party tooling — Server Actions to zawsze POST. Dla compliance z REST conventions: API routes.",
+      ],
+    },
+    {
+      heading: "Walidacja i security",
+      body: [
+        "**ZAWSZE waliduj argumenty na serwerze.** Klient może wysłać dowolne dane. Użyj Zod / Valibot / Yup do schema validation:",
+        "Przykład: `const schema = z.object({ email: z.string().email(), name: z.string().min(2) });` na początku Server Action, potem `schema.parse(data)` — rzuci wyjątek jeśli dane niepoprawne.",
+        "**Sprawdź autoryzację.** Server Action nie ma automatycznego auth check. W każdej akcji wymagającej autoryzacji: `const session = await auth();` na początku, throw error jeśli brak.",
+        "**Rate limiting.** Server Action dostępne dla każdego użytkownika, można je spamować. Użyj Upstash Ratelimit lub własny rate limit (Redis, in-memory dla małych projektów).",
+        "**CSRF protection** — Next.js automatycznie chroni Server Actions przez Origin header check (od 14.1+). Możesz dodać własny token jeśli wymagasz extra warstwy.",
+        "**Nigdy nie używaj userInput w SQL bez parametryzacji.** Prisma / Drizzle / `$queryRaw` z placeholders — ZAWSZE. Inaczej SQL injection.",
+      ],
+    },
+    {
+      heading: "Patterny które używam najczęściej",
+      body: [
+        "**Form action z FormData** — najprostszy pattern. `<form action={createUser}>`, w akcji `const name = formData.get('name')`. Działa nawet bez JavaScript (progressive enhancement).",
+        "**Form action z React 19 useFormState** — dla server-side form errors widocznych dla usera. `const [state, action] = useFormState(createUser, { error: null })`. Renderujesz `state.error` w komponencie.",
+        "**Optimistic update z useOptimistic** — dla UX gdzie ważna jest natychmiastowa odpowiedź. `addOptimistic(newItem)` przed Server Action, jeśli się nie powiedzie — rollback z error message.",
+        "**Server Action wywołana z client component** — nie tylko z `<form action>`. Możesz wywołać jak normalną funkcję: `<button onClick={() => deleteItem(id)}>`. Server Action wykona się po POST.",
+        "**Revalidation po mutation** — `revalidatePath('/products')` w Server Action, automatycznie odświeża cache dla tej ścieżki. Dla wszystkich stron z określonym tagiem: `revalidateTag('products')` + `fetch(..., { next: { tags: ['products'] }})` przy fetchu.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      q: "Czy Server Actions zastępują API routes?",
+      a: "Częściowo. Server Actions = mutations używane wewnątrz Twojej aplikacji Next.js. API routes = public endpoints dla third-party / mobile apps / non-Next.js consumerów. Większość internal mutations w 2026 = Server Actions.",
+    },
+    {
+      q: "Czy Server Actions działają bez JavaScript?",
+      a: "Tak, jeśli wywołane z `<form action>` (progressive enhancement). Form submituje się klasycznym POST + reload. Z `<button onClick>` lub fetch-em wymagają JS.",
+    },
+    {
+      q: "Jak debugować Server Actions?",
+      a: "Console.log w Server Action loguje na serwerze (terminal w dev, logs w Vercel dashboard w produkcji). Errors propagują do client jeśli `throw` — łapiesz w `useFormState` lub try/catch.",
+    },
+    {
+      q: "Czy mogę wywołać Server Action z innej Server Action?",
+      a: "Tak, to zwykła async funkcja na serwerze. Możesz też importować i wywoływać Server Action z React Server Component przy SSR.",
+    },
+    {
+      q: "Jak ograniczyć rate Server Actions?",
+      a: "Upstash Ratelimit (Redis-based, free tier wystarcza dla większości projektów), lub własny in-memory rate limit dla low-traffic. Sprawdź IP / user ID na początku akcji, throw jeśli przekroczony limit.",
+    },
+    {
+      q: "Czy Server Actions działają na Edge runtime?",
+      a: "Tak — `export const runtime = 'edge'` w pliku z Server Action. Edge ma niższe latency ale ograniczone API (brak Node.js libs które wymagają Node runtime, np. Prisma standard). Dla większości CRUD operations OK.",
+    },
+  ],
+});
+
 export const tags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort();
