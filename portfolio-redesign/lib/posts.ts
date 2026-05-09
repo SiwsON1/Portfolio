@@ -1080,9 +1080,9 @@ posts.push({
     {
       heading: "Kiedy WordPress jest dobrym wyborem",
       body: [
-        "**Strona firmowa do prezentacji oferty** (kancelaria, salon, restauracja, gabinet) — WordPress to standard. Custom theme + Bricks Builder lub ACF = pełna kontrola designu, klient sam edytuje teksty, performance OK po LiteSpeed.",
+        "**Strona firmowa do prezentacji oferty** (kancelaria, salon, restauracja, gabinet) — WordPress to standard. [Tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress) z custom themem + Bricks Builder lub ACF = pełna kontrola designu, klient sam edytuje teksty, performance OK po LiteSpeed.",
         "**Blog firmowy lub osobisty** — z czego WordPress wziął początek, do dziś najlepszy do bloga. Block Editor, taxonomies, RSS, integracja z social, SEO out of the box po Yoast / Rank Math.",
-        "**Sklep internetowy małej-średniej skali** (do ~5000 produktów) — WooCommerce na WordPress. Płatności PL (Przelewy24, Autopay, Tpay), faktury (Subiekt GT, iFirma), eksport do feedów Google Shopping i Allegro.",
+        "**Sklep internetowy małej-średniej skali** (do ~5000 produktów) — WooCommerce na WordPress. [Sklepy internetowe WooCommerce](/uslugi/sklepy-internetowe-woocommerce) we Wrocławiu integrowane z płatnościami PL (Przelewy24, Autopay, Tpay), fakturami (Subiekt GT, iFirma), feedami Google Shopping i Allegro.",
         "**Magazyn / portal contentowy** — duże publikacje (ekonomia, sport, lifestyle) działają na WordPress (Newsweek, TIME, Variety). Skalowalny, dobrze indeksowany, integruje się z systemami redakcyjnymi.",
         "**Strona instytucji publicznej** (urząd, szkoła) — zgodność z WCAG 2.2 AA i BIP osiągalna w WordPress, sporo gotowych theme dedykowanych pod instytucje publiczne.",
       ],
@@ -1090,9 +1090,9 @@ posts.push({
     {
       heading: "Kiedy NIE WordPress (alternatywy)",
       body: [
-        "**Aplikacja webowa z customową logiką** (konfigurator, panel klienta, system rezerwacji z complex flow) — Next.js + dedykowane backend lepsze. WordPress da się rozszerzyć ale szybko stajesz w pułapce 'PHP plugin którego nikt już nie utrzyma'.",
-        "**Strona z wymogiem performance Lighthouse 95+ z budżetu reklamowego** (Google Ads Quality Score) — Next.js z SSG dostarcza out of the box co WordPress osiąga tylko po starannej optymalizacji. Pełne porównanie: [WordPress vs Next.js — koszty wdrożenia](/blog/wordpress-vs-next-js-koszt).",
-        "**Aplikacja SaaS multi-tenant** — WordPress nie jest do tego zaprojektowany. Multisite działa dla blog network, nie dla prawdziwego SaaS z user dashboards.",
+        "**Aplikacja webowa z customową logiką** (konfigurator, panel klienta, system rezerwacji z complex flow) — [tworzenie stron Next.js](/uslugi/aplikacje-nextjs) + dedykowane backend lepsze. WordPress da się rozszerzyć ale szybko stajesz w pułapce 'PHP plugin którego nikt już nie utrzyma'.",
+        "**Strona z wymogiem performance Lighthouse 95+ z budżetu reklamowego** (Google Ads Quality Score) — [Next.js z SSG](/uslugi/next-js-software-house) dostarcza out of the box co WordPress osiąga tylko po starannej optymalizacji. Pełne porównanie: [WordPress vs Next.js — koszty wdrożenia](/blog/wordpress-vs-next-js-koszt).",
+        "**Aplikacja SaaS multi-tenant** — WordPress nie jest do tego zaprojektowany. Multisite działa dla blog network, nie dla prawdziwego SaaS z user dashboards. Lepszy wybór: [aplikacje React](/uslugi/aplikacje-react) z dedykowanym backend.",
         "**Bardzo proste landing page jednodniowe** — Framer, Carrd, lub czysty HTML+CSS będą tańsze i szybsze niż konfiguracja WP.",
         "**Real-time aplikacja** (chat, social feed, live data) — WebSocket / SSE w WordPress to walka. Lepiej Next.js + dedykowane usługi.",
       ],
@@ -1103,7 +1103,7 @@ posts.push({
         "**Block Editor (Gutenberg, od 2018)** — edycja TREŚCI postów i stron w blokach. Nagłówki, paragrafy, obrazki, kolumny, listy, embed (YouTube, Twitter), reusable blocks. Standard do edycji treści.",
         "**Full Site Editing (FSE, od 2022)** — edycja CAŁEGO motywu w przeglądarce. Header, footer, sidebar, single post template, archive template — wszystko klikalne, bez kodu. Wymaga 'block theme' (Twenty Twenty-Three+, Blockbase, Kadence, Astra). Stary 'classic theme' nie wspiera FSE.",
         "**Wybór 2026**: dla nowej strony — block theme + FSE. Dla istniejącej na classic theme — Block Editor do treści, custom code do designu (lub migracja na block theme to projekt 4-8 tygodni).",
-        "**Page builders alternatywne** (Elementor, Bricks, Oxygen) — działają niezależnie od FSE, mają własne edytory wizualne. Bardziej intuicyjne dla nie-techników, ale zwykle dodają więcej JS do strony (Elementor 200-400 KB JS na każdej podstronie).",
+        "**Page builders alternatywne** (Elementor, Bricks, Oxygen) — działają niezależnie od FSE, mają własne edytory wizualne. Bardziej intuicyjne dla nie-techników, ale zwykle dodają więcej JS do strony (Elementor 200-400 KB JS na każdej podstronie). Pełna analiza dlaczego: [Elementor — dlaczego NIE warto w 2026](/blog/elementor-dlaczego-nie-warto). Najlepsza alternatywa dla wymagających performance: [headless WordPress + Next.js](/uslugi/headless-wordpress).",
       ],
     },
   ],
@@ -1160,7 +1160,7 @@ posts.push({
     {
       heading: "Bezpieczeństwo i admin (5 czynności)",
       body: [
-        "**1. Zmień login admin z 'admin' na coś unikalnego.** WordPress 5.0+ wymaga to przy instalacji, ale stare instalacje często mają 'admin'. Botnety próbują brute force na tym loginie. Stwórz nowego admina z nietypowym username, usuń starego.",
+        "**1. Zmień login admin z 'admin' na coś unikalnego.** WordPress 5.0+ wymaga to przy instalacji, ale stare instalacje często mają 'admin'. Botnety próbują brute force na tym loginie. Stwórz nowego admina z nietypowym username, usuń starego. Dla profesjonalnego setup [tworzenia stron WordPress](/uslugi/tworzenie-stron-wordpress) ten krok robię razem z innymi security hardening w pierwszym tygodniu wdrożenia.",
         "**2. Włącz 2FA dla wszystkich kont admin/editor.** Wordfence Login Security (free) lub WP 2FA. Wymóg w 2026, brak 2FA = spora luka security.",
         "**3. Zainstaluj Wordfence (lub Solid Security, MalCare).** Free tier wystarcza dla małej-średniej strony. Włącz: firewall, brute force protection, login lockdown po 5 nieudanych próbach, 2FA, malware scanner.",
         "**4. Hardening wp-config.php** — dodaj `define('DISALLOW_FILE_EDIT', true);` (blokuje edytor pluginów/motywów z poziomu admin), `define('FORCE_SSL_ADMIN', true);`, klucze i salty z [api.wordpress.org/secret-key](https://api.wordpress.org/secret-key/1.1/salt/).",
@@ -1172,14 +1172,14 @@ posts.push({
       body: [
         "**6. Permalinks — KRYTYCZNE.** Settings → Permalinks → wybierz 'Post name' (`/sample-post/`). Default to `?p=123` co jest SEO-killer. Zrób to PRZED publikacją pierwszego posta — zmiana później generuje 404 jeśli URL-e już zindeksowane.",
         "**7. Zainstaluj Yoast SEO lub Rank Math** (oba free w wersji podstawowej). Yoast bardziej popularny w PL, Rank Math więcej funkcji w free. Skonfiguruj: title separator, default meta, sitemap, schema.org Organization/Person, integracja z Google Search Console.",
-        "**8. Wygeneruj i wyślij sitemap.xml** — w Yoast: SEO → General → Features → XML sitemaps ON. URL: `twojadomena.pl/sitemap_index.xml`. Wyślij do Search Console (`https://search.google.com/search-console`).",
+        "**8. Wygeneruj i wyślij sitemap.xml** — w Yoast: SEO → General → Features → XML sitemaps ON. URL: `twojadomena.pl/sitemap_index.xml`. Wyślij do Search Console (`https://search.google.com/search-console`). Dla pełnej strategii SEO strony usługowej zobacz [pozycjonowanie strony usługowej — 7 kroków](/blog/pozycjonowanie-strony-uslugowej).",
         "**9. Robots.txt — sprawdź lub dodaj.** WordPress generuje virtual robots.txt. Sprawdź `twojadomena.pl/robots.txt`. Powinien zawierać `Sitemap: https://twojadomena.pl/sitemap_index.xml`. Dodaj jeśli brak — przez plugin SEO lub ręcznie.",
       ],
     },
     {
       heading: "Performance i cache (3 czynności)",
       body: [
-        "**10. Zainstaluj cache plugin.** Jeśli hosting ma LiteSpeed (Cyber_folks, dhosting, niektóre Hostinger) — LiteSpeed Cache (free, najlepszy z LiteSpeed serverem). Inaczej WP Rocket (60$/rok, najlepszy ogólnie) lub WP Optimize (free).",
+        "**10. Zainstaluj cache plugin.** Jeśli hosting ma LiteSpeed (Cyber_folks, dhosting, niektóre Hostinger) — LiteSpeed Cache (free, najlepszy z LiteSpeed serverem). Inaczej WP Rocket (60$/rok, najlepszy ogólnie) lub WP Optimize (free). Pełna lista must-have wtyczek: [25 must-have wtyczek WordPress 2026](/blog/must-have-wtyczki-wordpress-2026).",
         "**11. Optymalizacja obrazków.** Smush (free, do 2 MB obrazek), ShortPixel (płatne ale lepsze, 30$ za 10k obrazków), Imagify. Konwersja JPG/PNG → WebP, lossless lossy compression, lazy loading.",
         "**12. CDN setup** — Cloudflare (free tier wystarcza dla małej strony) lub BunnyCDN ($1/mc minimum). Skraca TTFB dla użytkowników z dalej, dodatkowy security layer.",
       ],
@@ -1189,7 +1189,7 @@ posts.push({
       body: [
         "**13. Backup automatyczny.** UpdraftPlus (free, codzienny backup do Google Drive / Dropbox / S3), Duplicator, Migrate Guru. Minimum: codzienny backup całej strony (database + uploads), retention 30 dni, test restore raz na kwartał.",
         "**14. Cookie consent (RODO).** Cookiebot (płatny, automatic scanning), Klaro (free, open-source), Real Cookie Banner (najpopularniejszy w PL, free podstawowy). Bez tego ryzyko kary do 3% obrotu rocznego.",
-        "**15. Polityka prywatności + regulamin.** Settings → Privacy → wygeneruj template Privacy Policy, dostosuj do RODO. Dla sklepu — regulamin sklepu zgodny z UoPK (Ustawa o Prawach Konsumenta). Generator: prywatnosc24.pl, gotowe.pl.",
+        "**15. Polityka prywatności + regulamin.** Settings → Privacy → wygeneruj template Privacy Policy, dostosuj do RODO. Dla [sklepu internetowego WooCommerce](/uslugi/sklepy-internetowe-woocommerce) — regulamin sklepu zgodny z UoPK (Ustawa o Prawach Konsumenta). Generator: prywatnosc24.pl, gotowe.pl.",
       ],
     },
     {
@@ -1247,7 +1247,7 @@ posts.push({
   relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "nowoczesne-strony-internetowe"],
   body: [],
   lead:
-    "Elementor jest najpopularniejszym page builderem dla WordPress (~5 mln aktywnych instalacji). Po 30+ wdrożeniach klientów (część przejętych ze starych Elementor sites) moja opinia jest jednoznaczna: dla większości projektów w 2026 to zła decyzja. Performance, vendor lock-in, koszty długoterminowe nie zwracają początkowej oszczędności. Niżej dlaczego konkretnie i co zamiast.",
+    "Elementor jest najpopularniejszym page builderem dla WordPress (~5 mln aktywnych instalacji). Po 30+ wdrożeniach klientów (część przejętych ze starych Elementor sites) moja opinia jako [Marcin Siwonia — freelancer Next.js i WordPress z Wrocławia](/) jest jednoznaczna: dla większości projektów w 2026 to zła decyzja. Performance, vendor lock-in, koszty długoterminowe nie zwracają początkowej oszczędności. Niżej dlaczego konkretnie i co zamiast.",
   sections: [
     {
       heading: "Dlaczego Elementor jest tak popularny (uczciwy obraz)",
@@ -1263,7 +1263,7 @@ posts.push({
       heading: "Dlaczego NIE — performance",
       body: [
         "Elementor dodaje **200-400 KB JavaScript do każdej podstrony** (jQuery, Swiper, Waypoints, Elementor frontend, FontAwesome icons, własne plugin frontends). To jest baseline, niezależnie od tego ile widgetów używasz.",
-        "Z każdym dodatkiem (Essential Addons, Crocoblock) bundle rośnie. Realny case z mojej praktyki: strona klienta na Elementor + Essential Addons + Crocoblock miała **1.2 MB JS na stronie głównej**. Lighthouse Performance: 23 (na 100). LCP 6.4s. INP 480ms.",
+        "Z każdym dodatkiem (Essential Addons, Crocoblock) bundle rośnie. Realny case z mojej praktyki [tworzenia stron WordPress we Wrocławiu](/uslugi/tworzenie-stron-wordpress): strona klienta na Elementor + Essential Addons + Crocoblock miała **1.2 MB JS na stronie głównej**. Lighthouse Performance: 23 (na 100). LCP 6.4s. INP 480ms.",
         "Migracja tej strony na custom theme (Bricks Builder + ACF Pro) — bundle JS spadł do 80 KB, Lighthouse 96, LCP 1.1s, INP 90ms. Te same funkcje, dziesiąta część ciężaru.",
         "Google używa Core Web Vitals jako sygnału rankingowego od 2021. Słabe CWV = niższe pozycje na konkurencyjnych frazach. Elementor strony są strukturalnie w gorszej pozycji od kompetentnie zbudowanych alternatyw.",
         "Pełne dane o Core Web Vitals i jak je naprawić: [Core Web Vitals 2026](/blog/core-web-vitals-2026).",
@@ -1292,10 +1292,10 @@ posts.push({
     {
       heading: "Co zamiast — alternatywy 2026",
       body: [
-        "**Bricks Builder** ($249 lifetime jednorazowo) — modern page builder, Lighthouse 95+ out of the box, jQuery-free, native flexbox/grid. Dla freelancera/agencji najlepsza zamiana.",
+        "**Bricks Builder** ($249 lifetime jednorazowo) — modern page builder, Lighthouse 95+ out of the box, jQuery-free, native flexbox/grid. Dla freelancera/agencji najlepsza zamiana. To stack którego używam w większości [stron WordPress we Wrocławiu](/uslugi/tworzenie-stron-wordpress).",
         "**Block Editor + custom theme + ACF Pro** ($249/rok) — Gutenberg blocks dla treści, custom blocks dla powtarzalnych sekcji, ACF dla pól dynamicznych. Najczystszy WordPress, najlepsze performance.",
         "**Full Site Editing (FSE) + block theme** (free) — Twenty Twenty-Six lub Blockbase / Kadence. Edycja wszystkiego w przeglądarce, zero pluginów, modern stack. Krzywa uczenia 4-8 godzin.",
-        "**Headless WordPress + Next.js** (15-30 tys. wdrożenie) — backend WP zostaje, frontend Next.js. Najlepsze performance + SEO + DX. Dla projektów które rosną. Pełen przewodnik: [migracja WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+        "**[Headless WordPress + Next.js](/uslugi/headless-wordpress)** (15-30 tys. wdrożenie) — backend WP zostaje, frontend Next.js. Najlepsze performance + SEO + DX. Dla projektów które rosną. Pełen przewodnik: [migracja WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
         "**Webflow** (płatne 200-400 zł/mc) — visual builder no-code/low-code. Świetny ale vendor lock-in większy niż Elementor (cała strona na Webflow infrastructure, nie WordPress).",
       ],
     },
@@ -1354,7 +1354,7 @@ posts.push({
   relatedServices: ["tworzenie-stron-wordpress", "sklepy-internetowe-woocommerce", "headless-wordpress"],
   body: [],
   lead:
-    "Po 30+ wdrożeniach mam stałą listę 25 pluginów które instaluję praktycznie zawsze. Niżej cała lista podzielona na 8 kategorii (SEO, security, cache, performance, formularze, backup, analytics, RODO), z konkretnymi rekomendacjami free vs pro i alternatywami. Twoja final lista będzie subset 15-20 z tych 25, w zależności od projektu.",
+    "Po 30+ wdrożeniach jako [freelancer Next.js i WordPress z Wrocławia](/) mam stałą listę 25 pluginów które instaluję praktycznie zawsze. Niżej cała lista podzielona na 8 kategorii (SEO, security, cache, performance, formularze, backup, analytics, RODO), z konkretnymi rekomendacjami free vs pro i alternatywami. Twoja final lista będzie subset 15-20 z tych 25, w zależności od projektu.",
   sections: [
     {
       heading: "SEO (3 wtyczki)",
@@ -1411,7 +1411,7 @@ posts.push({
     {
       heading: "Custom fields i page building (3 wtyczki)",
       body: [
-        "**16. Advanced Custom Fields (ACF) Pro** (paid 49$/rok) — must-have dla każdego custom theme. Dynamic content fields, repeaters, flexible content, gallery, relationship. Kombinacja ACF + custom theme = czyste WP bez Elementor.",
+        "**16. Advanced Custom Fields (ACF) Pro** (paid 49$/rok) — must-have dla każdego custom theme. Dynamic content fields, repeaters, flexible content, gallery, relationship. Kombinacja ACF + custom theme = czyste WP bez Elementor. Stack którego używam w [tworzeniu stron WordPress](/uslugi/tworzenie-stron-wordpress) dla większości projektów.",
         "**17. Bricks Builder** (paid $249 lifetime) — alternatywa dla Elementor, modern stack, Lighthouse 95+ out of the box. Pełen przewodnik: [Elementor — dlaczego NIE warto](/blog/elementor-dlaczego-nie-warto).",
         "**18. Carbon Fields** (free, framework dla deweloperów) — alternatywa dla ACF Pro free. Definiowanie pól w PHP zamiast UI. Dla deweloperów którzy preferują code-first.",
         "**Wybór**: ACF Pro dla 90% custom theme. Bricks dla page builder zamiast Elementor. Carbon Fields dla code-first developerów.",
@@ -1423,7 +1423,7 @@ posts.push({
         "**19. Site Kit by Google** (free) — oficjalna integracja Google Analytics 4 + Search Console + AdSense + PageSpeed Insights w panelu admin. Wszystko w jednym widoku.",
         "**20. Real Cookie Banner** (free, Premium 49€/rok) — najpopularniejszy w PL cookie consent. Auto-blocking third-party scripts, integracja z Cookiebot. Dla większości projektów free wystarcza.",
         "**21. Klaro Cookie Consent** (free) — open-source alternatywa, lekka, customizable.",
-        "**22. WooCommerce** (free) — jeśli sklep online. Standard dla e-commerce na WordPress. Pełen przewodnik dla początkujących w przygotowaniu.",
+        "**22. WooCommerce** (free) — jeśli sklep online. Standard dla e-commerce na WordPress. Pełna usługa: [sklepy internetowe WooCommerce](/uslugi/sklepy-internetowe-woocommerce) we Wrocławiu.",
         "**23. Stripe for WooCommerce** (free) — dla płatności kartą międzynarodowych.",
         "**24. Przelewy24 for WooCommerce** (free, opłata transakcyjna) — dla PL: BLIK, Przelewy ekspresowe, karty.",
         "**25. WP Mail SMTP** (free, Pro 49$/rok) — KRYTYCZNE dla każdej strony z formularzem. WordPress domyślnie wysyła maile przez `wp_mail()` PHP function = często ląduje w spamie. WP Mail SMTP wysyła przez prawdziwy SMTP (Gmail, Sendgrid, Mailgun, Brevo) = doręczalność 99%.",
@@ -1483,7 +1483,7 @@ posts.push({
   relatedServices: ["aplikacje-nextjs", "next-js-software-house", "aplikacje-react"],
   body: [],
   lead:
-    "Server Actions to async funkcje wykonywane na serwerze, wywoływane bezpośrednio z komponentów React (server lub client) bez tworzenia osobnych API routes. Dostępne w Next.js 13.4+ jako stable, w 2026 standard dla mutations (form submissions, database writes, third-party API calls). Niżej jak działa, kiedy używać, jak zabezpieczyć i typowe błędy.",
+    "Server Actions to async funkcje wykonywane na serwerze, wywoływane bezpośrednio z komponentów React (server lub client) bez tworzenia osobnych API routes. Dostępne w Next.js 13.4+ jako stable, w 2026 standard dla mutations (form submissions, database writes, third-party API calls). Stack którego używam w każdym projekcie [tworzenia stron Next.js](/uslugi/aplikacje-nextjs). Niżej jak działa, kiedy używać, jak zabezpieczyć i typowe błędy.",
   sections: [
     {
       heading: "Co to są Server Actions technicznie",
@@ -1497,9 +1497,9 @@ posts.push({
     {
       heading: "Kiedy używać Server Actions",
       body: [
-        "**Form submissions** — najbardziej oczywisty use case. Form akcja `<form action={mojaServerAction}>` wywołuje akcję z FormData jako argumentem. Bez API route, bez fetch, bez state management dla loading.",
-        "**Database mutations** — INSERT / UPDATE / DELETE. Wywołujesz Prisma / Drizzle / raw SQL bezpośrednio w Server Action, bez tworzenia REST endpoint.",
-        "**Third-party API calls wymagające secret keys** — wysyłka maila przez Resend/SendGrid, płatność przez Stripe API, integracja z CRM. Klucze API w server-only env vars, nigdy nie wyciekną do bundle.",
+        "**Form submissions** — najbardziej oczywisty use case. Form akcja `<form action={mojaServerAction}>` wywołuje akcję z FormData jako argumentem. Bez API route, bez fetch, bez state management dla loading. Tak działa formularz kontaktowy na [marcinsiwonia.pl](/) — Server Action wysyła mail przez Resend.",
+        "**Database mutations** — INSERT / UPDATE / DELETE. Wywołujesz Prisma / Drizzle / raw SQL bezpośrednio w Server Action, bez tworzenia REST endpoint. Standard w [tworzeniu aplikacji Next.js](/uslugi/aplikacje-nextjs) z bazą Postgres.",
+        "**Third-party API calls wymagające secret keys** — wysyłka maila przez Resend/SendGrid, płatność przez Stripe API, integracja z CRM. Klucze API w server-only env vars, nigdy nie wyciekną do bundle. Dla integracji bardziej złożonych: [Next.js software house](/uslugi/next-js-software-house).",
         "**Cache invalidation** — po mutation `revalidatePath('/products')` lub `revalidateTag('products')` automatycznie odświeża strony statyczne ISR.",
         "**Optimistic updates** — z `useOptimistic` hook React 19 robisz natychmiastowy update UI + Server Action w tle. User widzi zmianę instant, nie czeka na network.",
       ],
@@ -1507,7 +1507,7 @@ posts.push({
     {
       heading: "Kiedy NIE używać Server Actions",
       body: [
-        "**Read-only operations** — to robota React Server Components (komponenty async fetchują dane przy SSR). Server Action dla GET = zła praktyka, marnuje round-trip.",
+        "**Read-only operations** — to robota React Server Components (komponenty async fetchują dane przy SSR). Server Action dla GET = zła praktyka, marnuje round-trip. Pełny przewodnik strategii renderowania: [Server-Side Rendering — co to i kiedy używać](/blog/server-side-rendering-co-to).",
         "**Public API dla third-party** (Twoja aplikacja jest backendem dla cudzych frontendów) — Server Actions to internal API Next.js, nie REST. Wystaw klasyczne API routes (`app/api/.../route.ts`).",
         "**Long-running tasks** (reportgen, video processing) — Server Action ma timeout 10s na Vercel free, 60s na Pro. Dla długich tasków: queue (Inngest, Trigger.dev, BullMQ) + webhook po zakończeniu.",
         "**Streaming responses** (chat z AI, large data download) — Server Actions zwracają jeden response. Dla streaming: API routes z `Response` body jako stream.",
