@@ -84,7 +84,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-bg" style={{ height: "100svh", minHeight: "640px", maxHeight: "1100px" }}>
+    <section className="relative w-full overflow-hidden bg-bg" style={{ height: "100svh", minHeight: "560px", maxHeight: "1100px" }}>
       {/* Background ambient — soft cool radial behind portrait area */}
       <div
         aria-hidden
@@ -95,10 +95,10 @@ export function Hero() {
         }}
       />
 
-      {/* PORTRAIT wrapper — lower-right. Mobile mniejsza i wyżej żeby nie kolidowała z H1. */}
+      {/* PORTRAIT wrapper — desktop: lower-right editorial. Mobile: wycentrowana, focal element nad H1. */}
       <div
         ref={portraitRef}
-        className="absolute z-[20] top-[8%] md:top-[16%] -right-[12%] md:right-[-4%] w-[58vw] md:w-[min(64vw,760px)] aspect-square"
+        className="absolute z-[20] top-[12%] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-[16%] md:right-[-4%] w-[72vw] md:w-[min(64vw,760px)] aspect-square"
         style={{ pointerEvents: "none" }}
       >
         {/* Outer cyan bloom — emanuje z portretu na okolicę */}
@@ -136,7 +136,7 @@ export function Hero() {
       </div>
 
       {/* Main title — bottom-anchored left. pointer-events-none żeby nie blokował drag-to-rotate sfery po prawej (z-15). */}
-      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-20 md:pb-28 z-10 pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-16 md:pb-28 z-10 pointer-events-none">
         <h1
           ref={titleRef}
           className="display hero-h1 text-ink"

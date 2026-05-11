@@ -59,9 +59,9 @@ export function ProjectsCabinet() {
     <section
       ref={sectionRef}
       id="projekty"
-      className="relative px-6 md:px-10 py-32 md:py-48"
+      className="relative px-6 md:px-10 py-20 md:py-48"
     >
-      <header className="mb-24 md:mb-36 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+      <header className="mb-12 md:mb-36 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-end">
         <div className="md:col-span-4">
           <p className="eyebrow mb-3">
             Wybrane realizacje · {String(featuredProjects.length).padStart(2, "0")}
@@ -85,13 +85,13 @@ export function ProjectsCabinet() {
         </div>
       </header>
 
-      <div className="space-y-40 md:space-y-56">
+      <div className="space-y-20 md:space-y-56">
         {featuredProjects.map((p, i) => (
           <Row key={p.slug} project={p} index={i} />
         ))}
       </div>
 
-      <div className="mt-40 flex justify-center">
+      <div className="mt-20 md:mt-40 flex justify-center">
         <Link
           href="/projekty"
           className="group relative inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.22em] text-ink hover:text-peach transition-colors py-3"
@@ -110,7 +110,7 @@ export function ProjectsCabinet() {
 function Row({ project: p, index }: { project: Project; index: number }) {
   const flip = index % 2 === 1;
   return (
-    <article className="pj-row relative grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+    <article className="pj-row relative grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 items-center">
       {/* Big editorial number — outside the layout */}
       <div
         className={`pj-num absolute z-0 font-display italic text-line/70 select-none pointer-events-none hidden md:block ${
@@ -169,18 +169,18 @@ function Row({ project: p, index }: { project: Project; index: number }) {
           {p.year}{p.category === "commercial" ? " · komercyjny" : p.category === "fullstack" ? " · full-stack" : " · lab"}
         </p>
         <h3
-          className="font-display italic text-ink mb-5"
+          className="font-display italic text-ink mb-4 md:mb-5"
           style={{
-            fontSize: "clamp(2rem, 1rem + 3.6vw, 4.25rem)",
-            lineHeight: 0.94,
+            fontSize: "clamp(1.75rem, 0.9rem + 3vw, 4.25rem)",
+            lineHeight: 1,
             letterSpacing: "-0.035em",
             fontVariationSettings: '"opsz" 144, "SOFT" 50, "WONK" 0',
           }}
         >
           {p.client}
         </h3>
-        <p className="text-ink-mute mb-8 leading-relaxed max-w-md">{p.description}</p>
-        <ul className="flex flex-wrap gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint mb-10">
+        <p className="text-ink-mute mb-6 md:mb-8 leading-relaxed max-w-md text-sm md:text-base">{p.description}</p>
+        <ul className="flex flex-wrap gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint mb-6 md:mb-10">
           {p.stack.map((s) => (
             <li
               key={s}

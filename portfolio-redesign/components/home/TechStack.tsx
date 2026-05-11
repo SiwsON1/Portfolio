@@ -93,7 +93,7 @@ export function TechStack() {
   return (
     <section
       ref={sectionRef}
-      className="relative px-6 py-32 md:px-10 md:py-40 overflow-hidden border-t border-line"
+      className="relative px-6 py-20 md:px-10 md:py-40 overflow-hidden border-t border-line"
       aria-label="Stack technologiczny"
     >
       {/* Ambient — peach z lewej, blue z prawej */}
@@ -106,7 +106,7 @@ export function TechStack() {
         }}
       />
 
-      <header className="relative grid grid-cols-1 md:grid-cols-12 gap-8 mb-20 md:mb-28">
+      <header className="relative grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-12 md:mb-28">
         <div className="md:col-span-3">
           <p className="ts-eyebrow eyebrow">Stack · {TECH.length}</p>
         </div>
@@ -114,7 +114,7 @@ export function TechStack() {
           <h2 className="ts-title display text-h1 text-ink">
             Z czym <em>pracuję</em> na co dzień.
           </h2>
-          <p className="ts-lead mt-8 prose-bound text-ink-mute text-lead">
+          <p className="ts-lead mt-6 md:mt-8 prose-bound text-ink-mute text-lead">
             Stack dobierany pod problem, nie pod modę. WordPress gdy klient ma
             edytować, Next.js gdy potrzeba performance i custom logiki, AI gdy
             warto skrócić proces który zżera czas.
@@ -122,12 +122,12 @@ export function TechStack() {
         </div>
       </header>
 
-      <div className="ts-grid relative grid grid-cols-2 md:grid-cols-5 gap-px bg-line border-y border-line">
+      <div className="ts-grid relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-px bg-line border-y border-line">
         {TECH.map((t) => (
           <Link
             key={t.label}
             href={t.href}
-            className="ts-card group relative bg-bg p-6 md:p-8 flex flex-col items-center text-center hover:bg-bg-elev transition-colors duration-500 min-h-[260px] md:min-h-[320px]"
+            className="ts-card group relative bg-bg p-8 md:p-8 flex flex-col items-center text-center hover:bg-bg-elev transition-colors duration-500 min-h-[200px] sm:min-h-[260px] md:min-h-[320px]"
             data-cursor="OTWÓRZ"
           >
             {/* Glow background na hover */}

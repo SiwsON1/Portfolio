@@ -52,7 +52,7 @@ export function ServicesPreview() {
     <section
       ref={sectionRef}
       id="uslugi"
-      className="relative px-6 py-32 md:px-10 md:py-48 overflow-hidden border-t border-line"
+      className="relative px-6 py-20 md:px-10 md:py-48 overflow-hidden border-t border-line"
     >
       {/* Subtle ambient glow trailing the active item */}
       <div
@@ -65,7 +65,7 @@ export function ServicesPreview() {
         }}
       />
 
-      <div className="sv-header relative mb-20 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="sv-header relative mb-12 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
         <div className="md:col-span-3">
           <p className="eyebrow">Co robię · katalog</p>
         </div>
@@ -126,30 +126,30 @@ function Row({
 
       <Link
         href={`/uslugi/${s.slug}`}
-        className="relative block py-10 md:py-14"
+        className="relative block py-8 md:py-14"
         data-cursor="OTWÓRZ"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
         onFocus={onEnter}
         onBlur={onLeave}
       >
-        <div className="grid grid-cols-12 gap-4 md:gap-6 items-baseline">
+        <div className="grid grid-cols-12 gap-3 md:gap-6 items-baseline">
           <span
-            className={`col-span-2 md:col-span-1 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors duration-500 ${
+            className={`col-span-2 md:col-span-1 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] transition-colors duration-500 ${
               active ? "text-peach" : "text-ink-faint"
             }`}
           >
             {String(index + 1).padStart(2, "0")}
           </span>
 
-          <div className="col-span-10 md:col-span-7">
+          <div className="col-span-9 md:col-span-7">
             <h3
               className={`font-display italic transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 active ? "text-peach" : "text-ink"
               }`}
               style={{
-                fontSize: "clamp(2rem, 1rem + 4vw, 4.5rem)",
-                lineHeight: 0.96,
+                fontSize: "clamp(1.5rem, 0.85rem + 3vw, 4.5rem)",
+                lineHeight: 1,
                 letterSpacing: "-0.035em",
                 fontVariationSettings: '"opsz" 144, "SOFT" 50, "WONK" 0',
                 transform: active ? "translateX(12px)" : "translateX(0)",
@@ -180,7 +180,7 @@ function Row({
           </div>
 
           <span
-            className={`col-span-12 md:col-span-1 text-right font-mono text-base transition-all duration-500 ${
+            className={`col-span-1 md:col-span-1 text-right font-mono text-sm md:text-base transition-all duration-500 ${
               active
                 ? "text-peach translate-x-2"
                 : "text-ink-mute group-hover:text-peach"

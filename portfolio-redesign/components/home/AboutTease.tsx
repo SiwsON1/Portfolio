@@ -56,7 +56,7 @@ export function AboutTease() {
   return (
     <section
       ref={sectionRef}
-      className="relative px-6 py-32 md:px-10 md:py-48 overflow-hidden border-t border-line"
+      className="relative px-6 py-20 md:px-10 md:py-48 overflow-hidden border-t border-line"
     >
       {/* Subtle ambient — peach upper-left, cool blue middle */}
       <div
@@ -68,7 +68,7 @@ export function AboutTease() {
         }}
       />
 
-      <header className="relative grid grid-cols-1 md:grid-cols-12 gap-8 mb-20 md:mb-28">
+      <header className="relative grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-12 md:mb-28">
         <div className="md:col-span-3">
           <p className="at-line eyebrow">O mnie · Marcin Siwonia</p>
         </div>
