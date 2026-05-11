@@ -56,13 +56,13 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
       className="relative w-full h-full flex items-center justify-center"
       style={{ minHeight: "300px" }}
     >
-      {/* Outer plasma glow */}
+      {/* Outer plasma glow — pierścień (poza ikoną w środku), żeby logo nie zlewało się z tłem */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(58,142,200,0.32) 0%, rgba(232,178,134,0.10) 40%, rgba(20,19,31,0) 70%)",
+            "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(20,19,31,0) 0%, rgba(58,142,200,0.22) 35%, rgba(232,178,134,0.08) 55%, rgba(20,19,31,0) 75%)",
           mixBlendMode: "screen",
           animation: "svhPulse 8s ease-in-out infinite",
         }}
@@ -209,15 +209,10 @@ function BrandIcon({
         animation: rotateSlow
           ? `svhSpin 120s linear infinite, svhPulseStrong ${pulseDur} ease-in-out infinite`
           : `svhPulseStrong ${pulseDur} ease-in-out infinite`,
+        filter: "drop-shadow(0 0 18px rgba(232,178,134,0.45))",
       }}
     >
-      <defs>
-        <linearGradient id={`grad-${icon.slug}`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#A8DAFF" />
-          <stop offset="100%" stopColor="#E8B286" />
-        </linearGradient>
-      </defs>
-      <path d={icon.path} fill={`url(#grad-${icon.slug})`} />
+      <path d={icon.path} fill="#F5E9D8" />
     </svg>
   );
 }
@@ -308,26 +303,20 @@ function Icon({ icon }: { icon: IconKey }) {
       // 3 brand logos stacked: JS + GraphQL + Markdown indicator
       return (
         <svg viewBox="0 0 200 200" className="w-full h-full" aria-hidden>
-          <defs>
-            <linearGradient id="jamGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#A8DAFF" />
-              <stop offset="100%" stopColor="#E8B286" />
-            </linearGradient>
-          </defs>
           <g style={{ animation: "svhPulseStrong 5s ease-in-out infinite" }}>
             {/* Layer 1: J = JavaScript */}
             <g transform="translate(40 50) scale(2.0)">
-              <path d={siJavascript.path} fill="url(#jamGrad)" opacity="0.9" />
+              <path d={siJavascript.path} fill="#F5E9D8" opacity="0.9" />
             </g>
             <text x="105" y="68" fontFamily="ui-monospace, monospace" fontSize="10" fill="#A8DAFF" letterSpacing="0.25em">J · JAVASCRIPT</text>
             {/* Layer 2: A = APIs (GraphQL) */}
             <g transform="translate(40 90) scale(2.0)">
-              <path d={siGraphql.path} fill="url(#jamGrad)" opacity="0.9" />
+              <path d={siGraphql.path} fill="#F5E9D8" opacity="0.9" />
             </g>
             <text x="105" y="108" fontFamily="ui-monospace, monospace" fontSize="10" fill="#3A8EC8" letterSpacing="0.25em">A · APIs</text>
             {/* Layer 3: M = Markup (Vercel triangle as proxy) */}
             <g transform="translate(40 130) scale(2.0)">
-              <path d={siVercel.path} fill="url(#jamGrad)" opacity="0.9" />
+              <path d={siVercel.path} fill="#F5E9D8" opacity="0.9" />
             </g>
             <text x="105" y="148" fontFamily="ui-monospace, monospace" fontSize="10" fill="#E8B286" letterSpacing="0.25em">M · MARKUP</text>
           </g>
@@ -358,17 +347,11 @@ function Icon({ icon }: { icon: IconKey }) {
             fontStyle="italic"
             fontSize="84"
             fontWeight="400"
-            fill="url(#yearGrad)"
+            fill="#F5E9D8"
             style={{ letterSpacing: "-0.04em" }}
           >
             2026
           </text>
-          <defs>
-            <linearGradient id="yearGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#A8DAFF" />
-              <stop offset="100%" stopColor="#E8B286" />
-            </linearGradient>
-          </defs>
           <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(232,178,134,0.4)" strokeWidth="1" strokeDasharray="4 6" style={{ transformOrigin: "100px 100px", animation: "svhSpin 100s linear infinite" }} />
           <Wordmark text="STRONA FIRMOWA 2026" />
         </svg>
