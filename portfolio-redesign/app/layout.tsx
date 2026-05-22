@@ -37,21 +37,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Tworzenie stron www Wrocław — Marcin Siwonia, freelancer Next.js, React, WordPress",
+      "Freelancer Next.js Wrocław — Marcin Siwonia | aplikacje, AI",
     template: "%s — Marcin Siwonia",
   },
   description:
-    "Niezależny web developer z Wrocławia. Tworzenie stron www, sklepów WooCommerce, aplikacji Next.js i React, wdrożenia AI. Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.",
+    "Niezależny freelancer Next.js i React z Wrocławia. Aplikacje, sklepy, wdrożenia AI, headless WordPress. Sześć lat, 30+ wdrożeń dla klientów PL i DE.",
   keywords: [
-    "tworzenie stron www",
-    "tworzenie stron WordPress",
-    "sklepy internetowe WooCommerce",
-    "programista Next.js",
-    "programista React",
-    "wdrożenia AI",
-    "Marcin Siwonia",
-    "freelancer Wrocław",
+    "freelancer Next.js",
+    "programista Next.js Wrocław",
+    "freelancer React",
     "web developer Wrocław",
+    "freelancer AI wdrożenia",
+    "freelancer WordPress",
+    "Marcin Siwonia",
   ],
   authors: [{ name: "Marcin Siwonia" }],
   creator: "Marcin Siwonia",
@@ -60,15 +58,15 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: SITE_URL,
     siteName: "Marcin Siwonia",
-    title: "Marcin Siwonia. Strony www, Next.js, React, AI",
+    title: "Freelancer Next.js Wrocław — Marcin Siwonia",
     description:
-      "Niezależny web developer. Strony, aplikacje, AI. 30+ wdrożeń.",
+      "Aplikacje Next.js, sklepy, wdrożenia AI. 30+ wdrożeń dla PL i DE.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marcin Siwonia",
+    title: "Freelancer Next.js Wrocław — Marcin Siwonia",
     description:
-      "Strony www, aplikacje Next.js i React, wdrożenia AI.",
+      "Aplikacje Next.js i React, wdrożenia AI, headless WordPress.",
   },
   alternates: {
     canonical: "/",

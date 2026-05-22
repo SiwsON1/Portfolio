@@ -43,4 +43,5 @@ next-env.d.ts
 # robocze artefakty (screenshoty audytu, logi build)
 /screenshots/
 /dev.log
+/dev-contact.log
 /build*.log

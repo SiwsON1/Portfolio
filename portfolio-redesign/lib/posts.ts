@@ -754,10 +754,10 @@ posts.push(
     date: "2026-03-04",
     readingMinutes: 11,
     tags: ["WordPress", "Next.js", "ceny", "porównanie", "TCO"],
-    keyword: "WordPress vs Next.js koszt",
-    metaTitle: "WordPress vs Next.js — koszty wdrożenia i utrzymania",
+    keyword: "koszt utrzymania strony WordPress vs Next.js",
+    metaTitle: "Koszt utrzymania strony WordPress vs Next.js — TCO 3 lata",
     metaDescription:
-      "WordPress 5-12k vs Next.js 15-30k zł wdrożenie. Hosting WP 30-100 zł/mc vs Next.js 0-80. Maintenance roczny, performance, TCO 3 lata. Kiedy która technologia.",
+      "TCO 3 lata: WordPress 4-12 tys. zł utrzymania (hosting + pluginy + security patches) vs Next.js 0-3 tys. (Vercel + 0h maintenance). Realne liczby z faktur klientów.",
     hero: { kind: "wordpress" },
     relatedServices: ["tworzenie-stron-wordpress", "tworzenie-stron-www", "aplikacje-nextjs"],
     body: [
@@ -857,10 +857,10 @@ posts.push(
     date: "2026-02-18",
     readingMinutes: 10,
     tags: ["technologia", "strona firmowa", "decyzje"],
-    keyword: "strona firmowa technologia 2026",
-    metaTitle: "Strona firmowa 2026 — jaką technologię wybrać",
+    keyword: "jaki stack na stronę firmową",
+    metaTitle: "Jaki stack na stronę firmową 2026 — Next.js, WP, Webflow",
     metaDescription:
-      "5 ścieżek: WordPress (5-12k), Next.js+Sanity (15-30k), headless WP (20-40k), Webflow (8-20k), no-code (3-10k). Decyzja per profil firmy z konkretnymi cenami.",
+      "5 stacków porównanych: WordPress (5-12k), Next.js+Sanity (15-30k), headless WP (20-40k), Webflow (8-20k), no-code (3-10k). Decyzja per profil firmy.",
     hero: { kind: "wordpress" },
     relatedServices: ["nowoczesna-strona-firmowa-2026", "tworzenie-stron-www", "aplikacje-nextjs"],
     body: [

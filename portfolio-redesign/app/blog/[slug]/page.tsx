@@ -23,7 +23,7 @@ export async function generateMetadata({
   const p = posts.find((x) => x.slug === slug);
   if (!p) return {};
   return {
-    title: p.metaTitle ?? p.title,
+    title: { absolute: p.metaTitle ?? p.title },
     description: p.metaDescription ?? p.excerpt,
     keywords: p.keyword ? [p.keyword, ...p.tags] : p.tags,
     alternates: { canonical: `/blog/${p.slug}` },

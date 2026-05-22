@@ -4,9 +4,9 @@ import { services } from "@/lib/services";
 import { ServicesIndexList } from "@/components/service/ServicesIndexList";
 
 export const metadata: Metadata = {
-  title: "Usługi",
+  title: { absolute: "Usługi web developera — Next.js, React, WP, AI, sklepy" },
   description:
-    "Strony www, aplikacje Next.js i React, wdrożenia AI. Cztery specjalności, jeden warsztat.",
+    "Pełna lista usług: aplikacje Next.js, React, WordPress, WooCommerce, headless CMS, Jamstack, wdrożenia AI. Wycena 24h od briefa. Wrocław i online.",
   alternates: { canonical: "/uslugi" },
 };
 
