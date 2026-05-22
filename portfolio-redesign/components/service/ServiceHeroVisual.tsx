@@ -94,8 +94,8 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
           {Array.from({ length: 6 + i * 3 }).map((_, j) => {
             const angle = (j / (6 + i * 3)) * Math.PI * 2;
             const r = 70 + i * 12;
-            const x = Math.cos(angle) * r;
-            const y = Math.sin(angle) * r;
+            const x = (Math.cos(angle) * r).toFixed(3);
+            const y = (Math.sin(angle) * r).toFixed(3);
             const isPeach = (i + j) % 3 === 0;
             return (
               <circle
@@ -128,8 +128,8 @@ export function ServiceHeroVisual({ slug }: { slug: string }) {
         {Array.from({ length: 14 }).map((_, i) => {
           const angle = (i / 14) * Math.PI * 2 + i * 0.7;
           const r = 110 + (i % 4) * 8;
-          const x = Math.cos(angle) * r;
-          const y = Math.sin(angle) * r;
+          const x = (Math.cos(angle) * r).toFixed(3);
+          const y = (Math.sin(angle) * r).toFixed(3);
           const dur = 4 + (i % 5);
           return (
             <circle

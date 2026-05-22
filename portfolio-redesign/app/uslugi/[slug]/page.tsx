@@ -8,6 +8,7 @@ import { projects } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
+import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const s = services.find((x) => x.slug === slug);
   if (!s) return {};
   return {
-    title: s.metaTitle,
+    title: { absolute: s.metaTitle },
     description: s.metaDescription,
     alternates: { canonical: `/uslugi/${s.slug}` },
     openGraph: {
@@ -143,6 +144,23 @@ export default async function UslugaPage({
           <ServiceHeroVisual slug={s.slug} />
         </div>
       </header>
+
+      {/* DEVTOOLS LIVE — slim, nad portfolio, pod hero, tylko Next.js */}
+      {s.slug === "aplikacje-nextjs" && (
+        <section className="px-6 py-20 md:px-10 md:py-24 border-t border-line">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+            <aside className="md:col-span-3">
+              <p className="eyebrow mb-3">— Performance, na żywo</p>
+              <p className="text-ink-mute text-[0.95rem] leading-relaxed">
+                Liczby z <code className="font-mono text-ink text-[0.92em]">window.performance</code> Twojej przeglądarki. Otwórz F12 i porównaj.
+              </p>
+            </aside>
+            <div className="md:col-span-9">
+              <DevToolsPanel />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CASE STUDY — pokaż konkretną realizację w tej technologii */}
       {(() => {
