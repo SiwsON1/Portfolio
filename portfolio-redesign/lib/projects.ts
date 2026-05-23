@@ -17,13 +17,13 @@ export const projects: Project[] = [
     slug: "galabau-darius",
     title: "Konfigurator ogrodzeń",
     client: "Galabau Darius",
-    year: 2025,
+    year: 2026,
     category: "fullstack",
-    image: "/projects/Portfolio0.png",
-    url: "https://galabau-darius.de/",
+    image: "/projects-fresh/galabau-darius-card.webp",
+    url: "https://galabau-portfolio.vercel.app/",
     description:
-      "Aplikacja Next.js dla niemieckiej firmy ogrodniczej. Konfigurator wyceny w czasie rzeczywistym, galeria realizacji, panel admina. Auth przez Clerk.",
-    stack: ["Next.js", "React", "Clerk", "Tailwind"],
+      "Aplikacja Next.js dla niemieckiej firmy ogrodniczej z okolic Grafeld. Konfigurator wyceny w czasie rzeczywistym, galeria realizacji, panel admina (Clerk). Redesign 2026 — editorial typografia Fraunces + Montserrat, amber accent, mobile-first, JSON-LD LocalBusiness, Impressum/Datenschutz, deploy Vercel.",
+    stack: ["Next.js", "React", "Clerk", "Prisma", "Tailwind", "Framer Motion"],
   },
   {
     slug: "kosmoteka",
