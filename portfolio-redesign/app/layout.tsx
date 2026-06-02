@@ -93,6 +93,7 @@ export default function RootLayout({
     <html
       lang="pl"
       className={`${sans.variable} ${mono.variable} ${display.variable}`}
+      suppressHydrationWarning
     >
       <body>
         <SmoothScroll>
