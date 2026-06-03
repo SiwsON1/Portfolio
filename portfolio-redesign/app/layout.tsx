@@ -26,7 +26,7 @@ const mono = Geist_Mono({
 const display = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin", "latin-ext"],
-  axes: ["SOFT", "WONK", "opsz"],
+  axes: ["SOFT", "opsz"],
   style: ["normal", "italic"],
   display: "swap",
 });
