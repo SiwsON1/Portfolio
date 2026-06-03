@@ -11,8 +11,24 @@ export const metadata: Metadata = {
 
 export default function BlogIndex() {
   const sorted = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Blog — Marcin Siwonia",
+    numberOfItems: sorted.length,
+    itemListElement: sorted.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://marcinsiwonia.pl/blog/${p.slug}`,
+      name: p.title,
+    })),
+  };
   return (
     <article className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <header className="relative px-6 pt-40 pb-24 md:px-10 md:pt-56 md:pb-32 overflow-hidden">
         <div
           aria-hidden
