@@ -17,7 +17,7 @@ const itemListSchema = {
   itemListElement: projects.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
-    url: `https://marcinsiwonia.pl/projekty/${p.slug}`,
+    url: `https://www.marcinsiwonia.pl/projekty/${p.slug}`,
     name: p.client === "Lab" ? p.title : `${p.client} — ${p.title}`,
   })),
 };

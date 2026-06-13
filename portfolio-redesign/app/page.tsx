@@ -5,7 +5,7 @@ import { TechStack } from "@/components/home/TechStack";
 import { AboutTease } from "@/components/home/AboutTease";
 import Script from "next/script";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export default function Home() {
   const websiteSchema = {

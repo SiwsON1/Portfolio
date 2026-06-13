@@ -3,7 +3,7 @@ import { services } from "@/lib/services";
 import { projects } from "@/lib/projects";
 import { posts } from "@/lib/posts";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

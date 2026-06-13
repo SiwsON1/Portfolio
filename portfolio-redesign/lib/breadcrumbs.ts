@@ -3,7 +3,7 @@
  * okruszki w SERP, plus LLM-y używają jako sygnał hierarchii informacji.
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export function breadcrumbsSchema(items: { name: string; path: string }[]) {
   return {

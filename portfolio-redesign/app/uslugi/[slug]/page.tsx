@@ -11,7 +11,7 @@ import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));

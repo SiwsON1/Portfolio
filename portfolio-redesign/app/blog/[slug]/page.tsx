@@ -8,7 +8,7 @@ import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { PostHero } from "@/components/blog/PostHero";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

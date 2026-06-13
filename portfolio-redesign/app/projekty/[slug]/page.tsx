@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));

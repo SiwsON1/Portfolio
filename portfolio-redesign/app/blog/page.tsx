@@ -19,7 +19,7 @@ export default function BlogIndex() {
     itemListElement: sorted.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://marcinsiwonia.pl/blog/${p.slug}`,
+      url: `https://www.marcinsiwonia.pl/blog/${p.slug}`,
       name: p.title,
     })),
   };

@@ -8,7 +8,7 @@ import { services } from "@/lib/services";
 import { posts } from "@/lib/posts";
 import { projects } from "@/lib/projects";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcinsiwonia.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export async function GET() {
   const featured = projects.slice(0, 4);
