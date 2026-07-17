@@ -21,9 +21,9 @@ export const services: Service[] = [
       "WordPress z custom theme (bez Elementora i Avada), Core Web Vitals 95+, panel edycji 1:1 z designem, Yoast/Rank Math od pierwszego dnia. Wrocław i online.",
     h1: "Strony WordPress, które klient sam edytuje",
     lead:
-      "WordPress wybiera się gdy klient chce sam edytować treści bez zaglądania do kodu. Zrobiony dobrze, jest szybki, bezpieczny i indeksowalny. Zrobiony źle, jest lagiem, dziurą bezpieczeństwa i duplikatem 800 innych stron z Elementora.",
+      "WordPress wybiera się gdy klient chce sam edytować treści bez zaglądania do kodu. Zrobiony dobrze, jest szybki, bezpieczny i indeksowalny. Zrobiony źle, muli, łapie malware i wygląda jak 800 innych stron z Elementora.",
     intro: [
-      "Stawiam WordPressy od 2020 roku. Zrobiłem ponad 25 wdrożeń WordPress: kancelarie, hotele, sklepy WooCommerce, portfolio prywatne. Każdy stack: custom theme + niezbędne minimum pluginów + Yoast/Rank Math SEO + LiteSpeed cache. Bez gotowych theme'ów typu Avada/Divi które dodają 200kg JavaScriptu.",
+      "Stawiam WordPressy od 2020 roku. Zrobiłem ponad 25 wdrożeń WordPress: kancelarie, hotele, sklepy WooCommerce, portfolio prywatne. Każdy stack: custom theme + niezbędne minimum pluginów + Yoast/Rank Math SEO + LiteSpeed cache. Bez gotowych motywów typu Avada/Divi, które dokładają setki kilobajtów zbędnego JavaScriptu.",
       "Konkretne realizacje WordPressowe znajdziesz w [pełnej liście projektów](/projekty), m.in. [Kancelaria Maria Piontek](/projekty/kancelaria-mpiontek), [INBC broker ubezpieczeniowy](/projekty/inbc), [RCOM Service](/projekty/rcom-service). Sklep internetowy WooCommerce to osobna usługa, [opisana tutaj](/uslugi/sklepy-internetowe-woocommerce).",
     ],
     bullets: [
@@ -36,8 +36,8 @@ export const services: Service[] = [
         body: "ACF Pro lub Bricks Builder dla pól dynamicznych. Klient widzi w panelu te same nazwy sekcji co na stronie. Bez chaosu z Gutenbergiem.",
       },
       {
-        title: "Bezpieczeństwo standardowe",
-        body: "Wordfence, ograniczenia logowania, dwustopniowa autoryzacja, automatyczne backupy do osobnej lokalizacji, security headers w .htaccess.",
+        title: "Bezpieczeństwo w standardzie",
+        body: "Wordfence, ograniczenia logowania, logowanie dwuskładnikowe, automatyczne backupy do osobnej lokalizacji, security headers w .htaccess.",
       },
       {
         title: "SEO od pierwszego dnia",
@@ -53,7 +53,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Ile kosztuje strona WordPress?", a: "Wizytówka 4-7 tys. zł, strona usługowa z blogiem 7-15 tys., bardziej rozbudowana z customową logiką od 15 tys. wzwyż." },
-      { q: "Dlaczego nie używasz Avada / Divi / Elementor?", a: "Bo dodają 200-400 KB JS do każdej strony, są wolne, trudne w utrzymaniu, robią z każdej strony klona innej. Custom theme = lepsze metryki + brand differentiation." },
+      { q: "Dlaczego nie używasz Avada / Divi / Elementor?", a: "Bo dodają 200-400 KB JS do każdej strony, są wolne, trudne w utrzymaniu, robią z każdej strony klona innej. Custom theme to lepsze metryki i strona, która nie wygląda jak wszystkie inne." },
       { q: "Czy strona będzie szybka?", a: "Tak. LiteSpeed cache + custom theme + obrazki WebP/AVIF + lazy loading. Cel: Lighthouse 95+, LCP poniżej 2.5s, INP poniżej 200ms." },
       { q: "Czy mogę sam edytować po wdrożeniu?", a: "Tak. Na koniec dostajesz 30-min szkolenie. Pola sekcji w panelu mają te same nazwy co na stronie. Plus dokumentacja PDF." },
       { q: "Jaki hosting polecasz?", a: "Hostinger Business lub cyber_folks Premium. Oba mają LiteSpeed cache, codzienne backupy, SSL, sensowne wsparcie." },
@@ -70,8 +70,8 @@ export const services: Service[] = [
     lead:
       "WooCommerce robi 30% sklepów online na świecie. Działa, jest tani, integruje się ze wszystkim co potrzebujesz w polskim e-commerce. Wymaga jednak osoby która wie jak go skonfigurować pod konwersję, nie tylko jak go zainstalować.",
     intro: [
-      "Najnowszy projekt: [Kosmoteka](/projekty/kosmoteka), sklep z teleskopami i sprzętem obserwacyjnym na WooCommerce z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów dla klientów z branż furniture, akcesoria.",
-      "WooCommerce wybiera się gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne stack-i. Jeśli zastanawiasz się czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026).",
+      "Najnowsze wdrożenie sklepu WooCommerce: [Kosmoteka](/projekty/kosmoteka), sklep z teleskopami i sprzętem obserwacyjnym, z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów, głównie branża meblowa i odzieżowa, m.in. [LumiKids](/projekty/lumikids).",
+      "WooCommerce wybiera się gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne technologie. Jeśli zastanawiasz się czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026).",
     ],
     bullets: [
       {
@@ -80,7 +80,7 @@ export const services: Service[] = [
       },
       {
         title: "Optymalizacja konwersji",
-        body: "Skrócony checkout, persistent cart, product upsells, abandoned cart recovery, Google/Meta Pixel, GA4 enhanced ecommerce, A/B testy.",
+        body: "Skrócony checkout, koszyk zapamiętywany między wizytami, dosprzedaż na karcie produktu, ratowanie porzuconych koszyków, Google/Meta Pixel, GA4 enhanced ecommerce, testy A/B.",
       },
       {
         title: "Performance",
@@ -88,7 +88,7 @@ export const services: Service[] = [
       },
       {
         title: "B2B + multilingual",
-        body: "Cenniki per grupa klientów (B2B vs B2C), minimum order quantity, hidden produkty. Polylang/WPML dla wersji obcojęzycznych.",
+        body: "Cenniki per grupa klientów (B2B i B2C), minimalne wielkości zamówień, produkty widoczne tylko dla wybranych grup. Polylang/WPML dla wersji obcojęzycznych.",
       },
     ],
     process: [
@@ -139,16 +139,17 @@ export const services: Service[] = [
       },
     ],
     process: [
-      { step: "01", title: "Audyt WP", body: "Inwentarz custom post types, ACF, kategorii, planów, integracji. Co wymaga API exposure." },
+      { step: "01", title: "Audyt WP", body: "Inwentarz custom post types, ACF, kategorii, planów, integracji. Co trzeba wystawić przez API." },
       { step: "02", title: "Backend setup", body: "WPGraphQL + niezbędne pluginy ACF support, custom resolvers dla custom fields." },
       { step: "03", title: "Frontend Next.js", body: "App Router + ISR + WPGraphQL queries. Designy 1:1 z istniejącymi (lub od nowa)." },
       { step: "04", title: "Migracja + DNS", body: "WP backend pozostaje na starym hostingu, frontend na Vercel. DNS przełącza root domenę na Next.js." },
     ],
     faq: [
+      { q: "Co to jest headless WordPress?", a: "Architektura, w której WordPress działa tylko jako zaplecze do edycji treści (headless CMS), a stronę renderuje osobny frontend, najczęściej Next.js. Treści lecą przez REST API albo WPGraphQL, użytkownik dostaje gotowy HTML z CDN." },
       { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność: frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO: Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo: admin panel niewidoczny dla użytkowników, redukuje attack surface." },
-      { q: "Ile kosztuje migracja na headless?", a: "Małe stronki (50-100 podstron): 15-25 tys. zł. Średnie (200-500 podstron + custom logic): 30-60 tys. Większe ze sklepem WooCommerce headless: od 50 tys." },
+      { q: "Ile kosztuje migracja na headless?", a: "Małe strony (50-100 podstron): 15-25 tys. zł. Średnie (200-500 podstron + custom logic): 30-60 tys. Większe ze sklepem WooCommerce headless: od 50 tys." },
       { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook wyzwala rebuild ISR i strona aktualizuje się w ~30 sekund od zapisu." },
-      { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają migracji na Next-native odpowiedniki. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może być na najtańszym shared." },
+      { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają odpowiedników po stronie Next.js. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może stać na najtańszym współdzielonym." },
     ],
     cta: "Pogadajmy o migracji na headless WordPress",
   },
@@ -162,8 +163,8 @@ export const services: Service[] = [
     lead:
       "Strony, które wyglądają jak case studies z Awwwards SOTY. Animacje, custom cursor, page transitions, scroll-triggered visuals. Stack dobieramy do designu, nie odwrotnie. Jeśli szukasz konkretnej technologii, zajrzyj do [Stron WordPress](/uslugi/tworzenie-stron-wordpress) albo [Stron Next.js](/uslugi/aplikacje-nextjs).",
     intro: [
-      "Tę usługę robię dla klientów, którym standardowy szablon nie wystarczy. Brand chce zostać zapamiętany, oferta jest premium, konkurencja siedzi na WordPressach z 2018 roku. Wtedy ma sens wejść na poziom Lusion, ActiveTheory, Klaassens, raviklaassens.com.",
-      "Co dostajesz wizualnie: custom kursor, ScrollTrigger animacje sekcji, page transitions między widokami, 3D elementy w R3F (jeśli pasują), micro-interactions na każdym hoverze, dark mode jako natywny stan. Plus standardy 2026: Core Web Vitals 95+, schema.org dla AI search, OG images per route.",
+      "Tę usługę robię dla klientów, którym standardowy szablon nie wystarczy. Brand chce zostać zapamiętany, oferta jest premium, konkurencja siedzi na WordPressach z 2018 roku. Wtedy ma sens wejść na poziom Lusion, ActiveTheory czy raviklaassens.com.",
+      "Co dostajesz wizualnie: custom kursor, animacje na stronie odpalane scrollem (GSAP ScrollTrigger), przejścia między widokami, elementy 3D w R3F (jeśli pasują), mikrointerakcje na każdym hoverze, dark mode jako natywny stan. Plus standardy 2026: Core Web Vitals 95+, schema.org dla AI search, obrazki OG per podstrona.",
       "Konkretną technologię dobieram po briefie. Jeśli strona ma głównie content i klient chce edytować, idzie WordPress headless. Jeśli aplikacja ma własną logikę i panel, idzie Next.js. Detale stack-owe [opisałem osobno dla WordPressa](/uslugi/tworzenie-stron-wordpress) i [dla Next.js](/uslugi/aplikacje-nextjs).",
     ],
     bullets: [
@@ -181,17 +182,17 @@ export const services: Service[] = [
       },
       {
         title: "Dark mode natywny",
-        body: "Strona projektowana w dark od początku, light tryb jako dodatek (nie odwrotnie). OKLCH palette, depth przez gradienty i noise.",
+        body: "Strona projektowana w ciemnym trybie od początku, jasny jako dodatek (nie odwrotnie). Paleta OKLCH, głębia przez gradienty i szum.",
       },
     ],
     process: [
-      { step: "01", title: "Discovery + benchmarks", body: "Audyt obecnej (jeśli jest) + 3 referencje docelowe. Mierzymy baseline wydajności." },
-      { step: "02", title: "Design + tokens", body: "Design system w Figma → Tailwind tokens → komponenty. Spójność end-to-end." },
+      { step: "01", title: "Discovery + benchmarks", body: "Audyt obecnej (jeśli jest) + 3 referencje docelowe. Mierzymy wyjściową wydajność." },
+      { step: "02", title: "Design + tokens", body: "Design system w Figmie, z niego tokeny Tailwind, z nich komponenty. Spójność od projektu po kod." },
       { step: "03", title: "Wdrożenie", body: "Next.js App Router, Sanity/Contentful jako CMS, Vercel preview deploys per PR." },
       { step: "04", title: "Performance + SEO", body: "Lighthouse audit per route, schema, OG, sitemap, Search Console." },
     ],
     faq: [
-      { q: "Czym 'nowoczesna' różni się od zwykłej strony?", a: "Designem i interakcją, nie stack-iem. Zwykła strona prezentuje treść. Nowoczesna prowadzi przez treść animacjami, custom kursorem, page transitions. Stack (WordPress, Next.js) dobieramy do potrzeb edycji, nie do efektu." },
+      { q: "Czym 'nowoczesna' różni się od zwykłej strony?", a: "Designem i interakcją, nie technologią. Zwykła strona prezentuje treść. Nowoczesna prowadzi przez treść animacjami, custom kursorem, przejściami między podstronami. Stack (WordPress, Next.js) dobieramy do potrzeb edycji, nie do efektu." },
       { q: "Jaki stack pod spodem?", a: "Zależy od briefu. Strona content-first z redakcją: WordPress headless + Next.js frontend. Aplikacja z panelem: Next.js end-to-end. Konkretne porównanie [w usłudze Strony Next.js](/uslugi/aplikacje-nextjs)." },
       { q: "Ile to kosztuje?", a: "Nowoczesna strona firmowa z animacjami: 18-35 tys. zł. Z headless CMS i custom logic: 35-60 tys. Strona produktu/aplikacji premium: od 50 tys. wzwyż." },
       { q: "Czy klient nadal edytuje sam?", a: "Tak. Sanity, Contentful albo headless WordPress jako CMS. Animacje skonfigurowane raz przez programistę, treść edytowalna w panelu." },
@@ -211,20 +212,20 @@ export const services: Service[] = [
     intro: [
       "Małe i średnie firmy nie potrzebują strony za 60 tys. zł z animacjami R3F. Potrzebują strony, którą można obronić przed klientem, edytować bez kodu i pokazać w Google Search Console rosnące rankingi. Pakiet jest pod taki właśnie profil.",
       "Co wchodzi w skład: strona główna z ofertą, 3-5 podstron usług, formularz kontaktowy z anty-spamem, blog (jeśli planujesz pisać), schema.org Organization + LocalBusiness pod lokalne SEO, integracja z Google Search Console i Analytics. Mobile-first, Lighthouse 90+, dostarczane razem ze szkoleniem z edycji.",
-      "Pakiet różni się od [nowoczesnych stron z animacjami](/uslugi/nowoczesne-strony-internetowe) (tam payoff = brand) i od [aplikacji Next.js](/uslugi/aplikacje-nextjs) (tam payoff = własna logika). Tu payoff = obecność i lokalne pozycjonowanie firmy w sensownym budżecie.",
+      "Pakiet różni się od [nowoczesnych stron z animacjami](/uslugi/nowoczesne-strony-internetowe), gdzie płacisz za efekt brandowy, i od [aplikacji Next.js](/uslugi/aplikacje-nextjs), gdzie płacisz za własną logikę. Tu płacisz za obecność i lokalne pozycjonowanie firmy w sensownym budżecie.",
     ],
     bullets: [
       {
-        title: "Mobile-first 70/30",
-        body: "70% Twoich klientów wchodzi z telefonu. Mobile design pierwszy, desktop sekund. LCP poniżej 2s na 4G.",
+        title: "Mobile-first, bo 70% ruchu",
+        body: "70% Twoich klientów wchodzi z telefonu. Projekt mobilny powstaje pierwszy, desktop drugi. LCP poniżej 2s na 4G.",
       },
       {
         title: "Lokalne SEO od pierwszego dnia",
         body: "Schema.org LocalBusiness + Organization, Google Business Profile sync, lokalne frazy w meta, integracja z Search Console.",
       },
       {
-        title: "Pakiet, nie open-ended",
-        body: "Definiujemy zakres na briefie i trzymamy się go. Zmiany scope idą jako osobna oferta, nie scope creep w cenie.",
+        title: "Pakiet, nie worek bez dna",
+        body: "Definiujemy zakres na briefie i trzymamy się go. Zmiany zakresu wyceniam osobno, zamiast cicho rozciągać projekt i budżet.",
       },
       {
         title: "Edycja bez kodu",
@@ -233,11 +234,12 @@ export const services: Service[] = [
     ],
     process: [
       { step: "01", title: "Strategia", body: "30-min discovery: kto, dla kogo, jaka konwersja, jakie frazy SEO. Brief w 24h." },
-      { step: "02", title: "Design", body: "Moodboard → makiety Figma → custom design system → animacje protoype." },
+      { step: "02", title: "Design", body: "Moodboard, potem makiety w Figmie, custom design system i prototyp animacji." },
       { step: "03", title: "Wdrożenie", body: "Next.js App Router + Sanity CMS + Vercel deploy. Staging od dnia 3." },
       { step: "04", title: "Launch", body: "Migracja DNS bez przerwy, schema, sitemap, GA4, Search Console, opieka 60 dni." },
     ],
     faq: [
+      { q: "Co powinna zawierać strona internetowa małej firmy?", a: "Minimum: strona główna z ofertą, podstrony usług, dane kontaktowe z mapą i klikalnym telefonem na mobile, formularz. Do tego schema.org LocalBusiness, profil Google Business spięty z tą samą nazwą i adresem oraz podstawy SEO: meta tagi, sitemap, szybkie ładowanie. Blog opcjonalnie, jeśli ktoś faktycznie będzie pisał." },
       { q: "Co jest w pakiecie strony firmowej?", a: "Strona główna, 3-5 podstron usług, formularz kontaktowy, blog (opcjonalnie), schema.org pod lokalne SEO, GA4 + Search Console, mobile-first design, szkolenie z edycji, 60 dni opieki. Stawka 6-15 tys. zł zależnie od stacku i zakresu." },
       { q: "WordPress czy Next.js dla mojej firmy?", a: "WordPress jeśli chcesz edytować treści sam, masz budżet do 12 tys. zł i nie planujesz nietypowej logiki. Next.js jeśli budżet pozwala na 15+ tys. zł, zależy Ci na maksymalnej szybkości i jesteś gotów na CMS typu Sanity. Decyzję podejmujemy na briefie." },
       { q: "Ile czasu zajmuje wdrożenie?", a: "Wizytówka (jedna podstrona + kontakt): 2-3 tygodnie. Pakiet firmowy z usługami i blogiem: 4-6 tygodni. Z customową logiką (kalkulator wyceny, panel klienta): osobna usługa, [aplikacje Next.js](/uslugi/aplikacje-nextjs)." },
@@ -262,31 +264,31 @@ export const services: Service[] = [
     bullets: [
       {
         title: "MVP w 4-6 tygodni",
-        body: "Próba walidacji pomysłu. Logowanie + 3-5 features + płatności. Deploy Vercel od dnia 1.",
+        body: "Do walidacji pomysłu. Logowanie + 3-5 funkcji + płatności. Deploy na Vercel od pierwszego dnia.",
       },
       {
         title: "Mid-size apps",
         body: "Konfiguratory, panele B2B, marketplace lite. 8-16 tygodni, dokumentacja + testy + monitoring.",
       },
       {
-        title: "AI-augmented",
-        body: "RAG na dokumentach, chatboty, generowanie treści. OpenAI + Anthropic API + vector DB.",
+        title: "Funkcje AI w aplikacji",
+        body: "RAG na dokumentach, chatboty, generowanie treści. OpenAI + Anthropic API + baza wektorowa.",
       },
       {
-        title: "Maintainable code",
+        title: "Kod łatwy w utrzymaniu",
         body: "TypeScript strict, ESLint, Prettier, conventional commits. Następny dev wchodzi bez archeologii.",
       },
     ],
     process: [
-      { step: "01", title: "Brief + estymacja", body: "Workshop 1h: user stories, MVP scope, must-have vs nice-to-have. Estymacja w 24h." },
+      { step: "01", title: "Brief + estymacja", body: "Workshop 1h: user stories, zakres MVP, must-have vs nice-to-have. Wycena w 24h." },
       { step: "02", title: "Sprint 1: szkielet", body: "Setup repo, design system, auth, podstawowe routes. Klient widzi staging." },
-      { step: "03", title: "Iteracje 2-tygodniowe", body: "Demo każdego sprintu, feedback, adjustments. Zero surprise na końcu." },
+      { step: "03", title: "Iteracje 2-tygodniowe", body: "Demo każdego sprintu, feedback, poprawki. Zero niespodzianek na końcu." },
       { step: "04", title: "Launch + maintenance", body: "Production deploy, monitoring (Sentry), runbook, opcjonalna opieka miesięczna." },
     ],
     faq: [
-      { q: "Solo dev = ryzyko bus factor?", a: "Mitigowane przez: pełną dokumentację, kod w GitHub klienta od dnia 1, comment-heavy code, video walkthrough na koniec. Jakikolwiek dev Next.js wejdzie po mnie bez problemu." },
+      { q: "Jeden wykonawca to ryzyko. Co jeśli wypadniesz?", a: "Ograniczam je tak: pełna dokumentacja, kod w repo klienta od pierwszego dnia, komentarze w kodzie, wideo z omówieniem architektury na koniec. Jakikolwiek dev Next.js wejdzie po mnie bez problemu." },
       { q: "Co z designem jeśli nie mam designera?", a: "Robię też projekty graficzne w Figmie. Albo współpracuję z freelancem designerem (znam kilku top w PL)." },
-      { q: "Stawka godzinowa czy ryczałt?", a: "Wybór klienta. Ryczałt: lepsza predyktywność, +15% buffer na unknown unknowns. Stawka godzinowa (220-280 zł): pełna transparentność, faktura per miesiąc z timesheetem." },
+      { q: "Stawka godzinowa czy ryczałt?", a: "Wybór klienta. Ryczałt: przewidywalny budżet, z buforem +15% na niespodzianki. Stawka godzinowa (220-280 zł): pełna transparentność, faktura co miesiąc z zestawieniem godzin." },
       { q: "Czy mogę zatrudnić Cię na long-term?", a: "Tak. Najczęstsza forma: 60-100h/miesiąc retainer. Cena retainerowa niższa od godzinowej." },
     ],
     cta: "Workshop produktowy 1h — bezpłatny",
@@ -302,20 +304,20 @@ export const services: Service[] = [
       "Jamstack (JavaScript + APIs + Markup) to architektura w której strona jest w 90% statyczna (pre-rendered HTML na CDN) ale dynamika przychodzi przez API. Najszybsza możliwa konfiguracja webowa w 2026: strony ładują się w <1s globalnie.",
     intro: [
       "Stawiam strony w architekturze Jamstack od 2022. Stack docelowy: Next.js (frontend) + Sanity/Contentful (CMS) + Vercel (CDN+edge functions) + zewnętrzne APIs (Stripe, OpenAI, Algolia). Wszystko cached, wszystko serverless. Pełen przewodnik [w poście Jamstack co to jest](/blog/jamstack-co-to-jest).",
-      "Idealne dla: blogów, marketing sites, landing pages, e-commerce katalogowych, serwisów contentowych. Mniej idealne dla: real-time chatów, wewnętrznych dashboardów z hot data, SaaS z wysoką dynamiką per-user.",
+      "Idealne dla: blogów, stron marketingowych, landing page'y, katalogów e-commerce, serwisów z treścią. Gorzej pasuje do: czatów real-time, wewnętrznych dashboardów z danymi na żywo, SaaS-ów z treścią zmienną per użytkownik.",
     ],
     bullets: [
       {
         title: "CDN deploy globalny",
-        body: "Plik HTML serwowany z najbliższego edge node (Vercel ma 100+, Cloudflare 300+). Lokacja użytkownika nie spowalnia.",
+        body: "Plik HTML serwowany z najbliższego węzła edge (Vercel ma 100+, Cloudflare 300+). Lokalizacja użytkownika przestaje mieć znaczenie.",
       },
       {
         title: "Build-time pre-render",
-        body: "Next.js generuje HTML przy build, nie przy request. Brak wait for DB. ISR regeneruje gdy treść się zmienia.",
+        body: "Next.js generuje HTML przy buildzie, nie przy wejściu użytkownika. Zero czekania na bazę danych. ISR regeneruje strony, gdy treść się zmienia.",
       },
       {
         title: "Headless CMS",
-        body: "Sanity / Contentful / Strapi jako edycja. API zwraca JSON, frontend renderuje. Multiple frontendów na jednych danych.",
+        body: "Sanity / Contentful / Strapi jako edycja. API zwraca JSON, frontend renderuje. Kilka frontendów może jechać na tych samych danych.",
       },
       {
         title: "Edge functions dla dynamiki",
@@ -326,13 +328,13 @@ export const services: Service[] = [
       { step: "01", title: "Architektura", body: "Mapa: co statyczne (90%), co dynamiczne (10%). Wybór CMS + payment + auth provider." },
       { step: "02", title: "CMS setup", body: "Schema w Sanity Studio. Custom fields, relacje, role redakcyjne. Live preview." },
       { step: "03", title: "Frontend Next.js", body: "App Router + ISR + edge functions dla auth/forms. Design + animacje." },
-      { step: "04", title: "Deploy + monitoring", body: "Vercel preview per PR, production za 1-click. Sentry, Analytics, Search Console." },
+      { step: "04", title: "Deploy + monitoring", body: "Vercel preview per PR, produkcja jednym kliknięciem. Sentry, Analytics, Search Console." },
     ],
     faq: [
-      { q: "Jaka różnica między Jamstack a tradycyjnym WordPress?", a: "WordPress: każdy request → PHP → MySQL → HTML. Jamstack: HTML już gotowy na CDN, request = sam pobranie. 5-50x szybsze." },
+      { q: "Jaka różnica między Jamstack a tradycyjnym WordPress?", a: "WordPress przy każdym wejściu odpala PHP i MySQL, żeby złożyć HTML. W Jamstacku HTML czeka gotowy na CDN, request to samo pobranie pliku. 5-50x szybciej." },
       { q: "Ile kosztuje strona Jamstack?", a: "Mała (do 50 podstron + blog): 12-25 tys. zł. Średnia (200+ stron, custom logic): 25-50 tys. Większa z e-commerce: od 50 tys." },
       { q: "Co jeśli mam już WordPress?", a: "Robię migracje WordPress → Jamstack. WP zostaje jako headless CMS (opcjonalnie) lub przenoszę do Sanity. URL-e zachowywane przez 301." },
-      { q: "Czy SEO działa tak samo?", a: "Lepiej. HTML pre-rendered = Google indexuje natychmiast. Schema.org + Core Web Vitals 95+ = wyższe rankingi vs typowy WP." },
+      { q: "Czy SEO działa tak samo?", a: "Lepiej. Pre-renderowany HTML Google indeksuje natychmiast. Schema.org plus Core Web Vitals 95+ dają wyższe rankingi niż typowy WordPress." },
     ],
     cta: "Sprawdź czy Jamstack to dla Ciebie",
   },
@@ -346,7 +348,7 @@ export const services: Service[] = [
     lead:
       "Hub usług webowych dla firm. Jeśli wiesz że chcesz stronę ale nie wiesz w jakiej technologii, zaczynamy tu. Jeśli wiesz że [WordPress](/uslugi/tworzenie-stron-wordpress) albo [Next.js](/uslugi/aplikacje-nextjs), idź od razu do specyficznej usługi. Sklep online: [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
     intro: [
-      "Tworzeniem stron www zajmuję się od 2020 roku. Sześć lat na rynku, ponad 30 wdrożeń: hotele, kancelarie, sklepy, restauracje, lokalne usługi. Większość klientów wraca po kolejne projekty albo poleca dalej. Konkretne realizacje znajdziesz w [pełnej liście projektów](/projekty), a aktualne ceny rozłożyłem w [poście o cenach stron www](/blog/ile-kosztuje-strona-www-2026).",
+      "Tworzeniem stron www zajmuję się od 2020 roku. Sześć lat tworzenia stron internetowych, ponad 30 wdrożeń: hotele, kancelarie, sklepy, restauracje, lokalne usługi. Działam jako freelancer, nie agencja: bez narzutu na PM-ów i handlowców, rozmawiasz bezpośrednio z osobą, która pisze kod. Większość klientów wraca po kolejne projekty albo poleca dalej. Konkretne realizacje znajdziesz w [pełnej liście projektów](/projekty), a aktualne ceny rozłożyłem w [poście o cenach stron www](/blog/ile-kosztuje-strona-www-2026).",
       "Stronę projektuję najpierw na papierze, potem w Figmie, dopiero na końcu w kodzie. Tak unikam wracania trzy razy do tego samego ekranu i klient wie co dostanie zanim cokolwiek zaczniemy programować. Stack dobieram zawsze po briefie, nie z góry. Decyzja idzie po dwóch pytaniach: kto będzie edytował treści i jak skomplikowana jest logika strony.",
       "Najczęstsze ścieżki: lokalna firma usługowa z blogiem to WordPress (3-12 tys. zł). Premium brand albo aplikacja z panelem klienta to Next.js (15-50 tys. zł). E-commerce z polskimi integracjami to WooCommerce (12-50 tys. zł). Headless, gdy redakcja chce panelu WP, a marketing chce wydajności Vercela.",
     ],
@@ -386,7 +388,7 @@ export const services: Service[] = [
       {
         step: "03",
         title: "Programowanie",
-        body: "Stawiam stronę na środowisku roboczym z dostępem podglądowym. Klient widzi każdy progress.",
+        body: "Stawiam stronę na środowisku roboczym z dostępem podglądowym. Klient widzi postępy na bieżąco.",
       },
       {
         step: "04",
@@ -431,10 +433,10 @@ export const services: Service[] = [
       "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge na Vercel. Premium, headless e-commerce, panele klienta. Od 12 tys. zł.",
     h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
     lead:
-      "Strony Next.js dla firm które chcą najszybszego web stacka dostępnego w 2026. Statyczny HTML na edge, server components, sub-200ms FCP globalnie. Next.js wybiera się gdy zależy Ci na wydajności, brandzie premium, integracjach z API albo własnym panelu pod stroną. Tu zaczyna się sens kosztu produkcji.",
+      "Strony Next.js dla firm które chcą najszybszego web stacka dostępnego w 2026. Statyczny HTML na edge, server components, sub-200ms FCP globalnie. Next.js wybiera się gdy zależy Ci na wydajności, brandzie premium, integracjach z API albo własnym panelu pod stroną. Wtedy koszt produkcji zaczyna mieć sens.",
     intro: [
       "Tworzenie stron Next.js to mój główny stack od 2024 roku. Wrocław to baza (jestem tu pod adresem ul. Kurkowa 32/57), ale projekty robię zdalnie dla klientów z całej Polski i z zagranicy. Spotkanie kick-off online, staging review na Vercelu po każdym sprincie, demo per iteracja.",
-      "Strony Next.js dzielą się u mnie na trzy klastry. Po pierwsze, strony firmowe premium dla brandów które potrzebują animacji i custom designu (sklejone z [usługą nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe)). Po drugie, strony content-first w setupie headless WP (panel WordPress + frontend Next.js, [osobna usługa](/uslugi/headless-wordpress)). Po trzecie, aplikacje webowe z własną logiką (konfiguratory, panele klienta).",
+      "Strony Next.js dzielą się u mnie na trzy klastry. Po pierwsze, strony firmowe premium dla brandów które potrzebują animacji i custom designu (ta kategoria zazębia się z [usługą nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe)). Po drugie, strony content-first w setupie headless WP (panel WordPress + frontend Next.js, [osobna usługa](/uslugi/headless-wordpress)). Po trzecie, aplikacje webowe z własną logiką (konfiguratory, panele klienta).",
       "Konkretny przykład trzeciej kategorii: [konfigurator wyceny ogrodzeń dla niemieckiej firmy Galabau Darius](/projekty/galabau-darius). Klient wybiera słupki, panele, długość, dostaje wycenę i wysyła zapytanie. Pod spodem panel admina do zarządzania cennikami i zleceniami. Stack: Next.js 14, Clerk auth, Tailwind, deploy Vercel. Jeśli zastanawiasz się czy potrzebujesz Next.js zamiast WordPress, [kryteria decyzyjne opisałem w poście](/blog/next-js-15-vs-wordpress-2026).",
     ],
     bullets: [
@@ -545,7 +547,7 @@ export const services: Service[] = [
       {
         step: "02",
         title: "Plan iteracji",
-        body: "Roadmapa na 4-8 tygodni z priorytetami. Co tydzień refresh, klient widzi efekty.",
+        body: "Roadmapa na 4-8 tygodni z priorytetami. Co tydzień przegląd, klient widzi efekty.",
       },
       {
         step: "03",
@@ -560,7 +562,7 @@ export const services: Service[] = [
       },
       {
         q: "Czy mogę zatrudnić Cię na godziny?",
-        a: "Tak. Stawka godzinowa od 220 zł netto, minimalny pakiet 20h. Faktura na koniec miesiąca.",
+        a: "Tak, jako freelancer React. Stawka godzinowa od 220 zł netto, minimalny pakiet 20h. Faktura na koniec miesiąca.",
       },
       {
         q: "Współpraca długoterminowa?",
@@ -619,8 +621,12 @@ export const services: Service[] = [
     ],
     faq: [
       {
+        q: "Ile kosztuje wdrożenie AI w firmie?",
+        a: "Proof of concept: od kilku tys. zł, bo to 2 tygodnie pracy na wąskim wycinku procesu. Produkcyjny chatbot RAG na dokumentach firmy albo automatyzacja maili: najczęściej 15-30 tys. zł. Do tego miesięczne koszty API i hostingu. Dokładna wycena po discovery, na którym zresztą odrzucam większość pomysłów, bo się nie zwrócą.",
+      },
+      {
         q: "Czy moje dane wyciekną do OpenAI?",
-        a: "Klucze API mają opcję opt-out z trenowania (default w API tier). Dla wrażliwych projektów hostuję modele open-source lokalnie albo na Azure OpenAI.",
+        a: "OpenAI i Anthropic domyślnie nie trenują modeli na danych przesyłanych przez API. Dla wrażliwych projektów hostuję modele open-source lokalnie albo na Azure OpenAI.",
       },
       {
         q: "Ile kosztuje miesięczne utrzymanie?",
