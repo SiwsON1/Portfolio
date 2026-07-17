@@ -24,7 +24,7 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "sklepy-internetowe-woocommerce": {
     projectSlug: "kosmoteka",
     context:
-      "Sklep internetowy z kosmetykami Kosmoteka.pl to przykład świeżego wdrożenia WooCommerce w 2026. WordPress + WooCommerce + custom theme, integracje z Przelewy24, BLIK, InPost Paczkomaty, optymalizacja pod konwersję (skrócony checkout, persistent cart, abandoned cart recovery), GA4 enhanced ecommerce.",
+      "Sklep z teleskopami i sprzętem obserwacyjnym Kosmoteka.pl to przykład świeżego wdrożenia WooCommerce w 2026. WordPress + WooCommerce + custom theme, integracje z Przelewy24, BLIK, InPost Paczkomaty, optymalizacja pod konwersję (skrócony checkout, ratowanie porzuconych koszyków), GA4 enhanced ecommerce.",
     highlight:
       "WooCommerce + Przelewy24 + InPost + GA4 Enhanced Ecommerce",
   },

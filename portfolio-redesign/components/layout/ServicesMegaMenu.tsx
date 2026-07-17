@@ -30,6 +30,16 @@ const GROUPS: Group[] = [
         line: "Premium stack, edge deploy, sub-200ms FCP globalnie.",
       },
       {
+        slug: "opieka-wordpress",
+        title: "Opieka WordPress",
+        line: "Aktualizacje, backupy, monitoring. Abonament bez umowy na rok.",
+      },
+      {
+        slug: "przyspieszanie-stron-wordpress",
+        title: "Przyspieszanie stron",
+        line: "Core Web Vitals na zielono, raport przed i po.",
+      },
+      {
         slug: "nowoczesna-strona-firmowa-2026",
         title: "Strona firmowa MŚP",
         line: "Pakiet dla firm 5-50 osób. Wycena 24h.",

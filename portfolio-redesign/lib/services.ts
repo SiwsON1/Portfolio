@@ -639,6 +639,98 @@ export const services: Service[] = [
     ],
     cta: "Opisz proces który chcesz odciążyć, odpowiem co da się z tym zrobić",
   },
+  {
+    slug: "opieka-wordpress",
+    title: "Opieka nad stroną WordPress",
+    metaTitle: "Opieka nad stroną WordPress — abonament, bez umowy na rok",
+    metaDescription:
+      "Stała opieka nad stroną WordPress: aktualizacje na stagingu, backupy, monitoring i drobne poprawki w cenie. Abonament miesięczny, bez umowy na rok.",
+    h1: "Opieka nad stroną WordPress. Strona działa, Ty pracujesz.",
+    lead:
+      "Abonamentowa opieka nad WordPressem dla firm, które nie mają działu IT: aktualizacje, kopie zapasowe, monitoring dostępności, bezpieczeństwo i bank godzin na drobne zmiany. Płacisz miesięcznie, rezygnujesz kiedy chcesz.",
+    intro: [
+      "WordPress bez opieki niszczeje. Wtyczki wypuszczają aktualizacje co tydzień, PHP na hostingu zmienia wersję, a boty skanują znane luki dzień po ich publikacji. Efekt odkładania: pewnego ranka formularz przestaje wysyłać, strona wita klientów białym ekranem albo, gorzej, reklamami z doklejonego malware.",
+      "W abonamencie robię to, czego właściciel strony nie powinien musieć pilnować: aktualizacje wtyczek i rdzenia testowane na kopii przed wgraniem na produkcję, codzienne backupy trzymane poza hostingiem, monitoring dostępności z alertem, twarde zabezpieczenia logowania i firewall. Do tego bank godzin na drobne zmiany treści czy poprawki, żeby nie płacić osobnej faktury za wymianę banera.",
+      "Opiekuję się głównie stronami, które sam zbudowałem ([tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)), ale przejmuję też strony po innych wykonawcach, po audycie wejściowym. Jeśli strona przy okazji muli, zobacz [przyspieszanie stron WordPress](/uslugi/przyspieszanie-stron-wordpress), często łączę obie usługi.",
+    ],
+    bullets: [
+      {
+        title: "Aktualizacje bez niespodzianek",
+        body: "Wtyczki i rdzeń najpierw na kopii roboczej, dopiero po sprawdzeniu na produkcję. Gdy coś się gryzie, wraca poprzednia wersja i szukam obejścia.",
+      },
+      {
+        title: "Backupy, które da się odtworzyć",
+        body: "Codzienna kopia bazy i plików poza hostingiem. Raz na miesiąc testowe odtworzenie, bo backup nietestowany to tylko nadzieja, nie kopia.",
+      },
+      {
+        title: "Bezpieczeństwo i monitoring",
+        body: "Firewall aplikacyjny, limit prób logowania, logowanie dwuskładnikowe, skan malware. Monitoring dostępności co minutę z alertem na mój telefon.",
+      },
+      {
+        title: "Bank godzin na drobiazgi",
+        body: "Wymiana zdjęcia, nowy cennik, poprawka w stopce: w ramach abonamentu, bez osobnych wycen. Większe prace wyceniam normalnie, z rabatem dla stałych klientów.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Audyt wejściowy", body: "Przegląd wtyczek, motywu, hostingu, kopii i luk. Lista rzeczy do naprawy przed startem opieki." },
+      { step: "02", title: "Porządki i zabezpieczenie", body: "Aktualizacje zaległości, konfiguracja backupów, firewall, monitoring. Strona wchodzi w opiekę czysta." },
+      { step: "03", title: "Miesięczny rytm", body: "Aktualizacje co tydzień, raport co miesiąc: co zrobione, ile godzin banku zużyte, co wymaga decyzji." },
+    ],
+    faq: [
+      { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Prosta strona firmowa: od 200 zł/mc. Strona z blogiem i częstymi zmianami: 300-500 zł/mc. Sklep WooCommerce: od 500 zł/mc, bo dochodzi testowanie zamówień po każdej aktualizacji. W cenie bank godzin na drobne zmiany." },
+      { q: "Czy wiąże mnie umowa na rok?", a: "Nie. Rozliczenie miesięczne, rezygnacja z końcem miesiąca. Umowy roczne w tej usłudze służą zwykle temu, żeby dało się o kliencie zapomnieć." },
+      { q: "Moja strona stoi u innej firmy. Przejmiesz ją?", a: "Tak, po audycie wejściowym. Potrzebuję dostępu do panelu WP i hostingu. Audyt pokazuje, w jakim stanie jest strona i co trzeba wyprostować przed startem stałej opieki." },
+      { q: "Strona już została zhakowana. Pomożesz?", a: "Tak, czyszczenie po włamaniu robię jako osobną usługę: identyfikacja wejścia, usunięcie malware, wymiana kluczy i haseł, zgłoszenie do Google. Potem zwykle przechodzimy na stałą opiekę, żeby to się nie powtórzyło." },
+      { q: "Czy opieka obejmuje też hosting?", a: "Doradzę i przeniosę stronę na sensowny hosting (Hostinger, cyber_folks), ale faktura za hosting zostaje po Twojej stronie. Dzięki temu strona i domena są zawsze Twoje, nie wynajęte ode mnie." },
+    ],
+    cta: "Napisz, podeślij adres strony, wrócę z wyceną opieki w 24h",
+  },
+  {
+    slug: "przyspieszanie-stron-wordpress",
+    title: "Przyspieszanie stron WordPress",
+    metaTitle: "Przyspieszenie strony WordPress — Core Web Vitals na zielono",
+    metaDescription:
+      "Optymalizacja szybkości WordPress: pomiar przed i po, obrazy WebP/AVIF, cache LiteSpeed, odchudzanie JavaScriptu. LCP poniżej 2,5 s, raport z liczbami.",
+    h1: "Przyspieszanie stron WordPress. Liczby przed i po, nie obietnice.",
+    lead:
+      "Wolna strona kosztuje dwa razy: użytkownicy uciekają przed załadowaniem, a Google obniża pozycje za słabe Core Web Vitals. Optymalizuję WordPressy od pomiaru do zielonych metryk, z raportem przed i po.",
+    intro: [
+      "Typowy wolny WordPress to zawsze ta sama czwórka: obrazki wgrywane prosto z telefonu, page builder doklejający setki kilobajtów JavaScriptu, brak sensownego cache i tani hosting z wolnym czasem odpowiedzi. Dobra wiadomość: każdy z tych problemów da się zmierzyć i naprawić, bez przebudowy strony od zera.",
+      "Pracuję na liczbach. Najpierw pomiar w PageSpeed Insights i realnych danych CrUX, potem poprawki od największej dźwigni: konwersja obrazów do WebP/AVIF z leniwym ładowaniem, cache LiteSpeed albo Redis, czyszczenie nieużywanego JavaScriptu i CSS, poprawki fontów, w razie potrzeby zmiana hostingu. Na końcu drugi pomiar i raport: co było, co jest, co to zmienia.",
+      "Cel: LCP poniżej 2,5 sekundy i wszystkie trzy Core Web Vitals na zielono. Dla sklepów WooCommerce dochodzi koszyk i checkout, gdzie szybkość przekłada się wprost na porzucenia. Jeśli strona wymaga też stałego doglądania, spójrz na [opiekę nad stroną WordPress](/uslugi/opieka-wordpress), a jeśli rozważasz budowę od nowa, na [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress).",
+    ],
+    bullets: [
+      {
+        title: "Pomiar przed i po",
+        body: "PageSpeed Insights, Lighthouse i dane polowe CrUX. Raport pokazuje te same metryki przed optymalizacją i po niej, na tych samych podstronach.",
+      },
+      {
+        title: "Obrazy i fonty",
+        body: "Konwersja do WebP/AVIF, wymiary dopasowane do miejsca, leniwe ładowanie poza pierwszym ekranem. Fonty z podzbiorem znaków i font-display: swap.",
+      },
+      {
+        title: "Cache i hosting",
+        body: "LiteSpeed cache albo Redis, CDN dla plików statycznych, nagłówki cache dla przeglądarki. Gdy hosting jest wąskim gardłem, mówię to wprost i pomagam w przenosinach.",
+      },
+      {
+        title: "Odchudzanie JS i CSS",
+        body: "Usuwanie nieużywanych skryptów wtyczek, opóźnianie analityki, krytyczny CSS w dokumencie. Często największy skok robi wyłączenie tego, co nie jest używane.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Audyt wydajności", body: "Pomiar kluczowych podstron, lista problemów posortowana po wpływie na LCP, INP i CLS. Wycena naprawy." },
+      { step: "02", title: "Wdrożenie poprawek", body: "Praca na kopii roboczej, wdrożenie na produkcję poza godzinami ruchu. Strona działa normalnie przez cały czas." },
+      { step: "03", title: "Drugi pomiar i raport", body: "Te same metryki, te same podstrony, liczby przed i po. Plus lista zaleceń na przyszłość, żeby efekt nie zjechał." },
+    ],
+    faq: [
+      { q: "Ile kosztuje przyspieszenie strony WordPress?", a: "Audyt wydajności: 300 zł, odliczane od wdrożenia. Optymalizacja strony firmowej: 1,5-2,5 tys. zł. Sklep WooCommerce: 2-3,5 tys. zł, bo dochodzi koszyk, checkout i więcej szablonów do sprawdzenia." },
+      { q: "O ile realnie strona przyspieszy?", a: "Typowy efekt na zaniedbanej stronie: LCP z 5-8 sekund schodzi poniżej 2,5 s, waga strony spada o połowę lub więcej. Dokładnie dlatego raport pokazuje liczby przed i po, a nie wynik w skali gwiazdek." },
+      { q: "Czy szybsza strona poprawi pozycje w Google?", a: "Core Web Vitals są sygnałem rankingowym, więc zielone metryki pomagają, ale nie zastąpią treści i linków. Pewny efekt jest gdzie indziej: mniej porzuceń, dłuższe sesje, wyższa konwersja." },
+      { q: "Czy optymalizujesz też sklepy WooCommerce?", a: "Tak, to większość zleceń. Sklepy mają najwięcej do ugrania: koszyk AJAX, skrypty płatności i wtyczki kurierskie potrafią podwoić czas ładowania. Testuję pełną ścieżkę zakupową po każdej zmianie." },
+      { q: "Co jeśli efektu nie będzie?", a: "Audyt przed wyceną pokazuje, co jest do ugrania. Jeśli strona jest już dobrze zoptymalizowana i miejsca na poprawę nie ma, mówię to na etapie audytu zamiast sprzedawać wdrożenie." },
+    ],
+    cta: "Podeślij adres strony, zmierzę i wrócę z audytem w 48h",
+  },
 ];
 
 export const servicesIndex = services.map((s) => ({

@@ -16,6 +16,7 @@ const services = [
   { href: "/uslugi/tworzenie-stron-wordpress", label: "Strony WordPress" },
   { href: "/uslugi/aplikacje-nextjs", label: "Strony Next.js" },
   { href: "/uslugi/sklepy-internetowe-woocommerce", label: "Sklepy WooCommerce" },
+  { href: "/uslugi/opieka-wordpress", label: "Opieka WordPress" },
   { href: "/uslugi/wdrozenia-ai", label: "Wdrożenia AI" },
 ];
 
