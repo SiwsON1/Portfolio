@@ -429,11 +429,11 @@ export default async function UslugaPage({
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <a
-              href="mailto:mahinek12@gmail.com"
+              href="mailto:marcin.siwonia.firma@gmail.com"
               className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-ink-mute hover:text-peach transition-colors px-8 py-4"
               data-cursor="KOPIUJ"
             >
-              <span>mahinek12@gmail.com</span>
+              <span>marcin.siwonia.firma@gmail.com</span>
             </a>
           </div>
         </div>
