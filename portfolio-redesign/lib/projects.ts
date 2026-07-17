@@ -8,6 +8,8 @@ export type Project = {
   url?: string;
   repo?: string;
   description: string;
+  /** Opcjonalne case study — akapity renderowane na podstronie projektu zamiast samego opisu. */
+  body?: string[];
   stack: string[];
   featured?: boolean;
 };
@@ -23,6 +25,11 @@ export const projects: Project[] = [
     url: "https://lumikids.com.pl/",
     description:
       "Sklep internetowy z polską odzieżą dziecięcą i młodzieżową na WordPress + WooCommerce. Redesign frontu sklepu, landingi kolekcji, opisy kategorii i produktów, integracja z Allegro, optymalizacja pod konwersję i SEO.",
+    body: [
+      "LumiKids sprzedaje odzież dziecięcą i młodzieżową szytą w Turcji: komplety, bluzy, sukienki, koszule, ubrania na komunię i powrót do szkoły. Sklep działa na WordPressie z WooCommerce, sprzedaje równolegle przez Allegro i wysyła zamówienia w 24 godziny od zaksięgowania wpłaty.",
+      "Moja praca objęła redesign całego frontu sklepu: stronę główną z rotatorem kolekcji, landingi sezonowe, podstrony o nas, kontakt i blog, oraz nowe karty produktów z tabelami rozmiarów i informacją o składzie tkanin. Do tego architektura kategorii pod frazy zakupowe (dziewczynka, chłopczyk, typy ubrań, okazje) i opisy kategorii pisane pod SEO bez kanibalizowania się nawzajem.",
+      "Warstwa techniczna: optymalizacja Core Web Vitals na hostingu współdzielonym, schema.org dla produktów, poprawki UX w koszyku i na mobile, gdzie sklep robi większość ruchu. Efekt: spójny, jasny sklep, który wygląda jak marka, a nie jak szablon z motywu.",
+    ],
     stack: ["WordPress", "WooCommerce", "Elementor", "Custom CSS", "SEO"],
   },
   {
@@ -35,6 +42,11 @@ export const projects: Project[] = [
     url: "https://kantorymapa.pl/",
     description:
       "Ogólnopolski katalog kantorów stacjonarnych: 1900 punktów w 140 miastach, z adresami, godzinami otwarcia i telefonami. Codzienna aktualizacja kursów NBP, porównanie spreadów z kantorami internetowymi, programmatic SEO na podstronach miast.",
+    body: [
+      "Kantorymapa.pl odpowiada na proste pytanie: gdzie w moim mieście wymienię walutę i czy kurs jest uczciwy. W bazie siedzi 1900 kantorów stacjonarnych ze 140 polskich miast, każdy z adresem, godzinami otwarcia i telefonem, zestawiony z aktualnym kursem NBP i najlepszymi ofertami kantorów internetowych.",
+      "Serwis stoi na Next.js jako strona w pełni statyczna: podstrony miast generują się przy buildzie, więc serwer nie wykonuje żadnej pracy przy wejściu użytkownika, a całość ładuje się poniżej sekundy nawet na słabym łączu. Kursy walut odświeżają się codziennie automatycznym procesem, który przebudowuje tylko to, co się zmieniło.",
+      "SEO jest tu rdzeniem produktu, nie dodatkiem: każde miasto ma własną podstronę z unikalną treścią, danymi lokalnymi i schema.org, co daje serwisowi widoczność na setki fraz typu kantor plus nazwa miasta bez pisania treści ręcznie.",
+    ],
     stack: ["Next.js", "React", "Tailwind", "SSG", "SEO"],
   },
   {
@@ -47,6 +59,11 @@ export const projects: Project[] = [
     url: "https://dobrypupil.pl/",
     description:
       "Wyszukiwarka roślin, pokarmów i leków niebezpiecznych dla psa i kota, z poziomem ryzyka osobno dla obu gatunków. Objawy zatrucia, pierwsza pomoc krok po kroku i jasny sygnał, kiedy dzwonić do weterynarza. Treści oparte o źródła weterynaryjne.",
+    body: [
+      "Dobrypupil.pl rozwiązuje problem, który zna każdy właściciel psa albo kota: zwierzak właśnie coś zjadł i trzeba w sekundę wiedzieć, czy to groźne. Baza obejmuje rośliny, pokarmy, leki i chemię domową, a każda substancja ma poziom ryzyka opisany osobno dla psa i osobno dla kota, bo te same rzeczy trują je zupełnie inaczej.",
+      "Poza samą oceną ryzyka strona podaje objawy zatrucia, plan pierwszej pomocy krok po kroku i wyraźny sygnał, kiedy kończy się domowa obserwacja, a zaczyna telefon do weterynarza. Treści powstały w oparciu o publikacje weterynaryjne, a stany wyjątkowe prowadzą do osobnego trybu nagłego wypadku.",
+      "Technicznie to Astro w wydaniu statycznym: zero JavaScriptu tam, gdzie nie jest potrzebny, wyszukiwarka działająca natychmiast po stronie przeglądarki i podstrony substancji zbudowane pod frazy typu czy dana rzecz jest trująca dla psa. Ładowanie w ułamku sekundy, bo w sytuacji stresowej nikt nie będzie czekał na stronę.",
+    ],
     stack: ["Astro", "TypeScript", "SSG", "SEO"],
   },
   {
@@ -59,6 +76,11 @@ export const projects: Project[] = [
     url: "https://owodzie.pl/",
     description:
       "Baza twardości wody z kranu: 152 miasta i 274 strefy pomiarowe. Wyniki w °dH, mg/l i mmol/l z klasą twardości i datą pomiaru, interaktywna mapa Polski, kalkulator przeliczania jednostek, programmatic SEO na podstronach miast.",
+    body: [
+      "Owodzie.pl to atlas twardości wody z kranu w polskich miastach. Odpowiada na pytanie, które zadaje sobie każdy, kto ustawia zmywarkę, ekspres do kawy albo walczy z kamieniem: jaką właściwie mam wodę. W bazie są 152 miasta i 274 strefy pomiarowe, bo w większych miastach twardość różni się między dzielnicami zależnie od ujęcia.",
+      "Każdy pomiar podany jest w trzech jednostkach (stopnie niemieckie, mg/l węglanu wapnia i mmol/l) z klasą twardości, datą pomiaru i linkiem do źródła w danych wodociągów. Do tego kalkulator przeliczania jednostek i poradnik, jak samodzielnie sprawdzić twardość wody paskami testowymi.",
+      "Strona zbudowana w Astro jako serwis statyczny z interaktywną mapą Polski, gdzie każda kropka to miasto z danymi. Podstrony miast i województw generują się z jednej bazy danych, co daje unikalną treść pod frazy lokalne bez ręcznego pisania 152 tekstów.",
+    ],
     stack: ["Astro", "TypeScript", "SSG", "SEO"],
   },
   {
@@ -494,8 +516,8 @@ export const projects: Project[] = [
 export const FEATURED_SLUGS = [
   "kancelaria-mpiontek",
   "kosmoteka",
-  "inbc",
-  "rcom-service",
+  "kantorymapa",
+  "lumikids",
 ] as const;
 
 export const featuredProjects = FEATURED_SLUGS.map(

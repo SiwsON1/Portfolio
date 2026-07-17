@@ -218,30 +218,45 @@ export default async function ProjektPage({
               {p.description}
             </p>
             <hr className="hairline" />
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                Zakres prac
-              </p>
-              <p className="text-ink-mute">
-                {p.category === "commercial"
-                  ? `Pełen cykl: discovery → projekt graficzny → kodowanie → wdrożenie → opieka. Stack: ${p.stack.join(", ")}.`
-                  : p.category === "fullstack"
-                    ? `Aplikacja full-stack od architektury po deploy. Frontend, backend, baza danych, integracje, hosting. Stack: ${p.stack.join(", ")}.`
-                    : `Projekt edukacyjny / proof-of-concept. Eksperyment z technologią ${p.stack.join(", ")} w izolowanym środowisku.`}
-              </p>
-            </div>
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                Kontekst
-              </p>
-              <p className="text-ink-mute">
-                {p.category === "commercial"
-                  ? "Klient z konkretnym celem biznesowym, ograniczonym budżetem i terminem. Wybór technologii podyktowany dalszą edytowalnością i kosztami utrzymania."
-                  : p.category === "fullstack"
-                    ? "Aplikacja zaprojektowana z myślą o skalowaniu i łatwym dodawaniu nowych modułów. Pełna kontrola nad każdą warstwą stosu."
-                    : "Praca własna w okresie nauki — testowanie konkretnych rozwiązań technologicznych w bezpiecznym środowisku."}
-              </p>
-            </div>
+            {p.body ? (
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
+                  O projekcie
+                </p>
+                <div className="space-y-6 text-ink-mute">
+                  {p.body.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <>
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
+                    Zakres prac
+                  </p>
+                  <p className="text-ink-mute">
+                    {p.category === "commercial"
+                      ? `Pełen cykl: discovery → projekt graficzny → kodowanie → wdrożenie → opieka. Stack: ${p.stack.join(", ")}.`
+                      : p.category === "fullstack"
+                        ? `Aplikacja full-stack od architektury po deploy. Frontend, backend, baza danych, integracje, hosting. Stack: ${p.stack.join(", ")}.`
+                        : `Projekt edukacyjny / proof-of-concept. Eksperyment z technologią ${p.stack.join(", ")} w izolowanym środowisku.`}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
+                    Kontekst
+                  </p>
+                  <p className="text-ink-mute">
+                    {p.category === "commercial"
+                      ? "Klient z konkretnym celem biznesowym, ograniczonym budżetem i terminem. Wybór technologii podyktowany dalszą edytowalnością i kosztami utrzymania."
+                      : p.category === "fullstack"
+                        ? "Aplikacja zaprojektowana z myślą o skalowaniu i łatwym dodawaniu nowych modułów. Pełna kontrola nad każdą warstwą stosu."
+                        : "Praca własna w okresie nauki — testowanie konkretnych rozwiązań technologicznych w bezpiecznym środowisku."}
+                  </p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

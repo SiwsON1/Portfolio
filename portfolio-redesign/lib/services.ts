@@ -83,20 +83,20 @@ export const services: Service[] = [
         body: "Skrócony checkout, koszyk zapamiętywany między wizytami, dosprzedaż na karcie produktu, ratowanie porzuconych koszyków, Google/Meta Pixel, GA4 enhanced ecommerce, testy A/B.",
       },
       {
-        title: "Performance",
-        body: "LiteSpeed cache + Cloudflare CDN. AJAX cart, lazy load obrazków produktów, optymalizacja query do bazy. Cel: poniżej 2s LCP nawet przy 1000+ produktach.",
+        title: "Wydajność",
+        body: "LiteSpeed cache + Cloudflare CDN. Koszyk AJAX, leniwe ładowanie zdjęć produktów, optymalizacja zapytań do bazy. Cel: poniżej 2s LCP nawet przy 1000+ produktach.",
       },
       {
-        title: "B2B + multilingual",
+        title: "B2B i wersje językowe",
         body: "Cenniki per grupa klientów (B2B i B2C), minimalne wielkości zamówień, produkty widoczne tylko dla wybranych grup. Polylang/WPML dla wersji obcojęzycznych.",
       },
     ],
     process: [
-      { step: "01", title: "Workshop produktowy", body: "Mapa produktów, kategorie, atrybuty, integracje, model rozliczeń, polityki." },
+      { step: "01", title: "Warsztat produktowy", body: "Mapa produktów, kategorie, atrybuty, integracje, model rozliczeń, polityki sklepu." },
       { step: "02", title: "Design + UX", body: "Makiety katalogu, karty produktu, koszyka, checkout. Mobile-first." },
       { step: "03", title: "Wdrożenie WooCommerce", body: "Custom theme, konfiguracja produktów, integracje płatności i wysyłki, podatki." },
       { step: "04", title: "Testy + GA4", body: "Testowanie zamówień end-to-end, GA4 enhanced ecommerce, Pixel, conversion tracking." },
-      { step: "05", title: "Launch + opieka", body: "Migracja produktów ze starego sklepu (jeśli jest), opieka miesięczna z monitoringiem." },
+      { step: "05", title: "Start + opieka", body: "Migracja produktów ze starego sklepu (jeśli jest), opieka miesięczna z monitoringiem." },
     ],
     faq: [
       { q: "Ile kosztuje sklep WooCommerce?", a: "Mniejszy sklep (do 100 produktów, podstawowe integracje): 12-25 tys. zł. Średni (do 500 produktów, B2B, multilingual): 25-50 tys. Większy headless lub multistore: powyżej 50 tys." },
@@ -140,7 +140,7 @@ export const services: Service[] = [
     ],
     process: [
       { step: "01", title: "Audyt WP", body: "Inwentarz custom post types, ACF, kategorii, planów, integracji. Co trzeba wystawić przez API." },
-      { step: "02", title: "Backend setup", body: "WPGraphQL + niezbędne pluginy ACF support, custom resolvers dla custom fields." },
+      { step: "02", title: "Przygotowanie backendu", body: "WPGraphQL + niezbędne pluginy ACF, własne resolvery dla pól dynamicznych." },
       { step: "03", title: "Frontend Next.js", body: "App Router + ISR + WPGraphQL queries. Designy 1:1 z istniejącymi (lub od nowa)." },
       { step: "04", title: "Migracja + DNS", body: "WP backend pozostaje na starym hostingu, frontend na Vercel. DNS przełącza root domenę na Next.js." },
     ],
@@ -161,7 +161,7 @@ export const services: Service[] = [
       "Strony internetowe jak case studies z Awwwards: animacje GSAP, custom cursor, page transitions, dark mode, R3F. Design-led, mobile-first. Wrocław i online.",
     h1: "Nowoczesne strony internetowe. Design-led, nie stack-led.",
     lead:
-      "Strony, które wyglądają jak case studies z Awwwards SOTY. Animacje, custom cursor, page transitions, scroll-triggered visuals. Stack dobieramy do designu, nie odwrotnie. Jeśli szukasz konkretnej technologii, zajrzyj do [Stron WordPress](/uslugi/tworzenie-stron-wordpress) albo [Stron Next.js](/uslugi/aplikacje-nextjs).",
+      "Strony, które wyglądają jak case studies z Awwwards SOTY. Animacje, własny kursor, przejścia między widokami, efekty odpalane scrollem. Stack dobieramy do designu, nie odwrotnie. Jeśli szukasz konkretnej technologii, zajrzyj do [Stron WordPress](/uslugi/tworzenie-stron-wordpress) albo [Stron Next.js](/uslugi/aplikacje-nextjs).",
     intro: [
       "Tę usługę robię dla klientów, którym standardowy szablon nie wystarczy. Brand chce zostać zapamiętany, oferta jest premium, konkurencja siedzi na WordPressach z 2018 roku. Wtedy ma sens wejść na poziom Lusion, ActiveTheory czy raviklaassens.com.",
       "Co dostajesz wizualnie: custom kursor, animacje na stronie odpalane scrollem (GSAP ScrollTrigger), przejścia między widokami, elementy 3D w R3F (jeśli pasują), mikrointerakcje na każdym hoverze, dark mode jako natywny stan. Plus standardy 2026: Core Web Vitals 95+, schema.org dla AI search, obrazki OG per podstrona.",
@@ -186,8 +186,8 @@ export const services: Service[] = [
       },
     ],
     process: [
-      { step: "01", title: "Discovery + benchmarks", body: "Audyt obecnej (jeśli jest) + 3 referencje docelowe. Mierzymy wyjściową wydajność." },
-      { step: "02", title: "Design + tokens", body: "Design system w Figmie, z niego tokeny Tailwind, z nich komponenty. Spójność od projektu po kod." },
+      { step: "01", title: "Rozpoznanie i benchmarki", body: "Audyt obecnej strony (jeśli jest) + 3 referencje docelowe. Mierzymy wyjściową wydajność." },
+      { step: "02", title: "Design i tokeny", body: "Design system w Figmie, z niego tokeny Tailwind, z nich komponenty. Spójność od projektu po kod." },
       { step: "03", title: "Wdrożenie", body: "Next.js App Router, Sanity/Contentful jako CMS, Vercel preview deploys per PR." },
       { step: "04", title: "Performance + SEO", body: "Lighthouse audit per route, schema, OG, sitemap, Search Console." },
     ],
@@ -236,7 +236,7 @@ export const services: Service[] = [
       { step: "01", title: "Strategia", body: "30-min discovery: kto, dla kogo, jaka konwersja, jakie frazy SEO. Brief w 24h." },
       { step: "02", title: "Design", body: "Moodboard, potem makiety w Figmie, custom design system i prototyp animacji." },
       { step: "03", title: "Wdrożenie", body: "Next.js App Router + Sanity CMS + Vercel deploy. Staging od dnia 3." },
-      { step: "04", title: "Launch", body: "Migracja DNS bez przerwy, schema, sitemap, GA4, Search Console, opieka 60 dni." },
+      { step: "04", title: "Start", body: "Migracja DNS bez przerwy, schema, sitemap, GA4, Search Console, opieka 60 dni." },
     ],
     faq: [
       { q: "Co powinna zawierać strona internetowa małej firmy?", a: "Minimum: strona główna z ofertą, podstrony usług, dane kontaktowe z mapą i klikalnym telefonem na mobile, formularz. Do tego schema.org LocalBusiness, profil Google Business spięty z tą samą nazwą i adresem oraz podstawy SEO: meta tagi, sitemap, szybkie ładowanie. Blog opcjonalnie, jeśli ktoś faktycznie będzie pisał." },
@@ -267,8 +267,8 @@ export const services: Service[] = [
         body: "Do walidacji pomysłu. Logowanie + 3-5 funkcji + płatności. Deploy na Vercel od pierwszego dnia.",
       },
       {
-        title: "Mid-size apps",
-        body: "Konfiguratory, panele B2B, marketplace lite. 8-16 tygodni, dokumentacja + testy + monitoring.",
+        title: "Aplikacje średniej skali",
+        body: "Konfiguratory, panele B2B, mniejsze marketplace'y. 8-16 tygodni, dokumentacja + testy + monitoring.",
       },
       {
         title: "Funkcje AI w aplikacji",
@@ -280,10 +280,10 @@ export const services: Service[] = [
       },
     ],
     process: [
-      { step: "01", title: "Brief + estymacja", body: "Workshop 1h: user stories, zakres MVP, must-have vs nice-to-have. Wycena w 24h." },
+      { step: "01", title: "Brief i wycena", body: "Warsztat 1h: historyjki użytkownika, zakres MVP, co konieczne, a co można dodać później. Wycena w 24h." },
       { step: "02", title: "Sprint 1: szkielet", body: "Setup repo, design system, auth, podstawowe routes. Klient widzi staging." },
       { step: "03", title: "Iteracje 2-tygodniowe", body: "Demo każdego sprintu, feedback, poprawki. Zero niespodzianek na końcu." },
-      { step: "04", title: "Launch + maintenance", body: "Production deploy, monitoring (Sentry), runbook, opcjonalna opieka miesięczna." },
+      { step: "04", title: "Start + utrzymanie", body: "Deploy produkcyjny, monitoring (Sentry), instrukcja obsługi, opcjonalna opieka miesięczna." },
     ],
     faq: [
       { q: "Jeden wykonawca to ryzyko. Co jeśli wypadniesz?", a: "Ograniczam je tak: pełna dokumentacja, kod w repo klienta od pierwszego dnia, komentarze w kodzie, wideo z omówieniem architektury na koniec. Jakikolwiek dev Next.js wejdzie po mnie bez problemu." },
@@ -308,11 +308,11 @@ export const services: Service[] = [
     ],
     bullets: [
       {
-        title: "CDN deploy globalny",
+        title: "Globalny deploy na CDN",
         body: "Plik HTML serwowany z najbliższego węzła edge (Vercel ma 100+, Cloudflare 300+). Lokalizacja użytkownika przestaje mieć znaczenie.",
       },
       {
-        title: "Build-time pre-render",
+        title: "Pre-render przy buildzie",
         body: "Next.js generuje HTML przy buildzie, nie przy wejściu użytkownika. Zero czekania na bazę danych. ISR regeneruje strony, gdy treść się zmienia.",
       },
       {
@@ -320,13 +320,13 @@ export const services: Service[] = [
         body: "Sanity / Contentful / Strapi jako edycja. API zwraca JSON, frontend renderuje. Kilka frontendów może jechać na tych samych danych.",
       },
       {
-        title: "Edge functions dla dynamiki",
+        title: "Dynamika przez edge functions",
         body: "Loginy, formularze, personalizacja: wszystko jako edge functions (Vercel/Cloudflare Workers). Nadal sub-100ms response.",
       },
     ],
     process: [
       { step: "01", title: "Architektura", body: "Mapa: co statyczne (90%), co dynamiczne (10%). Wybór CMS + payment + auth provider." },
-      { step: "02", title: "CMS setup", body: "Schema w Sanity Studio. Custom fields, relacje, role redakcyjne. Live preview." },
+      { step: "02", title: "Konfiguracja CMS", body: "Schemat treści w Sanity Studio. Pola, relacje, role redakcyjne. Podgląd na żywo." },
       { step: "03", title: "Frontend Next.js", body: "App Router + ISR + edge functions dla auth/forms. Design + animacje." },
       { step: "04", title: "Deploy + monitoring", body: "Vercel preview per PR, produkcja jednym kliknięciem. Sentry, Analytics, Search Console." },
     ],
@@ -530,8 +530,8 @@ export const services: Service[] = [
         body: "Zamiast pisać komponenty od zera, używam shadcn/ui jako bazy i rozszerzam pod brand klienta. Pełna kontrola nad kodem, brak vendor lock-in.",
       },
       {
-        title: "State management",
-        body: "Zustand albo Redux Toolkit jeśli skala wymaga. TanStack Query dla danych z API. Bez zbędnych warstw abstrakcji.",
+        title: "Zarządzanie stanem",
+        body: "Zustand albo Redux Toolkit, jeśli skala wymaga. TanStack Query dla danych z API. Bez zbędnych warstw abstrakcji.",
       },
       {
         title: "Testowanie",

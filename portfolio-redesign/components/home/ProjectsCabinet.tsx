@@ -5,15 +5,15 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { featuredProjects, type Project } from "@/lib/projects";
+import { featuredProjects, projects, type Project } from "@/lib/projects";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 /**
- * Cabinet projektów na home — alternating editorial layout, większe plates,
- * peach line indicator + corner number, mocniejszy hover z reveal.
+ * Cabinet projektów na home — alternating editorial layout, peach line
+ * indicator + corner number, focus-pull blur na non-hovered (pj-stack/pj-row).
  */
 export function ProjectsCabinet() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -67,8 +67,8 @@ export function ProjectsCabinet() {
             Wybrane realizacje · {String(featuredProjects.length).padStart(2, "0")}
           </p>
           <p className="text-ink-mute text-sm max-w-xs leading-relaxed">
-            Cztery z ostatnich dwóch lat dla klientów z PL i DE. Pełna lista
-            (34) pod{" "}
+            Cztery wybrane realizacje: wdrożenia dla klientów i własne produkty. Pełna lista
+            ({projects.length}) pod{" "}
             <Link
               href="/projekty"
               className="text-ink underline underline-offset-4 decoration-ink-faint hover:text-peach hover:decoration-peach transition-colors"
