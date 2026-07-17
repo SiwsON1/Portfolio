@@ -23,7 +23,7 @@ export const services: Service[] = [
     lead:
       "WordPress wybiera się gdy klient chce sam edytować treści bez zaglądania do kodu. Zrobiony dobrze, jest szybki, bezpieczny i indeksowalny. Zrobiony źle, jest lagiem, dziurą bezpieczeństwa i duplikatem 800 innych stron z Elementora.",
     intro: [
-      "Stawiam WordPressy od 2020 roku. Zrobiłem ponad 25 wdrożeń: kancelarie, hotele, sklepy WooCommerce, portfolio prywatne. Każdy stack: custom theme + niezbędne minimum pluginów + Yoast/Rank Math SEO + LiteSpeed cache. Bez gotowych theme'ów typu Avada/Divi które dodają 200kg JavaScriptu.",
+      "Stawiam WordPressy od 2020 roku. Zrobiłem ponad 25 wdrożeń WordPress: kancelarie, hotele, sklepy WooCommerce, portfolio prywatne. Każdy stack: custom theme + niezbędne minimum pluginów + Yoast/Rank Math SEO + LiteSpeed cache. Bez gotowych theme'ów typu Avada/Divi które dodają 200kg JavaScriptu.",
       "Konkretne realizacje WordPressowe znajdziesz w [pełnej liście projektów](/projekty), m.in. [Kancelaria Maria Piontek](/projekty/kancelaria-mpiontek), [INBC broker ubezpieczeniowy](/projekty/inbc), [RCOM Service](/projekty/rcom-service). Sklep internetowy WooCommerce to osobna usługa, [opisana tutaj](/uslugi/sklepy-internetowe-woocommerce).",
     ],
     bullets: [
@@ -70,7 +70,7 @@ export const services: Service[] = [
     lead:
       "WooCommerce robi 30% sklepów online na świecie. Działa, jest tani, integruje się ze wszystkim co potrzebujesz w polskim e-commerce. Wymaga jednak osoby która wie jak go skonfigurować pod konwersję, nie tylko jak go zainstalować.",
     intro: [
-      "Najnowszy projekt: [Kosmoteka](/projekty/kosmoteka) — sklep z kosmetykami na WooCommerce z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów dla klientów z branż furniture, akcesoria.",
+      "Najnowszy projekt: [Kosmoteka](/projekty/kosmoteka), sklep z teleskopami i sprzętem obserwacyjnym na WooCommerce z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów dla klientów z branż furniture, akcesoria.",
       "WooCommerce wybiera się gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne stack-i. Jeśli zastanawiasz się czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026).",
     ],
     bullets: [
@@ -103,7 +103,7 @@ export const services: Service[] = [
       { q: "Czy mogę sam dodawać produkty?", a: "Tak. WooCommerce ma standardowy panel produktów, plus wgrasz CSV/XML masowo z Excela. Każda kategoria, atrybut i wariant edytowalny." },
       { q: "Co z migracją z innej platformy (Shoper, IdoSell, Shopify)?", a: "Robię migracje z większości polskich platform. Eksport produktów + zamówień + klientów + przekierowania 301 starych URLi pod nowe (krytyczne dla SEO)." },
       { q: "Czy WooCommerce nadąży przy dużym ruchu?", a: "Z dobrym hostingiem (LiteSpeed cache + Cloudflare + Redis dla object cache) wytrzymuje 10-50 tys. wizyt dziennie. Powyżej rekomenduję headless (Next.js commerce + WooCommerce jako backend)." },
-      { q: "Co z fakturowaniem i podatkami?", a: "Integracja z Fakturownia/wFirma/iFirma — automatyczne faktury po zamówieniu. Konfiguracja stawek VAT, płatności B2B z NIP, eksport do księgowej co miesiąc." },
+      { q: "Co z fakturowaniem i podatkami?", a: "Integracja z Fakturownia/wFirma/iFirma: automatyczne faktury po zamówieniu. Konfiguracja stawek VAT, płatności B2B z NIP, eksport do księgowej co miesiąc." },
     ],
     cta: "Pogadajmy o sklepie 30 minut, wycena w 48h",
   },
@@ -115,7 +115,7 @@ export const services: Service[] = [
       "Headless setup: WordPress jako CMS dla redakcji, frontend stawiamy w Next.js na Vercel. ISR, Lighthouse 95+, edycja w panelu jak zawsze. Migracja istniejących.",
     h1: "Headless WordPress — szybkość Next.js, edycja WordPress",
     lead:
-      "Headless WordPress łączy najlepsze z dwóch światów: WordPress jako edytor treści (znany każdemu redaktorowi) plus Next.js jako frontend (szybki, SEO-friendly, deploy na CDN). Idealny dla firm które już mają redakcję pracującą na WP, ale chcą wydajności jak na Vercel.",
+      "Headless WordPress łączy edytor treści WordPressa (znany każdemu redaktorowi) z frontendem w Next.js (szybki, SEO-friendly, deploy na CDN). Idealny dla firm które już mają redakcję pracującą na WP, ale chcą wydajności jak na Vercel.",
     intro: [
       "Headless WordPress to architektura w której WordPress zostaje, ale tylko jako backend. Treści wystawiasz przez REST API albo GraphQL (WPGraphQL), a frontend renderujesz w Next.js / Astro / Nuxt. Wynik: Lighthouse 95+, edge caching, edycja jak zawsze.",
       "Robię migracje istniejących stron WordPress na headless setup: backend zostaje (admin, edytor, role), frontend stawiany od zera w Next.js. Klient widzi to samo co dotąd, użytkownik dostaje 3x szybszą stronę. Szczegóły kosztów [w poście o migracji WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
@@ -123,11 +123,11 @@ export const services: Service[] = [
     bullets: [
       {
         title: "WordPress jako CMS",
-        body: "Klient edytuje w znanym panelu — Gutenberg, ACF, custom fields, role, multilanguage. Bez krzywej uczenia się.",
+        body: "Klient edytuje w znanym panelu: Gutenberg, ACF, custom fields, role, multilanguage. Bez krzywej uczenia się.",
       },
       {
         title: "Next.js jako frontend",
-        body: "ISR (Incremental Static Regeneration) — strony generowane na build, regenerowane on-demand po update'cie z WP webhookiem.",
+        body: "ISR (Incremental Static Regeneration): strony generowane na build, regenerowane on-demand po update'cie z WP webhookiem.",
       },
       {
         title: "Wydajność CDN",
@@ -145,9 +145,9 @@ export const services: Service[] = [
       { step: "04", title: "Migracja + DNS", body: "WP backend pozostaje na starym hostingu, frontend na Vercel. DNS przełącza root domenę na Next.js." },
     ],
     faq: [
-      { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność — frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO — Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo — admin panel niewidoczny dla użytkowników, redukuje attack surface." },
+      { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność: frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO: Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo: admin panel niewidoczny dla użytkowników, redukuje attack surface." },
       { q: "Ile kosztuje migracja na headless?", a: "Małe stronki (50-100 podstron): 15-25 tys. zł. Średnie (200-500 podstron + custom logic): 30-60 tys. Większe ze sklepem WooCommerce headless: od 50 tys." },
-      { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook triggerge ISR rebuild — strona aktualizuje się w ~30 sekund od save." },
+      { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook wyzwala rebuild ISR i strona aktualizuje się w ~30 sekund od zapisu." },
       { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają migracji na Next-native odpowiedniki. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może być na najtańszym shared." },
     ],
     cta: "Pogadajmy o migracji na headless WordPress",
@@ -157,12 +157,12 @@ export const services: Service[] = [
     title: "Nowoczesne strony internetowe",
     metaTitle: "Nowoczesne strony internetowe — design, animacje, custom cursor",
     metaDescription:
-      "Strony internetowe robione jak case studies z Awwwards: animacje GSAP, custom cursor, page transitions, dark mode, R3F. Design-led, mobile-first. Wrocław i online.",
+      "Strony internetowe jak case studies z Awwwards: animacje GSAP, custom cursor, page transitions, dark mode, R3F. Design-led, mobile-first. Wrocław i online.",
     h1: "Nowoczesne strony internetowe. Design-led, nie stack-led.",
     lead:
       "Strony, które wyglądają jak case studies z Awwwards SOTY. Animacje, custom cursor, page transitions, scroll-triggered visuals. Stack dobieramy do designu, nie odwrotnie. Jeśli szukasz konkretnej technologii, zajrzyj do [Stron WordPress](/uslugi/tworzenie-stron-wordpress) albo [Stron Next.js](/uslugi/aplikacje-nextjs).",
     intro: [
-      "Tę usługę robię dla klientów, którym standardowy szablon nie wystarczy. Brand chce zostać zapamiętany, oferta jest premium, konkurencja siedzi na Wordpressach z 2018 roku. Wtedy ma sens wejść na poziom Lusion, ActiveTheory, Klaassens, raviklaassens.com.",
+      "Tę usługę robię dla klientów, którym standardowy szablon nie wystarczy. Brand chce zostać zapamiętany, oferta jest premium, konkurencja siedzi na WordPressach z 2018 roku. Wtedy ma sens wejść na poziom Lusion, ActiveTheory, Klaassens, raviklaassens.com.",
       "Co dostajesz wizualnie: custom kursor, ScrollTrigger animacje sekcji, page transitions między widokami, 3D elementy w R3F (jeśli pasują), micro-interactions na każdym hoverze, dark mode jako natywny stan. Plus standardy 2026: Core Web Vitals 95+, schema.org dla AI search, OG images per route.",
       "Konkretną technologię dobieram po briefie. Jeśli strona ma głównie content i klient chce edytować, idzie WordPress headless. Jeśli aplikacja ma własną logikę i panel, idzie Next.js. Detale stack-owe [opisałem osobno dla WordPressa](/uslugi/tworzenie-stron-wordpress) i [dla Next.js](/uslugi/aplikacje-nextjs).",
     ],
@@ -173,11 +173,11 @@ export const services: Service[] = [
       },
       {
         title: "Custom cursor i micro-motion",
-        body: "Kursor zmienia się nad linkami, projekcjami, formularzami. Hover'y robione z DT detail, nie tylko `color: peach`.",
+        body: "Kursor zmienia się nad linkami, projektami i formularzami. Hovery dopracowane w detalu, nie tylko `color: peach`.",
       },
       {
         title: "3D bez ciężaru",
-        body: "React Three Fiber dla pojedynczych wow-momentów (hero, dragable sphere, scroll scene). Lazy loaded, mobile-fallback statyczny.",
+        body: "React Three Fiber dla pojedynczych wow-momentów (hero, przeciągalna sfera 3D, scroll scene). Lazy loaded, mobile-fallback statyczny.",
       },
       {
         title: "Dark mode natywny",
@@ -204,7 +204,7 @@ export const services: Service[] = [
     title: "Strona firmowa MŚP",
     metaTitle: "Strona firmowa dla małej firmy — pakiet, wycena 24h",
     metaDescription:
-      "Strona firmowa dla małej i średniej firmy (5-50 osób): pakiet wizytówka + usługi + blog + kontakt. Stack pod budżet (WordPress lub Next.js). Wrocław i online. Od 6 tys. zł.",
+      "Strona firmowa dla małej i średniej firmy (5-50 osób): wizytówka, usługi, blog, kontakt. WordPress lub Next.js pod budżet. Wrocław i online. Od 6 tys. zł.",
     h1: "Strona firmowa dla małej firmy. Pakiet, nie projekt na rok.",
     lead:
       "Pakiet dla firm 5-50 osób, które potrzebują strony szybko, sensownie i bez 200-stronicowego briefu. Wizytówka, usługi, blog, kontakt. Wycena w 24h, wdrożenie 3-6 tygodni. Stack dobieram do budżetu i tego, kto będzie edytował.",
@@ -242,7 +242,7 @@ export const services: Service[] = [
       { q: "WordPress czy Next.js dla mojej firmy?", a: "WordPress jeśli chcesz edytować treści sam, masz budżet do 12 tys. zł i nie planujesz nietypowej logiki. Next.js jeśli budżet pozwala na 15+ tys. zł, zależy Ci na maksymalnej szybkości i jesteś gotów na CMS typu Sanity. Decyzję podejmujemy na briefie." },
       { q: "Ile czasu zajmuje wdrożenie?", a: "Wizytówka (jedna podstrona + kontakt): 2-3 tygodnie. Pakiet firmowy z usługami i blogiem: 4-6 tygodni. Z customową logiką (kalkulator wyceny, panel klienta): osobna usługa, [aplikacje Next.js](/uslugi/aplikacje-nextjs)." },
       { q: "Co jeśli już mam stronę?", a: "Robię migrację. Stare URL-e przekierowuję 301 na nowe (zachowując rankingi SEO), treści przenoszę do CMS, design odświeżam." },
-      { q: "Czy schemę LocalBusiness wpinasz dla każdej branży?", a: "Tak, plus dobieramy podtyp pod branżę: LegalService, MedicalBusiness, AccountingService, AutoRepair, Restaurant. Google daje wtedy lepsze widoczność w lokalnym Map Pack." },
+      { q: "Czy schemę LocalBusiness wpinasz dla każdej branży?", a: "Tak, plus dobieramy podtyp pod branżę: LegalService, MedicalBusiness, AccountingService, AutoRepair, Restaurant. Google daje wtedy lepszą widoczność w lokalnym Map Pack." },
     ],
     cta: "Wyślij brief firmowy, dostaniesz wycenę pakietu w 24h",
   },
@@ -256,7 +256,7 @@ export const services: Service[] = [
     lead:
       "Software house bez software house. Jeden dev (ja) + Twój brief = aplikacja Next.js w 4-12 tygodni. Bez project managera w środku, bez 30% marży agencji, bez handover między 4 ludźmi. Komunikacja bezpośrednia, decyzje natychmiast.",
     intro: [
-      "Większość polskich agencji Next.js liczy 30-50 ludzi: PM, BA, designer, frontend, backend, QA, devops. Cena: 350-500 zł/h. Ja jeden dev z 6-letnim stage'em w stacku — 220-280 zł/h, mniej narzutu organizacyjnego, ten sam kod end-to-end. Idealne dla MVP i mid-size aplikacji.",
+      "Większość polskich agencji Next.js liczy 30-50 ludzi: PM, BA, designer, frontend, backend, QA, devops. Cena: 350-500 zł/h. Ja jeden dev z sześcioletnim stażem w tym stacku: 220-280 zł/h, mniej narzutu organizacyjnego, ten sam kod end-to-end. Idealne dla MVP i mid-size aplikacji.",
       "Robiłem aplikacje pod stack: Next.js 16, React 19, TypeScript, Tailwind, GSAP/R3F, Sanity/Contentful CMS, Postgres+Prisma, Clerk/NextAuth, Stripe, AI (OpenAI, Claude). Pełen full-stack od bazy do animacji.",
     ],
     bullets: [
@@ -285,7 +285,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Solo dev = ryzyko bus factor?", a: "Mitigowane przez: pełną dokumentację, kod w GitHub klienta od dnia 1, comment-heavy code, video walkthrough na koniec. Jakikolwiek dev Next.js wejdzie po mnie bez problemu." },
-      { q: "Co z designem jeśli nie mam designera?", a: "Robię też design w Figma (mam 6 lat doświadczenia). Albo współpracuję z freelancem designerem (znam kilku top w PL)." },
+      { q: "Co z designem jeśli nie mam designera?", a: "Robię też projekty graficzne w Figmie. Albo współpracuję z freelancem designerem (znam kilku top w PL)." },
       { q: "Stawka godzinowa czy ryczałt?", a: "Wybór klienta. Ryczałt: lepsza predyktywność, +15% buffer na unknown unknowns. Stawka godzinowa (220-280 zł): pełna transparentność, faktura per miesiąc z timesheetem." },
       { q: "Czy mogę zatrudnić Cię na long-term?", a: "Tak. Najczęstsza forma: 60-100h/miesiąc retainer. Cena retainerowa niższa od godzinowej." },
     ],
@@ -299,7 +299,7 @@ export const services: Service[] = [
       "Architektura Jamstack: pre-render na build, deploy na CDN, dynamika przez edge functions. Stack: Next.js + Sanity + Vercel. Sub-1s LCP globalnie.",
     h1: "Strony Jamstack — szybkość statyki, dynamika SPA",
     lead:
-      "Jamstack (JavaScript + APIs + Markup) to architektura w której strona jest w 90% statyczna (pre-rendered HTML na CDN) ale dynamika przychodzi przez API. Najszybsza możliwa konfiguracja webowa w 2026 — strony ładują się w <1s globalnie.",
+      "Jamstack (JavaScript + APIs + Markup) to architektura w której strona jest w 90% statyczna (pre-rendered HTML na CDN) ale dynamika przychodzi przez API. Najszybsza możliwa konfiguracja webowa w 2026: strony ładują się w <1s globalnie.",
     intro: [
       "Stawiam strony w architekturze Jamstack od 2022. Stack docelowy: Next.js (frontend) + Sanity/Contentful (CMS) + Vercel (CDN+edge functions) + zewnętrzne APIs (Stripe, OpenAI, Algolia). Wszystko cached, wszystko serverless. Pełen przewodnik [w poście Jamstack co to jest](/blog/jamstack-co-to-jest).",
       "Idealne dla: blogów, marketing sites, landing pages, e-commerce katalogowych, serwisów contentowych. Mniej idealne dla: real-time chatów, wewnętrznych dashboardów z hot data, SaaS z wysoką dynamiką per-user.",
@@ -319,7 +319,7 @@ export const services: Service[] = [
       },
       {
         title: "Edge functions dla dynamiki",
-        body: "Loginy, formularze, personalizacja — wszystko jako edge functions (Vercel/Cloudflare Workers). Nadal sub-100ms response.",
+        body: "Loginy, formularze, personalizacja: wszystko jako edge functions (Vercel/Cloudflare Workers). Nadal sub-100ms response.",
       },
     ],
     process: [
@@ -341,7 +341,7 @@ export const services: Service[] = [
     title: "Tworzenie stron www",
     metaTitle: "Tworzenie stron www Wrocław — WordPress lub Next.js, od 2020",
     metaDescription:
-      "Tworzenie stron www we Wrocławiu, sześć lat doświadczenia, ponad 30 wdrożeń. WordPress lub Next.js zależnie od potrzeb. Wycena w 24h, dowóz w terminie.",
+      "Tworzenie stron www we Wrocławiu, sześć lat doświadczenia, ponad 30 wdrożeń. WordPress lub Next.js zależnie od potrzeb. Wycena w 24h, wdrożenie w terminie.",
     h1: "Tworzenie stron www. Wrocław, od 2020.",
     lead:
       "Hub usług webowych dla firm. Jeśli wiesz że chcesz stronę ale nie wiesz w jakiej technologii, zaczynamy tu. Jeśli wiesz że [WordPress](/uslugi/tworzenie-stron-wordpress) albo [Next.js](/uslugi/aplikacje-nextjs), idź od razu do specyficznej usługi. Sklep online: [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
@@ -428,7 +428,7 @@ export const services: Service[] = [
     title: "Tworzenie stron Next.js",
     metaTitle: "Tworzenie stron Next.js Wrocław — App Router, edge, premium",
     metaDescription:
-      "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge deploy na Vercel. Strony premium, headless e-commerce, panele klienta. Od 12 tys. zł.",
+      "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge na Vercel. Premium, headless e-commerce, panele klienta. Od 12 tys. zł.",
     h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
     lead:
       "Strony Next.js dla firm które chcą najszybszego web stacka dostępnego w 2026. Statyczny HTML na edge, server components, sub-200ms FCP globalnie. Next.js wybiera się gdy zależy Ci na wydajności, brandzie premium, integracjach z API albo własnym panelu pod stroną. Tu zaczyna się sens kosztu produkcji.",
@@ -510,12 +510,12 @@ export const services: Service[] = [
     title: "Aplikacje React",
     metaTitle: "Programista React — komponenty, panele, dashboardy",
     metaDescription:
-      "Aplikacje React + Vite: dashboardy, panele klienta, design system shadcn/ui, TanStack Query, Vitest + Playwright. Frontend do istniejącego backendu PHP/Java/Python.",
+      "Aplikacje React + Vite: dashboardy, panele klienta, design system shadcn/ui, TanStack Query, Vitest. Frontend do istniejącego backendu PHP/Java/Python.",
     h1: "React tam gdzie nie potrzeba SSR",
     lead:
       "React jest świetny gdy aplikacja działa za logowaniem albo nie ma wymagań SEO. Mniej narzutu Next.js, mniej kosztu hostingu, mniej decyzji do podjęcia po stronie infrastruktury.",
     intro: [
-      "Robię React od 2020 roku. Większość projektów lab dostępnych na githubie to React: dashboardy, panele, real-time apps, sklepy edukacyjne. Część komercyjna, np. moduły do większych systemów, robiona również w React + Vite.",
+      "Robię React od 2020 roku. Większość projektów lab dostępnych na GitHubie to React: dashboardy, panele, real-time apps, sklepy edukacyjne. Część komercyjna, np. moduły do większych systemów, robiona również w React + Vite.",
       "Dla klientów którzy mają już backend (PHP, Java, Python) podpinam się jako frontend developer. Komponenty, integracja z API, design system, testowanie.",
     ],
     bullets: [
@@ -593,10 +593,10 @@ export const services: Service[] = [
       },
       {
         title: "Generator treści",
-        body: "Pipeline który pisze opisy produktów, posty, maile sprzedażowe pod styl marki. Promptowanie, walidacja, fallback na humana.",
+        body: "Pipeline który pisze opisy produktów, posty, maile sprzedażowe pod styl marki. Promptowanie, walidacja, fallback na człowieka.",
       },
       {
-        title: "Bez bullshitu",
+        title: "Bez ściemy",
         body: "Zanim cokolwiek wdrożymy, mierzymy obecny czas i koszt procesu. Po wdrożeniu pokazuję twardo o ile się zmieniło.",
       },
     ],

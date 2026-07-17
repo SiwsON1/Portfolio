@@ -14,6 +14,66 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "lumikids",
+    title: "Sklep z odzieżą dziecięcą i młodzieżową",
+    client: "LumiKids",
+    year: 2026,
+    category: "commercial",
+    image: "/projects-fresh/lumikids-card.webp",
+    url: "https://lumikids.com.pl/",
+    description:
+      "Sklep internetowy z polską odzieżą dziecięcą i młodzieżową na WordPress + WooCommerce. Redesign frontu sklepu, landingi kolekcji, opisy kategorii i produktów, integracja z Allegro, optymalizacja pod konwersję i SEO.",
+    stack: ["WordPress", "WooCommerce", "Elementor", "Custom CSS", "SEO"],
+  },
+  {
+    slug: "kantorymapa",
+    title: "Mapa kantorów wymiany walut",
+    client: "Kantorymapa",
+    year: 2026,
+    category: "fullstack",
+    image: "/projects-fresh/kantorymapa-card.webp",
+    url: "https://kantorymapa.pl/",
+    description:
+      "Ogólnopolski katalog kantorów stacjonarnych: 1900 punktów w 140 miastach, z adresami, godzinami otwarcia i telefonami. Codzienna aktualizacja kursów NBP, porównanie spreadów z kantorami internetowymi, programmatic SEO na podstronach miast.",
+    stack: ["Next.js", "React", "Tailwind", "SSG", "SEO"],
+  },
+  {
+    slug: "dobrypupil",
+    title: "Baza substancji trujących dla psa i kota",
+    client: "Dobry Pupil",
+    year: 2026,
+    category: "fullstack",
+    image: "/projects-fresh/dobrypupil-card.webp",
+    url: "https://dobrypupil.pl/",
+    description:
+      "Wyszukiwarka roślin, pokarmów i leków niebezpiecznych dla psa i kota, z poziomem ryzyka osobno dla obu gatunków. Objawy zatrucia, pierwsza pomoc krok po kroku i jasny sygnał, kiedy dzwonić do weterynarza. Treści oparte o źródła weterynaryjne.",
+    stack: ["Astro", "TypeScript", "SSG", "SEO"],
+  },
+  {
+    slug: "owodzie",
+    title: "Atlas twardości wody w Polsce",
+    client: "owodzie.pl",
+    year: 2026,
+    category: "fullstack",
+    image: "/projects-fresh/owodzie-card.webp",
+    url: "https://owodzie.pl/",
+    description:
+      "Baza twardości wody z kranu: 152 miasta i 274 strefy pomiarowe. Wyniki w °dH, mg/l i mmol/l z klasą twardości i datą pomiaru, interaktywna mapa Polski, kalkulator przeliczania jednostek, programmatic SEO na podstronach miast.",
+    stack: ["Astro", "TypeScript", "SSG", "SEO"],
+  },
+  {
+    slug: "cenynotarialne",
+    title: "Portal cen transakcyjnych nieruchomości",
+    client: "Ceny Notarialne",
+    year: 2026,
+    category: "fullstack",
+    image: "/projects-fresh/cenynotarialne-card.webp",
+    url: "https://www.cenynotarialne.pl/",
+    description:
+      "Portal danych pokazujący realne ceny transakcyjne nieruchomości w Polsce na podstawie Rejestru Cen Nieruchomości (RCN). Wyszukiwarka po lokalizacji i typie (mieszkania, domy, działki, lokale użytkowe), porównanie median między obszarami, rankingi, interaktywne mapy MapLibre GL. Programmatic SEO na tysiącach lokalizacji, editorial design, mobile-first.",
+    stack: ["Next.js", "React", "Tailwind", "MapLibre GL", "SSG", "SEO"],
+  },
+  {
     slug: "galabau-darius",
     title: "Konfigurator ogrodzeń",
     client: "Galabau Darius",
@@ -22,19 +82,19 @@ export const projects: Project[] = [
     image: "/projects-fresh/galabau-darius-card.webp",
     url: "https://galabau-portfolio.vercel.app/",
     description:
-      "Aplikacja Next.js dla niemieckiej firmy ogrodniczej z okolic Grafeld. Konfigurator wyceny w czasie rzeczywistym, galeria realizacji, panel admina (Clerk). Redesign 2026 — editorial typografia Fraunces + Montserrat, amber accent, mobile-first, JSON-LD LocalBusiness, Impressum/Datenschutz, deploy Vercel.",
+      "Aplikacja Next.js dla niemieckiej firmy ogrodniczej z okolic Grafeld. Konfigurator wyceny w czasie rzeczywistym, galeria realizacji, panel admina (Clerk). Redesign 2026: editorial typografia Fraunces + Montserrat, amber accent, mobile-first, JSON-LD LocalBusiness, Impressum/Datenschutz, deploy Vercel.",
     stack: ["Next.js", "React", "Clerk", "Prisma", "Tailwind", "Framer Motion"],
   },
   {
     slug: "kosmoteka",
-    title: "Sklep internetowy kosmetyków",
+    title: "Sklep z teleskopami i sprzętem obserwacyjnym",
     client: "Kosmoteka",
     year: 2026,
     category: "commercial",
     image: "/projects-fresh/kosmoteka-card.webp",
     url: "https://kosmoteka.pl/",
     description:
-      "Sklep internetowy z kosmetykami na WordPress + WooCommerce. Katalog produktów z wariantami, koszyk, integracje z bramkami płatności i systemami wysyłki, optymalizacja pod konwersję i SEO.",
+      "Sklep internetowy z teleskopami, lornetkami i mikroskopami na WordPress + WooCommerce. Autorski design kart produktów, poradniki zakupowe, integracja z hurtownią, bramki płatności i wysyłki, optymalizacja pod konwersję i SEO.",
     stack: ["WordPress", "WooCommerce", "Custom CSS", "SEO"],
   },
   {
