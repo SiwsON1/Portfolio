@@ -57,11 +57,11 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "Next.js 14 + Clerk + admin panel + 3D config — 7 tygodni",
   },
   "strony-jamstack": {
-    projectSlug: "galabau-darius",
+    projectSlug: "owodzie",
     context:
-      "Konfigurator Galabau Darius pokazuje Jamstack w praktyce: frontend Next.js statycznie pre-rendered na Vercel CDN (sub-1s LCP globalnie), dynamika przez API (wyceny, panel klienta, integracje z bramkami płatności). Skalowanie pasywne — strona obsługuje 50k wizyt dziennie bez zmiany infrastruktury.",
+      "Atlas twardości wody owodzie.pl pokazuje Jamstack w praktyce: 152 miasta i 274 strefy pomiarowe pre-renderowane do statycznego HTML w Astro, interaktywna mapa Polski jako wyspa JavaScriptu, wszystkie podstrony generowane z jednej bazy przy buildzie. Zero serwera w runtime, hosting za grosze, ładowanie w ułamku sekundy.",
     highlight:
-      "Vercel edge + ISR + API endpoints — skalowanie pasywne",
+      "Astro SSG + 274 podstrony z jednej bazy + zero backendu",
   },
   "tworzenie-stron-www": {
     projectSlug: "apartamenty-zlota-grota",
@@ -71,11 +71,11 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "Custom WP + booking system + mobile-first — konwersja +47%",
   },
   "aplikacje-nextjs": {
-    projectSlug: "galabau-darius",
+    projectSlug: "kantorymapa",
     context:
-      "Aplikacja konfiguratora wycen dla Galabau Darius. Next.js 14 App Router, TypeScript, Clerk auth, Postgres przez Prisma, Tailwind. Frontend statycznie generowany, wyceny obliczane edge functions w <100ms, panel admina dla cenników. Pełen full-stack w jednym repo.",
+      "Kantorymapa.pl to strona Next.js w czystej postaci: 140 podstron miast i 1900 kantorów generowanych statycznie przy buildzie, kursy NBP odświeżane codziennie automatycznym procesem, całość ładuje się poniżej sekundy. Programmatic SEO daje widoczność na setki fraz lokalnych bez ręcznego pisania treści.",
     highlight:
-      "Next.js 14 + Postgres + Prisma + Clerk + Vercel Edge",
+      "Next.js SSG + 140 miast programmatic SEO + LCP poniżej 1s",
   },
   "aplikacje-react": {
     projectSlug: "great-shirt-app",
@@ -83,6 +83,20 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "Aplikacja e-commerce z customizatorem T-shirtów. React + NestJS + MySQL. Realtime preview produktu (kolory, rozmiary, naklejki), koszyk persystentny w localStorage, autoryzacja, panel admina. Projekt edukacyjny z bootcampu — pełna implementacja od zera w 4 tygodnie.",
     highlight:
       "React + NestJS + MySQL + realtime product preview",
+  },
+  "opieka-wordpress": {
+    projectSlug: "lumikids",
+    context:
+      "Sklep LumiKids działa na WordPressie z WooCommerce i jest pod stałą opieką: aktualizacje wtyczek testowane przed wgraniem na produkcję, backupy poza hostingiem, monitoring dostępności i drobne poprawki w banku godzin. Sklep sprzedaje codziennie, więc każda aktualizacja przechodzi test pełnej ścieżki zakupowej.",
+    highlight:
+      "WordPress + WooCommerce pod stałą opieką, testy po każdej aktualizacji",
+  },
+  "przyspieszanie-stron-wordpress": {
+    projectSlug: "kosmoteka",
+    context:
+      "Kosmoteka.pl, sklep z teleskopami na WooCommerce, przeszła pełną optymalizację wydajności: obrazy WebP, LiteSpeed cache, odchudzony JavaScript motywu i wtyczek, leniwe ładowanie galerii. Karty produktów z dużymi zdjęciami sprzętu ładują się poniżej 2 sekund na mobile.",
+    highlight:
+      "WooCommerce + LiteSpeed + WebP — LCP poniżej 2s na mobile",
   },
   "wdrozenia-ai": {
     projectSlug: "businesstokenizer",
