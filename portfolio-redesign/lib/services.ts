@@ -437,20 +437,20 @@ export const services: Service[] = [
       "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge na Vercel. Premium, headless e-commerce, panele klienta. Od 12 tys. zł.",
     h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
     lead:
-      "Strony Next.js dla firm które chcą najszybszego web stacka dostępnego w 2026. Statyczny HTML na edge, server components, sub-200ms FCP globalnie. Next.js wybiera się gdy zależy Ci na wydajności, brandzie premium, integracjach z API albo własnym panelu pod stroną. Wtedy koszt produkcji zaczyna mieć sens.",
+      "Strony Next.js dla firm, które chcą najszybszej technologii webowej dostępnej w 2026 roku. Statyczny HTML z serwerów edge, server components, pierwsze wyświetlenie poniżej 200 ms niezależnie od tego, skąd wchodzi użytkownik. Next.js wybiera się, gdy zależy Ci na wydajności, dopracowanym wizerunku, integracjach z API albo własnym panelu pod stroną. Wtedy wyższy koszt produkcji się broni.",
     intro: [
-      "Tworzenie stron Next.js to mój główny stack od 2024 roku. Wrocław to baza (jestem tu pod adresem ul. Kurkowa 32/57), ale projekty robię zdalnie dla klientów z całej Polski i z zagranicy. Spotkanie kick-off online, staging review na Vercelu po każdym sprincie, demo per iteracja.",
-      "Strony Next.js dzielą się u mnie na trzy klastry. Po pierwsze, strony firmowe premium dla brandów które potrzebują animacji i custom designu (ta kategoria zazębia się z [usługą nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe)). Po drugie, strony content-first w setupie headless WP (panel WordPress + frontend Next.js, [osobna usługa](/uslugi/headless-wordpress)). Po trzecie, aplikacje webowe z własną logiką (konfiguratory, panele klienta).",
+      "Tworzenie stron Next.js to od 2024 roku mój główny obszar pracy. Bazę mam we Wrocławiu (ul. Kurkowa 32/57), ale pracuję zdalnie dla klientów z całej Polski i z zagranicy. Spotkanie startowe robimy online, a po każdym sprincie dostajesz link do wersji testowej na Vercelu i krótkie demo tego, co przybyło.",
+      "Projekty Next.js dzielą się u mnie na trzy grupy. Po pierwsze, strony firmowe premium dla marek, które potrzebują animacji i designu szytego na miarę (ta kategoria zazębia się z [usługą nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe)). Po drugie, strony oparte na treści w modelu headless (panel WordPress + frontend Next.js, [osobna usługa](/uslugi/headless-wordpress)). Po trzecie, aplikacje webowe z własną logiką (konfiguratory, panele klienta).",
       "Konkretny przykład trzeciej kategorii: [konfigurator wyceny ogrodzeń dla niemieckiej firmy Galabau Darius](/projekty/galabau-darius). Klient wybiera słupki, panele, długość, dostaje wycenę i wysyła zapytanie. Pod spodem panel admina do zarządzania cennikami i zleceniami. Stack: Next.js 14, Clerk auth, Tailwind, deploy Vercel. Jeśli zastanawiasz się czy potrzebujesz Next.js zamiast WordPress, [kryteria decyzyjne opisałem w poście](/blog/next-js-15-vs-wordpress-2026).",
     ],
     bullets: [
       {
         title: "App Router od początku",
-        body: "Każdy projekt na najnowszym App Router. Server Components, Suspense, streaming, instant navigation. Wszystko co Next.js daje pod kątem performance.",
+        body: "Każdy projekt na najnowszym App Router. Server Components, Suspense, streaming, nawigacja bez przeładowań. Wszystko, co Next.js daje pod kątem wydajności.",
       },
       {
         title: "TypeScript bez wyjątków",
-        body: "Cały kod w TS, włącznie z bazą i API. Rzadziej znajdujemy bugi w produkcji bo wiele wpada przed deployem.",
+        body: "Cały kod w TS, włącznie z bazą i API. Mniej błędów w produkcji, bo większość wyłapuje kompilator jeszcze przed deployem.",
       },
       {
         title: "Auth, baza, płatności",
@@ -464,13 +464,13 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Workshop produktowy",
-        body: "User stories, mapa funkcji, wireframe. Określamy MVP i co można dodać później.",
+        title: "Warsztat produktowy",
+        body: "Historyjki użytkownika, mapa funkcji, szkic ekranów. Ustalamy, co wchodzi do pierwszej wersji, a co może poczekać.",
       },
       {
         step: "02",
         title: "Architektura",
-        body: "Modele danych, API, integracje, autoryzacja. Decyzje na poziomie schematu robimy przed pisaniem.",
+        body: "Modele danych, API, integracje, autoryzacja. Decyzje o strukturze danych zapadają, zanim zacznę pisać kod.",
       },
       {
         step: "03",
@@ -486,11 +486,11 @@ export const services: Service[] = [
     faq: [
       {
         q: "Robisz strony Next.js dla firm spoza Wrocławia?",
-        a: "Tak. Większość projektów robię zdalnie. Wrocław to baza, ale klienci są z całej Polski oraz z Niemiec, Holandii i USA. Cały proces (kick-off, staging, demo) odbywa się przez Google Meet i preview deploys na Vercelu. Spotkanie na żywo we Wrocławiu możliwe, ale rzadko potrzebne.",
+        a: "Tak. Większość projektów robię zdalnie. Wrocław to baza, ale klienci są z całej Polski oraz z Niemiec, Holandii i USA. Cały proces (spotkanie startowe, testy, demo) odbywa się przez Google Meet i linki podglądowe na Vercelu. Spotkanie na żywo we Wrocławiu jest możliwe, ale rzadko potrzebne.",
       },
       {
         q: "Ile kosztuje strona Next.js we Wrocławiu?",
-        a: "Strona firmowa Next.js z designem i CMS to widełki 12 tys. zł (minimum) do 35 tys. zł (premium z animacjami, headless CMS, custom dashboard). Aplikacja z auth, bazą i panelem klienta zaczyna się od 25 tys. zł. Konkretną wycenę po kick-offie, w 24h. Pełen breakdown kosztów [opisałem w poście o cenach Next.js](/blog/ile-kosztuje-strona-na-next-js).",
+        a: "Strona firmowa Next.js z designem i CMS to widełki 12 tys. zł (minimum) do 35 tys. zł (premium z animacjami, headless CMS, custom dashboard). Aplikacja z auth, bazą i panelem klienta zaczyna się od 25 tys. zł. Konkretną wycenę dostajesz w 24 godziny po pierwszej rozmowie. Pełen breakdown kosztów [opisałem w poście o cenach Next.js](/blog/ile-kosztuje-strona-na-next-js).",
       },
       {
         q: "Ile trwa wdrożenie strony Next.js?",
@@ -506,11 +506,11 @@ export const services: Service[] = [
       },
       {
         q: "Czy stronę da się potem edytować bez programisty?",
-        a: "Treści tak (CMS jak Sanity albo Payload podłączam standardowo). Logikę biznesową nie, ale każdy moduł dokumentuję żeby kolejny developer mógł wejść na projekt bez archeologii.",
+        a: "Treści tak (CMS jak Sanity albo Payload podłączam standardowo). Logiki biznesowej nie, ale każdy moduł dokumentuję, żeby kolejny developer mógł wejść w projekt bez archeologii.",
       },
       {
-        q: "Co z performance?",
-        a: "Każdy projekt mierzony Lighthouse i Core Web Vitals przed deployem. Cel: 90+ na wszystkich metrykach. Często osiągam 100. Live demo wydajności tej strony widzisz wyżej, w sekcji DevTools panel.",
+        q: "Co z szybkością strony?",
+        a: "Każdy projekt mierzę Lighthouse i Core Web Vitals przed deployem. Cel: 90+ na wszystkich metrykach, często wychodzi 100. Wydajność tej strony możesz podejrzeć na żywo wyżej, w panelu DevTools.",
       },
     ],
     cta: "Pogadajmy o stronie Next.js, 30 minut bez zobowiązań",
