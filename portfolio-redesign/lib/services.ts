@@ -100,6 +100,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Ile kosztuje sklep WooCommerce?", a: "Mniejszy sklep (do 100 produktów, podstawowe integracje): 12-25 tys. zł. Średni (do 500 produktów, B2B, multilingual): 25-50 tys. Większy headless lub multistore: powyżej 50 tys." },
+      { q: "Ile trwa wdrożenie sklepu WooCommerce?", a: "Mniejszy sklep: 6-8 tygodni od warsztatu do startu sprzedaży. Średni z B2B, wersjami językowymi i migracją produktów: 10-14 tygodni. Termin blokuję w kalendarzu przy podpisaniu oferty." },
       { q: "Czy mogę sam dodawać produkty?", a: "Tak. WooCommerce ma standardowy panel produktów, plus wgrasz CSV/XML masowo z Excela. Każda kategoria, atrybut i wariant edytowalny." },
       { q: "Co z migracją z innej platformy (Shoper, IdoSell, Shopify)?", a: "Robię migracje z większości polskich platform. Eksport produktów + zamówień + klientów + przekierowania 301 starych URLi pod nowe (krytyczne dla SEO)." },
       { q: "Czy WooCommerce nadąży przy dużym ruchu?", a: "Z dobrym hostingiem (LiteSpeed cache + Cloudflare + Redis dla object cache) wytrzymuje 10-50 tys. wizyt dziennie. Powyżej rekomenduję headless (Next.js commerce + WooCommerce jako backend)." },
@@ -149,6 +150,7 @@ export const services: Service[] = [
       { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność: frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO: Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo: admin panel niewidoczny dla użytkowników, redukuje attack surface." },
       { q: "Ile kosztuje migracja na headless?", a: "Małe strony (50-100 podstron): 15-25 tys. zł. Średnie (200-500 podstron + custom logic): 30-60 tys. Większe ze sklepem WooCommerce headless: od 50 tys." },
       { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook wyzwala rebuild ISR i strona aktualizuje się w ~30 sekund od zapisu." },
+      { q: "Ile trwa migracja na headless WordPress?", a: "Mała strona: 4-6 tygodni. Średnia z customową logiką: 8-12 tygodni. Nowy frontend powstaje równolegle do działającej strony, więc przez cały czas migracji stara wersja normalnie pracuje." },
       { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają odpowiedników po stronie Next.js. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może stać na najtańszym współdzielonym." },
     ],
     cta: "Pogadajmy o migracji na headless WordPress",
@@ -195,6 +197,7 @@ export const services: Service[] = [
       { q: "Czym 'nowoczesna' różni się od zwykłej strony?", a: "Designem i interakcją, nie technologią. Zwykła strona prezentuje treść. Nowoczesna prowadzi przez treść animacjami, custom kursorem, przejściami między podstronami. Stack (WordPress, Next.js) dobieramy do potrzeb edycji, nie do efektu." },
       { q: "Jaki stack pod spodem?", a: "Zależy od briefu. Strona content-first z redakcją: WordPress headless + Next.js frontend. Aplikacja z panelem: Next.js end-to-end. Konkretne porównanie [w usłudze Strony Next.js](/uslugi/aplikacje-nextjs)." },
       { q: "Ile to kosztuje?", a: "Nowoczesna strona firmowa z animacjami: 18-35 tys. zł. Z headless CMS i custom logic: 35-60 tys. Strona produktu/aplikacji premium: od 50 tys. wzwyż." },
+      { q: "Ile trwa projekt nowoczesnej strony?", a: "Strona firmowa z animacjami: 6-10 tygodni od briefu do startu. Z headless CMS i customową logiką: 10-16 tygodni. Design zatwierdzasz w Figmie przed pierwszą linijką kodu." },
       { q: "Czy klient nadal edytuje sam?", a: "Tak. Sanity, Contentful albo headless WordPress jako CMS. Animacje skonfigurowane raz przez programistę, treść edytowalna w panelu." },
       { q: "Czy reduced motion zostanie obsłużony?", a: "Tak, każda animacja respektuje `prefers-reduced-motion`. Użytkownicy z włączonym ustawieniem dostają statyczną wersję bez parallaxu i transitions." },
     ],
@@ -333,6 +336,7 @@ export const services: Service[] = [
     faq: [
       { q: "Jaka różnica między Jamstack a tradycyjnym WordPress?", a: "WordPress przy każdym wejściu odpala PHP i MySQL, żeby złożyć HTML. W Jamstacku HTML czeka gotowy na CDN, request to samo pobranie pliku. 5-50x szybciej." },
       { q: "Ile kosztuje strona Jamstack?", a: "Mała (do 50 podstron + blog): 12-25 tys. zł. Średnia (200+ stron, custom logic): 25-50 tys. Większa z e-commerce: od 50 tys." },
+      { q: "Ile trwa wdrożenie strony Jamstack?", a: "Mała strona z blogiem: 3-5 tygodni. Średni serwis z CMS i customowymi widokami: 6-10 tygodni. Deploy na produkcję jest jednym kliknięciem, więc start nie wymaga okna serwisowego." },
       { q: "Co jeśli mam już WordPress?", a: "Robię migracje WordPress → Jamstack. WP zostaje jako headless CMS (opcjonalnie) lub przenoszę do Sanity. URL-e zachowywane przez 301." },
       { q: "Czy SEO działa tak samo?", a: "Lepiej. Pre-renderowany HTML Google indeksuje natychmiast. Schema.org plus Core Web Vitals 95+ dają wyższe rankingi niż typowy WordPress." },
     ],
@@ -393,7 +397,7 @@ export const services: Service[] = [
       {
         step: "04",
         title: "Testy i wdrożenie",
-        body: "Lighthouse, sprawdzanie na realnych urządzeniach, migracja na produkcję. SSL, sitemap, Search Console.",
+        body: "Lighthouse 90+ na mobile przed oddaniem, sprawdzanie na realnych urządzeniach, migracja na produkcję. SSL, sitemap, Search Console.",
       },
       {
         step: "05",
@@ -487,6 +491,10 @@ export const services: Service[] = [
       {
         q: "Ile kosztuje strona Next.js we Wrocławiu?",
         a: "Strona firmowa Next.js z designem i CMS to widełki 12 tys. zł (minimum) do 35 tys. zł (premium z animacjami, headless CMS, custom dashboard). Aplikacja z auth, bazą i panelem klienta zaczyna się od 25 tys. zł. Konkretną wycenę po kick-offie, w 24h. Pełen breakdown kosztów [opisałem w poście o cenach Next.js](/blog/ile-kosztuje-strona-na-next-js).",
+      },
+      {
+        q: "Ile trwa wdrożenie strony Next.js?",
+        a: "Strona firmowa: 4-8 tygodni od kick-offu do produkcji. Aplikacja z auth i panelem klienta: 8-16 tygodni, w sprintach po 2 tygodnie z demo na koniec każdego. Terminy potwierdzam na wycenie, nie po fakcie.",
       },
       {
         q: "Kiedy Next.js a kiedy WordPress?",
@@ -678,6 +686,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Prosta strona firmowa: od 200 zł/mc. Strona z blogiem i częstymi zmianami: 300-500 zł/mc. Sklep WooCommerce: od 500 zł/mc, bo dochodzi testowanie zamówień po każdej aktualizacji. W cenie bank godzin na drobne zmiany." },
+      { q: "Jak szybko reagujesz na awarię?", a: "Strona nie działa: reakcja do 2 godzin w dni robocze, zwykle szybciej, bo monitoring wysyła mi alert zanim klient zdąży zauważyć. Drobne zgłoszenia i zmiany: do 48 godzin." },
       { q: "Czy wiąże mnie umowa na rok?", a: "Nie. Rozliczenie miesięczne, rezygnacja z końcem miesiąca. Umowy roczne w tej usłudze służą zwykle temu, żeby dało się o kliencie zapomnieć." },
       { q: "Moja strona stoi u innej firmy. Przejmiesz ją?", a: "Tak, po audycie wejściowym. Potrzebuję dostępu do panelu WP i hostingu. Audyt pokazuje, w jakim stanie jest strona i co trzeba wyprostować przed startem stałej opieki." },
       { q: "Strona już została zhakowana. Pomożesz?", a: "Tak, czyszczenie po włamaniu robię jako osobną usługę: identyfikacja wejścia, usunięcie malware, wymiana kluczy i haseł, zgłoszenie do Google. Potem zwykle przechodzimy na stałą opiekę, żeby to się nie powtórzyło." },
@@ -724,6 +733,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Ile kosztuje przyspieszenie strony WordPress?", a: "Audyt wydajności: 300 zł, odliczane od wdrożenia. Optymalizacja strony firmowej: 1,5-2,5 tys. zł. Sklep WooCommerce: 2-3,5 tys. zł, bo dochodzi koszyk, checkout i więcej szablonów do sprawdzenia." },
+      { q: "Ile trwa optymalizacja szybkości?", a: "Audyt: 2-3 dni robocze od podesłania dostępów. Wdrożenie poprawek: 5-10 dni roboczych zależnie od liczby problemów. Strona działa normalnie przez cały czas, zmiany wchodzą poza godzinami ruchu." },
       { q: "O ile realnie strona przyspieszy?", a: "Typowy efekt na zaniedbanej stronie: LCP z 5-8 sekund schodzi poniżej 2,5 s, waga strony spada o połowę lub więcej. Dokładnie dlatego raport pokazuje liczby przed i po, a nie wynik w skali gwiazdek." },
       { q: "Czy szybsza strona poprawi pozycje w Google?", a: "Core Web Vitals są sygnałem rankingowym, więc zielone metryki pomagają, ale nie zastąpią treści i linków. Pewny efekt jest gdzie indziej: mniej porzuceń, dłuższe sesje, wyższa konwersja." },
       { q: "Czy optymalizujesz też sklepy WooCommerce?", a: "Tak, to większość zleceń. Sklepy mają najwięcej do ugrania: koszyk AJAX, skrypty płatności i wtyczki kurierskie potrafią podwoić czas ładowania. Testuję pełną ścieżkę zakupową po każdej zmianie." },
