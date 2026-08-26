@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
@@ -370,13 +369,11 @@ export default async function ProjektPage({
         </Link>
       </nav>
 
-      <Script
-        id="ld-breadcrumbs"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
-      <Script
-        id="ld-project"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />

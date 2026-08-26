@@ -23,18 +23,35 @@ export default function NotFound() {
       >
         Pustka.
       </h1>
-      <p className="text-ink-mute text-lead max-w-md text-center relative mb-12">
+      <p className="text-ink-mute text-lead max-w-md text-center relative mb-6">
         Nic nie wisi pod tym adresem. Albo ktoś przekleił zły link, albo
         jeszcze tu czegoś nie zbudowałem.
       </p>
+      <p
+        className="font-display italic text-ink text-center max-w-2xl relative mb-12"
+        style={{
+          fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.75rem)",
+          lineHeight: 1.3,
+          letterSpacing: "-0.015em",
+        }}
+      >
+        A jeśli chcesz, żebym coś dla Ciebie zbudował — napisz na&nbsp;kontakt.
+      </p>
       <div className="flex flex-col md:flex-row gap-4 relative">
         <Link
-          href="/"
+          href="/kontakt"
           className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-8 py-4"
+          data-cursor="KONTAKT"
+        >
+          <span>Napisz na kontakt</span>
+          <span className="transition-transform group-hover:translate-x-1">→</span>
+        </Link>
+        <Link
+          href="/"
+          className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-ink-mute hover:text-peach transition-colors px-8 py-4"
           data-cursor="HOME"
         >
           <span>Strona główna</span>
-          <span className="transition-transform group-hover:translate-x-1">→</span>
         </Link>
         <Link
           href="/projekty"

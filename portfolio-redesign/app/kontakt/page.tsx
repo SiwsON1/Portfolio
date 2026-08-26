@@ -60,12 +60,12 @@ export default function KontaktPage() {
               <div>
                 <p className="eyebrow mb-2">LinkedIn</p>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/marcinsiwonia"
                   target="_blank"
                   rel="noreferrer"
                   className="text-ink hover:text-peach"
                 >
-                  Profil →
+                  Marcin Siwonia →
                 </a>
               </div>
             </div>

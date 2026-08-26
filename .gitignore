@@ -1,0 +1,5 @@
+# artefakty buildów poza katalogiem projektu
+/.next-build-ms/
+/.claude/
+.DS_Store
+ms-portfolio/.claude/

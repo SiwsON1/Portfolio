@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/projekty", label: "Projekty" },
   { href: "/uslugi", label: "Usługi" },
+  { href: "/branze", label: "Branże" },
   { href: "/o-mnie", label: "O mnie" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/blog", label: "Blog" },
@@ -167,11 +168,11 @@ export function MobileMenu() {
             }}
           >
             <a
-              href="mailto:mahinek12@gmail.com"
+              href="mailto:marcin.siwonia.firma@gmail.com"
               className="block font-display italic text-peach mb-2"
               style={{ fontSize: "clamp(1.25rem, 1rem + 1vw, 1.75rem)" }}
             >
-              mahinek12@gmail.com
+              marcin.siwonia.firma@gmail.com
             </a>
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
               Wrocław · est. MMXX · otwarty na nowe projekty

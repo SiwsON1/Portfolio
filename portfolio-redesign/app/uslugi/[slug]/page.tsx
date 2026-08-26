@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { services } from "@/lib/services";
@@ -148,12 +147,51 @@ export default async function UslugaPage({
       {/* DEVTOOLS LIVE — slim, nad portfolio, pod hero, tylko Next.js */}
       {s.slug === "aplikacje-nextjs" && (
         <section className="px-6 py-20 md:px-10 md:py-24 border-t border-line">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
             <aside className="md:col-span-3">
-              <p className="eyebrow mb-3">— Performance, na żywo</p>
-              <p className="text-ink-mute text-[0.95rem] leading-relaxed">
-                Liczby z <code className="font-mono text-ink text-[0.92em]">window.performance</code> Twojej przeglądarki. Otwórz F12 i porównaj.
+              <p className="eyebrow mb-4">— Performance, na żywo</p>
+              <p
+                className="font-display italic text-ink mb-5"
+                style={{
+                  fontSize: "clamp(1.35rem, 0.9rem + 1.1vw, 1.875rem)",
+                  lineHeight: 1.15,
+                  letterSpacing: "-0.02em",
+                  fontVariationSettings: '"opsz" 144, "SOFT" 50, "WONK" 0',
+                }}
+              >
+                Liczby Twojej przeglądarki, nie marketing.
               </p>
+              <p className="text-ink-mute text-[0.92rem] leading-relaxed mb-7">
+                Next.js renderuje stronę na serwerze. Pierwsza ramka maluje się od razu, bez czekania aż JavaScript się rozpakuje.
+              </p>
+              <ul className="space-y-3 mb-8 border-l border-line pl-5">
+                <li>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-peach mb-1">SSR</p>
+                  <p className="text-ink-mute text-[0.82rem] leading-snug">
+                    HTML wychodzi z serwera złożony, nie składa się w przeglądarce.
+                  </p>
+                </li>
+                <li>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-peach mb-1">Edge</p>
+                  <p className="text-ink-mute text-[0.82rem] leading-snug">
+                    Content z&nbsp;50&nbsp;ms, nie&nbsp;500. Z&nbsp;najbliższego węzła Vercel.
+                  </p>
+                </li>
+                <li>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-peach mb-1">Streaming</p>
+                  <p className="text-ink-mute text-[0.82rem] leading-snug">
+                    Najważniejsze ładuje się pierwsze, reszta dolatuje w&nbsp;tle.
+                  </p>
+                </li>
+              </ul>
+              <Link
+                href="/blog/server-side-rendering-co-to"
+                className="group inline-flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink hover:text-peach transition-colors"
+                data-cursor="CZYTAJ"
+              >
+                <span>Jak działa SSR</span>
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </Link>
             </aside>
             <div className="md:col-span-9">
               <DevToolsPanel />
@@ -481,18 +519,15 @@ export default async function UslugaPage({
         </Link>
       </nav>
 
-      <Script
-        id="ld-breadcrumbs"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
-      <Script
-        id="ld-service"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
-        id="ld-faq"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

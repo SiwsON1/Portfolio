@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { services } from "@/lib/services";
 import { ServicesIndexList } from "@/components/service/ServicesIndexList";
 
 export const metadata: Metadata = {
@@ -19,14 +17,15 @@ export default function UslugiPage() {
         </div>
         <div className="md:col-span-9">
           <h1 className="display text-display text-ink">
-            Cztery <em>specjalności</em>,
+            Strony, sklepy, aplikacje,
             <br />
-            jeden warsztat.
+            <em>jeden warsztat</em>.
           </h1>
           <p className="mt-8 prose-bound text-ink-mute text-lead">
-            Robię to czego nauczyłem się w bólach przez ostatnie pięć lat.
-            Zamiast rozpraszać się na wszystko, skupiam się na obszarach gdzie
-            mogę dać konkretną przewagę.
+            Od sześciu lat tworzę strony www, sklepy WooCommerce oraz aplikacje
+            Next.js i React dla firm w Polsce i Niemczech. Zamiast rozpraszać się
+            na wszystko, skupiam się na tym, co znam na wylot: od WordPressa
+            i WooCommerce po aplikacje Next.js, React i wdrożenia AI.
           </p>
         </div>
       </header>

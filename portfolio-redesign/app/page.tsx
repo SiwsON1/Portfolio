@@ -3,7 +3,6 @@ import { ProjectsCabinet } from "@/components/home/ProjectsCabinet";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { TechStack } from "@/components/home/TechStack";
 import { AboutTease } from "@/components/home/AboutTease";
-import Script from "next/script";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
@@ -35,7 +34,7 @@ export default function Home() {
     name: "Marcin Siwonia",
     url: SITE_URL,
     image: `${SITE_URL}/avatar.png`,
-    email: "mailto:mahinek12@gmail.com",
+    email: "mailto:marcin.siwonia.firma@gmail.com",
     jobTitle: "Web Developer",
     description:
       "Freelancer i programista Next.js z Wrocławia. Tworzenie stron www, aplikacje React, wdrożenia AI. Sześć lat doświadczenia, ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech.",
@@ -66,6 +65,7 @@ export default function Home() {
     ],
     sameAs: [
       "https://github.com/SiwsON1",
+      "https://www.linkedin.com/in/marcinsiwonia",
       "https://seomantyczny.pl",
     ],
   };
@@ -77,13 +77,11 @@ export default function Home() {
       <ServicesPreview />
       <TechStack />
       <AboutTease />
-      <Script
-        id="ld-website"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <Script
-        id="ld-person"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />

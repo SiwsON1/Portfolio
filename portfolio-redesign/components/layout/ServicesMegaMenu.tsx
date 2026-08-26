@@ -9,6 +9,17 @@ type Group = {
   items: { slug: string; title: string; line: string }[];
 };
 
+const INDUSTRY_LINKS = [
+  { slug: "tworzenie-stron-dla-kancelarii-prawnych", label: "Kancelarie prawne" },
+  { slug: "tworzenie-stron-dla-gabinetow-i-klinik", label: "Gabinety i kliniki" },
+  { slug: "tworzenie-sklepow-internetowych-dla-marek-odziezowych", label: "Marki odzieżowe" },
+  { slug: "tworzenie-stron-dla-producentow-mebli", label: "Producenci mebli" },
+  { slug: "tworzenie-stron-dla-hoteli-i-pensjonatow", label: "Hotele i pensjonaty" },
+  { slug: "tworzenie-stron-dla-firm-budowlanych", label: "Firmy budowlane" },
+  { slug: "tworzenie-stron-dla-influencerow", label: "Influencerzy" },
+  { slug: "tworzenie-stron-dla-streamerow", label: "Streamerzy" },
+];
+
 const GROUPS: Group[] = [
   {
     label: "Strony",
@@ -225,8 +236,40 @@ export function ServicesMegaMenu({
               ))}
             </div>
 
+            {/* Branże — wejście do landingów po odbiorcy */}
+            <div className="mt-10 pt-6 border-t border-line">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
+                Albo po branży
+              </p>
+              <ul className="flex flex-wrap gap-x-5 gap-y-3">
+                {INDUSTRY_LINKS.map((b) => (
+                  <li key={b.slug}>
+                    <Link
+                      href={`/${b.slug}`}
+                      onClick={onClose}
+                      className="font-display italic text-ink-mute hover:text-peach transition-colors text-[1.02rem] leading-none"
+                      data-cursor="BRANŻA"
+                    >
+                      {b.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    href="/branze"
+                    onClick={onClose}
+                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-peach hover:text-peach-deep transition-colors"
+                  >
+                    Wszystkie branże →
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+
+
             {/* Footer row — CTA strip */}
-            <div className="mt-12 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-baseline justify-between gap-4">
+            <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-baseline justify-between gap-4">
               <p className="text-ink-mute text-sm leading-relaxed max-w-2xl">
                 Nie wiesz którą usługę wybrać? Zadzwoń albo napisz, dobierzemy
                 stack pod brief w 24h.

@@ -14,11 +14,11 @@ export function Footer() {
               piszę <em>kod</em>.
             </h2>
             <Link
-              href="mailto:mahinek12@gmail.com"
+              href="mailto:marcin.siwonia.firma@gmail.com"
               className="mt-10 inline-block text-2xl md:text-3xl text-peach hover:underline underline-offset-4"
               data-cursor="EMAIL"
             >
-              mahinek12@gmail.com
+              marcin.siwonia.firma@gmail.com
             </Link>
           </div>
 
@@ -39,6 +39,11 @@ export function Footer() {
                 <li>
                   <Link href="/uslugi" className="hover:text-ink">
                     Usługi
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/branze" className="hover:text-ink">
+                    Branże
                   </Link>
                 </li>
                 <li>

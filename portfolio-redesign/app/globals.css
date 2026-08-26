@@ -11,9 +11,13 @@
 :root {
   --bg: oklch(14% 0.02 280);
   --bg-elev: oklch(18% 0.025 280);
+  --accent: #FFE81F;
+  --fg: var(--ink);
+  --fg-muted: var(--ink-mute);
+  --border-strong: oklch(36% 0.025 280);
   --ink: oklch(94% 0.015 60);
   --ink-mute: oklch(70% 0.018 60);
-  --ink-faint: oklch(48% 0.015 60);
+  --ink-faint: oklch(63% 0.017 60);
   --peach: oklch(78% 0.13 50);
   --peach-deep: oklch(64% 0.16 40);
   --overcast: oklch(60% 0.12 220);
@@ -30,6 +34,10 @@
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-elev: var(--bg-elev);
+  --color-accent: var(--accent);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-border-strong: var(--border-strong);
   --color-ink: var(--ink);
   --color-ink-mute: var(--ink-mute);
   --color-ink-faint: var(--ink-faint);
@@ -137,6 +145,41 @@ html.lenis body {
 @media (min-width: 1280px) and (max-height: 800px) { .hero-h1 { font-size: 4.8rem; } }
 @media (min-width: 1440px) and (max-height: 800px) { .hero-h1 { font-size: 5.2rem; } }
 
+/*
+ * PORTFOLIO FOCUS PULL — defocus non-hovered cards (fromanother.love style)
+ * When a row is hovered inside .pj-stack, others blur out, hovered stays sharp.
+ * GPU-accelerated via will-change. Reduced-motion respected.
+ */
+/*
+ * LOADING INTRO — orbital particles continuous rotation
+ */
+@keyframes svhIntroOrbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.pj-stack .pj-row {
+  transition:
+    filter 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter, opacity, transform;
+}
+.pj-stack:has(.pj-row:hover) .pj-row:not(:hover) {
+  filter: blur(10px);
+  opacity: 0.32;
+  transform: scale(0.985);
+}
+.pj-stack:has(.pj-row:hover) .pj-row:hover {
+  transform: scale(1.005);
+}
+.pj-stack:has(.pj-row:hover) .pj-row:not(:hover) .pj-num {
+  opacity: 0.15;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pj-stack .pj-row { transition: none; }
+}
+
 .hero-paragraph {
   font-size: 0.875rem;
   line-height: 1.5;
@@ -164,6 +207,40 @@ html.lenis body {
   font-weight: 400;
   font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
   letter-spacing: -0.045em;
+}
+
+@keyframes v8Marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes v8Reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.v8-marquee {
+  animation: v8Marquee 45s linear infinite;
+}
+
+.v8-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: v8Reveal 800ms var(--ease-out-expo) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v8-marquee,
+  .v8-reveal {
+    animation: none;
+  }
+
+  .v8-reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Smaller display (h2 etc) */
