@@ -20,18 +20,20 @@ function Wireframe({
 
   useFrame((state, delta) => {
     if (!ref.current) return;
+    const t = state.clock.elapsedTime;
 
     if (drag.current.isDragging) {
       rot.current.x = drag.current.y * Math.PI;
       rot.current.y = drag.current.x * Math.PI * 2;
     } else {
-      // bardzo wolna idle-rotation żeby planeta nie wyglądała jak płaski obrazek
-      rot.current.y += delta * 0.08;
+      // Multi-axis idle rotation — planet drifts w Y + X + Z dla wrażenia żywego obiektu w przestrzeni
+      rot.current.y += delta * 0.12;
+      rot.current.x += delta * 0.045;
     }
 
-    ref.current.rotation.x = rot.current.x;
+    ref.current.rotation.x = rot.current.x + Math.sin(t * 0.32) * 0.18;
     ref.current.rotation.y = rot.current.y;
-    ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.2) * 0.05;
+    ref.current.rotation.z = Math.sin(t * 0.24) * 0.22 + Math.cos(t * 0.15) * 0.12;
   });
 
   const geo = useMemo(() => new THREE.IcosahedronGeometry(1.6, 4), []);

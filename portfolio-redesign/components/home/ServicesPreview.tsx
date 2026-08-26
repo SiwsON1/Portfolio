@@ -71,13 +71,14 @@ export function ServicesPreview() {
         </div>
         <div className="md:col-span-9">
           <h2 className="display text-h1 text-ink">
-            Cztery <em>specjalności</em>,
+            Strony, sklepy, aplikacje,
             <br />
-            jeden warsztat.
+            <em>jeden warsztat</em>.
           </h2>
           <p className="mt-6 prose-bound text-ink-mute text-lead">
-            Nie rozpraszam się na wszystko. Te cztery obszary to suma
-            tego co potrafię dostarczyć tak, żeby się potem nie wstydzić.
+            Nie rozpraszam się na wszystko. Robię strony i sklepy WordPress,
+            aplikacje Next.js i React oraz wdrożenia AI. Tyle, ile potrafię
+            dostarczyć tak, żeby było czym się chwalić.
           </p>
         </div>
       </div>

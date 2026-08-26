@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { posts } from "@/lib/posts";
 import { services } from "@/lib/services";
@@ -386,19 +385,16 @@ export default async function PostPage({
         </Link>
       </nav>
 
-      <Script
-        id="ld-breadcrumbs"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
-      <Script
-        id="ld-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       {faqSchema && (
-        <Script
-          id="ld-faq"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />

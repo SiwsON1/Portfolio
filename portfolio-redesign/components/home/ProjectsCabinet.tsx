@@ -85,7 +85,7 @@ export function ProjectsCabinet() {
         </div>
       </header>
 
-      <div className="space-y-20 md:space-y-56">
+      <div className="pj-stack space-y-20 md:space-y-56">
         {featuredProjects.map((p, i) => (
           <Row key={p.slug} project={p} index={i} />
         ))}
@@ -99,7 +99,7 @@ export function ProjectsCabinet() {
         >
           <span className="absolute inset-x-0 -bottom-px h-px bg-line group-hover:bg-peach transition-colors" />
           <span>Wszystkie projekty</span>
-          <span className="font-mono text-ink-faint group-hover:text-peach transition-colors">[34]</span>
+          <span className="font-mono text-ink-faint group-hover:text-peach transition-colors">[{projects.length}]</span>
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </Link>
       </div>

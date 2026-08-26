@@ -75,13 +75,13 @@ export function AboutTease() {
         <div className="md:col-span-9">
           <h2 className="display text-h1 text-ink">
             <span className="at-line block overflow-hidden">
-              <span className="block">Sześć lat na rynku.</span>
+              <span className="block">Kod piszę sam.</span>
             </span>
             <span className="at-line block overflow-hidden">
-              <span className="block"><em>Cztery</em> w software house,</span>
+              <span className="block">Od <em>briefu</em></span>
             </span>
             <span className="at-line block overflow-hidden">
-              <span className="block"><em>cztery</em> na swoim.</span>
+              <span className="block">do <em>deploya</em>.</span>
             </span>
           </h2>
         </div>
@@ -92,10 +92,10 @@ export function AboutTease() {
         <div className="md:col-span-7 md:col-start-1 order-2 md:order-1">
           <div className="at-line space-y-6 text-ink-mute text-lead max-w-prose mb-12">
             <p>
-              Z wykształcenia ekonomista, kod złapałem w pierwszym roku
-              studiów. Cztery lata frontend w software house we Wrocławiu,
-              od końca 2022 freelance. Teraz <span className="text-ink">4–6 klientów</span>{" "}
-              jednocześnie, połowa czasu na kod, połowa na rozmowy.
+              Z wykształcenia ekonomista, kod złapałem na pierwszym roku
+              studiów i już z niego nie wyszedłem. Teraz{" "}
+              <span className="text-ink">4–6 klientów</span> jednocześnie,
+              połowa czasu na kod, połowa na rozmowy.
             </p>
             <p>
               Po godzinach prowadzę{" "}
