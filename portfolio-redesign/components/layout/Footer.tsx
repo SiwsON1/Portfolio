@@ -47,11 +47,6 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/audyt-wcag" className="hover:text-ink">
-                    Audyt WCAG
-                  </Link>
-                </li>
-                <li>
                   <Link href="/o-mnie" className="hover:text-ink">
                     O mnie
                   </Link>

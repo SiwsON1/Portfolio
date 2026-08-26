@@ -266,25 +266,7 @@ export function ServicesMegaMenu({
               </ul>
             </div>
 
-            {/* Dostępność — money page z własną frazą, stoi osobno bo to inna intencja */}
-            <div className="mt-8 pt-6 border-t border-line">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                Obowiązek prawny
-              </p>
-              <Link
-                href="/audyt-wcag"
-                onClick={onClose}
-                className="group inline-flex items-baseline gap-3"
-                data-cursor="WCAG"
-              >
-                <span className="font-display italic text-ink group-hover:text-peach transition-colors text-[1.15rem] leading-none">
-                  Audyt WCAG
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">
-                  od 28.06.2025
-                </span>
-              </Link>
-            </div>
+
 
             {/* Footer row — CTA strip */}
             <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-baseline justify-between gap-4">

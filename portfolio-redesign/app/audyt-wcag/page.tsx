@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
+import { WcagHeroVisual } from "@/components/service/WcagHeroVisual";
 import {
   WCAG_META,
   WCAG_FACTBAR,
@@ -111,12 +112,14 @@ export default function AudytWcagPage() {
           <span className="hidden md:inline">WCAG 2.1 AA</span>
         </div>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-2">
-            {/* Wyrównanie do pierwszej linii H1, nie do środka bloku nagłówka. */}
-            <p className="eyebrow md:pt-[0.9em]">Dostępność</p>
-          </div>
-          <div className="md:col-span-8">
+        {/* Mobile: wizual nad tytułem, kompaktowo. Tak samo jak na stronach usług. */}
+        <div className="md:hidden mb-12 max-w-xs mx-auto h-56">
+          <WcagHeroVisual />
+        </div>
+
+        <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-9">
+            <p className="eyebrow mb-6">Dostępność</p>
             <h1
               className="display text-ink"
               style={{
@@ -127,12 +130,15 @@ export default function AudytWcagPage() {
             >
               {editorialHeading(WCAG_META.h1)}
             </h1>
+            <p
+              className="mt-8 md:mt-12 max-w-3xl text-ink-mute"
+              style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 }}
+            >
+              {WCAG_META.lead}
+            </p>
           </div>
-        </div>
-
-        <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 mt-10">
-          <div className="md:col-start-3 md:col-span-7 prose-bound">
-            <p className="text-lead text-ink-mute leading-relaxed">{WCAG_META.lead}</p>
+          <div className="md:col-span-3 hidden md:block">
+            <WcagHeroVisual />
           </div>
         </div>
 
