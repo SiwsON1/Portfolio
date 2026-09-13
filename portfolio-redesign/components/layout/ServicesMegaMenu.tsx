@@ -88,9 +88,14 @@ const GROUPS: Group[] = [
         line: "Przelewy24, BLIK, InPost, GA4 enhanced ecommerce.",
       },
       {
+        slug: "integracja-woocommerce-z-baselinker",
+        title: "Integracja z BaseLinker",
+        line: "Zamówienia, stany i Allegro z jednego magazynu.",
+      },
+      {
         slug: "next-js-software-house",
         title: "Next.js outsourcing",
-        line: "Retainer 60-100h albo fixed MVP w 4-12 tygodni.",
+        line: "Stała współpraca 60-100 h albo MVP w 4-12 tygodni.",
       },
       {
         slug: "aplikacje-react",

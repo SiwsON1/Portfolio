@@ -71,7 +71,7 @@ export const services: Service[] = [
       "WooCommerce robi 30% sklepów online na świecie. Działa, jest tani, integruje się ze wszystkim, czego potrzebujesz w polskim e-commerce. Wymaga jednak osoby, która wie, jak go skonfigurować pod konwersję, nie tylko jak go zainstalować.",
     intro: [
       "Najnowsze wdrożenie sklepu WooCommerce: [Kosmoteka](/projekty/kosmoteka), sklep z teleskopami i sprzętem obserwacyjnym, z kompletnymi integracjami płatności i wysyłki, optymalizacją Core Web Vitals i SEO. Wcześniej kilka mniejszych sklepów, głównie branża meblowa i odzieżowa, m.in. [LumiKids](/projekty/lumikids).",
-      "WooCommerce wybiera się, gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne technologie. Jeśli zastanawiasz się, czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026).",
+      "WooCommerce wybiera się, gdy budżet jest ograniczony, klient chce edycji bez programisty, a integracje z polskim ekosystemem (Przelewy24, InPost, Allegro) są kluczowe. Dla większych sklepów (1000+ SKU, multistore, headless) sugeruję inne technologie. Jeśli zastanawiasz się, czy WooCommerce wystarczy, [opisałem kryteria w poście](/blog/next-js-15-vs-wordpress-2026). Sprzedaż w sklepie i na Allegro z jednego magazynu spinam przez [integrację WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker).",
     ],
     bullets: [
       {
@@ -740,6 +740,55 @@ export const services: Service[] = [
       { q: "Co jeśli efektu nie będzie?", a: "Audyt przed wyceną pokazuje, co jest do ugrania. Jeśli strona jest już dobrze zoptymalizowana i miejsca na poprawę nie ma, mówię to na etapie audytu zamiast sprzedawać wdrożenie." },
     ],
     cta: "Podeślij adres strony, zmierzę i wrócę z audytem w 48h",
+  },
+  {
+    slug: "integracja-woocommerce-z-baselinker",
+    title: "Integracja WooCommerce z BaseLinker",
+    metaTitle: "Integracja WooCommerce z BaseLinker — zamówienia, stany, Allegro",
+    metaDescription:
+      "Integracja WooCommerce z BaseLinker: import zamówień, synchronizacja stanów i cen, powiązania magazynów z hurtowniami i sprzedaż na Allegro. Wrocław i online.",
+    h1: "Integracja WooCommerce z BaseLinker",
+    lead:
+      "Integracja WooCommerce z BaseLinker łączy sklep z panelem, w którym obsługujesz zamówienia ze wszystkich kanałów: sklepu, Allegro i marketplace'ów. Zamówienia spływają do jednej listy, stany magazynowe i ceny aktualizują się same, a etykiety kurierskie drukujesz bez przepisywania adresów.",
+    intro: [
+      "BaseLinker, działający dziś pod marką Base, łączy się z WooCommerce przez REST API sklepu. Samo podpięcie to kilka minut, ale od ustawień zależy wszystko dalej: które statusy zamówień importować, który magazyn jest źródłem stanów i czy ceny płyną ze sklepu do BaseLinkera, czy odwrotnie. Źle ustawiony kierunek synchronizacji nadpisuje ceny w sklepie albo sprzedaje produkty, których już nie ma.",
+      "Najwięcej pracy wymagają sklepy zasilane z hurtowni. Hurtownia wystawia w BaseLinkerze cały katalog, często kilka tysięcy pozycji, a sklep ma sprzedawać tylko wybrany wycinek. Rozwiązaniem są powiązania magazynów: wybrane produkty kopiuję z magazynu hurtowni do własnego katalogu BaseLinkera z powiązaniem magazynowym i dopiero z niego tworzę produkty w WooCommerce. Stany i ceny spływają z pliku hurtowni, a do sklepu nie trafia nic, czego nie wybrałeś. Tak skonfigurowałem [Kosmotekę](/projekty/kosmoteka), sklep z teleskopami na WooCommerce.",
+      "Zanim włączę automatyzację, porządkuję katalog: SKU, kody EAN i spójne atrybuty wariantów. Produkt bez SKU nie połączy się z pozycją w zamówieniu ani z ofertą w innym kanale, a atrybut dodany lokalnie w jednym produkcie wypada z filtrów sklepu. Jeśli sklep dopiero powstaje, zacznij od [wdrożenia sklepu WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+    ],
+    bullets: [
+      {
+        title: "Import zamówień i statusy",
+        body: "Zamówienia ze sklepu trafiają do BaseLinkera z płatnością, sposobem dostawy i danymi do faktury. Zmiana statusu wraca do WooCommerce, więc klient dostaje maila o wysyłce bez ręcznego klikania w sklepie.",
+      },
+      {
+        title: "Stany i ceny bez nadpisywania",
+        body: "Dla każdego pola ustalam jeden kierunek: skąd biorą się stany, skąd ceny, co zostaje tylko w sklepie. Promocja ustawiona w WooCommerce nie znika po nocnej synchronizacji.",
+      },
+      {
+        title: "Hurtownie i powiązania magazynów",
+        body: "W sklepie tylko produkty, które wybierzesz, reszta katalogu hurtowni zostaje w BaseLinkerze. Stany i ceny aktualizują się z pliku dostawcy bez ręcznego importu.",
+      },
+      {
+        title: "Allegro z tego samego magazynu",
+        body: "Oferty na Allegro i produkty w sklepie korzystają z jednego stanu w magazynie BaseLinkera. Sprzedaż w jednym kanale zmniejsza dostępność w drugim, więc nie sprzedajesz dwa razy tej samej sztuki.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Przegląd sklepu i kanałów", body: "Lista kanałów sprzedaży, hurtowni i kurierów oraz stan katalogu: SKU, EAN, warianty. Ustalamy, co ma się synchronizować i w którą stronę." },
+      { step: "02", title: "Porządki w katalogu", body: "Uzupełnienie SKU i EAN, ujednolicenie atrybutów wariantów. Bez tego automatyzacja powiela błędy szybciej, niż zrobiłby to człowiek." },
+      { step: "03", title: "Integracja i test zamówienia", body: "Podpięcie sklepu przez REST API, magazyny, powiązania i statusy. Testowe zamówienie przez całą ścieżkę: sklep, BaseLinker, etykieta, mail do klienta." },
+      { step: "04", title: "Start na produkcji", body: "Włączenie synchronizacji na żywym sklepie i instrukcja dla osoby, która obsługuje zamówienia i pakuje paczki." },
+    ],
+    faq: [
+      { q: "Ile kosztuje integracja WooCommerce z BaseLinker?", a: "Wycena zależy od liczby kanałów sprzedaży, hurtowni do podpięcia i stanu katalogu, bo porządki w SKU i wariantach potrafią zająć więcej czasu niż samo połączenie. Abonament BaseLinkera opłacasz bezpośrednio w Base, poza moją wyceną. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
+      { q: "Ile trwa integracja WooCommerce z BaseLinker?", a: "Samo połączenie sklepu z BaseLinkerem to kilka godzin pracy. Projekt z porządkami w katalogu, hurtowniami i Allegro trwa dłużej i zależy głównie od liczby produktów oraz tego, w jakim stanie są ich dane. Termin podaję w wycenie, po przeglądzie sklepu." },
+      { q: "Jak BaseLinker łączy się z WooCommerce?", a: "Przez REST API sklepu. W WooCommerce generuje się klucz w Ustawieniach, w zakładce Zaawansowane, REST API, z uprawnieniami do odczytu i zapisu, a potem wkleja go w konfiguracji integracji w BaseLinkerze. Klucz widać tylko raz, przy tworzeniu, więc trzeba go od razu zapisać." },
+      { q: "BaseLinker nie pobiera zamówień z WooCommerce. Co sprawdzić?", a: "Najczęściej wygasł albo został usunięty klucz REST API i integracja dostaje błąd 401, import zamówień jest wyłączony w ustawieniach integracji albo zamówienia wpadają w status, którego nie obejmuje filtr listy. Jeśli problem dotyczy tylko sklepu, a zamówienia z innych kanałów spływają, winna jest integracja sklepu, a nie ustawienia zamówień. Taką awarię naprawiam osobno, bez wdrażania wszystkiego od nowa." },
+      { q: "Czy BaseLinker da mi produkty z hurtowni?", a: "Nie. BaseLinker pobiera plik produktowy hurtowni i synchronizuje stany, ale nie zastępuje umowy z dostawcą. Każda hurtownia wymaga osobnej współpracy B2B, zwykle z danymi firmy i akceptacją po stronie dostawcy, która trwa od jednego do kilku dni roboczych. Integrację z hurtownią konfiguruję, gdy dostawca udostępni plik." },
+      { q: "Czy mogę sprzedawać w sklepie i na Allegro z jednego magazynu?", a: "Tak, to jeden z głównych powodów wdrożenia BaseLinkera. Sklep i oferty na Allegro korzystają z tego samego stanu w magazynie BaseLinkera, więc sprzedaż w jednym kanale od razu zmniejsza dostępność w drugim." },
+      { q: "Czyje jest konto w BaseLinkerze?", a: "Twoje. Konto zakładasz na własną firmę i sam opłacasz abonament w Base, a ja dostaję dostęp na czas wdrożenia. Po zakończeniu możesz ten dostęp odebrać, a konfiguracja zostaje u Ciebie." },
+    ],
+    cta: "Napisz, na czym stoi sklep i gdzie sprzedajesz, wrócę z planem integracji",
   },
 ];
 

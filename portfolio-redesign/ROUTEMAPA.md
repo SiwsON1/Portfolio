@@ -154,6 +154,14 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-09-13 (cz. 2): **wpis `/blog/dostepnosc-woocommerce`** na własnych danych: skan axe 110 polskich
+  sklepów WooCommerce, 301 stron (kontrast 96%, linki bez nazwy 85%, krytyczne 70%). Dane surowe
+  z nazwami sklepów, w tym lista najsłabszych do outreachu z punktu 1.2: `Desktop\research-zarobki\data\skan-woocommerce-2026-09-13\`.
+  Wpisy „czy mój sklep musi spełniać WCAG” i „ile kosztuje dostosowanie do WCAG” **odrzucone**: kanibalizują
+  `/audyt-wcag` i wpis WCAG 2.1 AA, drugi dodatkowo łamie decyzję o braku cen.
+  **Usługa `/uslugi/integracja-woocommerce-z-baselinker`** (kierunek 2): fraza z SERP ma intencję usługową,
+  dowód to powiązania magazynów w Kosmotece. Bez cen. Pakiet ratunkowy opisany w FAQ, bez osobnej strony.
+  Plan: `plans/wpis-dostepnosc-woocommerce-2026-09-13.md`.
 - 2026-09-13: **wdrożone zaległe zmiany z 01.09** (produkcja do 13.09 wciąż pokazywała ceny i 404 na wpisie WCAG).
   Wydajność mobile: element LCP na każdej podstronie był literą z ekranu ładowania, teraz intro tylko
   na `/`; Fraunces przycięty 494 → 156 KB; `/projekty` 27 MB obrazów → 240 KB, CLS 0,81 → 0.

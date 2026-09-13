@@ -204,7 +204,7 @@ export default async function UslugaPage({
               <aside className="md:col-span-3">
                 <p className="eyebrow mb-2">— Realizacja w tej technologii</p>
                 <p className="text-ink-faint text-sm font-mono leading-relaxed">
-                  Konkretny projekt który zrobiłem w tym setupie.
+                  Konkretny projekt, który zrobiłem w tych technologiach.
                 </p>
               </aside>
               <div className="md:col-span-9">
@@ -279,7 +279,7 @@ export default async function UslugaPage({
           <aside className="md:col-span-3">
             <p className="eyebrow mb-2">01 — Wstęp</p>
             <p className="text-ink-faint text-sm font-mono">
-              Background, historia, dlaczego.
+              Kontekst, historia, dlaczego.
             </p>
           </aside>
           <div className="md:col-span-7 prose-bound space-y-6 text-ink text-lg leading-relaxed">
@@ -296,12 +296,12 @@ export default async function UslugaPage({
           <aside className="md:col-span-3">
             <p className="eyebrow mb-2">02 — Co dostajesz</p>
             <p className="text-ink-faint text-sm font-mono">
-              Konkretne kawałki pakietu.
+              Co wchodzi w zakres.
             </p>
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">
-              Cztery <em>kawałki</em> tego samego.
+              Cztery <em>rzeczy</em>, które dostajesz.
             </h2>
           </div>
         </div>

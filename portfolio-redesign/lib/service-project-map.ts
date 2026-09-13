@@ -98,6 +98,13 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
     highlight:
       "WooCommerce + LiteSpeed + WebP — LCP poniżej 2s na mobile",
   },
+  "integracja-woocommerce-z-baselinker": {
+    projectSlug: "kosmoteka",
+    context:
+      "Kosmoteka.pl, sklep z teleskopami na WooCommerce, ma w BaseLinkerze skonfigurowane powiązania magazynów. Katalog hurtowni zostaje w jej magazynie, a do sklepu trafiają tylko wybrane pozycje skopiowane do Magazynu BaseLinker. Stany i ceny aktualizują się z pliku hurtowni, produkty w WooCommerce powstają przez REST API.",
+    highlight:
+      "WooCommerce + BaseLinker + powiązania magazynów z hurtownią",
+  },
   "wdrozenia-ai": {
     projectSlug: "businesstokenizer",
     context:

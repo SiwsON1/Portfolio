@@ -225,6 +225,45 @@ export default async function PostPage({
                       <p key={j}>{renderInlineLinks(para)}</p>
                     ))}
                   </div>
+                  {s.table && (
+                    <div className="mt-10 overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-[0.95rem] md:text-base">
+                          <caption className="caption-bottom pt-4 text-left text-sm text-ink-faint">
+                            {s.table.caption}
+                          </caption>
+                          <thead>
+                            <tr>
+                              {s.table.head.map((h, j) => (
+                                <th
+                                  key={j}
+                                  scope="col"
+                                  className={`pb-3 font-mono text-[10px] font-normal uppercase tracking-[0.18em] text-ink-faint ${j > 0 ? "pl-3 text-right align-bottom" : "align-bottom"}`}
+                                >
+                                  {h}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {s.table.rows.map((row, j) => (
+                              <tr key={j} className="border-t border-line">
+                                {row.map((cell, k) =>
+                                  k === 0 ? (
+                                    <th key={k} scope="row" className="py-3 font-normal leading-snug text-ink">
+                                      {cell}
+                                    </th>
+                                  ) : (
+                                    <td key={k} className="py-3 pl-3 text-right tabular-nums whitespace-nowrap text-ink-mute">
+                                      {cell}
+                                    </td>
+                                  )
+                                )}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                    </div>
+                  )}
                 </section>
               ))}
             </div>

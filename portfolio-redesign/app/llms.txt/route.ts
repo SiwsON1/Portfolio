@@ -5,6 +5,7 @@ import { industries } from "@/lib/industries";
 import { PERSON_ID, SITE_URL } from "@/lib/schema";
 
 const PILLAR_SLUGS = [
+  "dostepnosc-woocommerce",
   "wcag-2-1-aa",
   "next-js-co-to-jest",
   "ile-kosztuje-strona-na-next-js",

@@ -1,6 +1,14 @@
+export type PostTable = {
+  caption: string;
+  head: string[];
+  rows: string[][];
+};
+
 export type PostSection = {
   heading: string;
   body: string[];
+  /** Tabela pod akapitami sekcji. Dane liczbowe czytelniejsze dla ludzi i modeli AI niż proza. */
+  table?: PostTable;
 };
 
 export type PostFaq = {
@@ -46,6 +54,154 @@ export type Post = {
  * authority dla web dev / SEO / Next.js.
  */
 export const posts: Post[] = [
+  {
+    slug: "dostepnosc-woocommerce",
+    title: "Dostępność WooCommerce: błędy WCAG w 110 polskich sklepach",
+    excerpt:
+      "Sprawdziłem 110 polskich sklepów na WooCommerce. Za niski kontrast miało 96% z nich, linki bez dostępnej nazwy 85%, a co najmniej jeden błąd krytyczny 70%.",
+    date: "2026-09-13",
+    readingMinutes: 9,
+    tags: ["WCAG", "dostępność", "WooCommerce"],
+    keyword: "dostępność WooCommerce",
+    metaTitle: "Dostępność WooCommerce: błędy WCAG w 110 polskich sklepach",
+    metaDescription:
+      "Dostępność WooCommerce w liczbach: skan 110 polskich sklepów i 301 stron. Kontrast zawodzi w 96% sklepów, nazwy linków w 85%. Najczęstsze błędy i naprawy.",
+    hero: { kind: "seo" },
+    relatedServices: ["sklepy-internetowe-woocommerce", "opieka-wordpress"],
+    body: [],
+    lead:
+      "Dostępność WooCommerce sprawdziłem w 110 polskich sklepach i tylko 2 z nich nie miały żadnego naruszenia wykrytego automatycznie. Co najmniej jeden błąd krytyczny wystąpił w 70% sklepów, a poważny lub krytyczny w 98%. Najczęściej zawodził kontrast tekstu, obecny w 96% sklepów, oraz dostępna nazwa linku, której brakowało w 85%. To dolna granica problemu, bo automat nie ocenia obsługi klawiaturą, kolejności czytania ani sensu tekstów alternatywnych.",
+    sections: [
+      {
+        heading: "Jak sprawdziłem 110 sklepów WooCommerce",
+        body: [
+          "Skan przeprowadziłem 13 września 2026 roku narzędziem axe-core 4.13 w przeglądarce Chromium, na ekranie 1366×900. Sprawdzałem reguły WCAG 2.0 i 2.1 na poziomach A i AA.",
+          "Próba objęła 114 sklepów z polskojęzyczną stroną, a WooCommerce potwierdziłem w kodzie każdej z nich. 74 sklepy znalazłem w wyszukiwarce po domyślnych adresach WooCommerce w 38 branżach, a 40 pochodziło z portfoliów 13 agencji, najwyżej 12 z jednej. Sklepy z obu źródeł wypadły prawie tak samo: mediana 5 i 4 rodzajów naruszeń, błąd krytyczny w 73% i 69% z nich.",
+          "Poprawnie odpowiedziało 110 sklepów. W każdym sprawdziłem stronę główną, kategorię i kartę produktu, razem 301 stron. Nie skanowałem koszyka ani kasy, bo wymagałoby to dodawania produktów do koszyka w cudzych sklepach.",
+          "Automat wykrywa tylko część barier. Nie ocenia obsługi klawiaturą, kolejności czytania ani tego, czy tekst alternatywny rzeczywiście opisuje obraz. Nazw sklepów nie podaję, bo celem jest obraz rynku, a nie ranking.",
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy dostępności w sklepach WooCommerce",
+        body: [
+          "Mediana wyniosła 5 różnych rodzajów naruszeń i 96 elementów z błędem na sklep, licząc łącznie trzy sprawdzone strony. Najczęstsze problemy dotyczyły kontrastu i nazw linków, ale lista obejmuje też obrazy, formularze, strukturę list i kod ARIA.",
+          "Każda z tych reguł opisuje konkretną barierę dla użytkownika. Sposób naprawy zależy od tego, skąd element pochodzi: z motywu, z wtyczki albo z treści wprowadzonej w panelu.",
+        ],
+        table: {
+          caption: "Odsetek sklepów z naruszeniem na co najmniej jednej z trzech sprawdzonych stron. Próba 110 sklepów WooCommerce i 301 stron, skan z 13.09.2026.",
+          head: ["Błąd", "Sklepów", "Kryterium WCAG"],
+          rows: [
+            ["Za niski kontrast tekstu", "96%", "1.4.3"],
+            ["Link bez dostępnej nazwy", "85%", "2.4.4, 4.1.2"],
+            ["Obrazek bez tekstu alternatywnego", "35%", "1.1.1"],
+            ["Blokada powiększania na telefonie", "31%", "1.4.4"],
+            ["Link w tekście odróżniony tylko kolorem", "29%", "1.4.1"],
+            ["Element klikalny w klikalnym", "26%", "4.1.2"],
+            ["Przycisk bez dostępnej nazwy", "24%", "4.1.2"],
+            ["Błędna struktura listy", "18%", "1.3.1"],
+            ["Pole formularza bez etykiety", "16%", "4.1.2"],
+            ["Niedozwolony atrybut ARIA", "15%", "4.1.2"],
+            ["Ukryty element dostępny z klawiatury", "13%", "4.1.2"],
+            ["Lista rozwijana bez etykiety", "11%", "4.1.2"],
+          ],
+        },
+      },
+      {
+        heading: "Kontrast cen, promocji i jasnoszarych linków",
+        body: [
+          "Za niski kontrast tekstu wystąpił w 96% sklepów, z medianą 73 elementów na sklep. W przykładach powtarzały się linki, przyciski, plakietki, ceny i pozycje menu.",
+          "Dwa wzorce są typowe dla WooCommerce. Przekreślona stara cena albo cena o za niskim kontraście pojawiła się w co najmniej 24% sklepów, a plakietka promocji w co najmniej 10%. Słabowidzący klient nie odczyta wtedy informacji, która decyduje o zakupie.",
+          "Zwykły tekst powinien mieć kontrast co najmniej 4,5:1, a duży 3:1. Poprawka to zmiana koloru tekstu albo tła w stylach motywu i sprawdzenie wszystkich stanów elementu, także linków i przycisków po najechaniu kursorem.",
+        ],
+      },
+      {
+        heading: "Linki i przyciski bez nazwy",
+        body: [
+          "Link bez dostępnej nazwy pojawił się w 85% sklepów, z medianą 15 takich elementów na sklep, a przycisk bez nazwy w 24%. Czytnik ekranu odczytuje taki element tylko jako „link” albo „przycisk”, bez informacji, dokąd prowadzi i co robi.",
+          "Źródła powtarzają się między sklepami: ikony serwisów społecznościowych, zdjęcia produktów na liście, lupa wyszukiwarki, kropki slidera i przyciski ilości. Ikona, którą widać, nie wystarcza, jeśli jej znaczenie nie trafia do dostępnej nazwy.",
+          "Naprawa to zwykle dodanie zrozumiałego tekstu albo atrybutu aria-label, na przykład „Szukaj” przy lupie czy „Zwiększ ilość” przy plusie. Element dekoracyjny nie powinien przejmować fokusu, a element, który coś robi, musi mieć właściwą rolę i nazwę.",
+        ],
+        table: {
+          caption: "Elementy bez dostępnej nazwy rozpoznane w przykładach kodu. Axe zapisywał najwyżej 2 przykłady reguły na stronę, więc to dolna granica. Próba 110 sklepów, skan z 13.09.2026.",
+          head: ["Element", "Sklepów"],
+          rows: [
+            ["Ikony serwisów społecznościowych", "20%"],
+            ["Link zdjęcia produktu na liście", "15%"],
+            ["Przycisk wyszukiwarki (sama lupa)", "11%"],
+            ["Kropki i strzałki slidera", "6%"],
+            ["Przyciski plus i minus przy ilości", "5%"],
+            ["Ikona listy życzeń albo porównywarki", "5%"],
+          ],
+        },
+      },
+      {
+        heading: "Karta produktu: zakładki opisu, warianty i karuzele",
+        body: [
+          "Zakładki z opisem i informacjami dodatkowymi miały zagnieżdżone elementy interaktywne albo błędne role ARIA w co najmniej 24% sklepów. Czytnik ekranu dostaje wtedy sprzeczne informacje o tym, co jest zakładką, która jest aktywna i jaką treść pokazuje.",
+          "Lista rozwijana bez etykiety wystąpiła w 11% sklepów, między innymi przy wyborze wariantu i sortowaniu produktów. Pole formularza bez etykiety (16%) to z kolei najczęściej zapis do newslettera albo formularz kontaktowy, a nie sama karta produktu.",
+          "W co najmniej 13% sklepów karuzela ukrywała slajdy przed czytnikiem ekranu, ale zostawiała w nich linki dostępne z klawiatury. Użytkownik przechodzi wtedy Tabem przez elementy, których nie widzi. Zakładki trzeba oprzeć na spójnych rolach ARIA bez zagnieżdżania, a ukrytym slajdom odebrać fokus.",
+        ],
+      },
+      {
+        heading: "Blokada powiększania na telefonie",
+        body: [
+          "Blokadę powiększania wykryłem w 31% sklepów. Prawie zawsze powodował ją zapis maximum-scale=1.0, user-scalable=no w znaczniku viewport motywu.",
+          "Słabowidzący klient na telefonie nie powiększy wtedy tekstu, ceny ani pól formularza. Responsywny układ tego nie rozwiązuje, bo dopasowanie strony do ekranu i możliwość jej powiększenia to dwie osobne rzeczy.",
+          "Naprawa zajmuje chwilę: usunięcie ograniczeń maximum-scale i user-scalable ze znacznika viewport. Po zmianie warto sprawdzić, czy menu i przyciski działają po powiększeniu.",
+        ],
+      },
+      {
+        heading: "Obrazki bez tekstu alternatywnego",
+        body: [
+          "Obrazek bez tekstu alternatywnego wystąpił w 35% sklepów. Axe traktuje to jako błąd krytyczny, bo osoba korzystająca z czytnika ekranu traci informację przekazaną wyłącznie obrazem.",
+          "W przykładach, które dało się rozpoznać, najczęściej były to ikony wgrane jako obrazki (co najmniej 11 sklepów) i logotypy, a rzadziej zdjęcia produktów. Samo uzupełnienie pola nie gwarantuje poprawy: automat wykryje brak opisu, ale nie oceni, czy opis ma sens.",
+          "Zdjęcia produktów potrzebują opisów wynikających z ich funkcji, a obrazy czysto dekoracyjne pustego atrybutu alt, żeby czytnik je pominął. W WooCommerce poprawia się to w danych mediów i w szablonie, który generuje obrazki na liście i karcie produktu.",
+        ],
+      },
+      {
+        heading: "Czy page builder psuje dostępność sklepu",
+        body: [
+          "Page builder słabo różnicował wynik. Błąd krytyczny wystąpił w 67% spośród 67 sklepów z Elementorem, w 77% spośród 22 sklepów z Divi i w 63% spośród 16 sklepów bez buildera.",
+          "Próba sklepów bez buildera jest mała, więc nie traktuję tych liczb jako rankingu narzędzi. Wskazują raczej, że problem siedzi w połączeniu motywu, wtyczek i treści, a nie w samym edytorze.",
+          "Zmiana edytora nie naprawi nazw przycisków, kontrastu cen ani etykiet formularzy. Trzeba znaleźć komponent, który generuje wadliwy kod, poprawić go i sprawdzić wszystkie miejsca, w których jest używany.",
+        ],
+      },
+      {
+        heading: "Co wyniki oznaczają dla właściciela sklepu",
+        body: [
+          "Automatyczny skan szybko pokazuje powtarzalne naruszenia, ale nie potwierdza zgodności sklepu. W tym badaniu nie objął koszyka ani kasy, a to tam klient podaje dane i płaci.",
+          "Rozsądna kolejność to najpierw błędy krytyczne i poważne w szablonach, potem ręczne przejście całej ścieżki zakupowej klawiaturą. Zakres wymagań opisałem we wpisie o [WCAG 2.1 AA](/blog/wcag-2-1-aa), a pełny [audyt WCAG](/audyt-wcag) łączy skan z testami klawiaturą i czytnikiem ekranu.",
+          "Po naprawie warto co jakiś czas sprawdzać te same szablony, bo aktualizacje motywu i wtyczek zmieniają generowany kod. Dlatego dostępność powinna być częścią bieżącej [opieki nad sklepem na WordPressie](/uslugi/opieka-wordpress), a przy budowie nowego [sklepu WooCommerce](/uslugi/sklepy-internetowe-woocommerce) warto uwzględnić ją od początku.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Czy WooCommerce jest dostępny dla osób z niepełnosprawnościami?",
+        a: "WooCommerce może być podstawą dostępnego sklepu, ale wynik zależy od motywu, wtyczek i treści. W skanie 110 polskich sklepów tylko 2 nie miały naruszeń wykrytych automatycznie. Brak błędów w skanerze nadal nie potwierdza, że sklep da się obsłużyć klawiaturą i czytnikiem ekranu.",
+      },
+      {
+        q: "Jak sprawdzić dostępność sklepu WooCommerce?",
+        a: "Najpierw przeskanuj reprezentatywne szablony: stronę główną, kategorię, kartę produktu, koszyk i kasę. Potem ręcznie sprawdź obsługę klawiaturą, kolejność czytania, sens tekstów alternatywnych i całą ścieżkę zakupową. Sam skaner pokazuje tylko dolną granicę problemów.",
+      },
+      {
+        q: "Jakie błędy dostępności WooCommerce występują najczęściej?",
+        a: "W skanie z 13 września 2026 roku najczęstszy był za niski kontrast tekstu, w 96% sklepów. Link bez dostępnej nazwy wystąpił w 85%, obrazek bez tekstu alternatywnego w 35%, a blokada powiększania na telefonie w 31%.",
+      },
+      {
+        q: "Czy wtyczka lub nakładka naprawi dostępność WooCommerce?",
+        a: "Nie. Nakładka nie zmienia kodu strony, więc nie naprawia struktury nagłówków, etykiet formularzy ani obsługi klawiaturą. Bywa, że przeszkadza czytnikom ekranu bardziej niż sama strona.",
+      },
+      {
+        q: "Czy page builder jest główną przyczyną błędów dostępności WooCommerce?",
+        a: "Wyniki tego nie potwierdzają. Błąd krytyczny wystąpił w 67% sklepów z Elementorem, w 77% sklepów z Divi i w 63% sklepów bez buildera. Problem wynika głównie z połączenia motywu, wtyczek i treści.",
+      },
+      {
+        q: "Czy automatyczny test potwierdza zgodność WooCommerce z WCAG?",
+        a: "Nie. Automat nie ocenia obsługi klawiaturą, kolejności czytania ani sensu tekstów alternatywnych. Wynik skanu wskazuje wykrywalne naruszenia i miejsca do ręcznego sprawdzenia, ale nie jest potwierdzeniem zgodności.",
+      },
+    ],
+  },
   {
     slug: "wcag-2-1-aa",
     title: "WCAG 2.1 AA — 50 kryteriów, które od 2025 obowiązują firmy",

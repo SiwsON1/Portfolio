@@ -7,6 +7,7 @@ import { WCAG_FAQ, WCAG_META, WCAG_PRAWO } from "@/lib/wcag";
 export const dynamic = "force-static";
 
 const PILLAR_SLUGS = [
+  "dostepnosc-woocommerce",
   "wcag-2-1-aa",
   "next-js-co-to-jest",
   "ile-kosztuje-strona-na-next-js",
@@ -76,7 +77,11 @@ URL: ${SITE_URL}/blog/${post!.slug}
 
 ${[post!.lead ?? post!.excerpt].filter((t) => !hasPrice(t)).join("")}
 
-${post!.sections?.filter((section) => !hasPrice(section.heading)).map((section) => `### ${section.heading}`).join("\n\n") ?? ""}
+${post!.sections?.filter((section) => !hasPrice(section.heading)).map((section) => `### ${section.heading}${
+  section.table
+    ? `\n\n${section.table.caption}\n\n| ${section.table.head.join(" | ")} |\n|${section.table.head.map(() => "---").join("|")}|\n${section.table.rows.map((row) => `| ${row.join(" | ")} |`).join("\n")}`
+    : ""
+}`).join("\n\n") ?? ""}
 
 ${faqMarkdown(post!.faq ?? [])}`)
     .join("\n\n");
