@@ -1,0 +1,53 @@
+/* Style narzędzia /sprawdz-dostepnosc. Zwykły CSS, nie styled-jsx, żeby trafiał do HTML z serwera. */
+
+.scan-press {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 160ms ease;
+}
+.scan-press:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.scan-reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: scan-reveal 320ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.scan-reveal[data-i="1"] { animation-delay: 50ms; }
+.scan-reveal[data-i="2"] { animation-delay: 100ms; }
+.scan-reveal[data-i="3"] { animation-delay: 150ms; }
+.scan-reveal[data-i="4"] { animation-delay: 200ms; }
+.scan-reveal[data-i="5"] { animation-delay: 250ms; }
+
+@keyframes scan-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scan-progress {
+  transform-origin: left;
+  animation: scan-progress 6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes scan-progress {
+  from { transform: scaleX(0.04); }
+  to { transform: scaleX(0.92); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-reveal {
+    transform: none;
+    animation: scan-fade 200ms ease forwards;
+    animation-delay: 0ms !important;
+  }
+  .scan-progress {
+    animation: none;
+    transform: scaleX(0.5);
+  }
+  .scan-press:active:not(:disabled) {
+    transform: none;
+  }
+}
+@keyframes scan-fade {
+  to { opacity: 1; }
+}

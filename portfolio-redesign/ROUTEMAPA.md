@@ -154,6 +154,14 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-09-13 (cz. 3): **narzędzie `/sprawdz-dostepnosc` (punkt 1.2)**: 15 testów statycznego HTML
+  (`lib/wcag-scan/`), ochrona SSRF z testami (także IPv6 osadzone i NAT64), limity: 5 skanów/10 min na IP,
+  maile raportu 2/h na IP i 2/doba na odbiorcę, adres strony w mailu bez hiperłącza (ochrona przed phishingiem
+  z naszej domeny). Pełny raport na e-mail + powiadomienie o leadzie. Limity są w pamięci instancji, więc
+  przy większym ruchu przenieść do Upstash/Vercel KV. Test: `node scripts/test-wcag-scan.mjs`.
+  Tego samego silnika można użyć do skanu listy sklepów pod outreach (1.2, „drugie zastosowanie”).
+  Przy okazji: `/polityka-prywatnosci` (baner linkował do 404), GA4 nie było skonfigurowane na produkcji
+  (brak `NEXT_PUBLIC_GA_ID`), poprawiona zgoda, poziome przewijanie całego serwisu na 375 px (e-mail w stopce).
 - 2026-09-13 (cz. 2): **wpis `/blog/dostepnosc-woocommerce`** na własnych danych: skan axe 110 polskich
   sklepów WooCommerce, 301 stron (kontrast 96%, linki bez nazwy 85%, krytyczne 70%). Dane surowe
   z nazwami sklepów, w tym lista najsłabszych do outreachu z punktu 1.2: `Desktop\research-zarobki\data\skan-woocommerce-2026-09-13\`.

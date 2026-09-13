@@ -42,6 +42,7 @@ ${services.map((s) => `- [${s.title}](${SITE_URL}/uslugi/${s.slug}): ${s.metaDes
 
 ## Dostępność cyfrowa
 - [Audyt WCAG](${SITE_URL}/audyt-wcag): audyt WCAG 2.1 AA, 50 kryteriów, audyt z naprawą błędów, realizacja 5-10 dni roboczych. Podstawa: ustawa z 26.04.2024 wdrażająca Europejski Akt o Dostępności, obowiązuje od 28.06.2025, norma EN 301 549 V3.2.1. Mikroprzedsiębiorcy świadczący usługi są zwolnieni.
+- [Test dostępności strony](${SITE_URL}/sprawdz-dostepnosc): darmowy test online 15 wymagań WCAG 2.1 w kodzie HTML podanej strony, wynik od razu, pełny raport na e-mail. Nie sprawdza kontrastu ani obsługi klawiaturą, nie potwierdza zgodności z przepisami.
 
 ## Strony dla branż
 ${industries.map((i) => `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, realizacja ${i.pricing.time}`).join("\n")}

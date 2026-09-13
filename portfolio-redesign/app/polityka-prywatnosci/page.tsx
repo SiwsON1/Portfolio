@@ -32,6 +32,13 @@ const SECTIONS: { heading: string; body: React.ReactNode[] }[] = [
     ],
   },
   {
+    heading: "Test dostępności strony",
+    body: [
+      "Narzędzie pod adresem /sprawdz-dostepnosc pobiera kod HTML strony, której adres podasz, i sprawdza go automatycznie. Pobranego kodu nie zapisuję na stałe. Adres IP jest przez krótki czas trzymany w pamięci serwera, żeby ograniczyć liczbę skanów z jednego adresu i chronić narzędzie przed nadużyciem (art. 6 ust. 1 lit. f RODO).",
+      "Jeśli poprosisz o pełny raport, podajesz adres e-mail i zaznaczasz zgodę. Wtedy wysyłam raport przez usługę Resend, a do mojej skrzynki trafia informacja z Twoim adresem e-mail, adresem sprawdzanej strony i wynikiem, żebym mógł odpisać w sprawie wyników. Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO). Dane przechowuję do czasu wycofania zgody albo zakończenia korespondencji.",
+    ],
+  },
+  {
     heading: "Hosting i logi serwera",
     body: [
       "Serwis działa na infrastrukturze Vercel. Przy każdym wejściu serwer zapisuje techniczne dane żądania, w tym adres IP, datę, adres podstrony i informacje o przeglądarce. Służą one do zapewnienia działania i bezpieczeństwa serwisu, na podstawie art. 6 ust. 1 lit. f RODO. Nie łączę ich z danymi z formularza.",

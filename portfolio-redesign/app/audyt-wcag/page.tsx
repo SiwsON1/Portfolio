@@ -488,6 +488,13 @@ export default function AudytWcagPage() {
             >
               Napisz do mnie <span aria-hidden>→</span>
             </Link>
+            <p className="mt-8 text-ink-mute">
+              Wolisz najpierw sam zobaczyć skalę problemu?{" "}
+              <Link href="/sprawdz-dostepnosc" className="text-ink underline underline-offset-4 hover:text-peach">
+                Sprawdź dostępność strony darmowym testem
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

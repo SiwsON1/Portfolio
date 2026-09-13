@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/branze`, priority: 0.85 },
     // Money page z routemapy. Wysoki priorytet, bo to strona transakcyjna z własną frazą.
     { url: `${SITE_URL}/audyt-wcag`, priority: 0.9 },
+    { url: `${SITE_URL}/sprawdz-dostepnosc`, priority: 0.8 },
     { url: `${SITE_URL}/blog`, priority: 0.85 },
     { url: `${SITE_URL}/o-mnie`, priority: 0.7 },
     { url: `${SITE_URL}/kontakt`, priority: 0.7 },
