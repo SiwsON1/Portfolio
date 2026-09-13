@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LoadingIntro } from "@/components/providers/LoadingIntro";
 import { ScrollProgress } from "@/components/providers/ScrollProgress";
@@ -23,12 +24,17 @@ const mono = Geist_Mono({
   display: "swap",
 });
 
-const display = Fraunces({
+// Fraunces przycięty lokalnie: waga 400 (jedyna renderowana w serwisie), WONK 0,
+// zmienne osie opsz i SOFT zostają. Glify: Latin-1, Latin Extended-A, interpunkcja.
+// 494 KB w 4 plikach z Google → 156 KB w 2. Szczegóły: plans/wydajnosc-2026-09-13.md
+const display = localFont({
   variable: "--font-fraunces",
-  subsets: ["latin", "latin-ext"],
-  axes: ["SOFT", "opsz"],
-  style: ["normal", "italic"],
+  src: [
+    { path: "./fonts/fraunces-pl.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/fraunces-italic-pl.woff2", weight: "400", style: "italic" },
+  ],
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";

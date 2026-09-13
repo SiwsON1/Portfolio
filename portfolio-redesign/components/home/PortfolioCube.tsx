@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { getImageProps } from "next/image";
 import { projects, type Project } from "@/lib/projects";
 
 const CUBE_FACES = ["front", "back", "left", "right", "top", "bottom"] as const;
@@ -226,10 +227,17 @@ export function PortfolioCube() {
                     data-focused={activeSlug === project.slug ? "true" : "false"}
                     title={project.client === "Lab" ? project.title : project.client}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {/* Komórka ma ok. 160 px (sześcian max 520 px, siatka 3×3), a karty
+                        źródłowe 3200×2000. Bez optymalizatora strona ciągnęła 27 MB. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
                     <img
-                      src={project.image}
-                      alt={project.title}
+                      {...getImageProps({
+                        src: project.image,
+                        alt: project.title,
+                        width: 384,
+                        height: 240,
+                        sizes: "(max-width: 767px) 100px, 180px",
+                      }).props}
                       className="portfolio-cube-img"
                       loading="lazy"
                       draggable={false}

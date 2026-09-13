@@ -1,9 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
+// Ukrywa overlay przed pierwszym malowaniem, zanim React się zhydratuje.
+// Bez tego przy powrocie w tej samej sesji overlay zasłaniał treść do hydracji
+// i był elementem LCP.
+const HIDE_IF_SEEN = `try{if(sessionStorage.getItem("intro-seen")||matchMedia("(prefers-reduced-motion: reduce)").matches){document.getElementById("ms-intro").style.display="none"}}catch(e){}`;
+
 export function LoadingIntro() {
+  // Intro tylko przy twardym wejściu na stronę główną. Landingi i wpisy
+  // z wyszukiwarki pokazują treść od razu.
+  const pathname = usePathname();
+  const [enabled] = useState(pathname === "/");
   const [active, setActive] = useState(true);
   const [skipped, setSkipped] = useState(false);
 
@@ -18,7 +28,7 @@ export function LoadingIntro() {
   const creditRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || !enabled) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
@@ -262,13 +272,16 @@ export function LoadingIntro() {
       tl.kill();
       document.body.style.overflow = previousOverflow;
     };
-  }, []);
+  }, [enabled]);
 
-  if (skipped) return null;
+  if (skipped || !enabled) return null;
 
   return (
+    <>
     <div
       ref={rootRef}
+      id="ms-intro"
+      suppressHydrationWarning
       aria-hidden
       className="pointer-events-none fixed inset-0 z-[200] flex items-center justify-center overflow-hidden bg-bg"
       style={{
@@ -357,5 +370,7 @@ export function LoadingIntro() {
         </span>
       </div>
     </div>
+    <script dangerouslySetInnerHTML={{ __html: HIDE_IF_SEEN }} />
+    </>
   );
 }
