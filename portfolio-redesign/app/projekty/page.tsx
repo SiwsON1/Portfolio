@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PortfolioCube } from "@/components/home/PortfolioCube";
 import { projects } from "@/lib/projects";
+import { jsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Projekty",
@@ -27,7 +28,7 @@ export default function ProjektyPage() {
     <article className="relative">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(itemListSchema) }}
       />
       <h1 className="sr-only">
         Projekty: strony www, aplikacje Next.js i React, eksperymenty

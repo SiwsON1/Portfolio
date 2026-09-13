@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FlamePortraitClient } from "@/components/layout/FlamePortraitClient";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { jsonLd, personSchema, SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "O mnie",
@@ -11,8 +13,22 @@ export const metadata: Metadata = {
 };
 
 export default function OMniePage() {
+  const profileSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    mainEntity: personSchema,
+    url: `${SITE_URL}/o-mnie`,
+    inLanguage: "pl-PL",
+  };
+  const breadcrumbs = breadcrumbsSchema([
+    { name: "Strona główna", path: "/" },
+    { name: "O mnie", path: "/o-mnie" },
+  ]);
+
   return (
     <article className="relative">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(profileSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }} />
       {/* HERO */}
       <header className="relative px-6 pt-40 pb-24 md:px-10 md:pt-56 md:pb-32 overflow-hidden">
         <div

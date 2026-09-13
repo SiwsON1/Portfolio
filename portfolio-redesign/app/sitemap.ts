@@ -7,7 +7,6 @@ import { industries } from "@/lib/industries";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const staticRoutes = [
     { url: SITE_URL, priority: 1.0 },
     { url: `${SITE_URL}/projekty`, priority: 0.9 },
@@ -34,13 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const postRoutes = posts.map((p) => ({
     url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.updatedAt ?? p.date),
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...industryRoutes, ...projectRoutes, ...postRoutes].map((r) => ({
-    url: r.url,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: r.priority,
-  }));
+  return [...staticRoutes, ...serviceRoutes, ...industryRoutes, ...projectRoutes, ...postRoutes];
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { industries, INDUSTRY_CASES } from "@/lib/industries";
 import { projects } from "@/lib/projects";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { jsonLd } from "@/lib/schema";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
@@ -109,7 +110,7 @@ export default function StronyDlaPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
     </article>
   );

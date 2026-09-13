@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { posts } from "@/lib/posts";
+import { jsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -27,7 +28,7 @@ export default function BlogIndex() {
     <article className="relative">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(itemListSchema) }}
       />
       <header className="relative px-6 pt-40 pb-24 md:px-10 md:pt-56 md:pb-32 overflow-hidden">
         <div

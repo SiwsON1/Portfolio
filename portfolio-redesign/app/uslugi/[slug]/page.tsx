@@ -11,8 +11,7 @@ import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -36,6 +35,7 @@ export async function generateMetadata({
       url: `${SITE_URL}/uslugi/${s.slug}`,
       type: "website",
     },
+    twitter: { card: "summary_large_image", title: s.metaTitle, description: s.metaDescription },
   };
 }
 
@@ -57,16 +57,7 @@ export default async function UslugaPage({
     "@type": "Service",
     name: s.title,
     description: s.metaDescription,
-    provider: {
-      "@type": "Person",
-      name: "Marcin Siwonia",
-      url: SITE_URL,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Wrocław",
-        addressCountry: "PL",
-      },
-    },
+    provider: personRef,
     areaServed: { "@type": "Country", name: "Poland" },
     url: `${SITE_URL}/uslugi/${s.slug}`,
   };
@@ -525,15 +516,15 @@ export default async function UslugaPage({
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
       />
     </article>
   );

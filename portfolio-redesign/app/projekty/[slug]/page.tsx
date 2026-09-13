@@ -4,8 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -28,7 +27,7 @@ export async function generateMetadata({
       title,
       description: p.description,
       url: `${SITE_URL}/projekty/${p.slug}`,
-      type: "article",
+      type: "website",
       images: [{ url: p.image }],
     },
   };
@@ -62,12 +61,8 @@ export default async function ProjektPage({
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: p.title,
-    creator: {
-      "@type": "Person",
-      name: "Marcin Siwonia",
-      url: SITE_URL,
-    },
-    datePublished: `${p.year}-01-01`,
+    creator: personRef,
+    dateCreated: String(p.year),
     description: p.description,
     image: `${SITE_URL}${p.image}`,
     url: `${SITE_URL}/projekty/${p.slug}`,
@@ -371,11 +366,11 @@ export default async function ProjektPage({
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
     </article>
   );

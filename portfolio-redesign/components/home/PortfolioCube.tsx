@@ -2,7 +2,23 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { getImageProps } from "next/image";
+import "./PortfolioCube.css";
 import { projects, type Project } from "@/lib/projects";
+
+// Komórka ma ok. 160 px (sześcian max 520 px, siatka 3×3), a karty źródłowe 3200×2000.
+// Bez optymalizatora /projekty ciągnęło 27 MB. Atrybuty width/height usunięte, bo przed
+// hydracją rozpychały wiersze siatki do 240 px i dawały CLS 0,81.
+function cubeImageProps(project: Project) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { width, height, ...props } = getImageProps({
+    src: project.image,
+    alt: project.title,
+    width: 384,
+    height: 240,
+    sizes: "(max-width: 767px) 100px, 180px",
+  }).props;
+  return props;
+}
 
 const CUBE_FACES = ["front", "back", "left", "right", "top", "bottom"] as const;
 const SLOTS_PER_FACE = 9;
@@ -227,17 +243,9 @@ export function PortfolioCube() {
                     data-focused={activeSlug === project.slug ? "true" : "false"}
                     title={project.client === "Lab" ? project.title : project.client}
                   >
-                    {/* Komórka ma ok. 160 px (sześcian max 520 px, siatka 3×3), a karty
-                        źródłowe 3200×2000. Bez optymalizatora strona ciągnęła 27 MB. */}
                     {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
                     <img
-                      {...getImageProps({
-                        src: project.image,
-                        alt: project.title,
-                        width: 384,
-                        height: 240,
-                        sizes: "(max-width: 767px) 100px, 180px",
-                      }).props}
+                      {...cubeImageProps(project)}
                       className="portfolio-cube-img"
                       loading="lazy"
                       draggable={false}
@@ -277,177 +285,6 @@ export function PortfolioCube() {
         </div>
       </aside>
 
-      <style jsx>{`
-        .portfolio-cube-stage {
-          --cube-size: clamp(360px, 40vw, 520px);
-          --cube-depth: calc(var(--cube-size) / 2);
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          min-height: 64vh;
-          perspective: 1700px;
-          perspective-origin: 50% 45%;
-          position: relative;
-          z-index: 10;
-        }
-
-        .portfolio-cube {
-          height: var(--cube-size);
-          position: relative;
-          transform-style: preserve-3d;
-          width: var(--cube-size);
-          will-change: transform;
-        }
-
-        .portfolio-cube--paused {
-          animation-play-state: paused;
-        }
-
-        @keyframes portfolioCubeRotate {
-          0% {
-            transform: rotateX(-25deg) rotateY(35deg) rotateZ(-2deg);
-          }
-          25% {
-            transform: rotateX(-20deg) rotateY(125deg) rotateZ(1deg);
-          }
-          50% {
-            transform: rotateX(-28deg) rotateY(215deg) rotateZ(-3deg);
-          }
-          75% {
-            transform: rotateX(-20deg) rotateY(305deg) rotateZ(1deg);
-          }
-          100% {
-            transform: rotateX(-25deg) rotateY(395deg) rotateZ(-2deg);
-          }
-        }
-
-        .portfolio-cube-face {
-          display: grid;
-          gap: clamp(12px, 1.5vw, 22px);
-          padding: clamp(12px, 1.5vw, 22px);
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          inset: 0;
-          position: absolute;
-          transform-style: preserve-3d;
-        }
-
-        .portfolio-cube-face--front {
-          transform: rotateY(0deg) translateZ(var(--cube-depth));
-        }
-        .portfolio-cube-face--back {
-          filter: brightness(0.78);
-          transform: rotateY(180deg) translateZ(var(--cube-depth));
-        }
-        .portfolio-cube-face--left {
-          filter: brightness(0.88);
-          transform: rotateY(-90deg) translateZ(var(--cube-depth));
-        }
-        .portfolio-cube-face--right {
-          filter: brightness(0.88);
-          transform: rotateY(90deg) translateZ(var(--cube-depth));
-        }
-        .portfolio-cube-face--top {
-          transform: rotateX(90deg) translateZ(var(--cube-depth));
-        }
-        .portfolio-cube-face--bottom {
-          filter: brightness(0.78);
-          transform: rotateX(-90deg) translateZ(var(--cube-depth));
-        }
-
-        .portfolio-cube-cell {
-          background: var(--bg);
-          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-          display: block;
-          overflow: hidden;
-          position: relative;
-          transition: opacity 350ms cubic-bezier(0.23, 1, 0.32, 1),
-            filter 350ms cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .portfolio-cube-cell::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.06) 0%,
-            rgba(255, 255, 255, 0) 50%,
-            rgba(0, 0, 0, 0.18) 100%
-          );
-          opacity: 0.65;
-          mix-blend-mode: overlay;
-        }
-
-        .portfolio-cube-cell[data-active="false"] .portfolio-cube-img {
-          filter: grayscale(1) brightness(0.45) contrast(0.9);
-          opacity: 0.55;
-        }
-
-        /* Najechany projekt — pełny kolor + peach ring, wybija się ze sceny */
-        .portfolio-cube-cell[data-focused="true"] {
-          box-shadow: inset 0 0 0 1.5px rgba(232, 178, 134, 0.95),
-            0 0 22px rgba(232, 178, 134, 0.35);
-          z-index: 2;
-        }
-        .portfolio-cube-cell[data-focused="true"] .portfolio-cube-img {
-          filter: brightness(1.12) saturate(1.18) contrast(1.02);
-          transform: scale(1.04);
-        }
-
-        .portfolio-cube-cell:hover .portfolio-cube-img {
-          filter: brightness(1.15) saturate(1.1);
-          transform: scale(1.03);
-        }
-
-        .portfolio-cube-img {
-          display: block;
-          height: 100%;
-          object-fit: cover;
-          object-position: top;
-          /* Soft contrast — text na screenshotach mniej dominujący, ogólny tone bardziej editorial */
-          filter: contrast(0.92) saturate(1.05);
-          transition: transform 350ms cubic-bezier(0.23, 1, 0.32, 1),
-            filter 350ms cubic-bezier(0.23, 1, 0.32, 1);
-          width: 100%;
-        }
-
-        .portfolio-marquee {
-          animation: portfolioMarquee 48s linear infinite;
-          will-change: transform;
-        }
-
-        .portfolio-marquee--paused {
-          animation-play-state: paused;
-        }
-
-        @keyframes portfolioMarquee {
-          0% {
-            transform: translateY(0);
-          }
-          100% {
-            transform: translateY(-75%);
-          }
-        }
-
-        @media (max-width: 767px) {
-          .portfolio-cube-stage {
-            min-height: 380px;
-            --cube-size: clamp(220px, 60vw, 300px);
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .portfolio-cube,
-          .portfolio-marquee {
-            animation: none;
-          }
-          .portfolio-cube {
-            transform: rotateX(-25deg) rotateY(35deg) rotateZ(-2deg);
-          }
-        }
-      `}</style>
     </div>
   );
 }

@@ -20,6 +20,7 @@ export type Post = {
   title: string;
   excerpt: string;
   date: string;
+  updatedAt?: string;
   readingMinutes: number;
   tags: string[];
   body: string[];

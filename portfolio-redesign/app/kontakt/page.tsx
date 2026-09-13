@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/contact/ContactForm";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -10,8 +12,22 @@ export const metadata: Metadata = {
 };
 
 export default function KontaktPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    mainEntity: personRef,
+    url: `${SITE_URL}/kontakt`,
+    inLanguage: "pl-PL",
+  };
+  const breadcrumbs = breadcrumbsSchema([
+    { name: "Strona główna", path: "/" },
+    { name: "Kontakt", path: "/kontakt" },
+  ]);
+
   return (
     <article className="px-6 pt-40 pb-32 md:px-10 md:pt-56">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(contactSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }} />
       <header className="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-3">
           <p className="eyebrow">Kontakt</p>

@@ -5,7 +5,18 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.
 export default function robots(): MetadataRoute.Robots {
   return {
     // /lab to warianty projektowe, nie treść dla odwiedzających.
-    rules: { userAgent: "*", allow: "/", disallow: "/lab" },
+    rules: [
+      { userAgent: "*", allow: "/", disallow: "/lab" },
+      ...[
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "PerplexityBot",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Google-Extended",
+      ].map((userAgent) => ({ userAgent, allow: "/", disallow: "/lab" })),
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
   };

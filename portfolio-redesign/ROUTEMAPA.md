@@ -154,6 +154,14 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-09-13: **wdrożone zaległe zmiany z 01.09** (produkcja do 13.09 wciąż pokazywała ceny i 404 na wpisie WCAG).
+  Wydajność mobile: element LCP na każdej podstronie był literą z ekranu ładowania, teraz intro tylko
+  na `/`; Fraunces przycięty 494 → 156 KB; `/projekty` 27 MB obrazów → 240 KB, CLS 0,81 → 0.
+  LCP mobile usług 4,7 → 2,0 s. Schema: jedna encja `/#person`, ProfilePage, ContactPage, og:image
+  na wpisach/branżach/WCAG, prawdziwe `lastmod`, bio autora pod wpisami, `llms-full.txt` bez kwot.
+  Plany: `plans/wydajnosc-2026-09-13.md`, `plans/schema-geo-2026-09-13.md`.
+  **Do decyzji usera:** wpis `ile-kosztuje-strona-na-next-js` mówi „projekty, które realizuję:
+  15-30 tys. zł” (to cennik, nie rynek); brak strony `/polityka-prywatnosci`, do której linkuje baner cookies.
 - 2026-08-24: routemapa utworzona, nic jeszcze nie zaimplementowane
 - 2026-09-01: **DECYZJA: na stronach sprzedażowych nie ma żadnych cen.** Widełki podane
   wcześniej pochodziły z researchu cenników konkurencji, a nie ze stawek Marcina, i były

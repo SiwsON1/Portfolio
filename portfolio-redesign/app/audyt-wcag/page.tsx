@@ -16,8 +16,7 @@ import {
   WCAG_ROZNICA,
   WCAG_FAQ,
 } from "@/lib/wcag";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 /** Ostatnie dwa słowa nagłówka kursywą, tak jak na stronach branżowych. */
 function editorialHeading(text: string) {
@@ -41,6 +40,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/${WCAG_META.slug}`,
     type: "website",
   },
+  twitter: { card: "summary_large_image", title: WCAG_META.metaTitle, description: WCAG_META.metaDescription },
 };
 
 const LICZBA_KRYTERIOW = WCAG_KRYTERIA.reduce((n, g) => n + g.pozycje.length, 0);
@@ -52,12 +52,7 @@ export default function AudytWcagPage() {
     name: "Audyt WCAG",
     serviceType: "Audyt dostępności cyfrowej WCAG 2.1 AA",
     description: WCAG_META.metaDescription,
-    provider: {
-      "@type": "Person",
-      name: "Marcin Siwonia",
-      url: SITE_URL,
-      address: { "@type": "PostalAddress", addressLocality: "Wrocław", addressCountry: "PL" },
-    },
+    provider: personRef,
     areaServed: { "@type": "Country", name: "Poland" },
     inLanguage: "pl-PL",
     image: `${SITE_URL}/opengraph-image`,
@@ -499,15 +494,15 @@ export default function AudytWcagPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
       />
     </article>
   );

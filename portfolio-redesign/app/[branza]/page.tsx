@@ -8,8 +8,7 @@ import { projects } from "@/lib/projects";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { IndustryHeroVisual } from "@/components/industry/IndustryHeroVisual";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 /** Naglowek: czlon po "dla " (albo ostatnie dwa slowa) leci kursywa, zgodnie z jezykiem strony. */
 function editorialHeading(text: string) {
@@ -57,6 +56,7 @@ export async function generateMetadata({
       url: `${SITE_URL}/${ind.slug}`,
       type: "website",
     },
+    twitter: { card: "summary_large_image", title: ind.metaTitle, description: ind.metaDescription },
   };
 }
 
@@ -87,16 +87,7 @@ export default async function BranzaPage({
     name: ind.keyword,
     serviceType: ind.keyword,
     description: ind.metaDescription,
-    provider: {
-      "@type": "Person",
-      name: "Marcin Siwonia",
-      url: SITE_URL,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Wrocław",
-        addressCountry: "PL",
-      },
-    },
+    provider: personRef,
     areaServed: { "@type": "Country", name: "Poland" },
     inLanguage: "pl-PL",
     image: `${SITE_URL}/opengraph-image`,
@@ -684,15 +675,15 @@ export default async function BranzaPage({
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
       />
     </article>
   );

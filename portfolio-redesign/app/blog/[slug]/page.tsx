@@ -6,8 +6,8 @@ import { services } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { PostHero } from "@/components/blog/PostHero";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
+import { AuthorBio } from "@/components/blog/AuthorBio";
+import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -32,8 +32,14 @@ export async function generateMetadata({
       url: `${SITE_URL}/blog/${p.slug}`,
       type: "article",
       publishedTime: p.date,
+      modifiedTime: p.updatedAt ?? p.date,
       authors: ["Marcin Siwonia"],
       tags: p.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: p.title,
+      description: p.excerpt,
     },
   };
 }
@@ -65,9 +71,10 @@ export default async function PostPage({
     headline: p.title,
     description: p.metaDescription ?? p.excerpt,
     datePublished: p.date,
-    dateModified: p.date,
-    author: { "@type": "Person", name: "Marcin Siwonia", url: SITE_URL },
-    publisher: { "@type": "Person", name: "Marcin Siwonia" },
+    dateModified: p.updatedAt ?? p.date,
+    author: personRef,
+    publisher: personRef,
+    image: `${SITE_URL}/blog/${slug}/opengraph-image`,
     mainEntityOfPage: `${SITE_URL}/blog/${p.slug}`,
     keywords: p.keyword ? [p.keyword, ...p.tags].join(", ") : p.tags.join(", "),
     inLanguage: "pl-PL",
@@ -114,6 +121,9 @@ export default async function PostPage({
           <span>{p.readingMinutes} min czytania</span>
           <span className="hidden md:inline">
             {new Date(p.date).toLocaleDateString("pl-PL", { dateStyle: "long" })}
+            {p.updatedAt && p.updatedAt !== p.date && (
+              <> · Zaktualizowano: {new Date(p.updatedAt).toLocaleDateString("pl-PL", { dateStyle: "long" })}</>
+            )}
           </span>
         </div>
 
@@ -288,6 +298,8 @@ export default async function PostPage({
         </section>
       )}
 
+      <AuthorBio />
+
       {relatedServices.length > 0 && (
         <section className="px-6 py-20 md:px-10 md:py-28 border-t border-line">
           <p className="eyebrow mb-8">Powiązane usługi</p>
@@ -387,16 +399,16 @@ export default async function PostPage({
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(articleSchema) }}
       />
       {faqSchema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
         />
       )}
     </article>
