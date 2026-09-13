@@ -33,13 +33,13 @@ ${services
   .join("\n")}
 
 ## Dostępność cyfrowa
-- [Audyt WCAG](${SITE_URL}/audyt-wcag): audyt WCAG 2.1 AA, 50 kryteriów, 4000-6000 zł, audyt z naprawą błędów 6000-10 000 zł, realizacja 5-10 dni roboczych. Podstawa: ustawa z 26.04.2024 wdrażająca Europejski Akt o Dostępności, obowiązuje od 28.06.2025, norma EN 301 549 V3.2.1. Mikroprzedsiębiorcy świadczący usługi są zwolnieni.
+- [Audyt WCAG](${SITE_URL}/audyt-wcag): audyt WCAG 2.1 AA, 50 kryteriów, audyt z naprawą błędów, realizacja 5-10 dni roboczych. Podstawa: ustawa z 26.04.2024 wdrażająca Europejski Akt o Dostępności, obowiązuje od 28.06.2025, norma EN 301 549 V3.2.1. Mikroprzedsiębiorcy świadczący usługi są zwolnieni.
 
 ## Strony dla branż
 ${industries
   .map(
     (i) =>
-      `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, ${i.pricing.range}, realizacja ${i.pricing.time}`
+      `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, realizacja ${i.pricing.time}`
   )
   .join("\n")}
 

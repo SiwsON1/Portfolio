@@ -46,6 +46,103 @@ export type Post = {
  */
 export const posts: Post[] = [
   {
+    slug: "wcag-2-1-aa",
+    title: "WCAG 2.1 AA — 50 kryteriów, które od 2025 obowiązują firmy",
+    excerpt:
+      "WCAG 2.1 AA to 50 kryteriów sukcesu. Od 28 czerwca 2025 są wymogiem prawnym dla firm powyżej progu mikroprzedsiębiorcy. Obowiązuje 2.1, nie nowsze 2.2, i jest ku temu konkretny powód.",
+    date: "2026-09-01",
+    readingMinutes: 9,
+    tags: ["WCAG", "dostępność", "EAA"],
+    keyword: "WCAG 2.1 AA",
+    metaTitle: "WCAG 2.1 AA — 50 kryteriów i obowiązek prawny od 2025",
+    metaDescription:
+      "WCAG 2.1 AA to 50 kryteriów sukcesu, obowiązkowe od 28 czerwca 2025 przez normę EN 301 549. Sprawdź poziomy zgodności, próg zwolnienia i wysokość kary.",
+    hero: { kind: "seo" },
+    relatedServices: ["sklepy-internetowe-woocommerce", "przyspieszanie-stron-wordpress"],
+    body: [],
+    lead:
+      "WCAG 2.1 AA to poziom zgodności obejmujący 50 kryteriów sukcesu, z czego 30 przypada na poziom A, a 20 dochodzi na poziomie AA. Od 28 czerwca 2025 jest w Polsce wymogiem prawnym dla przedsiębiorców objętych ustawą z 26 kwietnia 2024 roku. Wymóg działa pośrednio: ustawa odsyła do normy zharmonizowanej EN 301 549 V3.2.1, a to ta norma zawiera WCAG 2.1 na poziomie AA. Dlatego nowsze WCAG 2.2 obowiązkowe nie jest.",
+    sections: [
+      {
+        heading: "Czym jest WCAG 2.1 AA",
+        body: [
+          "WCAG 2.1 na poziomie AA to zestaw 50 kryteriów sukcesu: 30 z poziomu A i 20 dochodzących na poziomie AA. Skrót rozwija się jako wytyczne dotyczące dostępności treści internetowych.",
+          "Poziomy zgodności są trzy i układają się kaskadowo. A jest minimalny, AA średni i to on został wpisany w wymogi prawne, AAA najwyższy i nieobowiązkowy. Kluczowe jest to, że AA nie stanowi osobnego zbioru: zawiera w sobie wszystkie kryteria poziomu A. Deklarując zgodność na poziomie AA, deklarujesz spełnienie pełnej pięćdziesiątki, nie samych dwudziestu dodatkowych punktów.",
+          "Z tego powodu strona nie może być zgodna z AA, oblewając cokolwiek z poziomu A. Jeden nieopisany przycisk z poziomu A przekreśla deklarację tak samo skutecznie jak brak kontrastu z poziomu AA."
+        ]
+      },
+      {
+        heading: "Cztery zasady WCAG: postrzegalność, funkcjonalność, zrozumiałość, rzetelność",
+        body: [
+          "Każde z 50 kryteriów należy do jednej z czterech zasad. Ten podział decyduje o tym, czego właściwie się szuka, sprawdzając stronę.",
+          "Postrzegalność mówi, że treść musi dać się odebrać zmysłami. Tu mieszczą się teksty alternatywne obrazków, napisy do materiałów wideo i kontrast tekstu wobec tła.",
+          "Funkcjonalność wymaga, żeby interfejs dało się obsłużyć. Najczęstszy sprawdzian to przejście całej ścieżki zakupowej samą klawiaturą, bez dotykania myszy.",
+          "Zrozumiałość dotyczy czytelności treści i przewidywalności zachowań. Komunikat błędu w formularzu ma mówić, co poprawić, a nie że wystąpił błąd numer 400.",
+          "Rzetelność schodzi do kodu. Znaczniki mają być na tyle poprawne, żeby czytnik ekranu i inne technologie asystujące zinterpretowały je bez zgadywania."
+        ]
+      },
+      {
+        heading: "Dlaczego obowiązuje WCAG 2.1 AA, a nie nowsze WCAG 2.2",
+        body: [
+          "Bo ustawa w ogóle nie wymienia WCAG z nazwy. Odsyła do normy zharmonizowanej EN 301 549 w wersji V3.2.1 z marca 2021 roku, a dopiero ta norma zawiera WCAG 2.1 na poziomie AA. Obowiązek jest więc zapośredniczony przez konkretną wersję dokumentu technicznego.",
+          "WCAG 2.2 istnieje i obejmuje 56 kryteriów na poziomach A i AA. Dziewięć kryteriów doszło, jedno zostało usunięte. Nie jest jednak obowiązkowe, dopóki norma zharmonizowana nie zostanie zaktualizowana do tej wersji.",
+          "Praktyczny wniosek jest taki, że wdrażanie 2.2 ma sens jako zabezpieczenie na przyszłość, a nie jako spełnianie dzisiejszego wymogu. Warto o tym pamiętać, czytając oferty, które straszą obowiązkowym WCAG 2.2. To po prostu nieprawda."
+        ]
+      },
+      {
+        heading: "Od kiedy WCAG 2.1 AA obowiązuje przedsiębiorców",
+        body: [
+          "Od 28 czerwca 2025 roku. Podstawą jest ustawa z 26 kwietnia 2024 roku, opublikowana w Dz.U. 2024 poz. 731, która wdraża do polskiego prawa Europejski Akt o Dostępności.",
+          "Dla umów zawartych przed tą datą przewidziano okres przejściowy sięgający 28 czerwca 2030 roku. Nie jest to jednak furtka pozwalająca odłożyć temat na pięć lat, bo obejmuje umowy już trwające, a nie nowe wdrożenia.",
+          "Trzeba to odróżnić od ustawy z 2019 roku, która reguluje dostępność podmiotów publicznych. To dwa osobne reżimy z osobnymi obowiązkami. Firma prywatna nie publikuje deklaracji dostępności, bo ten dokument należy do reżimu publicznego. Podaje natomiast informację o dostępności usługi w regulaminie."
+        ]
+      },
+      {
+        heading: "Kogo obowiązek nie dotyczy: próg mikroprzedsiębiorcy",
+        body: [
+          "Zwolnieni są mikroprzedsiębiorcy świadczący usługi. Definicja ma dwa warunki i oba muszą być spełnione naraz: mniej niż 10 zatrudnionych osób oraz obrót roczny lub suma bilansowa nieprzekraczająca 2 mln euro.",
+          "Spójnik ma tu znaczenie rozstrzygające. Przekroczenie któregokolwiek z warunków oznacza, że obowiązek już firmy dotyczy. Sklep zatrudniający sześć osób, ale z obrotem powyżej 2 mln euro, mikroprzedsiębiorcą nie jest.",
+          "Zwolnienie obejmuje usługi, nie produkty. Warto też zauważyć, że jest realne i szerokie, wbrew komunikatom sugerującym, że każda firma z witryną musi teraz wszystko przebudować."
+        ]
+      },
+      {
+        heading: "Jakie kary grożą za brak zgodności z WCAG 2.1 AA",
+        body: [
+          "Kara sięga 10-krotności przeciętnego wynagrodzenia, co w 2026 roku daje około 89 000 zł, przy czym nie może przekroczyć 10 procent obrotu. Drugi warunek działa jak sufit dla mniejszych podmiotów.",
+          "Sankcja nie spada z dnia na dzień. Poprzedza ją wezwanie do podjęcia działań naprawczych, więc firma dostaje moment na reakcję.",
+          "Osobno warto uporządkować kwoty krążące po polskim internecie. Kary 10 000 zł i 5 000 zł, cytowane w wielu artykułach o dostępności, pochodzą z ustawy z 2019 roku o podmiotach publicznych. Przy sklepie internetowym czy stronie firmowej nie mają zastosowania i ich powtarzanie tylko zaciemnia obraz.",
+          "Jeśli chcesz sprawdzić, które z 50 kryteriów Twoja strona faktycznie oblewa, tym zajmuje się [audyt WCAG](/audyt-wcag). Sam standard nie mówi, gdzie w Twoim motywie siedzi problem."
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czym różni się poziom A od AA w WCAG 2.1?",
+        a: "Poziom A obejmuje 30 kryteriów i jest minimalny. AA dokłada 20 kolejnych, co daje razem 50. AA zawiera w sobie poziom A, więc zgodność z AA oznacza spełnienie wszystkich 50 kryteriów, a nie samych dwudziestu dodatkowych."
+      },
+      {
+        q: "Czy WCAG 2.2 jest obowiązkowe?",
+        a: "Nie. Operacyjnie obowiązuje WCAG 2.1 AA przez normę zharmonizowaną EN 301 549 V3.2.1. WCAG 2.2 obejmuje 56 kryteriów i stanie się wymogiem dopiero wtedy, gdy norma zostanie zaktualizowana do tej wersji."
+      },
+      {
+        q: "Od kiedy WCAG 2.1 AA obowiązuje firmy prywatne?",
+        a: "Od 28 czerwca 2025 roku, na podstawie ustawy z 26 kwietnia 2024 roku, Dz.U. 2024 poz. 731. Dla umów zawartych wcześniej okres przejściowy sięga 28 czerwca 2030 roku."
+      },
+      {
+        q: "Czy mała firma musi spełniać WCAG 2.1 AA?",
+        a: "Nie, jeśli jest mikroprzedsiębiorcą świadczącym usługi, czyli zatrudnia mniej niż 10 osób oraz ma obrót lub sumę bilansową do 2 mln euro. Oba warunki muszą być spełnione jednocześnie."
+      },
+      {
+        q: "Ile wynosi kara za niedostępną stronę?",
+        a: "Do 10-krotności przeciętnego wynagrodzenia, czyli w 2026 roku około 89 000 zł, nie więcej niż 10 procent obrotu. Kara jest poprzedzona wezwaniem do działań naprawczych."
+      },
+      {
+        q: "Czy firma prywatna składa deklarację dostępności?",
+        a: "Nie. Deklaracja dostępności należy do reżimu podmiotów publicznych z ustawy z 2019 roku. Firma prywatna podaje informację o dostępności usługi w regulaminie."
+      }
+    ]
+  },
+  {
     slug: "ile-kosztuje-strona-www-2026",
     title: "Ile kosztuje strona www w 2026? Przewodnik po cenach",
     excerpt:

@@ -61,18 +61,6 @@ export default function AudytWcagPage() {
     areaServed: { "@type": "Country", name: "Poland" },
     inLanguage: "pl-PL",
     image: `${SITE_URL}/opengraph-image`,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "PLN",
-      availability: "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "PLN",
-        minPrice: 4000,
-        maxPrice: 10000,
-        valueAddedTaxIncluded: false,
-      },
-    },
     url: `${SITE_URL}/${WCAG_META.slug}`,
   };
 
@@ -217,7 +205,7 @@ export default function AudytWcagPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
           <aside className="md:col-span-3">
             <p className="eyebrow mb-2">03 — Cennik</p>
-            <p className="text-ink-faint text-sm font-mono">Kwoty wprost. Agencje ich nie podają.</p>
+            <p className="text-ink-faint text-sm font-mono">Zakres i termin, wycena po briefie.</p>
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">{editorialHeading("Ile kosztuje audyt WCAG")}</h2>
@@ -233,13 +221,7 @@ export default function AudytWcagPage() {
                 {p.name}
               </h3>
               <div className="md:col-span-3">
-                <p
-                  className="font-display italic text-peach"
-                  style={{ fontSize: "clamp(1.35rem, 1rem + 1.1vw, 2rem)", lineHeight: 1.05 }}
-                >
-                  {p.price}
-                </p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint mt-2">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint">
                   {p.time}
                 </p>
               </div>
@@ -248,8 +230,7 @@ export default function AudytWcagPage() {
           ))}
         </div>
         <p className="mt-8 text-sm text-ink-faint prose-bound">
-          Kwoty netto. Wycenę potwierdzam po obejrzeniu strony, przed rozpoczęciem pracy, i nie
-          zmieniam jej w trakcie.
+          Wycenę potwierdzam po obejrzeniu strony, przed rozpoczęciem pracy, i nie zmieniam jej w trakcie.
         </p>
       </section>
 

@@ -81,13 +81,6 @@ export default async function BranzaPage({
     .map((s) => services.find((x) => x.slug === s))
     .filter(Boolean) as typeof services;
 
-  // "12-25 tys. zł netto" → { min: 12000, max: 25000 }
-  const priceBounds = (() => {
-    const m = ind.pricing.range.match(/(\d+)\s*-\s*(\d+)\s*tys/);
-    if (!m) return { min: undefined, max: undefined };
-    return { min: Number(m[1]) * 1000, max: Number(m[2]) * 1000 };
-  })();
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -107,19 +100,6 @@ export default async function BranzaPage({
     areaServed: { "@type": "Country", name: "Poland" },
     inLanguage: "pl-PL",
     image: `${SITE_URL}/opengraph-image`,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "PLN",
-      availability: "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "PLN",
-        // Widełki jako liczby, nie opis tekstowy: tylko takie dane są dla wyszukiwarki użyteczne.
-        minPrice: priceBounds.min,
-        maxPrice: priceBounds.max,
-        valueAddedTaxIncluded: false,
-      },
-    },
     url: `${SITE_URL}/${ind.slug}`,
   };
 
@@ -194,22 +174,9 @@ export default async function BranzaPage({
           <IndustryHeroVisual slug={ind.slug} />
         </div>
 
-        {/* Pasek faktów: cena, czas, dowód */}
-        <dl className="relative mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-3 border-t border-line">
-          <div className="group py-7 sm:pr-8 border-b sm:border-b-0 sm:border-r border-line">
-            <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
-              <a href="#wycena" className="hover:text-peach transition-colors" data-cursor="WYCENA">
-                Widełki ↓
-              </a>
-            </dt>
-            <dd
-              className="font-display italic text-ink"
-              style={{ fontSize: "clamp(1.35rem, 1rem + 1.1vw, 2rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
-            >
-              {ind.pricing.range}
-            </dd>
-          </div>
-          <div className="py-7 sm:px-8 border-b sm:border-b-0 sm:border-r border-line">
+        {/* Pasek faktów: czas, dowód */}
+        <dl className="relative mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 border-t border-line">
+          <div className="py-7 sm:pr-8 border-b sm:border-b-0 sm:border-r border-line">
             <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
               Czas realizacji
             </dt>
@@ -569,24 +536,13 @@ export default async function BranzaPage({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           <aside className="md:col-span-3">
             <p className="eyebrow mb-2">07 — Wycena</p>
-            <p className="text-ink-faint text-sm font-mono">Widełki, nie „zapytaj o cenę".</p>
+            <p className="text-ink-faint text-sm font-mono">Zakres i termin, wycena po briefie.</p>
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-ink mb-8" style={{ fontSize: "clamp(1.5rem, 1rem + 1.6vw, 2.5rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               {editorialHeading(ind.headings.pricing)}
             </h2>
-            <p
-              className="font-display italic text-ink"
-              style={{
-                fontSize: "clamp(2.25rem, 1.2rem + 4vw, 5rem)",
-                lineHeight: 1,
-                letterSpacing: "-0.03em",
-                fontVariationSettings: '"opsz" 144, "SOFT" 50, "WONK" 0',
-              }}
-            >
-              {ind.pricing.range}
-            </p>
-            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-peach">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-peach">
               Realizacja {ind.pricing.time}
             </p>
             <p className="mt-8 max-w-2xl text-ink-mute text-lg leading-relaxed">{ind.pricing.note}</p>
@@ -594,7 +550,7 @@ export default async function BranzaPage({
             {ind.deliverables && ind.deliverables.length > 0 && (
               <>
                 <p className="mt-14 mb-6 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
-                  W tej cenie
+                  W zakresie wdrożenia
                 </p>
                 <ul className="border-t border-line">
                   {ind.deliverables.map((d) => (

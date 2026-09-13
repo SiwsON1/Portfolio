@@ -9,7 +9,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.
 export const metadata: Metadata = {
   title: { absolute: "Strony internetowe dla branż — kancelarie, sklepy, hotele" },
   description:
-    "Strony internetowe dla kancelarii, gabinetów, marek odzieżowych, producentów mebli, hoteli, firm budowlanych i twórców. Widełki cen i terminy przy każdej.",
+    "Strony internetowe dla kancelarii, gabinetów, marek odzieżowych, producentów mebli, hoteli, firm budowlanych i twórców. Zakres, terminy i realizacje przy każdej.",
   alternates: { canonical: "/branze" },
 };
 
@@ -34,7 +34,7 @@ export default function StronyDlaPage() {
           <p className="mt-8 prose-bound text-ink-mute text-lead">
             Kancelaria pyta o tajemnicę zawodową, gabinet o rejestrację pacjentów, producent mebli
             o katalog dla hurtowni, a streamer o to, czy strona pokaże, że jest na żywo. Poniżej
-            osiem branż z widełkami cen, terminami i realizacjami, jeśli takie mam. Jeśli Twojej tu
+            osiem branż z zakresem, terminami i realizacjami, jeśli takie mam. Jeśli Twojej tu
             nie ma, napisz: zakres i tak ustalam indywidualnie.
           </p>
         </div>
@@ -75,10 +75,7 @@ export default function StronyDlaPage() {
                 </h2>
                 <p className="col-span-12 lg:col-span-4 text-ink-mute leading-relaxed">{ind.h1}</p>
                 <div className="col-span-12 md:col-span-7 lg:col-span-3 md:text-right">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink whitespace-nowrap">
-                    {ind.pricing.range}
-                  </p>
-                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint whitespace-nowrap">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint whitespace-nowrap">
                     {ind.pricing.time}
                     {cases.length > 0
                       ? ` · ${cases.length} ${cases.length === 1 ? "realizacja" : "realizacje"}`

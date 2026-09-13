@@ -13,9 +13,9 @@
 export const WCAG_META = {
   slug: "audyt-wcag",
   keyword: "audyt WCAG",
-  metaTitle: "Audyt WCAG 2.1 AA, cena i zakres | Marcin Siwonia",
+  metaTitle: "Audyt WCAG 2.1 AA, zakres i termin | Marcin Siwonia",
   metaDescription:
-    "Audyt WCAG 2.1 AA od 4000 zł, z naprawą błędów od 6000 zł. 50 kryteriów, test klawiaturą i czytnikiem ekranu, raport z kosztorysem. Wrocław i zdalnie.",
+    "Audyt WCAG 2.1 AA z naprawą błędów. 50 kryteriów, test klawiaturą i czytnikiem ekranu, raport z kosztorysem. Wrocław i zdalnie.",
   h1: "Audyt WCAG, po którym ktoś te błędy naprawi",
   lead:
     "Audyt dostępności cyfrowej kończy się zwykle plikiem PDF z sześćdziesięcioma błędami i zdaniem, że trzeba to poprawić. Potem zaczyna się szukanie programisty, który zrozumie, o co chodzi w kryterium 1.4.11. Ja robię obie części, więc raport nie jest końcem sprawy tylko listą zadań, które sam odhaczam.",
@@ -27,8 +27,6 @@ export const WCAG_META = {
 };
 
 export const WCAG_FACTBAR = [
-  { label: "Audyt", value: "4000 do 6000 zł" },
-  { label: "Audyt z naprawą", value: "6000 do 10 000 zł" },
   { label: "Czas", value: "5 do 10 dni roboczych" },
 ];
 
@@ -52,23 +50,20 @@ export const WCAG_ZAKRES = [
   },
 ];
 
-/** Sekcja 02: cennik. Widełki celowo podane wprost, bo agencje ich nie podają. */
+/** Sekcja 02: zakres i czas realizacji. */
 export const WCAG_CENNIK = [
   {
     name: "Audyt",
-    price: "4000 do 6000 zł",
     time: "5 do 10 dni roboczych",
     body: "Pełny przegląd 50 kryteriów WCAG 2.1 AA, test klawiaturą i czytnikiem ekranu, raport z priorytetami i kosztorysem naprawy. Wycena zależy od liczby unikalnych szablonów, nie od liczby podstron.",
   },
   {
     name: "Audyt z naprawą",
-    price: "6000 do 10 000 zł",
     time: "3 do 6 tygodni",
     body: "To samo co wyżej, plus wdrożenie poprawek i re-audyt potwierdzający. Kończy się stroną, która przechodzi kryteria, a nie raportem, z którym trzeba szukać wykonawcy.",
   },
   {
     name: "Informacja o dostępności do regulaminu",
-    price: "od 800 zł",
     time: "2 dni robocze",
     body: "Dokument wymagany od usługodawcy, przygotowany na podstawie faktycznego stanu strony po audycie. Nie szablon z internetu, tylko opis tego, co realnie spełniasz.",
   },
@@ -219,7 +214,7 @@ export const WCAG_POZA_ZAKRESEM = [
 export const WCAG_FAQ = [
   {
     q: "Ile kosztuje audyt WCAG?",
-    a: "Sam audyt 4000 do 6000 zł, audyt razem z naprawą błędów 6000 do 10 000 zł. Cenę robi liczba unikalnych szablonów, nie liczba podstron: sklep z tysiącem produktów ma zwykle jedną kartę produktu, więc sprawdzam ją raz.",
+    a: "Wycenę określa liczba unikalnych szablonów, nie liczba podstron: sklep z tysiącem produktów ma zwykle jedną kartę produktu, więc sprawdzam ją raz. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem.",
   },
   {
     q: "Ile trwa audyt WCAG?",
@@ -235,7 +230,7 @@ export const WCAG_FAQ = [
   },
   {
     q: "Jakie są kary za brak dostępności?",
-    a: "Do 10-krotności przeciętnego wynagrodzenia w gospodarce narodowej za rok poprzedni, czyli w 2026 około 89 000 zł, przy czym nie więcej niż 10 procent obrotu. Kara nie spada od razu: najpierw jest wezwanie do działań naprawczych. Uwaga, kwoty 10 000 zł i 5 000 zł, które krążą po internecie, pochodzą ze starszej ustawy o podmiotach publicznych i firm prywatnych nie dotyczą.",
+    a: "Do 10-krotności przeciętnego wynagrodzenia w gospodarce narodowej za rok poprzedni, czyli w 2026 około 89 000 zł, przy czym nie więcej niż 10 procent obrotu. Kara nie spada od razu: najpierw jest wezwanie do działań naprawczych. Kwoty, które krążą po internecie, pochodzą ze starszej ustawy o podmiotach publicznych i firm prywatnych nie dotyczą.",
   },
   {
     q: "WCAG 2.1 czy 2.2, którą wersję trzeba wdrożyć?",
@@ -255,7 +250,7 @@ export const WCAG_FAQ = [
   },
   {
     q: "Czy sam skaner nie wystarczy?",
-    a: "Nie. Narzędzia automatyczne wykrywają orientacyjnie jedną trzecią problemów: brak atrybutu alt, brakującą etykietę, zbyt niski kontrast. Nie ocenią, czy opis alternatywny ma sens, czy kolejność czytania jest logiczna, czy da się złożyć zamówienie klawiaturą. Dokładnie dlatego audyt kosztuje kilka tysięcy, mimo że skanery są darmowe.",
+    a: "Nie. Narzędzia automatyczne wykrywają orientacyjnie jedną trzecią problemów: brak atrybutu alt, brakującą etykietę, zbyt niski kontrast. Nie ocenią, czy opis alternatywny ma sens, czy kolejność czytania jest logiczna, czy da się złożyć zamówienie klawiaturą.",
   },
   {
     q: "Co dostaję po audycie?",

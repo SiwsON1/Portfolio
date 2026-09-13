@@ -52,7 +52,7 @@ export const services: Service[] = [
       { step: "05", title: "Wdrożenie + szkolenie", body: "Migracja na produkcję bez przerwy. 30-min szkolenie z edycji w panelu." },
     ],
     faq: [
-      { q: "Ile kosztuje strona WordPress?", a: "Wizytówka 4-7 tys. zł, strona usługowa z blogiem 7-15 tys., bardziej rozbudowana z customową logiką od 15 tys. wzwyż." },
+      { q: "Ile kosztuje strona WordPress?", a: "Wycena zależy od zakresu wizytówki lub strony usługowej, liczby podstron, bloga i customowej logiki. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Dlaczego nie używasz Avada / Divi / Elementor?", a: "Bo dodają 200-400 KB JS do każdej strony, są wolne, trudne w utrzymaniu, robią z każdej strony klona innej. Custom theme to lepsze metryki i strona, która nie wygląda jak wszystkie inne." },
       { q: "Czy strona będzie szybka?", a: "Tak. LiteSpeed cache + custom theme + obrazki WebP/AVIF + lazy loading. Cel: Lighthouse 95+, LCP poniżej 2.5s, INP poniżej 200ms." },
       { q: "Czy mogę sam edytować po wdrożeniu?", a: "Tak. Na koniec dostajesz 30-min szkolenie. Pola sekcji w panelu mają te same nazwy co na stronie. Plus dokumentacja PDF." },
@@ -99,7 +99,7 @@ export const services: Service[] = [
       { step: "05", title: "Start + opieka", body: "Migracja produktów ze starego sklepu (jeśli jest), opieka miesięczna z monitoringiem." },
     ],
     faq: [
-      { q: "Ile kosztuje sklep WooCommerce?", a: "Mniejszy sklep (do 100 produktów, podstawowe integracje): 12-25 tys. zł. Średni (do 500 produktów, B2B, multilingual): 25-50 tys. Większy headless lub multistore: powyżej 50 tys." },
+      { q: "Ile kosztuje sklep WooCommerce?", a: "Wycena zależy od liczby produktów, integracji, obsługi B2B, wersji językowych oraz architektury headless lub multistore. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Ile trwa wdrożenie sklepu WooCommerce?", a: "Mniejszy sklep: 6-8 tygodni od warsztatu do startu sprzedaży. Średni z B2B, wersjami językowymi i migracją produktów: 10-14 tygodni. Termin blokuję w kalendarzu przy podpisaniu oferty." },
       { q: "Czy mogę sam dodawać produkty?", a: "Tak. WooCommerce ma standardowy panel produktów, plus wgrasz CSV/XML masowo z Excela. Każda kategoria, atrybut i wariant edytowalny." },
       { q: "Co z migracją z innej platformy (Shoper, IdoSell, Shopify)?", a: "Robię migracje z większości polskich platform. Eksport produktów + zamówień + klientów + przekierowania 301 starych URLi pod nowe (krytyczne dla SEO)." },
@@ -148,7 +148,7 @@ export const services: Service[] = [
     faq: [
       { q: "Co to jest headless WordPress?", a: "Architektura, w której WordPress działa tylko jako zaplecze do edycji treści (headless CMS), a stronę renderuje osobny frontend, najczęściej Next.js. Treści lecą przez REST API albo WPGraphQL, użytkownik dostaje gotowy HTML z CDN." },
       { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność: frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO: Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo: admin panel niewidoczny dla użytkowników, redukuje attack surface." },
-      { q: "Ile kosztuje migracja na headless?", a: "Małe strony (50-100 podstron): 15-25 tys. zł. Średnie (200-500 podstron + custom logic): 30-60 tys. Większe ze sklepem WooCommerce headless: od 50 tys." },
+      { q: "Ile kosztuje migracja na headless?", a: "Wycena zależy od liczby podstron, customowej logiki i połączenia ze sklepem WooCommerce headless. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook wyzwala rebuild ISR i strona aktualizuje się w ~30 sekund od zapisu." },
       { q: "Ile trwa migracja na headless WordPress?", a: "Mała strona: 4-6 tygodni. Średnia z customową logiką: 8-12 tygodni. Nowy frontend powstaje równolegle do działającej strony, więc przez cały czas migracji stara wersja normalnie pracuje." },
       { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają odpowiedników po stronie Next.js. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może stać na najtańszym współdzielonym." },
@@ -196,7 +196,7 @@ export const services: Service[] = [
     faq: [
       { q: "Czym 'nowoczesna' różni się od zwykłej strony?", a: "Designem i interakcją, nie technologią. Zwykła strona prezentuje treść. Nowoczesna prowadzi przez treść animacjami, custom kursorem, przejściami między podstronami. Stack (WordPress, Next.js) dobieramy do potrzeb edycji, nie do efektu." },
       { q: "Jaki stack pod spodem?", a: "Zależy od briefu. Strona content-first z redakcją: WordPress headless + Next.js frontend. Aplikacja z panelem: Next.js end-to-end. Konkretne porównanie [w usłudze Strony Next.js](/uslugi/aplikacje-nextjs)." },
-      { q: "Ile to kosztuje?", a: "Nowoczesna strona firmowa z animacjami: 18-35 tys. zł. Z headless CMS i custom logic: 35-60 tys. Strona produktu/aplikacji premium: od 50 tys. wzwyż." },
+      { q: "Ile to kosztuje?", a: "Wycena zależy od zakresu animacji, headless CMS, customowej logiki oraz tego, czy powstaje strona firmowa, produktowa lub aplikacja. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Ile trwa projekt nowoczesnej strony?", a: "Strona firmowa z animacjami: 6-10 tygodni od briefu do startu. Z headless CMS i customową logiką: 10-16 tygodni. Design zatwierdzasz w Figmie przed pierwszą linijką kodu." },
       { q: "Czy klient nadal edytuje sam?", a: "Tak. Sanity, Contentful albo headless WordPress jako CMS. Animacje skonfigurowane raz przez programistę, treść edytowalna w panelu." },
       { q: "Czy reduced motion zostanie obsłużony?", a: "Tak, każda animacja respektuje `prefers-reduced-motion`. Użytkownicy z włączonym ustawieniem dostają statyczną wersję bez parallaxu i transitions." },
@@ -208,12 +208,12 @@ export const services: Service[] = [
     title: "Strona firmowa MŚP",
     metaTitle: "Strona firmowa dla małej firmy — pakiet, wycena 24h",
     metaDescription:
-      "Strona firmowa dla małej i średniej firmy (5-50 osób): wizytówka, usługi, blog, kontakt. WordPress lub Next.js pod budżet. Wrocław i online. Od 6 tys. zł.",
+      "Strona firmowa dla małej i średniej firmy (5-50 osób): wizytówka, usługi, blog, kontakt. WordPress lub Next.js pod budżet. Wrocław i online.",
     h1: "Strona firmowa dla małej firmy. Pakiet, nie projekt na rok.",
     lead:
       "Pakiet dla firm 5-50 osób, które potrzebują strony szybko, sensownie i bez 200-stronicowego briefu. Wizytówka, usługi, blog, kontakt. Wycena w 24h, wdrożenie 3-6 tygodni. Stack dobieram do budżetu i tego, kto będzie edytował.",
     intro: [
-      "Małe i średnie firmy nie potrzebują strony za 60 tys. zł z animacjami R3F. Potrzebują strony, którą można obronić przed klientem, edytować bez kodu i pokazać w Google Search Console rosnące rankingi. Pakiet jest pod taki właśnie profil.",
+      "Małe i średnie firmy potrzebują strony, którą można obronić przed klientem, edytować bez kodu i pokazać w Google Search Console rosnące rankingi. Pakiet jest pod taki właśnie profil.",
       "Co wchodzi w skład: strona główna z ofertą, 3-5 podstron usług, formularz kontaktowy z anty-spamem, blog (jeśli planujesz pisać), schema.org Organization + LocalBusiness pod lokalne SEO, integracja z Google Search Console i Analytics. Mobile-first, Lighthouse 90+, dostarczane razem ze szkoleniem z edycji.",
       "Pakiet różni się od [nowoczesnych stron z animacjami](/uslugi/nowoczesne-strony-internetowe), gdzie płacisz za efekt brandowy, i od [aplikacji Next.js](/uslugi/aplikacje-nextjs), gdzie płacisz za własną logikę. Tu płacisz za obecność i lokalne pozycjonowanie firmy w sensownym budżecie.",
     ],
@@ -243,8 +243,8 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Co powinna zawierać strona internetowa małej firmy?", a: "Minimum: strona główna z ofertą, podstrony usług, dane kontaktowe z mapą i klikalnym telefonem na mobile, formularz. Do tego schema.org LocalBusiness, profil Google Business spięty z tą samą nazwą i adresem oraz podstawy SEO: meta tagi, sitemap, szybkie ładowanie. Blog opcjonalnie, jeśli ktoś faktycznie będzie pisał." },
-      { q: "Co jest w pakiecie strony firmowej?", a: "Strona główna, 3-5 podstron usług, formularz kontaktowy, blog (opcjonalnie), schema.org pod lokalne SEO, GA4 + Search Console, mobile-first design, szkolenie z edycji, 60 dni opieki. Stawka 6-15 tys. zł zależnie od stacku i zakresu." },
-      { q: "WordPress czy Next.js dla mojej firmy?", a: "WordPress jeśli chcesz edytować treści sam, masz budżet do 12 tys. zł i nie planujesz nietypowej logiki. Next.js jeśli budżet pozwala na 15+ tys. zł, zależy Ci na maksymalnej szybkości i jesteś gotów na CMS typu Sanity. Decyzję podejmujemy na briefie." },
+      { q: "Co jest w pakiecie strony firmowej?", a: "Strona główna, 3-5 podstron usług, formularz kontaktowy, blog (opcjonalnie), schema.org pod lokalne SEO, GA4 + Search Console, mobile-first design, szkolenie z edycji, 60 dni opieki. Wycena zależy od stacku i zakresu i jest przygotowywana indywidualnie po briefie." },
+      { q: "WordPress czy Next.js dla mojej firmy?", a: "WordPress jeśli chcesz edytować treści sam i nie planujesz nietypowej logiki. Next.js jeśli zależy Ci na maksymalnej szybkości i jesteś gotów na CMS typu Sanity. Decyzję podejmujemy na briefie." },
       { q: "Ile czasu zajmuje wdrożenie?", a: "Wizytówka (jedna podstrona + kontakt): 2-3 tygodnie. Pakiet firmowy z usługami i blogiem: 4-6 tygodni. Z customową logiką (kalkulator wyceny, panel klienta): osobna usługa, [aplikacje Next.js](/uslugi/aplikacje-nextjs)." },
       { q: "Co jeśli już mam stronę?", a: "Robię migrację. Stare URL-e przekierowuję 301 na nowe (zachowując rankingi SEO), treści przenoszę do CMS, design odświeżam." },
       { q: "Czy schemę LocalBusiness wpinasz dla każdej branży?", a: "Tak, plus dobieramy podtyp pod branżę: LegalService, MedicalBusiness, AccountingService, AutoRepair, Restaurant. Google daje wtedy lepszą widoczność w lokalnym Map Pack." },
@@ -261,7 +261,7 @@ export const services: Service[] = [
     lead:
       "Software house bez software house. Jeden dev (ja) + Twój brief = aplikacja Next.js w 4-12 tygodni. Bez project managera w środku, bez 30% marży agencji, bez handover między 4 ludźmi. Komunikacja bezpośrednia, decyzje natychmiast.",
     intro: [
-      "Większość polskich agencji Next.js liczy 30-50 ludzi: PM, BA, designer, frontend, backend, QA, devops. Cena: 350-500 zł/h. Ja jeden dev z sześcioletnim stażem w tym stacku: 220-280 zł/h, mniej narzutu organizacyjnego, ten sam kod end-to-end. Idealne dla MVP i mid-size aplikacji.",
+      "Większość polskich agencji Next.js liczy 30-50 ludzi: PM, BA, designer, frontend, backend, QA, devops. Ja jeden dev z sześcioletnim stażem w tym stacku: mniej narzutu organizacyjnego, ten sam kod end-to-end. Idealne dla MVP i mid-size aplikacji.",
       "Robiłem aplikacje pod stack: Next.js 16, React 19, TypeScript, Tailwind, GSAP/R3F, Sanity/Contentful CMS, Postgres+Prisma, Clerk/NextAuth, Stripe, AI (OpenAI, Claude). Pełen full-stack od bazy do animacji.",
     ],
     bullets: [
@@ -291,7 +291,7 @@ export const services: Service[] = [
     faq: [
       { q: "Jeden wykonawca to ryzyko. Co jeśli wypadniesz?", a: "Ograniczam je tak: pełna dokumentacja, kod w repo klienta od pierwszego dnia, komentarze w kodzie, wideo z omówieniem architektury na koniec. Jakikolwiek dev Next.js wejdzie po mnie bez problemu." },
       { q: "Co z designem jeśli nie mam designera?", a: "Robię też projekty graficzne w Figmie. Albo współpracuję z freelancem designerem (znam kilku top w PL)." },
-      { q: "Stawka godzinowa czy ryczałt?", a: "Wybór klienta. Ryczałt: przewidywalny budżet, z buforem +15% na niespodzianki. Stawka godzinowa (220-280 zł): pełna transparentność, faktura co miesiąc z zestawieniem godzin." },
+      { q: "Stawka godzinowa czy ryczałt?", a: "Wybór klienta. Ryczałt daje przewidywalny budżet, a stawka godzinowa pełną transparentność i fakturę co miesiąc z zestawieniem godzin. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Czy mogę zatrudnić Cię na long-term?", a: "Tak. Najczęstsza forma: 60-100h/miesiąc retainer. Cena retainerowa niższa od godzinowej." },
     ],
     cta: "Workshop produktowy 1h — bezpłatny",
@@ -335,7 +335,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Jaka różnica między Jamstack a tradycyjnym WordPress?", a: "WordPress przy każdym wejściu odpala PHP i MySQL, żeby złożyć HTML. W Jamstacku HTML czeka gotowy na CDN, request to samo pobranie pliku. 5-50x szybciej." },
-      { q: "Ile kosztuje strona Jamstack?", a: "Mała (do 50 podstron + blog): 12-25 tys. zł. Średnia (200+ stron, custom logic): 25-50 tys. Większa z e-commerce: od 50 tys." },
+      { q: "Ile kosztuje strona Jamstack?", a: "Wycena zależy od liczby podstron, bloga, customowej logiki oraz zakresu e-commerce. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Ile trwa wdrożenie strony Jamstack?", a: "Mała strona z blogiem: 3-5 tygodni. Średni serwis z CMS i customowymi widokami: 6-10 tygodni. Deploy na produkcję jest jednym kliknięciem, więc start nie wymaga okna serwisowego." },
       { q: "Co jeśli mam już WordPress?", a: "Robię migracje WordPress → Jamstack. WP zostaje jako headless CMS (opcjonalnie) lub przenoszę do Sanity. URL-e zachowywane przez 301." },
       { q: "Czy SEO działa tak samo?", a: "Lepiej. Pre-renderowany HTML Google indeksuje natychmiast. Schema.org plus Core Web Vitals 95+ dają wyższe rankingi niż typowy WordPress." },
@@ -354,7 +354,7 @@ export const services: Service[] = [
     intro: [
       "Tworzeniem stron www zajmuję się od 2020 roku. Sześć lat tworzenia stron internetowych, ponad 30 wdrożeń: hotele, kancelarie, sklepy, restauracje, lokalne usługi. Działam jako freelancer, nie agencja: bez narzutu na PM-ów i handlowców, rozmawiasz bezpośrednio z osobą, która pisze kod. Większość klientów wraca po kolejne projekty albo poleca dalej. Konkretne realizacje znajdziesz w [pełnej liście projektów](/projekty), a aktualne ceny rozłożyłem w [poście o cenach stron www](/blog/ile-kosztuje-strona-www-2026).",
       "Stronę projektuję najpierw na papierze, potem w Figmie, dopiero na końcu w kodzie. Tak unikam wracania trzy razy do tego samego ekranu i klient wie co dostanie zanim cokolwiek zaczniemy programować. Stack dobieram zawsze po briefie, nie z góry. Decyzja idzie po dwóch pytaniach: kto będzie edytował treści i jak skomplikowana jest logika strony.",
-      "Najczęstsze ścieżki: lokalna firma usługowa z blogiem to WordPress (3-12 tys. zł). Premium brand albo aplikacja z panelem klienta to Next.js (15-50 tys. zł). E-commerce z polskimi integracjami to WooCommerce (12-50 tys. zł). Headless, gdy redakcja chce panelu WP, a marketing chce wydajności Vercela.",
+      "Najczęstsze ścieżki: lokalna firma usługowa z blogiem to WordPress. Premium brand albo aplikacja z panelem klienta to Next.js. E-commerce z polskimi integracjami to WooCommerce. Headless, gdy redakcja chce panelu WP, a marketing chce wydajności Vercela.",
     ],
     bullets: [
       {
@@ -408,7 +408,7 @@ export const services: Service[] = [
     faq: [
       {
         q: "Ile kosztuje strona www?",
-        a: "Strona wizytówka: 3-5 tys. zł. Strona usługowa z blogiem i SEO: 5-12 tys. zł. Aplikacja Next.js z customową logiką: od 12 tys. zł. Wycena zawsze indywidualna po briefie.",
+        a: "Wycena zależy od zakresu wizytówki lub strony usługowej, liczby podstron, bloga, SEO, technologii i customowej logiki. Wycena zawsze indywidualna po briefie.",
       },
       {
         q: "Ile trwa wdrożenie?",
@@ -434,7 +434,7 @@ export const services: Service[] = [
     title: "Tworzenie stron Next.js",
     metaTitle: "Tworzenie stron Next.js Wrocław — App Router, edge, premium",
     metaDescription:
-      "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge na Vercel. Premium, headless e-commerce, panele klienta. Od 12 tys. zł.",
+      "Tworzenie stron Next.js we Wrocławiu i zdalnie. App Router, server components, edge na Vercel. Premium, headless e-commerce, panele klienta.",
     h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
     lead:
       "Strony Next.js dla firm, które chcą najszybszej technologii webowej dostępnej w 2026 roku. Statyczny HTML z serwerów edge, server components, pierwsze wyświetlenie poniżej 200 ms niezależnie od tego, skąd wchodzi użytkownik. Next.js wybiera się, gdy zależy Ci na wydajności, dopracowanym wizerunku, integracjach z API albo własnym panelu pod stroną. Wtedy wyższy koszt produkcji się broni.",
@@ -490,7 +490,7 @@ export const services: Service[] = [
       },
       {
         q: "Ile kosztuje strona Next.js we Wrocławiu?",
-        a: "Strona firmowa Next.js z designem i CMS to widełki 12 tys. zł (minimum) do 35 tys. zł (premium z animacjami, headless CMS, custom dashboard). Aplikacja z auth, bazą i panelem klienta zaczyna się od 25 tys. zł. Konkretną wycenę dostajesz w 24 godziny po pierwszej rozmowie. Pełen breakdown kosztów [opisałem w poście o cenach Next.js](/blog/ile-kosztuje-strona-na-next-js).",
+        a: "Wycena zależy od designu, CMS, animacji, customowego dashboardu, uwierzytelniania, bazy i panelu klienta. Konkretną wycenę dostajesz w 24 godziny po pierwszej rozmowie. Pełen opis czynników kosztowych [znajdziesz w poście o cenach Next.js](/blog/ile-kosztuje-strona-na-next-js).",
       },
       {
         q: "Ile trwa wdrożenie strony Next.js?",
@@ -570,7 +570,7 @@ export const services: Service[] = [
       },
       {
         q: "Czy mogę zatrudnić Cię na godziny?",
-        a: "Tak, jako freelancer React. Stawka godzinowa od 220 zł netto, minimalny pakiet 20h. Faktura na koniec miesiąca.",
+        a: "Tak, jako freelancer React. Faktura na koniec miesiąca. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem.",
       },
       {
         q: "Współpraca długoterminowa?",
@@ -630,7 +630,7 @@ export const services: Service[] = [
     faq: [
       {
         q: "Ile kosztuje wdrożenie AI w firmie?",
-        a: "Proof of concept: od kilku tys. zł, bo to 2 tygodnie pracy na wąskim wycinku procesu. Produkcyjny chatbot RAG na dokumentach firmy albo automatyzacja maili: najczęściej 15-30 tys. zł. Do tego miesięczne koszty API i hostingu. Dokładna wycena po discovery, na którym zresztą odrzucam większość pomysłów, bo się nie zwrócą.",
+        a: "Wycena zależy od tego, czy powstaje proof of concept na wąskim wycinku procesu, produkcyjny chatbot RAG na dokumentach firmy czy automatyzacja maili. Do tego dochodzą miesięczne koszty API i hostingu. Dokładna wycena po discovery, na którym zresztą odrzucam większość pomysłów, bo się nie zwrócą.",
       },
       {
         q: "Czy moje dane wyciekną do OpenAI?",
@@ -638,7 +638,7 @@ export const services: Service[] = [
       },
       {
         q: "Ile kosztuje miesięczne utrzymanie?",
-        a: "Same koszty API: od kilkudziesięciu do kilku tysięcy zł zależnie od wolumenu. Hosting i monitoring osobno, zwykle 200-800 zł/mc.",
+        a: "Koszty API zależą od wolumenu, a hosting i monitoring są rozliczane osobno. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem.",
       },
       {
         q: "Czy AI zastąpi pracownika?",
@@ -685,7 +685,7 @@ export const services: Service[] = [
       { step: "03", title: "Miesięczny rytm", body: "Aktualizacje co tydzień, raport co miesiąc: co zrobione, ile godzin banku zużyte, co wymaga decyzji." },
     ],
     faq: [
-      { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Prosta strona firmowa: od 200 zł/mc. Strona z blogiem i częstymi zmianami: 300-500 zł/mc. Sklep WooCommerce: od 500 zł/mc, bo dochodzi testowanie zamówień po każdej aktualizacji. W cenie bank godzin na drobne zmiany." },
+      { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Wycena zależy od tego, czy opieka dotyczy prostej strony firmowej, strony z blogiem i częstymi zmianami czy sklepu WooCommerce, w którym dochodzi testowanie zamówień po każdej aktualizacji. Zakres obejmuje bank godzin na drobne zmiany. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Jak szybko reagujesz na awarię?", a: "Strona nie działa: reakcja do 2 godzin w dni robocze, zwykle szybciej, bo monitoring wysyła mi alert zanim klient zdąży zauważyć. Drobne zgłoszenia i zmiany: do 48 godzin." },
       { q: "Czy wiąże mnie umowa na rok?", a: "Nie. Rozliczenie miesięczne, rezygnacja z końcem miesiąca. Umowy roczne w tej usłudze służą zwykle temu, żeby dało się o kliencie zapomnieć." },
       { q: "Moja strona stoi u innej firmy. Przejmiesz ją?", a: "Tak, po audycie wejściowym. Potrzebuję dostępu do panelu WP i hostingu. Audyt pokazuje, w jakim stanie jest strona i co trzeba wyprostować przed startem stałej opieki." },
@@ -732,7 +732,7 @@ export const services: Service[] = [
       { step: "03", title: "Drugi pomiar i raport", body: "Te same metryki, te same podstrony, liczby przed i po. Plus lista zaleceń na przyszłość, żeby efekt nie zjechał." },
     ],
     faq: [
-      { q: "Ile kosztuje przyspieszenie strony WordPress?", a: "Audyt wydajności: 300 zł, odliczane od wdrożenia. Optymalizacja strony firmowej: 1,5-2,5 tys. zł. Sklep WooCommerce: 2-3,5 tys. zł, bo dochodzi koszyk, checkout i więcej szablonów do sprawdzenia." },
+      { q: "Ile kosztuje przyspieszenie strony WordPress?", a: "Wycena zależy od zakresu audytu i wdrożenia oraz od tego, czy optymalizacja dotyczy strony firmowej czy sklepu WooCommerce, w którym dochodzą koszyk, checkout i dodatkowe szablony do sprawdzenia. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
       { q: "Ile trwa optymalizacja szybkości?", a: "Audyt: 2-3 dni robocze od podesłania dostępów. Wdrożenie poprawek: 5-10 dni roboczych zależnie od liczby problemów. Strona działa normalnie przez cały czas, zmiany wchodzą poza godzinami ruchu." },
       { q: "O ile realnie strona przyspieszy?", a: "Typowy efekt na zaniedbanej stronie: LCP z 5-8 sekund schodzi poniżej 2,5 s, waga strony spada o połowę lub więcej. Dokładnie dlatego raport pokazuje liczby przed i po, a nie wynik w skali gwiazdek." },
       { q: "Czy szybsza strona poprawi pozycje w Google?", a: "Core Web Vitals są sygnałem rankingowym, więc zielone metryki pomagają, ale nie zastąpią treści i linków. Pewny efekt jest gdzie indziej: mniej porzuceń, dłuższe sesje, wyższa konwersja." },

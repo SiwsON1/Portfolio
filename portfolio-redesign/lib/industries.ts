@@ -16,7 +16,7 @@ export type Industry = {
   pains: { title: string; body: string }[];
   mustHave: { title: string; body: string }[];
   stack: { label: string; body: string }[];
-  pricing: { range: string; time: string; note: string };
+  pricing: { time: string; note: string };
   headings: { pains: string; mustHave: string; cases: string; stack: string; pricing: string; faq: string };
   /** Co wchodzi w cenę wdrożenia w tej konkretnej branży. */
   deliverables?: { label: string; body: string }[];
@@ -142,10 +142,10 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-kancelarii-prawnych",
     title: "Kancelarie prawne",
     keyword: "tworzenie stron dla kancelarii prawnych",
-    metaTitle: "Tworzenie stron dla kancelarii prawnych — cena i termin",
-    metaDescription: "Tworzenie stron dla kancelarii prawnych: specjalizacje, bezpieczny formularz i treść zgodna z etyką zawodową. Koszt 5-9 tys. zł netto, termin 4-6 tygodni.",
+    metaTitle: "Tworzenie stron dla kancelarii prawnych — zakres i termin",
+    metaDescription: "Tworzenie stron dla kancelarii prawnych: specjalizacje, bezpieczny formularz i treść zgodna z etyką zawodową. Termin 4-6 tygodni.",
     h1: "Tworzenie stron dla kancelarii prawnych",
-    lead: "Projektuję strony internetowe dla kancelarii, które rzeczowo wyjaśniają zakres pomocy i ułatwiają kontakt z adwokatem, radcą prawnym albo notariuszem. Klient szybko rozpoznaje swoją sprawę, a treść pozostaje zgodna z zasadami etyki zawodowej. Bez marketingowego tonu.",
+    lead: "Tworzenie stron dla kancelarii prawnych ma warunek, którego nie ma żadna inna branża: treść musi przekonać klienta, nie łamiąc przy tym zasad etyki zawodowej. Buduję witryny, na których człowiek szukający pomocy rozpoznaje swoją sprawę w kilka sekund i wie, czy dzwoni do adwokata, radcy prawnego czy notariusza. Bez obietnic wyniku i bez marketingowego tonu.",
     intro: [
       "Tworzenie stron dla kancelarii prawnych zaczynam od briefu, analizy specjalizacji oraz zaplanowania podstron, które odpowiadają na pytania potencjalnych klientów. Projekt graficzny buduje zaufanie bez reklamowych obietnic, a widoczny telefon, adres e-mail i bezpieczny formularz kontaktowy ułatwiają pierwszy kontakt. Serwis uwzględnia RODO, responsywność i wersję mobilną. Mogę wdrożyć go na [WordPressie z autorskim motywem](/uslugi/tworzenie-stron-wordpress), bez gotowych kreatorów.",
       "Dla kancelarii adwokackiej Marii Piontek w Łodzi przygotowałem witrynę opisującą prawo karne, cywilne, rodzinne, administracyjne i gospodarcze. Zobacz [realizację kancelarii](/projekty/kancelaria-mpiontek) oraz portal [Ceny Notarialne](/projekty/cenynotarialne), który wykorzystuje Next.js, mapy i dane dla tysięcy lokalizacji. Przy większym serwisie dobieram [rozwiązanie oparte na Next.js](/uslugi/aplikacje-nextjs), a zakres, hosting i opiekę po wdrożeniu ustalisz ze mną przez [formularz kontaktowy](/kontakt)."
@@ -213,14 +213,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "5-9 tys. zł netto",
       time: "4-6 tygodni",
-      note: "Na wycenę wpływają liczba specjalizacji, profile zespołu, wersje językowe i zakres przygotowania treści. Prosta strona jednostronicowa na rynku zaczyna się od 3 tys. zł netto, a standardowe wdrożenia kosztują zwykle 4,5-8 tys. zł netto."
+      note: "Na wycenę wpływają liczba specjalizacji, profile zespołu, wersje językowe i zakres przygotowania treści. Konkretną kwotę podaję po przeczytaniu briefu."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla kancelarii prawnej?",
-        a: "Moje wdrożenie kosztuje 5-9 tys. zł netto. Ostateczną wycenę przygotowuję po analizie briefu, liczby podstron, prawników, wersji językowych i zakresu treści."
+        a: "Największą różnicę robi liczba specjalizacji i profili prawników, bo każdy z nich to osobna podstrona z własną treścią. Dochodzą wersje językowe i to, czy teksty piszę ja, czy dostaję je od kancelarii. Napisz, co ma się znaleźć na stronie, a odeślę kwotę."
       },
       {
         q: "Ile trwa tworzenie strony kancelarii prawnej?",
@@ -324,9 +323,9 @@ export const industries: Industry[] = [
     title: "Gabinety i kliniki",
     keyword: "tworzenie stron dla gabinetów i klinik",
     metaTitle: "Tworzenie stron dla gabinetów i klinik — rejestracja online",
-    metaDescription: "Tworzenie stron dla gabinetów i klinik: rejestracja online, cennik zabiegów i formularz zgodny z RODO. Koszt 5-9 tys. zł netto, realizacja 4-6 tygodni.",
+    metaDescription: "Tworzenie stron dla gabinetów i klinik: rejestracja online, cennik zabiegów i formularz zgodny z RODO. Realizacja 4-6 tygodni.",
     h1: "Tworzenie stron dla gabinetów i klinik",
-    lead: "Projektuję witryny dla gabinetów i klinik z czytelną ofertą, cennikiem oraz rejestracją działającą na telefonie. Pacjent od pierwszego ekranu widzi numer, adres i sposób umówienia wizyty u stomatologa, fizjoterapeuty albo kosmetologa. Zapis zajmuje dwa kliknięcia.",
+    lead: "Tworzenie stron dla gabinetów i klinik rozstrzyga się przy jednej rzeczy, czyli przy rejestracji z telefonu. Pacjent szuka gabinetu wieczorem, z bólem, jedną ręką, i albo zapisze się w dwóch kliknięciach, albo dzwoni do następnego. Dlatego numer, adres i sposób umówienia wizyty u stomatologa, fizjoterapeuty czy kosmetologa stawiam na pierwszym ekranie, a ofertę i cennik zaraz pod nimi.",
     intro: [
       "Tworzenie stron dla gabinetów i klinik obejmuje analizę potrzeb pacjentów, projekt graficzny oraz wdrożenie szybkiej wersji mobilnej. Usługi porządkuję według problemów odbiorcy, cennik pokazuję bez ukrywania podstawowych informacji, a rejestrację łączę z właściwym kalendarzem. Formularz kontaktowy zbiera tylko potrzebne dane, działa przez SSL i uwzględnia RODO. Serwis przygotowuję jako [nowoczesną stronę firmową](/uslugi/nowoczesna-strona-firmowa-2026) zgodną z zasadami responsywności.",
       "Dla kliniki kosmetologii Queen Scarlet powstała strona WordPress prezentująca kriolipolizę i laserową stymulację kolagenu. Zobacz [projekt Queen Scarlet](/projekty/queen-scarlet), aby poznać układ oferty zabiegowej, profili specjalistów i zapisów. Po publikacji mogę zapewnić [opiekę nad WordPressem](/uslugi/opieka-wordpress) albo zająć się [przyspieszeniem istniejącej witryny](/uslugi/przyspieszanie-stron-wordpress) pod kątem Core Web Vitals. Brief, hosting i zakres projektu omówimy przez [formularz kontaktowy](/kontakt)."
@@ -394,14 +393,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "5-9 tys. zł netto",
       time: "4-6 tygodni",
-      note: "Na wycenę wpływają liczba usług, rozbudowanie cennika, galeria efektów oraz wybrany system rejestracji. Na rynku podstawowa strona z zapisami zaczyna się od 3,2 tys. zł netto, a rozbudowany serwis z galerią i blogiem kosztuje 5,5-10 tys. zł netto."
+      note: "Na wycenę wpływają liczba usług, rozbudowanie cennika, galeria efektów oraz wybrany system rejestracji. Najwięcej zmienia to ostatnie, bo rejestracja bywa wtyczką, a bywa integracją z zewnętrznym systemem."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla gabinetu lub kliniki?",
-        a: "Budżet na moje wdrożenie wynosi 5-9 tys. zł netto. Dokładną wycenę ustalam po analizie briefu, liczby usług, integracji, materiałów i wymaganych funkcji."
+        a: "Decyduje sposób rejestracji. Prosty formularz kontaktowy to inny zakres pracy niż integracja z systemem, w którym gabinet już prowadzi terminarz. Poza tym liczy się liczba usług w cenniku i to, czy jest galeria efektów. Opisz, jak dziś zapisują się pacjenci, a policzę na tej podstawie."
       },
       {
         q: "Jak długo trwa tworzenie strony placówki?",
@@ -505,9 +503,9 @@ export const industries: Industry[] = [
     title: "Marki odzieżowe",
     keyword: "tworzenie sklepów internetowych dla marek odzieżowych",
     metaTitle: "Tworzenie sklepów internetowych dla marek odzieżowych",
-    metaDescription: "Tworzenie sklepów internetowych dla marek odzieżowych: warianty, tabela rozmiarów, płatności i Allegro. Budżet 12-25 tys. zł netto, realizacja 6-8 tygodni.",
+    metaDescription: "Tworzenie sklepów internetowych dla marek odzieżowych: warianty, tabela rozmiarów, płatności i Allegro. Realizacja 6-8 tygodni.",
     h1: "Tworzenie sklepów internetowych dla marek odzieżowych",
-    lead: "Buduję sklepy dla marek odzieżowych, które porządkują rozmiary, kolory, stany i sezonowe kolekcje. Tabela wymiarów, skład tkaniny, dostawa oraz dostępność wariantu są widoczne dokładnie tam, gdzie klient podejmuje decyzję o zakupie. Rozmiar to najczęstszy powód zwrotu.",
+    lead: "Tworzenie sklepów internetowych dla marek odzieżowych sprowadza się do panowania nad wariantami. Rozmiary, kolory, stany i kolekcje sezonowe potrafią rozjechać cały katalog, a rozmiar pozostaje najczęstszym powodem zwrotu. Buduję sklepy, w których tabela wymiarów, skład tkaniny, termin dostawy i dostępność konkretnego wariantu stoją dokładnie tam, gdzie klient decyduje o zakupie.",
     intro: [
       "Tworzenie sklepów internetowych dla marek odzieżowych zaczynam od briefu, architektury kategorii i projektu graficznego dopasowanego do kolekcji. Wdrożenie realizuję na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce), z autorskim motywem, wygodnym CMS i kartami produktów przygotowanymi dla rozmiarów oraz kolorów. Tabele wymiarów, skład materiału, zasady zwrotów i dostępność wariantów stoją tam, gdzie klient decyduje o zakupie, także na telefonie.",
       "W sklepie [LumiKids](/projekty/lumikids) przebudowałem warstwę wizualną, strony kolekcji, karty produktów oraz strukturę kategorii pod frazy zakupowe. [Kosmoteka](/projekty/kosmoteka) pokazuje autorski układ kart, integrację z hurtownią, płatnościami i dostawami. Przy migracji pilnuję przekierowań starych adresów, widoczności w wyszukiwarce i Core Web Vitals. Zakres wdrożenia, hosting i opiekę po starcie ustalimy podczas [rozmowy o sklepie](/kontakt)."
@@ -575,14 +573,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "12-25 tys. zł netto",
       time: "6-8 tygodni",
-      note: "Wycena zależy od liczby szablonów, wariantów produktów, integracji oraz zakresu migracji danych. Na koszt wpływają też niestandardowe filtry, automatyzacja stanów, przygotowanie stron kolekcji i konfiguracja analityki sprzedaży."
+      note: "Wycena zależy od liczby szablonów, wariantów produktów, integracji oraz zakresu migracji danych. Migracja ze starego sklepu potrafi ważyć więcej niż sam projekt, więc pytam o nią na początku rozmowy."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie sklepu internetowego dla marki odzieżowej?",
-        a: "Budżet na wdrożenie wynosi 12-25 tys. zł netto. Dokładną wycenę określam po analizie briefu, katalogu, wariantów, potrzebnych integracji i materiałów."
+        a: "Sklep odzieżowy wycenia się przez warianty, nie przez liczbę produktów. Trzydzieści modeli w pięciu rozmiarach i czterech kolorach to sześćset kombinacji do ogarnięcia w stanach magazynowych. Do tego dochodzi migracja starego katalogu i integracje. Pokaż obecny sklep albo listę produktów, to policzę konkretnie."
       },
       {
         q: "Jak długo trwa tworzenie sklepu dla marki odzieżowej?",
@@ -686,9 +683,9 @@ export const industries: Industry[] = [
     title: "Producenci mebli",
     keyword: "tworzenie stron dla producentów mebli",
     metaTitle: "Tworzenie stron dla producentów mebli — katalog i hurt",
-    metaDescription: "Tworzenie stron dla producentów mebli: filtrowany katalog, pliki PDF i DWG oraz zapytanie ofertowe. Budżet 7-14 tys. zł netto, wdrożenie 6-8 tygodni.",
+    metaDescription: "Tworzenie stron dla producentów mebli: filtrowany katalog, pliki PDF i DWG oraz zapytanie ofertowe. Wdrożenie 6-8 tygodni.",
     h1: "Tworzenie stron dla producentów mebli",
-    lead: "Projektuję serwisy dla producentów mebli, stolarni i dostawców akcesoriów, w których hurtownik oraz klient końcowy korzystają z osobnych ścieżek. Katalog może pobierać dane z PIM lub ERP, udostępniać pliki techniczne i pokazywać ceny po zalogowaniu. Katalog musi udźwignąć kilkaset pozycji.",
+    lead: "Tworzenie stron dla producentów mebli różni się od zwykłej strony firmowej tym, że obsługuje dwóch odbiorców naraz. Hurtownik chce plików technicznych i danych po zalogowaniu, klient końcowy chce zdjęć i wymiarów, a katalog musi udźwignąć kilkaset pozycji, nie kilkanaście. Projektuję serwisy dla stolarni i dostawców akcesoriów, w których obie ścieżki są rozdzielone, a dane potrafią przyjść z PIM albo ERP.",
     intro: [
       "Tworzenie stron dla producentów mebli zaczynam od briefu, analizy danych produktowych i zaplanowania katalogu B2B oraz części dla odbiorcy detalicznego. Hurtownik szuka wymiarów, materiałów i dokumentacji, a klient końcowy potrzebuje zdjęć, wariantów oraz prostego formularza zapytania. Projekt graficzny rozdziela te potrzeby, filtry skracają drogę do produktu, a lista do wyceny zastępuje koszyk przy indywidualnej kalkulacji. Sprzedaż z ustalonymi cenami mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
       "Pracowałem przy witrynach Multikonu, producenta nóg, stelaży krzeseł i innych akcesoriów, oraz Stys-Glass, firmy wykonującej hartowanie szkła, balustrady i lustra na wymiar. Zobacz [serwis Multikon](/projekty/multikon), [realizację Stys-Glass](/projekty/stys-glass) i projekt [AdAwards Meble](/projekty/admeble), obejmujący identyfikację marki, SEO oraz sprzedaż internetową. Gdy katalog wymaga integracji, indywidualnego CMS i wysokiej wydajności, wykorzystuję [aplikację w Next.js](/uslugi/aplikacje-nextjs)."
@@ -756,14 +753,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "7-14 tys. zł netto",
       time: "6-8 tygodni",
-      note: "Na wycenę wpływają liczba produktów, sposób importu, filtry, logowanie kontrahentów i wersje językowe. Wizytówka z katalogiem za 1,5 tys. zł lub serwis za 3 tys. zł publikowany w 7-10 dni może wystarczyć przy małej, stałej ofercie, natomiast moje wdrożenie obejmuje indywidualną strukturę, wydajność i rozwój katalogu."
+      note: "O kwocie decydują liczba produktów, sposób importu danych, filtry, logowanie kontrahentów i wersje językowe."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla producenta mebli?",
-        a: "Zakres 7-14 tys. zł netto obejmuje indywidualny serwis katalogowy. Dokładna wycena zależy od briefu, liczby integracji, filtrów, poziomów dostępu i wersji językowych."
+        a: "Punktem wyjścia jest to, skąd biorą się dane o produktach. Ręcznie uzupełniany katalog kosztuje inaczej niż import z PIM albo ERP, który trzeba raz zaprogramować i potem utrzymać. Na kwotę wpływa też liczba filtrów, poziomy dostępu dla hurtowników i wersje językowe."
       },
       {
         q: "Ile trwa tworzenie katalogu dla producenta mebli?",
@@ -867,9 +863,9 @@ export const industries: Industry[] = [
     title: "Hotele i pensjonaty",
     keyword: "tworzenie stron dla hoteli i pensjonatów",
     metaTitle: "Tworzenie stron dla hoteli i pensjonatów — rezerwacje",
-    metaDescription: "Tworzenie stron dla hoteli i pensjonatów: rezerwacja bezpośrednia, kalendarz dostępności i galeria pokoi. Koszt 6-12 tys. zł netto, realizacja 5-8 tygodni.",
+    metaDescription: "Tworzenie stron dla hoteli i pensjonatów: rezerwacja bezpośrednia, kalendarz dostępności i galeria pokoi. Realizacja 5-8 tygodni.",
     h1: "Tworzenie stron dla hoteli i pensjonatów",
-    lead: "Projektuję strony internetowe dla hoteli, pensjonatów i apartamentów, na których gość sprawdzi dostępność i zarezerwuje pobyt bez pośrednika. Zdjęcia, cena i zasady odwołania są dostępne obok siebie także w wersji mobilnej. Bez prowizji dla portalu.",
+    lead: "Tworzenie stron dla hoteli i pensjonatów ma sens wtedy, gdy strona odbiera rezerwacje portalowi, a nie tylko ładnie wygląda. Każda rezerwacja złożona bezpośrednio to prowizja, która zostaje u obiektu. Projektuję witryny dla hoteli, pensjonatów i apartamentów, na których gość sprawdzi dostępność, zobaczy zdjęcia, warunki odwołania i zarezerwuje pobyt z telefonu, bez przechodzenia przez pośrednika.",
     intro: [
       "Tworzenie stron dla hoteli i pensjonatów obejmuje projekt graficzny, wdrożenie, kalendarz dostępności i czytelną ścieżkę rezerwacji bezpośredniej. Umieszczam cenę oraz zasady odwołania blisko formularza, a galerię optymalizuję pod Core Web Vitals. Fundamentem może być [strona WordPress z autorskim motywem](/uslugi/tworzenie-stron-wordpress).",
       "Dla Apartamentów Złota Grota we Wrocławiu przygotowałem prezentację apartamentów z jacuzzi, pobytów dla par, samodzielnego zameldowania i rezerwacji bez pośredników. Zobacz [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) oraz [pensjonat Maciejanka](/projekty/maciejanka), trzygwiazdkowy obiekt pod Kobylą Górą. Po publikacji mogę prowadzić [techniczną opiekę nad stroną](/uslugi/opieka-wordpress), a brief prześlesz przez [formularz](/kontakt)."
@@ -937,14 +933,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "6-12 tys. zł netto",
       time: "5-8 tygodni",
-      note: "Wycena strony hotelu zależy od liczby typów pokoi, silnika rezerwacji, płatności, wersji językowych i zakresu galerii. Dodatkowej pracy wymagają synchronizacja wielu kanałów, rozbudowane pakiety oraz migracja istniejących rezerwacji."
+      note: "Wycena strony hotelu zależy od liczby typów pokoi, silnika rezerwacji, płatności, wersji językowych i zakresu galerii. Osobnej pracy wymaga synchronizacja z kanałami sprzedaży, jeśli obiekt już z nich korzysta."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla hotelu lub pensjonatu?",
-        a: "Realizacja kosztuje 6-12 tys. zł netto. Wycena uwzględnia liczbę pokoi, sposób rezerwacji, płatności, języki, projekt graficzny i ilość materiałów."
+        a: "Najwięcej waży silnik rezerwacji. Kalendarz z zapytaniem mailowym to jedna praca, a rezerwacja z płatnością online i synchronizacją z kanałami sprzedaży to zupełnie inna. Poza tym liczy się liczba typów pokoi, wersje językowe i to, czy są gotowe zdjęcia obiektu."
       },
       {
         q: "Jak długo trwa tworzenie stron dla hoteli i pensjonatów?",
@@ -1048,9 +1043,9 @@ export const industries: Industry[] = [
     title: "Firmy budowlane",
     keyword: "tworzenie stron dla firm budowlanych",
     metaTitle: "Tworzenie stron dla firm budowlanych — galeria i wyceny",
-    metaDescription: "Tworzenie stron dla firm budowlanych: galeria przed i po, formularz przyjmujący zdjęcia oraz obszar dojazdu. Koszt 4-8 tys. zł netto, realizacja 4-6 tygodni.",
+    metaDescription: "Tworzenie stron dla firm budowlanych: galeria przed i po, formularz przyjmujący zdjęcia oraz obszar dojazdu. Realizacja 4-6 tygodni.",
     h1: "Tworzenie stron dla firm budowlanych",
-    lead: "Buduję strony internetowe dla firm remontowych, dekarzy, brukarzy i wykonawców wykończeń, które pokazują efekty pracy. Galeria, obszar dojazdu, formularz wyceny i numer telefonu są od razu dostępne w wersji mobilnej. Klient dzwoni z placu budowy.",
+    lead: "Tworzenie stron dla firm budowlanych zaczyna się od zdjęć, bo w tej branży to one są dowodem, nie opisy. Klient ogląda galerię, sprawdza, czy dojeżdżacie w jego okolicę, i dzwoni, często stojąc na placu budowy. Buduję strony dla firm remontowych, dekarzy, brukarzy i wykonawców wykończeń, na których galeria, obszar dojazdu, formularz wyceny i numer telefonu są pod ręką od razu na telefonie.",
     intro: [
       "Tworzenie stron dla firm budowlanych zaczynam od briefu, zakresu usług, lokalizacji i materiałów z realizacji. [Stronę WordPress](/uslugi/tworzenie-stron-wordpress) buduję wokół galerii przed i po, czytelnych podstron oraz formularza kontaktowego przyjmującego zdjęcia inwestycji. Projekt graficzny uwzględnia responsywność i szybkie ładowanie.",
       "Dla Dom Bez Wad powstała witryna o termomodernizacji, ociepleniach i pompach ciepła, a [realizacja Dom Bez Wad](/projekty/dom-bez-wad) pokazuje prezentację powiązanych usług. [Galabau Darius](/projekty/galabau-darius) wykorzystuje aplikację Next.js, galerię i konfigurator ogrodzeń obliczający cenę na żywo. Podobne wdrożenie omówimy przez [formularz kontaktowy](/kontakt)."
@@ -1118,14 +1113,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "4-8 tys. zł netto",
       time: "4-6 tygodni",
-      note: "Na wycenę strony dla firmy budowlanej wpływają liczba usług i lokalizacji, zakres treści oraz sposób prezentacji galerii. Konfigurator kosztów i rozbudowany formularz ze zdjęciami wymagają dodatkowej logiki wdrożenia."
+      note: "Kwotę za stronę firmy budowlanej ustawiają liczba usług i obsługiwanych lokalizacji, zakres treści oraz sposób pokazania galerii realizacji."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla firmy budowlanej?",
-        a: "Budżet wynosi zwykle 4-8 tys. zł netto. Dolna część zakresu obejmuje witrynę usługową z galerią i formularzem, a konfigurator oraz liczne podstrony lokalne zwiększają wycenę."
+        a: "Zwykła witryna z galerią realizacji i formularzem to podstawa zakresu. W górę ciągną ją dwie rzeczy: podstrony pod kolejne miejscowości, w których szukają Was klienci, oraz konfigurator albo formularz przyjmujący zdjęcia z placu. Powiedz, w ilu miejscowościach pracujecie, to najszybciej ustawi wycenę."
       },
       {
         q: "Ile trwa tworzenie stron dla firm budowlanych?",
@@ -1229,9 +1223,9 @@ export const industries: Industry[] = [
     title: "Influencerzy",
     keyword: "tworzenie stron dla influencerów",
     metaTitle: "Tworzenie stron dla influencerów — media kit i współprace",
-    metaDescription: "Tworzenie stron dla influencerów: media kit online, portfolio współprac i formularz dla marek pod własną domeną. Koszt 4-8 tys. zł netto, termin 3-5 tygodni.",
+    metaDescription: "Tworzenie stron dla influencerów: media kit online, portfolio współprac i formularz dla marek pod własną domeną. Termin 3-5 tygodni.",
     h1: "Tworzenie stron dla influencerów",
-    lead: "Projektuję witryny dla twórców z Instagrama, TikToka i YouTube, zawierające media kit, portfolio oraz formularz dla marek. Własna domena pozwala aktualizować statystyki bez rozsyłania kolejnych wersji pliku. Jeden adres zamiast pliku w mailu.",
+    lead: "Tworzenie stron dla influencerów rozwiązuje problem, który zna każdy twórca współpracujący z markami: media kit żyje jako plik, a plik zawsze jest nieaktualny w momencie wysyłki. Własna domena zamienia go w jeden adres, który sam się aktualizuje. Projektuję witryny dla twórców z Instagrama, TikToka i YouTube, z media kitem, portfolio współprac i formularzem, przez który marka odzywa się bezpośrednio.",
     intro: [
       "Tworzenie stron dla influencerów łączy projekt graficzny, media kit, ofertę współprac i dane kontaktowe w jednym serwisie. Mogę przygotować [nowoczesną stronę internetową](/uslugi/nowoczesne-strony-internetowe) albo wdrożenie WordPress z wygodnym CMS. Formularz dla marek zbiera brief, budżet i termin kampanii.",
       "Nie mam jeszcze realizacji przygotowanej specjalnie dla influencera i nie przedstawiam projektów z innych branż jako takiego doświadczenia. Dowodem wykonania są [opublikowane realizacje](/projekty), inne strony w portfolio oraz witryna, którą teraz czytasz. Jeśli taki punkt odniesienia Ci odpowiada, opisz model współprac przez [formularz kontaktowy](/kontakt)."
@@ -1299,14 +1293,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "4-8 tys. zł netto",
       time: "3-5 tygodni",
-      note: "Wycena strony dla influencera zależy od liczby podstron, sposobu aktualizacji statystyk i zakresu formularza dla marek. Sklep, lista mailingowa oraz dodatkowe integracje powiększają zakres wdrożenia."
+      note: "Wycena strony dla influencera zależy od liczby podstron, sposobu aktualizacji statystyk i zakresu formularza dla marek. Statystyki wpisywane ręcznie kosztują mniej niż pobierane automatycznie."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla influencera?",
-        a: "Koszt wynosi 4-8 tys. zł netto. Prosta witryna z media kitem i formularzem mieści się bliżej dolnej granicy, natomiast sklep oraz integracje podnoszą cenę."
+        a: "Sama strona z media kitem, portfolio współprac i formularzem dla marek to najprostszy wariant. Kwota rośnie, gdy statystyki mają się pobierać automatycznie z platform zamiast być wpisywane ręcznie, oraz gdy dochodzi sklep albo zapis do newslettera."
       },
       {
         q: "Jak długo trwa tworzenie stron dla influencerów?",
@@ -1410,9 +1403,9 @@ export const industries: Industry[] = [
     title: "Streamerzy",
     keyword: "tworzenie stron dla streamerów",
     metaTitle: "Tworzenie stron dla streamerów — harmonogram i sponsorzy",
-    metaDescription: "Tworzenie stron dla streamerów: harmonogram transmisji, status na żywo, klipy i oferta dla sponsorów. Koszt 3-6 tys. zł netto, wykonanie 2-4 tygodnie.",
+    metaDescription: "Tworzenie stron dla streamerów: harmonogram transmisji, status na żywo, klipy i oferta dla sponsorów. Wykonanie 2-4 tygodnie.",
     h1: "Tworzenie stron dla streamerów",
-    lead: "Buduję strony dla streamerów, twórców gamingowych i drużyn e-sportowych z harmonogramem, klipami, Discordem oraz ofertą sponsorską. Lekka wersja mobilna otwiera się szybko także po przejściu bezpośrednio z czatu. Widz przychodzi z czatu, nie z wyszukiwarki.",
+    lead: "Tworzenie stron dla streamerów rządzi się innym ruchem niż reszta internetu, bo widz przychodzi z czatu albo z opisu kanału, a nie z wyszukiwarki. Strona ma się otworzyć natychmiast na telefonie i od razu powiedzieć, kiedy jest następna transmisja. Buduję witryny dla twórców gamingowych i drużyn e-sportowych z harmonogramem, klipami, Discordem i osobną ofertą dla sponsorów.",
     intro: [
       "Tworzenie stron dla streamerów obejmuje projekt graficzny, harmonogram, status transmisji, bibliotekę klipów i centrum kanałów. Jako [aplikacja Next.js](/uslugi/aplikacje-nextjs) serwis może pobierać dane udostępniane przez platformę. Prostszy wariant to [lekka strona Jamstack](/uslugi/strony-jamstack) z ofertą dla sponsorów.",
       "Nie mam w portfolio wdrożenia wykonanego bezpośrednio dla streamera, drużyny e-sportowej ani organizatora turnieju. Mogę pokazać [inne opublikowane realizacje](/projekty) oraz tę witrynę jako dowód jakości kodu i responsywności. Konkretne integracje sprawdzę przed wyceną, gdy prześlesz brief przez [kontakt](/kontakt)."
@@ -1480,14 +1473,13 @@ export const industries: Industry[] = [
       }
     ],
     pricing: {
-      range: "3-6 tys. zł netto",
       time: "2-4 tygodnie",
-      note: "Na wycenę strony streamera wpływają liczba platform, automatyczny status transmisji, sposób obsługi harmonogramu i liczba osadzonych materiałów. Sklep z drukiem na żądanie oraz rozbudowana sekcja drużyny wymagają szerszego wdrożenia."
+      note: "Na wycenę strony streamera wpływają liczba platform, automatyczny status transmisji, sposób obsługi harmonogramu i liczba osadzonych materiałów."
     },
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla streamera?",
-        a: "Cena wynosi 3-6 tys. zł netto. Podstawowy wariant obejmuje harmonogram, odnośniki, klipy i kontakt, a integracje ze sklepem lub platformami zwiększają zakres."
+        a: "Podstawowy wariant to harmonogram transmisji, odnośniki, klipy i kontakt dla sponsorów. Drożej wychodzi automatyczny status na żywo pobierany z platform i sklep z merchem. Jeśli wiesz, na ilu platformach nadajesz i czy potrzebujesz sklepu, mam komplet do policzenia."
       },
       {
         q: "Jak długo trwa tworzenie stron dla streamerów?",

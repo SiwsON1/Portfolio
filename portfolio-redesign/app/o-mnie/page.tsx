@@ -219,7 +219,7 @@ export default function OMniePage() {
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">
-              <em>30+</em> narzędzi w&nbsp;codziennym użyciu.
+              <em>30+</em>{" "}narzędzi w&nbsp;codziennym użyciu.
             </h2>
           </div>
         </div>

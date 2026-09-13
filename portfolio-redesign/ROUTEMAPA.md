@@ -155,6 +155,17 @@ dlatego oba kierunki idą razem.
 ## Status
 
 - 2026-08-24: routemapa utworzona, nic jeszcze nie zaimplementowane
+- 2026-09-01: **DECYZJA: na stronach sprzedażowych nie ma żadnych cen.** Widełki podane
+  wcześniej pochodziły z researchu cenników konkurencji, a nie ze stawek Marcina, i były
+  zawyżone (strona kancelarii 5-9 tys. zł przy realnej stawce rzędu 3 tys.). Usunięte z:
+  8 landingów branżowych, 13 stron usług, `/audyt-wcag`, huba `/branze`, `llms.txt`
+  oraz ze schematów JSON-LD (`offers`, `priceSpecification`). Zostają: czasy realizacji
+  i kwoty kar ustawowych w `lib/wcag.ts`, bo to fakty prawne, nie cennik. Blog nietknięty.
+  Plan: `plans/usuniecie-cen-2026-09-01.md`. **Nie przywracać cen bez decyzji usera.**
+  Widełki wypisane w sekcjach wyżej w tym dokumencie są nieaktualne jako treść na stronę.
+- 2026-09-01: pod WCAG zostaje **jedna strona usługowa** `/audyt-wcag`. Zamiast podstron
+  usługowych powstał wpis `/blog/wcag-2-1-aa` (fraza informacyjna „WCAG 2.1 AA”), który
+  linkuje do money page. Plan: `plans/wpis-wcag-2-1-aa-2026-09-01.md`.
 - 2026-08-25: **money page numer 1 zbudowana: `/audyt-wcag/`**, plan SEO w `plans/seo-audyt-wcag.md`.
   Adres na roocie, nie pod `/uslugi/`, bo na money page URL ma być frazą. Zweryfikowane, że
   statyczna trasa wygrywa z dynamicznym segmentem `[branza]`. Wpięta w sitemap, llms.txt,

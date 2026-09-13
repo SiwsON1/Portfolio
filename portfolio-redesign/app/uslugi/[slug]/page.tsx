@@ -9,6 +9,8 @@ import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { SEO_BLOCKS } from "@/lib/seoBlocks";
+import { SeoBlock } from "@/components/service/SeoBlock";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
@@ -216,7 +218,7 @@ export default async function UslugaPage({
               </aside>
               <div className="md:col-span-9">
                 <h2 className="display text-h1 text-ink">
-                  Tak to <em>wygląda</em> w&nbsp;praktyce.
+                  Tak to <em>wygląda</em>{" "}w&nbsp;praktyce.
                 </h2>
               </div>
             </div>
@@ -441,6 +443,8 @@ export default async function UslugaPage({
           ))}
         </div>
       </section>
+
+      {SEO_BLOCKS[s.slug] && <SeoBlock data={SEO_BLOCKS[s.slug]} />}
 
       {/* CTA — full-bleed editorial */}
       <section className="relative px-6 py-32 md:px-10 md:py-48 border-t border-line overflow-hidden">
