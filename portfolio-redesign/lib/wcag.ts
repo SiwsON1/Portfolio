@@ -18,7 +18,7 @@ export const WCAG_META = {
     "Audyt WCAG 2.1 AA z naprawą błędów. 50 kryteriów, test klawiaturą i czytnikiem ekranu, raport z kosztorysem. Wrocław i zdalnie.",
   h1: "Audyt WCAG, po którym ktoś te błędy naprawi",
   lead:
-    "Audyt dostępności cyfrowej kończy się zwykle plikiem PDF z sześćdziesięcioma błędami i zdaniem, że trzeba to poprawić. Potem zaczyna się szukanie programisty, który zrozumie, o co chodzi w kryterium 1.4.11. Ja robię obie części, więc raport nie jest końcem sprawy tylko listą zadań, które sam odhaczam.",
+    "Audyt dostępności cyfrowej kończy się zwykle plikiem PDF z sześćdziesięcioma błędami i zdaniem, że trzeba to poprawić. Potem zaczyna się szukanie programisty, który zrozumie, o co chodzi w kryterium 1.4.11. Ja robię obie części, więc raport nie jest końcem sprawy, tylko listą zadań, które sam odhaczam.",
   intro: [
     "Sprawdzam stronę pod kątem 50 kryteriów WCAG 2.1 na poziomie AA, czyli dokładnie tego zakresu, który wskazuje norma EN 301 549 przywołana w przepisach. Nie klikam skanera i nie odsyłam wyniku, bo automat wyłapuje najwyżej jedną trzecią problemów. Przechodzę stronę klawiaturą, słucham jej czytnikiem ekranu, mierzę kontrasty i oceniam, czy opisy alternatywne mówią cokolwiek sensownego.",
     "Pracuję głównie na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce) i WordPressie, więc raport nie kończy się na „popraw kontrast w przycisku\". Wiem, w którym pliku motywu ten przycisk siedzi i ile kosztuje jego poprawienie.",
@@ -114,7 +114,7 @@ export const WCAG_KRYTERIA: {
 }[] = [
   {
     zasada: "Postrzegalność",
-    opis: "Treść musi dać się odebrać każdym zmysłem, którym da się z niej korzystać.",
+    opis: "Treść musi dać się odebrać każdym zmysłem, którym użytkownik z niej korzysta, na przykład wzrokiem albo słuchem.",
     pozycje: [
       { nr: "1.1.1", nazwa: "Treść nietekstowa", poziom: "A" },
       { nr: "1.2.1", nazwa: "Sama audycja lub sam wideoklip", poziom: "A" },
@@ -234,11 +234,11 @@ export const WCAG_FAQ = [
   },
   {
     q: "WCAG 2.1 czy 2.2, którą wersję trzeba wdrożyć?",
-    a: "Prawnie operacyjne jest WCAG 2.1 na poziomie AA, bo taką wersję zawiera norma zharmonizowana EN 301 549 w wydaniu V3.2.1. WCAG 2.2 nie jest jeszcze do niej wciągnięte. Robię audyt pod 2.1 AA i osobno oznaczam te miejsca, gdzie 2.2 dokłada wymagania, żebyś nie musiał tego powtarzać przy aktualizacji normy.",
+    a: "Prawnie wiążące jest WCAG 2.1 na poziomie AA, bo taką wersję zawiera norma zharmonizowana EN 301 549 w wydaniu V3.2.1. WCAG 2.2 nie jest jeszcze do niej wciągnięte. Robię audyt pod 2.1 AA i osobno oznaczam te miejsca, gdzie 2.2 dokłada wymagania, żebyś nie musiał tego powtarzać przy aktualizacji normy.",
   },
   {
     q: "Czy widżet dostępności wystarczy?",
-    a: "Nie. Nakładka nie zmienia kodu strony, więc nie naprawia ani struktury nagłówków, ani etykiet formularzy, ani obsługi klawiaturą. Bywa, że przeszkadza czytnikom ekranu bardziej niż sama strona. Testy pokazują, że nakładki adresują najwyżej kilkanaście procent realnych barier, a zgodności nie dają w ogóle.",
+    a: "Nie. Nakładka nie zmienia kodu strony, więc nie naprawia ani struktury nagłówków, ani etykiet formularzy, ani obsługi klawiaturą. Bywa, że przeszkadza czytnikom ekranu bardziej niż sama strona. Testy pokazują, że nakładki usuwają najwyżej kilkanaście procent realnych barier, a zgodności nie dają w ogóle.",
   },
   {
     q: "Czy dostanę certyfikat zgodności z WCAG?",

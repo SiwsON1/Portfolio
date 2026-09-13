@@ -521,7 +521,7 @@ export const industries: Industry[] = [
       },
       {
         title: "Rozproszone stany magazynowe",
-        body: "Sprzedaż w witrynie i na Allegro może przyjąć zamówienie produktu, którego już nie ma. Integracja synchronizuje ceny oraz stany między kanałami przy możliwości użytego systemu."
+        body: "Sprzedaż w witrynie i na Allegro może przyjąć zamówienie produktu, którego już nie ma. Integracja synchronizuje ceny oraz stany między kanałami w zakresie, na jaki pozwala użyty system."
       },
       {
         title: "Słaba sprzedaż mobilna",
@@ -539,7 +539,7 @@ export const industries: Industry[] = [
       },
       {
         title: "Landingi kolekcji",
-        body: "Każda kolekcja otrzymuje własną stronę, narrację, zdjęcia i dobrany zestaw produktów. Landing można opublikować przed premierą, a po sezonie zachować jego wartość dla Google."
+        body: "Każda kolekcja otrzymuje własną stronę, narrację, zdjęcia i dobrany zestaw produktów. Stronę kolekcji można opublikować przed premierą, a po sezonie zostawić w serwisie, żeby nie tracić jej pozycji w Google."
       },
       {
         title: "Kategorie pod wyszukiwarkę",
@@ -557,11 +557,11 @@ export const industries: Industry[] = [
     stack: [
       {
         label: "WooCommerce",
-        body: "WooCommerce to sklep na WordPressie: obsługuje katalog, warianty, zamówienia i kupony, a Ty nie jesteś uwiązany do zamkniętej platformy. Przy kilku tysiącach indeksów albo sprzedaży na kilka rynków rozmawiamy o rozwiązaniu headless na Next.js."
+        body: "WooCommerce to sklep na WordPressie: obsługuje katalog, warianty, zamówienia i kupony, a Ty nie jesteś uwiązany do zamkniętej platformy. Przy kilku tysiącach produktów albo sprzedaży na kilka rynków warto rozważyć headless na Next.js."
       },
       {
         label: "Allegro",
-        body: "Integracja sklepu z Allegro może synchronizować oferty, ceny, zamówienia i stany magazynowe przy udostępnianym przez wybrane rozwiązanie."
+        body: "Integracja sklepu z Allegro może synchronizować oferty, ceny, zamówienia i stany magazynowe w zakresie, jaki udostępnia wybrane rozwiązanie."
       },
       {
         label: "InPost",
@@ -659,7 +659,7 @@ export const industries: Industry[] = [
       {
         step: "03",
         title: "Projekt",
-        body: "Karta produktu i koszyk projektowane od telefonu w górę, bo tam zapada decyzja."
+        body: "Kartę produktu i koszyk projektuję najpierw na telefon, bo tam zapada decyzja."
       },
       {
         step: "04",
@@ -1119,7 +1119,7 @@ export const industries: Industry[] = [
     faq: [
       {
         q: "Ile kosztuje tworzenie strony dla firmy budowlanej?",
-        a: "Zwykła witryna z galerią realizacji i formularzem to podstawa zakresu. W górę ciągną ją dwie rzeczy: podstrony pod kolejne miejscowości, w których szukają Was klienci, oraz konfigurator albo formularz przyjmujący zdjęcia z placu. Powiedz, w ilu miejscowościach pracujecie, to najszybciej ustawi wycenę."
+        a: "Zwykła witryna z galerią realizacji i formularzem to podstawa zakresu. W górę ciągną ją dwie rzeczy: podstrony pod kolejne miejscowości, w których szukają Was klienci, oraz konfigurator albo formularz przyjmujący zdjęcia z placu. Napisz, w ilu miejscowościach pracujecie, a szybciej przygotuję wycenę."
       },
       {
         q: "Ile trwa tworzenie stron dla firm budowlanych?",
@@ -1405,7 +1405,7 @@ export const industries: Industry[] = [
     metaTitle: "Tworzenie stron dla streamerów — harmonogram i sponsorzy",
     metaDescription: "Tworzenie stron dla streamerów: harmonogram transmisji, status na żywo, klipy i oferta dla sponsorów. Wykonanie 2-4 tygodnie.",
     h1: "Tworzenie stron dla streamerów",
-    lead: "Tworzenie stron dla streamerów rządzi się innym ruchem niż reszta internetu, bo widz przychodzi z czatu albo z opisu kanału, a nie z wyszukiwarki. Strona ma się otworzyć natychmiast na telefonie i od razu powiedzieć, kiedy jest następna transmisja. Buduję witryny dla twórców gamingowych i drużyn e-sportowych z harmonogramem, klipami, Discordem i osobną ofertą dla sponsorów.",
+    lead: "Tworzenie stron dla streamerów ma inne źródła ruchu niż większość stron, bo widz przychodzi z czatu albo z opisu kanału, a nie z wyszukiwarki. Strona ma się otworzyć natychmiast na telefonie i od razu powiedzieć, kiedy jest następna transmisja. Buduję witryny dla twórców gamingowych i drużyn e-sportowych z harmonogramem, klipami, Discordem i osobną ofertą dla sponsorów.",
     intro: [
       "Tworzenie stron dla streamerów obejmuje projekt graficzny, harmonogram, status transmisji, bibliotekę klipów i centrum kanałów. Jako [aplikacja Next.js](/uslugi/aplikacje-nextjs) serwis może pobierać dane udostępniane przez platformę. Prostszy wariant to [lekka strona Jamstack](/uslugi/strony-jamstack) z ofertą dla sponsorów.",
       "Nie mam w portfolio wdrożenia wykonanego bezpośrednio dla streamera, drużyny e-sportowej ani organizatora turnieju. Mogę pokazać [inne opublikowane realizacje](/projekty) oraz tę witrynę jako dowód jakości kodu i responsywności. Konkretne integracje sprawdzę przed wyceną, gdy prześlesz brief przez [kontakt](/kontakt)."
@@ -1413,7 +1413,7 @@ export const industries: Industry[] = [
     pains: [
       {
         title: "Linki w wielu miejscach",
-        body: "Widz nie zawsze wie, gdzie znaleźć Discord, harmonogram, sklep i archiwum nagrań. Pytają o to na czacie codziennie. Strona streamera porządkuje wszystkie odnośniki pod jednym adresem we własnej domenie."
+        body: "Widz nie zawsze wie, gdzie znaleźć Discord, harmonogram, sklep i archiwum nagrań. Widzowie pytają o to na czacie codziennie. Strona streamera porządkuje wszystkie odnośniki pod jednym adresem we własnej domenie."
       },
       {
         title: "Nieaktualny plan transmisji",

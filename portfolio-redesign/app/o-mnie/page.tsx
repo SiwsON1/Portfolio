@@ -41,7 +41,7 @@ export default function OMniePage() {
         />
 
         <div className="relative flex items-center justify-between mb-16 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
-          <span>Profile · Marcin Siwonia</span>
+          <span>Profil · Marcin Siwonia</span>
           <span>2020 — teraz</span>
         </div>
 
@@ -55,7 +55,7 @@ export default function OMniePage() {
               className="mt-10 max-w-xl text-ink-mute"
               style={{ fontSize: "clamp(1.125rem, 1rem + 0.6vw, 1.5rem)", lineHeight: 1.55 }}
             >
-              Web developer, freelancer, prowadzi blog SEO/AI po godzinach.
+              Web developer i freelancer. Po godzinach piszę o SEO i AI.
               Wrocław, jeden monitor, dużo kawy.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function OMniePage() {
             { label: "Pracuję od", value: "2020" },
             { label: "Wdrożenia", value: "30+" },
             { label: "Klienci z", value: "PL · DE" },
-            { label: "Forma", value: "B2B / UoD / hr" },
+            { label: "Forma", value: "B2B / UoD / godz." },
           ].map((f, i) => (
             <div
               key={i}
@@ -144,12 +144,12 @@ export default function OMniePage() {
             <p>
               Pod koniec 2022 roku poszedłem na swoje. Zaczęło się od trzech
               klientów, dziś obsługuję 4-6 jednocześnie. Połowę czasu spędzam
-              programując, drugą połowę na rozmowach o tym co warto napisać a
-              czego nie.
+              programując, drugą połowę na rozmowach o tym, co warto napisać,
+              a czego nie.
             </p>
             <p>
               Specjalizuję się w stronach komercyjnych dla małych i średnich
-              firm, aplikacjach Next.js z customową logiką oraz wdrożeniach AI
+              firm, aplikacjach Next.js z własną logiką oraz wdrożeniach AI,
               które mają zwrócić się w ciągu roku. Po godzinach prowadzę{" "}
               <Link
                 href="https://seomantyczny.pl"
@@ -228,7 +228,7 @@ export default function OMniePage() {
       <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
           <aside className="md:col-span-3">
-            <p className="eyebrow mb-2">03 — Skille</p>
+            <p className="eyebrow mb-2">03 — Umiejętności</p>
             <p className="text-ink-faint text-sm font-mono leading-relaxed">
               Czego używam w produkcji, jak głęboko, od kiedy.
             </p>
@@ -244,32 +244,32 @@ export default function OMniePage() {
           {[
             {
               cat: "Frontend",
-              level: "Expert · 6 lat",
+              level: "Ekspert · 6 lat",
               tools: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "GSAP + ScrollTrigger", "Three.js / R3F", "Lenis", "Motion (framer-motion)", "shadcn/ui"],
             },
             {
               cat: "Backend",
-              level: "Advanced · 4 lata",
+              level: "Zaawansowany · 4 lata",
               tools: ["Node.js", "NestJS", "Express", "Postgres + Prisma", "MongoDB", "Redis", "tRPC", "REST + GraphQL"],
             },
             {
               cat: "CMS / Headless",
-              level: "Expert · 5 lat",
+              level: "Ekspert · 5 lat",
               tools: ["WordPress (custom theme)", "WooCommerce", "Sanity Studio", "Strapi", "Headless WP (WPGraphQL)", "Contentful"],
             },
             {
               cat: "AI / LLM",
-              level: "Advanced · 2 lata",
+              level: "Zaawansowany · 2 lata",
               tools: ["OpenAI API", "Anthropic Claude", "Vercel AI SDK", "RAG (pgvector)", "LangChain", "Embeddings + ewaluacja"],
             },
             {
               cat: "DevOps / Hosting",
-              level: "Advanced · 5 lat",
+              level: "Zaawansowany · 5 lat",
               tools: ["Vercel", "Hostinger", "cyber_folks", "VPS Hetzner", "Cloudflare", "Sentry", "OpenTelemetry", "Docker"],
             },
             {
-              cat: "Design / Tools",
-              level: "Working · 4 lata",
+              cat: "Design / narzędzia",
+              level: "Praktyka · 4 lata",
               tools: ["Figma", "DaVinci Resolve", "Playwright", "Lighthouse CI", "Git + GitHub", "Notion", "ChatGPT Pro / Claude Pro"],
             },
           ].map((g) => (
@@ -277,11 +277,11 @@ export default function OMniePage() {
               key={g.cat}
               className="bg-bg p-6 md:p-8 group hover:bg-bg-elev transition-colors duration-500"
             >
-              <div className="flex items-baseline justify-between mb-4">
+              <div className="flex items-baseline justify-between gap-4 mb-4">
                 <h3 className="font-display italic text-2xl md:text-3xl text-ink group-hover:text-peach transition-colors">
                   {g.cat}
                 </h3>
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint whitespace-nowrap">
                   {g.level}
                 </span>
               </div>
