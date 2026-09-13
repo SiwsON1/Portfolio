@@ -15,7 +15,7 @@ export function Footer() {
             </h2>
             <Link
               href="mailto:marcin.siwonia.firma@gmail.com"
-              className="mt-10 inline-block text-2xl md:text-3xl text-peach hover:underline underline-offset-4"
+              className="mt-10 inline-block max-w-full text-lg sm:text-2xl md:text-3xl text-peach hover:underline underline-offset-4 [overflow-wrap:anywhere]"
               data-cursor="EMAIL"
             >
               marcin.siwonia.firma@gmail.com
@@ -102,7 +102,12 @@ export function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col gap-3 border-t border-line pt-8 text-xs text-ink-faint md:flex-row md:items-center md:justify-between">
-          <p>© {year} Marcin Siwonia. Wszystkie prawa zastrzeżone.</p>
+          <p>
+            © {year} Marcin Siwonia. Wszystkie prawa zastrzeżone.{" "}
+            <Link href="/polityka-prywatnosci" className="underline underline-offset-4 hover:text-ink">
+              Polityka prywatności
+            </Link>
+          </p>
           <p className="font-mono uppercase tracking-[0.18em]">Wrocław · PL</p>
         </div>
       </div>

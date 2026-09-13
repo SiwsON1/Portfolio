@@ -52,7 +52,7 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "next-js-software-house": {
     projectSlug: "galabau-darius",
     context:
-      "Konfigurator wyceny ogrodzeń dla niemieckiej firmy Galabau Darius. Solo project: pełna aplikacja Next.js 14 z auth (Clerk), bazą produktów, panelem admina, real-time wycenami, 3D preview. Czas wdrożenia: 7 tygodni od briefu do produkcji. Cena 1/3 tego co policzyłaby agencja.",
+      "Konfigurator wyceny ogrodzeń dla niemieckiej firmy Galabau Darius. Solo project: pełna aplikacja Next.js 14 z auth (Clerk), bazą produktów, panelem admina, real-time wycenami, 3D preview. Czas wdrożenia: 7 tygodni od briefu do produkcji.",
     highlight:
       "Next.js 14 + Clerk + admin panel + 3D config — 7 tygodni",
   },
@@ -66,9 +66,9 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "tworzenie-stron-www": {
     projectSlug: "apartamenty-zlota-grota",
     context:
-      "Strona Złota Grota — apartamenty z jacuzzi we Wrocławiu. Modern WordPress z custom theme, system rezerwacji bezpośrednio na stronie (bez Booking.com pośrednika), galeria pełnoekranowa, optymalizacja mobile (60% ruchu z telefonów). Wzrost konwersji rezerwacji +47% vs poprzednia strona.",
+      "Strona Złota Grota — apartamenty z jacuzzi we Wrocławiu. Modern WordPress z custom theme, system rezerwacji bezpośrednio na stronie (bez Booking.com pośrednika), galeria pełnoekranowa, układ projektowany najpierw pod telefon.",
     highlight:
-      "Custom WP + booking system + mobile-first — konwersja +47%",
+      "Custom WP + rezerwacje bez pośrednika + mobile-first",
   },
   "aplikacje-nextjs": {
     projectSlug: "kantorymapa",
@@ -108,7 +108,7 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "wdrozenia-ai": {
     projectSlug: "businesstokenizer",
     context:
-      "Strona dla agencji blockchain BusinessTokenizer — strategia content marketing wzbogacona generowaniem treści przez AI (OpenAI API). Custom workflow: brief klienta → prompt → generowany draft posta → human review → publikacja. Czas tworzenia treści zredukowany z 4h na 30min.",
+      "Strona dla agencji blockchain BusinessTokenizer — strategia content marketing wzbogacona generowaniem treści przez AI (OpenAI API). Custom workflow: brief klienta → prompt → generowany draft posta → human review → publikacja.",
     highlight:
       "OpenAI API + custom prompt workflow + content automation",
   },

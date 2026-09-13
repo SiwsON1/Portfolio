@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 /**
- * GA4 z consent management — odpala dopiero po zgodzie cookie.
- * Domyślnie 'denied', po akceptacji eventu 'consent-granted' przełącza
- * na 'granted'.
+ * GA4 wczytywane dopiero po zgodzie na cookies analityczne.
+ * Wcześniej skrypt ładował się zawsze z zgodą wpisaną przy pierwszym renderze,
+ * a next/script z tym samym id nie wykonuje się ponownie, więc kliknięcie
+ * „Akceptuj” nic nie zmieniało do przeładowania strony.
  */
 export function Analytics() {
   const [consent, setConsent] = useState(false);
@@ -27,7 +28,7 @@ export function Analytics() {
     return () => window.removeEventListener("consent-granted", onGranted);
   }, []);
 
-  if (!GA_ID) return null;
+  if (!GA_ID || !consent) return null;
 
   return (
     <>
@@ -42,15 +43,12 @@ export function Analytics() {
           window.gtag = gtag;
           gtag('consent', 'default', {
             'ad_storage': 'denied',
-            'analytics_storage': '${consent ? "granted" : "denied"}',
+            'analytics_storage': 'granted',
             'ad_user_data': 'denied',
             'ad_personalization': 'denied'
           });
           gtag('js', new Date());
-          gtag('config', '${GA_ID}', {
-            anonymize_ip: true,
-            send_page_view: ${consent}
-          });
+          gtag('config', '${GA_ID}', { anonymize_ip: true });
         `}
       </Script>
     </>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -120,7 +121,7 @@ export default function ContactForm() {
           rows={6}
           disabled={status === "loading"}
           className={`${fieldBase} resize-y leading-relaxed`}
-          placeholder="Co chcesz zrobić, deadline, budżet"
+          placeholder="Co chcesz zrobić i na kiedy"
         />
       </div>
 
@@ -141,7 +142,7 @@ export default function ContactForm() {
           type="submit"
           disabled={status === "loading"}
           data-cursor="WYŚLIJ"
-          className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink hover:text-peach disabled:opacity-50 disabled:hover:text-ink transition-colors text-left"
+          className="inline-flex min-h-[52px] w-full items-center justify-center gap-3 bg-peach px-8 font-mono text-[12px] uppercase tracking-[0.2em] text-bg transition-colors hover:bg-peach-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-peach disabled:opacity-60 sm:w-auto"
         >
           {status === "loading" ? "Wysyłam…" : "Wyślij wiadomość →"}
         </button>
@@ -151,10 +152,19 @@ export default function ContactForm() {
         </p>
       </div>
 
+      <p className="text-xs leading-relaxed text-ink-faint">
+        Dane z formularza wykorzystam tylko do odpowiedzi na wiadomość. Administratorem jest Marcin
+        Siwonia, szczegóły w{" "}
+        <Link href="/polityka-prywatnosci" className="underline underline-offset-4 hover:text-ink">
+          polityce prywatności
+        </Link>
+        .
+      </p>
+
       <div aria-live="polite" className="min-h-[1.5rem]">
         {status === "success" && (
           <p className="text-peach font-display italic text-h3">
-            Dzięki — odezwę się tak szybko, jak się da.
+            Dzięki, odpiszę w ciągu 24 godzin roboczych.
           </p>
         )}
         {status === "error" && (

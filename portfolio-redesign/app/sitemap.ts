@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, priority: 0.85 },
     { url: `${SITE_URL}/o-mnie`, priority: 0.7 },
     { url: `${SITE_URL}/kontakt`, priority: 0.7 },
+    { url: `${SITE_URL}/polityka-prywatnosci`, priority: 0.2 },
   ];
 
   const serviceRoutes = services.map((s) => ({

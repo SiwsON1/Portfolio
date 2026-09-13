@@ -40,9 +40,9 @@ export function CookieBanner() {
               Cookie · GDPR
             </p>
             <p className="text-ink text-sm md:text-base leading-relaxed">
-              Strona używa plików cookie do analityki (GA4) i optymalizacji
-              treści. Niezbędne cookies działają zawsze, analityczne tylko po
-              akceptacji. Więcej w{" "}
+              Po Twojej zgodzie strona uruchamia Google Analytics 4 do mierzenia
+              ruchu. Bez zgody zapisuje tylko Twój wybór. Zgodę zmienisz
+              w każdej chwili. Więcej w{" "}
               <Link
                 href="/polityka-prywatnosci"
                 className="text-peach underline underline-offset-4"

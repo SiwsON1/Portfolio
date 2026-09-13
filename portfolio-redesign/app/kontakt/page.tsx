@@ -37,8 +37,8 @@ export default function KontaktPage() {
             Napisz w <em>dwóch zdaniach</em>.
           </h1>
           <p className="mt-8 prose-bound text-ink-mute text-lead">
-            Opisz co chcesz zrobić, jaki jest deadline i budżet. Odpiszę tego
-            samego dnia roboczego z pierwszą oceną.
+            Opisz, co chcesz zrobić i na kiedy. Odpiszę w ciągu 24 godzin
+            roboczych z pierwszą oceną.
           </p>
         </div>
       </header>
@@ -54,7 +54,8 @@ export default function KontaktPage() {
               <p className="eyebrow mb-2">Wolisz bezpośrednio?</p>
               <a
                 href="mailto:marcin.siwonia.firma@gmail.com"
-                className="font-display italic text-h2 text-peach hover:underline underline-offset-4"
+                className="font-display italic text-peach hover:underline underline-offset-4 [overflow-wrap:anywhere]"
+                style={{ fontSize: "clamp(1.1rem, 0.5rem + 2vw, 2.5rem)", lineHeight: 1.15 }}
                 data-cursor="KOPIUJ"
               >
                 marcin.siwonia.firma@gmail.com
