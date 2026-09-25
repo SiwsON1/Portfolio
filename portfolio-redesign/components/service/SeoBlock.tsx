@@ -45,7 +45,7 @@ export function SeoBlock({ data }: { data: SeoBlockData }) {
     <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-14">
         <aside className="md:col-span-3">
-          <p className="eyebrow mb-2">05 — Poradnik</p>
+          <p className="eyebrow mb-2">05 · Poradnik</p>
           <p className="text-ink-faint text-sm font-mono">Dłuższa wersja, bez skrótów.</p>
         </aside>
         <div className="md:col-span-9">

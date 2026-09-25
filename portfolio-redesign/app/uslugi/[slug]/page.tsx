@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { services } from "@/lib/services";
-import { projects } from "@/lib/projects";
+import { projects, projectsForService } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
@@ -52,6 +52,13 @@ export default async function UslugaPage({
   const next = services[(idx + 1) % services.length];
   const prev = services[(idx - 1 + services.length) % services.length];
 
+  const hint = SERVICE_CASE_MAP[s.slug];
+  const caseProject = hint ? projects.find((p) => p.slug === hint.projectSlug) : undefined;
+  const moreProjects = projectsForService(s.slug)
+    .filter((p) => p.slug !== caseProject?.slug)
+    .slice(0, 3);
+  const hasRealizacje = Boolean(caseProject) || moreProjects.length > 0;
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -81,7 +88,7 @@ export default async function UslugaPage({
   return (
     <article className="relative">
       {/* HERO — cinematic with massive italic display + frame mark */}
-      <header className="relative px-6 pt-40 pb-32 md:px-10 md:pt-56 md:pb-48 overflow-hidden">
+      <header className="relative px-6 pt-32 pb-20 md:px-10 md:pt-56 md:pb-48 overflow-hidden">
         {/* Ambient cool glow */}
         <div
           aria-hidden
@@ -93,7 +100,7 @@ export default async function UslugaPage({
         />
 
         {/* Top frame mark */}
-        <div className="relative flex items-center justify-between mb-16 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+        <div className="relative flex items-center justify-between mb-10 md:mb-16 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
           <Link
             href="/uslugi"
             className="hover:text-peach transition-colors"
@@ -125,6 +132,22 @@ export default async function UslugaPage({
             <p className="mt-8 md:mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 }}>
               {s.lead}
             </p>
+            <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Link
+                href="/kontakt"
+                className="group inline-flex min-h-11 items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-6 py-3"
+                data-cursor="START"
+              >
+                <span>Zapytaj o wycenę</span>
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+              <a
+                href={hasRealizacje ? "#realizacje" : "/projekty"}
+                className="inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-[0.22em] text-ink-mute hover:text-peach underline underline-offset-8 decoration-line transition-colors"
+              >
+                Zobacz realizacje
+              </a>
+            </div>
           </div>
           <div className="md:col-span-3 hidden md:block">
             <ServiceHeroVisual slug={s.slug} />
@@ -132,17 +155,17 @@ export default async function UslugaPage({
         </div>
 
         {/* Mobile: visual ABOVE title — kompaktowo */}
-        <div className="md:hidden mt-12 max-w-xs mx-auto h-64">
+        <div className="md:hidden mt-10 max-w-[16rem] mx-auto h-52">
           <ServiceHeroVisual slug={s.slug} />
         </div>
       </header>
 
       {/* DEVTOOLS LIVE — slim, nad portfolio, pod hero, tylko Next.js */}
       {s.slug === "aplikacje-nextjs" && (
-        <section className="px-6 py-20 md:px-10 md:py-24 border-t border-line">
+        <section className="px-6 py-16 md:px-10 md:py-24 border-t border-line">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
             <aside className="md:col-span-3">
-              <p className="eyebrow mb-4">— Performance, na żywo</p>
+              <p className="eyebrow mb-4">Performance na żywo</p>
               <p
                 className="font-display italic text-ink mb-5"
                 style={{
@@ -194,16 +217,12 @@ export default async function UslugaPage({
       )}
 
       {/* CASE STUDY — pokaż konkretną realizację w tej technologii */}
-      {(() => {
-        const hint = SERVICE_CASE_MAP[s.slug];
-        const project = hint ? projects.find((p) => p.slug === hint.projectSlug) : null;
-        if (!hint || !project) return null;
-        return (
-          <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+      {hasRealizacje && (
+          <section id="realizacje" className="scroll-mt-24 px-6 py-16 md:px-10 md:py-32 border-t border-line">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
               <aside className="md:col-span-3">
-                <p className="eyebrow mb-2">— Realizacja w tej technologii</p>
-                <p className="text-ink-faint text-sm font-mono leading-relaxed">
+                <p className="eyebrow mb-2">Realizacja w tej technologii</p>
+                <p className="hidden lg:block text-ink-faint text-sm font-mono leading-relaxed">
                   Konkretny projekt, który zrobiłem w tych technologiach.
                 </p>
               </aside>
@@ -214,15 +233,16 @@ export default async function UslugaPage({
               </div>
             </div>
 
+            {hint && caseProject && (
             <Link
-              href={`/projekty/${project.slug}`}
+              href={`/projekty/${caseProject.slug}`}
               className="group block"
               data-cursor="CASE"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-bg-elev mb-10">
+              <div className="relative aspect-[16/9] overflow-hidden bg-bg-elev mb-6 md:mb-10">
                 <Image
-                  src={project.image}
-                  alt={`${project.client} — ${project.title}`}
+                  src={caseProject.image}
+                  alt={`${caseProject.client}: ${caseProject.title}`}
                   fill
                   className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, 90vw"
@@ -232,14 +252,14 @@ export default async function UslugaPage({
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-bg/40 via-transparent to-transparent pointer-events-none"
                 />
-                <div className="absolute top-5 left-5 right-5 flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink/90 mix-blend-difference">
-                  <span>{project.year} · {project.client}</span>
+                <div className="absolute top-5 left-5 right-5 hidden md:flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink/90 mix-blend-difference">
+                  <span>{caseProject.year} · {caseProject.client}</span>
                   <span>{hint.highlight}</span>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
                 <div className="md:col-span-3">
-                  <p className="eyebrow mb-3">Klient · {project.year}</p>
+                  <p className="eyebrow mb-3">Klient · {caseProject.year}</p>
                   <h3
                     className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
                     style={{
@@ -248,13 +268,16 @@ export default async function UslugaPage({
                       letterSpacing: "-0.025em",
                     }}
                   >
-                    {project.client}
+                    {caseProject.client}
                   </h3>
+                  <p className="md:hidden mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-peach">
+                    {hint.highlight}
+                  </p>
                 </div>
                 <div className="md:col-span-7 prose-bound text-ink-mute text-lg leading-relaxed">
                   <p>{hint.context}</p>
                   <ul className="mt-4 flex flex-wrap gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint">
-                    {project.stack.map((t) => (
+                    {caseProject.stack.map((t) => (
                       <li key={t} className="border border-line px-2.5 py-1 rounded-full">
                         {t}
                       </li>
@@ -269,16 +292,45 @@ export default async function UslugaPage({
                 </div>
               </div>
             </Link>
+            )}
+
+            {moreProjects.length > 0 && (
+              <div className={caseProject ? "mt-16 md:mt-24" : ""}>
+                <p className="eyebrow mb-6">Inne realizacje</p>
+                <ul className="-mx-6 flex snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-8 sm:overflow-visible sm:px-0 sm:pb-0">
+                  {moreProjects.map((rp) => (
+                    <li key={rp.slug} className="w-[78%] shrink-0 snap-start sm:w-auto">
+                      <Link href={`/projekty/${rp.slug}`} className="group block" data-cursor="OTWÓRZ">
+                        <div className="relative aspect-[16/10] overflow-hidden bg-bg-elev mb-4">
+                          <Image
+                            src={rp.image}
+                            alt={`${rp.client}: ${rp.title}`}
+                            fill
+                            className="object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+                            sizes="(max-width: 640px) 100vw, 30vw"
+                          />
+                        </div>
+                        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">
+                          {rp.client} · {rp.year}
+                        </p>
+                        <h3 className="font-display italic text-xl text-ink group-hover:text-peach transition-colors">
+                          {rp.title}
+                        </h3>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
-        );
-      })()}
+      )}
 
       {/* INTRO — long-form copy with marginalia */}
-      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
+      <section className="px-6 py-16 md:px-10 md:py-32 border-t border-line">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <aside className="md:col-span-3">
-            <p className="eyebrow mb-2">01 — Wstęp</p>
-            <p className="text-ink-faint text-sm font-mono">
+            <p className="eyebrow mb-2">01 · Wstęp</p>
+            <p className="hidden lg:block text-ink-faint text-sm font-mono">
               Kontekst, historia, dlaczego.
             </p>
           </aside>
@@ -291,11 +343,11 @@ export default async function UslugaPage({
       </section>
 
       {/* CO DOSTAJESZ — 2x2 grid with hover treatment */}
-      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+      <section className="px-6 py-16 md:px-10 md:py-32 border-t border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
           <aside className="md:col-span-3">
-            <p className="eyebrow mb-2">02 — Co dostajesz</p>
-            <p className="text-ink-faint text-sm font-mono">
+            <p className="eyebrow mb-2">02 · Co dostajesz</p>
+            <p className="hidden lg:block text-ink-faint text-sm font-mono">
               Co wchodzi w zakres.
             </p>
           </aside>
@@ -309,7 +361,7 @@ export default async function UslugaPage({
           {s.bullets.map((b, i) => (
             <div
               key={i}
-              className="bg-bg p-10 md:p-14 group hover:bg-bg-elev transition-colors duration-700 relative overflow-hidden"
+              className="bg-bg p-6 sm:p-10 md:p-14 group hover:bg-bg-elev transition-colors duration-700 relative overflow-hidden"
             >
               {/* Peach line that grows on hover */}
               <div
@@ -317,8 +369,8 @@ export default async function UslugaPage({
                 className="absolute top-0 left-0 h-px bg-peach origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                 style={{ width: "100%" }}
               />
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-faint mb-8">
-                — {String(i + 1).padStart(2, "0")}
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-faint mb-5 md:mb-8">
+                {String(i + 1).padStart(2, "0")}
               </p>
               <h3
                 className="font-display italic text-ink mb-5 group-hover:text-peach transition-colors duration-700"
@@ -338,11 +390,11 @@ export default async function UslugaPage({
       </section>
 
       {/* PROCES — vertical timeline */}
-      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+      <section className="px-6 py-16 md:px-10 md:py-32 border-t border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
           <aside className="md:col-span-3">
-            <p className="eyebrow mb-2">03 — Proces</p>
-            <p className="text-ink-faint text-sm font-mono">
+            <p className="eyebrow mb-2">03 · Proces</p>
+            <p className="hidden lg:block text-ink-faint text-sm font-mono">
               Od briefu do wdrożenia.
             </p>
           </aside>
@@ -389,11 +441,11 @@ export default async function UslugaPage({
       </section>
 
       {/* FAQ — accordion editorial */}
-      <section className="px-6 py-24 md:px-10 md:py-32 border-t border-line">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+      <section id="faq" className="scroll-mt-24 px-6 py-16 md:px-10 md:py-32 border-t border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
           <aside className="md:col-span-3">
-            <p className="eyebrow mb-2">04 — FAQ</p>
-            <p className="text-ink-faint text-sm font-mono">
+            <p className="eyebrow mb-2">04 · FAQ</p>
+            <p className="hidden lg:block text-ink-faint text-sm font-mono">
               Najczęstsze pytania.
             </p>
           </aside>
@@ -438,7 +490,7 @@ export default async function UslugaPage({
       {SEO_BLOCKS[s.slug] && <SeoBlock data={SEO_BLOCKS[s.slug]} />}
 
       {/* CTA — full-bleed editorial */}
-      <section className="relative px-6 py-32 md:px-10 md:py-48 border-t border-line overflow-hidden">
+      <section className="relative px-6 py-20 md:px-10 md:py-48 border-t border-line overflow-hidden">
         <div
           aria-hidden
           className="absolute inset-0 pointer-events-none"
@@ -449,7 +501,7 @@ export default async function UslugaPage({
         />
         <div className="relative text-center max-w-5xl mx-auto">
           <p className="eyebrow mb-8">Następny krok</p>
-          <h2 className="display text-display text-ink mb-12">
+          <h2 className="display text-display text-ink mb-10 md:mb-12">
             <em>{s.cta}</em>
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">

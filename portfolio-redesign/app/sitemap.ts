@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/${i.slug}`,
     priority: 0.8,
   }));
-  const projectRoutes = projects.map((p) => ({
+  const projectRoutes = projects.filter((p) => p.category !== "lab").map((p) => ({
     url: `${SITE_URL}/projekty/${p.slug}`,
     priority: 0.7,
   }));

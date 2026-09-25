@@ -50,6 +50,23 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "Tailwind", "SSG", "SEO"],
   },
   {
+    slug: "cojestpolskie",
+    title: "Rejestr właścicieli marek i polskich alternatyw",
+    client: "cojestpolskie.pl",
+    year: 2026,
+    category: "fullstack",
+    image: "/projects-fresh/cojestpolskie-card.webp",
+    url: "https://cojestpolskie.pl/",
+    description:
+      "Serwis, który sprawdza w KRS i rejestrach spółek, kto naprawdę jest właścicielem marki i od kiedy. Ponad 900 marek i narzędzi, historia zmian właściciela, źródło przy każdym fakcie i polskie zamienniki z tej samej półki. Ponad 1700 podstron generowanych z jednej bazy danych.",
+    body: [
+      "Cojestpolskie.pl odpowiada na pytanie, które zadaje sobie kupujący przy półce: czy ta marka jest polska. Nazwa brzmi swojsko, kod kreskowy zaczyna się od 590, a spółka dominująca bywa zarejestrowana w Luksemburgu. Każdy wpis pokazuje właściciela, kraj kapitału, produkcję w Polsce i oś czasu zmian właściciela, a przy każdym fakcie stoi źródło i data weryfikacji.",
+      "Dane zbiera proces, w którym model AI robi wstępny research, a skrypty sprawdzają go w odpisach KRS i w Centralnym Rejestrze Beneficjentów Rzeczywistych. Wpis, którego nie da się potwierdzić w rejestrze, nie trafia na stronę. To ta kontrola odróżnia serwis od list „polskich firm” przepisywanych z forów.",
+      "Technicznie to Astro w wydaniu statycznym na własnym hostingu. Z jednej bazy JSON powstaje ponad 1700 podstron w kilku szablonach: marka, porównanie dwóch marek, polskie alternatywy, grupy kapitałowe i półki kategorii. Każda ma dane strukturalne i własny obraz do udostępniania, a po wdrożeniu nowe adresy trafiają do wyszukiwarek przez IndexNow. Pomiar Lighthouse na zbudowanej stronie daje 95 do 100 punktów.",
+    ],
+    stack: ["Astro", "TypeScript", "SSG", "AI", "SEO"],
+  },
+  {
     slug: "dobrypupil",
     title: "Baza substancji trujących dla psa i kota",
     client: "Dobry Pupil",
@@ -120,6 +137,23 @@ export const projects: Project[] = [
     stack: ["WordPress", "WooCommerce", "Custom CSS", "SEO"],
   },
   {
+    slug: "mebloweporady",
+    title: "Poradnik meblowy i wnętrzarski",
+    client: "Mebloweporady.pl",
+    year: 2026,
+    category: "commercial",
+    image: "/projects-fresh/mebloweporady-card.webp",
+    url: "https://mebloweporady.pl/",
+    description:
+      "Serwis poradnikowy o meblach, materacach i urządzaniu wnętrz na WordPressie. Ponad 400 poradników w kilkunastu działach, siedem kalkulatorów remontowych i strona główna budowana dynamicznie z najnowszych wpisów.",
+    body: [
+      "Mebloweporady.pl pisze o meblach i wnętrzach wymiarami, gramaturami i cenami zamiast ogólników: ile kosztuje kuchnia na wymiar, po czym poznać materac, który kolor zniesie codzienne życie. Najwięcej ruchu przynosi dział kolorów, dlatego każda barwa z realnym popytem dostała własny wpis z kodami hex, paletami i przykładami polskich farb.",
+      "Serwis ma siedem kalkulatorów, między innymi farby, paneli, płytek, tapety i odległości od telewizora, zebranych na wspólnej stronie. Napisałem je w czystym JavaScripcie osadzonym w treści WordPressa, co wymagało obejścia automatycznego formatowania edytora, które potrafi wstawić znacznik akapitu w środek skryptu. Z wpisów o pasującym temacie prowadzą do nich linki kontekstowe.",
+      "Stronę główną, która wcześniej była w większości demem motywu, zastąpiłem własną wtyczką: renderuje najnowszy wpis, świeże publikacje z datami, pasek kalkulatorów i działy tematyczne prosto z bazy, bez ręcznej edycji w Elementorze. Pod spodem Yoast SEO i LiteSpeed Cache na hostingu współdzielonym.",
+    ],
+    stack: ["WordPress", "Elementor", "PHP", "JavaScript", "SEO"],
+  },
+  {
     slug: "businesstokenizer",
     title: "Agencja blockchain i tokenizacji",
     client: "BusinessTokenizer",
@@ -173,7 +207,7 @@ export const projects: Project[] = [
     client: "AdAwards Hotel",
     year: 2023,
     category: "commercial",
-    image: "/projects/adhotel.png",
+    image: "/projects-fresh/adhotel-card-hd.webp",
     url: "https://adhotel.pl/",
     description:
       "Strategie marketingowe dla branży hotelarskiej, kampanie i web development.",
@@ -185,7 +219,7 @@ export const projects: Project[] = [
     client: "AdAwards Meble",
     year: 2023,
     category: "commercial",
-    image: "/projects/admeble.png",
+    image: "/projects-fresh/admeble-card-hd.webp",
     url: "https://admeble.przedprojekt.com/",
     description:
       "Branding, SEO i e-commerce dla marek meblarskich. Realizacje case-study.",
@@ -197,7 +231,7 @@ export const projects: Project[] = [
     client: "AdShop",
     year: 2023,
     category: "commercial",
-    image: "/projects/adshop.png",
+    image: "/projects-fresh/adshop-card-hd.webp",
     url: "https://ad-shop.pl/",
     description:
       "Platforma z ekskluzywnymi rabatami w kategoriach hotele, zdrowie i lifestyle.",
@@ -209,7 +243,7 @@ export const projects: Project[] = [
     client: "Gumar Kępno",
     year: 2023,
     category: "commercial",
-    image: "/projects/gumarkepno.png",
+    image: "/projects-fresh/gumar-kepno-card-hd.webp",
     url: "https://www.gumarkepno.pl/",
     description:
       "Kompleksowy serwis pojazdów ciężarowych: tachografy, elektromechanika, mobilny serwis.",
@@ -221,7 +255,7 @@ export const projects: Project[] = [
     client: "Dom Bez Wad",
     year: 2023,
     category: "commercial",
-    image: "/projects/dombezwad.png",
+    image: "/projects-fresh/dom-bez-wad-card-hd.webp",
     url: "https://dombezwad.przedprojekt.com/",
     description:
       "Termomodernizacja i energia odnawialna: ocieplenia, pompy ciepła.",
@@ -233,7 +267,7 @@ export const projects: Project[] = [
     client: "Multikon",
     year: 2023,
     category: "commercial",
-    image: "/projects/multikon.png",
+    image: "/projects-fresh/multikon-card-hd.webp",
     url: "http://www.multikon.eu/",
     description:
       "Producent wysokiej jakości akcesoriów meblowych, nóg i stelaży krzeseł.",
@@ -245,7 +279,7 @@ export const projects: Project[] = [
     client: "Stys-Glass",
     year: 2023,
     category: "commercial",
-    image: "/projects/stys-glass.png",
+    image: "/projects-fresh/stys-glass-card-hd.webp",
     url: "https://stys-glass.pl/",
     description:
       "Hartowanie szkła, balustrady i lustra na wymiar.",
@@ -257,7 +291,7 @@ export const projects: Project[] = [
     client: "Maciejanka",
     year: 2023,
     category: "commercial",
-    image: "/projects/maciejanka.png",
+    image: "/projects-fresh/maciejanka-card-hd.webp",
     url: "https://maciejanka.pl/",
     description:
       "Trzygwiazdkowy pensjonat pod Kobylą Górą. Udogodnienia, organizacja eventów.",
@@ -269,7 +303,7 @@ export const projects: Project[] = [
     client: "PIW Legnica",
     year: 2023,
     category: "commercial",
-    image: "/projects/piwlegnica.png",
+    image: "/projects-fresh/piwlegnica-card-hd.webp",
     url: "https://www.piwlegnica.pl/",
     description:
       "Informacje administracyjno-prawne dla Inspektoratu Weterynaryjnego w Legnicy.",
@@ -281,7 +315,7 @@ export const projects: Project[] = [
     client: "Katex",
     year: 2023,
     category: "commercial",
-    image: "/projects/katex.png",
+    image: "/projects-fresh/katex-card-hd.webp",
     url: "https://katex.info/",
     description:
       "Platforma do recyklingu katalizatorów. Transparentna wycena, eko-metody.",
@@ -317,7 +351,7 @@ export const projects: Project[] = [
     client: "Zielona Pietruszka",
     year: 2022,
     category: "commercial",
-    image: "/projects/zielonapietruszka.png",
+    image: "/projects-fresh/zielona-pietruszka-card-hd.webp",
     url: "https://zielonapietruszka.com.pl/",
     description:
       "Kameralna restauracja: świeże dania, opcje wegetariańskie i bezglutenowe.",
@@ -329,7 +363,7 @@ export const projects: Project[] = [
     client: "PartyTales",
     year: 2022,
     category: "commercial",
-    image: "/projects/partytales.png",
+    image: "/projects-fresh/partytales-card-hd.webp",
     url: "https://partytales.pl/",
     description:
       "Zestawy balonowe, dekoracje świetlne, wynajem akcesoriów na eventy tematyczne.",
@@ -341,7 +375,7 @@ export const projects: Project[] = [
     client: "Maxnet Bolesławiec",
     year: 2022,
     category: "commercial",
-    image: "/projects/maxnetcv.png",
+    image: "/projects-fresh/maxnet-card-hd.webp",
     url: "https://maxnetboleslawiec.pl/",
     description:
       "Lokalny dostawca internetu światłowodowego i telekomunikacji.",
@@ -353,7 +387,7 @@ export const projects: Project[] = [
     client: "Magia Orientu",
     year: 2022,
     category: "commercial",
-    image: "/projects/magiaorientuCV.png",
+    image: "/projects-fresh/magia-orientu-card-hd.webp",
     url: "https://magiaorientu-boleslawiec.pl/",
     description:
       "Strona dla masażystki specjalizującej się w zabiegach orientalnych.",
@@ -523,6 +557,52 @@ export const FEATURED_SLUGS = [
 export const featuredProjects = FEATURED_SLUGS.map(
   (slug) => projects.find((p) => p.slug === slug)!
 ).filter(Boolean);
+
+const WP_FIRMOWA = ["tworzenie-stron-wordpress", "nowoczesna-strona-firmowa-2026"];
+
+/** Usługi (slugi z lib/services.ts), których dana realizacja jest dowodem. Lab celowo pominięty. */
+export const PROJECT_SERVICES: Record<string, string[]> = {
+  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress"],
+  kantorymapa: ["aplikacje-nextjs", "strony-jamstack"],
+  cojestpolskie: ["strony-jamstack", "nowoczesne-strony-internetowe", "wdrozenia-ai"],
+  dobrypupil: ["strony-jamstack"],
+  owodzie: ["strony-jamstack"],
+  cenynotarialne: ["aplikacje-nextjs", "aplikacje-react", "next-js-software-house"],
+  "galabau-darius": ["aplikacje-nextjs", "aplikacje-react"],
+  kosmoteka: [
+    "sklepy-internetowe-woocommerce",
+    "przyspieszanie-stron-wordpress",
+    "integracja-woocommerce-z-baselinker",
+  ],
+  mebloweporady: ["tworzenie-stron-wordpress"],
+  businesstokenizer: ["tworzenie-stron-wordpress"],
+  "apartamenty-zlota-grota": ["tworzenie-stron-www", "tworzenie-stron-wordpress"],
+  "kancelaria-mpiontek": [...WP_FIRMOWA, "tworzenie-stron-www"],
+  "queen-scarlet": WP_FIRMOWA,
+  adhotel: WP_FIRMOWA,
+  admeble: WP_FIRMOWA,
+  adshop: ["tworzenie-stron-wordpress"],
+  "gumar-kepno": WP_FIRMOWA,
+  "dom-bez-wad": WP_FIRMOWA,
+  multikon: WP_FIRMOWA,
+  "stys-glass": WP_FIRMOWA,
+  maciejanka: WP_FIRMOWA,
+  piwlegnica: ["tworzenie-stron-wordpress"],
+  katex: WP_FIRMOWA,
+  inbc: WP_FIRMOWA,
+  "rcom-service": WP_FIRMOWA,
+  "zielona-pietruszka": WP_FIRMOWA,
+  partytales: WP_FIRMOWA,
+  maxnet: WP_FIRMOWA,
+  "magia-orientu": WP_FIRMOWA,
+};
+
+/** Realizacje dowodzące danej usługi, najpierw te z opisem case study. */
+export function projectsForService(serviceSlug: string): Project[] {
+  return projects
+    .filter((p) => PROJECT_SERVICES[p.slug]?.includes(serviceSlug))
+    .sort((a, b) => Number(Boolean(b.body)) - Number(Boolean(a.body)));
+}
 
 export const commercialProjects = projects.filter((p) => p.category === "commercial");
 export const labProjects = projects.filter((p) => p.category === "lab");

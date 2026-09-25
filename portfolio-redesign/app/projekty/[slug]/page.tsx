@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects } from "@/lib/projects";
+import { projects, PROJECT_SERVICES } from "@/lib/projects";
+import { services, type Service } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
@@ -18,11 +19,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
   if (!p) return {};
-  const title = `${p.client} — ${p.title}`;
+  const title = `${p.client}: ${p.title}`;
   return {
     title,
     description: p.description,
     alternates: { canonical: `/projekty/${p.slug}` },
+    ...(p.category === "lab" && { robots: { index: false, follow: true } }),
     openGraph: {
       title,
       description: p.description,
@@ -47,9 +49,16 @@ export default async function ProjektPage({
   const prev = projects[(idx - 1 + projects.length) % projects.length];
   const live = p.url;
   const repo = p.repo;
+  const myServices = PROJECT_SERVICES[p.slug] ?? [];
+  const sharedServices = (x: (typeof projects)[number]) =>
+    (PROJECT_SERVICES[x.slug] ?? []).filter((s) => myServices.includes(s)).length;
   const sameCategory = projects
     .filter((x) => x.category === p.category && x.slug !== p.slug)
+    .sort((a, b) => sharedServices(b) - sharedServices(a))
     .slice(0, 3);
+  const projectServices = (PROJECT_SERVICES[p.slug] ?? [])
+    .map((slug) => services.find((s) => s.slug === slug))
+    .filter((s): s is Service => Boolean(s));
 
   const breadcrumbs = breadcrumbsSchema([
     { name: "Strona główna", path: "/" },
@@ -73,7 +82,7 @@ export default async function ProjektPage({
   return (
     <article className="relative">
       {/* HERO */}
-      <header className="relative px-6 pt-40 pb-16 md:px-10 md:pt-56 md:pb-24 overflow-hidden">
+      <header className="relative px-6 pt-32 pb-12 md:px-10 md:pt-56 md:pb-24 overflow-hidden">
         <div
           aria-hidden
           className="absolute -top-32 -right-32 w-[700px] h-[700px] pointer-events-none"
@@ -129,7 +138,7 @@ export default async function ProjektPage({
                 "linear-gradient(180deg, rgba(20,19,31,0) 0%, rgba(20,19,31,0.6) 100%)",
             }}
           />
-          <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink/85 mix-blend-difference">
+          <div className="absolute bottom-4 left-4 right-4 hidden md:flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-ink/85 mix-blend-difference">
             <span>{p.client}</span>
             <span>FRAME 0001 · {p.year}</span>
           </div>
@@ -137,7 +146,7 @@ export default async function ProjektPage({
       </section>
 
       {/* DETAILS — meta + description */}
-      <section className="relative px-6 py-24 md:px-10 md:py-32 border-t border-line">
+      <section className="relative px-6 py-16 md:px-10 md:py-32 border-t border-line">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <aside className="md:col-span-3 space-y-8">
             <div>
@@ -211,45 +220,51 @@ export default async function ProjektPage({
             <p className="text-2xl md:text-3xl font-display italic text-ink leading-tight">
               {p.description}
             </p>
-            <hr className="hairline" />
-            {p.body ? (
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                  O projekcie
-                </p>
-                <div className="space-y-6 text-ink-mute">
-                  {p.body.map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))}
-                </div>
-              </div>
-            ) : (
+            {p.body && (
               <>
+                <hr className="hairline" />
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                    Zakres prac
+                    O projekcie
                   </p>
-                  <p className="text-ink-mute">
-                    {p.category === "commercial"
-                      ? `Pełen cykl: discovery → projekt graficzny → kodowanie → wdrożenie → opieka. Stack: ${p.stack.join(", ")}.`
-                      : p.category === "fullstack"
-                        ? `Aplikacja full-stack od architektury po deploy. Frontend, backend, baza danych, integracje, hosting. Stack: ${p.stack.join(", ")}.`
-                        : `Projekt edukacyjny / proof-of-concept. Eksperyment z technologią ${p.stack.join(", ")} w izolowanym środowisku.`}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                    Kontekst
-                  </p>
-                  <p className="text-ink-mute">
-                    {p.category === "commercial"
-                      ? "Klient z konkretnym celem biznesowym, ograniczonym budżetem i terminem. Wybór technologii podyktowany dalszą edytowalnością i kosztami utrzymania."
-                      : p.category === "fullstack"
-                        ? "Aplikacja zaprojektowana z myślą o skalowaniu i łatwym dodawaniu nowych modułów. Pełna kontrola nad każdą warstwą stosu."
-                        : "Praca własna w okresie nauki — testowanie konkretnych rozwiązań technologicznych w bezpiecznym środowisku."}
-                  </p>
+                  <div className="space-y-6 text-ink-mute">
+                    {p.body.map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
                 </div>
               </>
+            )}
+            {projectServices.length > 0 && (
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
+                  Usługi w tym projekcie
+                </p>
+                <ul className="border-t border-line">
+                  {projectServices.map((s) => (
+                    <li key={s.slug} className="border-b border-line">
+                      <Link
+                        href={`/uslugi/${s.slug}`}
+                        className="group flex items-baseline justify-between gap-4 py-4 min-h-11 font-display italic text-ink hover:text-peach transition-colors"
+                        style={{
+                          fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.75rem)",
+                          letterSpacing: "-0.02em",
+                          lineHeight: 1.15,
+                        }}
+                        data-cursor="USŁUGA"
+                      >
+                        {s.title}
+                        <span
+                          aria-hidden
+                          className="font-mono text-sm not-italic text-ink-faint transition-transform group-hover:translate-x-1 group-hover:text-peach"
+                        >
+                          →
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
         </div>
@@ -257,7 +272,7 @@ export default async function ProjektPage({
 
       {/* RELATED projects */}
       {sameCategory.length > 0 && (
-        <section className="relative px-6 py-24 md:px-10 md:py-32 border-t border-line">
+        <section className="relative px-6 py-16 md:px-10 md:py-32 border-t border-line">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
             <aside className="md:col-span-3">
               <p className="eyebrow mb-2">Podobne realizacje</p>
@@ -299,7 +314,7 @@ export default async function ProjektPage({
       )}
 
       {/* CTA */}
-      <section className="relative px-6 py-32 md:px-10 md:py-44 border-t border-line text-center overflow-hidden">
+      <section className="relative px-6 py-20 md:px-10 md:py-44 border-t border-line text-center overflow-hidden">
         <div
           aria-hidden
           className="absolute inset-0 pointer-events-none"

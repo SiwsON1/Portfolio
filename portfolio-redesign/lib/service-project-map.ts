@@ -13,48 +13,38 @@ export type ServiceCaseHint = {
   highlight: string;
 };
 
+// Tylko fakty sprawdzalne na żywej stronie albo w projects.ts. headless-wordpress celowo bez wpisu:
+// nie ma jeszcze realizacji headless WP, więc strona nie udaje, że ją ma.
 export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "tworzenie-stron-wordpress": {
     projectSlug: "kancelaria-mpiontek",
     context:
-      "Strona dla kancelarii adwokackiej Marii Piontek z Łodzi to typowy przykład custom WordPressa zrobionego dobrze. Custom theme od zera (zamiast Avada/Divi), ACF Pro dla pól dynamicznych, Yoast SEO + LiteSpeed cache. Lighthouse 96, indeksacja w 24h od publikacji.",
-    highlight:
-      "Custom WordPress theme + ACF Pro + Yoast SEO + Lighthouse 96",
+      "Kancelaria adwokacka Marii Piontek z Łodzi działa na WordPressie z własnymi stylami. Każda z pięciu dziedzin prawa, którymi zajmuje się kancelaria, ma czytelne miejsce na stronie, a podstawy SEO są ustawione od pierwszego dnia.",
+    highlight: "WordPress, własne style, SEO od startu",
   },
   "sklepy-internetowe-woocommerce": {
     projectSlug: "kosmoteka",
     context:
-      "Sklep z teleskopami i sprzętem obserwacyjnym Kosmoteka.pl to przykład świeżego wdrożenia WooCommerce w 2026. WordPress + WooCommerce + custom theme, integracje z Przelewy24, BLIK, InPost Paczkomaty, optymalizacja pod konwersję (skrócony checkout, ratowanie porzuconych koszyków), GA4 enhanced ecommerce.",
-    highlight:
-      "WooCommerce + Przelewy24 + InPost + GA4 Enhanced Ecommerce",
-  },
-  "headless-wordpress": {
-    projectSlug: "galabau-darius",
-    context:
-      "Konfigurator wyceny dla niemieckiej firmy Galabau Darius pokazuje moc headless architektury — ciężka logika konfiguratora w Next.js 14 (real-time pricing, dynamiczna wycena, 3D preview), dane produktów zarządzane w panelu WP-podobnym przez Sanity. Klient edytuje cennik, frontend regeneruje się webhookiem w 30 sekund.",
-    highlight:
-      "Next.js 14 + Clerk + headless data layer + ISR webhook",
+      "Kosmoteka.pl to sklep z teleskopami, lornetkami i mikroskopami na WordPressie z WooCommerce. Zrobiłem autorski wygląd kart produktów, poradniki zakupowe, integrację z hurtownią oraz bramki płatności i wysyłki. Zdjęcia sprzętu mają przezroczyste tło zamiast białego, więc katalog wygląda spójnie.",
+    highlight: "WooCommerce, integracja z hurtownią, autorskie karty produktów",
   },
   "nowoczesne-strony-internetowe": {
-    projectSlug: "galabau-darius",
+    projectSlug: "cojestpolskie",
     context:
-      "Aplikacja konfiguratora ogrodzeń Galabau Darius to nowoczesna strona w stacku 2026: Next.js 14 App Router, React Server Components, Tailwind, Vercel edge, Clerk auth, real-time data. Lighthouse 99, LCP 0.8s globalnie. Dla niemieckiej firmy ogrodniczej z dużym ruchem organicznym.",
-    highlight:
-      "Next.js App Router + Vercel Edge + Lighthouse 99",
+      "Cojestpolskie.pl ma własny język wizualny zamiast szablonu: układ wzorowany na rejestrze urzędowym, gilosz jak na papierach wartościowych, pieczątka z werdyktem i przesuwająca się taśma ostatnio sprawdzonych marek. Mimo animacji zbudowana strona dostaje w Lighthouse od 95 do 100 punktów, bo JavaScript ładuje się tylko tam, gdzie jest potrzebny.",
+    highlight: "Autorski design, Lighthouse 95 do 100",
   },
   "nowoczesna-strona-firmowa-2026": {
     projectSlug: "kancelaria-mpiontek",
     context:
-      "Najnowszy projekt 2026: kancelaria adwokacka Marii Piontek. Strona stworzona w stacku który pasuje do briefa firm prawniczych — premium, czysta, szybka, bez zbędnych animacji. Lighthouse 96, schema.org LegalService, dane strukturalne dla Google rich snippets.",
-    highlight:
-      "Premium custom theme + LegalService schema + Lighthouse 96",
+      "Strona kancelarii adwokackiej Marii Piontek z Łodzi to typowa strona małej firmy usługowej: kto prowadzi kancelarię, jakimi sprawami się zajmuje (karne, cywilne, rodzinne, administracyjne i gospodarcze) i jak się umówić. Bez zbędnych efektów, bo klient kancelarii szuka zaufania.",
+    highlight: "Specjalizacje, zaufanie, prosta droga do kontaktu",
   },
   "next-js-software-house": {
-    projectSlug: "galabau-darius",
+    projectSlug: "cenynotarialne",
     context:
-      "Konfigurator wyceny ogrodzeń dla niemieckiej firmy Galabau Darius. Solo project: pełna aplikacja Next.js 14 z auth (Clerk), bazą produktów, panelem admina, real-time wycenami, 3D preview. Czas wdrożenia: 7 tygodni od briefu do produkcji.",
-    highlight:
-      "Next.js 14 + Clerk + admin panel + 3D config — 7 tygodni",
+      "Cenynotarialne.pl to portal danych na Next.js oparty na Rejestrze Cen Nieruchomości: wyszukiwarka po lokalizacji i typie nieruchomości, porównanie median między obszarami, rankingi i interaktywne mapy MapLibre GL. Tysiące podstron lokalizacji generuje się z danych.",
+    highlight: "Next.js, MapLibre GL, tysiące podstron z danych",
   },
   "strony-jamstack": {
     projectSlug: "owodzie",
@@ -66,9 +56,8 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "tworzenie-stron-www": {
     projectSlug: "apartamenty-zlota-grota",
     context:
-      "Strona Złota Grota — apartamenty z jacuzzi we Wrocławiu. Modern WordPress z custom theme, system rezerwacji bezpośrednio na stronie (bez Booking.com pośrednika), galeria pełnoekranowa, układ projektowany najpierw pod telefon.",
-    highlight:
-      "Custom WP + rezerwacje bez pośrednika + mobile-first",
+      "Strona apartamentów Złota Grota we Wrocławiu na WordPressie: zdjęcia apartamentów z jacuzzi, informacja o samodzielnym zameldowaniu i rezerwacja online bezpośrednio na stronie, bez prowizji dla pośrednika.",
+    highlight: "WordPress, rezerwacja bez pośrednika",
   },
   "aplikacje-nextjs": {
     projectSlug: "kantorymapa",
@@ -78,11 +67,10 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "Next.js SSG + 140 miast programmatic SEO + LCP poniżej 1s",
   },
   "aplikacje-react": {
-    projectSlug: "great-shirt-app",
+    projectSlug: "cenynotarialne",
     context:
-      "Aplikacja e-commerce z customizatorem T-shirtów. React + NestJS + MySQL. Realtime preview produktu (kolory, rozmiary, naklejki), koszyk persystentny w localStorage, autoryzacja, panel admina. Projekt edukacyjny z bootcampu — pełna implementacja od zera w 4 tygodnie.",
-    highlight:
-      "React + NestJS + MySQL + realtime product preview",
+      "Interaktywna część Cenynotarialne.pl to React: wyszukiwarka po lokalizacji i typie nieruchomości, porównanie median między obszarami i mapy MapLibre GL, które reagują na wybór użytkownika. Dane pochodzą z Rejestru Cen Nieruchomości.",
+    highlight: "React, MapLibre GL, dane z RCN",
   },
   "opieka-wordpress": {
     projectSlug: "lumikids",
@@ -94,9 +82,8 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "przyspieszanie-stron-wordpress": {
     projectSlug: "kosmoteka",
     context:
-      "Kosmoteka.pl, sklep z teleskopami na WooCommerce, przeszła pełną optymalizację wydajności: obrazy WebP, LiteSpeed cache, odchudzony JavaScript motywu i wtyczek, leniwe ładowanie galerii. Karty produktów z dużymi zdjęciami sprzętu ładują się poniżej 2 sekund na mobile.",
-    highlight:
-      "WooCommerce + LiteSpeed + WebP — LCP poniżej 2s na mobile",
+      "Kosmoteka.pl to sklep z dużymi zdjęciami sprzętu, czyli typowy kandydat na wolne ładowanie. Sklep stoi na lekkim motywie GeneratePress z LiteSpeed Cache, a zdjęcia produktów przechodzą przez własną wtyczkę, która serwuje je w rozmiarach dopasowanych do miejsca na stronie.",
+    highlight: "GeneratePress, LiteSpeed Cache, własna obsługa zdjęć",
   },
   "integracja-woocommerce-z-baselinker": {
     projectSlug: "kosmoteka",
@@ -106,10 +93,9 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "WooCommerce + BaseLinker + powiązania magazynów z hurtownią",
   },
   "wdrozenia-ai": {
-    projectSlug: "businesstokenizer",
+    projectSlug: "cojestpolskie",
     context:
-      "Strona dla agencji blockchain BusinessTokenizer — strategia content marketing wzbogacona generowaniem treści przez AI (OpenAI API). Custom workflow: brief klienta → prompt → generowany draft posta → human review → publikacja.",
-    highlight:
-      "OpenAI API + custom prompt workflow + content automation",
+      "Na cojestpolskie.pl model AI robi pierwszy research właściciela marki, ale nic nie trafia na stronę bez kontroli: skrypty porównują wynik z odpisem KRS i Centralnym Rejestrem Beneficjentów Rzeczywistych, a wpis bez potwierdzenia w rejestrze zostaje w szkicach. Model przyspiesza pracę, rejestry ją sprawdzają.",
+    highlight: "Research AI z kontrolą w KRS i CRBR",
   },
 };
