@@ -2433,3 +2433,98 @@ posts.push({
 });
 
 export const tags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort();
+
+posts.push({
+  slug: "dostepnosc-strony-jak-sprawdzic",
+  title: "Dostępność strony internetowej: jak sprawdzić ją w firmie",
+  excerpt:
+    "Dostępność cyfrowa to wygoda dla każdego użytkownika oraz prawny obowiązek dla biznesu. Zobacz, jak samodzielnie przetestować firmową witrynę.",
+  date: "2026-09-26",
+  updatedAt: "2026-09-26",
+  readingMinutes: 9,
+  tags: ["WCAG","dostępność","EAA"],
+  keyword: "dostępność strony internetowej jak sprawdzić",
+  relatedServices: ["nowoczesne-strony-internetowe","sklepy-internetowe-woocommerce","opieka-wordpress"],
+  hero: { kind: "seo" },
+  metaTitle: "Dostępność strony internetowej: jak sprawdzić ją w firmie",
+  metaDescription:
+    "Zastanawiasz się, jak sprawdzić dostępność strony internetowej? Poznaj proste testy ręczne, darmowe programy i zobacz, kogo obowiązują nowe przepisy.",
+  lead:
+    "Dostępność strony sprawdzisz w trzech krokach: prostymi testami ręcznymi (klawiatura, powiększenie, czytnik ekranu), darmowym skanerem i, gdy stawką są przepisy, audytem WCAG. Pokażę Ci, jak wykonać testy ręczne bez wiedzy technicznej i z jakich bezpłatnych skanerów skorzystać na początek. Dowiesz się również, jakie są najczęstsze bariery cyfrowe oraz kogo obowiązują przepisy, które działają już od czerwca 2025 roku.",
+  body: ["Dostępność strony sprawdzisz w trzech krokach: prostymi testami ręcznymi (klawiatura, powiększenie, czytnik ekranu), darmowym skanerem i, gdy stawką są przepisy, audytem WCAG. Pokażę Ci, jak wykonać testy ręczne bez wiedzy technicznej i z jakich bezpłatnych skanerów skorzystać na początek. Dowiesz się również, jakie są najczęstsze bariery cyfrowe oraz kogo obowiązują przepisy, które działają już od czerwca 2025 roku."],
+  sections: [
+    {
+      heading: "Dlaczego dostępność cyfrowa to fundament współczesnego biznesu",
+      body: [
+        "**Dostępność strony internetowej** to nie tylko zestaw suchych wytycznych informatycznych, ale przede wszystkim sposób projektowania, który uwzględnia potrzeby każdego człowieka. Głównym celem tego podejścia jest stworzenie środowiska, w którym osoby z różnymi ograniczeniami wzrokowymi, słuchowymi czy ruchowymi mogą swobodnie przeglądać ofertę i robić zakupy. Dokumentem, który szczegółowo opisuje te zasady, są wytyczne *Web Content Accessibility Guidelines*, opracowane przez międzynarodową organizację W3C.",
+        "Obecnie w użyciu funkcjonują trzy główne wersje tego standardu. Fundamentem jest specyfikacja *WCAG 2.0*, która została opublikowana pod koniec 2008 roku. Z biegiem czasu, wraz z rosnącą popularnością smartfonów, technologia wymagała aktualizacji. Dokument *WCAG 2.1* z połowy 2018 roku wprowadził 17 dodatkowych kryteriów, a najnowsza edycja *WCAG 2.2* z jesieni 2023 roku dodała kolejne 9 wymagań. Wszystkie te wersje są ze sobą wstecznie zgodne. Oznacza to, że jeśli Twój sklep spełnia normy edycji najnowszej, automatycznie zachowuje zgodność ze starszymi wytycznymi. Z prawnego punktu widzenia to ogromne ułatwienie, a najnowsza wersja 2.2 posiada status oficjalnej normy *ISO/IEC 40500:2025*. Ponadto europejska norma *EN 301 549* z 2026 roku włącza ją bezpośrednio na potrzeby kluczowych przepisów unijnych.",
+        "Niezależnie od wybranej wersji, cały standard opiera się na czterech filarach, określanych często skrótem POUR. Pierwszą zasadą jest **postrzegalność**. Oznacza to, że użytkownik musi móc rozpoznać informacje za pomocą dostępnych mu zmysłów, więc na przykład osoba niesłysząca potrzebuje napisów do materiałów wideo. Drugi filar to **funkcjonalność**, która gwarantuje, że interfejs nie wymaga interakcji niemożliwych do wykonania, takich jak precyzyjne ruchy myszką. Trzecim elementem jest **zrozumiałość** komunikatów i logiki działania nawigacji, która musi funkcjonować w sposób przewidywalny. Czwartą zasadą jest **solidność**. Twój kod programistyczny musi być na tyle czysty i uporządkowany, aby bezbłędnie współpracował z różnymi przeglądarkami oraz zewnętrznymi technologiami asystującymi, nie powodując ich zawieszania. Zgodność z tymi filarami ocenia się na trzech poziomach: podstawowym A, optymalnym AA oraz rygorystycznym AAA.",
+      ],
+    },
+    {
+      heading: "Kogo w Polsce obowiązują przepisy o dostępności cyfrowej",
+      body: [
+        "Kwestia równego dostępu do usług cyfrowych przestała być wyłącznie dobrą praktyką, a stała się twardym wymogiem prawnym. Jako pierwsze, na mocy ustawy z 4 kwietnia 2019 roku, obowiązek ten otrzymały podmioty publiczne. Prawo to wymaga od instytucji państwowych publikacji specjalnej deklaracji na swoich witrynach, a nadzór nad realizacją tych zadań prowadzi minister właściwy do spraw informatyzacji.",
+        "Z punktu widzenia prywatnego biznesu najważniejszą zmianą jest ustawa z 26 kwietnia 2024 roku, która wdraża do polskiego prawa *Europejski Akt o Dostępności*. Przepisy obowiązują od 28 czerwca 2025 roku i nakładają szereg nowych obowiązków na podmioty gospodarcze. Wymogi te obejmują bardzo szeroki rynek, w tym bankowość detaliczną, usługi telekomunikacyjne, transport pasażerski, sprzedaż e-booków oraz dostęp do audiowizualnych usług medialnych. Co najważniejsze, przepisy te wprost obejmują handel elektroniczny. Jeśli prowadzisz sprzedaż produktów lub usług w sieci, ten temat bezpośrednio dotyczy Twojej działalności.",
+        "Polskie prawo przewidziało jednak pewne ulgi dla najmniejszych firm. Mikroprzedsiębiorcy, którzy świadczą usługi, są całkowicie wyłączeni spod nowych wymagań. Z kolei mikroprzedsiębiorcy zajmujący się wprowadzaniem do obrotu produktów mają ograniczone obowiązki administracyjne, co pozwala im uniknąć nadmiernej biurokracji i łatwiej dostosować się do zmian.",
+        "Główny nadzór nad realizacją tych przepisów powierzono Prezesowi Zarządu PFRON, a w przypadku konkretnych usług także wyznaczonym organom sektorowym. **Kary za ignorowanie wymogów mogą być bardzo dotkliwe**. Jeżeli kontrola wykaże niezgodność, firma otrzymuje 120 dni na usunięcie barier ze swojej witryny. Jeśli tego nie zrobi, organ nadzorujący może nałożyć karę finansową w wysokości do 10-krotności przeciętnego wynagrodzenia albo do 10% obrotu z poprzedniego roku, w zależności od tego, która z tych kwot jest wyższa.",
+      ],
+    },
+    {
+      heading: "Jak przeprowadzić proste testy ręczne na własnym komputerze",
+      body: [
+        "Aby zyskać wstępny pogląd na kondycję firmowego serwisu, nie musisz od razu szukać programisty. Organizacja W3C przygotowała dokument Easy Checks, który stanowi zbiór prostych weryfikacji ręcznych możliwych do przeprowadzenia przez każdą osobę nietechniczną. Taki szybki przegląd pozwala wyłapać najbardziej oczywiste przeszkody projektowe.",
+        "Podstawowym sprawdzianem jest użycie samej klawiatury. Odłącz myszkę i spróbuj przejść przez najważniejsze procesy w swoim sklepie używając klawisza Tab do poruszania się w przód, kombinacji klawiszy Shift i Tab do powrotu, oraz klawisza Enter lub Spacji do zatwierdzania akcji. Powinieneś móc swobodnie docierać do wszystkich linków, rozwijać nawigację i poprawnie uzupełniać formularze. **Niezbędny jest tu wyraźnie widoczny wskaźnik fokusu**, najczęściej w formie jaskrawego obramowania, który precyzyjnie informuje, w którym miejscu obecnie się znajdujesz na ekranie.",
+        "Drugim ważnym ćwiczeniem jest test powiększenia. Użyj skrótu klawiszowego w przeglądarce i przybliż widok do poziomu 200%. Po takiej zmianie tekst nie powinien na siebie nachodzić ani znikać, a grafiki nie mogą zasłaniać istotnych treści. Jeśli trzeba przewijać stronę na boki, żeby przeczytać zdanie, to sygnał do poprawki.",
+        "Warto również ocenić ogólną warstwę wizualną. Skontroluj, czy każda podstrona posiada unikalny, sensowny tytuł w przeglądarce, ułatwiający orientację. Tekst na stronie musi być wystarczająco kontrastowy w stosunku do tła, przy czym minimalny dopuszczalny stosunek dla zwykłych czcionek wynosi 4,5:1. Dodatkowo upewnij się, że żadne animowane banery czy wyskakujące okienka nie migają z częstotliwością wyższą niż 3 razy na sekundę, ponieważ stanowi to bezpośrednie zagrożenie dla osób podatnych na ataki epilepsji.",
+      ],
+    },
+    {
+      heading: "Darmowe programy do automatycznej weryfikacji serwisu",
+      body: [
+        "Kiedy wstępne weryfikacje manualne ujawnią pierwsze niedoskonałości, proces analizy warto wesprzeć specjalistycznym oprogramowaniem. W3C prowadzi otwartą listę narzędzi ewaluacyjnych, która zawiera aż 119 różnych propozycji, co pokazuje ogromną skalę tego rynku. Mimo że sama organizacja nie faworyzuje żadnego konkretnego rozwiązania, istnieje kilka darmowych i sprawdzonych programów, po które najczęściej sięgają deweloperzy i audytorzy.",
+        "Najbardziej przystępną aplikacją jest WAVE, produkt rozwijany przez ekspertów z WebAIM. Działa ono z poziomu witryny internetowej, ale posiada również wygodne rozszerzenia do popularnych przeglądarek takich jak Chrome, Firefox i Edge. Program ten nanosi czytelne ikony bezpośrednio na widok Twojej witryny, natychmiast wskazując miejsca poprawne, jawne błędy oraz potencjalne zagrożenia strukturalne. Stanowi to doskonałe wsparcie dla oceny prowadzonej przez człowieka.",
+        "Innym potężnym rozwiązaniem jest rozszerzenie axe DevTools stworzone przez firmę Deque, które bazuje na otwartej i bardzo popularnej bibliotece axe-core. Niezwykle wygodnym skanerem jest także środowisko Lighthouse, wbudowane bezpośrednio w przeglądarkę Chrome. Generuje ono przejrzysty raport, w którym wynik to średnia ważona wyliczona na podstawie ponad 70 audytów typu pass/fail. Lighthouse opiera swoje wagi o oceny wpływu z systemu axe, a co niezwykle ważne, samodzielnie wyodrębnia te kontrole, które muszą zostać wykonane przez człowieka. Swoją witrynę możesz także zweryfikować wykorzystując mój [bezpłatny skaner dostępności](/sprawdz-dostepnosc).",
+        "Dla pełnego doświadczenia warto zainstalować na swoim komputerze darmowy czytnik ekranu. W przypadku systemu Windows doskonałym wyborem jest otwartoźródłowy program NVDA, rozwijany przez organizację NV Access. Jego uruchomienie zmienia całkowicie postrzeganie internetu. Spróbuj zamknąć oczy, użyć wyłącznie klawiatury i syntezatora mowy, a następnie złożyć zamówienie we własnym sklepie, aby zrozumieć, z czym na co dzień mierzą się osoby całkowicie niewidome.",
+      ],
+    },
+    {
+      heading: "Dlaczego automatyczne skanery to tylko połowa sukcesu",
+      body: [
+        "Mimo że powszechnie dostępne programy analityczne potrafią w ułamku sekundy przeskanować cały kod witryny, mają jedno potężne ograniczenie. Wiele przedsiębiorstw żyje w złudnym przekonaniu, że zielone wskaźniki w darmowych aplikacjach rozwiązują sprawę dostosowania biznesu do nowych przepisów. Rzeczywistość jest jednak znacznie bardziej skomplikowana, a brak świadomości tych ograniczeń może prowadzić do poważnych konsekwencji.",
+        "W marcu 2021 roku firma Deque opublikowała wyniki bardzo obszernego badania, w którym przeanalizowano ponad 2000 audytów na imponującej próbie 13 000 podstron. Podczas tych prac zweryfikowano około 300 000 problemów zgłaszanych przez ekspertów. Wyniki jasno pokazały, że oprogramowanie oparte na systemie axe wykryło 57% wszystkich usterek, licząc według całkowitego wolumenu zgłoszeń. Chociaż wynik ten stanowił ogromny skok jakościowy w stosunku do historycznych szacunków, zakładających skuteczność na poziomie zaledwie 20 do 30%, to liczby są bezwzględne. Niemal połowa realnych barier pozostała całkowicie niewidoczna dla zautomatyzowanych algorytmów.",
+        "Brak błędów w wygenerowanym raporcie w żadnym wypadku nie oznacza, że witryna nadaje się do swobodnego użytku przez osoby z niepełnosprawnościami. Maszyna doskonale radzi sobie z twardymi, binarnymi weryfikacjami składni, wychwytując na przykład brak atrybutu tekstowego przy osadzonym obrazku. **Algorytm nie potrafi jednak ocenić logiki ani przydatności dostarczonych informacji**. Jeżeli na zdjęciu widnieje szczegółowy i istotny dla biznesu schemat procedur, a w kodzie znajduje się wyłącznie słowo \"wykres\", skaner uzna ten element za poprawny. Z perspektywy niewidomego użytkownika taka informacja jest jednak całkowicie bezwartościowa.",
+        "Podobne braki widać podczas sprawdzania procesów biznesowych. Ocena spójności nawigacji, stopnia skomplikowania komunikatów o błędach transakcji czy chociażby sensowności użytej struktury nagłówków wymaga ludzkiej inteligencji i zrozumienia intencji biznesowej serwisu.",
+      ],
+    },
+    {
+      heading: "Najczęstsze bariery cyfrowe na stronach internetowych",
+      body: [
+        "Wychwycenie najpopularniejszych błędów projektowych przed premierą nowej odsłony serwisu lub artykułu na blogu pozwala zaoszczędzić sporo czasu na późniejszych poprawkach. Amerykański projekt badawczy WebAIM Million regularnie poddaje ocenie milion najpopularniejszych stron głównych. Najnowsze dane z edycji opublikowanej w lutym 2026 roku pokazują dobitnie, w jakich obszarach inżynieria oraz dbałość o treść wciąż zawodzą.",
+        "W analizowanej próbie aż 95,9% stron głównych posiadało wykryte problemy ze standardem WCAG 2. Oznacza to widoczny regres w stosunku do poprzedniego roku, kiedy wskaźnik ten wyniósł 94,8%. Średnio na pojedynczą witrynę przypadało 56,1 błędu, co przekłada się na zauważalny wzrost o 10,1% względem 51 problemów notowanych w 2025 roku. Co najbardziej zaskakujące, za przygniatającą większość tych kłopotów odpowiada zaledwie sześć fundamentalnych zaniedbań twórców.",
+        "• Niski kontrast tekstu w stosunku do barwy tła, powodujący zlewanie się liter (obecny na 83,9% badanych stron).",
+        "• Brak tekstów alternatywnych dla osadzonych obrazów, pozostawiający niewidomych bez kluczowych informacji wizualnych (występujący w 53,1% przypadków).",
+        "• Brak poprawnych etykiet dla pól w formularzach, przez co syntezator mowy napotyka jedynie puste obszary tekstowe (odnotowany u 51% witryn).",
+        "• Puste linki, pozbawione tekstu wyjaśniającego użytkownikowi, dokąd poprowadzi konkretne kliknięcie (obecne na 46,3% stron).",
+        "• Puste przyciski, najczęściej zawierające samą ikonografię, co całkowicie ukrywa ich faktyczną funkcję (znalezione w 30,6% serwisów).",
+        "• Brak zadeklarowanego języka dokumentu w nagłówku kodu, wymuszający niewłaściwy akcent podczas odczytywania witryny (dotyczył 13,5% stron).",
+        "Te sześć najpopularniejszych kategorii odpowiadało wspólnie za 96% wszystkich wykrytych usterek. Statystyki pokazują, że to właśnie trudny w odbiorze, niewystarczająco kontrastowy font nadal stanowi najczęstszą blokadę na drodze do wygodnego czytania. Podobnie niebezpieczny dla konwersji w e-commerce jest brak wspomnianych etykiet w koszyku, który po prostu odcina klienta od możliwości uregulowania płatności i sfinalizowania zamówienia.",
+      ],
+    },
+    {
+      heading: "Od samodzielnych testów do kompleksowej strategii",
+      body: [
+        "Weryfikacja firmowego serwisu przy użyciu samej klawiatury, powiększenia ekranu i bezpłatnych wtyczek przeglądarkowych stanowi świetny punkt wyjścia. Takie podejście pozwala na szybkie zidentyfikowanie najbardziej rażących błędów oraz zbudowanie wewnątrz firmy realnej świadomości tego, jak różne osoby przeglądają dzisiejszy internet. Zrozumienie natury najczęstszych problemów, takich jak nieczytelny tekst czy nieopisane elementy nawigacyjne, pomaga unikać podobnych wtop podczas wdrażania nowych funkcji w e-sklepie.",
+        "Jednak przy obowiązujących już przepisach, w tym nowych obowiązków dla branży handlu elektronicznego, samodzielne testy to rozwiązanie dalece niewystarczające. Jeśli Twój biznes jest na etapie dostosowywania procedur do twardych rygorów prawnych, konieczna staje się ocena w oparciu o pełne wytyczne [WCAG 2.1 AA](/blog/wcag-2-1-aa) lub ich nowszą iterację. Proces ten wymaga wnikliwej analizy każdego niestandardowego komponentu, skomplikowanych przepływów logowania oraz tabel cennikowych, z wykorzystaniem ludzkiego doświadczenia audytorskiego.",
+        "Kiedy stawka staje się wysoka, a ryzyko realnych i bolesnych kar finansowych nabiera kształtów, powierzenie kompleksowej oceny specjalistom jest najrozsądniejszą biznesową decyzją. Profesjonalnie przygotowany i skrupulatnie przeprowadzony [audyt WCAG](/audyt-wcag), oparty na twardej wiedzy programistycznej oraz pracy na czytnikach ekranu, zdejmuje z właściciela firmy ciężar samodzielnego poszukiwania ukrytych problemów i dostarcza gotowy plan działań naprawczych.",
+      ],
+    },
+  ],
+  faq: [
+    { q: "Od kiedy przepisy o dostępności obowiązują sklepy internetowe?", a: "Obowiązki wynikające z Europejskiego Aktu o Dostępności obowiązują od 28 czerwca 2025 roku. Obejmują handel elektroniczny, z wyłączeniem mikroprzedsiębiorców świadczących usługi. Nadzór prowadzi Prezes Zarządu PFRON." },
+    { q: "Czy darmowe wtyczki wykryją wszystkie błędy dostępności na mojej stronie?", a: "Nie, bezpłatne i zautomatyzowane programy wykrywają średnio zaledwie 57% istniejących problemów. Oprogramowanie świetnie sprawdza twardą składnię kodu, ale brakuje mu ludzkiej inteligencji niezbędnej do weryfikacji logiki procesów czy poprawności sensu dostarczonych opisów obrazów." },
+    { q: "Jakie są realne kary za brak dostosowania serwisu do nowych wymagań?", a: "W przypadku stwierdzenia niezgodności podczas kontroli, przedsiębiorca ma 120 dni na usunięcie barier z witryny. Jeśli termin minie bez wprowadzonych poprawek, grozi kara do 10-krotności przeciętnego wynagrodzenia albo do 10% ubiegłorocznego obrotu, przy czym ostatecznie nakładana jest wyższa z tych dwóch kwot." },
+    { q: "Jak najszybciej sprawdzić, czy moja firmowa strona jest poprawnie zakodowana?", a: "Najskuteczniejszym i najszybszym darmowym sposobem jest odłączenie myszki komputerowej i próba przejścia przez najważniejsze podstrony wyłącznie przy użyciu klawisza Tab. Jeśli gubisz się na ekranie przez brak widocznego fokusu lub nie potrafisz zatwierdzić wysyłki formularza kontaktowego, strona pilnie wymaga zmian w kodzie." },
+    { q: "Skąd mam wiedzieć, do której wersji wytycznych dostosować moją witrynę?", a: "Poszczególne specyfikacje są ze sobą w pełni wstecznie zgodne, więc najbezpieczniejszym i najbardziej przewidującym kierunkiem jest celowanie w nowe wytyczne z wersji 2.2. Spełnienie wersji 2.2 oznacza również spełnienie wcześniejszych wersji wytycznych." },
+  ],
+});
