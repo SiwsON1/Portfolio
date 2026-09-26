@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { projects, PROJECT_SERVICES } from "@/lib/projects";
 import { services, type Service } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { industries, INDUSTRY_CASES } from "@/lib/industries";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 /** Opis 120-160 znaków: długie skracane do pełnych zdań, krótkie uzupełniane o stack. */
@@ -82,6 +83,9 @@ export default async function ProjektPage({
   const projectServices = (PROJECT_SERVICES[p.slug] ?? [])
     .map((slug) => services.find((s) => s.slug === slug))
     .filter((s): s is Service => Boolean(s));
+  const projectIndustries = industries.filter((ind) =>
+    (INDUSTRY_CASES[ind.slug] ?? []).some((c) => c.projectSlug === p.slug)
+  );
 
   const breadcrumbs = breadcrumbsSchema([
     { name: "Strona główna", path: "/" },
@@ -287,6 +291,22 @@ export default async function ProjektPage({
                     </li>
                   ))}
                 </ul>
+                {projectIndustries.length > 0 && (
+                  <p className="mt-6 text-sm leading-relaxed text-ink-mute">
+                    Branża:{" "}
+                    {projectIndustries.map((ind, i) => (
+                      <span key={ind.slug}>
+                        {i > 0 && ", "}
+                        <Link
+                          href={`/${ind.slug}`}
+                          className="text-ink underline decoration-ink-faint underline-offset-4 transition-colors hover:text-peach hover:decoration-peach"
+                        >
+                          {ind.h1.charAt(0).toLowerCase() + ind.h1.slice(1)}
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
+                )}
               </div>
             )}
           </div>

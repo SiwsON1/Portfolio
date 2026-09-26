@@ -373,7 +373,7 @@ export const posts: Post[] = [
     metaDescription:
       "Pierwsze 6 miesięcy SEO strony usługowej krok po kroku: audyt, technika, content, linki. Co robić w tygodniu 1, w miesiącu 3, w miesiącu 6. Plan z mojej praktyki.",
     hero: { kind: "seo" },
-    relatedServices: ["tworzenie-stron-www", "aplikacje-nextjs", "nowoczesna-strona-firmowa-2026"],
+    relatedServices: ["tworzenie-stron-www", "nowoczesna-strona-firmowa-2026", "przyspieszanie-stron-wordpress"],
     body: [
       "Strona usługowa to specyficzny przypadek SEO. Inaczej niż e-commerce gdzie konkurujesz na frazy produktowe, tu walka idzie o konkretne zapytania intencyjne typu 'księgowa Wrocław', 'remont łazienki Warszawa cena' albo 'agencja marketingowa B2B'.",
       "Tydzień 1: audyt techniczny. Crawl Screaming Frog albo Sitebulb. Sprawdź indeksację (czy wszystko ważne jest w indeksie Google), Core Web Vitals (LCP poniżej 2.5s, INP poniżej 200ms, CLS poniżej 0.1), strukturę URL, sitemap, robots.txt, schema.org markup, mobile usability.",
@@ -436,7 +436,7 @@ export const posts: Post[] = [
     metaDescription:
       "INP zastąpiło FID, LCP cele zaostrzone, CLS-2 mierzy shift po interakcji. Konkretne strategie napraw: next/image, RSC, font-display, edge functions. 2026.",
     hero: { kind: "performance" },
-    relatedServices: ["aplikacje-nextjs", "tworzenie-stron-www", "next-js-software-house"],
+    relatedServices: ["przyspieszanie-stron-wordpress", "aplikacje-nextjs", "tworzenie-stron-www"],
     body: [
       "Google podkręciło śrubę. W 2024 INP zastąpiło FID jako oficjalny metric responsywności. W 2026 są dyskusje o zaostrzeniu progów LCP z 2.5s na 2.0s i dodaniu CLS-2 mierzącego layout shift po interakcji. Co to znaczy w praktyce.",
       "LCP (Largest Contentful Paint): czas do wyrenderowania największego elementu w viewport. Cel: poniżej 2.5s. Najczęstsze winowajce: niezoptymalizowane obrazki, blokujący JS, wolne TTFB z serwera. Naprawa: next/image z priority na hero, preload critical fonts, hosting z edge caching.",
@@ -1406,7 +1406,7 @@ posts.push({
   metaDescription:
     "Checklist 15 kroków po instalacji WordPressa: permalinks, security headers, Wordfence, cache, Yoast, backup, RODO, 2FA. Pełna konfiguracja w 60 minut.",
   hero: { kind: "wordpress" },
-  relatedServices: ["tworzenie-stron-wordpress", "sklepy-internetowe-woocommerce", "headless-wordpress"],
+  relatedServices: ["tworzenie-stron-wordpress", "opieka-wordpress", "przyspieszanie-stron-wordpress"],
   body: [],
   lead:
     "Świeży WordPress po instalacji ma 15-20% tego co potrzeba do produkcji. Default settings są bezpieczne dla WordPress.com, ale dla self-hosted to mało. Niżej checklist 15 czynności które robię po każdej instalacji, od permalinks (krytyczne dla SEO), przez security headers i 2FA, po cache i backup. Cała konfiguracja w 60-90 minut, raz na zawsze.",
@@ -1498,7 +1498,7 @@ posts.push({
   metaDescription:
     "Elementor: najpopularniejszy WP page builder, ale dla większości projektów zła decyzja w 2026. Performance, lock-in, koszty, alternatywy (Bricks, FSE, custom).",
   hero: { kind: "wordpress" },
-  relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "nowoczesne-strony-internetowe"],
+  relatedServices: ["tworzenie-stron-wordpress", "przyspieszanie-stron-wordpress", "nowoczesne-strony-internetowe"],
   body: [],
   lead:
     "Elementor jest najpopularniejszym page builderem dla WordPress (~5 mln aktywnych instalacji). Po 30+ wdrożeniach klientów (część przejętych ze starych Elementor sites) moja opinia jako [Marcin Siwonia: freelancer Next.js i WordPress z Wrocławia](/) jest jednoznaczna: dla większości projektów w 2026 to zła decyzja. Performance, vendor lock-in, koszty długoterminowe nie zwracają początkowej oszczędności. Niżej dlaczego konkretnie i co zamiast.",
@@ -1605,7 +1605,7 @@ posts.push({
   metaDescription:
     "25 must-have wtyczek WordPress 2026: SEO (Yoast/Rank Math), security (Wordfence), cache (LiteSpeed/WP Rocket), formularze (WPForms), backup, RODO. Free i Pro.",
   hero: { kind: "wordpress" },
-  relatedServices: ["tworzenie-stron-wordpress", "sklepy-internetowe-woocommerce", "headless-wordpress"],
+  relatedServices: ["tworzenie-stron-wordpress", "opieka-wordpress", "sklepy-internetowe-woocommerce"],
   body: [],
   lead:
     "Po 30+ wdrożeniach jako [freelancer Next.js i WordPress z Wrocławia](/) mam stałą listę 25 pluginów które instaluję praktycznie zawsze. Niżej cała lista podzielona na 8 kategorii (SEO, security, cache, performance, formularze, backup, analytics, RODO), z konkretnymi rekomendacjami free vs pro i alternatywami. Twoja final lista będzie subset 15-20 z tych 25, w zależności od projektu.",

@@ -16,10 +16,10 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-wordpress",
     title: "Tworzenie stron WordPress",
-    metaTitle: "Tworzenie stron WordPress Wrocław — custom theme, CWV 95+",
+    metaTitle: "Tworzenie stron WordPress Wrocław — własny motyw, szybka strona",
     metaDescription:
       "WordPress z custom theme (bez Elementora i Avada), Core Web Vitals 95+, panel edycji 1:1 z designem, Yoast/Rank Math od pierwszego dnia. Wrocław i online.",
-    h1: "Strony WordPress, które klient sam edytuje",
+    h1: "Tworzenie stron WordPress. Wrocław, edycja bez kodu.",
     lead:
       "WordPress wybiera się, gdy klient chce sam edytować treści bez zaglądania do kodu. Zrobiony dobrze, jest szybki, bezpieczny i indeksowalny. Zrobiony źle, muli, łapie malware i wygląda jak 800 innych stron z Elementora.",
     intro: [
@@ -65,8 +65,8 @@ export const services: Service[] = [
     title: "Sklepy internetowe WooCommerce",
     metaTitle: "Sklepy WooCommerce Wrocław — wdrożenie i optymalizacja",
     metaDescription:
-      "Sklepy WooCommerce z integracjami PL: Przelewy24, BLIK, InPost, DPD, Furgonetka, Fakturownia, Allegro Sync. B2B, multilingual, GA4 enhanced ecommerce.",
-    h1: "Sklepy internetowe WooCommerce — od katalogu do konwersji",
+      "Sklepy WooCommerce we Wrocławiu i zdalnie w całej Polsce: Przelewy24, BLIK, InPost, Allegro, BaseLinker, B2B i wersje językowe. Własny motyw, szybki koszyk.",
+    h1: "Sklepy internetowe WooCommerce. Wrocław i cała Polska.",
     lead:
       "WooCommerce robi 30% sklepów online na świecie. Działa, jest tani, integruje się ze wszystkim, czego potrzebujesz w polskim e-commerce. Wymaga jednak osoby, która wie, jak go skonfigurować pod konwersję, nie tylko jak go zainstalować.",
     intro: [
@@ -105,6 +105,12 @@ export const services: Service[] = [
       { q: "Co z migracją z innej platformy (Shoper, IdoSell, Shopify)?", a: "Robię migracje z większości polskich platform. Eksport produktów + zamówień + klientów + przekierowania 301 starych URLi pod nowe (krytyczne dla SEO)." },
       { q: "Czy WooCommerce nadąży przy dużym ruchu?", a: "Z dobrym hostingiem (LiteSpeed cache + Cloudflare + Redis dla object cache) wytrzymuje 10-50 tys. wizyt dziennie. Powyżej rekomenduję headless (Next.js commerce + WooCommerce jako backend)." },
       { q: "Co z fakturowaniem i podatkami?", a: "Integracja z Fakturownia/wFirma/iFirma: automatyczne faktury po zamówieniu. Konfiguracja stawek VAT, płatności B2B z NIP, eksport do księgowej co miesiąc." },
+      { q: "Czy korzystasz z gotowych motywów WooCommerce?", a: "Nowe sklepy WooCommerce tworzę na własnym motywie i nie używam w nich Elementora. Dzięki temu struktura strony i funkcje wynikają z potrzeb sklepu, a nie z możliwości konkretnego kreatora." },
+      { q: "Czy WooCommerce sprawdzi się w sprzedaży B2B?", a: "Tak. WooCommerce może obsługiwać sprzedaż B2B, w tym różne ceny dla grup klientów i minimalne zamówienia. Zakres funkcji dobieram do zasad handlowych obowiązujących w konkretnej firmie." },
+      { q: "Czy możesz przejąć sklep WooCommerce po innym wykonawcy?", a: "Tak. Na początku sprawdzam stan techniczny sklepu: motyw, wtyczki, aktualizacje, kopie zapasowe i wydajność. Potem określam, co warto zachować, a co przebudować." },
+      { q: "Czy sklep może mieć kilka wersji językowych i sprzedawać za granicę?", a: "Tak. WooCommerce można przygotować do obsługi kilku wersji językowych i sprzedaży na różnych rynkach. Najlepiej uwzględnić to już przy projektowaniu struktury produktów, kategorii i treści." },
+      { q: "Kiedy WooCommerce nie będzie dobrym wyborem?", a: "Nie proponuję WooCommerce automatycznie do każdego projektu. Przy bardzo dużym katalogu, wysokim ruchu, rozbudowanym multistore albo nietypowych wymaganiach mogę zaproponować inne rozwiązanie, w tym PrestaShop albo architekturę headless." },
+      { q: "A jeśli mam mały asortyment?", a: "Mały katalog nie jest przeszkodą. WooCommerce dobrze działa również przy niewielkiej liczbie produktów, szczególnie gdy liczy się własna strona marki, treści poradnikowe i możliwość późniejszej rozbudowy sklepu." },
     ],
     cta: "Pogadajmy o sklepie 30 minut, wycena w 48h",
   },
@@ -426,6 +432,12 @@ export const services: Service[] = [
         q: "Czy strona będzie responsywna?",
         a: "Każda strona idzie pod 3 breakpointy: telefon, tablet, desktop. Testuję na realnych urządzeniach, nie tylko w narzędziach przeglądarki.",
       },
+      { q: "Który CMS wybrać do strony firmowej?", a: "W typowej stronie firmowej często sprawdza się WordPress, szczególnie jeśli chcesz później samodzielnie zmieniać ofertę, zdjęcia lub publikować wpisy. Jeżeli projekt wymaga nietypowej logiki, konfiguratora, panelu użytkownika albo rozbudowanych integracji, lepszym rozwiązaniem może być Next.js z osobnym systemem do zarządzania treścią." },
+      { q: "Co jest potrzebne do stworzenia strony internetowej?", a: "Na początku najbardziej przydają się informacje o firmie, lista usług, materiały do treści, logo, zdjęcia oraz przykłady stron, których stylistyka Ci odpowiada. Jeśli masz już domenę lub hosting, potrzebne będą również dostępy. Brakujące elementy i sposób ich przygotowania ustalamy na starcie projektu." },
+      { q: "Czy robisz strony dla małych firm z ograniczonym budżetem?", a: "Tak, zakres strony można dopasować do rzeczywistych potrzeb małej firmy, zamiast od razu budować rozbudowany serwis. Czasami sensowniejsza jest prostsza strona z kilkoma dobrze opracowanymi podstronami, którą później można rozwijać." },
+      { q: "Czy strona będzie bezpieczna?", a: "Przy wdrożeniu uwzględniam między innymi SSL i techniczną konfigurację strony, a dalsze wymagania zależą od użytej technologii i funkcji serwisu. W systemach wymagających aktualizacji ważne jest ich regularne wykonywanie oraz kopie zapasowe. Po uruchomieniu możliwa jest opcjonalna opieka techniczna." },
+      { q: "Czy strona będzie przygotowana pod Google i wyszukiwarki AI?", a: "Przy budowie uwzględniam strukturę treści, nagłówki, szybkość, dostępność dla robotów wyszukiwarek oraz dane strukturalne tam, gdzie mają zastosowanie. Nie istnieje rozwiązanie gwarantujące pojawianie się strony w odpowiedziach AI, ale można stworzyć serwis, którego zawartość jest jednoznaczna i łatwa do interpretacji." },
+      { q: "Czy pracujesz z firmami spoza Wrocławia?", a: "Tak. Współpracuję zdalnie z firmami z całej Polski oraz z Niemiec, a rozmowy o projekcie odbywają się online. Po kolejnych etapach udostępniam wersję testową dostępną w przeglądarce." },
     ],
     cta: "Napisz brief, dostaniesz wycenę w 24h",
   },

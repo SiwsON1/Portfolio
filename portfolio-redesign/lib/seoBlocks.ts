@@ -189,4 +189,190 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       },
     ],
   },
+  "sklepy-internetowe-woocommerce": {
+    heading: "Jak dobrze zaplanować sklep WooCommerce przed wdrożeniem",
+    intro: [
+      "Ten poradnik jest dla właściciela małej lub średniej firmy, który rozważa własny sklep internetowy WooCommerce i chce świadomie porównać wykonawców, zakres prac oraz możliwe rozwiązania. Jeśli szukasz usługi pod hasłem „sklepy WooCommerce Wrocław”, patrz nie tylko na wygląd strony, ale też na sposób zarządzania produktami, koszty utrzymania, możliwości rozbudowy i to, co stanie się ze sklepem kilka miesięcy po uruchomieniu.",
+      "Pracuję jako freelancer web developer z Wrocławia od 2020 roku, a projekty realizuję również zdalnie dla firm z całej Polski i z Niemiec. Nowe sklepy na WordPressie i WooCommerce buduję na własnym motywie, bez Elementora. Dzięki temu mogę dopasować rozwiązanie do konkretnego modelu sprzedaży, zamiast zaczynać od ograniczeń narzuconych przez gotowy kreator.",
+    ],
+    sections: [
+      {
+        id: "woocommerce-czy-shopify",
+        heading: "WooCommerce, Shopify, Shoper czy PrestaShop, co wybrać",
+        body: [
+          "WooCommerce wybieram przede wszystkim wtedy, gdy firma chce mieć własny sklep, rozwijać go we własnym tempie i zachować dużą swobodę w zakresie danych, wyglądu oraz funkcjonalności. To rozwiązanie oparte na WordPressie, więc sklep można połączyć z rozbudowaną częścią treściową, poradnikami, landing page'ami czy stronami kategorii przygotowanymi pod ruch z wyszukiwarki.",
+          "Shopify i Shoper działają w innym modelu. To usługi SaaS, czyli platformy dostępne w ramach abonamentu. Część kwestii technicznych przejmuje dostawca, ale przedsiębiorca funkcjonuje w ramach przygotowanego przez niego środowiska, zasad oraz dostępnych rozszerzeń. Taki model może być wygodny, szczególnie gdy sklep ma być możliwie standardowy i właściciel nie potrzebuje daleko idących zmian.",
+          "WooCommerce również nie jest rozwiązaniem do wszystkiego. Przy bardzo dużym katalogu, bardzo wysokim ruchu, skomplikowanym multistore albo nietypowej architekturze sprzedażowej zwykle rozważam inne podejście. Może to być PrestaShop, a przy odpowiedniej skali również architektura headless, w której Next.js odpowiada za front, a WooCommerce pozostaje zapleczem. Technologia powinna wynikać z modelu biznesowego, a nie odwrotnie.",
+        ],
+      },
+      {
+        id: "koszt-sklepu-woocommerce",
+        heading: "Od czego zależy koszt wdrożenia sklepu WooCommerce",
+        body: [
+          "Koszt sklepu nie wynika wyłącznie z liczby podstron. Dużo większe znaczenie ma to, co dzieje się z produktem od momentu wprowadzenia go do systemu aż do zakupu, wysyłki i późniejszej obsługi zamówienia. Dwa sklepy z podobną liczbą produktów mogą więc wymagać zupełnie innego zakresu prac.",
+          "Na zakres wdrożenia wpływają między innymi:",
+        ],
+        list: [
+          "liczba produktów, kategorii, atrybutów i wariantów,",
+          "własny projekt oraz motyw albo adaptacja gotowego rozwiązania,",
+          "funkcje B2B i indywidualne zasady sprzedaży,",
+          "migracja ze starego systemu,",
+          "wersje językowe i sprzedaż na innych rynkach,",
+          "jakość oraz format danych produktowych,",
+          "ilość treści, które trzeba przygotować lub przenieść.",
+        ],
+        outro: [
+          "Osobną kategorią są koszty stałe po uruchomieniu. Sklep potrzebuje domeny i hostingu, część funkcji może korzystać z płatnych wtyczek lub zewnętrznych usług, a rozwijany biznes zazwyczaj wymaga też aktualizacji i obsługi technicznej. Dlatego przy porównywaniu ofert sprawdź nie tylko zakres samego wdrożenia sklepu WooCommerce, ale również to, jakie elementy trzeba będzie utrzymywać po jego starcie.",
+        ],
+      },
+      {
+        id: "dane-produktowe",
+        heading: "Dobre dane produktowe oszczędzają problemy podczas wdrożenia",
+        body: [
+          "Jednym z częściej niedoszacowanych etapów jest uporządkowanie danych o produktach. Samo zdjęcie, nazwa i cena zwykle nie wystarczą. Sklep potrzebuje logicznej struktury kategorii, atrybutów oraz wariantów, dzięki którym klient może filtrować ofertę i wybrać właściwy produkt.",
+          "Przed wdrożeniem ustalam więc, jakie dane są dostępne i kto je przygotowuje. Po stronie firmy mogą znajdować się zdjęcia, opisy, parametry techniczne czy przypisanie produktów do kategorii. Ja przygotowuję strukturę sklepu oraz sposób, w jaki te dane mają być przechowywane i prezentowane.",
+          "Produkty można później dodawać ręcznie w panelu WooCommerce albo importować masowo z CSV lub XML. Jeżeli dane pochodzą z hurtowni albo kilku kanałów sprzedaży, automatyzacja zwykle ma większy sens niż ręczne kopiowanie informacji. W zależności od modelu sprzedaży mogę też przygotować [integrację WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker), żeby ograniczyć ręczną obsługę produktów i zamówień pomiędzy kanałami.",
+        ],
+      },
+      {
+        id: "karta-produktu-i-koszyk",
+        heading: "Karta produktu i koszyk mają ułatwiać decyzję, nie tylko dobrze wyglądać",
+        body: [
+          "Karta produktu jest jednym z najważniejszych miejsc w sklepie. Klient powinien szybko zrozumieć, co kupuje, jaki wariant ma wybrać, czy produkt jest dostępny oraz jakie informacje są potrzebne przed podjęciem decyzji. Układ powinien wynikać z rodzaju asortymentu.",
+          "W sklepie odzieżowym istotne będą na przykład tabela rozmiarów i skład tkaniny. Przy bardziej technicznych produktach większe znaczenie mogą mieć parametry, porównanie wariantów albo dodatkowe materiały pomagające dobrać właściwy model. Dobrym przykładem jest [sklep LumiKids](/projekty/lumikids), gdzie przebudowałem między innymi karty produktów z tabelami rozmiarów i składem tkanin oraz architekturę kategorii.",
+          "Podobnie podchodzę do koszyka i checkoutu. Im więcej zbędnych pól, rozpraszaczy i niejasnych komunikatów, tym większa szansa, że użytkownik przerwie zakup. Szczególnie ważna jest wersja mobilna, gdzie mały ekran szybko obnaża źle zaprojektowany formularz. W odpowiednim miejscu można też zaplanować dosprzedaż produktów powiązanych, ale nie powinna ona utrudniać finalizacji zamówienia.",
+        ],
+      },
+      {
+        id: "wymogi-prawne-sklepu",
+        heading: "Wymogi prawne trzeba uwzględnić również technicznie",
+        body: [
+          "Sklep internetowy musi być przygotowany nie tylko do przyjmowania zamówień. Część obowiązków prawnych wpływa bezpośrednio na sposób działania strony, kart produktów, promocji oraz narzędzi analitycznych.",
+          "Od 1 stycznia 2023 roku przy informowaniu o obniżce ceny trzeba wskazywać najniższą cenę z 30 dni przed obniżką. W sklepie oznacza to konieczność prawidłowego zapisywania historii cen i automatycznego wyświetlania wymaganej informacji przy promocjach. UOKiK wskazuje, że obowiązek dotyczy informacji o konkretnych obniżkach, również prezentowanych w sklepach internetowych.",
+          "Od 13 grudnia 2024 roku stosowane jest także unijne rozporządzenie GPSR 2023/988 dotyczące ogólnego bezpieczeństwa produktów. Przy sprzedaży na odległość oferta produktu powinna zawierać między innymi dane producenta, w tym dane kontaktowe, a także wymagane ostrzeżenia i informacje dotyczące bezpieczeństwa. Rozporządzenie zastąpiło wcześniejszą dyrektywę 2001/95/WE.",
+          "Dochodzi do tego RODO, polityka prywatności oraz prawidłowa obsługa zgód na cookies. Narzędzia analityczne wymagające zgody nie powinny rozpoczynać śledzenia użytkownika przed dokonaniem przez niego odpowiedniego wyboru. Regulamin musi także uwzględniać zasady odstąpienia od umowy. Konsument kupujący przez internet ma co do zasady 14 dni na odstąpienie od umowy bez podawania przyczyny, z uwzględnieniem przewidzianych prawem wyjątków.",
+        ],
+      },
+      {
+        id: "migracja-i-przejecie-sklepu",
+        heading: "Migracja sklepu wymaga więcej niż skopiowania produktów",
+        body: [
+          "Przy przejęciu istniejącego sklepu najpierw sprawdzam jego stan techniczny i dane, które trzeba zachować. Dotyczy to nie tylko produktów, ale również klientów, zamówień, kategorii oraz adresów URL. Migracje realizuję między innymi z Shopera, IdoSell i Shopify do WooCommerce.",
+          "Szczególnej uwagi wymagają adresy istniejących stron. Jeżeli nowy sklep zmienia strukturę kategorii albo kart produktów, przygotowuję przekierowania 301 ze starych adresów na nowe. Bez tego użytkownicy mogą trafiać na błędy, a wypracowane wcześniej adresy przestają prowadzić do właściwych treści.",
+          "Przy przejęciu sklepu po innym wykonawcy sprawdzam też motyw, wykorzystywane wtyczki, wersje PHP i WordPressa, sposób wykonywania kopii zapasowych, wydajność oraz elementy wymagające aktualizacji. Dopiero po takim przeglądzie można rozsądnie zdecydować, które części zachować, które przebudować, a których dalsze utrzymywanie nie ma sensu. Przykładem rozbudowanego sklepu WooCommerce, nad którym pracowałem, jest [Kosmoteka](/projekty/kosmoteka), z własnym projektem kart produktów, poradnikami zakupowymi i połączeniem z danymi hurtowni.",
+        ],
+      },
+      {
+        id: "b2b-i-sprzedaz-za-granice",
+        heading: "WooCommerce może obsługiwać B2B i sprzedaż zagraniczną",
+        body: [
+          "Sklep internetowy WooCommerce nie musi być ograniczony do klasycznej sprzedaży detalicznej. Przy odpowiedniej architekturze można przygotować rozwiązanie, w którym różne grupy klientów widzą inne warunki handlowe. W B2B mogą to być na przykład osobne ceny dla określonych grup odbiorców czy minimalne wartości albo ilości zamówienia.",
+          "Jeżeli firma planuje sprzedaż poza Polską, zakres prac obejmuje również wersje językowe oraz dostosowanie zawartości sklepu do poszczególnych rynków. Ustalam to na samym początku, ponieważ wielojęzyczność wpływa nie tylko na teksty, ale też na strukturę produktów, kategorie, treści informacyjne i sposób późniejszego zarządzania ofertą.",
+          "Przy średnim sklepie obejmującym B2B, wersje językowe i migrację zakładam zwykle 10-14 tygodni od warsztatu do uruchomienia. Mniejszy sklep, bez podobnie rozbudowanego zakresu, zwykle mieści się w 6-8 tygodniach. Warunkiem sprawnego wdrożenia jest jednak dostępność materiałów i danych, których sklep potrzebuje do startu.",
+        ],
+      },
+      {
+        id: "aktualizacje-i-staging",
+        heading: "Po starcie potrzebne są aktualizacje, kopie zapasowe i staging",
+        body: [
+          "Uruchomienie sklepu nie oznacza końca pracy technicznej. WordPress, WooCommerce i rozszerzenia są regularnie aktualizowane, a kolejne wersje mogą zmieniać sposób działania poszczególnych funkcji. W sklepie obsługującym realne zamówienia większych zmian nie testuje się bezpośrednio na produkcji.",
+          "Dlatego przy dalszym rozwoju ważne są regularne kopie zapasowe i środowisko stagingowe, czyli oddzielna kopia sklepu służąca do testowania aktualizacji oraz nowych funkcji. Pozwala to sprawdzić zmiany przed wdrożeniem ich dla klientów, zamiast odkrywać konflikt wtyczek lub problem z koszykiem dopiero podczas składania zamówienia.",
+          "Wydajność również wymaga kontroli wraz z rozwojem katalogu i ruchu. W projektach korzystam między innymi z cache LiteSpeed, Cloudflare CDN i Redis object cache, a moim celem przy optymalizacji jest LCP poniżej 2 sekund. Jeżeli po uruchomieniu potrzebujesz stałego utrzymania technicznego, aktualizacji i reagowania na problemy, osobno realizuję [opiekę nad sklepem](/uslugi/opieka-wordpress).",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-www": {
+    heading: "Jakie strony www tworzę dla firm we Wrocławiu i nie tylko",
+    intro: [
+      "**Tworzę strony www, które dobieram do sposobu działania firmy, jej oferty i tego, co strona ma faktycznie robić dla klienta.** Przy tworzeniu stron www we Wrocławiu nie zaczynam od wyboru technologii, lecz od prostszego pytania: czy potrzebujesz przede wszystkim dobrze pokazać ofertę, pozyskiwać zapytania, prowadzić kampanie, publikować treści, sprzedawać online, czy obsługiwać bardziej niestandardowy proces.",
+      "Dla właściciela małej firmy oznacza to, że nie musisz wiedzieć, czym różni się CMS od frameworka ani zastanawiać się, jakie rozwiązanie jest modne. Wyjaśniam różnice po ludzku i proponuję technologię adekwatną do celu. Od 2020 roku realizuję komercyjne wdrożenia dla firm z Polski i Niemiec, między innymi z branży hotelarskiej, prawniczej, gastronomicznej, e-commerce i lokalnych usług. Kod przygotowuję sam, więc w sprawach dotyczących projektu rozmawiasz bezpośrednio ze mną.",
+    ],
+    sections: [
+      {
+        id: "jaka-strona-wybrac",
+        heading: "Jaką stronę wybrać do swojej firmy",
+        body: [
+          "Nie każda firma potrzebuje rozbudowanego serwisu. Czasami kilka dobrze przygotowanych podstron wystarcza, żeby jasno przedstawić ofertę i ułatwić klientowi podjęcie decyzji. Innym razem strona musi obsługiwać kampanie reklamowe, regularne publikacje albo sprzedaż. Dlatego zakres dopasowuję do konkretnego modelu biznesowego.",
+          "Najczęściej powstają u mnie:",
+        ],
+        list: [
+          "**wizytówka internetowa**, dla jednoosobowej działalności lub małej firmy, która potrzebuje podstawowej obecności w sieci i prostego przedstawienia usług;",
+          "**strona firmowa z ofertą**, dla firmy mającej kilka usług, grup klientów lub obszarów działalności, które trzeba czytelnie uporządkować;",
+          "**landing page pod kampanię**, dla firmy kierującej ruch z Google Ads, Meta Ads, newslettera lub konkretnej akcji promocyjnej;",
+          "**strona z blogiem lub bazą wiedzy**, dla firmy, która chce regularnie publikować treści, odpowiadać na pytania klientów i rozwijać widoczność w wyszukiwarkach;",
+          "**sklep internetowy**, dla firmy sprzedającej produkty online i potrzebującej katalogu, koszyka, płatności oraz zarządzania zamówieniami.",
+        ],
+        outro: [
+          "W praktyce jedna strona może łączyć kilka z tych funkcji. Serwis usługowy może mieć blog, a strona producenta dodatkowy katalog produktów bez sprzedaży online. Jeśli sprzedaż jest kluczową częścią projektu, mogę przygotować [sklep na WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+        ],
+      },
+      {
+        id: "wordpress-czy-nextjs",
+        heading: "WordPress czy Next.js zależy przede wszystkim od sposobu korzystania ze strony",
+        body: [
+          "Technologię dobieram do tego, **kto będzie edytował treści i jak dużo własnej logiki potrzebuje strona**. Jeśli właściciel lub pracownicy firmy chcą samodzielnie zmieniać teksty, zdjęcia, ofertę czy wpisy, dobrym rozwiązaniem zwykle jest [strona na WordPressie](/uslugi/tworzenie-stron-wordpress). W nowych projektach przygotowuję własny motyw zamiast budować stronę w Elementorze. Dzięki temu edytowane sekcje odpowiadają projektowi, zamiast zamieniać panel w zestaw przypadkowych klocków.",
+          "Next.js wybieram wtedy, kiedy projekt wychodzi poza klasyczną stronę informacyjną. Może chodzić o konfigurator, panel klienta, nietypowe formularze, własne procesy lub integracje z API. W takim przypadku przygotowuję [stronę w Next.js](/uslugi/aplikacje-nextjs), a jeśli potrzebna jest wygodna edycja treści, można połączyć ją z systemem takim jak Sanity lub Strapi.",
+          "Kreator typu Wix również może być sensownym wyborem. Jeżeli potrzebujesz bardzo prostej strony, akceptujesz działanie w ramach jednego ekosystemu i nie przewidujesz większego rozwoju, nie zawsze istnieje powód, żeby budować rozwiązanie indywidualne. Problem pojawia się wtedy, gdy firma zaczyna potrzebować większej swobody, nietypowych funkcji albo chce uniezależnić rozwój strony od ograniczeń konkretnej platformy. Patrz więc nie tylko na łatwość uruchomienia strony, ale też na własność rozwiązania, możliwości rozbudowy oraz koszty utrzymania w dłuższej perspektywie.",
+        ],
+      },
+      {
+        id: "koszt-strony-www",
+        heading: "Od czego zależy koszt strony www",
+        body: [
+          "Koszt stworzenia strony www zależy przede wszystkim od zakresu prac. Dwie strony o podobnej liczbie podstron mogą wymagać zupełnie innego nakładu pracy, jeśli jedna bazuje na kilku powtarzalnych układach, a druga ma wiele indywidualnych widoków, funkcji i integracji.",
+          "Znaczenie ma liczba podstron oraz liczba różnych szablonów. Osobnym zadaniem jest zaprojektowanie strony głównej, podstrony usługi, wpisu blogowego czy widoku konkretnego typu oferty. Na wycenę wpływa również to, czy projekt interfejsu powstaje indywidualnie, czy bazuje na gotowym szablonie. Podobnie jest z treściami i zdjęciami. Jeżeli materiały są gotowe, można od razu uwzględnić je w strukturze. Jeśli dopiero mają powstać, sposób ich przygotowania ustalamy na starcie.",
+          "Kolejna grupa to funkcje dodatkowe. Formularz kontaktowy jest znacznie prostszym elementem niż system rezerwacji, płatności, połączenie z zewnętrznym systemem czy bardziej rozbudowana automatyzacja. Zakres zwiększają także wersje językowe i blog, szczególnie gdy wymagają dodatkowych szablonów lub odmiennej organizacji treści.",
+          "Po uruchomieniu strony pozostają również koszty stałe. Najczęściej są to domena i hosting, a opcjonalnie także bieżąca opieka techniczna. Ich rodzaj zależy od technologii oraz wielkości projektu, dlatego uwzględniam je już przy wyborze rozwiązania, zamiast patrzeć wyłącznie na koszt samego wykonania strony.",
+        ],
+      },
+      {
+        id: "co-przygotowac",
+        heading: "Co warto przygotować przed rozpoczęciem projektu",
+        body: [
+          "Nie musisz przychodzić z kompletną dokumentacją ani gotową makietą strony. Im więcej podstawowych materiałów uda się jednak zebrać przed startem, tym łatwiej ustalić strukturę serwisu i uniknąć sytuacji, w której na późnym etapie okazuje się, że brakuje ważnej usługi albo całej grupy treści.",
+          "Najbardziej przydatne są:",
+        ],
+        list: [
+          "logo i podstawowe materiały związane z identyfikacją firmy;",
+          "zdjęcia, jeśli firma ma własne fotografie produktów, realizacji, zespołu lub miejsca;",
+          "gotowe teksty albo materiały, na podstawie których teksty będą przygotowywane;",
+          "lista usług, produktów lub głównych obszarów oferty;",
+          "dostęp do domeny i hostingu, jeśli są już wykupione;",
+          "przykłady stron, które Ci się podobają, najlepiej z krótką informacją, co konkretnie zwróciło Twoją uwagę.",
+        ],
+        outro: [
+          "Nie trzeba też czekać z projektem do momentu, kiedy każdy materiał będzie idealny. Ważniejsze jest ustalenie, co już istnieje, czego brakuje i co musi znaleźć się na stronie przed publikacją. Dzięki temu projekt można oprzeć na rzeczywistych potrzebach firmy zamiast wypełniać strukturę przypadkową treścią.",
+        ],
+      },
+      {
+        id: "google-i-wyszukiwarki-ai",
+        heading: "Strona powinna być przygotowana pod Google i wyszukiwarki AI",
+        body: [
+          "Tworzenie stron internetowych we Wrocławiu coraz rzadziej sprowadza się do samego zdobycia pozycji na kilka fraz. Strona powinna mieć strukturę, którą potrafią poprawnie interpretować zarówno tradycyjne wyszukiwarki, jak i systemy korzystające z treści internetowych do generowania odpowiedzi.",
+          "Podstawą jest logiczna hierarchia nagłówków i jasne przypisanie tematu do konkretnej podstrony. Strona główna nie powinna próbować odpowiadać szczegółowo na każde możliwe pytanie. Osobne usługi, lokalizacje czy istotne zagadnienia warto rozdzielić tam, gdzie ma to sens dla użytkownika. Pomaga to również wyszukiwarce zrozumieć relacje między poszczególnymi częściami serwisu.",
+          "Znaczenie ma szybkość działania, poprawny kod oraz dane strukturalne, jeśli odpowiadają rodzajowi zawartości strony. W przypadku firmy działającej lokalnie dochodzi lokalne SEO, czyli między innymi spójne informacje o działalności, odpowiednio przygotowane podstrony usług i logiczne powiązanie treści z lokalizacją. Po publikacji istotnym narzędziem jest Google Search Console, dzięki któremu można sprawdzać indeksowanie i wykrywać problemy techniczne związane z obecnością strony w Google.",
+          "Przygotowanie pod wyszukiwarki AI nie polega na dodaniu specjalnego przycisku ani magicznego pliku, który gwarantuje cytowanie firmy. Najważniejsze pozostają jednoznaczne informacje, dobrze zorganizowana treść, techniczna dostępność strony i takie opisanie usług, aby zarówno człowiek, jak i system analizujący stronę mógł zrozumieć, czym firma się zajmuje, dla kogo pracuje i czego dotyczą poszczególne podstrony.",
+        ],
+      },
+      {
+        id: "bezpieczenstwo-rodo-dostepnosc",
+        heading: "Bezpieczeństwo, RODO i dostępność trzeba uwzględnić przed publikacją",
+        body: [
+          "Bezpieczeństwo strony zaczyna się od poprawnej konfiguracji SSL i sposobu jej utrzymania. W rozwiązaniach, które wymagają aktualizacji systemu, wtyczek lub zależności, ważne jest ich regularne wykonywanie. Potrzebne są też kopie zapasowe dopasowane do charakteru serwisu, szczególnie gdy na stronie regularnie zmieniają się treści albo pojawiają się dane użytkowników.",
+          "Osobnym tematem jest RODO i analityka. Jeżeli strona wykorzystuje narzędzia zapisujące pliki cookies wymagające zgody, mechanizm zgody powinien działać przed uruchomieniem takiej analityki. Potrzebna jest również polityka prywatności odpowiadająca temu, jakie dane strona faktycznie zbiera i za pomocą jakich narzędzi. Zakres wymaganych dokumentów i konfiguracji zależy więc od funkcji konkretnej strony.",
+          "Coraz większe znaczenie ma także dostępność cyfrowa. Czytelna struktura, odpowiedni kontrast, obsługa klawiaturą, teksty alternatywne i poprawna semantyka pomagają korzystać ze strony osobom z różnymi niepełnosprawnościami, a przy okazji zwykle poprawiają ogólną jakość interfejsu. Wykonuję również [audyt dostępności](/audyt-wcag) według WCAG 2.1 AA, jeśli firma potrzebuje osobnego sprawdzenia istniejącego serwisu.",
+        ],
+      },
+      {
+        id: "wspolpraca-zdalna",
+        heading: "Współpracuję zdalnie z firmami z Wrocławia, całej Polski i Niemiec",
+        body: [
+          "Jako freelancer web developer działam we Wrocławiu, a współpracę przy projektach prowadzę zdalnie. Spotkanie startowe odbywa się online, dlatego lokalizacja firmy nie ogranicza projektu. Pracuję z firmami z Wrocławia, innych części Polski oraz z Niemiec.",
+          "Taki model jest wygodny również dla osoby, która zamawia pierwszą stronę internetową dla firmy i nie chce śledzić technicznych szczegółów wdrożenia. Komunikacja dotyczy przede wszystkim decyzji potrzebnych do stworzenia strony: treści, układu, funkcji, materiałów i sposobu prezentowania oferty. Nie trzeba instalować środowiska programistycznego ani samodzielnie sprawdzać kodu.",
+          "Po kolejnych etapach udostępniam link do wersji testowej. Możesz więc otworzyć stronę w zwykłej przeglądarce, zobaczyć aktualny stan projektu i odnieść uwagi do konkretnego widoku. Przy stronie internetowej dla firmy jest to szczególnie pomocne, ponieważ projekt można oceniać na podstawie realnego działania, a nie wyłącznie technicznego opisu tego, co dopiero ma powstać.",
+        ],
+      },
+    ],
+  },
 };
