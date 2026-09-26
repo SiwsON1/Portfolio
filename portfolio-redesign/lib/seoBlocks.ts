@@ -943,4 +943,340 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       },
     ],
   },
+  "headless-wordpress": {
+    heading: "Headless WordPress w praktyce: jak ocenić, czy ta architektura pasuje do Twojej firmy",
+    intro: [
+      "**W tym poradniku dowiesz się, kiedy headless WordPress jest uzasadnionym wyborem, jakie ma ograniczenia oraz czym różni się od klasycznej strony opartej na WordPressie.** Wyjaśniam też, co dzieje się z wtyczkami, podglądem treści i formularzami, gdzie hostowane są obie części systemu oraz jak wygląda migracja istniejącej strony.",
+      "Jeśli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd realizacji, lecz także na sposób rozwiązania codziennej edycji, publikacji i późniejszego utrzymania. WordPress jako headless CMS daje dużą swobodę, ale wprowadza dodatkową warstwę techniczną. Dlatego przed zaproponowaniem tej architektury sprawdzam, czy przyniesie Twojej firmie konkretną korzyść.",
+    ],
+    sections: [
+      {
+        id: "headless-wordpress-ma-sens-tylko-przy-konkretnych-wymaganiac",
+        heading: "Headless WordPress ma sens tylko przy konkretnych wymaganiach",
+        body: [
+          "Zwykły WordPress z własnym motywem wystarcza większości stron firmowych. Można w nim przygotować szybki serwis, wygodną edycję sekcji przez pola ACF oraz indywidualny wygląd bez korzystania z Elementora, Divi czy innych kreatorów. Jeżeli potrzebujesz strony usługowej, firmowego bloga, prezentacji oferty i formularza kontaktowego, oddzielanie panelu od frontu może nie dać korzyści proporcjonalnych do kosztu i złożoności.",
+          "Headless WordPress zaczyna mieć sens, gdy strona ma współpracować z funkcjami typowymi dla aplikacji, korzystać z wielu źródeł danych albo udostępniać treści w kilku kanałach. To także rozwiązanie dla firmy, która chce zachować znany panel redakcyjny, lecz potrzebuje frontu rozwijanego niezależnie w Next.js.",
+          "Przed wyborem tej architektury warto odpowiedzieć na kilka pytań:",
+        ],
+        list: [
+          "Czy strona będzie miała funkcje wykraczające poza standardowy serwis firmowy?",
+          "Czy te same treści mają trafiać do więcej niż jednego kanału?",
+          "Czy niezależny rozwój frontu jest ważniejszy niż prostota całego systemu?",
+          "Czy firma akceptuje utrzymanie dwóch połączonych środowisk?",
+        ],
+        outro: [
+          "Jeżeli na większość tych pytań odpowiadasz przecząco, częściej rekomenduję klasyczny WordPress. Usługę [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress) traktuję jako pełnoprawną alternatywę, a nie słabszą wersję rozwiązania headless.",
+        ],
+      },
+      {
+        id: "klasyczny-wordpress-i-headless-roznia-sie-nie-tylko-technolo",
+        heading: "Klasyczny WordPress i headless różnią się nie tylko technologią",
+        body: [
+          "W klasycznym WordPressie panel, motyw i mechanizm wyświetlania strony działają w jednym systemie. W architekturze headless WordPress przechowuje treści, natomiast osobny front pobiera je przez API. Szersze wyjaśnienie tego modelu znajdziesz w materiale [headless CMS: co to jest](/blog/headless-cms-co-to).",
+        ],
+        table: {"caption":"Klasyczny WordPress i headless różnią się nie tylko technologią","head":["Obszar","Klasyczny WordPress","Headless WordPress"],"rows":[["Edycja treści","Odbywa się w panelu WordPressa","Nadal odbywa się w panelu WordPressa"],["Szybkość","Zależy od motywu, wtyczek, hostingu i optymalizacji","Zależy głównie od sposobu zbudowania i udostępniania frontu"],["Wtyczki","Mogą wpływać bezpośrednio na wygląd i działanie strony","Działają tylko wtedy, gdy ich dane lub funkcje zostaną obsłużone przez front"],["Hosting","Zwykle jedno środowisko","Osobny hosting WordPressa i frontu"],["Koszt utrzymania","Zwykle niższy przy prostych stronach","Może być wyższy ze względu na dwa środowiska"],["Podgląd treści","Najczęściej dostępny od razu","Wymaga przygotowania trybu podglądu"]]},
+        outro: [
+          "Najważniejsza różnica dotyczy odpowiedzialności za działanie strony. W klasycznym modelu wiele funkcji można dodać i skonfigurować wewnątrz WordPressa. Przy połączeniu WordPress z Next.js trzeba świadomie zdecydować, które dane udostępnia panel, a które zachowania implementuje front.",
+        ],
+      },
+      {
+        id: "nie-kazda-wtyczka-dziala-po-oddzieleniu-frontu",
+        heading: "Nie każda wtyczka działa po oddzieleniu frontu",
+        body: [
+          "Po przejściu na headless przestają działać przede wszystkim te wtyczki, które zmieniają kod lub wygląd strony generowanej przez motyw WordPressa. Dotyczy to między innymi kreatorów wizualnych, części galerii, formularzy oraz dodatków osadzających gotowe elementy w szablonie. Wtyczka może nadal działać w panelu, ale jej rezultat nie pojawi się automatycznie na froncie w Next.js.",
+          "Podobna zasada dotyczy SEO. Wtyczka może przechowywać tytuł, opis, adres kanoniczny lub ustawienia indeksowania, jednak front musi pobrać te informacje przez API i umieścić je w odpowiednim miejscu strony. Samo zainstalowanie dodatku SEO nie oznacza jeszcze, że wszystkie jego funkcje będą widoczne dla wyszukiwarki.",
+          "Rozwiązuję to na poziomie architektury wdrożenia. Dane SEO udostępniam frontowi, formularze obsługuję po stronie aplikacji, a dla nieopublikowanych treści przygotowuję tryb podglądu. Zakres zależy od używanych wtyczek i sposobu pracy redakcji. Dlatego przed migracją sprawdzam nie tylko listę dodatków, lecz także to, do czego rzeczywiście są wykorzystywane.",
+        ],
+      },
+      {
+        id: "wordpress-i-front-wymagaja-osobnych-srodowisk-hostingowych",
+        heading: "WordPress i front wymagają osobnych środowisk hostingowych",
+        body: [
+          "WordPress może pozostać na zwykłym hostingu, o ile środowisko zapewnia stabilne działanie panelu i dostęp do danych przez API. Nie musi już obsługiwać całego widoku strony dla użytkownika, ale nadal przechowuje treści, konta redaktorów, media i ustawienia potrzebne do publikacji.",
+          "Front w Next.js umieszczam na Vercel albo na własnym VPS. Przy stronie komercyjnej korzystanie z Vercel oznacza wybór planu Pro. Własny VPS może być alternatywą, jeśli przemawiają za nim wymagania techniczne projektu, sposób zarządzania infrastrukturą lub pozostałe usługi działające w firmie.",
+          "Dwie części oznaczają też dwa obszary, które trzeba aktualizować, monitorować i zabezpieczać. Awaria panelu nie zawsze musi wyłączyć opublikowaną stronę, ale może uniemożliwić dodawanie nowych treści. Z kolei problem z frontem może wpłynąć na dostępność serwisu mimo prawidłowego działania WordPressa. Sposób publikacji i odświeżania danych dobieram więc do tego, jak często zmieniasz treści i jak szybko aktualizacje powinny pojawiać się na stronie.",
+        ],
+      },
+      {
+        id: "migracja-zachowuje-tresci-ale-wymaga-zbudowania-nowego-front",
+        heading: "Migracja zachowuje treści, ale wymaga zbudowania nowego frontu",
+        body: [
+          "Migracja istniejącej strony nie polega na automatycznej zamianie obecnego motywu na aplikację Next.js. Treści mogą pozostać w panelu WordPressa, ale trzeba zbudować nowy front, połączyć go z właściwymi typami danych oraz odtworzyć potrzebne funkcje. Obejmuje to również pola ACF, kategorie, multimedia, wersje językowe i zależności pomiędzy podstronami.",
+          "Przed rozpoczęciem sprawdzam strukturę adresów i ustalam, które podstrony mają zachować dotychczasowe adresy. Jeśli adres musi się zmienić, przygotowuję przekierowanie 301 ze starego adresu na nowy. Pomaga to użytkownikom i wyszukiwarkom trafić do właściwej treści, ale **nie obiecuję zachowania konkretnych pozycji w Google**.",
+          "Nową wersję można przygotowywać równolegle do działającego serwisu, a przełączenie planuję tak, aby przerwa była jak najkrótsza. Przy zmianie DNS może jednak wystąpić krótka niedostępność. Więcej elementów wymagających kontroli opisuję w poradniku [migracja z WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+        ],
+      },
+      {
+        id: "koszt-i-czas-zaleza-od-funkcji-ktore-trzeba-odtworzyc",
+        heading: "Koszt i czas zależą od funkcji, które trzeba odtworzyć",
+        body: [
+          "Koszt wdrożenia wynika przede wszystkim z zakresu nowego frontu, a nie z samego połączenia WordPressa z API. Prosta prezentacja treści wymaga mniej pracy niż serwis z rozbudowanym filtrowaniem, wieloma formularzami, wyszukiwaniem, kontami użytkowników albo integracjami z zewnętrznymi usługami.",
+          "Na zakres prac wpływają przede wszystkim:",
+        ],
+        list: [
+          "liczba typów treści i pól, które ma obsługiwać WordPress,",
+          "przygotowanie podglądu nieopublikowanych materiałów,",
+          "liczba i sposób działania formularzy,",
+          "wersje językowe oraz zależności między tłumaczeniami,",
+          "integracje, wyszukiwanie i funkcje aplikacyjne.",
+        ],
+        outro: [
+          "Termin podaję po rozpoznaniu obecnej strony i oczekiwań wobec nowego frontu. Aplikacje i projekty MVP w Next.js powstają zwykle w ciągu 6 do 12 tygodni, ale nie przypisuję tego przedziału automatycznie każdej migracji. Strona z prostą strukturą treści i serwis z wieloma integracjami wymagają innego planu, dlatego wycena obejmuje ustalony zakres oraz termin dopasowany do projektu.",
+        ],
+      },
+    ],
+  },
+  "aplikacje-react": {
+    heading: "Tworzenie aplikacji React: co warto ustalić przed wyborem wykonawcy",
+    intro: [
+      "**W tym poradniku znajdziesz najważniejsze informacje, które pomogą Ci ocenić zakres aplikacji, wybrać odpowiednią technologię i świadomie porównać wykonawców.** Wyjaśniam, jakie rozwiązania buduję w React, kiedy wykorzystuję Next.js, jak planuję pierwszą wersję produktu oraz co wpływa na czas realizacji.",
+      "Tworzenie aplikacji React zaczynam od zrozumienia, kto będzie korzystać z systemu i jakie zadania ma w nim wykonywać. Technologia jest narzędziem, a nie celem samym w sobie. Dlatego przed rozpoczęciem prac ustalam nie tylko listę funkcji, lecz także role użytkowników, źródła danych, potrzebne integracje i elementy, które można bezpiecznie przesunąć do kolejnego etapu.",
+    ],
+    sections: [
+      {
+        id: "jakie-aplikacje-buduje-w-react",
+        heading: "Jakie aplikacje buduję w React",
+        body: [
+          "Aplikacje w React sprawdzają się szczególnie tam, gdzie użytkownik nie tylko czyta treść, ale przede wszystkim pracuje z danymi. Może wypełniać formularze, zmieniać ustawienia, przeglądać zamówienia, przygotowywać wycenę albo zarządzać informacjami dostępnymi po zalogowaniu. Interfejs reaguje na jego działania bez konieczności przeładowywania całej strony, dzięki czemu obsługa złożonych procesów może być wygodniejsza.",
+          "Jako programista React buduję między innymi:",
+        ],
+        list: [
+          "panele klienta z dostępem do indywidualnych danych, dokumentów lub statusów,",
+          "systemy wewnętrzne wspierające pracę zespołu,",
+          "konfiguratory produktów, usług i wycen,",
+          "narzędzia z logowaniem oraz różnymi poziomami dostępu.",
+        ],
+        outro: [
+          "Przykładem takiego rozwiązania jest [Galabau Darius](/projekty/galabau-darius), czyli projekt wykonany dla klienta z Niemiec. Powstał w nim konfigurator wyceny ogrodzeń na żywo oraz panel administracyjny. Logowanie obsługuje Clerk, dane są powiązane z warstwą przygotowaną przy użyciu Prisma, a aplikacja działa na Vercel. Ten przykład pokazuje, że aplikacja webowa React może łączyć część przeznaczoną dla klientów z narzędziami do obsługi procesu po stronie firmy.",
+        ],
+      },
+      {
+        id: "react-czy-next-js-zalezy-od-roli-aplikacji",
+        heading: "React czy Next.js zależy od roli aplikacji",
+        body: [
+          "React służy do budowania interfejsów użytkownika, natomiast Next.js jest frameworkiem opartym na React. Dodaje rozwiązania przydatne między innymi przy tworzeniu publicznych podstron, renderowaniu treści po stronie serwera i łączeniu części aplikacyjnej z serwisem widocznym w wyszukiwarce. Dokładniejsze zestawienie znajdziesz w poradniku [Next.js vs React](/blog/next-js-vs-react-roznice).",
+          "Sam React wybieram przede wszystkim do narzędzi działających za logowaniem. W takim systemie widoki nie muszą być indeksowane przez Google, ponieważ są dostępne tylko dla uprawnionych użytkowników. Może to być panel pracownika, zaplecze do obsługi zamówień albo interfejs współpracujący z istniejącym API.",
+        ],
+        table: {"caption":"React czy Next.js zależy od roli aplikacji","head":["Sytuacja w projekcie","React","Next.js"],"rows":[["Narzędzie działa wyłącznie po zalogowaniu","Zwykle wystarcza","Może być użyty, ale nie zawsze jest potrzebny"],["Aplikacja korzysta z istniejącego API","Dobrze pasuje do warstwy interfejsu","Pasuje, jeśli potrzebne są również funkcje po stronie serwera"],["Projekt ma publiczne strony widoczne w Google","Wymaga dodatkowych decyzji architektonicznych","Zwykle jest lepszym wyborem"],["Część marketingowa i panel mają działać razem","Możliwe, lecz wymaga szerszej konfiguracji","Pozwala połączyć oba obszary w jednym projekcie"]]},
+        outro: [
+          "Jeśli system ma obejmować także ofertę, publiczne podstrony lub treści pozyskujące ruch z wyszukiwarki, częściej rekomenduję [tworzenie stron Next.js](/uslugi/aplikacje-nextjs). Dobór technologii wynika więc ze sposobu działania produktu, a nie z założenia, że jeden framework będzie właściwy w każdym projekcie.",
+        ],
+      },
+      {
+        id: "pierwsza-wersja-powinna-sprawdzac-najwazniejsze-zalozenie",
+        heading: "Pierwsza wersja powinna sprawdzać najważniejsze założenie",
+        body: [
+          "**MVP to pierwsza użyteczna wersja aplikacji, która pozwala zweryfikować pomysł bez budowania od razu wszystkich planowanych funkcji.** Nie oznacza produktu niedopracowanego. Oznacza świadome ograniczenie zakresu do procesu, który przynosi użytkownikowi konkretną wartość i może zostać sprawdzony w praktyce.",
+          "Przy planowaniu MVP ustalam, kto skorzysta z aplikacji jako pierwszy, jaki problem ma rozwiązać i jakie działania są konieczne do przejścia całej podstawowej ścieżki. Jeżeli powstaje konfigurator, pierwsza wersja może umożliwiać wybór parametrów, obliczenie wyniku i zapisanie zapytania. Rozbudowane raporty, dodatkowe warianty wyglądu czy automatyzacje administracyjne można dodać po sprawdzeniu, jak narzędzie działa w codziennym użyciu.",
+          "Na później odkładam funkcje, które nie są potrzebne do zweryfikowania głównego procesu. Dotyczy to zwykle dodatkowych ról użytkowników, zaawansowanej analityki, wielu metod logowania, rozbudowanych powiadomień lub obsługi rzadkich scenariuszy. Taki podział pomaga szybciej uzyskać działającą aplikację i podejmować kolejne decyzje na podstawie jej rzeczywistego wykorzystania.",
+        ],
+      },
+      {
+        id: "koszt-i-czas-wynikaja-z-zakresu-oraz-zaleznosci",
+        heading: "Koszt i czas wynikają z zakresu oraz zależności",
+        body: [
+          "Nie określam kosztu wyłącznie na podstawie liczby widoków. Dwa podobnie wyglądające ekrany mogą wymagać zupełnie innego nakładu pracy. Prosty formularz zapisujący dane różni się od formularza, który sprawdza uprawnienia, pobiera informacje z kilku systemów, obsługuje płatność i uruchamia kolejne działania po stronie serwera.",
+          "Na zakres tworzenia aplikacji React wpływają przede wszystkim:",
+        ],
+        list: [
+          "liczba ekranów, formularzy i stanów, które trzeba obsłużyć,",
+          "liczba ról użytkowników oraz poziomów dostępu,",
+          "integracje z API i systemami zewnętrznymi,",
+          "płatności, logowanie i odzyskiwanie dostępu,",
+          "projekt oraz struktura bazy danych,",
+          "obsługa błędów, testy i wymagania dotyczące wdrożenia.",
+        ],
+        outro: [
+          "Pierwsza wersja aplikacji lub MVP powstaje zwykle w ciągu **6 do 12 tygodni**. Dokładny termin ustalam po briefie i rozpoznaniu zależności. Istotne jest również to, czy firma ma już gotowe API, dokumentację i dostęp do systemów zewnętrznych. Brak tych elementów nie musi blokować projektu, ale wpływa na sposób planowania prac.",
+        ],
+      },
+      {
+        id: "aplikacja-react-moze-wspolpracowac-z-istniejacymi-systemami",
+        heading: "Aplikacja React może współpracować z istniejącymi systemami",
+        body: [
+          "Nowa aplikacja nie musi zastępować całego używanego zaplecza. Jeżeli Twoja firma ma już CRM, bazę danych albo system realizujący część procesów, mogę przygotować interfejs React korzystający z dostępnego API. Użytkownik otrzymuje wtedy nową warstwę do pracy, a dane pozostają powiązane z dotychczasowym rozwiązaniem.",
+          "Możliwe jest także połączenie aplikacji z płatnościami Stripe, systemem logowania oraz bazą danych. W projektach wykorzystuję rozwiązania dobierane do konkretnych wymagań, między innymi Clerk lub NextAuth do uwierzytelniania, a także Postgres z Prisma albo Drizzle do obsługi danych. Wybór zależy od architektury aplikacji, sposobu zarządzania użytkownikami i tego, które elementy są już dostępne.",
+          "Przed rozpoczęciem integracji sprawdzam dokumentację API, sposób autoryzacji, zakres udostępnianych danych i ograniczenia techniczne. Jeżeli system nie ma API albo udostępnia tylko część potrzebnych operacji, ustalam to przed wyceną. Pozwala to oddzielić funkcje możliwe do wdrożenia od tych, które wymagają zmian po stronie zewnętrznego dostawcy.",
+        ],
+      },
+      {
+        id: "utrzymanie-aplikacji-nie-konczy-sie-na-wdrozeniu",
+        heading: "Utrzymanie aplikacji nie kończy się na wdrożeniu",
+        body: [
+          "Po uruchomieniu aplikacji mogą pojawić się poprawki, nowe potrzeby użytkowników i kolejne etapy rozwoju. Biblioteki używane w projekcie również wymagają aktualizacji, szczególnie gdy zmiany dotyczą bezpieczeństwa, logowania, płatności albo komunikacji z usługami zewnętrznymi. Zakres opieki warto dopasować do znaczenia aplikacji w codziennym działaniu firmy.",
+          "Po starcie zapewniam **60 dni gwarancji i bezpłatnych poprawek**. Później mogę rozwijać system oraz zajmować się aktualizacjami i poprawkami w ramach opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok. Szczegóły utrzymania, priorytety zgłoszeń i zakres planowanych prac ustalam przy rozpoczęciu współpracy.",
+          "Kod aplikacji i repozytorium należą do Ciebie. Nie uzależniam dostępu do projektu od dalszej współpracy ze mną. Dzięki temu możesz zlecać mi kolejne etapy, włączyć własny zespół albo przekazać rozwój innemu wykonawcy, jeśli zmienią się potrzeby Twojej firmy.",
+        ],
+      },
+    ],
+  },
+  "strony-jamstack": {
+    heading: "Strony Jamstack w praktyce: co warto wiedzieć przed wyborem wykonawcy",
+    intro: [
+      "**W tym bloku dowiesz się, jak działają strony Jamstack, czym różnią się od WordPressa i w jakich projektach warto zastosować taką architekturę.** Wyjaśnię też, jak wygląda edycja treści, obsługa formularzy, wycena oraz przeniesienie istniejącej witryny.",
+      "Nie musisz znać technologii, aby świadomie porównać oferty wykonawców. Najważniejsze jest to, czy proponowane rozwiązanie pasuje do sposobu, w jaki publikujesz treści, rozwijasz firmę i obsługujesz klientów. Strona statyczna może mieć wygodny panel administracyjny oraz funkcje dynamiczne, ale nie każdy projekt powinien być budowany w ten sposób.",
+    ],
+    sections: [
+      {
+        id: "jak-dzialaja-strony-jamstack-z-perspektywy-wlasciciela-firmy",
+        heading: "Jak działają strony Jamstack z perspektywy właściciela firmy?",
+        body: [
+          "W tradycyjnym systemie strona może być składana przez serwer dopiero wtedy, gdy użytkownik otworzy konkretny adres. Pobierane są dane, wykonywany jest kod, a następnie powstaje widok wysyłany do przeglądarki. W architekturze Jamstack wiele podstron przygotowuję wcześniej, podczas publikacji lub aktualizacji serwisu.",
+          "Gotowe pliki mogą być dostarczane przez sieć serwerów znajdujących się w różnych lokalizacjach. Użytkownik otrzymuje więc przygotowaną stronę bez konieczności uruchamiania przy każdym wejściu całego systemu zarządzania treścią i wykonywania kolejnych zapytań do bazy. Dokładniej opisuję ten mechanizm w poradniku [Jamstack: co to jest](/blog/jamstack-co-to-jest).",
+          "Nie oznacza to, że witryna pozostaje całkowicie nieruchoma. Formularze, płatności, wyszukiwarka albo logowanie mogą działać jako osobne usługi połączone z warstwą statyczną. **Jamstack jest sposobem projektowania architektury, a nie rezygnacją z funkcji potrzebnych użytkownikom.**",
+        ],
+      },
+      {
+        id: "czym-jamstack-rozni-sie-od-wordpressa",
+        heading: "Czym Jamstack różni się od WordPressa?",
+        body: [
+          "WordPress i Jamstack mogą prowadzić do podobnego efektu wizualnego, ale inaczej obsługują treści, funkcje oraz generowanie podstron. WordPress jest kompletnym systemem działającym na serwerze. Strony Jamstack oddzielają interfejs od panelu treści i dodatkowych usług, dlatego każdy z tych elementów można dobrać do projektu osobno.",
+        ],
+        table: {"caption":"Czym Jamstack różni się od WordPressa?","head":["Obszar","Jamstack","WordPress"],"rows":[["Edycja treści","Panel CMS, na przykład Sanity lub Strapi, albo edycja plików","Panel WordPressa z polami dopasowanymi do strony"],["Szybkość","Podstrony mogą być wygenerowane wcześniej i podawane jako gotowe pliki","Wynik zależy między innymi od motywu, wtyczek, serwera i konfiguracji pamięci podręcznej"],["Bezpieczeństwo","Publiczna część strony nie musi mieć bezpośredniego połączenia z panelem i bazą danych","System, motyw oraz wtyczki wymagają aktualizacji i właściwego zabezpieczenia"],["Wtyczki","Funkcje dobiera się jako integracje lub tworzy w kodzie","Dostępny jest rozbudowany ekosystem gotowych wtyczek"],["Koszt utrzymania","Zależy od hostingu, CMS i używanych usług zewnętrznych","Zależy od hostingu, opieki technicznej oraz płatnych rozszerzeń"],["Sklep","Możliwy przez zewnętrzny system sprzedażowy lub indywidualną integrację","WooCommerce zapewnia gotowe zaplecze do prowadzenia sklepu"]]},
+        outro: [
+          "**Nie traktuję Jamstacku jako automatycznie lepszego zamiennika WordPressa.** Jeśli liczy się szybka strona firmowa bez WordPressa, uporządkowana architektura i ograniczenie liczby elementów działających na serwerze, Jamstack może być dobrym wyborem. Jeżeli projekt wymaga wielu gotowych rozszerzeń lub rozbudowanej obsługi sprzedaży, WordPress z WooCommerce może okazać się praktyczniejszy.",
+        ],
+      },
+      {
+        id: "jak-mozesz-samodzielnie-edytowac-tresci",
+        heading: "Jak możesz samodzielnie edytować treści?",
+        body: [
+          "Strony Jamstack mogą korzystać z panelu CMS, mimo że sam interfejs witryny działa niezależnie od niego. W projektach wymagających regularnych aktualizacji mogę podłączyć Sanity albo Strapi. W takim panelu edytujesz przygotowane pola, na przykład tytuł, opis, zdjęcie, dane usługi czy element katalogu. Po publikacji system uruchamia aktualizację potrzebnych podstron.",
+          "Drugą możliwością jest przechowywanie treści bezpośrednio w plikach projektu. Takie rozwiązanie ogranicza liczbę usług, ale wymaga pracy z plikami i sposobem ich zapisu. Sprawdza się głównie wtedy, gdy zawartość zmienia się rzadko albo aktualizacjami zajmuje się osoba techniczna.",
+          "Dla nietechnicznego właściciela firmy zwykle wybieram panel CMS, jeśli samodzielna edycja jest częścią codziennej pracy. Zakres pól ustalam na podstawie rzeczywistych potrzeb, aby nie obciążać panelu ustawieniami, których nikt nie będzie używać. Po wdrożeniu prowadzę szkolenie online z edycji treści.",
+        ],
+      },
+      {
+        id: "jak-formularze-i-wyszukiwarka-dzialaja-na-stronie-statycznej",
+        heading: "Jak formularze i wyszukiwarka działają na stronie statycznej?",
+        body: [
+          "Określenie „strona statyczna” dotyczy przede wszystkim sposobu przygotowania i wyświetlania treści. Nie wyklucza ono przesyłania zapytań, filtrowania katalogu ani pobierania aktualnych danych. Więcej o samym generowaniu gotowych widoków wyjaśniam w materiale [static site generation](/blog/static-site-generation-co-to).",
+          "Poszczególne funkcje mogą działać niezależnie:",
+        ],
+        list: [
+          "formularz przekazuje dane do osobnej usługi lub logiki po stronie serwera,",
+          "wyszukiwarka korzysta z przygotowanego indeksu albo zewnętrznego mechanizmu,",
+          "płatność jest obsługiwana przez przeznaczony do tego system,",
+          "dane zmieniające się na żywo są pobierane z odpowiedniego źródła.",
+        ],
+        outro: [
+          "Dzięki temu nie trzeba budować całej witryny jak rozbudowanej aplikacji tylko dlatego, że jedna sekcja wymaga dynamicznego działania. Najpierw rozdzielam zwykłe podstrony od funkcji przetwarzających dane, a następnie dobieram rozwiązanie do każdej z nich. Pozwala to ocenić zakres prac na podstawie faktycznych potrzeb, a nie samej liczby funkcji wymienionych w zapytaniu.",
+        ],
+      },
+      {
+        id: "jak-jamstack-sprawdza-sie-w-wiekszych-serwisach",
+        heading: "Jak Jamstack sprawdza się w większych serwisach?",
+        body: [
+          "Strony Jamstack nie muszą ograniczać się do kilku zakładek firmowych. Własny serwis [cojestpolskie.pl](/projekty/cojestpolskie) zbudowałem w Astro. Z jednej bazy generowanych jest ponad 1700 podstron dotyczących ponad 900 marek. To przykład projektu, w którym uporządkowane dane służą do tworzenia wielu powtarzalnych widoków.",
+          "Astro sprawdza się w serwisach, w których dominują treści i dane możliwe do przygotowania z wyprzedzeniem. Poszczególne typy podstron korzystają wtedy ze wspólnych szablonów, a dodanie kolejnego rekordu nie wymaga ręcznego projektowania osobnej strony. **Skala serwisu zależy więc nie tylko od liczby adresów, lecz także od jakości struktury danych i szablonów.**",
+          "Innym przykładem jest Kantorymapa, mój produkt zbudowany w Next.js. Serwis obejmuje 1900 kantorów w 140 miastach, codziennie pobiera kursy NBP i ładuje się poniżej sekundy. Ten projekt pokazuje, że przy wyborze technologii trzeba uwzględnić również aktualizowane dane i logikę aplikacji. Nie każdy serwis z dużą liczbą podstron powinien być wykonany wyłącznie jako strona statyczna.",
+        ],
+      },
+      {
+        id: "od-czego-zaleza-koszt-i-termin-wykonania",
+        heading: "Od czego zależą koszt i termin wykonania?",
+        body: [
+          "Koszt stron Jamstack wynika przede wszystkim z liczby różnych szablonów, sposobu zarządzania treścią i zakresu funkcji, które muszą działać dynamicznie. Dziesięć podstron korzystających z jednego schematu może wymagać mniej pracy niż kilka podstron o całkowicie odmiennej strukturze. Znaczenie ma również to, czy panel CMS ma obsługiwać proste teksty, rozbudowany katalog, wiele typów danych lub zależności między nimi.",
+          "Na zakres wpływają najczęściej:",
+        ],
+        list: [
+          "liczba unikalnych widoków i typów treści,",
+          "konfiguracja Sanity lub Strapi,",
+          "formularze, wyszukiwarka, płatności i inne integracje,",
+          "przygotowanie danych oraz migracja istniejących materiałów,",
+          "przeniesienie z WordPressa i opracowanie przekierowań 301.",
+        ],
+        outro: [
+          "Prosta strona lub wizytówka powstaje zwykle w ciągu 2 do 3 tygodni. Typowa strona firmowa albo usługowa zajmuje od 4 do 6 tygodni. Ostateczny termin ustalam po krótkiej rozmowie i briefie, ponieważ migracja, niestandardowe funkcje oraz liczba szablonów mogą istotnie zmienić harmonogram.",
+          "Przy przenoszeniu witryny z WordPressa analizuję także dotychczasowe adresy. Dla zmienionych podstron przygotowuję przekierowania 301, aby użytkownicy i wyszukiwarki trafiali pod właściwe adresy. Migrację planuję tak, by przerwa była jak najkrótsza, jednak przy zmianie DNS może wystąpić krótka niedostępność. Nie obiecuję zachowania konkretnych pozycji w Google.",
+        ],
+      },
+      {
+        id: "kiedy-strony-jamstack-nie-beda-wlasciwym-wyborem",
+        heading: "Kiedy strony Jamstack nie będą właściwym wyborem?",
+        body: [
+          "Jamstack może nie być najlepszym rozwiązaniem dla rozbudowanego sklepu, który wymaga wielu procesów sprzedażowych, gotowych integracji oraz wygodnego zaplecza do zarządzania zamówieniami. W takim przypadku WooCommerce albo indywidualna aplikacja mogą lepiej odpowiadać zakresowi projektu. Decyzja zależy od sposobu sprzedaży, a nie od samej liczby produktów.",
+          "Ostrożnie podchodzę również do projektów, w których wiele osób zmienia treści niemal bez przerwy. Bez odpowiednio zaprojektowanego CMS taki model pracy będzie niewygodny. Jeżeli serwis ma rozbudowane konta użytkowników, indywidualne dane po zalogowaniu lub liczne operacje wykonywane na żywo, rozważam architekturę aplikacji w Next.js zamiast klasycznej strony statycznej.",
+          "**Technologię dobieram do procesów firmy, częstotliwości zmian i funkcji serwisu.** Dzięki temu strona nie jest nazywana Jamstackiem tylko ze względu na użyte narzędzia, lecz rzeczywiście wykorzystuje ten model tam, gdzie przynosi praktyczną korzyść.",
+        ],
+      },
+    ],
+  },
+  "next-js-software-house": {
+    heading: "Software house Next.js, freelancer czy zespół: jak wybrać wykonawcę aplikacji",
+    intro: [
+      "**W tym bloku dowiesz się, jak porównać software house Next.js, freelancera i mały zespół, a także jak wyglądają wycena, budowa MVP, dobór technologii oraz opieka nad aplikacją po wdrożeniu.** To najważniejsze kwestie, jeśli nie zajmujesz się technologią na co dzień, ale chcesz świadomie wybrać wykonawcę i ocenić, czy proponowany sposób pracy odpowiada potrzebom Twojej firmy.",
+      "Nie każda aplikacja wymaga rozbudowanego zespołu. W wielu projektach sprawdza się bezpośrednia współpraca z jednym programistą Next.js, szczególnie gdy zakres można jasno uporządkować, a decyzje powinny zapadać sprawnie. Są jednak przedsięwzięcia, przy których udział dodatkowych specjalistów jest uzasadniony. Dlatego przed rozpoczęciem prac warto ocenić nie tylko technologię i koszt, lecz także odpowiedzialność za projekt, sposób komunikacji oraz możliwości późniejszego skalowania.",
+    ],
+    sections: [
+      {
+        id: "software-house-freelancer-czy-maly-zespol-moga-pasowac-do-ro",
+        heading: "Software house, freelancer czy mały zespół mogą pasować do różnych projektów",
+        body: [
+          "Nazwa „software house Next.js” nie przesądza jeszcze o tym, jak będzie wyglądała codzienna współpraca. W większej firmie możesz rozmawiać z opiekunem projektu, który przekazuje ustalenia do projektantów i programistów. Mały zespół ogranicza liczbę pośredników, ale nadal dzieli odpowiedzialność pomiędzy kilka osób. Freelancer zazwyczaj sam prowadzi rozmowy, podejmuje decyzje techniczne i tworzy kod.",
+          "W moim przypadku rozmawiasz bezpośrednio ze mną, a ja sam piszę kod aplikacji. Dzięki temu pytania biznesowe i techniczne trafiają do osoby, która faktycznie wdraża ustalenia. Poniższe porównanie pomaga ocenić różnice między modelami współpracy, ale nie wskazuje jednego rozwiązania jako najlepszego w każdej sytuacji.",
+        ],
+        table: {"caption":"Software house, freelancer czy mały zespół mogą pasować do różnych projektów","head":["Kryterium","Freelancer","Mały zespół Next.js","Software house Next.js"],"rows":[["Kontakt","Bezpośrednio z wykonawcą","Z wybranymi członkami zespołu","Często przez osobę prowadzącą projekt"],["Koszt struktury","Utrzymanie jednej osoby","Koszt kilku specjalistów","Koszt zespołu i organizacji firmy"],["Szybkość decyzji","Krótka ścieżka ustaleń","Zależna od podziału odpowiedzialności","Zależna od procesu i liczby osób"],["Skalowanie prac","Ograniczone dostępnością jednej osoby","Możliwe przez zwiększenie zaangażowania zespołu","Możliwe przez przydzielenie kolejnych specjalistów"],["Ryzyko","Zależność od jednej osoby","Zależność od dostępności kilku osób","Ryzyko zmian składu zespołu lub przepływu informacji"]]},
+        outro: [
+          "Model freelancerski sprawdza się przede wszystkim wtedy, gdy zależy Ci na bezpośrednim kontakcie i jasno określonej odpowiedzialności. Jeżeli zakres wymaga równoległej pracy wielu programistów albo kilku specjalizacji dostępnych jednocześnie, uczciwie informuję, że potrzebny będzie większy zespół Next.js. Taka ocena powinna nastąpić przed rozpoczęciem projektu, a nie dopiero wtedy, gdy jego skala zacznie utrudniać realizację.",
+        ],
+      },
+      {
+        id: "od-briefu-do-mvp-prowadzi-kilka-etapow-decyzyjnych",
+        heading: "Od briefu do MVP prowadzi kilka etapów decyzyjnych",
+        body: [
+          "Budowa MVP nie polega na umieszczeniu wszystkich pomysłów w pierwszej wersji. Jej celem jest wybranie funkcji, które pozwolą uruchomić produkt i sprawdzić jego działanie w praktyce. Na początku rozpoznaję więc proces biznesowy, grupę użytkowników, wymagane integracje oraz dane, które aplikacja ma gromadzić lub przetwarzać.",
+          "Następnie przygotowuję makiety w Figmie. Na tym etapie można ocenić układ ekranów, kolejność działań i logikę obsługi bez ponoszenia kosztu przebudowy gotowego kodu. Po akceptacji makiet przechodzę do programowania, a po kolejnych etapach udostępniam Ci link do wersji testowej. Możesz na bieżąco sprawdzać rozwój produktu, zamiast zobaczyć całość dopiero przed publikacją.",
+          "Typowy przebieg obejmuje:",
+        ],
+        list: [
+          "rozpoznanie celu, użytkowników i najważniejszych funkcji,",
+          "przygotowanie makiet oraz dwóch tur poprawek,",
+          "budowę kolejnych elementów i testowanie ich pod udostępnionym adresem,",
+          "uruchomienie wersji produkcyjnej.",
+        ],
+        outro: [
+          "Aplikacja lub MVP w Next.js powstaje zwykle w ciągu 6 do 12 tygodni. Dokładny termin zależy od zakresu, integracji i złożoności funkcji, dlatego ustalam go dopiero po briefie. Jeżeli chcesz wcześniej zrozumieć możliwości technologii, pomocne będzie wyjaśnienie [Next.js: co to jest](/blog/next-js-co-to-jest).",
+        ],
+      },
+      {
+        id: "stala-wycena-wymaga-jasno-opisanego-zakresu",
+        heading: "Stała wycena wymaga jasno opisanego zakresu",
+        body: [
+          "Projekt wyceniam po krótkiej rozmowie i briefie. Najpierw ustalam, co dokładnie ma znaleźć się w aplikacji, które funkcje są konieczne na start oraz od jakich systemów zewnętrznych będzie zależało wdrożenie. Na tej podstawie przedstawiam stałą wycenę uzgodnionego zakresu wraz z terminem realizacji.",
+          "Taki model ułatwia porównanie ofert, o ile każda z nich obejmuje ten sam zakres. Sama końcowa wartość niewiele mówi, gdy jedna firma Next.js uwzględnia projekt interfejsu, logowanie i panel administracyjny, a druga wycenia jedynie część widoczną dla użytkownika. Dlatego zakres powinien opisywać funkcje i odpowiedzialność wykonawcy, a nie ograniczać się do liczby ekranów.",
+          "Jeżeli w trakcie prac pojawi się pomysł na dodatkową integrację, nowy typ konta albo rozbudowanie panelu, traktuję go jako zmianę zakresu i wyceniam osobno. Dzięki temu możesz zdecydować, czy dana funkcja jest potrzebna przed startem, czy lepiej zaplanować ją jako kolejny etap rozwoju. Nie każda dobra koncepcja musi od razu trafić do pierwszej wersji produktu.",
+        ],
+      },
+      {
+        id: "stack-powinien-wynikac-z-funkcji-aplikacji",
+        heading: "Stack powinien wynikać z funkcji aplikacji",
+        body: [
+          "W projektach korzystam z Next.js App Router, Reacta, TypeScriptu i Tailwinda. Te technologie pozwalają zbudować interfejs oraz logikę aplikacji w jednym uporządkowanym środowisku. TypeScript pomaga wcześniej wykrywać część błędów związanych z danymi i ułatwia późniejsze rozwijanie kodu, szczególnie gdy projekt przejmuje kolejny programista Next.js.",
+          "Warstwę danych mogę oprzeć na bazie Postgres oraz Prisma lub Drizzle. Jeżeli aplikacja wymaga kont użytkowników, dobieram Clerk albo NextAuth. Płatności można obsłużyć przez Stripe, natomiast treści redakcyjne przez Sanity lub Strapi. Wybór nie polega na dołączeniu wszystkich dostępnych narzędzi, lecz na dopasowaniu ich do rzeczywistych funkcji produktu.",
+          "Wdrożenie może działać na Vercel albo na własnym VPS. Vercel jest naturalnie powiązany z ekosystemem Next.js, natomiast własny serwer może być uzasadniony przez wymagania infrastrukturalne konkretnego projektu. Decyzję podejmuję po rozpoznaniu sposobu działania aplikacji, jej integracji i wymagań dotyczących utrzymania.",
+          "Dobrze dobrany stack powinien odpowiadać na konkretne pytania: gdzie będą przechowywane dane, kto może je odczytywać, jak użytkownik się zaloguje, w jaki sposób zostanie wykonana płatność i kto będzie edytować treść. Samo użycie popularnych technologii nie zastępuje właściwego zaprojektowania tych zależności. Więcej o zakresie takich realizacji znajdziesz na stronie [tworzenie stron Next.js](/uslugi/aplikacje-nextjs).",
+        ],
+      },
+      {
+        id: "realizacje-pokazuja-rozne-zastosowania-next-js",
+        heading: "Realizacje pokazują różne zastosowania Next.js",
+        body: [
+          "Własnym projektem zbudowanym w Next.js jest [Kantorymapa](/projekty/kantorymapa). Serwis obejmuje 1900 kantorów w 140 miastach i codziennie publikuje kursy NBP. Wykorzystuje programmatic SEO, czyli tworzenie dużej liczby uporządkowanych stron na podstawie danych, a sama aplikacja ładuje się poniżej sekundy.",
+          "Ceny Notarialne to inny przykład pracy z rozbudowanym zbiorem informacji. Projekt prezentuje ceny transakcyjne z RCN, wykorzystuje mapy MapLibre i obejmuje tysiące podstron lokalizacji. W takim serwisie znaczenie ma nie tylko warstwa wizualna, lecz także sposób organizacji danych oraz generowania stron dla poszczególnych miejsc.",
+          "Dla firmy Galabau Darius z Niemiec przygotowałem konfigurator wyceny ogrodzeń działający na żywo. Użytkownik może dobierać elementy, a firma korzysta z panelu administracyjnego zabezpieczonego przez Clerk. Projekt wykorzystuje również Prisma i działa na Vercel.",
+          "Te realizacje pokazują trzy różne scenariusze: serwis oparty na regularnie aktualizowanych danych, rozbudowaną strukturę lokalizacji oraz narzędzie wspierające wycenę produktu. Dlatego wybierając wykonawcę, warto porównać nie tylko wygląd jego projektów. Istotne jest również to, czy potrafi połączyć interfejs, dane, logowanie, mapy lub inne funkcje potrzebne w Twoim modelu biznesowym.",
+        ],
+      },
+      {
+        id: "po-uruchomieniu-aplikacja-wymaga-okreslonych-zasad-opieki",
+        heading: "Po uruchomieniu aplikacja wymaga określonych zasad opieki",
+        body: [
+          "Start wersji produkcyjnej nie oznacza, że aplikacja przestaje wymagać uwagi. Po wdrożeniu sprawdzam jej działanie i obejmuję projekt 60 dniami gwarancji oraz bezpłatnych poprawek. Ten okres służy usunięciu błędów dotyczących uzgodnionego i wdrożonego zakresu.",
+          "Po zakończeniu gwarancji możesz skorzystać z opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok. Współpraca może dotyczyć utrzymania istniejących funkcji albo dalszego rozwoju produktu. Zakres opieki ustalam przy jej rozpoczęciu, ponieważ inne potrzeby ma stabilna aplikacja używana przez stałą grupę klientów, a inne produkt, do którego regularnie dochodzą nowe moduły.",
+          "Jeżeli projekt z czasem urośnie, oceniam, czy nadal mogę odpowiedzialnie rozwijać go sam. Gdy tempo prac lub liczba równoległych zadań zaczynają wymagać większego zespołu Next.js, mówię o tym wprost. Uporządkowany kod i dokumentacja ułatwiają włączenie kolejnego programisty, choć czas potrzebny na przejęcie części prac zawsze zależy od złożoności aplikacji.",
+        ],
+      },
+    ],
+  },
 };
