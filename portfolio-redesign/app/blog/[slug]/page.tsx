@@ -225,8 +225,23 @@ export default async function PostPage({
                       <p key={j}>{renderInlineLinks(para)}</p>
                     ))}
                   </div>
+                  {s.table && s.table.head.length > 3 && (
+                    <dl className="mt-10 divide-y divide-line border-y border-line md:hidden">
+                      {s.table.rows.map((row, j) => (
+                        <div key={j} className="py-4">
+                          <dt className="mb-2 text-ink">{row[0]}</dt>
+                          {row.slice(1).map((cell, k) => (
+                            <dd key={k} className="mt-1 text-[0.95rem] leading-snug text-ink-mute">
+                              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{s.table!.head[k + 1]}: </span>
+                              {cell}
+                            </dd>
+                          ))}
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                   {s.table && (
-                    <div className="mt-10 overflow-x-auto">
+                    <div className={`mt-10 overflow-x-auto ${s.table.head.length > 3 ? "hidden md:block" : ""}`}>
                         <table className="w-full border-collapse text-left text-[0.95rem] md:text-base">
                           <caption className="caption-bottom pt-4 text-left text-sm text-ink-faint">
                             {s.table.caption}
@@ -237,7 +252,7 @@ export default async function PostPage({
                                 <th
                                   key={j}
                                   scope="col"
-                                  className={`pb-3 font-mono text-[10px] font-normal uppercase tracking-[0.18em] text-ink-faint ${j > 0 ? "pl-3 text-right align-bottom" : "align-bottom"}`}
+                                  className={`pb-3 font-mono text-[10px] font-normal uppercase tracking-[0.18em] text-ink-faint ${j > 0 ? `pl-3 align-bottom ${numericCol(s.table!, j) ? "text-right" : "text-left"}` : "align-bottom"}`}
                                 >
                                   {h}
                                 </th>
@@ -253,7 +268,7 @@ export default async function PostPage({
                                       {cell}
                                     </th>
                                   ) : (
-                                    <td key={k} className="py-3 pl-3 text-right tabular-nums whitespace-nowrap text-ink-mute">
+                                    <td key={k} className={`py-3 pl-3 text-ink-mute ${numericCol(s.table!, k) ? "text-right tabular-nums whitespace-nowrap" : "text-left align-top leading-snug"}`}>
                                       {cell}
                                     </td>
                                   )
@@ -452,4 +467,9 @@ export default async function PostPage({
       )}
     </article>
   );
+}
+
+/** Kolumna liczbowa (kwoty, procenty, liczby) zostaje wyrównana do prawej i się nie łamie. */
+function numericCol(table: { rows: string[][] }, col: number): boolean {
+  return table.rows.every((r) => /^[\s\d.,%+\-–−/≈~]*$/.test(r[col] ?? "") || (r[col] ?? "").length <= 8);
 }
