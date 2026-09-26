@@ -142,18 +142,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-kancelarii-prawnych",
     title: "Kancelarie prawne",
     keyword: "tworzenie stron dla kancelarii prawnych",
-    metaTitle: "Tworzenie stron dla kancelarii prawnych — zakres i termin",
+    metaTitle: "Tworzenie stron dla kancelarii prawnych: etyka i kontakt",
     metaDescription: "Tworzenie stron dla kancelarii prawnych: specjalizacje, bezpieczny formularz i treść zgodna z etyką zawodową. Termin 4-6 tygodni.",
     h1: "Tworzenie stron dla kancelarii prawnych",
-    lead: "Tworzenie stron dla kancelarii prawnych ma warunek, którego nie ma żadna inna branża: treść musi przekonać klienta, nie łamiąc przy tym zasad etyki zawodowej. Buduję witryny, na których człowiek szukający pomocy rozpoznaje swoją sprawę w kilka sekund i wie, czy dzwoni do adwokata, radcy prawnego czy notariusza. Bez obietnic wyniku i bez marketingowego tonu.",
+    lead: "Projektuję strony dla kancelarii, adwokatów, radców prawnych i notariuszy, które jasno pokazują zakres pomocy i ułatwiają bezpieczny kontakt. Pracuję z Wrocławia, zdalnie z kancelariami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla kancelarii prawnych zaczynam od briefu, analizy specjalizacji oraz zaplanowania podstron, które odpowiadają na pytania potencjalnych klientów. Projekt graficzny buduje zaufanie bez reklamowych obietnic, a widoczny telefon, adres e-mail i bezpieczny formularz kontaktowy ułatwiają pierwszy kontakt. Serwis uwzględnia RODO, responsywność i wersję mobilną. Mogę wdrożyć go na [WordPressie z autorskim motywem](/uslugi/tworzenie-stron-wordpress), bez gotowych kreatorów.",
-      "Dla kancelarii adwokackiej Marii Piontek w Łodzi przygotowałem witrynę opisującą prawo karne, cywilne, rodzinne, administracyjne i gospodarcze. Zobacz [realizację kancelarii](/projekty/kancelaria-mpiontek) oraz portal [Ceny Notarialne](/projekty/cenynotarialne), który wykorzystuje Next.js, mapy i dane dla tysięcy lokalizacji. Przy większym serwisie dobieram [rozwiązanie oparte na Next.js](/uslugi/aplikacje-nextjs), a zakres, hosting i opiekę po wdrożeniu ustalisz ze mną przez [formularz kontaktowy](/kontakt)."
+      "Dobra strona prawnika musi pogodzić czytelną prezentację specjalizacji z zasadami etyki zawodowej. Przy tworzeniu stron dla kancelarii prawnych porządkuję dziedziny prawa, profile prawników i drogę do kontaktu, a formularz ograniczam do potrzebnych danych. Serwis mogę wdrożyć na [WordPressie z własnym motywem](/uslugi/tworzenie-stron-wordpress), bez Elementora, Divi i innych kreatorów.",
+      "Dla kancelarii adwokackiej Marii Piontek przygotowałem stronę opisującą między innymi prawo karne, cywilne, rodzinne, administracyjne i gospodarcze. [Realizacja kancelarii](/projekty/kancelaria-mpiontek) pokazuje, jak można rozdzielić zakres pomocy i jednocześnie zachować spokojny, informacyjny charakter serwisu. Przy większym projekcie mogę też wykorzystać [Next.js](/uslugi/aplikacje-nextjs), jeśli wymaga tego funkcjonalność strony."
     ],
     pains: [
       {
         title: "Nieczytelne specjalizacje",
-        body: "Klient nie rozpozna, czy kancelaria prowadzi jego rodzaj sprawy, jeśli cała oferta mieści się w jednym ogólnym akapicie. Zamyka kartę i dzwoni gdzie indziej. Podczas tworzenia strony dzielę usługi według dziedzin prawa i kieruję odbiorcę do właściwego prawnika."
+        body: "Jeśli wszystkie specjalizacje mieszczą się w jednym ogólnym opisie, osoba szukająca pomocy może nie rozpoznać, czy kancelaria prowadzi jej rodzaj sprawy. Dlatego dzielę ofertę według dziedzin prawa i prowadzę użytkownika do właściwej specjalizacji albo prawnika."
       },
       {
         title: "Kontakt ukryty w menu",
@@ -218,63 +218,63 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla kancelarii prawnej?",
-        a: "Największą różnicę robi liczba specjalizacji i profili prawników, bo każdy z nich to osobna podstrona z własną treścią. Dochodzą wersje językowe i to, czy teksty piszę ja, czy dostaję je od kancelarii. Napisz, co ma się znaleźć na stronie, a odeślę kwotę."
+        q: "Ile będzie kosztować strona dla mojej kancelarii?",
+        a: "Najwięcej zależy od liczby specjalizacji, profili prawników, wersji językowych i zakresu pracy nad treścią. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
       },
       {
-        q: "Ile trwa tworzenie strony kancelarii prawnej?",
-        a: "Realizacja zajmuje zwykle 4-6 tygodni. Termin obejmuje projekt graficzny, wdrożenie i testy, przy sprawnym przekazywaniu materiałów oraz akceptowaniu etapów."
+        q: "Ile potrwa przygotowanie strony mojej kancelarii?",
+        a: "Dla strony firmowej lub usługowej typowy termin to 4-6 tygodni. Dokładny harmonogram ustalam po poznaniu zakresu i materiałów."
       },
       {
-        q: "Czy strona internetowa kancelarii może reklamować usługi?",
-        a: "Serwis może informować o zakresie pomocy, kwalifikacjach i sposobie kontaktu, lecz treść musi respektować zasady etyki danego zawodu. Unikam porównań, obietnic wyniku i nachalnych komunikatów sprzedażowych."
+        q: "Czy na stronie mojej kancelarii mogę reklamować usługi?",
+        a: "Projektuję treść tak, aby przedstawiała zakres pomocy, kwalifikacje i sposób kontaktu bez obietnic wyniku czy agresywnego tonu. Zasady informowania zależą od zawodu i właściwego samorządu, dlatego treści prawne po Twojej stronie powinny być zatwierdzone."
       },
       {
-        q: "Jak zabezpieczasz formularz na stronie kancelarii?",
-        a: "Stosuję szyfrowanie SSL, ograniczam liczbę pól i umieszczam klauzulę informacyjną RODO. Nie proszę o rozbudowany opis sprawy, jeśli do pierwszego kontaktu wystarczą podstawowe dane."
+        q: "Jak zabezpieczysz formularz na stronie kancelarii?",
+        a: "Ograniczam formularz do potrzebnych pól, używam szyfrowanego połączenia i umieszczam wskazaną klauzulę dotyczącą przetwarzania danych. Nie projektuję pierwszego kontaktu jako miejsca na rozbudowany opis sprawy."
       },
       {
-        q: "Czy mogę samodzielnie edytować treści witryny?",
-        a: "Tak, CMS WordPress pozwala zmieniać opisy usług, dane prawników i wpisy blogowe. Przy przekazaniu pokazuję najważniejsze pola oraz bezpieczny sposób publikowania zmian."
+        q: "Czy będę mógł sam edytować treści strony?",
+        a: "Tak. Na WordPressie przygotowuję własny motyw i pola ACF, dzięki którym możesz edytować ustalone sekcje zgodnie z projektem. Przy przekazaniu pokazuję Ci obsługę strony podczas szkolenia online."
       },
       {
-        q: "Czy blog na stronie kancelarii pomaga pozyskiwać klientów?",
-        a: "Blog pozwala odpowiadać na szczegółowe pytania wpisywane w Google i wspiera pozycjonowanie specjalizacji. Rezultat zależy od jakości, regularności oraz dopasowania tematów do usług kancelarii."
+        q: "Czy blog na stronie mojej kancelarii ma sens?",
+        a: "Mogę przygotować bazę wiedzy z kategoriami i szablonami wpisów, dzięki czemu łatwiej rozwijać treści odpowiadające na pytania związane ze specjalizacjami. Nie obiecuję konkretnych pozycji w Google."
       },
       {
-        q: "Ile kosztuje roczne utrzymanie strony kancelarii?",
-        a: "Osobno opłacasz domenę, hosting i ewentualne płatne rozszerzenia. Przed wdrożeniem otrzymujesz zestawienie stałych opłat oraz możliwego zakresu opieki technicznej."
+        q: "Jakie będą koszty utrzymania strony kancelarii?",
+        a: "Osobno rozliczasz domenę, hosting i ewentualne płatne rozszerzenia. Pomagam dobrać hosting do projektu, na przykład Hostinger albo cyber_folks, a zakres późniejszej opieki możemy ustalić osobno."
       },
       {
         q: "Czy przeniesiesz treści ze starej strony kancelarii?",
-        a: "Przeniosę wskazane podstrony, profile prawników i publikacje w liczbie ustalonej w umowie. Zachowam potrzebne adresy albo ustawię przekierowania, aby ograniczyć utratę ruchu z wyszukiwarki."
+        a: "Tak, zakres przenoszonych podstron, profili i publikacji ustalamy przed pracą. Przy zmianie adresów przygotowuję przekierowania 301, a migrację planuję tak, żeby przerwa była jak najkrótsza. Nie obiecuję zachowania dotychczasowych pozycji w Google."
       },
       {
-        q: "Czy strona kancelarii musi mieć regulamin?",
-        a: "Zakres wymaganych dokumentów zależy od formularzy, analityki i sposobu świadczenia usług. Dostarczasz zatwierdzone treści prawne, a ja umieszczam je w serwisie i konfiguruję mechanizm zgód."
+        q: "Czy przygotujesz regulamin i dokumenty prawne dla strony?",
+        a: "Mogę umieścić na stronie zatwierdzone przez Ciebie treści i skonfigurować mechanizm zgód. Nie przygotowuję samodzielnie interpretacji prawnej tego, jakie dokumenty są wymagane w Twojej kancelarii."
       }
     ],
     cta: "Prześlij brief kancelarii, a przygotuję wycenę tworzenia nowej strony",
     deliverables: [
       {
         label: "Struktura specjalizacji",
-        body: "Otrzymujesz stronę główną, podstronę zespołu, kontakt z formularzem oraz do 10 podstron specjalizacji przygotowanych do pozycjonowania."
+        body: "Przygotowuję stronę główną, prezentację zespołu, kontakt z formularzem oraz podstrony specjalizacji. Ich zakres ustalamy przed wdrożeniem."
       },
       {
         label: "Profile prawników",
-        body: "Dostajesz edytowalny w CMS szablon profilu prawnika z zakresem praktyki, doświadczeniem, publikacjami i danymi kontaktowymi."
+        body: "Tworzę edytowalny w CMS szablon profilu z zakresem praktyki, doświadczeniem, publikacjami i danymi kontaktowymi."
       },
       {
         label: "Baza wiedzy",
-        body: "Publikacje dzielę na kategorie prawne, dodaję wyszukiwarkę artykułów i łączę wpisy z odpowiednimi specjalizacjami kancelarii."
+        body: "Porządkuję publikacje w kategorie, przygotowuję wyszukiwarkę artykułów i łączę treści z odpowiednimi specjalizacjami kancelarii."
       },
       {
         label: "Pomiar zapytań",
-        body: "Podłączam formularze do pomiaru zdarzeń, konfiguruję Google Search Console od pierwszego dnia i sprawdzam widoczność mechanizmu zgód."
+        body: "Konfiguruję pomiar formularzy, Google Search Console i mechanizm zgód. GA4 uruchamiam po zgodzie na cookies."
       },
       {
         label: "Przekazanie kancelarii",
-        body: "Przeprowadzam godzinne szkolenie z publikowania treści, przekazuję instrukcję panelu WordPress i omawiam opiekę po wdrożeniu."
+        body: "Prowadzę szkolenie online z edycji treści i pokazuję, jak bezpiecznie aktualizować stronę. Po starcie zapewniam 60 dni gwarancji i bezpłatnych poprawek, a później mogę przejąć opiekę w miesięcznym abonamencie."
       }
     ],
     headings: {
@@ -322,18 +322,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-gabinetow-i-klinik",
     title: "Gabinety i kliniki",
     keyword: "tworzenie stron dla gabinetów i klinik",
-    metaTitle: "Tworzenie stron dla gabinetów i klinik — rejestracja online",
+    metaTitle: "Tworzenie stron dla gabinetów i klinik: rejestracja",
     metaDescription: "Tworzenie stron dla gabinetów i klinik: rejestracja online, cennik zabiegów i formularz zgodny z RODO. Realizacja 4-6 tygodni.",
     h1: "Tworzenie stron dla gabinetów i klinik",
-    lead: "Tworzenie stron dla gabinetów i klinik rozstrzyga się przy jednej rzeczy, czyli przy rejestracji z telefonu. Pacjent szuka gabinetu wieczorem, z bólem, jedną ręką, i albo zapisze się w dwóch kliknięciach, albo dzwoni do następnego. Dlatego numer, adres i sposób umówienia wizyty u stomatologa, fizjoterapeuty czy kosmetologa stawiam na pierwszym ekranie, a ofertę i cennik zaraz pod nimi.",
+    lead: "Projektuję strony dla gabinetów i klinik, na których pacjent szybko znajduje usługę, cennik, kontakt i sposób umówienia wizyty. Pracuję z Wrocławia, zdalnie z placówkami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla gabinetów i klinik obejmuje analizę potrzeb pacjentów, projekt graficzny oraz wdrożenie szybkiej wersji mobilnej. Usługi porządkuję według problemów odbiorcy, cennik pokazuję bez ukrywania podstawowych informacji, a rejestrację łączę z właściwym kalendarzem. Formularz kontaktowy zbiera tylko potrzebne dane, działa przez SSL i uwzględnia RODO. Serwis przygotowuję jako [nowoczesną stronę firmową](/uslugi/nowoczesna-strona-firmowa-2026) zgodną z zasadami responsywności.",
-      "Dla kliniki kosmetologii Queen Scarlet powstała strona WordPress prezentująca kriolipolizę i laserową stymulację kolagenu. Zobacz [projekt Queen Scarlet](/projekty/queen-scarlet), aby poznać układ oferty zabiegowej, profili specjalistów i zapisów. Po publikacji mogę zapewnić [opiekę nad WordPressem](/uslugi/opieka-wordpress) albo zająć się [przyspieszeniem istniejącej witryny](/uslugi/przyspieszanie-stron-wordpress) pod kątem Core Web Vitals. Brief, hosting i zakres projektu omówimy przez [formularz kontaktowy](/kontakt)."
+      "Pacjent często trafia na stronę z telefonu i chce od razu wiedzieć, gdzie przyjmuje specjalista, ile kosztuje usługa i jak się zapisać. Przy tworzeniu stron dla gabinetów i klinik porządkuję ofertę, cennik oraz ścieżkę kontaktu, a formularz ograniczam do danych potrzebnych na pierwszym etapie. Stronę mogę oprzeć na [WordPressie z własnym motywem](/uslugi/tworzenie-stron-wordpress).",
+      "Dla kliniki kosmetologii Queen Scarlet przygotowałem stronę WordPress prezentującą między innymi kriolipolizę i laserową stymulację kolagenu. [Projekt Queen Scarlet](/projekty/queen-scarlet) pokazuje układ oferty zabiegowej, profili specjalistów i zapisów. Po publikacji mogę zapewnić [opiekę nad WordPressem](/uslugi/opieka-wordpress) albo zająć się [przyspieszeniem istniejącej witryny](/uslugi/przyspieszanie-stron-wordpress)."
     ],
     pains: [
       {
         title: "Rejestracja bez jasnej ścieżki",
-        body: "Pacjent widzi kilka numerów i formularzy, lecz nie wie, który kanał wybrać. Część pacjentów rezygnuje w tym miejscu. Na stronie gabinetu łączę każdą usługę z właściwą metodą zapisu i pokazuję ją w przewidywalnym miejscu."
+        body: "Kilka numerów, formularzy i różnych sposobów zapisu potrafi utrudnić pacjentowi wybór właściwej drogi. Łączę więc każdą usługę z odpowiednią metodą rejestracji i pokazuję ją w stałym, łatwym do znalezienia miejscu."
       },
       {
         title: "Oferta bez cen",
@@ -398,63 +398,63 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla gabinetu lub kliniki?",
-        a: "Decyduje sposób rejestracji. Prosty formularz kontaktowy to inny zakres pracy niż integracja z systemem, w którym gabinet już prowadzi terminarz. Poza tym liczy się liczba usług w cenniku i to, czy jest galeria efektów. Opisz, jak dziś zapisują się pacjenci, a policzę na tej podstawie."
+        q: "Ile będzie kosztować strona mojego gabinetu lub kliniki?",
+        a: "Najwięcej zmienia sposób rejestracji, bo prosty formularz to inny zakres niż połączenie strony z zewnętrznym systemem. Biorę też pod uwagę liczbę usług, cennik i galerię. Po rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
       },
       {
-        q: "Jak długo trwa tworzenie strony placówki?",
-        a: "Praca trwa zazwyczaj 4-6 tygodni i obejmuje projekt graficzny, wdrożenie oraz testy. Duża liczba opisów zabiegów lub oczekiwanie na zdjęcia może wydłużyć harmonogram."
+        q: "Ile potrwa przygotowanie strony mojej placówki?",
+        a: "Dla strony firmowej lub usługowej typowy termin to 4-6 tygodni. Dokładny harmonogram zależy od zakresu i gotowości materiałów."
       },
       {
-        q: "Jaki system rejestracji połączyć ze stroną gabinetu?",
-        a: "Booksy sprawdza się w wielu usługach kosmetycznych, Docplanner jest rozpoznawalny wśród pacjentów medycznych, a Proassist obsługuje pracę placówek i terminarze. Wybór opieram na liczbie specjalistów, opłatach, przypomnieniach i sposobie zarządzania grafikiem."
+        q: "Jaki system rejestracji połączysz ze stroną mojego gabinetu?",
+        a: "Najpierw sprawdzam, z jakiego systemu już korzystasz i w jaki sposób pozwala połączyć się ze stroną. Dopiero wtedy ustalam najlepszy sposób przejścia z konkretnej usługi do zapisu."
       },
       {
         q: "Czy formularz na stronie może zbierać dane o zdrowiu?",
-        a: "Dane o zdrowiu wymagają szczególnej ochrony i odpowiedniej podstawy przetwarzania. Przy pierwszym kontakcie zwykle ograniczam pola do imienia, danych zwrotnych i wyboru usługi, bez szczegółowego wywiadu."
+        a: "Na etapie pierwszego kontaktu ograniczam formularz do podstawowych danych i wyboru usługi. Nie projektuję zwykłego formularza kontaktowego jako miejsca na szczegółowy wywiad medyczny."
       },
       {
-        q: "Czy w witrynie kliniki można publikować zdjęcia efektów?",
-        a: "Tak, jeśli masz właściwą zgodę pacjenta na konkretny sposób publikacji. Zdjęcia powinny być prawdziwe, opisane bez obietnicy wyniku i usunięte po wycofaniu zgody, gdy przepisy tego wymagają."
+        q: "Czy mogę pokazywać na stronie zdjęcia efektów zabiegów?",
+        a: "Mogę przygotować galerię na materiały, które masz prawo publikować. Zdjęcia opisuję rzeczowo, bez obietnicy, że każda osoba uzyska taki sam rezultat."
       },
       {
-        q: "Czy strona gabinetu pomoże w lokalnych wynikach Google?",
-        a: "Przygotowuję podstrony usług, dane placówki, mapę witryny i schema.org pod techniczne pozycjonowanie. Widoczność zależy też od Profilu Firmy w Google, opinii, konkurencji i rozwijania przydatnych treści."
+        q: "Czy przygotujesz stronę pod lokalną widoczność w Google?",
+        a: "Tak. Przy wdrożeniu dbam między innymi o strukturę nagłówków, dane strukturalne, mapę strony i Google Search Console. Nie obiecuję konkretnych pozycji w wynikach wyszukiwania."
       },
       {
-        q: "Jaki hosting wybrać dla strony gabinetu?",
-        a: "Hosting dobierzesz do liczby wizyt, używanego systemu rejestracji i wymagań dotyczących kopii zapasowych. Otrzymasz parametry techniczne oraz listę funkcji, które warto uwzględnić w umowie z dostawcą."
+        q: "Jaki hosting wybrać dla strony mojego gabinetu?",
+        a: "Pomagam dobrać hosting do strony i sposobu rejestracji, na przykład Hostinger albo cyber_folks. Sprawdzam też wymagania techniczne projektu, kopie zapasowe i zasoby potrzebne do sprawnego działania."
       },
       {
-        q: "Czy przeniesiesz stronę kliniki bez przerwy w działaniu?",
-        a: "Przygotuję nową wersję na środowisku roboczym, a zmianę domeny wykonam po akceptacji. Krótka niedostępność może wystąpić podczas aktualizacji ustawień domeny, dlatego przełączenie zaplanujemy poza godzinami największego ruchu."
+        q: "Czy przeniesiesz starą stronę kliniki bez przerwy?",
+        a: "Nową wersję przygotowuję przed przełączeniem domeny i migrację planuję tak, żeby przerwa była jak najkrótsza. Przy zmianie DNS może jednak wystąpić krótka niedostępność."
       },
       {
-        q: "Czy strona gabinetu musi spełniać wymogi dostępności?",
-        a: "Sprawdzę kontrast, obsługę klawiaturą, opisy pól i strukturę nagłówków według uzgodnionego standardu. Jeśli podlegasz szczególnym obowiązkom prawnym, dostarczasz ich interpretację, a ja wdrażam wskazane wymagania techniczne."
+        q: "Czy przygotujesz stronę zgodnie z wymaganiami dostępności?",
+        a: "Mogę wdrożyć uzgodnione wymagania techniczne, w tym zadbać o kontrast, obsługę klawiaturą, opisy pól i strukturę nagłówków. Jeśli Twoją placówkę obejmują szczególne obowiązki prawne, potrzebuję od Ciebie ich zatwierdzonej interpretacji."
       }
     ],
     cta: "Prześlij brief gabinetu, a przygotuję wycenę strony z rejestracją",
     deliverables: [
       {
         label: "Katalog zabiegów",
-        body: "Otrzymujesz do 15 podstron zabiegów z opisem wskazań, przeciwwskazań, przygotowania, przebiegu i zaleceń dla pacjenta."
+        body: "Przygotowuję podstrony usług z miejscem na wskazania, przeciwwskazania, przygotowanie, przebieg i zalecenia. Zakres ustalamy przed wdrożeniem."
       },
       {
         label: "Zespół placówki",
-        body: "Dostajesz szablon profilu specjalisty z kwalifikacjami, zakresem świadczeń, miejscem przyjęć i odnośnikiem do rejestracji."
+        body: "Tworzę szablon profilu specjalisty z kwalifikacjami, zakresem świadczeń, miejscem przyjęć i odnośnikiem do rejestracji."
       },
       {
         label: "Rejestracja wizyt",
-        body: "Osadzam wybrany system rejestracji, ustawiam przyciski zapisu przy usługach i testuję całą ścieżkę w wersji mobilnej."
+        body: "Łączę stronę z wybranym sposobem rejestracji, ustawiam przyciski zapisu przy usługach i testuję ścieżkę na telefonie."
       },
       {
         label: "Informacje dla pacjenta",
-        body: "Tworzę sekcję z cennikiem, przygotowaniem do wizyty, plikami do pobrania, dojazdem i zasadami odwoływania terminów."
+        body: "Przygotowuję sekcje na cennik, przygotowanie do wizyty, pliki do pobrania, dojazd i zasady odwoływania terminów."
       },
       {
         label: "Kontrola wydajności",
-        body: "Optymalizuję autorski motyw WordPress pod Core Web Vitals i potwierdzam przed oddaniem wynik Lighthouse co najmniej 90 punktów na urządzeniach mobilnych."
+        body: "Optymalizuję stronę pod Core Web Vitals i przed oddaniem sprawdzam wynik Lighthouse na telefonie. Celem jest wynik 90+ oraz LCP poniżej 2,5 s."
       }
     ],
     headings: {
@@ -505,15 +505,15 @@ export const industries: Industry[] = [
     metaTitle: "Tworzenie sklepów internetowych dla marek odzieżowych",
     metaDescription: "Tworzenie sklepów internetowych dla marek odzieżowych: warianty, tabela rozmiarów, płatności i Allegro. Realizacja 6-8 tygodni.",
     h1: "Tworzenie sklepów internetowych dla marek odzieżowych",
-    lead: "Tworzenie sklepów internetowych dla marek odzieżowych sprowadza się do panowania nad wariantami. Rozmiary, kolory, stany i kolekcje sezonowe potrafią rozjechać cały katalog, a rozmiar pozostaje najczęstszym powodem zwrotu. Buduję sklepy, w których tabela wymiarów, skład tkaniny, termin dostawy i dostępność konkretnego wariantu stoją dokładnie tam, gdzie klient decyduje o zakupie.",
+    lead: "Buduję sklepy dla marek odzieżowych, w których rozmiary, kolory, stany magazynowe i kolekcje pozostają czytelne również na telefonie. Pracuję z Wrocławia, zdalnie z markami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie sklepów internetowych dla marek odzieżowych zaczynam od briefu, architektury kategorii i projektu graficznego dopasowanego do kolekcji. Wdrożenie realizuję na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce), z autorskim motywem, wygodnym CMS i kartami produktów przygotowanymi dla rozmiarów oraz kolorów. Tabele wymiarów, skład materiału, zasady zwrotów i dostępność wariantów stoją tam, gdzie klient decyduje o zakupie, także na telefonie.",
-      "W sklepie [LumiKids](/projekty/lumikids) przebudowałem warstwę wizualną, strony kolekcji, karty produktów oraz strukturę kategorii pod frazy zakupowe. [Kosmoteka](/projekty/kosmoteka) pokazuje autorski układ kart, integrację z hurtownią, płatnościami i dostawami. Przy migracji pilnuję przekierowań starych adresów, widoczności w wyszukiwarce i Core Web Vitals. Zakres wdrożenia, hosting i opiekę po starcie ustalimy podczas [rozmowy o sklepie](/kontakt)."
+      "W sklepie odzieżowym karta produktu musi pomagać wybrać właściwy wariant, a nie dokładać kolejnych pytań przed zakupem. Przy tworzeniu sklepów internetowych dla marek odzieżowych porządkuję kategorie, warianty, tabele wymiarów i informacje o dostępności. Wdrożenie mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce) z własnym motywem i panelem do edycji treści.",
+      "Przy sklepie [LumiKids](/projekty/lumikids) pracowałem nad warstwą wizualną, stronami kolekcji, kartami produktów i strukturą kategorii. Przy migracji przygotowuję przekierowania starych adresów i sprawdzam techniczne elementy SEO, ale nie obiecuję zachowania dotychczasowych pozycji w Google."
     ],
     pains: [
       {
         title: "Chaos w wariantach",
-        body: "Nieczytelny wybór koloru i rozmiaru prowadzi do błędnych zamówień albo opuszczenia sklepu. Każda pomyłka to koszt zwrotu. Karta produktu pokazuje stan każdego wariantu, właściwe zdjęcie i odnośnik do tabeli wymiarów."
+        body: "Gdy wybór rozmiaru i koloru jest nieczytelny, klient może zamówić niewłaściwy wariant albo zrezygnować z zakupu. Na karcie produktu pokazuję stan danego wariantu, odpowiednie zdjęcie i łatwy dostęp do tabeli wymiarów."
       },
       {
         title: "Niepewny dobór rozmiaru",
@@ -578,63 +578,63 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie sklepu internetowego dla marki odzieżowej?",
-        a: "Sklep odzieżowy wycenia się przez warianty, nie przez liczbę produktów. Trzydzieści modeli w pięciu rozmiarach i czterech kolorach to sześćset kombinacji do ogarnięcia w stanach magazynowych. Do tego dochodzi migracja starego katalogu i integracje. Pokaż obecny sklep albo listę produktów, to policzę konkretnie."
+        q: "Ile będzie kosztować sklep dla mojej marki odzieżowej?",
+        a: "Największy wpływ mają warianty produktów, integracje i ewentualna migracja starego katalogu. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
       },
       {
-        q: "Jak długo trwa tworzenie sklepu dla marki odzieżowej?",
-        a: "Prace zajmują zwykle 6-8 tygodni od zatwierdzenia zakresu i dostarczenia materiałów. Projekt graficzny, migracja danych lub rozbudowana synchronizacja mogą wpłynąć na harmonogram."
+        q: "Ile potrwa przygotowanie mojego sklepu odzieżowego?",
+        a: "Mniejszy sklep WooCommerce zwykle zajmuje 6-8 tygodni. Przy bardziej rozbudowanym sklepie z B2B, wersjami językowymi albo migracją typowy termin to 10-14 tygodni."
       },
       {
-        q: "Czy przeniesiesz sklep odzieżowy z Shopera albo Shopify?",
-        a: "Tak, po sprawdzeniu eksportu produktów, klientów i zamówień. Przed migracją ustalamy mapowanie kategorii, wariantów, adresów oraz przekierowań ze starych podstron."
+        q: "Czy przeniesiesz mój sklep z Shopera albo Shopify?",
+        a: "Mogę przeprowadzić migrację po sprawdzeniu danych dostępnych do eksportu. Przed przenosinami ustalam mapowanie kategorii, wariantów i adresów, a dla zmienionych adresów przygotowuję przekierowania 301."
       },
       {
-        q: "Czy sklep internetowy zsynchronizuje stany z Allegro?",
-        a: "Tak, jeśli wybrana integracja obsługuje strukturę Twoich ofert i wariantów. Przed wdrożeniem określamy, który system jest źródłem cen, stanów oraz opisów."
+        q: "Czy mój sklep może synchronizować stany z Allegro?",
+        a: "Tak, jeśli wybrane rozwiązanie obsługuje strukturę Twoich ofert i wariantów. Przed wdrożeniem ustalam, który system ma być źródłem cen, stanów i opisów."
       },
       {
-        q: "Kto wprowadza produkty do sklepu odzieżowego?",
-        a: "Zakres obejmuje ustaloną partię produktów potrzebną do uruchomienia i sprawdzenia szablonów. Pozostałe pozycje możesz dodać w CMS według przygotowanego wzorca albo zlecić ich import osobno."
+        q: "Kto wprowadzi produkty do mojego sklepu?",
+        a: "Zakres produktów potrzebnych do uruchomienia ustalamy przed pracą. Mogę też przygotować wzorzec i panel, dzięki którym później samodzielnie dodasz kolejne pozycje, albo zaplanować import, jeśli masz uporządkowane dane."
       },
       {
-        q: "Czy przygotujesz zdjęcia do kart produktów?",
-        a: "Nie wykonuję sesji fotograficznych, ale podaję wymagane kadry, proporcje i formaty plików. Dostarczone fotografie optymalizuję do WebP lub AVIF i przypisuję do odpowiednich wariantów."
+        q: "Czy przygotujesz zdjęcia produktów?",
+        a: "Nie wykonuję sesji fotograficznych. Mogę określić potrzebne kadry, proporcje i formaty, a przekazane zdjęcia przygotować do użycia w sklepie i przypisać do wariantów."
       },
       {
-        q: "Jakie są miesięczne koszty utrzymania sklepu odzieżowego?",
-        a: "Uwzględnisz hosting, domenę, operatora płatności, wysyłki i używane rozszerzenia WooCommerce. Przed uruchomieniem otrzymasz tabelę kosztów stałych oraz opłat naliczanych od zamówienia."
+        q: "Jakie stałe koszty będzie miał mój sklep?",
+        a: "Po Twojej stronie pozostają między innymi domena, hosting, operator płatności, dostawy i używane płatne rozszerzenia. Pomagam dobrać hosting, na przykład Hostinger albo cyber_folks, i przed uruchomieniem wskazuję elementy, które będą generować stałe opłaty."
       },
       {
-        q: "Jak sklep internetowy powinien obsługiwać zwroty odzieży?",
-        a: "Musisz przekazać klientowi zasady odstąpienia od umowy i udostępnić wymagane informacje przed zakupem. Wdrożę wskazaną procedurę, formularz oraz powiadomienia, ale treść dokumentów zatwierdzasz samodzielnie lub z prawnikiem."
+        q: "Czy wdrożysz obsługę zwrotów w moim sklepie?",
+        a: "Mogę przygotować uzgodnioną procedurę, formularz i powiadomienia. Treść dokumentów prawnych przekazujesz mi po zatwierdzeniu samodzielnie albo z prawnikiem."
       },
       {
-        q: "Czy sklep obsłuży wzrost zamówień podczas premiery kolekcji?",
-        a: "Przed premierą wykonam testy wydajności i ograniczę elementy obciążające kartę produktu oraz koszyk. Przy dużym planowanym ruchu dobierzesz mocniejszy serwer na podstawie szacowanej liczby jednoczesnych klientów."
+        q: "Czy sklep poradzi sobie z większym ruchem podczas premiery?",
+        a: "Przed oddaniem sprawdzam wydajność strony, a celem jest Lighthouse 90+ na telefonie i LCP poniżej 2,5 s. Dobór hostingu i dodatkowych zasobów ustalam do konkretnego projektu oraz spodziewanego obciążenia."
       }
     ],
     cta: "Prześlij brief kolekcji i kanałów sprzedaży, a wycenię sklep dla Twojej marki odzieżowej",
     deliverables: [
       {
         label: "Sklep WooCommerce",
-        body: "Otrzymujesz sklep WooCommerce z koszykiem, zamówieniem bez rejestracji, kontem klienta oraz wiadomościami transakcyjnymi."
+        body: "Przygotowuję sklep WooCommerce z koszykiem, zamówieniem bez rejestracji, kontem klienta i wiadomościami transakcyjnymi."
       },
       {
         label: "Warianty kolekcji",
-        body: "Konfiguruję rozmiary, kolory, tabele wymiarów, filtry kolekcji i komunikaty o dostępności dla maksymalnie 50 produktów startowych."
+        body: "Konfiguruję rozmiary, kolory, tabele wymiarów, filtry kolekcji i komunikaty o dostępności. Liczbę produktów startowych ustalamy w zakresie projektu."
       },
       {
         label: "Płatności i wysyłka",
-        body: "Podłączam jednego operatora płatności, dwóch przewoźników oraz zasady darmowej dostawy według wartości koszyka."
+        body: "Podłączam uzgodnione metody płatności i dostawy oraz konfiguruję zasady wysyłki zgodnie z zakresem sklepu."
       },
       {
         label: "Obsługa zwrotów",
-        body: "Tworzę podstronę procedury zwrotu, formularz zgłoszenia, wzór dokumentu do pobrania i wiadomość potwierdzającą przyjęcie zgłoszenia."
+        body: "Przygotowuję miejsce na procedurę zwrotu, formularz zgłoszenia, wskazany dokument do pobrania i wiadomość potwierdzającą przyjęcie zgłoszenia."
       },
       {
         label: "Start sprzedaży",
-        body: "Testuję zakup w wersji mobilnej, konfiguruję podatki i kupony, a następnie prowadzę dwugodzinne wdrożenie z obsługi zamówień."
+        body: "Testuję zakup na telefonie, konfiguruję uzgodnione ustawienia sklepu i prowadzę szkolenie online z obsługi zamówień oraz produktów."
       }
     ],
     headings: {
@@ -682,18 +682,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-producentow-mebli",
     title: "Producenci mebli",
     keyword: "tworzenie stron dla producentów mebli",
-    metaTitle: "Tworzenie stron dla producentów mebli — katalog i hurt",
+    metaTitle: "Tworzenie stron dla producentów mebli: katalog B2B",
     metaDescription: "Tworzenie stron dla producentów mebli: filtrowany katalog, pliki PDF i DWG oraz zapytanie ofertowe. Wdrożenie 6-8 tygodni.",
     h1: "Tworzenie stron dla producentów mebli",
-    lead: "Tworzenie stron dla producentów mebli różni się od zwykłej strony firmowej tym, że obsługuje dwóch odbiorców naraz. Hurtownik chce plików technicznych i danych po zalogowaniu, klient końcowy chce zdjęć i wymiarów, a katalog musi udźwignąć kilkaset pozycji, nie kilkanaście. Projektuję serwisy dla stolarni i dostawców akcesoriów, w których obie ścieżki są rozdzielone, a dane potrafią przyjść z PIM albo ERP.",
+    lead: "Projektuję strony i katalogi dla producentów mebli, stolarni oraz dostawców akcesoriów, z osobnymi ścieżkami dla odbiorców hurtowych i detalicznych. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla producentów mebli zaczynam od briefu, analizy danych produktowych i zaplanowania katalogu B2B oraz części dla odbiorcy detalicznego. Hurtownik szuka wymiarów, materiałów i dokumentacji, a klient końcowy potrzebuje zdjęć, wariantów oraz prostego formularza zapytania. Projekt graficzny rozdziela te potrzeby, filtry skracają drogę do produktu, a lista do wyceny zastępuje koszyk przy indywidualnej kalkulacji. Sprzedaż z ustalonymi cenami mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
-      "Pracowałem przy witrynach Multikonu, producenta nóg, stelaży krzeseł i innych akcesoriów, oraz Stys-Glass, firmy wykonującej hartowanie szkła, balustrady i lustra na wymiar. Zobacz [serwis Multikon](/projekty/multikon), [realizację Stys-Glass](/projekty/stys-glass) i projekt [AdAwards Meble](/projekty/admeble), obejmujący identyfikację marki, SEO oraz sprzedaż internetową. Gdy katalog wymaga integracji, indywidualnego CMS i wysokiej wydajności, wykorzystuję [aplikację w Next.js](/uslugi/aplikacje-nextjs)."
+      "Producent potrzebuje strony, która porządkuje nie tylko zdjęcia, lecz także wymiary, materiały, warianty, dokumentację i sposób składania zapytań. Przy tworzeniu stron dla producentów mebli projektuję katalog pod realne dane produktowe i rozdzielam potrzeby partnera B2B od klienta detalicznego. Jeśli produkty mają ustalone ceny i warunki zakupu, sprzedaż mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+      "Pracowałem przy stronach Multikonu, producenta nóg, stelaży krzeseł i innych akcesoriów, oraz Stys-Glass, firmy zajmującej się hartowaniem szkła, balustradami i lustrami na wymiar. Możesz zobaczyć [serwis Multikon](/projekty/multikon) i [realizację Stys-Glass](/projekty/stys-glass). Jeśli katalog wymaga indywidualnej logiki, integracji z innymi systemami lub własnego panelu, mogę wykorzystać [Next.js](/uslugi/aplikacje-nextjs)."
     ],
     pains: [
       {
         title: "Katalog trudny do przeszukania",
-        body: "Setki produktów bez filtrów zmuszają odbiorcę do otwierania kolejnych kart. Hurtownik nie ma na to czasu. W serwisie producenta buduję filtrowanie według materiału, wymiaru, zastosowania i innych rzeczywistych parametrów oferty."
+        body: "Rozbudowany katalog bez filtrów zmusza odbiorcę do otwierania kolejnych kart produktów i ręcznego porównywania parametrów. Dlatego buduję filtrowanie według materiału, wymiaru, zastosowania i innych cech, które rzeczywiście występują w ofercie producenta."
       },
       {
         title: "Jedna oferta dla wszystkich",
@@ -758,63 +758,63 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla producenta mebli?",
-        a: "Punktem wyjścia jest to, skąd biorą się dane o produktach. Ręcznie uzupełniany katalog kosztuje inaczej niż import z PIM albo ERP, który trzeba raz zaprogramować i potem utrzymać. Na kwotę wpływa też liczba filtrów, poziomy dostępu dla hurtowników i wersje językowe."
+        q: "Ile będzie kosztować strona dla mojego zakładu lub marki meblowej?",
+        a: "Najwięcej zależy od sposobu zasilania katalogu danymi, filtrów, logowania kontrahentów i wersji językowych. Po rozmowie i briefie przygotuję wycenę z konkretnym zakresem oraz terminem."
       },
       {
-        q: "Ile trwa tworzenie katalogu dla producenta mebli?",
-        a: "Wdrożenie zajmuje zwykle 6-8 tygodni. Harmonogram obejmuje projekt graficzny, budowę katalogu i testy, a zależy też od jakości danych, gotowości zdjęć oraz dostępu do PIM lub ERP."
+        q: "Ile potrwa przygotowanie mojego katalogu produktów?",
+        a: "Jeśli projekt ma zakres zbliżony do sklepu internetowego, typowy termin dla mniejszego wdrożenia to 6-8 tygodni. Przy bardziej złożonych integracjach termin ustalam po rozpoznaniu zakresu."
       },
       {
-        q: "Czy strona producenta pobiera produkty z bazy?",
-        a: "Przy niewielkiej ofercie produkty można wprowadzić ręcznie lub zaimportować z uporządkowanego arkusza. Przy większym katalogu łączę witrynę z PIM, ERP albo innym wskazanym źródłem po sprawdzeniu jego możliwości."
+        q: "Czy strona może pobierać produkty z mojej bazy?",
+        a: "Tak, jeśli źródło danych na to pozwala. Przy prostszym katalogu mogę oprzeć import na uporządkowanych danych, a przy rozbudowanym rozwiązaniu najpierw sprawdzam możliwości wskazanego systemu i dopiero wtedy planuję integrację."
       },
       {
-        q: "Czy producent mebli potrzebuje sklepu, czy formularza wyceny?",
-        a: "Sklep pasuje do produktów z ustaloną ceną, dostawą i wariantami możliwymi do samodzielnego wyboru. Lista do wyceny sprawdza się przy produkcji na wymiar, cenach kontraktowych i złożonych konfiguracjach."
+        q: "Czy potrzebuję sklepu, czy wystarczy formularz wyceny?",
+        a: "Sklep wybieram wtedy, gdy produkty mają ustaloną cenę, warunki dostawy i warianty możliwe do samodzielnego zamówienia. Przy produkcji na wymiar albo indywidualnych warunkach handlowych mogę zamiast koszyka przygotować listę produktów wysyłaną jako jedno zapytanie."
       },
       {
-        q: "Czy serwis producenta może mieć kilka wersji językowych?",
-        a: "Tak, każda wersja może mieć osobne adresy, opisy, metadane i walutę. Strukturę planuję przed wdrożeniem, aby dodanie kolejnego rynku nie wymagało przebudowy katalogu."
+        q: "Czy moja strona może mieć kilka wersji językowych?",
+        a: "Tak. Mogę przygotować osobne adresy, treści i metadane dla wersji językowych, a strukturę planuję tak, żeby katalog dało się rozwijać bez stawiania osobnego serwisu dla każdego rynku."
       },
       {
-        q: "Kto przygotowuje zdjęcia do katalogu mebli?",
-        a: "Możesz przekazać gotowe fotografie lub zlecić sesję wybranemu fotografowi produktowemu. Określam potrzebne kadry i proporcje, a następnie optymalizuję pliki do WebP lub AVIF bez niepotrzebnej utraty jakości."
+        q: "Czy przygotujesz zdjęcia do katalogu mebli?",
+        a: "Nie wykonuję sesji produktowych. Mogę określić potrzebne kadry i proporcje, a dostarczone fotografie zoptymalizować do użycia na stronie."
       },
       {
-        q: "Jak często aktualizować katalog mebli na stronie?",
-        a: "Dane aktualizujesz po zmianie wymiarów, materiałów, dostępności albo dokumentacji technicznej. Przy częstych zmianach przygotuję zbiorczy import z arkusza, aby ograniczyć ręczną pracę."
+        q: "Jak będę aktualizować produkty w katalogu?",
+        a: "Sposób zależy od źródła danych. Mogę przygotować edycję w CMS, import z uporządkowanego pliku albo integrację ze wskazanym systemem, jeśli jego możliwości na to pozwalają."
       },
       {
-        q: "Czy można przenieść stronę producenta bez zmiany adresów produktów?",
-        a: "Zachowam dotychczasowe adresy tam, gdzie pozwala na to nowa struktura. Dla pozostałych przygotuję przekierowania i mapę zmian, a po uruchomieniu sprawdzę błędy w Google Search Console."
+        q: "Czy przy zmianie strony zachowasz obecne adresy produktów?",
+        a: "Tam, gdzie nowa struktura na to pozwala, zachowuję adresy. Dla pozostałych przygotowuję przekierowania 301, a po wdrożeniu podłączam Google Search Console. Nie obiecuję zachowania dotychczasowych pozycji w wyszukiwarce."
       },
       {
-        q: "Jaki hosting jest potrzebny dla dużego katalogu mebli?",
-        a: "Hosting dobierzesz do liczby produktów, formatów zdjęć i plików technicznych. Skonfiguruję pomniejszone grafiki, WebP lub AVIF oraz pamięć podręczną, aby ograniczyć transfer i poprawić Core Web Vitals."
+        q: "Jaki hosting wybrać dla mojego katalogu?",
+        a: "Pomagam dobrać hosting do technologii, wielkości katalogu i sposobu przechowywania zdjęć oraz dokumentów, na przykład Hostinger albo cyber_folks. Jeśli projekt wymaga Next.js, mogę wdrożyć go na Vercel albo własnym VPS."
       }
     ],
     cta: "Prześlij brief katalogu, a wycenię tworzenie strony dla Twojej marki meblowej",
     deliverables: [
       {
         label: "Katalog kolekcji",
-        body: "Otrzymujesz katalog do 40 modeli z podziałem na kolekcje, pomieszczenia, materiały i dostępne wykończenia."
+        body: "Przygotowuję katalog z podziałem na uzgodnione kolekcje, zastosowania, materiały i wykończenia. Zakres produktów ustalamy na podstawie danych, którymi dysponujesz."
       },
       {
         label: "Karta produktu",
-        body: "Tworzę szablon karty z wymiarami, wariantami, galerią, plikami technicznymi, terminem realizacji i formularzem zapytania."
+        body: "Tworzę szablon karty z wymiarami, wariantami, galerią, dokumentami technicznymi, informacją o realizacji i formularzem zapytania."
       },
       {
-        label: "Strefa dla architekta",
-        body: "Uruchamiam chronioną strefę katalogu z plikami CAD, próbkami wybarwień i możliwością zgłoszenia dostępu przez formularz."
+        label: "Strefa dla partnerów",
+        body: "Jeśli wymaga tego model sprzedaży, mogę przygotować chronioną część katalogu z materiałami dostępnymi po zalogowaniu i formularzem zgłoszenia dostępu."
       },
       {
         label: "Zapytania handlowe",
-        body: "Rozdzielam zapytania ze strony według regionu lub kolekcji i kieruję je na maksymalnie pięć adresów przedstawicieli."
+        body: "Rozdzielam zapytania według uzgodnionych reguł, na przykład regionu, kolekcji albo rodzaju produktu, i kieruję je do właściwych osób."
       },
       {
         label: "Import danych",
-        body: "Przygotowuję jednorazowy import uzgodnionych pól z arkusza CSV oraz raport rekordów wymagających ręcznej korekty."
+        body: "Przygotowuję import uzgodnionych pól z uporządkowanego źródła danych i wskazuję rekordy wymagające ręcznej korekty."
       }
     ],
     headings: {
@@ -862,18 +862,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-hoteli-i-pensjonatow",
     title: "Hotele i pensjonaty",
     keyword: "tworzenie stron dla hoteli i pensjonatów",
-    metaTitle: "Tworzenie stron dla hoteli i pensjonatów — rezerwacje",
+    metaTitle: "Tworzenie stron dla hoteli i pensjonatów: rezerwacje",
     metaDescription: "Tworzenie stron dla hoteli i pensjonatów: rezerwacja bezpośrednia, kalendarz dostępności i galeria pokoi. Realizacja 5-8 tygodni.",
     h1: "Tworzenie stron dla hoteli i pensjonatów",
-    lead: "Tworzenie stron dla hoteli i pensjonatów ma sens wtedy, gdy strona odbiera rezerwacje portalowi, a nie tylko ładnie wygląda. Każda rezerwacja złożona bezpośrednio to prowizja, która zostaje u obiektu. Projektuję witryny dla hoteli, pensjonatów i apartamentów, na których gość sprawdzi dostępność, zobaczy zdjęcia, warunki odwołania i zarezerwuje pobyt z telefonu, bez przechodzenia przez pośrednika.",
+    lead: "Projektuję strony dla hoteli, pensjonatów i apartamentów, które prowadzą gościa od zdjęć i dostępności do rezerwacji bezpośredniej. Pracuję z Wrocławia, zdalnie z obiektami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla hoteli i pensjonatów obejmuje projekt graficzny, wdrożenie, kalendarz dostępności i czytelną ścieżkę rezerwacji bezpośredniej. Umieszczam cenę oraz zasady odwołania blisko formularza, a galerię optymalizuję pod Core Web Vitals. Fundamentem może być [strona WordPress z autorskim motywem](/uslugi/tworzenie-stron-wordpress).",
-      "Dla Apartamentów Złota Grota we Wrocławiu przygotowałem prezentację apartamentów z jacuzzi, pobytów dla par, samodzielnego zameldowania i rezerwacji bez pośredników. Zobacz [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) oraz [pensjonat Maciejanka](/projekty/maciejanka), trzygwiazdkowy obiekt pod Kobylą Górą. Po publikacji mogę prowadzić [techniczną opiekę nad stroną](/uslugi/opieka-wordpress), a brief prześlesz przez [formularz](/kontakt)."
+      "Dobra strona obiektu noclegowego nie kończy się na galerii. Tworzenie stron dla hoteli i pensjonatów układam wokół wyboru pokoju, sprawdzenia dostępności, ceny, zasad odwołania i możliwie krótkiej drogi do rezerwacji. Fundamentem może być [strona WordPress z własnym motywem](/uslugi/tworzenie-stron-wordpress), połączona z używanym przez Ciebie systemem rezerwacji.",
+      "Dla Apartamentów Złota Grota we Wrocławiu przygotowałem prezentację apartamentów z jacuzzi, pobytów dla par, samodzielnego zameldowania i rezerwacji bez pośredników. Możesz zobaczyć [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) i [pensjonat Maciejanka](/projekty/maciejanka). Po starcie mogę też prowadzić [techniczną opiekę nad stroną](/uslugi/opieka-wordpress)."
     ],
     pains: [
       {
         title: "Zależność od pośredników",
-        body: "Portal zapewnia widoczność, ale każda rezerwacja może oznaczać prowizję i ograniczony kontakt z gościem. Prowizja potrafi zjeść marżę z pobytu. Własna strona hotelu tworzy dodatkowy kanał sprzedaży, w którym samodzielnie przedstawiasz warunki, pokoje i pakiety."
+        body: "Portal rezerwacyjny pomaga dotrzeć do gości, ale uzależnia część sprzedaży od pośrednika i jego warunków. Własna strona daje Ci dodatkowy kanał rezerwacji bezpośredniej, na którym sam pokazujesz pokoje, pakiety, ceny i zasady pobytu."
       },
       {
         title: "Nieaktualna dostępność",
@@ -938,51 +938,51 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla hotelu lub pensjonatu?",
-        a: "Najwięcej waży silnik rezerwacji. Kalendarz z zapytaniem mailowym to jedna praca, a rezerwacja z płatnością online i synchronizacją z kanałami sprzedaży to zupełnie inna. Poza tym liczy się liczba typów pokoi, wersje językowe i to, czy są gotowe zdjęcia obiektu."
+        q: "Ile będzie kosztować strona dla mojego hotelu lub pensjonatu?",
+        a: "Najwięcej na zakres wpływa sposób obsługi rezerwacji. Prosty kalendarz z zapytaniem to inna praca niż płatność online i synchronizacja z kanałami sprzedaży. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem i terminem."
       },
       {
-        q: "Jak długo trwa tworzenie stron dla hoteli i pensjonatów?",
-        a: "Standardowy termin wynosi 5-8 tygodni od zatwierdzenia briefu. Integracja z systemem rezerwacji i przygotowanie wielu wersji językowych mogą przesunąć publikację w stronę górnej granicy."
+        q: "Ile potrwa strona dla mojego hotelu?",
+        a: "Stronę obiektu z integracją rezerwacji realizuję zwykle w 5-8 tygodni. Jeśli dochodzi kilka wersji językowych albo migracja istniejącego serwisu, termin doprecyzuję po briefie."
       },
       {
-        q: "Jaki silnik rezerwacji wybrać do strony hotelu?",
-        a: "Dobór zależy od liczby pokoi, używanych portali, płatności oraz potrzeby synchronizacji kalendarzy. Najpierw analizuję obecny proces, a później porównuję zgodne rozwiązania i koszty wdrożenia."
+        q: "Jaki system rezerwacji wybrać do mojej strony?",
+        a: "Najpierw sprawdzę, jak dziś przyjmujesz rezerwacje, z jakich portali korzystasz i czy potrzebujesz płatności oraz synchronizacji kalendarzy. Na tej podstawie porównam rozwiązania pasujące do Twojego procesu."
       },
       {
-        q: "Czy własna strona hotelu odbierze ruch portalom rezerwacyjnym?",
-        a: "Nie zastąpi ich automatycznie, ale tworzy kanał rezerwacji bezpośredniej dla osób, które znają już obiekt. Pomagają jasne warunki, aktualna dostępność, lokalne pozycjonowanie i spójny Profil Firmy w Google."
+        q: "Czy własna strona zastąpi mi portale rezerwacyjne?",
+        a: "Nie zakładam, że zastąpi je automatycznie. Buduję dodatkowy kanał rezerwacji bezpośredniej dla osób, które znają obiekt albo trafiają na niego z Google, map czy polecenia."
       },
       {
-        q: "Czy do witryny pensjonatu potrzebna jest profesjonalna sesja zdjęciowa?",
-        a: "Dobra sesja zwykle podnosi jakość prezentacji, szczególnie gdy fotografie są głównym argumentem wyboru. Mogę przygotować listę potrzebnych ujęć i wymagania techniczne, natomiast zdjęcia zlecasz wybranemu wykonawcy."
+        q: "Czy potrzebuję profesjonalnej sesji zdjęciowej?",
+        a: "Przy hotelu lub pensjonacie dobre zdjęcia mają duże znaczenie, bo pokazują pokoje i standard obiektu przed rezerwacją. Mogę przygotować listę potrzebnych ujęć i wymagania techniczne, a wykonanie sesji zlecasz fotografowi."
       },
       {
-        q: "Czy strona hotelu może działać w kilku językach?",
-        a: "Tak, pokoje, pakiety, regulamin i proces rezerwacji mogą mieć odrębne wersje językowe. Trzeba również sprawdzić, czy wybrany silnik tłumaczy komunikaty i obsługuje właściwe waluty."
+        q: "Czy moja strona może mieć kilka wersji językowych?",
+        a: "Tak. Mogę przygotować osobne wersje treści dla pokoi, pakietów, regulaminu i pozostałych podstron. Sprawdzę też, czy wybrany system rezerwacji obsługuje potrzebne języki i waluty."
       },
       {
-        q: "Kiedy najlepiej uruchomić nową stronę hotelu przed sezonem?",
-        a: "Zaplanuj publikację co najmniej kilka tygodni przed sprzedażą najważniejszych terminów. Zyskasz czas na indeksowanie w Google, poprawę treści i test rezerwacji na różnych urządzeniach."
+        q: "Kiedy najlepiej uruchomić nową stronę przed sezonem?",
+        a: "Start najlepiej zaplanować z wyprzedzeniem, żeby po publikacji sprawdzić indeksowanie, przejść całą rezerwację na telefonie i poprawić treści przed najważniejszym okresem sprzedaży. Konkretny termin ustalę z Tobą na początku projektu."
       },
       {
-        q: "Czy można zachować dotychczasową domenę hotelu?",
-        a: "Możesz pozostawić obecną domenę niezależnie od zmiany strony, hostingu i CMS. Potrzebuję dostępu do jej ustawień, aby podłączyć serwis, certyfikat oraz pocztę bez zmiany adresu."
+        q: "Czy mogę zachować obecną domenę hotelu?",
+        a: "Tak. Mogę podłączyć nową stronę do obecnej domeny i pomóc dobrać hosting, na przykład Hostinger albo cyber_folks. Przy migracji przygotuję zmianę tak, żeby przerwa była możliwie krótka, choć przy zmianie DNS może wystąpić krótka niedostępność."
       },
       {
-        q: "Jakie informacje prawne musi zawierać strona pensjonatu?",
-        a: "Zakres zależy od płatności, sposobu rezerwacji i używanych plików śledzących. Przekazujesz regulamin, politykę prywatności oraz zasady anulowania, a ja umieszczam je wraz ze zgodami RODO w odpowiednich etapach ścieżki gościa."
+        q: "Jakie informacje prawne muszę przygotować na stronę pensjonatu?",
+        a: "Potrzebuję od Ciebie zatwierdzonego regulaminu, polityki prywatności, zasad anulowania i innych treści wynikających z Twojego sposobu rezerwacji. Umieszczę je w odpowiednich miejscach strony i skonfiguruję wymagane zgody związane z formularzami oraz analityką."
       }
     ],
     cta: "Opowiedz o obiekcie, a przygotuję wycenę tworzenia strony hotelu lub pensjonatu z rezerwacją bezpośrednią",
     deliverables: [
       {
         label: "Prezentacja pokoi",
-        body: "Otrzymujesz szablony dla maksymalnie 12 typów pokoi z wyposażeniem, liczbą gości, galerią, ceną i zasadami pobytu."
+        body: "Przygotowuję edytowalny układ typów pokoi z wyposażeniem, liczbą gości, galerią, ceną i zasadami pobytu. Zakres pokoi ustalamy w briefie."
       },
       {
         label: "Ścieżka rezerwacji",
-        body: "Łączę stronę obiektu z jednym zewnętrznym systemem rezerwacji i przekazuję do niego daty pobytu oraz liczbę osób, jeśli system to obsługuje."
+        body: "Łączę stronę obiektu z ustalonym systemem rezerwacji i przekazuję do niego potrzebne dane, takie jak daty pobytu i liczba osób, jeśli wybrane narzędzie to obsługuje."
       },
       {
         label: "Oferta sezonowa",
@@ -990,11 +990,11 @@ export const industries: Industry[] = [
       },
       {
         label: "Atrakcje i dojazd",
-        body: "Przygotowuję mapę dojazdu, informacje o parkingu oraz sekcję do 10 atrakcji z odległościami od hotelu lub pensjonatu."
+        body: "Przygotowuję mapę dojazdu, informacje o parkingu oraz sekcję atrakcji w okolicy. Liczbę i zakres opisów ustalamy w briefie."
       },
       {
         label: "Wiadomości pobytowe",
-        body: "Konfiguruję formularze zapytania grupowego, imprezy okolicznościowej i pobytu firmowego z osobnymi odbiorcami, zgodami RODO oraz ochroną przed spamem."
+        body: "Konfiguruję formularze zapytań o pobyty grupowe, imprezy okolicznościowe lub pobyty firmowe, wraz ze zgodami RODO i ochroną przed spamem."
       }
     ],
     headings: {
@@ -1042,18 +1042,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-firm-budowlanych",
     title: "Firmy budowlane",
     keyword: "tworzenie stron dla firm budowlanych",
-    metaTitle: "Tworzenie stron dla firm budowlanych — galeria i wyceny",
+    metaTitle: "Tworzenie stron dla firm budowlanych: galeria i wyceny",
     metaDescription: "Tworzenie stron dla firm budowlanych: galeria przed i po, formularz przyjmujący zdjęcia oraz obszar dojazdu. Realizacja 4-6 tygodni.",
     h1: "Tworzenie stron dla firm budowlanych",
-    lead: "Tworzenie stron dla firm budowlanych zaczyna się od zdjęć, bo w tej branży to one są dowodem, nie opisy. Klient ogląda galerię, sprawdza, czy dojeżdżacie w jego okolicę, i dzwoni, często stojąc na placu budowy. Buduję strony dla firm remontowych, dekarzy, brukarzy i wykonawców wykończeń, na których galeria, obszar dojazdu, formularz wyceny i numer telefonu są pod ręką od razu na telefonie.",
+    lead: "Buduję strony dla firm remontowych, dekarzy, brukarzy i wykonawców, na których szybko widać realizacje, zakres prac, obszar dojazdu i sposób kontaktu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla firm budowlanych zaczynam od briefu, zakresu usług, lokalizacji i materiałów z realizacji. [Stronę WordPress](/uslugi/tworzenie-stron-wordpress) buduję wokół galerii przed i po, czytelnych podstron oraz formularza kontaktowego przyjmującego zdjęcia inwestycji. Projekt graficzny uwzględnia responsywność i szybkie ładowanie.",
-      "Dla Dom Bez Wad powstała witryna o termomodernizacji, ociepleniach i pompach ciepła, a [realizacja Dom Bez Wad](/projekty/dom-bez-wad) pokazuje prezentację powiązanych usług. [Galabau Darius](/projekty/galabau-darius) wykorzystuje aplikację Next.js, galerię i konfigurator ogrodzeń obliczający cenę na żywo. Podobne wdrożenie omówimy przez [formularz kontaktowy](/kontakt)."
+      "W tej branży strona musi pokazać efekt pracy, zanim zacznie go opisywać. Tworzenie stron dla firm budowlanych opieram więc na zdjęciach realizacji, czytelnym podziale usług, konkretnym obszarze działania i kontakcie wygodnym również dla osoby, która ogląda serwis na telefonie na placu budowy. [Stronę WordPress](/uslugi/tworzenie-stron-wordpress) mogę przygotować z własnym motywem i prostym panelem do dodawania kolejnych realizacji.",
+      "W projekcie [Dom Bez Wad](/projekty/dom-bez-wad) przygotowałem witrynę prezentującą termomodernizację, ocieplenia i pompy ciepła. Z kolei [Galabau Darius](/projekty/galabau-darius) to aplikacja Next.js z galerią oraz konfiguratorem ogrodzeń, który oblicza cenę na żywo."
     ],
     pains: [
       {
         title: "Brak dowodów wykonania",
-        body: "Klient nie oceni jakości robót na podstawie samej listy usług. Zdjęcia mówią to za Ciebie. Galeria przed i po na stronie firmy budowlanej pokazuje efekt, skalę inwestycji, użyte materiały i staranność wykonania."
+        body: "Sama lista usług nie pokazuje, jak wygląda Twoja praca po zakończeniu zlecenia. Dlatego galerię realizacji buduję tak, żeby można było pokazać efekt przed i po, zakres robót, użyte materiały oraz typ inwestycji bez ujawniania danych klienta."
       },
       {
         title: "Niejasny obszar dojazdu",
@@ -1118,63 +1118,63 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla firmy budowlanej?",
-        a: "Zwykła witryna z galerią realizacji i formularzem to podstawa zakresu. W górę ciągną ją dwie rzeczy: podstrony pod kolejne miejscowości, w których szukają Was klienci, oraz konfigurator albo formularz przyjmujący zdjęcia z placu. Napisz, w ilu miejscowościach pracujecie, a szybciej przygotuję wycenę."
+        q: "Ile będzie kosztować strona dla mojej firmy budowlanej?",
+        a: "Najwięcej na zakres wpływa liczba usług i sposób zbierania zapytań. Zwykły formularz to mniej pracy niż konfigurator lub formularz przyjmujący rozbudowane dane i zdjęcia. Po rozmowie i briefie przygotuję konkretny zakres oraz termin."
       },
       {
-        q: "Ile trwa tworzenie stron dla firm budowlanych?",
-        a: "Realizacja zajmuje 4-6 tygodni od zebrania briefu i materiałów. Termin zależy głównie od liczby usług, gotowości zdjęć oraz zakresu funkcji formularza."
+        q: "Ile potrwa strona dla mojej firmy budowlanej?",
+        a: "Typowa strona firmowa zajmuje zwykle 4-6 tygodni. Dużo zależy od tego, czy masz gotowe zdjęcia realizacji i treści do poszczególnych usług."
       },
       {
-        q: "Skąd wziąć zdjęcia na stronę firmy budowlanej?",
-        a: "Najlepiej fotografować ten sam kadr przed rozpoczęciem i po zakończeniu prac. Wystarczy telefon, dobre światło oraz zgoda właściciela obiektu, a ja przygotuję pliki w formatach WebP lub AVIF."
+        q: "Jakie zdjęcia przygotować na stronę?",
+        a: "Najlepiej fotografować podobny kadr przed rozpoczęciem i po zakończeniu prac. Możesz zrobić zdjęcia telefonem, jeśli są ostre i dobrze oświetlone. Ja przygotuję je później do publikacji w lekkich formatach."
       },
       {
-        q: "Czy witryna wykonawcy potrzebuje konfiguratora wyceny?",
-        a: "Konfigurator ma sens, gdy cenę można oprzeć na powtarzalnych parametrach, takich jak powierzchnia, długość lub wariant materiału. Przy złożonych remontach lepszy jest formularz ze zdjęciami i opisem zakresu."
+        q: "Czy potrzebuję konfiguratora wyceny?",
+        a: "Nie zawsze. Jeśli cenę da się oprzeć na powtarzalnych parametrach, takich jak powierzchnia, długość lub wariant materiału, konfigurator może mieć sens. Przy złożonych remontach zaproponuję raczej formularz ze zdjęciami i opisem prac."
       },
       {
-        q: "Czy obszar działania firmy budowlanej pomaga w Google?",
-        a: "Tak, jeśli każda lokalizacja jest opisana użytecznie i odpowiada faktycznemu zasięgowi dojazdu. Zamiast pustych kopii łączę miejscowości z konkretnymi usługami i realizacjami."
+        q: "Czy podanie obszaru działania pomoże mojej stronie w Google?",
+        a: "Opisz jasno miejsca, w których rzeczywiście pracujesz, i połącz je z konkretnymi usługami lub realizacjami. Nie obiecuję pozycji w Google, ale przygotuję poprawną strukturę strony, dane strukturalne, mapę strony i Search Console."
       },
       {
-        q: "Jak uruchomić stronę budowlaną bez zdjęć realizacji?",
-        a: "Serwis można opublikować z opisem procesu, zakresem usług, uprawnieniami i zdjęciami zespołu lub sprzętu. Galerię rozbudujesz później przez CMS, gdy zbierzesz własny materiał."
+        q: "Czy mogę uruchomić stronę, jeśli nie mam jeszcze galerii realizacji?",
+        a: "Tak. Mogę oprzeć pierwszą wersję na procesie pracy, usługach, uprawnieniach, sprzęcie i dostępnych materiałach. Gdy zbierzesz zdjęcia, dodasz realizacje przez CMS."
       },
       {
-        q: "Czy warto przenieść starą stronę firmy budowlanej na WordPress?",
-        a: "Przeniesienie ma sens, jeśli chcesz samodzielnie dodawać realizacje i rozwijać podstrony usług. Sprawdzę adresy, treści i pozycjonowanie, a następnie wskażę elementy do zachowania oraz przebudowy."
+        q: "Czy warto przenieść moją starą stronę na WordPress?",
+        a: "Jeśli chcesz samodzielnie dodawać realizacje i rozwijać ofertę, WordPress może być dobrym rozwiązaniem. Przed migracją sprawdzę stare adresy i treści, przygotuję potrzebne przekierowania 301 i wskażę, co warto zachować."
       },
       {
-        q: "Ile kosztuje roczne utrzymanie strony firmy budowlanej?",
-        a: "Koszt obejmie domenę, hosting, kopie zapasowe i wybrany zakres opieki po wdrożeniu. Otrzymasz listę wymaganych usług przed publikacją, bez obowiązku korzystania z mojego serwera."
+        q: "Co będę opłacać po uruchomieniu strony?",
+        a: "Poza domeną potrzebujesz hostingu. Pomogę dobrać odpowiedni pakiet, na przykład w Hostingerze albo cyber_folks. Po starcie masz też 60 dni gwarancji i bezpłatnych poprawek, a później możesz prowadzić stronę samodzielnie albo zlecić mi miesięczną opiekę."
       },
       {
-        q: "Czy firma budowlana potrzebuje podstrony dla każdego miasta?",
-        a: "Twórz osobne podstrony tylko wtedy, gdy możesz opisać rzeczywiste usługi, ekipy lub realizacje w danym miejscu. Powielona treść z podmienioną nazwą miasta nie pomaga użytkownikowi ani pozycjonowaniu."
+        q: "Czy potrzebuję osobnej podstrony dla każdego miasta?",
+        a: "Nie tworzę takich podstron tylko po to, żeby podmienić nazwę miejscowości. Osobna strona ma sens wtedy, gdy możesz pokazać dla danego miejsca rzeczywiste usługi, realizacje albo informacje przydatne klientowi."
       }
     ],
     cta: "Opisz usługi i obszar działania, a przygotuję wycenę tworzenia strony dla Twojej firmy budowlanej",
     deliverables: [
       {
         label: "Zakres usług",
-        body: "Otrzymujesz do ośmiu podstron usług z opisem etapów robót, stosowanych materiałów, terminów i obszaru realizacji."
+        body: "Przygotowuję podstrony usług z opisem prac, stosowanych materiałów, przebiegu realizacji i obsługiwanego obszaru. Ich liczbę i zakres ustalamy w briefie."
       },
       {
         label: "Karty realizacji",
-        body: "Tworzę w CMS wzór realizacji z lokalizacją, zakresem robót, metrażem, czasem wykonania i zoptymalizowaną galerią zdjęć."
+        body: "Tworzę w CMS wzór realizacji z lokalizacją, zakresem robót, informacjami o inwestycji i zoptymalizowaną galerią zdjęć."
       },
       {
         label: "Formularz oględzin",
-        body: "Wdrażam formularz wyceny z wyborem rodzaju inwestycji, miejscowości, planowanego terminu, budżetu, zgodą RODO i możliwością dodania plików."
+        body: "Wdrażam formularz wyceny z wyborem rodzaju inwestycji, miejscowości, planowanego terminu, opisem zakresu, zgodą RODO i możliwością dodania zdjęć lub dokumentów."
       },
       {
         label: "Dokumenty wykonawcy",
-        body: "Przygotowuję sekcję witryny na certyfikaty, uprawnienia, referencje, warunki gwarancji i pliki przeznaczone dla inwestora."
+        body: "Przygotowuję sekcję na certyfikaty, uprawnienia, referencje, warunki gwarancji i materiały przeznaczone dla inwestora."
       },
       {
-        label: "Kontakt regionalny",
-        body: "Konfiguruję dane oddziałów, przypisanie powiatów do ekip oraz automatyczne kierowanie zapytań ze strony do właściwego opiekuna."
+        label: "Obszar działania",
+        body: "Pokazuję miejscowości lub region, w którym pracujesz, oraz zasady kontaktu przy zleceniu spoza podstawowego obszaru. Jeśli firma ma kilka ekip lub oddziałów, sposób kierowania zapytań ustalamy w briefie."
       }
     ],
     headings: {
@@ -1222,18 +1222,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-influencerow",
     title: "Influencerzy",
     keyword: "tworzenie stron dla influencerów",
-    metaTitle: "Tworzenie stron dla influencerów — media kit i współprace",
+    metaTitle: "Tworzenie stron dla influencerów: media kit i współprace",
     metaDescription: "Tworzenie stron dla influencerów: media kit online, portfolio współprac i formularz dla marek pod własną domeną. Termin 3-5 tygodni.",
     h1: "Tworzenie stron dla influencerów",
-    lead: "Tworzenie stron dla influencerów rozwiązuje problem, który zna każdy twórca współpracujący z markami: media kit żyje jako plik, a plik zawsze jest nieaktualny w momencie wysyłki. Własna domena zamienia go w jeden adres, który sam się aktualizuje. Projektuję witryny dla twórców z Instagrama, TikToka i YouTube, z media kitem, portfolio współprac i formularzem, przez który marka odzywa się bezpośrednio.",
+    lead: "Projektuję strony dla twórców, którzy chcą mieć pod własną domeną aktualny media kit, portfolio współprac i kontakt dla marek. Pracuję z Wrocławia, zdalnie z klientami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla influencerów łączy projekt graficzny, media kit, ofertę współprac i dane kontaktowe w jednym serwisie. Mogę przygotować [nowoczesną stronę internetową](/uslugi/nowoczesne-strony-internetowe) albo wdrożenie WordPress z wygodnym CMS. Formularz dla marek zbiera brief, budżet i termin kampanii.",
-      "Nie mam jeszcze realizacji przygotowanej specjalnie dla influencera i nie przedstawiam projektów z innych branż jako takiego doświadczenia. Dowodem wykonania są [opublikowane realizacje](/projekty), inne strony w portfolio oraz witryna, którą teraz czytasz. Jeśli taki punkt odniesienia Ci odpowiada, opisz model współprac przez [formularz kontaktowy](/kontakt)."
+      "Plik z media kitem szybko się starzeje, dlatego tworzenie stron dla influencerów widzę przede wszystkim jako sposób na utrzymanie jednej, aktualnej wersji oferty. Na stronie możesz zmieniać dane o odbiorcach, pokazywać wcześniejsze współprace, zbierać zapytania od marek i rozwijać całość o newsletter albo sklep. Mogę przygotować [nowoczesną stronę internetową](/uslugi/nowoczesne-strony-internetowe) albo WordPress z wygodną edycją treści.",
+      "Nie mam jeszcze w portfolio strony zrealizowanej specjalnie dla influencera. Zamiast udawać takie doświadczenie, pokazuję [opublikowane realizacje](/projekty), własne serwisy i tę stronę jako przykłady mojego sposobu projektowania i kodowania."
     ],
     pains: [
       {
         title: "Nieaktualny media kit",
-        body: "Plik wysłany kilka miesięcy temu szybko traci aktualność, a jego wersje krążą w skrzynkach. Marka dostaje nieaktualne liczby. Strona influencera pozwala zmienić statystyki, stawki i zakres współprac w jednym miejscu."
+        body: "Media kit zapisany jako plik zaczyna się rozjeżdżać, gdy zmieniają się statystyki, oferta albo warunki współpracy, a starsze wersje nadal krążą w skrzynkach. Na stronie aktualizujesz dane w jednym miejscu i wysyłasz markom zawsze ten sam adres."
       },
       {
         title: "Rozproszone materiały dla marek",
@@ -1298,69 +1298,69 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla influencera?",
-        a: "Sama strona z media kitem, portfolio współprac i formularzem dla marek to najprostszy wariant. Kwota rośnie, gdy statystyki mają się pobierać automatycznie z platform zamiast być wpisywane ręcznie, oraz gdy dochodzi sklep albo zapis do newslettera."
+        q: "Ile będzie kosztować strona dla mojej marki osobistej?",
+        a: "Najwięcej na zakres wpływa sposób aktualizacji danych i dodatkowe funkcje. Ręcznie edytowany media kit jest prostszy niż automatyczne pobieranie statystyk, sklep czy newsletter. Po krótkiej rozmowie i briefie przygotuję konkretną wycenę i termin."
       },
       {
-        q: "Jak długo trwa tworzenie stron dla influencerów?",
-        a: "Standardowy termin to 3-5 tygodni od przekazania briefu, treści, zdjęć i danych. Najwięcej czasu zajmuje zwykle uporządkowanie oferty współprac i materiałów do portfolio."
+        q: "Ile potrwa moja strona?",
+        a: "Stronę z media kitem, ofertą współprac i formularzem dla marek realizuję zwykle w 3-5 tygodni. Termin zależy też od tego, czy masz gotowe zdjęcia, treści i materiały do portfolio."
       },
       {
-        q: "Czy influencer potrzebuje strony, skoro ma Instagram?",
-        a: "Instagram pozostaje kanałem publikacji, ale nie zastępuje uporządkowanej oferty ani własnej bazy kontaktów. Witryna daje stały adres dla media kitu, formularza i treści znajdowanych przez Google."
+        q: "Czy potrzebuję strony, skoro mam Instagram?",
+        a: "Nie traktuję strony jako zamiennika Instagrama. Daje Ci własny adres dla media kitu, oferty, formularza dla marek i treści, których nie musisz za każdym razem składać w wiadomości lub pliku."
       },
       {
-        q: "Jak aktualizuje się media kit na stronie twórcy?",
-        a: "Dane zmieniasz przez CMS bez przesyłania nowego pliku i zmiany adresu. Aktualizacja może być ręczna, co pozwala publikować wyłącznie sprawdzone statystyki."
+        q: "Jak będę aktualizować media kit?",
+        a: "Przygotuję edycję danych w CMS, więc możesz zmienić statystyki, opis współprac czy ofertę bez wysyłania nowego pliku i bez zmiany adresu strony."
       },
       {
-        q: "Czy strona influencera może sprzedawać produkty?",
-        a: "Tak, sklep może obsługiwać pliki cyfrowe, szkolenia lub odzież. Przed wdrożeniem ustalamy płatności, dostawę, regulamin i informacje potrzebne na karcie produktu."
+        q: "Czy mogę sprzedawać przez stronę własne produkty?",
+        a: "Tak. Mogę dodać WooCommerce i przygotować sprzedaż produktów cyfrowych lub fizycznych. Przed wdrożeniem ustalę z Tobą płatności, dostawę oraz treści potrzebne przy zamówieniu."
       },
       {
-        q: "Czym własna domena influencera różni się od Linktree?",
-        a: "Własna domena pozwala rozbudować ofertę, prowadzić pozycjonowanie i utrzymać spójną identyfikację. Nie ograniczają Cię układ, regulamin ani adres zewnętrznego kreatora."
+        q: "Czym własna strona różni się od Linktree?",
+        a: "Własna domena może zacząć od prostego zestawu odnośników, a później rozrosnąć się o media kit, ofertę dla marek, portfolio, sklep i treści. Układ oraz sposób rozwoju strony są wtedy dopasowane do Twojej marki."
       },
       {
-        q: "Czy mogę przenieść stronę influencera na własną domenę?",
-        a: "Możesz zachować nazwę domeny i zmienić wyłącznie hosting strony. Pomogę przepiąć ustawienia, uruchomić certyfikat i sprawdzić formularze po migracji."
+        q: "Czy mogę przenieść obecną stronę na własną domenę?",
+        a: "Tak. Mogę pomóc przy podpięciu domeny, certyfikatu i formularzy oraz dobrać hosting, na przykład Hostinger albo cyber_folks. Jeśli zmieniają się adresy podstron, przygotuję również potrzebne przekierowania."
       },
       {
-        q: "Jak rozliczyć sprzedaż plików cyfrowych przez własną stronę?",
-        a: "Sposób rozliczenia zależy od działalności, produktu i kraju kupującego. Ustalasz zasady z księgowym, a ja konfiguruję przekazane stawki podatku, dokumenty sprzedaży i treści przy zamówieniu."
+        q: "Jak mam rozliczać sprzedaż plików cyfrowych?",
+        a: "Zasady podatkowe ustalasz z księgowym odpowiednio do swojej działalności, produktu i kraju kupującego. Ja konfiguruję w sklepie przekazane stawki, dokumenty i treści związane z zamówieniem."
       },
       {
-        q: "Co dzieje się z witryną po zakończeniu współpracy z wykonawcą?",
-        a: "Otrzymujesz dostęp administracyjny, kopię plików, bazę danych i listę użytych usług. Możesz prowadzić serwis samodzielnie, zamówić opiekę po wdrożeniu albo przekazać go innemu specjaliście."
+        q: "Co stanie się ze stroną po zakończeniu naszej współpracy?",
+        a: "Przekazuję Ci dostęp administracyjny oraz potrzebne dane do serwisu. Po starcie masz 60 dni gwarancji i bezpłatnych poprawek, a później możesz prowadzić stronę samodzielnie, przekazać ją innemu specjaliście albo zlecić mi dalszą opiekę."
       }
     ],
     cta: "Prześlij ofertę współprac, a przygotuję wycenę tworzenia strony dla Twojej marki osobistej",
     deliverables: [
       {
-        label: "Centrum współprac",
-        body: "Otrzymujesz stronę współpracy z formatami publikacji, danymi odbiorców, wybranymi wynikami kampanii i formularzem dla marek."
+        label: "Oferta współpracy",
+        body: "Przygotowuję stronę z formatami publikacji, danymi o odbiorcach, wybranymi wynikami kampanii i formularzem dla marek."
       },
       {
         label: "Aktualny cennik",
-        body: "Tworzę chronioną hasłem podstronę stawek, którą możesz edytować w CMS i udostępniać wybranym zleceniodawcom."
+        body: "Mogę przygotować chronioną hasłem podstronę stawek, którą edytujesz w CMS i udostępniasz wybranym zleceniodawcom."
       },
       {
-        label: "Archiwum materiałów",
-        body: "Porządkuję do 30 wskazanych publikacji według platformy, tematu, marki i rodzaju współpracy, tworząc czytelne portfolio."
+        label: "Portfolio materiałów",
+        body: "Porządkuję wskazane publikacje według platformy, tematu, marki lub rodzaju współpracy. Zakres materiałów ustalamy w briefie."
       },
       {
         label: "Zapisy odbiorców",
-        body: "Podłączam jeden system newslettera, formularz zapisu z potwierdzeniem, wymagane zgody oraz stronę podziękowania z pomiarem zdarzenia."
+        body: "Podłączam ustalony system newslettera, formularz zapisu z potwierdzeniem, wymagane zgody i stronę podziękowania."
       },
       {
         label: "Sprzedaż cyfrowa",
-        body: "Konfiguruję sprzedaż do pięciu plików w WooCommerce wraz z płatnością, automatycznym dostępem, kartami produktów i limitem pobrań."
+        body: "Mogę skonfigurować sprzedaż plików lub innych produktów cyfrowych w WooCommerce wraz z płatnością, kartami produktów i automatycznym dostępem. Liczbę produktów i dokładny zakres ustalamy w briefie."
       }
     ],
     headings: {
       pains: "Co nie działa na stronach influencerów",
       mustHave: "Czego wymaga strona influencera",
-      cases: "Strony dla twórców, które zrobiłem",
+      cases: "Jak podejdę do Twojej strony",
       stack: "Jak tworzę strony dla influencerów",
       pricing: "Ile kosztuje strona dla influencera",
       faq: "Tworzenie stron dla influencerów: pytania"
@@ -1402,18 +1402,18 @@ export const industries: Industry[] = [
     slug: "tworzenie-stron-dla-streamerow",
     title: "Streamerzy",
     keyword: "tworzenie stron dla streamerów",
-    metaTitle: "Tworzenie stron dla streamerów — harmonogram i sponsorzy",
+    metaTitle: "Tworzenie stron dla streamerów: harmonogram i sponsorzy",
     metaDescription: "Tworzenie stron dla streamerów: harmonogram transmisji, status na żywo, klipy i oferta dla sponsorów. Wykonanie 2-4 tygodnie.",
     h1: "Tworzenie stron dla streamerów",
-    lead: "Tworzenie stron dla streamerów ma inne źródła ruchu niż większość stron, bo widz przychodzi z czatu albo z opisu kanału, a nie z wyszukiwarki. Strona ma się otworzyć natychmiast na telefonie i od razu powiedzieć, kiedy jest następna transmisja. Buduję witryny dla twórców gamingowych i drużyn e-sportowych z harmonogramem, klipami, Discordem i osobną ofertą dla sponsorów.",
+    lead: "Buduję strony dla streamerów i twórców gamingowych, które zbierają w jednym miejscu harmonogram, kanały, klipy, Discord i ofertę dla sponsorów. Pracuję z Wrocławia, zdalnie z klientami z całej Polski i z Niemiec.",
     intro: [
-      "Tworzenie stron dla streamerów obejmuje projekt graficzny, harmonogram, status transmisji, bibliotekę klipów i centrum kanałów. Jako [aplikacja Next.js](/uslugi/aplikacje-nextjs) serwis może pobierać dane udostępniane przez platformę. Prostszy wariant to [lekka strona Jamstack](/uslugi/strony-jamstack) z ofertą dla sponsorów.",
-      "Nie mam w portfolio wdrożenia wykonanego bezpośrednio dla streamera, drużyny e-sportowej ani organizatora turnieju. Mogę pokazać [inne opublikowane realizacje](/projekty) oraz tę witrynę jako dowód jakości kodu i responsywności. Konkretne integracje sprawdzę przed wyceną, gdy prześlesz brief przez [kontakt](/kontakt)."
+      "Widz często otwiera stronę prosto z czatu albo opisu kanału i chce w kilka sekund znaleźć konkretną rzecz. Dlatego tworzenie stron dla streamerów opieram na czytelnym harmonogramie, lekkim widoku mobilnym i szybkim dostępie do transmisji, społeczności oraz oferty współprac. Przy bardziej dynamicznych funkcjach mogę wykorzystać [aplikację Next.js](/uslugi/aplikacje-nextjs), a przy prostszym zakresie [lekką stronę Jamstack](/uslugi/strony-jamstack).",
+      "Nie mam jeszcze w portfolio wdrożenia przygotowanego bezpośrednio dla streamera, drużyny e-sportowej ani organizatora turnieju. Mogę za to pokazać [inne opublikowane realizacje](/projekty) i przed wyceną sprawdzić, jakie dane rzeczywiście udostępniają platformy, z których korzystasz."
     ],
     pains: [
       {
         title: "Linki w wielu miejscach",
-        body: "Widz nie zawsze wie, gdzie znaleźć Discord, harmonogram, sklep i archiwum nagrań. Widzowie pytają o to na czacie codziennie. Strona streamera porządkuje wszystkie odnośniki pod jednym adresem we własnej domenie."
+        body: "Harmonogram, Discord, sklep i archiwum nagrań często żyją pod różnymi adresami, więc widz musi pamiętać, gdzie czego szukać. Własna strona zbiera najważniejsze miejsca pod jednym adresem i pozwala prowadzić do nich bezpośrednio z czatu lub opisu kanału."
       },
       {
         title: "Nieaktualny plan transmisji",
@@ -1478,69 +1478,69 @@ export const industries: Industry[] = [
     },
     faq: [
       {
-        q: "Ile kosztuje tworzenie strony dla streamera?",
-        a: "Podstawowy wariant to harmonogram transmisji, odnośniki, klipy i kontakt dla sponsorów. Drożej wychodzi automatyczny status na żywo pobierany z platform i sklep z merchem. Jeśli wiesz, na ilu platformach nadajesz i czy potrzebujesz sklepu, mam komplet do policzenia."
+        q: "Ile będzie kosztować moja strona dla widzów i sponsorów?",
+        a: "Największą różnicę w zakresie robią integracje z platformami. Strona z harmonogramem, klipami i odnośnikami jest prostsza niż serwis pobierający status transmisji albo połączony ze sklepem. Po briefie przygotuję wycenę z zakresem i terminem."
       },
       {
-        q: "Jak długo trwa tworzenie stron dla streamerów?",
-        a: "Przygotowanie trwa zwykle 2-4 tygodnie od dostarczenia briefu i materiałów. Termin zależy od liczby integracji i czasu potrzebnego na uzyskanie dostępu do ich interfejsów."
+        q: "Ile potrwa moja strona streamera?",
+        a: "Stronę z harmonogramem, klipami i ofertą dla sponsorów realizuję zwykle w 2-4 tygodnie. Jeśli projekt ma działać jako aplikacja Next.js z niestandardowymi integracjami, typowy termin wynosi 6-12 tygodni. Dokładny zakres ustalę po sprawdzeniu platform, z których korzystasz."
       },
       {
-        q: "Czy strona streamera pokaże automatycznie transmisję na żywo?",
-        a: "Może to robić, jeśli Twitch, Kick albo YouTube udostępnia potrzebne dane i pozwala na ich użycie. Przed wyceną sprawdzam dokumentację wybranej platformy oraz sposób autoryzacji."
+        q: "Czy moja strona może automatycznie pokazywać, że jestem na żywo?",
+        a: "Taką funkcję mogę wdrożyć wtedy, gdy dana platforma udostępnia potrzebne dane i pozwala z nich korzystać. Przed wyceną sprawdzę dokumentację i sposób autoryzacji."
       },
       {
-        q: "Czy do witryny streamera można dodać sklep z merchem?",
-        a: "Tak, sklep może współpracować z Printful albo Printify i przekazywać zamówienia do druku na żądanie. Zakres obejmuje produkty, płatności, dostawy i statusy zamówień."
+        q: "Czy mogę dodać sklep z merchem?",
+        a: "Tak. Mogę przygotować sklep i połączyć go z usługą druku na żądanie, jeśli wybrane rozwiązanie pasuje do Twojego modelu sprzedaży. Zakres płatności, dostaw i obsługi zamówień ustalę w briefie."
       },
       {
-        q: "Po co streamerowi własna strona, skoro ma Twitcha?",
-        a: "Twitch obsługuje transmisję, lecz nie daje pełnej kontroli nad domeną, układem oferty i dostępem do społeczności. Własny serwis łączy kanały, sponsorów, sklep i Discord niezależnie od jednej platformy."
+        q: "Po co mi własna strona, skoro mam Twitcha?",
+        a: "Nie ma zastępować platformy do transmisji. Daje Ci własny adres, pod którym możesz połączyć harmonogram, pozostałe kanały, Discord, materiały dla sponsorów i ewentualny sklep."
       },
       {
-        q: "Czy panel linków na stronie zastąpi zewnętrzny kreator?",
-        a: "Tak, może zawierać odnośniki do transmisji, filmów, wsparcia, sklepu i społeczności. Zachowujesz własną domenę, wygląd oraz możliwość późniejszego dodania harmonogramu i treści."
+        q: "Czy własna strona może zastąpić panel z linkami?",
+        a: "Tak. Mogę przygotować lekką podstronę z najważniejszymi odnośnikami, a później rozbudować ją o harmonogram, klipy, ofertę sponsorską lub inne sekcje."
       },
       {
-        q: "Ile kosztuje domena i utrzymanie strony streamera?",
-        a: "Zapłacisz za domenę, hosting oraz ewentualne płatne połączenia z platformami. Przed publikacją otrzymasz roczne zestawienie opłat, terminów odnowienia i możliwego zakresu opieki po wdrożeniu."
+        q: "Co będę opłacać po uruchomieniu strony?",
+        a: "Potrzebujesz domeny i hostingu, a przy niektórych integracjach mogą dojść opłaty za zewnętrzne usługi. Pomogę dobrać hosting, na przykład Hostinger albo cyber_folks, i przed publikacją wskażę, które elementy wymagają odnowienia."
       },
       {
-        q: "Czy zmiana nazwy kanału wymaga budowy nowej witryny?",
-        a: "Nie musisz budować serwisu od początku, jeśli jego struktura nadal odpowiada potrzebom. Zmienię nazwę, identyfikację, adresy profili i domenę, a stare adresy skieruję do nowych miejsc."
+        q: "Czy po zmianie nazwy kanału muszę robić stronę od nowa?",
+        a: "Nie, jeśli jej struktura nadal pasuje do Twojej działalności. Mogę zmienić nazwę, identyfikację, odnośniki do profili i domenę, a przy zmianie adresów przygotować przekierowania 301."
       },
       {
-        q: "Czy strona streamera działa podczas awarii Twitcha lub YouTube?",
-        a: "Treści zapisane na Twoim hostingu pozostaną dostępne, ale dane pobierane z platformy mogą się nie wyświetlić. Ustawię komunikat zastępczy i odnośniki do pozostałych kanałów."
+        q: "Co stanie się ze stroną podczas awarii Twitcha lub YouTube?",
+        a: "Treści zapisane na Twoim hostingu nadal mogą działać, ale elementy pobierające dane z zewnętrznej platformy mogą przestać je wyświetlać. Przy takich integracjach przygotuję stan zastępczy, żeby użytkownik nie trafiał na pusty moduł."
       }
     ],
     cta: "Podeślij kanały i planowane funkcje, a przygotuję wycenę tworzenia strony dla streamera",
     deliverables: [
       {
         label: "Rozkład transmisji",
-        body: "Tworzę edytowalny tygodniowy harmonogram z godzinami, tematami, platformami i przeliczeniem czasu dla strefy widza."
+        body: "Tworzę edytowalny harmonogram z godzinami, tematami i platformami. Sposób prezentacji oraz ewentualne przeliczanie czasu ustalamy w briefie."
       },
       {
         label: "Integracja transmisji",
-        body: "Podłączam stronę do danych z jednej platformy przez dostępny interfejs API, aby pokazać tytuł, kategorię i stan transmisji."
+        body: "Mogę podłączyć stronę do danych udostępnianych przez wybraną platformę, żeby pokazać informacje o transmisji. Zakres zależy od możliwości i zasad jej interfejsu."
       },
       {
         label: "Panel społeczności",
-        body: "Buduję podstronę z zasadami społeczności, odnośnikiem do Discorda, formularzem kontaktowym, zgodą RODO i listą moderatorów."
+        body: "Buduję podstronę z zasadami społeczności, odnośnikiem do Discorda, formularzem kontaktowym, zgodą RODO i informacjami potrzebnymi Twojej społeczności."
       },
       {
         label: "Biblioteka nagrań",
-        body: "Osadzam do 20 wybranych nagrań i dzielę je na serie, gry lub formaty bez przesyłania filmów na hosting strony."
+        body: "Osadzam wybrane nagrania i porządkuję je według serii, gier lub formatów bez przesyłania filmów na hosting strony. Zakres materiałów ustalamy w briefie."
       },
       {
         label: "Pakiet sponsorski",
-        body: "Przygotowuję podstronę dla sponsorów z danymi kanału, dostępnymi świadczeniami, przykładami aktywacji i formularzem zapytania."
+        body: "Przygotowuję podstronę dla sponsorów z danymi kanału, dostępnymi formatami współpracy, zatwierdzonymi przykładami i formularzem zapytania."
       }
     ],
     headings: {
       pains: "Co nie działa na stronach streamerów",
       mustHave: "Czego wymaga strona streamera",
-      cases: "Strony dla twórców, które zrobiłem",
+      cases: "Jak podejdę do Twojej strony",
       stack: "Jak tworzę strony dla streamerów",
       pricing: "Ile kosztuje strona dla streamera",
       faq: "Tworzenie stron dla streamerów: pytania"
