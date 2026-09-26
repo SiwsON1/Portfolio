@@ -50,3 +50,10 @@ export const personSchema = {
 export function jsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
+
+/** Obszar działania z faktów: siedziba we Wrocławiu, klienci z Polski i Niemiec. */
+export const areaServed = [
+  { "@type": "City", name: "Wrocław" },
+  { "@type": "Country", name: "Polska" },
+  { "@type": "Country", name: "Niemcy" },
+];

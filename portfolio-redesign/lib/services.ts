@@ -10,6 +10,8 @@
   process: { step: string; title: string; body: string }[];
   faq: { q: string; a: string }[];
   cta: string;
+  /** Nagłówki H2 sekcji z frazą usługi; bez nich strona pokazuje ogólne. */
+  headings?: { bullets?: string; process?: string; faq?: string };
 };
 
 export const services: Service[] = [
@@ -19,7 +21,8 @@ export const services: Service[] = [
     metaTitle: "Tworzenie stron WordPress Wrocław: własny motyw, szybka strona",
     metaDescription:
       "Strony WordPress we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, wygodna edycja treści, szybkie działanie i techniczne SEO od startu.",
-    h1: "Tworzenie stron WordPress. Wrocław, edycja bez kodu.",
+    h1: "Tworzenie stron WordPress we Wrocławiu z edycją bez kodu",
+    headings: { bullets: "Co zawiera strona WordPress ode mnie", process: "Jak powstaje strona WordPress", faq: "Tworzenie stron WordPress: pytania" },
     lead:
       "Tworzę strony WordPress dla firm, które chcą samodzielnie edytować treści, ale nie chcą budować serwisu na gotowym kreatorze. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
@@ -60,7 +63,8 @@ export const services: Service[] = [
     metaTitle: "Sklepy WooCommerce Wrocław: wdrożenie i optymalizacja",
     metaDescription:
       "Sklepy WooCommerce we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, płatności, wysyłka, B2B, migracje i integracje sprzedażowe od startu.",
-    h1: "Sklepy internetowe WooCommerce. Wrocław i cała Polska.",
+    h1: "Sklepy internetowe WooCommerce we Wrocławiu i w całej Polsce",
+    headings: { bullets: "Co zawiera wdrożenie sklepu WooCommerce", process: "Jak powstaje sklep WooCommerce", faq: "Sklepy WooCommerce: pytania" },
     lead:
       "Tworzę sklepy WooCommerce dla firm, które chcą sprzedawać na własnej stronie i potrzebują dopasowanych płatności, dostaw oraz integracji. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
@@ -311,6 +315,7 @@ export const services: Service[] = [
     metaDescription:
       "Tworzenie stron www Wrocław dla firm: WordPress, Next.js lub WooCommerce dobrane do potrzeb. Ponad 30 wdrożeń, projekt w Figmie i 60 dni gwarancji.",
     h1: "Tworzenie stron www we Wrocławiu dla firm",
+    headings: { bullets: "Co zawiera strona internetowa ode mnie", process: "Jak powstaje strona www", faq: "Tworzenie stron www: pytania" },
     lead:
       "Tworzę strony firmowe, serwisy usługowe i sklepy dla firm, dobierając technologię do tego, co strona ma robić: [WordPress](/uslugi/tworzenie-stron-wordpress), [Next.js](/uslugi/aplikacje-nextjs) albo [WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Pracuję z Wrocławia, zdalnie z całą Polską i Niemcami.",
     intro: [
@@ -352,7 +357,8 @@ export const services: Service[] = [
     metaTitle: "Tworzenie stron Next.js Wrocław: strony i aplikacje firmowe",
     metaDescription:
       "Tworzenie stron Next.js we Wrocławiu i zdalnie w Polsce i Niemczech. Strony firmowe, integracje API, panele klienta oraz aplikacje webowe dla firm.",
-    h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
+    h1: "Tworzenie stron Next.js we Wrocławiu i w całej Polsce",
+    headings: { bullets: "Co dostajesz przy stronie w Next.js", process: "Jak powstaje strona w Next.js", faq: "Tworzenie stron Next.js: pytania" },
     lead:
       "Tworzę strony Next.js dla firm, które potrzebują wydajnego serwisu, integracji z API, własnego panelu albo funkcji wykraczających poza zwykłą stronę ofertową. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
@@ -465,7 +471,8 @@ export const services: Service[] = [
     metaTitle: "Opieka nad stroną WordPress: abonament bez umowy na rok",
     metaDescription:
       "Opieka nad stroną WordPress: aktualizacje, kopie zapasowe, monitoring i drobne zmiany w abonamencie miesięcznym bez umowy na rok.",
-    h1: "Opieka nad stroną WordPress. Strona działa, Ty pracujesz.",
+    h1: "Opieka nad stroną WordPress dla firm bez własnego działu IT",
+    headings: { bullets: "Co obejmuje opieka nad stroną WordPress", process: "Jak zaczynam opiekę nad stroną", faq: "Opieka nad stroną WordPress: pytania" },
     lead:
       "Prowadzę stałą opiekę nad WordPressem dla firm, które chcą zlecić aktualizacje, kopie zapasowe, monitoring i drobne zmiany jednej osobie. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
@@ -506,7 +513,8 @@ export const services: Service[] = [
     metaTitle: "Przyspieszenie strony WordPress: Core Web Vitals na zielono",
     metaDescription:
       "Przyspieszenie strony WordPress z pomiarem PageSpeed i Lighthouse przed i po zmianach. Optymalizacja obrazów, kodu, pamięci podręcznej i hostingu.",
-    h1: "Przyspieszanie stron WordPress. Liczby przed i po, nie obietnice.",
+    h1: "Przyspieszenie strony WordPress dla firm i sklepów",
+    headings: { bullets: "Co robię przy przyspieszaniu WordPressa", process: "Jak przebiega przyspieszenie strony", faq: "Przyspieszenie strony WordPress: pytania" },
     lead:
       "Przyspieszam strony WordPress i WooCommerce, zaczynając od pomiaru, a kończąc raportem pokazującym te same parametry przed i po zmianach. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
@@ -548,6 +556,7 @@ export const services: Service[] = [
     metaDescription:
       "Integracja WooCommerce z BaseLinker: zamówienia, stany, ceny, hurtownie, Allegro i obsługa wysyłek w jednym procesie. Wrocław i praca zdalna.",
     h1: "Integracja WooCommerce z BaseLinker",
+    headings: { bullets: "Co daje integracja z BaseLinkerem", process: "Jak przebiega integracja z BaseLinkerem", faq: "Integracja WooCommerce z BaseLinker: pytania" },
     lead:
       "Integruję WooCommerce z BaseLinker dla sklepów, które chcą obsługiwać zamówienia, stany, ceny i kolejne kanały sprzedaży z jednego procesu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [

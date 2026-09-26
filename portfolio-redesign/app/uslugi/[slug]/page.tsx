@@ -11,9 +11,19 @@ import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
-import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
+import { areaServed, jsonLd, personRef, SITE_URL } from "@/lib/schema";
 import { MobileReveal } from "@/components/service/MobileReveal";
 import { industries, INDUSTRY_SERVICES } from "@/lib/industries";
+
+/** Kursywa na dwóch ostatnich słowach, jak w nagłówkach stron branżowych. */
+function editorial(text: string) {
+  const words = text.replace(/\.$/, "").split(" ");
+  return (
+    <>
+      {words.slice(0, -2).join(" ")} <em>{words.slice(-2).join(" ")}</em>.
+    </>
+  );
+}
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -67,7 +77,9 @@ export default async function UslugaPage({
     name: s.title,
     description: s.metaDescription,
     provider: personRef,
-    areaServed: { "@type": "Country", name: "Poland" },
+    serviceType: s.title,
+    areaServed,
+    inLanguage: "pl-PL",
     url: `${SITE_URL}/uslugi/${s.slug}`,
   };
 
@@ -359,7 +371,7 @@ export default async function UslugaPage({
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">
-              Cztery <em>rzeczy</em>, które dostajesz.
+              {s.headings?.bullets ? editorial(s.headings.bullets) : <>Cztery <em>rzeczy</em>, które dostajesz.</>}
             </h2>
           </div>
         </div>
@@ -406,7 +418,7 @@ export default async function UslugaPage({
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">
-              Krok po <em>kroku</em>.
+              {s.headings?.process ? editorial(s.headings.process) : <>Krok po <em>kroku</em>.</>}
             </h2>
           </div>
         </div>
@@ -457,7 +469,7 @@ export default async function UslugaPage({
           </aside>
           <div className="md:col-span-9">
             <h2 className="display text-h1 text-ink">
-              Krótkie <em>odpowiedzi</em>.
+              {s.headings?.faq ? editorial(s.headings.faq) : <>Krótkie <em>odpowiedzi</em>.</>}
             </h2>
           </div>
         </div>

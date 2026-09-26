@@ -105,8 +105,7 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         body: [
           "WordPress daje przyzwoite podstawy techniczne. Adresy podstron są czytelne, mapa witryny generuje się sama, a wtyczka SEO pozwala ustawić tytuły i opisy widoczne w wynikach wyszukiwania oraz dane strukturalne, dzięki którym wyszukiwarka rozumie, czym jest dana podstrona.",
           "Sam system nie decyduje jednak o pozycjach. Rozstrzygają treść odpowiadająca na realne pytania, struktura serwisu i linki prowadzące do niego z zewnątrz. Strona bez treści nie zajmie wysokiego miejsca dlatego, że stoi na WordPressie.",
-          "Warto też uważać na wtyczki. Dwie wtyczki SEO naraz nie wzmacniają efektu, tylko wstawiają własne, sprzeczne znaczniki.",
-          "Jedna, ustawiona świadomie, wystarcza.",
+          "Uważaj też na wtyczki. Dwie wtyczki SEO naraz nie wzmacniają efektu, tylko wstawiają własne, sprzeczne znaczniki. Jedna, ustawiona świadomie, wystarcza.",
         ],
       },
       {
@@ -123,7 +122,7 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         heading: "Jak przebiega wdrożenie i co dostajesz na koniec",
         body: [
           "Praca zaczyna się od ustalenia, co strona ma osiągnąć i kto ma z niej korzystać. Z tego wychodzi lista podstron, a dopiero z niej projekt graficzny. Odwrotna kolejność kończy się dosypywaniem treści do gotowych ramek.",
-          "Potem powstaje projekt, na nim własny motyw, następnie wchodzą treści i testy: na telefonie, na wolnym łączu, z klawiatury, w kilku przeglądarkach. Na końcu przenosimy stronę pod docelowy adres, ustawiamy przekierowania ze starych adresów i podpinamy narzędzia analityczne.",
+          "Potem powstaje projekt, na nim własny motyw, następnie wchodzą treści i testy: na telefonie, na wolnym łączu, z klawiatury, w kilku przeglądarkach. Na końcu przenoszę stronę pod docelowy adres, ustawiam przekierowania ze starych adresów i podpinam narzędzia analityczne.",
           "Po zakończeniu powinieneś mieć komplet:",
         ],
         list: [
@@ -194,7 +193,7 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         id: "dostepnosc",
         heading: "Dostępność cyfrowa: wymóg, o którym łatwo zapomnieć",
         body: [
-          "Od 28 czerwca 2025 część firm ma prawny obowiązek zapewnienia dostępności swoich usług cyfrowych. Podstawą jest ustawa z 26 kwietnia 2024 roku, a wymagany poziom techniczny to WCAG 2.1 AA, do którego odsyła norma zharmonizowana EN 301 549. Zwolnieni są mikroprzedsiębiorcy świadczący usługi, czyli firmy zatrudniające mniej niż 10 osób i jednocześnie mające obrót lub sumę bilansową do 2 mln euro. Oba warunki muszą być spełnione naraz.",
+          "Od 28 czerwca 2025 część firm ma prawny obowiązek zapewnienia dostępności swoich usług cyfrowych. Podstawą jest ustawa z 26 kwietnia 2024 roku, a poziom techniczny wyznacza norma zharmonizowana EN 301 549, która odsyła do WCAG 2.1 AA (jej wersja z 2026 roku włącza już WCAG 2.2). Zwolnieni są mikroprzedsiębiorcy świadczący usługi, czyli firmy zatrudniające mniej niż 10 osób i jednocześnie mające obrót lub sumę bilansową do 2 mln euro. Oba warunki muszą być spełnione naraz.",
           "W praktyce dotyczy to rzeczy pomijanych przy zwykłym wdrożeniu: kontrastu tekstu wobec tła, opisów alternatywnych zdjęć, obsługi strony samą klawiaturą, etykiet przy polach formularza i czytelnych komunikatów błędu. Zaplanowane od początku kosztują niewiele, dokładane do gotowej strony potrafią wymagać przebudowy szablonów.",
           "Warto sprawdzić to zawczasu, bo nakładka reklamowana jako gotowe rozwiązanie problemu zwykle zgodności nie daje. Co obejmuje rzetelne sprawdzenie i które kryteria da się ocenić wyłącznie ręcznie, opisałem na stronie [audytu WCAG](/audyt-wcag).",
         ],

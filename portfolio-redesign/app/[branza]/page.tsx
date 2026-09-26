@@ -8,7 +8,7 @@ import { projects } from "@/lib/projects";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { IndustryHeroVisual } from "@/components/industry/IndustryHeroVisual";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
-import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
+import { areaServed, jsonLd, personRef, SITE_URL } from "@/lib/schema";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
 
@@ -90,7 +90,7 @@ export default async function BranzaPage({
     serviceType: ind.keyword,
     description: ind.metaDescription,
     provider: personRef,
-    areaServed: { "@type": "Country", name: "Poland" },
+    areaServed,
     inLanguage: "pl-PL",
     image: `${SITE_URL}/opengraph-image`,
     url: `${SITE_URL}/${ind.slug}`,
