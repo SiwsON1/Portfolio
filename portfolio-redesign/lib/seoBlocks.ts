@@ -21,7 +21,7 @@ export type SeoBlock = {
 /**
  * Rozbudowany blok tekstowy na dole strony usługi. Treść siedzi w HTML zawsze,
  * <details> chowa ją tylko wizualnie, więc roboty widzą pełny tekst.
- * Klucz = slug usługi z lib/services.ts.
+ * Klucz = slug usługi z lib/services.ts albo branży z lib/industries.ts.
  */
 export const SEO_BLOCKS: Record<string, SeoBlock> = {
   "tworzenie-stron-wordpress": {
@@ -1275,6 +1275,637 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
           "Start wersji produkcyjnej nie oznacza, że aplikacja przestaje wymagać uwagi. Po wdrożeniu sprawdzam jej działanie i obejmuję projekt 60 dniami gwarancji oraz bezpłatnych poprawek. Ten okres służy usunięciu błędów dotyczących uzgodnionego i wdrożonego zakresu.",
           "Po zakończeniu gwarancji możesz skorzystać z opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok. Współpraca może dotyczyć utrzymania istniejących funkcji albo dalszego rozwoju produktu. Zakres opieki ustalam przy jej rozpoczęciu, ponieważ inne potrzeby ma stabilna aplikacja używana przez stałą grupę klientów, a inne produkt, do którego regularnie dochodzą nowe moduły.",
           "Jeżeli projekt z czasem urośnie, oceniam, czy nadal mogę odpowiedzialnie rozwijać go sam. Gdy tempo prac lub liczba równoległych zadań zaczynają wymagać większego zespołu Next.js, mówię o tym wprost. Uporządkowany kod i dokumentacja ułatwiają włączenie kolejnego programisty, choć czas potrzebny na przejęcie części prac zawsze zależy od złożoności aplikacji.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-kancelarii-prawnych": {
+    heading: "Strona internetowa dla kancelarii: jak zaplanować zakres, treści i zaplecze techniczne",
+    intro: [
+      "**Znajdziesz tu konkretne wskazówki, które pomogą Ci ocenić, jak powinna wyglądać strona internetowa dla kancelarii, jakie materiały trzeba przygotować i od czego zależy zakres projektu.** To praktyczne informacje dla właściciela kancelarii, który porównuje wykonawców i chce świadomie wybrać między prostą wizytówką a rozbudowanym serwisem.",
+      "Jako freelancer odpowiadam zarówno za projekt, jak i wdrożenie. Kod piszę sam, dlatego od pierwszej rozmowy po przekazanie gotowej strony kontaktujesz się bezpośrednio ze mną. Zakres dobieram do specjalizacji, wielkości zespołu, planów publikacyjnych i sposobu pozyskiwania zapytań, zamiast automatycznie rozbudowywać witrynę o funkcje, których kancelaria nie wykorzysta.",
+    ],
+    sections: [
+      {
+        id: "strona-kancelarii-powinna-odpowiadac-na-pytania-przed-pierws",
+        heading: "Strona kancelarii powinna odpowiadać na pytania przed pierwszą konsultacją",
+        body: [
+          "Osoba odwiedzająca stronę kancelarii zwykle chce najpierw ustalić, czy trafiła pod właściwy adres. Nie zna wewnętrznej struktury zespołu i może nie wiedzieć, jak prawidłowo nazwać swój problem. **Strona internetowa dla kancelarii powinna przełożyć zakres praktyki na informacje zrozumiałe dla osoby bez przygotowania prawniczego**, nie upraszczając przy tym samej materii prawnej.",
+          "Duże znaczenie ma sposób prezentacji specjalizacji. Sam wykaz dziedzin prawa często nie wystarcza. Przy każdej z nich warto wskazać, jakiego rodzaju spraw dotyczy, do kogo jest kierowana oraz który prawnik zajmuje się danym obszarem. Profile zespołu powinny uzupełniać ofertę, a nie powtarzać jej słowo w słowo. Mogą porządkować takie informacje jak kwalifikacje, zakres praktyki, doświadczenie, publikacje i języki obsługi.",
+          "Przed rozpoczęciem projektu ustalam między innymi, czy potrzebne będą:",
+        ],
+        list: [
+          "osobne podstrony specjalizacji i profile prawników,",
+          "informacje o przebiegu pierwszej konsultacji,",
+          "telefon, adres e-mail oraz czytelne godziny kontaktu,",
+          "adres kancelarii, mapa i wskazówki dotyczące dojazdu,",
+          "informacje o obsłudze zdalnej lub dostępnych językach.",
+        ],
+        outro: [
+          "Informacja o pierwszej konsultacji nie musi zawierać rozbudowanego regulaminu. Powinna jednak wyjaśnić, jak umówić rozmowę, czy trzeba wcześniej przygotować dokumenty i jakim kanałem kancelaria potwierdza termin. Dzięki temu potencjalny klient wie, czego się spodziewać, a zespół kancelarii otrzymuje lepiej uporządkowane zapytania.",
+        ],
+      },
+      {
+        id: "strona-dla-adwokata-radcy-prawnego-i-notariusza-wymaga-inneg",
+        heading: "Strona dla adwokata, radcy prawnego i notariusza wymaga innego układu",
+        body: [
+          "Choć wszystkie te serwisy dotyczą usług prawnych, nie powinny powstawać z jednego szablonu treści. **Strona dla adwokata** może skupiać się na obszarach prowadzonych spraw, profilu zawodowym i sposobie rozpoczęcia współpracy. Strona dla radcy prawnego często wymaga czytelnego rozdzielenia obsługi przedsiębiorców i klientów indywidualnych, jeśli kancelaria działa w obu tych obszarach.",
+          "**Strona dla radcy prawnego** prowadzącego jednoosobową praktykę będzie miała inną skalę niż witryna kancelarii z kilkoma prawnikami. W pierwszym przypadku głównym punktem może być profil właściciela połączony ze specjalizacjami. W większym zespole potrzebne są relacje między prawnikami, dziedzinami prawa, publikacjami i danymi kontaktowymi. Taki podział wpływa nie tylko na liczbę podstron, lecz także na nawigację i późniejszą edycję treści.",
+          "Jeszcze inaczej planowana jest **strona kancelarii notarialnej**. Jej użytkownik może szukać konkretnej czynności, listy potrzebnych dokumentów, informacji organizacyjnych lub danych dojazdowych. Serwis powinien więc prowadzić możliwie krótką drogą do tych informacji, bez kopiowania schematu typowego dla kancelarii procesowej.",
+          "Adwokaci, radcowie prawni i notariusze podlegają innym samorządom oraz właściwym dla nich zasadom informowania o działalności. Nie interpretuję tych zasad i nie zastępuję prawnika w ocenie treści. **Układam strukturę i formę komunikacji, ale materiały dotyczące działalności kancelarii zatwierdza prawnik.** Pozwala to rozdzielić odpowiedzialność merytoryczną od pracy projektowej i technicznej.",
+        ],
+      },
+      {
+        id: "tresci-przygotowujemy-wspolnie-nawet-jesli-nie-masz-jeszcze-",
+        heading: "Treści przygotowujemy wspólnie, nawet jeśli nie masz jeszcze zdjęć",
+        body: [
+          "Są dwa rozsądne modele pracy nad tekstami. W pierwszym kancelaria dostarcza gotową merytorykę, a ja dopasowuję ją do struktury podstron, porządkuję nagłówki i dbam o czytelność. W drugim otrzymuję materiały robocze, na przykład opisy praktyk, notatki, biogramy i odpowiedzi na pytania, a następnie układam z nich spójną treść do zatwierdzenia.",
+          "W obu przypadkach prawnik pozostaje źródłem i osobą zatwierdzającą informacje merytoryczne. Ja pilnuję, aby użytkownik rozumiał, gdzie znaleźć właściwą specjalizację, czym zajmuje się konkretny członek zespołu i jaki jest następny krok. **Tekst prawniczy na stronie powinien być precyzyjny, ale nie musi brzmieć jak pismo procesowe.** Czytelna składnia, krótsze akapity i wyjaśnienie terminów pomagają odbiorcy podjąć decyzję bez spłycania tematu.",
+          "Brak profesjonalnych zdjęć nie musi blokować projektu. Można przygotować układ oparty na typografii, spokojnej kolorystyce, czytelnych danych i odpowiednio zaplanowanych sekcjach. Miejsca na fotografie zespołu mogą zostać przewidziane w projekcie, nawet jeśli materiały powstaną później. Nie warto natomiast przypadkowo mieszać zdjęć prywatnych, różnych kadrów i niespójnego oświetlenia, ponieważ profile prawników powinny tworzyć jedną całość.",
+          "Przykładem wdrożenia opartego na uporządkowanej prezentacji praktyki jest [Kancelaria Maria Piontek](/projekty/kancelaria-mpiontek). Taka realizacja może być punktem odniesienia dla struktury, ale projekt nowej strony dopasowuję do konkretnej kancelarii, jej zespołu i zakresu działalności.",
+        ],
+      },
+      {
+        id: "domena-hosting-i-poczta-powinny-pozostawac-pod-kontrola-kanc",
+        heading: "Domena, hosting i poczta powinny pozostawać pod kontrolą kancelarii",
+        body: [
+          "Domena nie jest tylko adresem strony. Jest również podstawą zawodowych adresów e-mail, dlatego jej dostępność i własność mają znaczenie dla ciągłości działania kancelarii. Najbezpieczniejszy organizacyjnie model zakłada, że domena i hosting są zarejestrowane na kancelarię, a osoba techniczna otrzymuje dostęp potrzebny do konfiguracji i utrzymania serwisu.",
+          "W praktyce warto uporządkować trzy osobne elementy: rejestrację domeny, usługę hostingową oraz pocztę. Mogą one działać u jednego dostawcy, ale nie muszą. Istotne jest, aby kancelaria wiedziała, gdzie znajdują się usługi, na jaki adres przychodzą powiadomienia o odnowieniu i kto ma dostęp administracyjny.",
+          "Adres w rodzaju `imię@nazwakancelarii.pl` albo `sekretariat@nazwakancelarii.pl` jest spójny z marką kancelarii i nie zależy od prywatnej skrzynki pracownika. Zakres konfiguracji poczty ustalam przy rozpoczęciu współpracy, ponieważ zależy on od wybranego dostawcy i liczby potrzebnych skrzynek.",
+          "Po uruchomieniu witryny mogę także przejąć [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok. Sama domena, hosting i ewentualne płatne rozszerzenia są rozliczane osobno, dlatego dobrze uwzględnić je już podczas planowania zaplecza technicznego.",
+        ],
+      },
+      {
+        id: "zakres-serwisu-dobiera-sie-do-etapu-rozwoju-kancelarii",
+        heading: "Zakres serwisu dobiera się do etapu rozwoju kancelarii",
+        body: [
+          "Nowa kancelaria nie zawsze potrzebuje od razu rozbudowanej bazy wiedzy i kilkudziesięciu podstron. Jeżeli zakres usług jest wąski, zespół niewielki, a najważniejszym celem jest wiarygodna obecność w internecie, wystarczającym początkiem może być prosta wizytówka. Powinna zawierać podstawową prezentację praktyki, profil prawnika, dane kancelarii i jasne informacje organizacyjne.",
+          "Rozbudowany serwis ma sens, gdy kancelaria prowadzi wiele specjalizacji, zatrudnia większy zespół, obsługuje różne grupy klientów lub planuje regularne publikacje. Baza wiedzy wymaga nie tylko szablonu artykułu, lecz także kategorii, powiązań ze specjalizacjami i ustalenia, kto będzie odpowiadał za aktualizowanie treści.",
+        ],
+        table: {"caption":"Zakres serwisu dobiera się do etapu rozwoju kancelarii","head":["Wariant","Kiedy warto go wybrać","Typowy termin"],"rows":[["Prosta wizytówka","Nowa kancelaria, niewielki zespół, ograniczona liczba specjalizacji","2-3 tygodnie"],["Strona firmowa lub usługowa","Więcej specjalizacji, profile zespołu, rozbudowana struktura treści","4-6 tygodni"],["Serwis z bazą wiedzy","Regularne publikacje, wiele kategorii i powiązań z ofertą","Termin ustalany po briefie"]]},
+        outro: [
+          "Terminy zależą od zakresu i gotowości materiałów. Po każdym etapie udostępniam link do wersji testowej. W przypadku WordPressa pracuję na własnym motywie i polach ACF, bez Elementora, Divi oraz Avady. Więcej o tym modelu wdrożenia opisuję na stronie [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress).",
+        ],
+      },
+      {
+        id: "koszt-zalezy-przede-wszystkim-od-liczby-typow-tresci-i-funkc",
+        heading: "Koszt zależy przede wszystkim od liczby typów treści i funkcji",
+        body: [
+          "Na koszt wpływa nie tylko liczba pozycji w menu, lecz także liczba różnych szablonów, które trzeba zaprojektować i wdrożyć. Osobnej pracy wymagają między innymi podstrona specjalizacji, profil prawnika, artykuł, kategoria bazy wiedzy i wersja kontaktu dla konkretnej lokalizacji. Znaczenie ma również to, czy poszczególne sekcje mają być samodzielnie edytowane przez zespół kancelarii.",
+          "Wycena rośnie wraz z liczbą specjalizacji, profili oraz wersji językowych. Wpływa na nią także zakres pracy nad treścią, przygotowanie bazy wiedzy i konieczność przeniesienia materiałów ze starego serwisu. Migracja może obejmować podstrony, profile i publikacje, a przy zmianie adresów również przygotowanie przekierowań 301. Nie obiecuję przy tym zachowania dotychczasowych pozycji w wynikach wyszukiwania.",
+          "**Rzetelna wycena wymaga ustalenia zakresu, ponieważ dwie strony o podobnej liczbie podstron mogą różnić się liczbą szablonów, wersji językowych i materiałów do przeniesienia.** Po krótkiej rozmowie i briefie przygotowuję wycenę obejmującą zakres oraz termin. Dzięki temu możesz porównać nie tylko końcową ofertę, lecz także to, jakie elementy strony rzeczywiście zostaną zaprojektowane i wdrożone.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-gabinetow-i-klinik": {
+    heading: "Strona internetowa dla gabinetu kosmetycznego, która pomaga wybrać zabieg i umówić wizytę",
+    intro: [
+      "**W tym poradniku pokazuję, jak powinna być zaplanowana strona internetowa dla gabinetu kosmetycznego, aby ułatwiała poznanie oferty, porównanie zabiegów i przejście do rezerwacji.** Wyjaśniam też, jakie informacje warto przygotować przed rozpoczęciem projektu oraz od czego zależy zakres prac.",
+      "Dobra strona dla kliniki lub salonu nie powinna być wyłącznie wizytówką z numerem telefonu i kilkoma zdjęciami. Jej zadaniem jest przeprowadzenie osoby zainteresowanej od pytania o konkretny problem, przez wybór usługi, aż do zapisu. Projektuję tę ścieżkę tak, żeby była zrozumiała również dla kogoś, kto nie zna nazw zabiegów i dopiero porównuje dostępne możliwości.",
+    ],
+    sections: [
+      {
+        id: "rezerwacja-online-powinna-zaczynac-sie-przy-konkretnym-zabie",
+        heading: "Rezerwacja online powinna zaczynać się przy konkretnym zabiegu",
+        body: [
+          "Strona gabinetu z rezerwacją online działa najlepiej wtedy, gdy zapis jest naturalnym kolejnym krokiem po przeczytaniu opisu usługi. Zamiast ograniczać dostęp do kalendarza do jednego przycisku w menu, umieszczam odpowiednie odnośniki także przy zabiegach. Osoba zainteresowana nie musi wówczas wracać na stronę główną ani ponownie szukać właściwej kategorii w systemie rezerwacyjnym.",
+          "Jeżeli korzystasz już z Booksy, Versum, Moment albo innego rozwiązania, najpierw sprawdzam dostępne sposoby jego połączenia ze stroną. Zakres integracji zależy od możliwości konkretnego systemu. Czasami można skierować użytkownika bezpośrednio do wybranej usługi, a czasami dostępny jest tylko ogólny profil lub zewnętrzny kalendarz. Nie zakładam z góry, że każda platforma pozwoli osadzić terminarz albo automatycznie wymieniać dane.",
+          "Nie każdy gabinet potrzebuje rozbudowanej rezerwacji. Telefon może wystarczyć, gdy termin wymaga wcześniejszej kwalifikacji, zakres zabiegu ustala się indywidualnie albo recepcja musi najpierw zebrać podstawowe informacje. W takim przypadku projektuję czytelny przycisk połączenia i jasno opisuję, w jakich godzinach można się zapisać. Najważniejsze, aby sposób rejestracji odpowiadał rzeczywistemu procesowi obsługi, a nie zmuszał zespołu do korzystania z rozwiązania, które komplikuje pracę.",
+        ],
+      },
+      {
+        id: "cennik-i-opisy-pomagaja-swiadomie-wybrac-usluge",
+        heading: "Cennik i opisy pomagają świadomie wybrać usługę",
+        body: [
+          "Strona internetowa dla gabinetu kosmetycznego powinna porządkować ofertę według potrzeb odbiorcy, a nie wyłącznie według specjalistycznych nazw urządzeń lub technologii. Osoba odwiedzająca witrynę może wiedzieć, jaki problem chce rozwiązać, ale nie musi rozumieć różnic pomiędzy podobnymi procedurami. Dlatego tworzę logiczne kategorie i dbam o to, aby z cennika można było łatwo przejść do pełnego opisu zabiegu.",
+          "Przy każdej usłudze warto odpowiedzieć na najczęstsze pytania przed wizytą:",
+        ],
+        list: [
+          "dla kogo przeznaczony jest zabieg i jakie ma wskazania,",
+          "jakie są przeciwwskazania i kiedy potrzebna jest konsultacja,",
+          "jak przygotować się do wizyty,",
+          "jak przebiega zabieg i czego można spodziewać się po jego wykonaniu,",
+          "jaka jest cena lub od czego zależy jej ostateczna wysokość.",
+        ],
+        outro: [
+          "Opis efektów powinien być konkretny, lecz ostrożny. Nie przedstawiam indywidualnego rezultatu jako gwarancji dla każdej osoby. Treść ma pomagać zrozumieć usługę, porównać dostępne możliwości i przygotować się do rozmowy ze specjalistą. Przy większej liczbie zabiegów projektuję powtarzalny układ podstron, dzięki czemu użytkownik nie musi za każdym razem uczyć się nawigacji od początku.",
+        ],
+      },
+      {
+        id: "zdjecia-przed-i-po-wymagaja-zgody-oraz-rzeczowego-kontekstu",
+        heading: "Zdjęcia przed i po wymagają zgody oraz rzeczowego kontekstu",
+        body: [
+          "Galeria rezultatów może ułatwić ocenę charakteru zabiegu, ale sama fotografia nie wyjaśnia stanu wyjściowego, przebiegu procedury ani indywidualnych uwarunkowań. Dlatego zdjęcia przed i po powinny być publikowane wyłącznie po uzyskaniu odpowiedniej zgody pacjenta lub klienta. Warto również uporządkować dokumenty tak, aby było wiadomo, którego materiału dotyczy zgoda i w jakim zakresie pozwala na jego wykorzystanie.",
+          "Przy każdej realizacji można dodać krótki, rzeczowy opis. Powinien on wskazywać rodzaj wykonanego zabiegu i istotny kontekst, ale nie może sugerować, że identyczny efekt jest pewny u kolejnej osoby. Szczególną ostrożność zachowuję przy treściach dotyczących zabiegów medycznych, ponieważ sposób ich prezentowania może podlegać dodatkowym ograniczeniom dotyczącym reklamy.",
+          "Jako wykonawca przygotowuję miejsce na galerię, sposób prezentacji zdjęć oraz czytelny układ opisów. **Ostateczne materiały i treści zatwierdza właściciel placówki**, który zna zakres świadczonych usług i odpowiada za możliwość publikacji fotografii. Przykładem uporządkowania rozbudowanej oferty zabiegowej jest realizacja [Queen Scarlet](/projekty/queen-scarlet).",
+        ],
+      },
+      {
+        id: "profil-firmy-w-google-i-strona-powinny-przekazywac-spojne-in",
+        heading: "Profil Firmy w Google i strona powinny przekazywać spójne informacje",
+        body: [
+          "Widoczność lokalna nie zależy od jednego elementu. Strona dla salonu kosmetycznego oraz Profil Firmy w Google powinny podawać spójną nazwę, adres, numer telefonu, godziny działania i adres witryny. Rozbieżne informacje mogą utrudniać użytkownikowi ustalenie, czy trafił na właściwą placówkę oraz czy dane są nadal aktualne.",
+          "Na stronie warto jasno wskazać obszar działalności, na przykład gabinet i miasto, oraz przygotować osobne opisy najważniejszych usług. Nie polega to na wielokrotnym powtarzaniu nazwy miejscowości. Znacznie ważniejsze jest dostarczenie informacji, które pomagają podjąć decyzję: lokalizacji, możliwości dojazdu, zakresu zabiegów, kwalifikacji zespołu, cen i sposobu rezerwacji.",
+          "Opinie w Profilu Firmy mogą potwierdzać doświadczenia klientów, ale nie zastępują pełnej prezentacji oferty. Podczas wdrożenia dbam o strukturę nagłówków, dane strukturalne, mapę strony i podłączenie Google Search Console. Nie obiecuję określonej pozycji w wynikach wyszukiwania, ponieważ zależy ona również od konkurencji, jakości treści, historii domeny i dalszego rozwijania serwisu.",
+        ],
+      },
+      {
+        id: "profil-w-portalu-rezerwacyjnym-nie-zastepuje-wlasnej-strony",
+        heading: "Profil w portalu rezerwacyjnym nie zastępuje własnej strony",
+        body: [
+          "Portal rezerwacyjny jest użytecznym kanałem pozyskiwania zapisów, ale prezentuje Twój gabinet według zasad i układu ustalonego przez operatora platformy. Masz ograniczony wpływ na kolejność informacji, wygląd profilu i sposób przedstawienia rozbudowanej oferty. Użytkownik pozostaje też w otoczeniu innych firm, które może od razu porównywać.",
+          "Własna strona internetowa dla gabinetu kosmetycznego daje miejsce na treści, których często nie da się wygodnie rozwinąć w profilu rezerwacyjnym. Należą do nich szczegółowe wskazania i przeciwwskazania, przygotowanie do wizyty, profile specjalistów, odpowiedzi na pytania, galerie oraz informacje o standardzie obsługi. Treści są publikowane we własnej domenie i mogą być odnajdywane w Google jako część serwisu gabinetu.",
+          "Nie trzeba przy tym wybierać pomiędzy własną stroną a portalem. Witryna może wyjaśniać ofertę i budować rozpoznawalność marki, a wybrany system nadal obsługiwać dostępne terminy. W projektach opartych na [tworzeniu stron WordPress](/uslugi/tworzenie-stron-wordpress) przygotowuję również możliwość samodzielnej edycji ustalonych sekcji bez korzystania z kreatorów takich jak Elementor, Divi czy Avada.",
+        ],
+      },
+      {
+        id: "koszt-strony-zalezy-od-oferty-i-sposobu-obslugi-zapisow",
+        heading: "Koszt strony zależy od oferty i sposobu obsługi zapisów",
+        body: [
+          "Wycenę przygotowuję po krótkiej rozmowie i briefie, ponieważ dwie placówki o podobnej wielkości mogą potrzebować zupełnie innych rozwiązań. Największe znaczenie ma sposób rezerwacji. Przycisk prowadzący do zewnętrznego profilu jest innym zakresem niż bardziej rozbudowane połączenie z systemem, o ile jego możliwości techniczne pozwalają na taką integrację.",
+          "Na zakres projektu wpływają również:",
+        ],
+        list: [
+          "liczba zabiegów oraz sposób ich podziału na kategorie,",
+          "rozbudowanie cennika i liczba pól do samodzielnej edycji,",
+          "galeria zdjęć przed i po,",
+          "sekcja poradnikowa lub blog,",
+          "dodatkowe wersje językowe,",
+          "ilość materiałów wymagających uporządkowania przed wdrożeniem.",
+        ],
+        outro: [
+          "Znaczenie ma też stan obecnej witryny. Jeśli strona już działa, sprawdzam, które treści warto zachować i czy potrzebne będą przekierowania starych adresów. Osobnym zakresem może być [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress), gdy problemem jest wydajność istniejącego serwisu, a nie potrzeba budowy wszystkiego od początku. Po ustaleniu wymagań przedstawiam wycenę wraz z zakresem i terminem, dzięki czemu możesz porównać nie tylko końcową cenę, ale też to, jakie elementy obejmuje realizacja.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-sklepow-internetowych-dla-marek-odziezowych": {
+    heading: "Sklep internetowy dla marki odzieżowej: jak wybrać platformę i przygotować sprzedaż",
+    intro: [
+      "**W tym poradniku pokazuję, jak zaplanować sklep internetowy dla marki odzieżowej, wybrać odpowiednią platformę oraz przygotować sprzedaż kolekcji we własnym sklepie i na Allegro.** Omawiam także przedsprzedaż, premiery dropów, prezentację rozmiarów, synchronizację stanów magazynowych oraz obowiązki związane z promocjami i informacjami o produktach.",
+      "Jeżeli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd projektu. Sklep z odzieżą powinien odpowiadać sposobowi, w jaki prowadzisz markę: liczbie wariantów, częstotliwości premier, kanałom sprzedaży i temu, kto będzie aktualizował katalog. Dobrze dobrana technologia ma ułatwiać codzienną obsługę, a nie uzależniać każdą zmianę od programisty.",
+    ],
+    sections: [
+      {
+        id: "woocommerce-shopify-czy-shoper-moga-pasowac-do-roznych-model",
+        heading: "WooCommerce, Shopify czy Shoper mogą pasować do różnych modeli sprzedaży",
+        body: [
+          "Nie ma jednej platformy odpowiedniej dla każdej marki. Przy wyborze sprawdzam przede wszystkim, czy potrzebujesz własnych funkcji, jak często zmieniasz kolekcje, gdzie jeszcze sprzedajesz i jak duży wpływ chcesz mieć na rozwój sklepu. Znaczenie ma również to, czy akceptujesz stały abonament i ograniczenia narzucone przez dostawcę platformy.",
+        ],
+        table: {"caption":"WooCommerce, Shopify czy Shoper mogą pasować do różnych modeli sprzedaży","head":["Kryterium","WooCommerce","Shopify","Shoper"],"rows":[["Własność sklepu","Sklep działa na Twoim WordPressie i hostingu","Sklep działa w usłudze dostawcy","Sklep działa w usłudze dostawcy"],["Abonament","Brak abonamentu za sam WooCommerce, pozostają koszty hostingu i rozszerzeń","Stały abonament zależny od wybranego planu","Stały abonament zależny od wybranego planu"],["Prowizje","Zależą między innymi od operatora płatności i wybranych usług","Mogą zależeć od planu oraz sposobu obsługi płatności","Zależą od planu, operatora płatności i dodatkowych usług"],["Elastyczność","Duża możliwość zmiany wyglądu, danych i funkcji","Rozwój w granicach platformy i dostępnych aplikacji","Rozwój w granicach platformy i dostępnych integracji"],["Integracje z Allegro","Możliwe bezpośrednio lub przez system pośredni, na przykład BaseLinker","Zależne od dostępnych aplikacji i systemów pośrednich","Zależne od aktualnej oferty integracji i systemów pośrednich"]]},
+        outro: [
+          "Platforma abonamentowa może wystarczyć, gdy chcesz szybko uruchomić standardowy sklep internetowy z ubraniami, nie potrzebujesz nietypowych funkcji i akceptujesz sposób działania gotowego systemu. To rozsądna opcja także wtedy, gdy prostota obsługi jest ważniejsza niż pełna kontrola nad kodem i rozwojem sklepu.",
+          "WooCommerce wybieram wtedy, gdy marka potrzebuje większej swobody w projektowaniu kart produktów, stron kolekcji, wariantów i integracji. Przygotowuję [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) na własnym motywie, bez Elementora, Divi i innych kreatorów w nowych projektach. Dzięki temu panel może pozostać dopasowany do treści, które rzeczywiście edytujesz.",
+        ],
+      },
+      {
+        id: "dobor-rozmiaru-zaczyna-sie-od-informacji-a-nie-od-samej-tabe",
+        heading: "Dobór rozmiaru zaczyna się od informacji, a nie od samej tabeli",
+        body: [
+          "Tabela rozmiarów pomaga tylko wtedy, gdy klient rozumie, czego dotyczą podane wartości. Inaczej mierzy się ciało, a inaczej ubranie rozłożone na płasko. Dlatego przy każdym zestawie wymiarów trzeba jasno opisać sposób pomiaru, jednostkę oraz ewentualny margines wynikający z konstrukcji lub materiału.",
+          "W sklepie obejmującym różne grupy produktów jedna uniwersalna tabela może wprowadzać w błąd. Koszula, spodnie i luźna bluza mają inne punkty pomiarowe, a rozmiar oznaczony tą samą literą nie zawsze odpowiada identycznym wymiarom. Tabele warto więc przypisywać do kategorii, kolekcji albo konkretnych produktów.",
+          "Na karcie produktu mogą znaleźć się informacje, które pomagają podjąć decyzję:",
+        ],
+        list: [
+          "wymiary ubrania i instrukcja mierzenia,",
+          "wzrost modelki lub modela oraz prezentowany rozmiar,",
+          "informacja, czy fason jest dopasowany, regularny czy luźny,",
+          "skład materiału oraz wskazówka dotycząca jego elastyczności,",
+          "osobne zdjęcia kolorów i charakterystycznych detali.",
+        ],
+        outro: [
+          "Zdjęcie na modelce daje kontekst, którego nie zapewnia packshot. Pozwala ocenić długość, proporcje i sposób układania się materiału. Nie zastępuje jednak dokładnych wymiarów, dlatego te dwa rodzaje informacji powinny się uzupełniać. **Im mniej klient musi zgadywać przed zakupem, tym mniejsze ryzyko zwrotu wynikającego z niewłaściwego rozmiaru lub błędnego wyobrażenia o kroju.**",
+        ],
+      },
+      {
+        id: "kolekcje-dropy-i-przedsprzedaz-wymagaja-osobnego-scenariusza",
+        heading: "Kolekcje, dropy i przedsprzedaż wymagają osobnego scenariusza",
+        body: [
+          "Strona kolekcji nie musi być zwykłą kategorią produktów. Może przedstawiać motyw premiery, sesję zdjęciową, najważniejsze modele i kontekst, w którym powstał drop. Produkty pozostają częścią katalogu, ale kolekcja otrzymuje własną narrację oraz adres, który można wykorzystywać w kampaniach i publikacjach w mediach społecznościowych.",
+          "Przy premierze dropu warto rozdzielić trzy stany produktu: zapowiedź, sprzedaż i brak dostępności. Produkt zapowiadany może mieć zdjęcia, opis oraz datę premiery bez aktywnego przycisku zakupu. Po rozpoczęciu sprzedaży karta działa standardowo, a po wyczerpaniu danego wariantu może udostępniać zapis na powiadomienie o ponownej dostępności.",
+          "Przedsprzedaż wymaga jeszcze wyraźniejszej komunikacji. Klient powinien przed złożeniem zamówienia wiedzieć, że produkt nie jest dostępny od ręki oraz jaki termin realizacji obowiązuje dla danego zamówienia. Jeżeli w jednym koszyku mogą znaleźć się produkty dostępne i przedsprzedażowe, trzeba także określić sposób wysyłki. Taki scenariusz ustalam przed wdrożeniem, ponieważ wpływa na kartę produktu, koszyk, wiadomości transakcyjne i obsługę zamówień.",
+        ],
+      },
+      {
+        id: "wspolne-stany-lacza-sklep-allegro-i-ruch-z-mediow-spolecznos",
+        heading: "Wspólne stany łączą sklep, Allegro i ruch z mediów społecznościowych",
+        body: [
+          "Sprzedaż wielokanałowa działa sprawnie, gdy wiadomo, który system jest głównym źródłem danych o produktach, cenach i dostępności. Bez takiej decyzji łatwo doprowadzić do sytuacji, w której ten sam wariant ma inny stan w sklepie, a inny w ofercie na Allegro. Szczególnej uwagi wymagają produkty występujące jednocześnie w wielu rozmiarach i kolorach.",
+          "BaseLinker może pośredniczyć między WooCommerce a Allegro, przekazywać zamówienia oraz aktualizować stany w zakresie obsługiwanym przez wybraną konfigurację. Przed wdrożeniem [integracji WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker) ustalam strukturę wariantów, sposób powiązania ofert oraz miejsce, w którym zespół będzie obsługiwać zamówienia. Trzeba też określić zasady zmian cen i opisów, aby dane nie były nadpisywane w niewłaściwym kierunku.",
+          "Instagram i TikTok pełnią inną funkcję niż marketplace. Materiał pokazujący stylizację lub premierę powinien prowadzić użytkownika możliwie blisko zakupu, najlepiej do właściwej karty produktu albo strony kolekcji. Ponieważ takie przejście odbywa się zwykle na telefonie, karta musi szybko pokazać zdjęcia, cenę, dostępne warianty, tabelę rozmiarów i przycisk dodania do koszyka. W realizacji [LumiKids](/projekty/lumikids) pracowałem między innymi nad warstwą wizualną, stronami kolekcji, kartami produktów i strukturą kategorii.",
+        ],
+      },
+      {
+        id: "promocje-i-informacje-o-produkcie-trzeba-uwzglednic-juz-w-pr",
+        heading: "Promocje i informacje o produkcie trzeba uwzględnić już w projekcie",
+        body: [
+          "Od 1 stycznia 2023 roku przy informowaniu o obniżce ceny należy pokazać również najniższą cenę tego produktu z 30 dni przed wprowadzeniem obniżki. Zasada wynikająca z przepisów określanych jako *Omnibus* wpływa na kartę produktu, listy produktów i inne miejsca, w których prezentowana jest promocja. **Samo przekreślenie wcześniejszej ceny nie wystarcza, jeśli komunikat przedstawia ofertę jako obniżkę.**",
+          "Sklep powinien także przekazywać klientowi informacje dotyczące prawa do odstąpienia od umowy zawartej na odległość. Co do zasady konsument ma na to 14 dni, choć w konkretnych sytuacjach mogą mieć zastosowanie wyjątki. Procedura, formularz i komunikaty muszą być spójne z regulaminem przygotowanym lub zatwierdzonym dla Twojego sklepu.",
+          "Od 13 grudnia 2024 roku obowiązuje *GPSR*, czyli unijne rozporządzenie dotyczące ogólnego bezpieczeństwa produktów. Oferta internetowa powinna zawierać wymagane dane producenta, a w odpowiednich przypadkach także dane podmiotu odpowiedzialnego oraz informacje lub ostrzeżenia dotyczące bezpieczeństwa. Przy odzieży zakres danych zależy od produktu i podmiotu wprowadzającego go do sprzedaży, dlatego układ karty powinien przewidywać miejsce na ich czytelną prezentację. Dokumenty prawne i ostateczny zakres informacji przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem.",
+        ],
+      },
+      {
+        id: "koszt-sklepu-zalezy-od-katalogu-integracji-i-gotowosci-mater",
+        heading: "Koszt sklepu zależy od katalogu, integracji i gotowości materiałów",
+        body: [
+          "Koszt sklepu internetowego dla marki odzieżowej określam po poznaniu zakresu, ponieważ podobna liczba produktów może oznaczać zupełnie inną ilość pracy. Dziesięć prostych modeli bez wariantów to inny katalog niż dziesięć modeli dostępnych w wielu rozmiarach i kolorach, z osobnymi zdjęciami, tabelami oraz stanami magazynowymi.",
+          "Na wycenę wpływają przede wszystkim liczba produktów i wariantów, sposób prezentowania kolekcji, integracje z Allegro lub systemem magazynowym oraz ewentualna migracja. Przy przenoszeniu sklepu sprawdzam jakość eksportu, strukturę kategorii, adresy podstron i możliwość prawidłowego połączenia wariantów. Dla zmienionych adresów przygotowuję przekierowania 301, ale nie obiecuję zachowania dotychczasowych pozycji w Google.",
+          "Znaczenie ma również przygotowanie zdjęć. Nie wykonuję sesji fotograficznych, więc organizuje ją marka. Mogę natomiast określić potrzebne kadry, proporcje i formaty, przygotować przekazane materiały do użycia w sklepie oraz przypisać zdjęcia do odpowiednich wariantów. Po krótkiej rozmowie i briefie przygotowuję wycenę z zakresem oraz terminem, uwzględniając także to, które dane i materiały będą gotowe przed rozpoczęciem wdrożenia.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-producentow-mebli": {
+    heading: "Strona internetowa dla producenta mebli: jak zaplanować katalog, wyceny i sprzedaż B2B",
+    intro: [
+      "**W tym poradniku pokazuję, jakie funkcje powinna mieć strona internetowa dla producenta mebli, aby odpowiadała sposobowi sprzedaży, ułatwiała składanie zapytań i prezentowała ofertę w użytecznej formie.** Inaczej projektuje się serwis dla marki sprzedającej gotowe kolekcje, inaczej stronę dla stolarni, a jeszcze inaczej katalog przeznaczony głównie dla architektów, salonów i dystrybutorów.",
+      "Zanim zaproponuję strukturę strony, sprawdzam, kto podejmuje decyzję o zakupie, jak powstaje wycena oraz jakie informacje są potrzebne przed rozmową z handlowcem. Dzięki temu strona nie jest tylko zbiorem efektownych zdjęć. Prowadzi użytkownika od poznania oferty do konkretnego działania, na przykład wysłania wymiarów, pobrania dokumentacji albo znalezienia najbliższego punktu sprzedaży.",
+    ],
+    sections: [
+      {
+        id: "katalog-sklep-czy-formularz-wyceny-powinien-wynikac-ze-sposo",
+        heading: "Katalog, sklep czy formularz wyceny powinien wynikać ze sposobu sprzedaży",
+        body: [
+          "Pierwszą decyzją nie jest wybór technologii, lecz określenie, czy klient może samodzielnie kupić produkt. Jeżeli mebel ma stałą cenę, jasno opisane warianty i przewidywalne warunki dostawy, odpowiednim rozwiązaniem może być sklep. Jeśli cena zależy od wymiarów, materiału, miejsca montażu albo indywidualnych ustaleń, klasyczny koszyk często nie odpowiada rzeczywistemu procesowi sprzedaży.",
+        ],
+        table: {"caption":"Katalog, sklep czy formularz wyceny powinien wynikać ze sposobu sprzedaży","head":["Model strony","Kiedy warto go wybrać","Główne działanie użytkownika"],"rows":[["Katalog mebli","Oferta wymaga prezentacji, ale zamówienie jest ustalane indywidualnie","Przegląda kolekcje i wysyła zapytanie"],["Sklep internetowy","Produkty mają ustalone ceny, warianty i zasady dostawy","Dodaje produkt do koszyka i składa zamówienie"],["Formularz wyceny","Meble powstają na wymiar lub wymagają konsultacji","Przekazuje dane potrzebne do przygotowania oferty"],["Model mieszany","Część produktów jest gotowa, a część konfigurowana","Kupuje lub prosi o indywidualną wycenę"]]},
+        outro: [
+          "Strona z katalogiem mebli może również łączyć kilka modeli. Gotowe krzesła lub akcesoria mogą być sprzedawane bezpośrednio, podczas gdy zabudowy kuchenne trafiają do formularza wyceny. W przypadku produktów ze stałymi warunkami zakupu mogę wykorzystać [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Najważniejsze, aby klient od razu rozumiał, co może kupić online, a co wymaga kontaktu i dodatkowych ustaleń.",
+        ],
+      },
+      {
+        id: "formularz-wyceny-powinien-przygotowac-klienta-do-konkretnej-",
+        heading: "Formularz wyceny powinien przygotować klienta do konkretnej rozmowy",
+        body: [
+          "Dobra strona dla mebli na wymiar nie ogranicza formularza do pól „imię”, „telefon” i „wiadomość”. Taki kontakt zwykle nie dostarcza informacji potrzebnych do oceny zlecenia. Handlowiec musi później dopytywać o podstawowe dane, a klient ponownie opisuje to, co mógł przekazać już podczas pierwszego zgłoszenia.",
+          "Projektując formularz, dobieram pola do rodzaju realizacji. Przy kuchni potrzebne informacje mogą dotyczyć układu pomieszczenia, przy szafie wnękowej jej szerokości i wysokości, a przy meblach hotelowych liczby pomieszczeń. W typowym zgłoszeniu warto umożliwić podanie wymiarów, miejscowości, oczekiwanego terminu oraz rodzaju zabudowy. Przydatna jest też możliwość dodania zdjęć pomieszczenia, rzutu, szkicu lub inspiracji.",
+          "**Formularz nie zastępuje pomiaru ani konsultacji technicznej.** Jego zadaniem jest zebranie danych do wstępnej oceny zapytania. Pola powinny być zrozumiałe dla osoby, która nie zna fachowej terminologii. Zamiast wymagać specjalistycznych nazw, można zastosować krótkie podpowiedzi i przykłady. Dzięki temu do firmy trafia pełniejszy opis, a rozmowa może szybciej przejść do materiałów, możliwości wykonania i kolejnych etapów.",
+        ],
+      },
+      {
+        id: "strefa-b2b-powinna-odpowiadac-na-potrzeby-architekta-i-dystr",
+        heading: "Strefa B2B powinna odpowiadać na potrzeby architekta i dystrybutora",
+        body: [
+          "Odbiorca detaliczny patrzy przede wszystkim na wygląd, zastosowanie i możliwość dopasowania mebla. Architekt potrzebuje wymiarów, materiałów oraz plików do projektu. Dystrybutor albo salon chce natomiast poznać kolekcje, dostępne warianty, zasady współpracy i materiały wspierające sprzedaż. **Strona internetowa dla producenta mebli powinna rozdzielać te potrzeby, zamiast prowadzić wszystkie grupy tą samą ścieżką.**",
+          "Strefa partnera może mieć część ogólnodostępną oraz zasoby dostępne po zalogowaniu. W zależności od modelu współpracy mogą znaleźć się tam katalogi PDF, zdjęcia produktowe, instrukcje, próbki wykończeń w formie cyfrowej oraz pliki techniczne. Jeżeli producent nie potrzebuje kont użytkowników, materiały można uporządkować w zwykłym centrum pobierania, podzielonym według kolekcji lub typów produktów.",
+          "Ważnym elementem bywa także lista punktów sprzedaży. Powinna zawierać dane niezbędne do odwiedzenia salonu, w tym adres, zakres dostępnej ekspozycji i dane kontaktowe, jeżeli producent nimi dysponuje. Przy planowaniu takiej ścieżki pomocna jest analiza sposobu prezentowania produktów technicznych, na przykład w projekcie [Multikon](/projekty/multikon).",
+        ],
+      },
+      {
+        id: "wersje-jezykowe-wymagaja-osobnej-struktury-dla-kazdego-rynku",
+        heading: "Wersje językowe wymagają osobnej struktury dla każdego rynku",
+        body: [
+          "Jeśli oferta jest kierowana do odbiorców w Polsce i Niemczech, samo automatyczne przetłumaczenie tekstów nie wystarczy. Niemiecka wersja strony powinna mieć własne adresy, tytuły, opisy kategorii i dane kontaktowe właściwe dla obsługi danego rynku. Dotyczy to również dokumentów, formularzy, komunikatów systemowych oraz zgód pojawiających się przy wysyłaniu zapytania.",
+          "Przed wdrożeniem ustalam, które produkty są dostępne na danym rynku i czy sposób obsługi zapytań jest taki sam. Nie każda kolekcja, opcja dostawy lub usługa montażu musi być oferowana w obu krajach. Osobne treści pozwalają pokazać te różnice jasno, bez dopisków i wyjątków rozproszonych po całej stronie.",
+          "Wielojęzyczna strona z katalogiem mebli powinna też umożliwiać niezależne uzupełnianie danych. Brak tłumaczenia jednego produktu nie może prowadzić do przypadkowej mieszanki języków. Warto również ustalić, czy katalogi PDF i pliki techniczne mają wspólną wersję, czy potrzebują osobnych materiałów dla każdego rynku.",
+        ],
+      },
+      {
+        id: "galeria-realizacji-sprzedaje-wtedy-gdy-wyjasnia-zakres-wykon",
+        heading: "Galeria realizacji sprzedaje wtedy, gdy wyjaśnia zakres wykonanej pracy",
+        body: [
+          "Liczba realizacji powinna pozwalać pokazać różne typy zleceń bez publikowania wielu niemal identycznych zestawów zdjęć. Lepiej przedstawić kilka dobrze opisanych przykładów dla poszczególnych kategorii niż tworzyć długą galerię, w której użytkownik nie wie, czym różnią się kolejne projekty. W przypadku strony dla stolarni mogą to być osobne realizacje kuchni, garderób, zabudów salonu albo mebli do lokali usługowych.",
+          "Każda realizacja powinna wyjaśniać, co zostało wykonane, gdzie zastosowano dane rozwiązanie i jakie materiały wykorzystano. Warto podać rodzaj frontów, blatów, okuć lub wykończenia, jeśli informacje te można ujawnić. Zdjęcia z montażu pomagają pokazać skalę prac, dopasowanie zabudowy oraz elementy, których nie widać na końcowych fotografiach wnętrza.",
+          "Fotografie muszą być przygotowane w odpowiednich rozmiarach i formatach. Strona może zawierać dużo zdjęć, ale nie powinna pobierać od razu wszystkich plików w pełnej rozdzielczości. Dobieram sposób kompresji, warianty obrazów i kolejność ładowania do układu galerii. W branży związanej z obróbką materiałów podobne znaczenie ma pokazanie zarówno efektu, jak i zastosowania produktu, co można zobaczyć w realizacji [Stys-Glass](/projekty/stys-glass).",
+        ],
+      },
+      {
+        id: "najczestsze-bledy-utrudniaja-ocene-oferty-i-wyslanie-zapytan",
+        heading: "Najczęstsze błędy utrudniają ocenę oferty i wysłanie zapytania",
+        body: [
+          "Problemy na stronach producentów mebli rzadko wynikają z braku animacji lub ozdobnych elementów. Znacznie częściej użytkownik widzi produkt, ale nie może sprawdzić jego podstawowych parametrów, porównać wariantów ani ustalić, co powinien zrobić dalej.",
+          "Najczęstsze błędy to:",
+        ],
+        list: [
+          "sama galeria bez nazw, opisów materiałów i informacji o zastosowaniu,",
+          "brak wymiarów lub niejasne oznaczenie, które parametry można zmienić,",
+          "publikowanie ciężkich zdjęć bez odpowiednich rozmiarów i kompresji,",
+          "jedna ścieżka kontaktu dla klienta detalicznego, architekta i hurtownika,",
+          "formularz wymagający opisania całego zapytania w jednym pustym polu,",
+          "pliki techniczne rozproszone pomiędzy kartami produktów i katalogami PDF.",
+        ],
+        outro: [
+          "Naprawa tych problemów zaczyna się od uporządkowania informacji, a nie od zmiany kolorów strony. Użytkownik powinien móc przejść od inspiracji do danych technicznych i właściwego sposobu kontaktu. Jeśli oferta ma część detaliczną oraz hurtową, obie ścieżki powinny być widoczne już na poziomie menu, kategorii lub karty produktu.",
+        ],
+      },
+      {
+        id: "koszt-strony-internetowej-dla-producenta-mebli-zalezy-od-dan",
+        heading: "Koszt strony internetowej dla producenta mebli zależy od danych i funkcji",
+        body: [
+          "Na zakres prac wpływa przede wszystkim wielkość katalogu oraz sposób przygotowania danych. Ręczne dodanie kilkunastu kolekcji jest innym zadaniem niż import rozbudowanej bazy produktów z wieloma wariantami. Znaczenie ma również to, czy dane są kompletne i spójne. Jeżeli nazwy materiałów, wymiary lub oznaczenia występują w kilku formach, przed importem trzeba ustalić wspólną strukturę.",
+          "Kolejnym czynnikiem są filtry. Prosty podział według rodzaju mebla wymaga mniejszego zakresu niż filtrowanie według wymiarów, materiałów, kolorów, zastosowania i dostępnych wariantów. Na koszt wpływają także logowanie partnerów, uprawnienia do materiałów B2B, osobne wersje językowe oraz połączenie katalogu z zewnętrznym źródłem danych.",
+          "Przed wyceną ustalam też, czy zawartość będzie wpisywana w panelu, importowana z uporządkowanego pliku, czy pobierana z innego systemu. Dopiero po poznaniu tych informacji mogę określić zakres i termin. **Największą różnicę robi nie sama liczba podstron, lecz liczba zależności pomiędzy produktami, wariantami, odbiorcami i źródłami danych.**",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-hoteli-i-pensjonatow": {
+    heading: "Strona internetowa dla hotelu jako własny kanał sprzedaży pobytów",
+    intro: [
+      "**W tym poradniku wyjaśniam, jak powinna działać strona internetowa dla hotelu, pensjonatu lub apartamentów, jeśli ma wspierać sprzedaż pobytów obok portali rezerwacyjnych.** Omawiam różnice między silnikiem rezerwacji a channel managerem, wersje językowe, pomiar źródeł rezerwacji, dane obiektu w Google oraz wygodną edycję ofert sezonowych.",
+      "Jeśli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd projektu. Istotne jest także to, jak strona połączy się z narzędziami używanymi w obiekcie, jakie dane będzie można mierzyć i które treści zmienisz samodzielnie. Dobrze zaplanowana witryna nie jest osobnym katalogiem pokoi, lecz częścią całego procesu sprzedaży, od pierwszego wyszukania obiektu po potwierdzenie pobytu.",
+    ],
+    sections: [
+      {
+        id: "jak-polaczyc-silnik-rezerwacji-channel-manager-i-ceny",
+        heading: "Jak połączyć silnik rezerwacji, channel manager i ceny",
+        body: [
+          "Silnik rezerwacji to narzędzie, w którym gość wybiera termin, pokój, liczbę osób i dostępne dodatki, a następnie przechodzi przez proces zamówienia pobytu. Strona internetowa dla hotelu może kierować do zewnętrznego silnika albo wyświetlać jego formularz w obrębie witryny. Sposób integracji zależy od możliwości konkretnego systemu i od tego, jak ma wyglądać ścieżka użytkownika.",
+          "Channel manager pełni inną funkcję. Przekazuje informacje o dostępności i cenach między używanymi kanałami sprzedaży. Jego zadaniem jest ograniczenie sytuacji, w której ten sam pokój pozostaje dostępny jednocześnie na stronie i w kilku portalach mimo dokonanej rezerwacji. Nie każdy mały obiekt potrzebuje jednak rozbudowanego zestawu narzędzi. Najpierw sprawdzam liczbę pokoi, kanały sprzedaży, sposób ustalania cen i to, ile czynności wykonujesz obecnie ręcznie.",
+        ],
+        table: {"caption":"Jak połączyć silnik rezerwacji, channel manager i ceny","head":["Element","Główne zadanie","Kiedy warto go rozważyć"],"rows":[["Silnik rezerwacji","Obsługa wyboru terminu i pokoju","Gdy chcesz przyjmować rezerwacje na stronie"],["Channel manager","Synchronizacja dostępności między kanałami","Gdy sprzedajesz te same pokoje w kilku miejscach"],["System zarządzania obiektem","Obsługa pobytów i pracy recepcji","Gdy potrzebujesz szerszej organizacji rezerwacji"],["Panel strony","Edycja opisów, pakietów i treści","Gdy chcesz samodzielnie aktualizować ofertę"]]},
+        outro: [
+          "Parytet cen oznacza spójność zasad cenowych między kanałami, ale nie sprowadza się wyłącznie do jednej liczby przy pokoju. Trzeba porównać także warunki anulowania, zawartość pakietu, śniadanie, możliwość zmiany terminu i dodatkowe świadczenia. Przed integracją ustalam więc, które dane są zarządzane na stronie, a które pozostają w systemie rezerwacyjnym.",
+        ],
+      },
+      {
+        id: "jak-strona-internetowa-dla-hotelu-wspiera-rezerwacje-bezposr",
+        heading: "Jak strona internetowa dla hotelu wspiera rezerwacje bezpośrednie",
+        body: [
+          "Portale rezerwacyjne mogą nadal odpowiadać za pozyskiwanie części gości. Własna witryna tworzy obok nich kanał dla osób, które znalazły obiekt w Google, zobaczyły go w mapach, otrzymały polecenie albo wracają po wcześniejszym pobycie. **Rezerwacje bezpośrednie wymagają przede wszystkim jasnej oferty i sprawnej ścieżki zakupu, a nie samego przycisku „Rezerwuj”.**",
+          "Gość powinien móc łatwo porównać warianty pobytu, sprawdzić, co obejmuje cena, oraz poznać warunki zmiany lub anulowania terminu. Ważna jest też ciągłość procesu. Jeśli użytkownik po wyborze pokoju trafia do zewnętrznego narzędzia, powinien rozumieć, że nadal rezerwuje pobyt w tym samym obiekcie. Nazwy pokoi, zdjęcia, ceny i warunki nie mogą wzajemnie sobie przeczyć.",
+          "Nie obiecuję określonego udziału rezerwacji bezpośrednich, ponieważ wynik zależy między innymi od rozpoznawalności obiektu, źródeł ruchu, sezonu, cen i jakości oferty. Mogę natomiast przygotować stronę oraz pomiar, które pozwolą Ci ocenić ten kanał na podstawie danych. Przykłady prezentacji obiektów znajdziesz w realizacjach [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) oraz [pensjonat Maciejanka](/projekty/maciejanka).",
+        ],
+      },
+      {
+        id: "jak-przygotowac-wersje-jezykowe-dla-zagranicznych-gosci",
+        heading: "Jak przygotować wersje językowe dla zagranicznych gości",
+        body: [
+          "Wersja językowa nie powinna ograniczać się do automatycznego tłumaczenia strony głównej. Gość z zagranicy potrzebuje zrozumiałych informacji o wyposażeniu pokoju, cenie, zasadach płatności, zameldowaniu, parkingu i anulowaniu pobytu. Jeżeli część treści pozostanie wyłącznie po polsku, użytkownik może przerwać proces przed potwierdzeniem rezerwacji.",
+          "Dla każdego języka przygotowuję osobne adresy podstron. Dzięki temu można udostępnić konkretną wersję pokoju lub pakietu, a wyszukiwarka otrzymuje czytelną strukturę serwisu. Menu językowe powinno prowadzić do odpowiednika aktualnie oglądanej treści, a nie za każdym razem do strony głównej. Osobnej kontroli wymagają również tytuły podstron, opisy w wynikach wyszukiwania i komunikaty formularzy.",
+          "Sprawdzam też, co obsługuje wybrany silnik rezerwacji. Sama strona dla pensjonatu może mieć kompletne tłumaczenie, ale użytkownik po przejściu do rezerwacji nadal musi zobaczyć właściwy język, dostępne metody płatności i zrozumiałe warunki. Tłumaczenia regulaminu oraz treści prawnych powinny pochodzić od osoby uprawnionej do ich przygotowania lub zostać przez nią zatwierdzone. Ja odpowiadam za ich poprawne umieszczenie i powiązanie z procesem rezerwacji.",
+        ],
+      },
+      {
+        id: "jak-mierzyc-zrodla-rezerwacji-bez-zgadywania",
+        heading: "Jak mierzyć źródła rezerwacji bez zgadywania",
+        body: [
+          "Pomiar zaczyna się od ustalenia, jakie działania są wartościowe. Może to być rozpoczęcie wyboru terminu, przejście do silnika rezerwacji, wysłanie zapytania albo potwierdzenie pobytu. Zakres zależy od możliwości systemu rezerwacyjnego. Jeżeli działa on w innej domenie, trzeba sprawdzić, czy może przekazać informację o zakończonej transakcji i zachować źródło wizyty.",
+          "Konfiguruję GA4 tak, aby uruchamiał się dopiero po uzyskaniu wymaganej zgody na cookies. Oznacza to, że raport nie obejmie każdej osoby odwiedzającej stronę. **Dane analityczne należy traktować jako materiał do porównywania kanałów i zachowań, a nie jako pełną księgowość rezerwacji.** Liczbę sprzedanych pobytów nadal najlepiej potwierdza system, w którym są one obsługiwane.",
+          "W pomiarze mogę uwzględnić między innymi:",
+        ],
+        list: [
+          "wejścia z bezpłatnych wyników Google, map, kampanii, mediów społecznościowych i stron odsyłających,",
+          "kliknięcia prowadzące do procesu rezerwacji,",
+          "wysłanie formularza dotyczącego pobytu lub oferty grupowej,",
+          "zdarzenie potwierdzenia rezerwacji, jeżeli wybrany system pozwala je poprawnie przekazać.",
+        ],
+        outro: [
+          "Przed uruchomieniem testuję całą ścieżkę. Sprawdzam przy tym, czy przejście między domenami nie tworzy sztucznego nowego źródła ruchu oraz czy zdarzenia nie zapisują się dwukrotnie.",
+        ],
+      },
+      {
+        id: "jak-polaczyc-dane-obiektu-mapy-i-opinie-google",
+        heading: "Jak połączyć dane obiektu, mapy i opinie Google",
+        body: [
+          "Dane strukturalne pomagają opisać wyszukiwarce, czego dotyczy strona i jaki obiekt jest na niej przedstawiony. W kodzie można wskazać między innymi nazwę, adres, dane kontaktowe, lokalizację i typ działalności. Zakres oznaczeń dopasowuję do informacji rzeczywiście widocznych na stronie. **Dane strukturalne powinny potwierdzać treść witryny, a nie dodawać niewidoczne informacje wyłącznie dla wyszukiwarki.**",
+          "Równie ważna jest spójność z Profilem Firmy w Google. Nazwa obiektu, adres, telefon, adres strony oraz położenie na mapie powinny się zgadzać. Profil może prowadzić użytkownika do witryny, wskazać trasę dojazdu i prezentować opinie. Nie obiecuję jednak określonej pozycji w mapach ani wynikach wyszukiwania.",
+          "Opinie można przedstawiać na stronie tylko w sposób zgodny ze źródłem i aktualnymi zasadami używanego rozwiązania. Jeśli integracja automatyczna nie jest dostępna albo byłaby nieuzasadniona, lepiej skierować użytkownika do profilu niż utrzymywać ręcznie kopiowany, nieaktualny zestaw recenzji. Przy wdrożeniu konfiguruję także mapę strony i Search Console, aby można było kontrolować indeksowanie nowych adresów.",
+        ],
+      },
+      {
+        id: "jak-edytowac-pakiety-vouchery-i-oferty-sezonowe",
+        heading: "Jak edytować pakiety, vouchery i oferty sezonowe",
+        body: [
+          "Strona apartamentów z rezerwacją często potrzebuje czegoś więcej niż stałej listy pokoi. Pakiety świąteczne, pobyty dla par, oferty rodzinne, vouchery i dodatki mogą zmieniać się w ciągu roku. Przygotowuję dla nich edytowalne pola w panelu WordPress, zgodne z zaakceptowanym projektem. Korzystam z własnego motywu i ACF, bez kreatorów takich jak Elementor, Divi czy Avada w nowych realizacjach.",
+          "Możesz zmienić tytuł, opis, zdjęcia, termin obowiązywania i warunki oferty w zakresie ustalonym na początku projektu. Ceny oraz dostępność nie zawsze powinny być edytowane w tym samym miejscu. Jeśli ich głównym źródłem jest silnik rezerwacji lub inny system obiektu, pozostawienie ich właśnie tam zmniejsza ryzyko rozbieżności.",
+          "Voucher może działać jako prezentacja oferty z formularzem albo jako produkt kupowany i opłacany online. Drugi wariant wymaga ustalenia obsługi płatności, statusów zamówienia, sposobu dostarczenia vouchera, terminu ważności i zasad realizacji. Po publikacji przeprowadzam szkolenie z edycji treści. Zapewniam też 60 dni gwarancji i bezpłatnych poprawek po starcie, a dalszą [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) mogę prowadzić w miesięcznym abonamencie bez umowy na rok.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-firm-budowlanych": {
+    heading: "Strona internetowa dla firmy budowlanej: co powinna pokazywać klientom i inwestorom",
+    intro: [
+      "**Znajdziesz tu konkretne wskazówki, jak zaplanować stronę firmy budowlanej pod kątem realizacji, wiarygodności, obszaru działania, wycen oraz późniejszej rozbudowy.** Dzięki nim łatwiej porównasz propozycje wykonawców i zdecydujesz, które funkcje rzeczywiście pomogą Twojej firmie, a które nie są potrzebne na początku.",
+      "Dobra strona internetowa dla firmy budowlanej nie powinna ograniczać się do listy usług i numeru telefonu. Inaczej oferty szuka klient prywatny planujący remont, a inaczej inwestor, który przed rozmową sprawdza doświadczenie, dokumenty i zaplecze wykonawcy. Dlatego przed rozpoczęciem projektu ustalam, do kogo przede wszystkim kierujesz ofertę i jakie informacje mają ułatwić tej osobie podjęcie decyzji.",
+    ],
+    sections: [
+      {
+        id: "klient-prywatny-i-inwestor-b2b-sprawdzaja-inne-informacje",
+        heading: "Klient prywatny i inwestor B2B sprawdzają inne informacje",
+        body: [
+          "Klient prywatny chce przede wszystkim zobaczyć efekty podobnych prac i upewnić się, że firma działa na jego terenie. Zwraca uwagę na zdjęcia, opinie, zrozumiały opis usługi i łatwy sposób przesłania zapytania. Jeżeli interesuje go strona dla firmy remontowej, będzie prawdopodobnie szukał przykładów remontów mieszkań, łazienek lub domów. Osoba wybierająca dekarza może natomiast oczekiwać realizacji pokazujących różne rodzaje dachów, pokryć i obróbek.",
+          "Inwestor B2B lub podmiot przygotowujący postępowanie ofertowe potrzebuje bardziej formalnych informacji. Oprócz portfolio może sprawdzać referencje, zakres uprawnień, polisę OC, posiadany sprzęt i zdolność do wykonania określonego typu prac. Strona internetowa dla firmy budowlanej powinna pozwolić mu szybko dotrzeć do tych danych, bez przeglądania całej galerii i szukania dokumentów wśród materiałów przeznaczonych dla klientów indywidualnych.",
+          "Przy planowaniu zawartości rozdzielam więc informacje według ich zastosowania:",
+        ],
+        list: [
+          "klientowi prywatnemu pokazuję realizacje, opinie, sposób pracy i zakres usług,",
+          "inwestorowi udostępniam referencje, aktualne uprawnienia, polisę OC i informacje o zapleczu,",
+          "przy obsłudze obu grup przygotowuję czytelne ścieżki prowadzące do właściwych materiałów.",
+        ],
+        outro: [
+          "Nie oznacza to, że strona dla wykonawcy musi być rozbudowanym portalem. Ważniejsza jest właściwa hierarchia informacji. Użytkownik powinien od razu rozpoznać, czy realizujesz zlecenia podobne do jego inwestycji i czy spełniasz warunki potrzebne do dalszej rozmowy.",
+        ],
+      },
+      {
+        id: "realizacje-powinny-dokumentowac-prace-a-nie-tylko-wypelniac-",
+        heading: "Realizacje powinny dokumentować pracę, a nie tylko wypełniać galerię",
+        body: [
+          "Realizacje są zwykle najmocniejszym dowodem kompetencji, ale przypadkowy zestaw fotografii niewiele mówi o zakresie wykonanych robót. Każdą prezentację warto potraktować jak krótkie studium przypadku. Zdjęcia mają pokazywać stan początkowy, przebieg prac i rezultat, natomiast opis powinien wyjaśniać, za co odpowiadała Twoja firma.",
+          "Dobrze przygotowana karta realizacji może zawierać rodzaj inwestycji, wykonany zakres, wykorzystane rozwiązania oraz przybliżoną lokalizację. Nie trzeba przy tym publikować adresu ani danych klienta. Zazwyczaj wystarczy miejscowość, dzielnica lub region, jeżeli taka informacja pomaga odbiorcy ocenić obszar działalności. Przykładową prezentację usług związanych z budynkami można zobaczyć w realizacji [Dom Bez Wad](/projekty/dom-bez-wad).",
+          "Warto zbierać różne rodzaje materiałów. Zdjęcia przed i po dobrze pokazują zmianę, fotografie z budowy dokumentują przebieg robót, a ujęcia z drona pomagają zaprezentować dachy, elewacje, większe posesje i inwestycje terenowe. Strona dla dekarza może dzięki temu przedstawiać zarówno detale wykonania, jak i cały dach. Strona dla firmy remontowej może z kolei zestawiać ten sam kadr przed rozpoczęciem prac i po ich zakończeniu.",
+          "Zdjęcia powinny być ostre, spójnie opisane i przygotowane do szybkiego wyświetlania. Jeśli planujesz regularnie dodawać nowe realizacje, mogę zbudować na WordPressie powtarzalny formularz wpisu. W ramach usługi [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress) przygotowuję własny motyw oraz edycję opartą na ACF, bez Elementora, Divi i Avady. Dzięki temu nowa realizacja zachowuje ustalony układ, nawet gdy uzupełniasz ją samodzielnie.",
+        ],
+      },
+      {
+        id: "mapa-realizacji-laczy-obszar-dzialania-z-lokalnym-kontekstem",
+        heading: "Mapa realizacji łączy obszar działania z lokalnym kontekstem",
+        body: [
+          "Sama lista obsługiwanych miejscowości mówi, dokąd dojeżdżasz, ale mapa realizacji może pokazać, gdzie rzeczywiście wykonywałeś prace. Nie musi wskazywać dokładnych adresów. Punkty można przypisać do miejscowości lub przybliżonych obszarów, chroniąc prywatność klientów, a jednocześnie prezentując zasięg firmy w bardziej czytelny sposób.",
+          "Taka mapa pomaga użytkownikowi szybko ocenić, czy pracujesz w jego okolicy. Może też prowadzić do opisów konkretnych inwestycji. Jeżeli ktoś szuka wykonawcy z Wrocławia lub sąsiedniej miejscowości, zobaczy nie tylko deklarowany dojazd, lecz także przykłady robót z danego regionu. To szczególnie przydatne, gdy strona internetowa dla firmy budowlanej obejmuje kilka usług wykonywanych na różnych obszarach.",
+          "Lokalne SEO nie wymaga tworzenia wielu niemal identycznych podstron, na których zmienia się wyłącznie nazwa miasta. Lepiej łączyć usługę z rzeczywistym kontekstem: realizacją, zakresem prac, warunkami dojazdu albo informacją istotną dla klienta z danej lokalizacji. Fraza typu „firma budowlana plus miasto” powinna wynikać z treści, a nie być sztucznie powtarzana.",
+          "Przy wdrożeniu przygotowuję strukturę nagłówków, dane strukturalne, mapę strony i Search Console. Są to elementy techniczne pomagające wyszukiwarce zrozumieć serwis i śledzić jego indeksowanie, ale nie stanowią obietnicy określonej pozycji w Google.",
+        ],
+      },
+      {
+        id: "formularz-ze-zdjeciami-sprawdza-sie-czesciej-niz-rozbudowany",
+        heading: "Formularz ze zdjęciami sprawdza się częściej niż rozbudowany konfigurator",
+        body: [
+          "Formularz wyceny może zebrać informacje, które normalnie trzeba ustalać podczas kilku wiadomości lub rozmów. W zależności od usługi użytkownik może wskazać rodzaj inwestycji, lokalizację, planowany termin, zakres prac i dołączyć fotografie. Strona dla wykonawcy dostarcza wtedy uporządkowane zapytanie, a nie jedynie krótką wiadomość z prośbą o podanie ceny.",
+          "Konfigurator ma sens, gdy wycena opiera się na powtarzalnych parametrach i możliwych do opisania zależnościach. Dobrym przykładem jest [Galabau Darius](/projekty/galabau-darius), gdzie przygotowałem konfigurator ogrodzeń obliczający cenę na żywo. Użytkownik wybiera parametry rozwiązania, a system aktualizuje wynik na podstawie wprowadzonych danych.",
+          "Przy remontach generalnych, nietypowych dachach albo pracach wymagających oględzin automatyczna kalkulacja może sugerować dokładność, której nie da się zapewnić bez poznania stanu obiektu. W takim przypadku lepszy będzie formularz ze zdjęciami i polami dopasowanymi do usługi. Podczas briefu oceniam, czy potrzebujesz prostego formularza, formularza wieloetapowego czy konfiguratora z własną logiką.",
+        ],
+      },
+      {
+        id: "strone-mozna-zrobic-samodzielnie-ale-kreator-ma-swoje-granic",
+        heading: "Stronę można zrobić samodzielnie, ale kreator ma swoje granice",
+        body: [
+          "Kreator może być rozsądnym wyborem, jeśli potrzebujesz prostej wizytówki, masz gotowe materiały i akceptujesz pracę na dostępnych szablonach. Pozwala uruchomić podstawową stronę bez programowania oraz samodzielnie zmieniać teksty. Trzeba jednak przeznaczyć czas na ułożenie treści, przygotowanie zdjęć, konfigurację formularzy, wersję mobilną i ustawienia techniczne.",
+          "Ograniczenia stają się bardziej widoczne, gdy strona internetowa dla firmy budowlanej ma obsługiwać filtrowane realizacje, rozbudowane formularze, mapę, różne typy dokumentów lub niestandardowy konfigurator. Gotowy szablon może również narzucać sposób prezentacji materiałów, który nie odpowiada procesowi wyboru wykonawcy. Sam dostęp do wielu elementów nie gwarantuje, że powstanie z nich czytelna całość.",
+          "Przed wyborem rozwiązania warto sprawdzić:",
+        ],
+        list: [
+          "czy samodzielnie ustawisz poprawne wyświetlanie strony na telefonach,",
+          "czy formularz przyjmie potrzebne dane i pliki,",
+          "czy możesz wygodnie rozwijać galerię oraz podstrony usług,",
+          "czy narzędzie pozwoli przenieść treści, jeśli później zmienisz platformę.",
+        ],
+        outro: [
+          "Jeżeli potrzebujesz wyłącznie kilku podstawowych sekcji, samodzielne wykonanie może wystarczyć. Gdy strona dla firmy remontowej lub dekarza ma stać się uporządkowanym katalogiem realizacji i narzędziem do kwalifikowania zapytań, indywidualny projekt daje większą kontrolę nad strukturą, wyglądem oraz dalszą rozbudową.",
+        ],
+      },
+      {
+        id: "koszt-i-termin-zaleza-od-zakresu-ktory-rzeczywiscie-wykorzys",
+        heading: "Koszt i termin zależą od zakresu, który rzeczywiście wykorzystasz",
+        body: [
+          "Koszt strony określam po krótkiej rozmowie i briefie. Znaczenie ma liczba usług, sposób przygotowania tekstów, wielkość galerii, liczba typów realizacji oraz to, czy materiały są już gotowe. Innego nakładu wymaga podstawowa strona internetowa dla firmy budowlanej, a innego serwis z mapą inwestycji, dokumentami dla klientów B2B i rozbudowanym systemem filtrowania.",
+          "Na zakres wpływa również sposób zbierania zapytań. Klasyczny formularz kontaktowy jest prostszy niż formularz ze zdjęciami i dodatkowymi krokami. Konfigurator wymaga natomiast zaprojektowania reguł, zależności oraz sposobu prezentacji wyniku. Osobnym elementem jest przygotowanie treści, jeśli nie masz jeszcze opisów usług, realizacji i obszaru działania.",
+          "Typowa prosta strona lub wizytówka powstaje w ciągu 2-3 tygodni. Strona firmowa albo usługowa zajmuje zwykle 4-6 tygodni. Dokładny termin ustalam po briefie, ponieważ zależy on między innymi od zakresu funkcji i gotowości materiałów. Przed kodowaniem przygotowuję makiety w Figmie, uwzględniam dwie tury poprawek i czekam na akceptację projektu. Taki podział pozwala ustalić strukturę serwisu, zanim rozpocznie się właściwe wdrożenie.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-influencerow": {
+    heading: "Strona internetowa dla influencera jako centrum współprac i sprzedaży",
+    intro: [
+      "**W tym poradniku pokazuję, jak strona internetowa dla influencera może uporządkować ofertę dla marek, zastąpić szybko dezaktualizujący się PDF i wspierać sprzedaż własnych produktów.** Wyjaśniam również, czym takie rozwiązanie różni się od linku w bio, jakie informacje warto zbierać w formularzu oraz co wpływa na zakres i koszt realizacji.",
+      "Dobrze zaplanowana strona dla twórcy internetowego nie musi być rozbudowanym portalem. Powinna przede wszystkim skracać drogę do najważniejszych informacji i pozwalać Ci rozwijać własny kanał niezależnie od zmian zachodzących na platformach społecznościowych. Projektując taką stronę, biorę pod uwagę zarówno potrzeby odbiorców, jak i osób odpowiedzialnych za kampanie po stronie marek.",
+    ],
+    sections: [
+      {
+        id: "media-kit-online-mozna-aktualizowac-bez-wysylania-kolejnych-",
+        heading: "Media kit online można aktualizować bez wysyłania kolejnych plików",
+        body: [
+          "Klasyczny media kit w PDF sprawdza się do momentu, w którym zmieniają się statystyki, formaty współpracy albo dane o odbiorcach. Po każdej aktualizacji powstaje nowa wersja dokumentu, ale wcześniejsze pliki nadal mogą znajdować się w skrzynkach potencjalnych partnerów. **Media kit online działa pod jednym adresem, dlatego osoba reprezentująca markę zawsze może zobaczyć aktualną wersję oferty.**",
+          "Na takiej podstronie warto umieścić informacje, które pomagają szybko ocenić dopasowanie twórcy do kampanii:",
+        ],
+        list: [
+          "aktualne dane dotyczące zasięgów i zaangażowania,",
+          "charakterystykę odbiorców, w tym ich zainteresowania i podstawowe dane demograficzne,",
+          "dostępne kanały oraz formaty publikacji,",
+          "przykłady wcześniejszych współprac i zaakceptowane materiały,",
+          "stawki, jeżeli chcesz udostępniać je publicznie.",
+        ],
+        outro: [
+          "Dane nie muszą być wpisane na stałe w kodzie. Mogę przygotować panel, w którym samodzielnie zmienisz liczby, opis grupy odbiorców, formaty oraz przykłady realizacji. Aktualizacja nie zmienia adresu strony, więc nie trzeba przygotowywać nowego pliku i ponownie przesyłać go wszystkim zainteresowanym.",
+          "Stawki są opcjonalnym elementem media kitu. Możesz pokazać je publicznie, ukryć na podstronie zabezpieczonej hasłem albo całkowicie zrezygnować z ich publikowania. Takie podejście pozwala dostosować sposób prezentowania oferty do rodzaju współprac i przyjętego modelu negocjacji.",
+        ],
+      },
+      {
+        id: "wlasna-strona-daje-wiecej-mozliwosci-niz-sam-link-w-bio",
+        heading: "Własna strona daje więcej możliwości niż sam link w bio",
+        body: [
+          "Link w bio dobrze sprawdza się jako proste menu prowadzące do kilku miejsc. Nie musi jednak być docelowym centrum Twojej marki. **Strona internetowa dla influencera może pełnić jednocześnie funkcję media kitu online, portfolio, formularza dla marek, sklepu i miejsca zapisu do newslettera.** Wszystkie te elementy działają pod własną domeną i mogą rozwijać się razem z działalnością.",
+        ],
+        table: {"caption":"Własna strona daje więcej możliwości niż sam link w bio","head":["Obszar","Własna strona","Link w bio","Kreator stron dla twórców"],"rows":[["Własność","Strona i treści pozostają pod Twoją kontrolą","Profil działa w zewnętrznej usłudze","Zakres kontroli zależy od platformy"],["Domena","Własny, rozpoznawalny adres","Zwykle adres platformy lub przekierowanie","Własna domena może zależeć od planu"],["Możliwości","Media kit, formularze, sklep, newsletter i treści","Głównie lista odnośników","Funkcje dostępne w ramach kreatora"],["SEO","Możliwość rozwijania treści i podstron widocznych w wyszukiwarce","Bardzo ograniczony zakres","Zależny od ustawień i konstrukcji platformy"],["Koszt","Zależy od projektu, funkcji i utrzymania","Zwykle niski lub abonamentowy","Najczęściej abonament zależny od planu"]]},
+        outro: [
+          "Nie każdy twórca od razu potrzebuje indywidualnego serwisu. Jeżeli chcesz wyłącznie zebrać kilka odnośników, prosty kreator może wystarczyć. Własna strona zaczyna mieć większe znaczenie wtedy, gdy potrzebujesz spójnej oferty dla partnerów, chcesz publikować treści, budować bazę mailingową lub sprzedawać bez odsyłania odbiorców do kilku różnych narzędzi.",
+          "Projekt mogę oprzeć na rozwiązaniu dopasowanym do potrzeb i planów rozwoju. Może to być WordPress z wygodną edycją treści albo jedna z [nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe), jeśli potrzebne są bardziej niestandardowe funkcje. Przy serwisie generowanym z uporządkowanych danych mogę również rozważyć [strony Jamstack](/uslugi/strony-jamstack).",
+        ],
+      },
+      {
+        id: "formularz-dla-marek-pomaga-odroznic-konkretne-propozycje-od-",
+        heading: "Formularz dla marek pomaga odróżnić konkretne propozycje od ogólnych zapytań",
+        body: [
+          "Wiadomość z pytaniem o możliwość współpracy często nie zawiera danych potrzebnych do podjęcia decyzji. Brakuje budżetu, terminu, rodzaju publikacji albo informacji o produkcie. W efekcie pierwsza odpowiedź nie dotyczy warunków kampanii, lecz służy zebraniu podstawowych informacji.",
+          "Formularz dla marek może prowadzić osobę wysyłającą zapytanie przez zestaw konkretnych pól. W zależności od Twojego modelu współpracy mogą to być nazwa marki, dane kontaktowe, promowany produkt, planowany budżet, termin kampanii, oczekiwane platformy oraz formaty materiałów. Można również dodać miejsce na opis założeń, odnośnik do briefu i dane potrzebne do dalszej rozmowy.",
+          "**Dobrze zaprojektowany formularz nie gwarantuje wartościowych propozycji, ale ogranicza liczbę wiadomości pozbawionych konkretów.** Marka przed wysłaniem zapytania widzi, jakich informacji potrzebujesz, a Ty możesz szybciej ocenić zgodność projektu z tematyką kanału i dostępnością.",
+          "Formularz powinien zawierać odpowiednią informację dotyczącą przetwarzania danych oraz wymagane zgody RODO. Jego zakres ustalam na podstawie tego, jakie dane rzeczywiście są potrzebne do obsługi zapytania. Mogę również zastosować zabezpieczenie przed spamem, aby formularz nie stał się dodatkowym źródłem niechcianych wiadomości.",
+        ],
+      },
+      {
+        id: "wspolprace-reklamowe-powinny-byc-prezentowane-w-sposob-czyte",
+        heading: "Współprace reklamowe powinny być prezentowane w sposób czytelny",
+        body: [
+          "Strona dla content creatora może porządkować nie tylko ofertę, lecz także opublikowane współprace. Portfolio daje markom możliwość zobaczenia, w jakich formatach pracujesz, jakie tematy podejmujesz i jak materiały sponsorowane wpisują się w pozostałą komunikację. Przy każdym przykładzie można wskazać kanał, rodzaj publikacji, zakres działań oraz materiały, na których pokazanie zgodził się partner.",
+          "Jawność ma znaczenie również dla odbiorców. **Materiał reklamowy powinien być przedstawiony w sposób, który pozwala rozpoznać jego komercyjny charakter.** Dotyczy to treści publikowanych w mediach społecznościowych, materiałów osadzonych na stronie oraz wpisów przygotowanych w ramach współpracy.",
+          "Nie interpretuję przepisów ani nie zastępuję doradcy prawnego. Mogę natomiast zaprojektować czytelne miejsce na oznaczenie partnera, charakteru materiału i informacji wymaganych w danym typie publikacji. Ostateczną treść oznaczeń oraz zasady wykorzystania logotypów, wyników kampanii i materiałów przekazanych przez markę należy ustalić zgodnie z warunkami konkretnej współpracy.",
+          "Przejrzyste portfolio nie musi ujawniać danych poufnych. Jeśli nie masz zgody na publikację wyników, można pokazać sam zakres działań, wykorzystane kanały i zatwierdzone materiały. Pozwala to przedstawić doświadczenie bez udostępniania informacji zastrzeżonych przez partnera.",
+        ],
+      },
+      {
+        id: "strona-moze-laczyc-wspolprace-z-wlasnymi-zrodlami-przychodu",
+        heading: "Strona może łączyć współprace z własnymi źródłami przychodu",
+        body: [
+          "Strona internetowa dla influencera nie musi ograniczać się do obsługi kampanii reklamowych. Może stać się miejscem sprzedaży produktów fizycznych, materiałów cyfrowych, dostępu do treści albo innych elementów oferty. Dzięki temu osoba trafiająca z filmu, podcastu lub profilu społecznościowego przechodzi bezpośrednio do strony produktu, a nie do kolejnej listy odnośników.",
+          "Jeżeli potrzebujesz sprzedaży, mogę przygotować [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) obsługujące produkty cyfrowe lub fizyczne. Zakres może obejmować karty produktów, płatności, kupony, zamówienia oraz przekazywanie plików po zakupie. Sposób dostawy, dokumenty i treści związane z zamówieniem ustalam przed wdrożeniem.",
+          "Drugim kierunkiem monetyzacji jest newsletter. Formularz zapisu może przekazywać adresy do wybranego systemu mailingowego, zapisywać wymagane zgody i kierować użytkownika na stronę podziękowania. Lista mailingowa daje możliwość informowania odbiorców o nowych materiałach i produktach bez opierania całej komunikacji na zasięgu jednej platformy.",
+          "Warto zaplanować te funkcje przed rozpoczęciem projektu, nawet jeśli mają zostać uruchomione później. **Strona dla twórcy internetowego może wystartować jako media kit online, a następnie zostać rozbudowana o newsletter lub sklep**, o ile jej struktura i technologia uwzględniają taki rozwój.",
+        ],
+      },
+      {
+        id: "koszt-zalezy-od-sposobu-aktualizacji-danych-i-dodatkowych-fu",
+        heading: "Koszt zależy od sposobu aktualizacji danych i dodatkowych funkcji",
+        body: [
+          "Na koszt wpływa przede wszystkim zakres, a nie sama liczba widocznych sekcji. Prosta strona internetowa dla influencera z ręcznie aktualizowanym media kitem będzie wymagała innego nakładu pracy niż serwis pobierający statystyki automatycznie. Integracje zależą od możliwości poszczególnych platform, zakresu dostępnych danych oraz sposobu autoryzacji.",
+          "Znaczenie ma również formularz dla marek. Podstawowe zapytanie kontaktowe jest prostsze niż wieloetapowy formularz z wyborem formatów, budżetem, terminem i dodatkowymi załącznikami. Kolejne elementy wpływające na wycenę to newsletter, sklep, płatności, rodzaje produktów, liczba wersji językowych oraz indywidualne funkcje dla partnerów.",
+          "Stronę z media kitem, ofertą współprac i formularzem dla marek realizuję zwykle w terminie 3-5 tygodni. Ostateczny termin zależy między innymi od dostępności zdjęć, tekstów, statystyk i materiałów do portfolio. Po krótkiej rozmowie oraz briefie przygotowuję wycenę z ustalonym zakresem i harmonogramem.",
+        ],
+      },
+    ],
+  },
+  "tworzenie-stron-dla-streamerow": {
+    heading: "Strona internetowa dla streamera jako niezależne centrum Twojej marki",
+    intro: [
+      "**Znajdziesz tu praktyczne porównanie własnej witryny z gotowymi kreatorami oraz wyjaśnienie, jak zaplanować harmonogram, archiwum nagrań, strefę sponsorską i sprzedaż merchu.** Dzięki temu łatwiej ocenisz, jaki zakres powinna mieć strona internetowa dla streamera i na co zwrócić uwagę podczas porównywania wykonawców.",
+      "Projektuję taki serwis jako miejsce łączące różne obszary działalności twórcy, a nie jako kopię profilu na platformie streamingowej. Twoja strona może rozwijać się razem z kanałem, pozostając pod własnym adresem nawet wtedy, gdy zmienisz serwis do transmisji, sposób publikowania materiałów albo model współpracy z markami.",
+    ],
+    sections: [
+      {
+        id: "wlasna-strona-uniezaleznia-marke-od-jednej-platformy",
+        heading: "Własna strona uniezależnia markę od jednej platformy",
+        body: [
+          "Platforma streamingowa daje dostęp do widzów i narzędzi transmisji, ale to jej regulamin, interfejs oraz dostępne funkcje określają, jak prezentujesz swoją działalność. Strona internetowa dla streamera działa inaczej. Należy do Twojego zaplecza komunikacyjnego, ma własną domenę i może prowadzić do wszystkich miejsc, w których jesteś aktywny.",
+          "Ma to znaczenie szczególnie wtedy, gdy publikujesz na kilku platformach albo nie chcesz uzależniać całej marki od jednego profilu. Pod jednym adresem można umieścić aktualny harmonogram, uporządkowane archiwum, informacje o sponsorach, sklep oraz odnośniki do społeczności. Widz nie musi sprawdzać kilku opisów profili, aby znaleźć właściwy materiał lub termin kolejnej transmisji.",
+          "Własna witryna porządkuje między innymi:",
+        ],
+        list: [
+          "harmonogram transmisji na różnych platformach,",
+          "wybrane nagrania, serie i materiały archiwalne,",
+          "informacje przeznaczone dla widzów i potencjalnych sponsorów,",
+          "odnośniki do Discorda, sklepu oraz serwisów społecznościowych.",
+        ],
+        outro: [
+          "Taka strona dla twórcy gamingowego może też pełnić funkcję trwałego archiwum działalności. Nie oznacza to przechowywania wszystkich filmów na hostingu witryny. Zwykle rozsądniej jest osadzać materiały z serwisów wideo, a na własnej stronie tworzyć ich czytelną strukturę, opisy i podział na gry, serie lub wydarzenia.",
+        ],
+      },
+      {
+        id: "wlasna-witryna-i-kreator-rozwiazuja-rozne-problemy",
+        heading: "Własna witryna i kreator rozwiązują różne problemy",
+        body: [
+          "Gotowy kreator dla streamerów albo prosty link w bio sprawdza się, gdy potrzebujesz szybko zebrać kilka odnośników. Własna strona daje natomiast większą kontrolę nad strukturą, wyglądem i kolejnymi etapami rozwoju. Wybór zależy więc nie tylko od budżetu, lecz także od tego, czy budujesz długoterminowe zaplecze marki, czy potrzebujesz podstawowej wizytówki.",
+        ],
+        table: {"caption":"Własna witryna i kreator rozwiązują różne problemy","head":["Obszar","Własna strona streamera","Kreator lub link w bio"],"rows":[["Własność","Serwis działa na wybranym hostingu i pod Twoim adresem","Konto i funkcje zależą od zewnętrznej usługi"],["Wygląd","Projekt można dopasować do identyfikacji kanału","Układ zwykle opiera się na dostępnych szablonach"],["Domena","Możesz używać własnej domeny jako głównego adresu","Często punktem wyjścia jest adres w domenie kreatora"],["Możliwości","Możliwy jest harmonogram, archiwum, strefa sponsorów i sklep","Zakres wyznaczają moduły oferowane przez usługę"],["SEO","Można przygotować strukturę nagłówków, mapę strony i dane strukturalne","Kontrola nad technicznymi elementami bywa ograniczona"]]},
+        outro: [
+          "Jeżeli zakres jest prosty i opiera się głównie na treściach, mogę wykorzystać [strony Jamstack](/uslugi/strony-jamstack). Gdy potrzebne są bardziej rozbudowane funkcje, konta użytkowników albo niestandardowy przepływ danych, lepszym kierunkiem mogą być [aplikacje Next.js](/uslugi/aplikacje-nextjs). Technologię dobieram do funkcji, które rzeczywiście będą używane, a nie do samej etykiety projektu.",
+        ],
+      },
+      {
+        id: "harmonogram-i-nagrania-powinny-tworzyc-spojna-sciezke-dla-wi",
+        heading: "Harmonogram i nagrania powinny tworzyć spójną ścieżkę dla widza",
+        body: [
+          "Dobrze zaprojektowana strona streamera z harmonogramem odpowiada na trzy podstawowe pytania: kiedy zaczyna się transmisja, gdzie można ją obejrzeć i czego będzie dotyczyć. Plan może obejmować dzień, godzinę, platformę, tytuł wydarzenia oraz krótką informację o formacie. Sposób wprowadzania zmian ustalam na początku współpracy, aby pasował do tego, jak często aktualizujesz program.",
+          "Obok harmonogramu można umieścić status na żywo oraz bezpośrednie przejście do aktualnej transmisji. Taka automatyzacja jest możliwa tylko wtedy, gdy wybrana platforma udostępnia odpowiednie dane i pozwala wykorzystać je na zewnętrznej stronie. Przed zaplanowaniem integracji sprawdzam dokumentację, wymagania autoryzacji oraz zachowanie modułu podczas niedostępności usługi.",
+          "Nagrania warto prezentować selektywnie. Zamiast ładować wiele odtwarzaczy jednocześnie, można przygotować kategorie, miniatury i osobne widoki materiałów. Pomaga to zachować czytelność strony i ograniczyć wpływ zewnętrznych elementów na jej szybkość. Jeśli platforma przestanie przekazywać dane, przewiduję komunikat zastępczy lub zwykły odnośnik, aby widz nadal mógł przejść do kanału.",
+        ],
+      },
+      {
+        id: "strefa-sponsorska-ulatwia-ocene-mozliwej-wspolpracy",
+        heading: "Strefa sponsorska ułatwia ocenę możliwej współpracy",
+        body: [
+          "Sponsor odwiedzający stronę potrzebuje innych informacji niż widz szukający transmisji. Dlatego strefę współprac warto wyodrębnić i ułożyć tak, aby osoba reprezentująca markę mogła szybko zrozumieć tematykę kanału, dostępne formaty oraz sposób rozpoczęcia rozmowy.",
+          "W takiej sekcji można przedstawić zatwierdzone dane o kanale i widowni, charakter publikowanych treści, obsługiwane platformy oraz przykłady możliwych aktywacji. Mogą to być między innymi lokowanie produktu podczas transmisji, materiał partnerski, test sprzętu, udział w wydarzeniu albo dłuższa współpraca. Publikowane informacje powinny być aktualne i możliwe do potwierdzenia. Nie projektuję tej części jako zbioru efektownych obietnic, lecz jako uporządkowany pakiet danych potrzebnych do podjęcia decyzji.",
+          "Formularz dla sponsorów może zbierać nazwę marki, dane kontaktowe, planowany termin, opis produktu i oczekiwany zakres działań. Zakres pól warto dopasować do Twojego sposobu pracy. Zbyt ogólny formularz wymaga później wielu dodatkowych wiadomości, natomiast zbyt rozbudowany może zniechęcić osobę, która dopiero sprawdza możliwość współpracy.",
+        ],
+      },
+      {
+        id: "merch-i-napiwki-nie-zawsze-wymagaja-budowania-sklepu-od-pods",
+        heading: "Merch i napiwki nie zawsze wymagają budowania sklepu od podstaw",
+        body: [
+          "Strona internetowa dla streamera może prowadzić do rozwiązania sprzedażowego, z którego już korzystasz, albo zawierać własny sklep. Pierwszy wariant jest prostszy, ponieważ witryna prezentuje produkty i kieruje użytkownika do zewnętrznej usługi obsługującej dalszy proces. Drugi daje większą kontrolę nad katalogiem oraz wyglądem ścieżki zakupowej, ale poszerza projekt o płatności, dostawy, statusy zamówień i kwestie związane z obsługą sprzedaży.",
+          "Podobnie wygląda obsługa napiwków. Jeśli korzystasz już z zewnętrznej usługi, mogę przygotować widoczny odnośnik i umieścić go w odpowiednim kontekście. Nie ma potrzeby kopiowania mechanizmu, który działa i odpowiada Twoim potrzebom. Ważne jest natomiast, aby widz wiedział, dokąd prowadzi przycisk oraz że przechodzi do zewnętrznego operatora.",
+          "Jeśli potrzebujesz sklepu z własnym katalogiem, zakres ustalam osobno. Prosty odnośnik do merchu i pełny proces zakupowy to dwa różne zadania, nawet gdy z perspektywy użytkownika zaczynają się od podobnego przycisku. Rozbudowę można też zaplanować etapami, tworząc najpierw stronę marki, a później dodając sprzedaż.",
+        ],
+      },
+      {
+        id: "koszt-zalezy-przede-wszystkim-od-funkcji-i-integracji",
+        heading: "Koszt zależy przede wszystkim od funkcji i integracji",
+        body: [
+          "Wycenę przygotowuję po krótkiej rozmowie i briefie, kiedy wiem, które elementy mają być edytowane ręcznie, a które pobierane automatycznie. Na koszt wpływa przede wszystkim liczba integracji z platformami, sposób zarządzania harmonogramem, liczba sekcji i podstron, zakres archiwum oraz obecność sklepu.",
+          "Znaczenie ma również to, czy serwis będzie głównie prezentował treści, czy ma działać jak rozbudowane narzędzie. Prosta strona internetowa dla streamera różni się zakresem od rozwiązania, które sprawdza status kilku kanałów, pobiera dane, obsługuje sklep i wymaga niestandardowego panelu. W bardziej rozbudowanych projektach mogę wykorzystać podejście stosowane przy tworzeniu [nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe).",
+          "Stronę streamera z harmonogramem, nagraniami i strefą sponsorską realizuję zwykle w ciągu 2 do 4 tygodni. Jeżeli projekt ma zakres aplikacji Next.js z niestandardowymi integracjami, typowy termin wynosi od 6 do 12 tygodni. Ostateczny harmonogram podaję po sprawdzeniu wymagań oraz możliwości technicznych wybranych platform.",
         ],
       },
     ],

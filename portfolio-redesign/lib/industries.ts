@@ -252,6 +252,26 @@ export const industries: Industry[] = [
       {
         q: "Czy przygotujesz regulamin i dokumenty prawne dla strony?",
         a: "Mogę umieścić na stronie zatwierdzone przez Ciebie treści i skonfigurować mechanizm zgód. Nie przygotowuję samodzielnie interpretacji prawnej tego, jakie dokumenty są wymagane w Twojej kancelarii."
+      },
+      {
+        q: "Czy kancelaria musi mieć stronę internetową?",
+        a: "Nie rozstrzygam prawnego obowiązku posiadania strony, ponieważ zależy to od sytuacji kancelarii i właściwych regulacji. Projektuję serwis jako uporządkowane źródło informacji o specjalizacjach, prawnikach, danych kontaktowych i sposobie umówienia konsultacji."
+      },
+      {
+        q: "Czy dla nowej kancelarii wystarczy prosta wizytówka?",
+        a: "Tak, jeśli kancelaria ma niewielki zespół, ograniczoną liczbę specjalizacji i nie planuje jeszcze rozbudowanej bazy wiedzy. Projektuję ją jednak tak, aby najważniejsze informacje były czytelne, a zakres można było później rozszerzyć zgodnie z ustaloną strukturą."
+      },
+      {
+        q: "Kto przygotuje teksty na stronę kancelarii?",
+        a: "Możesz dostarczyć gotowe teksty albo materiały robocze, z których ułożę strukturę i czytelną treść. Merytorykę prawniczą dostarczasz lub zatwierdzasz po swojej stronie, ponieważ nie tworzę interpretacji prawnych w imieniu kancelarii."
+      },
+      {
+        q: "Czy mogę mieć adres e-mail w domenie kancelarii?",
+        a: "Tak, domena kancelarii może służyć zarówno stronie, jak i zawodowym adresom e-mail. Sposób konfiguracji, liczbę skrzynek i dostawcę poczty ustalam przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Czy projekt strony będzie indywidualny?",
+        a: "Tak. Przygotowuję makiety w Figmie, przewiduję dwie tury poprawek i proszę o akceptację projektu przed kodowaniem. Układ dopasowuję do specjalizacji, wielkości zespołu, materiałów i planowanego sposobu rozwijania strony."
       }
     ],
     cta: "Prześlij brief kancelarii, a przygotuję wycenę tworzenia nowej strony",
@@ -432,6 +452,26 @@ export const industries: Industry[] = [
       {
         q: "Czy przygotujesz stronę zgodnie z wymaganiami dostępności?",
         a: "Mogę wdrożyć uzgodnione wymagania techniczne, w tym zadbać o kontrast, obsługę klawiaturą, opisy pól i strukturę nagłówków. Jeśli Twoją placówkę obejmują szczególne obowiązki prawne, potrzebuję od Ciebie ich zatwierdzonej interpretacji."
+      },
+      {
+        q: "Czy potrzebuję strony, skoro mam profil w portalu rezerwacyjnym?",
+        a: "Profil może wystarczyć do przyjmowania zapisów, ale nie zastępuje własnej domeny ani pełnej prezentacji oferty. Projektuję stronę jako miejsce na opisy zabiegów, cennik, zespół i treści widoczne w Google, a portal może nadal obsługiwać rezerwacje."
+      },
+      {
+        q: "Czy mogę sama edytować cennik zabiegów?",
+        a: "Tak, mogę przygotować cennik oraz inne uzgodnione sekcje do samodzielnej edycji w WordPressie. Podczas szkolenia pokazuję, jak zmieniać treści bez przebudowy całej strony."
+      },
+      {
+        q: "Czy strona połączy się z Booksy albo innym systemem rezerwacji?",
+        a: "Najpierw sprawdzam, jakiego systemu używasz i jakie sposoby integracji udostępnia. Na tej podstawie ustalam, czy możliwe będzie przejście bezpośrednio do usługi, osadzenie wybranego elementu, czy jedynie skierowanie użytkownika do profilu rezerwacyjnego."
+      },
+      {
+        q: "Jakie materiały przygotować do strony gabinetu?",
+        a: "Potrzebuję informacji o zabiegach, cennika, danych placówki, sposobu rejestracji, opisów zespołu oraz zdjęć, które możesz legalnie publikować. Dokładną listę materiałów ustalam przy rozpoczęciu współpracy, ponieważ zależy ona od zakresu strony."
+      },
+      {
+        q: "Czy warto prowadzić bloga na stronie gabinetu?",
+        a: "Warto, jeśli możesz regularnie publikować rzetelne treści odpowiadające na rzeczywiste pytania klientów lub pacjentów. Pomagam zaplanować strukturę sekcji poradnikowej, ale nie traktuję bloga jako obowiązkowego dodatku do każdej strony ani nie obiecuję dzięki niemu konkretnych pozycji w Google."
       }
     ],
     cta: "Prześlij brief gabinetu, a przygotuję wycenę strony z rejestracją",
@@ -612,6 +652,26 @@ export const industries: Industry[] = [
       {
         q: "Czy sklep poradzi sobie z większym ruchem podczas premiery?",
         a: "Przed oddaniem sprawdzam wydajność strony, a celem jest Lighthouse 90+ na telefonie i LCP poniżej 2,5 s. Dobór hostingu i dodatkowych zasobów ustalam do konkretnego projektu oraz spodziewanego obciążenia."
+      },
+      {
+        q: "Czy WooCommerce nadaje się dla małej marki odzieżowej?",
+        a: "Tak, WooCommerce może obsłużyć katalog ubrań, warianty, kolekcje, zamówienia oraz integracje z zewnętrznymi systemami. Polecam go szczególnie wtedy, gdy zależy Ci na własnym projekcie sklepu i możliwości dalszego rozwoju funkcji."
+      },
+      {
+        q: "Jak ograniczyć zwroty w sklepie z ubraniami?",
+        a: "Przygotowuję czytelne tabele wymiarów, instrukcje mierzenia oraz miejsce na informacje o fasonie, materiale i rozmiarze prezentowanym na modelce. Dbam też o to, aby zdjęcia i opisy odpowiadały konkretnym wariantom produktu."
+      },
+      {
+        q: "Czy sklep może obsługiwać przedsprzedaż i dropy kolekcji?",
+        a: "Tak, mogę przygotować zapowiedzi produktów, strony premierowe, przedsprzedaż oraz powiadomienia o dostępności. Sposób realizacji zamówień zawierających produkty dostępne i przedsprzedażowe ustalam przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Czy mogę sprzedawać jednocześnie w sklepie i na Allegro?",
+        a: "Tak, mogę połączyć WooCommerce z Allegro bezpośrednio albo przez system pośredni, na przykład BaseLinker. Przed wdrożeniem ustalam, który system będzie źródłem stanów, cen, opisów i danych o zamówieniach."
+      },
+      {
+        q: "Jak pokazywać promocje zgodnie z dyrektywą Omnibus?",
+        a: "Przy informacji o obniżce przygotowuję miejsce na najniższą cenę produktu z 30 dni przed jej wprowadzeniem. Ostateczną treść komunikatów i dokumentów prawnych przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
       }
     ],
     cta: "Prześlij brief kolekcji i kanałów sprzedaży, a wycenię sklep dla Twojej marki odzieżowej",
@@ -792,6 +852,26 @@ export const industries: Industry[] = [
       {
         q: "Jaki hosting wybrać dla mojego katalogu?",
         a: "Pomagam dobrać hosting do technologii, wielkości katalogu i sposobu przechowywania zdjęć oraz dokumentów, na przykład Hostinger albo cyber_folks. Jeśli projekt wymaga Next.js, mogę wdrożyć go na Vercel albo własnym VPS."
+      },
+      {
+        q: "Czy sama galeria realizacji wystarczy na stronie producenta mebli?",
+        a: "Nie, ponieważ zdjęcia nie odpowiadają na pytania o wymiary, materiały, warianty i sposób zamówienia. Projektuję galerię jako część szerszej prezentacji, która prowadzi do karty produktu, opisu realizacji albo właściwego formularza."
+      },
+      {
+        q: "Czy podawać ceny mebli na wymiar?",
+        a: "Jeśli końcowa cena zależy od wymiarów, materiałów, wyposażenia i montażu, nie przedstawiałbym jednej kwoty jako ceny gotowego produktu. Mogę zaplanować prezentację przykładowego zakresu lub mechanizm wyceny, ale sposób podawania cen ustalam przy rozpoczęciu współpracy na podstawie rzeczywistego modelu sprzedaży."
+      },
+      {
+        q: "Jak powinien wyglądać formularz wyceny?",
+        a: "Dobieram pola do rodzaju mebli i informacji potrzebnych do wstępnej oceny zlecenia. Formularz może zbierać wymiary, zdjęcia pomieszczenia, miejscowość, oczekiwany termin oraz rodzaj zabudowy, a jednocześnie pozostać zrozumiały dla nietechnicznego użytkownika."
+      },
+      {
+        q: "Czy strona producenta mebli potrzebuje wersji B2B?",
+        a: "Przygotowałbym ją wtedy, gdy architekci, salony lub dystrybutorzy potrzebują innych informacji niż klienci detaliczni. Nie zawsze musi to być strefa po zalogowaniu. Czasem wystarczy osobna ścieżka z katalogami, plikami technicznymi, zasadami współpracy i listą punktów sprzedaży."
+      },
+      {
+        q: "Czy zmieszczę na stronie dużo zdjęć bez spowolnienia?",
+        a: "Tak, jeśli obrazy zostaną odpowiednio przygotowane i nie będą ładowane jednocześnie w pełnej rozdzielczości. Optymalizuję rozmiary, formaty oraz sposób wczytywania zdjęć, a przed oddaniem strony sprawdzam jej wydajność na telefonie."
       }
     ],
     cta: "Prześlij brief katalogu, a wycenię tworzenie strony dla Twojej marki meblowej",
@@ -972,6 +1052,26 @@ export const industries: Industry[] = [
       {
         q: "Jakie informacje prawne muszę przygotować na stronę pensjonatu?",
         a: "Potrzebuję od Ciebie zatwierdzonego regulaminu, polityki prywatności, zasad anulowania i innych treści wynikających z Twojego sposobu rezerwacji. Umieszczę je w odpowiednich miejscach strony i skonfiguruję wymagane zgody związane z formularzami oraz analityką."
+      },
+      {
+        q: "Czy strona będzie zgodna z RODO?",
+        a: "Konfiguruję mechanizm zgód cookies, formularze i uruchamianie GA4 dopiero po uzyskaniu wymaganej zgody. Potrzebuję od Ciebie zatwierdzonej polityki prywatności, regulaminu i pozostałych treści prawnych właściwych dla Twojego sposobu działania. Ich zakres ustalam przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Jak sprawdzę, skąd przychodzą rezerwacje?",
+        a: "Konfiguruję GA4 oraz zdarzenia związane z przejściem do rezerwacji, wysłaniem formularza i potwierdzeniem pobytu, jeśli system rezerwacyjny pozwala przekazać takie dane. Dzięki temu możesz porównywać źródła wizyt, pamiętając, że analityka działa po zgodzie na cookies i nie obejmie wszystkich użytkowników."
+      },
+      {
+        q: "Czy sam zmienię ceny i opisy pokoi?",
+        a: "Przygotowuję panel do edycji opisów, zdjęć i ustalonych elementów oferty, a następnie prowadzę szkolenie z jego obsługi. Miejsce zmiany cen zależy od wybranego silnika rezerwacji i ustalam je z Tobą na początku projektu."
+      },
+      {
+        q: "Czy strona może sprzedawać vouchery?",
+        a: "Tak, mogę przygotować prezentację voucherów albo sprzedaż online, jeśli taki zakres ustalimy przed wdrożeniem. Sposób płatności, dostarczenia, realizacji i obsługi zamówienia dopasuję do wybranego procesu."
+      },
+      {
+        q: "Czy pomożesz po uruchomieniu strony?",
+        a: "Tak. Zapewniam 60 dni gwarancji i bezpłatnych poprawek po starcie. Po tym okresie mogę przejąć opiekę techniczną w miesięcznym abonamencie bez umowy na rok."
       }
     ],
     cta: "Opowiedz o obiekcie, a przygotuję wycenę tworzenia strony hotelu lub pensjonatu z rezerwacją bezpośrednią",
@@ -1152,6 +1252,26 @@ export const industries: Industry[] = [
       {
         q: "Czy potrzebuję osobnej podstrony dla każdego miasta?",
         a: "Nie tworzę takich podstron tylko po to, żeby podmienić nazwę miejscowości. Osobna strona ma sens wtedy, gdy możesz pokazać dla danego miejsca rzeczywiste usługi, realizacje albo informacje przydatne klientowi."
+      },
+      {
+        q: "Czy mogę sam dodawać nowe realizacje?",
+        a: "Tak, jeśli w projekcie uwzględnimy CMS do zarządzania realizacjami. Przygotuję ustalony układ pól i przeprowadzę szkolenie online z edycji treści, dzięki czemu będziesz mógł uzupełniać galerię bez zmieniania projektu każdej podstrony."
+      },
+      {
+        q: "Czy domena będzie moja?",
+        a: "Sposób rejestracji domeny i dane abonenta ustalam przy rozpoczęciu współpracy. Przed wdrożeniem jasno określę z Tobą, kto rejestruje domenę, na jakim koncie będzie utrzymywana i kto otrzyma dostęp do jej konfiguracji."
+      },
+      {
+        q: "Czy są jakieś opłaty co miesiąc?",
+        a: "Zakres stałych opłat ustalam przy rozpoczęciu współpracy, zależnie od wybranego rozwiązania i usług potrzebnych stronie. Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek, a później możesz wybrać opcjonalną opiekę w miesięcznym abonamencie bez umowy na rok."
+      },
+      {
+        q: "Czy od razu będę wysoko w Google?",
+        a: "Nie obiecuję konkretnej pozycji ani natychmiastowych wyników. Przy wdrożeniu przygotuję strukturę nagłówków, dane strukturalne, mapę strony i Search Console, ale widoczność zależy również od konkurencji, jakości treści, historii domeny oraz dalszego rozwoju serwisu."
+      },
+      {
+        q: "Kiedy najlepiej zrobić stronę firmy budowlanej?",
+        a: "Najlepiej rozpocząć pracę wtedy, gdy możesz określić zakres usług, obszar działania i zebrać podstawowe materiały. Typowa strona firmowa lub usługowa powstaje w ciągu 4-6 tygodni, dlatego warto uwzględnić ten czas w planie rozwoju firmy oraz pozyskiwania zapytań."
       }
     ],
     cta: "Opisz usługi i obszar działania, a przygotuję wycenę tworzenia strony dla Twojej firmy budowlanej",
@@ -1332,6 +1452,26 @@ export const industries: Industry[] = [
       {
         q: "Co stanie się ze stroną po zakończeniu naszej współpracy?",
         a: "Przekazuję Ci dostęp administracyjny oraz potrzebne dane do serwisu. Po starcie masz 60 dni gwarancji i bezpłatnych poprawek, a później możesz prowadzić stronę samodzielnie, przekazać ją innemu specjaliście albo zlecić mi dalszą opiekę."
+      },
+      {
+        q: "Co powinien zawierać media kit online?",
+        a: "Przygotowuję w nim miejsce na aktualne statystyki, informacje o odbiorcach, dostępne kanały, formaty publikacji i przykłady współprac. Stawki mogą być widoczne publicznie, udostępniane wybranym markom albo całkowicie pominięte."
+      },
+      {
+        q: "Czym strona różni się od linku w bio?",
+        a: "Projektuję stronę jako rozwijane centrum marki, a nie wyłącznie listę odnośników. Może łączyć media kit online, portfolio, formularz dla marek, newsletter, sklep i treści dostępne pod własną domeną."
+      },
+      {
+        q: "Czy mogę ukryć stawki przed publicznym dostępem?",
+        a: "Tak, mogę przygotować podstronę zabezpieczoną hasłem albo rozwiązanie, w którym stawki przekazujesz wyłącznie wybranym partnerom. Dokładny sposób dostępu ustalam z Tobą przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Czy strona pomoże w pozyskiwaniu współprac?",
+        a: "Mogę zaprojektować ją tak, aby marki szybko znalazły ofertę, dane o odbiorcach, portfolio i formularz z konkretnymi pytaniami. Nie gwarantuję liczby zapytań, ale dobrze uporządkowana strona ułatwia ocenę oferty i rozpoczęcie rozmowy."
+      },
+      {
+        q: "Czy potrzebuję własnej domeny?",
+        a: "Rekomenduję własną domenę, ponieważ daje rozpoznawalny adres dla media kitu, oferty i pozostałych treści. Mogę pomóc w jej podpięciu oraz konfiguracji strony, a szczegóły ustalam przy rozpoczęciu współpracy."
       }
     ],
     cta: "Prześlij ofertę współprac, a przygotuję wycenę tworzenia strony dla Twojej marki osobistej",
@@ -1512,6 +1652,26 @@ export const industries: Industry[] = [
       {
         q: "Co stanie się ze stroną podczas awarii Twitcha lub YouTube?",
         a: "Treści zapisane na Twoim hostingu nadal mogą działać, ale elementy pobierające dane z zewnętrznej platformy mogą przestać je wyświetlać. Przy takich integracjach przygotuję stan zastępczy, żeby użytkownik nie trafiał na pusty moduł."
+      },
+      {
+        q: "Czy strona może pokazywać nagrania z Twitcha i YouTube?",
+        a: "Mogę osadzić wybrane nagrania lub uporządkować je w bibliotece według gier, serii i formatów. Dokładny sposób wyświetlania zależy od możliwości oraz zasad udostępniania treści przez Twitch i YouTube, dlatego sprawdzam je przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Czym własna strona różni się od gotowego kreatora dla streamerów?",
+        a: "Własną stronę projektuję pod Twoją markę, strukturę treści i planowane funkcje. Daje ona większą kontrolę nad domeną, wyglądem i rozbudową, natomiast kreator opiera się na modułach oraz ograniczeniach konkretnej usługi."
+      },
+      {
+        q: "Czy sponsorzy zwracają uwagę na stronę streamera?",
+        a: "Nie mogę zagwarantować, że sama strona wpłynie na decyzję sponsora. Mogę jednak przygotować czytelną strefę z zatwierdzonymi danymi kanału, formatami współpracy, przykładami aktywacji i formularzem, dzięki czemu marka łatwiej oceni propozycję."
+      },
+      {
+        q: "Czy mogę sam zmieniać harmonogram?",
+        a: "Mogę przygotować edytowalny harmonogram i przeszkolić Cię z obsługi treści online. Dokładny sposób dodawania terminów oraz zakres dostępnych pól ustalam przy rozpoczęciu współpracy."
+      },
+      {
+        q: "Czy strona zadziała, gdy zmienię platformę streamingową?",
+        a: "Treści zapisane na Twojej stronie mogą nadal działać, ale integracje powiązane z poprzednią platformą będą wymagały zmiany. Sprawdzę możliwości nowego serwisu i ustalę, które moduły można przepiąć, a które trzeba przebudować."
       }
     ],
     cta: "Podeślij kanały i planowane funkcje, a przygotuję wycenę tworzenia strony dla streamera",

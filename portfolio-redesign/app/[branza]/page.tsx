@@ -9,6 +9,8 @@ import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { IndustryHeroVisual } from "@/components/industry/IndustryHeroVisual";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
+import { SEO_BLOCKS } from "@/lib/seoBlocks";
+import { SeoBlock } from "@/components/service/SeoBlock";
 
 /** Naglowek: czlon po "dla " (albo ostatnie dwa slowa) leci kursywa, zgodnie z jezykiem strony. */
 function editorialHeading(text: string) {
@@ -603,6 +605,8 @@ export default async function BranzaPage({
           ))}
         </div>
       </section>
+
+      {SEO_BLOCKS[ind.slug] && <SeoBlock data={SEO_BLOCKS[ind.slug]} />}
 
       {/* CTA */}
       <section className="relative px-6 py-32 md:px-10 md:py-48 border-t border-line overflow-hidden">
