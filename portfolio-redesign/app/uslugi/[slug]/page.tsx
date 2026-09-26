@@ -12,6 +12,7 @@ import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
+import { MobileReveal } from "@/components/service/MobileReveal";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -154,16 +155,12 @@ export default async function UslugaPage({
           </div>
         </div>
 
-        {/* Mobile: visual ABOVE title — kompaktowo */}
-        <div className="md:hidden mt-10 max-w-[16rem] mx-auto h-52">
-          <ServiceHeroVisual slug={s.slug} />
-        </div>
       </header>
 
       {/* DEVTOOLS LIVE — slim, nad portfolio, pod hero, tylko Next.js */}
       {s.slug === "aplikacje-nextjs" && (
-        <section className="px-6 py-16 md:px-10 md:py-24 border-t border-line">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
+        <section className="px-6 py-12 md:px-10 md:py-24 border-t border-line">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
             <aside className="md:col-span-3">
               <p className="eyebrow mb-4">Performance na żywo</p>
               <p
@@ -180,7 +177,7 @@ export default async function UslugaPage({
               <p className="text-ink-mute text-[0.92rem] leading-relaxed mb-7">
                 Next.js renderuje stronę na serwerze. Pierwsza ramka maluje się od razu, bez czekania aż JavaScript się rozpakuje.
               </p>
-              <ul className="space-y-3 mb-8 border-l border-line pl-5">
+              <ul className="hidden md:block space-y-3 mb-8 border-l border-line pl-5">
                 <li>
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-peach mb-1">SSR</p>
                   <p className="text-ink-mute text-[0.82rem] leading-snug">
@@ -210,7 +207,9 @@ export default async function UslugaPage({
               </Link>
             </aside>
             <div className="md:col-span-9">
-              <DevToolsPanel />
+              <MobileReveal label="Pokaż pomiar tej strony">
+                <DevToolsPanel />
+              </MobileReveal>
             </div>
           </div>
         </section>
@@ -259,7 +258,7 @@ export default async function UslugaPage({
               </div>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
                 <div className="md:col-span-3">
-                  <p className="eyebrow mb-3">Klient · {caseProject.year}</p>
+                  <p className="eyebrow mb-3">Realizacja · {caseProject.year}</p>
                   <h3
                     className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
                     style={{
@@ -510,7 +509,7 @@ export default async function UslugaPage({
               className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-8 py-4"
               data-cursor="START"
             >
-              <span>Napisz mail</span>
+              <span>Zapytaj o wycenę</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <a

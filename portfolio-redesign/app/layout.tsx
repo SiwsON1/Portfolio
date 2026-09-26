@@ -6,6 +6,7 @@ import { LoadingIntro } from "@/components/providers/LoadingIntro";
 import { ScrollProgress } from "@/components/providers/ScrollProgress";
 import { PageTransition } from "@/components/providers/PageTransition";
 import { CookieBanner } from "@/components/providers/CookieBanner";
+import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
 import { Analytics } from "@/components/providers/Analytics";
 import { Cursor } from "@/components/ui/Cursor";
 import { Nav } from "@/components/layout/Nav";
@@ -111,6 +112,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </main>
           <Footer />
+          <MobileCtaBar />
           <CookieBanner />
           <Analytics />
         </SmoothScroll>

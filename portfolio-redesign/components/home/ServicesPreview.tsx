@@ -10,6 +10,39 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+type Service = (typeof services)[number];
+
+const GROUPS: { main: string; line: string; subs: string[] }[] = [
+  {
+    main: "tworzenie-stron-www",
+    line: "Strona dla firmy, która ma przyprowadzać klientów z Google i dobrze działać na telefonie.",
+    subs: ["nowoczesna-strona-firmowa-2026", "nowoczesne-strony-internetowe", "strony-jamstack"],
+  },
+  {
+    main: "tworzenie-stron-wordpress",
+    line: "Strona albo sklep, które edytujesz sam, bez zaglądania do kodu.",
+    subs: [
+      "sklepy-internetowe-woocommerce",
+      "integracja-woocommerce-z-baselinker",
+      "opieka-wordpress",
+      "przyspieszanie-stron-wordpress",
+      "headless-wordpress",
+    ],
+  },
+  {
+    main: "aplikacje-nextjs",
+    line: "Szybkie strony i aplikacje z własną logiką: panele klienta, konfiguratory, portale z danymi.",
+    subs: ["aplikacje-react", "next-js-software-house"],
+  },
+  {
+    main: "wdrozenia-ai",
+    line: "Automatyzacja powtarzalnej pracy w firmie: zapytania, opisy, raporty.",
+    subs: [],
+  },
+];
+
+const bySlug = (slug: string) => services.find((x) => x.slug === slug) as Service;
+
 export function ServicesPreview() {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -84,10 +117,12 @@ export function ServicesPreview() {
       </div>
 
       <ul className="sv-list relative border-t border-line">
-        {services.map((s, i) => (
+        {GROUPS.map((g, i) => (
           <Row
-            key={s.slug}
-            service={s}
+            key={g.main}
+            service={bySlug(g.main)}
+            line={g.line}
+            subs={g.subs.map(bySlug).filter(Boolean)}
             index={i}
             active={activeIdx === i}
             onEnter={() => setActiveIdx(i)}
@@ -101,12 +136,16 @@ export function ServicesPreview() {
 
 function Row({
   service: s,
+  line,
+  subs,
   index,
   active,
   onEnter,
   onLeave,
 }: {
-  service: (typeof services)[number];
+  service: Service;
+  line: string;
+  subs: Service[];
   index: number;
   active: boolean;
   onEnter: () => void;
@@ -127,7 +166,7 @@ function Row({
 
       <Link
         href={`/uslugi/${s.slug}`}
-        className="relative block py-8 md:py-14"
+        className={`relative block pt-8 md:pt-14 ${subs.length ? "pb-4 md:pb-6" : "pb-8 md:pb-14"}`}
         data-cursor="OTWÓRZ"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
@@ -159,6 +198,8 @@ function Row({
               {s.title}
             </h3>
 
+            <p className="mt-3 text-[15px] leading-snug text-ink-mute md:hidden">{line}</p>
+
             {/* Sub-line that grows on active */}
             <div
               aria-hidden
@@ -175,9 +216,7 @@ function Row({
               active ? "opacity-100 translate-x-0" : "opacity-60 translate-x-2"
             }`}
           >
-            <p className="text-ink-mute text-sm leading-relaxed">
-              {s.lead.split(".")[0]}.
-            </p>
+            <p className="text-ink-mute text-sm leading-relaxed">{line}</p>
           </div>
 
           <span
@@ -191,6 +230,23 @@ function Row({
           </span>
         </div>
       </Link>
+      {subs.length > 0 && (
+        <div className="relative grid grid-cols-12 gap-3 pb-8 md:gap-6 md:pb-14">
+          <div aria-hidden className="col-span-2 md:col-span-1" />
+          <ul className="col-span-10 flex flex-wrap gap-x-5 gap-y-1" aria-label={`Usługi powiązane: ${s.title}`}>
+            {subs.map((sub) => (
+              <li key={sub.slug}>
+                <Link
+                  href={`/uslugi/${sub.slug}`}
+                  className="inline-flex min-h-9 items-center text-sm text-ink-mute underline decoration-line underline-offset-4 transition-colors hover:text-peach hover:decoration-peach"
+                >
+                  {sub.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </li>
   );
 }

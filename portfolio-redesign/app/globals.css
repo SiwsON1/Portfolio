@@ -315,3 +315,17 @@ html.lenis body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Sfera w hero na telefonie: środek wolnego pasa między znacznikiem u góry (~90 px) a treścią przy dole (~400 px). */
+@media (max-width: 767px) {
+  .hero-portrait {
+    --s: clamp(150px, calc(100svh - 520px), 74vw);
+    width: var(--s);
+    top: calc((100svh - 310px) / 2 - var(--s) / 2);
+  }
+}
+
+/* Akapit hero nie może wchodzić pod sferę po prawej. */
+@media (min-width: 768px) {
+  .hero-paragraph.prose-bound { max-width: min(65ch, 40vw); }
+}

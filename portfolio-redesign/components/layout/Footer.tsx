@@ -25,39 +25,39 @@ export function Footer() {
           <div className="md:col-span-5 grid grid-cols-2 gap-8">
             <div>
               <p className="eyebrow mb-4">Mapa</p>
-              <ul className="space-y-2 text-ink-mute">
+              <ul className="text-ink-mute md:space-y-2">
                 <li>
-                  <Link href="/" className="hover:text-ink">
+                  <Link href="/" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Start
                   </Link>
                 </li>
                 <li>
-                  <Link href="/projekty" className="hover:text-ink">
+                  <Link href="/projekty" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Projekty
                   </Link>
                 </li>
                 <li>
-                  <Link href="/uslugi" className="hover:text-ink">
+                  <Link href="/uslugi" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Usługi
                   </Link>
                 </li>
                 <li>
-                  <Link href="/branze" className="hover:text-ink">
+                  <Link href="/branze" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Branże
                   </Link>
                 </li>
                 <li>
-                  <Link href="/o-mnie" className="hover:text-ink">
+                  <Link href="/o-mnie" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     O mnie
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kontakt" className="hover:text-ink">
+                  <Link href="/kontakt" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Kontakt
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-ink">
+                  <Link href="/blog" className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0">
                     Blog
                   </Link>
                 </li>
@@ -65,13 +65,13 @@ export function Footer() {
             </div>
             <div>
               <p className="eyebrow mb-4">Tu też jestem</p>
-              <ul className="space-y-2 text-ink-mute">
+              <ul className="text-ink-mute md:space-y-2">
                 <li>
                   <a
                     href="https://github.com/SiwsON1"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ink"
+                    className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0"
                   >
                     GitHub
                   </a>
@@ -81,7 +81,7 @@ export function Footer() {
                     href="https://www.linkedin.com/in/marcinsiwonia"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ink"
+                    className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0"
                   >
                     LinkedIn
                   </a>
@@ -91,7 +91,7 @@ export function Footer() {
                     href="/ms_cv.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ink"
+                    className="inline-flex min-h-11 items-center hover:text-ink md:min-h-0"
                   >
                     CV (PDF)
                   </a>

@@ -31,15 +31,15 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label="Zgoda na pliki cookie"
-      className="fixed bottom-0 left-0 right-0 z-[140] p-4 md:p-6"
+      className="fixed bottom-0 left-0 right-0 z-[140] p-3 md:p-6"
     >
-      <div className="max-w-5xl mx-auto bg-bg-elev border border-line backdrop-blur-md p-5 md:p-7 shadow-2xl">
-        <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+      <div className="max-w-5xl mx-auto bg-bg-elev border border-line backdrop-blur-md p-4 md:p-7 shadow-2xl">
+        <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
           <div className="flex-1">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">
+            <p className="hidden md:block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">
               Cookie · GDPR
             </p>
-            <p className="text-ink text-sm md:text-base leading-relaxed">
+            <p className="text-ink text-[13px] leading-snug md:text-base md:leading-relaxed">
               Po Twojej zgodzie strona uruchamia Google Analytics 4 do mierzenia
               ruchu. Bez zgody zapisuje tylko Twój wybór. Zgodę zmienisz
               w każdej chwili. Więcej w{" "}
@@ -52,11 +52,11 @@ export function CookieBanner() {
               .
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-2 md:gap-3 shrink-0">
+          <div className="grid grid-cols-2 gap-2 md:flex md:gap-3 shrink-0">
             <button
               type="button"
               onClick={() => accept("necessary")}
-              className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute hover:text-ink border border-line px-5 py-3 transition-colors"
+              className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute hover:text-ink border border-line min-h-11 px-3 md:px-5 py-3 transition-colors"
               data-cursor=""
             >
               Tylko niezbędne
@@ -64,7 +64,7 @@ export function CookieBanner() {
             <button
               type="button"
               onClick={() => accept("all")}
-              className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg bg-peach hover:bg-peach-deep px-5 py-3 transition-colors"
+              className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg bg-peach hover:bg-peach-deep min-h-11 px-3 md:px-5 py-3 transition-colors"
               data-cursor=""
             >
               Akceptuj wszystkie

@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {
@@ -98,7 +99,7 @@ export function Hero() {
       {/* PORTRAIT wrapper — desktop: lower-right editorial. Mobile: wycentrowana, focal element nad H1. */}
       <div
         ref={portraitRef}
-        className="absolute z-[20] top-[12%] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-[16%] md:right-[-4%] w-[72vw] md:w-[min(64vw,760px)] aspect-square"
+        className="hero-portrait absolute z-[20] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-[16%] md:right-[-4%] md:w-[min(64vw,760px)] aspect-square"
         style={{ pointerEvents: "none" }}
       >
         {/* Outer cyan bloom — emanuje z portretu na okolicę */}
@@ -136,7 +137,7 @@ export function Hero() {
       </div>
 
       {/* Main title — bottom-anchored left. pointer-events-none żeby nie blokował drag-to-rotate sfery po prawej (z-15). */}
-      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-16 md:pb-28 z-10 pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-8 md:pb-28 z-10 pointer-events-none">
         <h1
           ref={titleRef}
           className="display hero-h1 text-ink"
@@ -203,20 +204,37 @@ export function Hero() {
             wdrożenia <strong className="text-ink font-normal">AI</strong>.
             Ponad 30 wdrożeń komercyjnych dla klientów w Polsce i Niemczech od 2020 roku.
           </p>
-          <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute shrink-0">
+        </div>
+
+        <div className="pointer-events-auto mt-6 md:mt-10 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <Link
+            href="/kontakt"
+            className="group inline-flex min-h-12 items-center gap-3 bg-peach px-6 py-3 font-mono text-xs uppercase tracking-[0.22em] text-bg transition-colors hover:bg-peach-deep"
+            data-cursor="START"
+          >
+            <span>Wyceń projekt</span>
+            <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
+          <a
+            href="#projekty"
+            className="inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-[0.22em] text-ink underline decoration-ink-faint underline-offset-8 transition-colors hover:text-peach hover:decoration-peach"
+          >
+            Zobacz realizacje
+          </a>
+          <span className="hidden md:inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
             <span className="relative flex h-2 w-2">
               <span className="absolute inset-0 rounded-full bg-peach animate-ping opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-peach" />
             </span>
-            <span>otwarty na nowe projekty</span>
-          </div>
+            otwarty na nowe projekty
+          </span>
         </div>
       </div>
 
       {/* Scroll cue */}
       <a
         href="#projekty"
-        className="absolute bottom-6 right-6 md:bottom-8 md:right-10 z-10 group flex flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute hover:text-peach transition-colors"
+        className="absolute bottom-6 right-6 md:bottom-8 md:right-10 z-10 group hidden md:flex flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute hover:text-peach transition-colors"
         data-cursor="SCROLL"
       >
         <span className="block">scroll</span>
@@ -226,7 +244,7 @@ export function Hero() {
       </a>
 
       {/* Marquee ticker */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 border-t border-ink/10 backdrop-blur-[1px] overflow-hidden flex items-center z-10">
+      <div className="absolute bottom-0 left-0 right-0 h-12 border-t border-ink/10 backdrop-blur-[1px] overflow-hidden hidden md:flex items-center z-10">
         <div className="flex whitespace-nowrap animate-[marquee_38s_linear_infinite] font-mono text-[11px] uppercase tracking-[0.3em] text-ink/70">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="flex items-center shrink-0">

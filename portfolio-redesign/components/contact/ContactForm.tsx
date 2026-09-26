@@ -5,9 +5,12 @@ import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const NEEDS = ["Strona firmowa", "Sklep WooCommerce", "Aplikacja Next.js", "Wdrożenie AI", "Opieka lub poprawki", "Jeszcze nie wiem"];
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
+  const [subject, setSubject] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -46,6 +49,7 @@ export default function ContactForm() {
 
       setStatus("success");
       form.reset();
+      setSubject("");
     } catch {
       setStatus("error");
       setErrorMsg("Brak połączenia. Spróbuj ponownie za chwilę.");
@@ -93,6 +97,28 @@ export default function ContactForm() {
         </div>
       </div>
 
+      <fieldset>
+        <legend className={labelBase}>Czego potrzebujesz</legend>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {NEEDS.map((n) => (
+            <button
+              key={n}
+              type="button"
+              aria-pressed={subject === n}
+              disabled={status === "loading"}
+              onClick={() => setSubject(subject === n ? "" : n)}
+              className={`min-h-11 border px-4 text-sm transition-colors ${
+                subject === n
+                  ? "border-peach bg-peach/10 text-peach"
+                  : "border-line text-ink-mute hover:border-ink-faint hover:text-ink"
+              }`}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
       <div>
         <label htmlFor="contact-subject" className={labelBase}>
           Temat
@@ -102,6 +128,8 @@ export default function ContactForm() {
           name="subject"
           type="text"
           maxLength={200}
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
           disabled={status === "loading"}
           className={fieldBase}
           placeholder="Krótko o czym to jest"

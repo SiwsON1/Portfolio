@@ -3,6 +3,7 @@ import { ProjectsCabinet } from "@/components/home/ProjectsCabinet";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { TechStack } from "@/components/home/TechStack";
 import { AboutTease } from "@/components/home/AboutTease";
+import { Process } from "@/components/home/Process";
 import { jsonLd, PERSON_ID, personSchema, SITE_URL, WEBSITE_ID } from "@/lib/schema";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <ProjectsCabinet />
       <ServicesPreview />
+      <Process />
       <TechStack />
       <AboutTease />
       <script

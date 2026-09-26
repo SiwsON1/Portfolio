@@ -127,7 +127,7 @@ export function TechStack() {
           <Link
             key={t.label}
             href={t.href}
-            className="ts-card group relative bg-bg p-8 md:p-8 flex flex-col items-center text-center hover:bg-bg-elev transition-colors duration-500 min-h-[200px] sm:min-h-[260px] md:min-h-[320px]"
+            className="ts-card group relative bg-bg flex flex-row items-center gap-5 p-5 text-left sm:flex-col sm:gap-0 sm:p-8 sm:text-center hover:bg-bg-elev transition-colors duration-500 sm:min-h-[260px] md:min-h-[320px]"
             data-cursor="OTWÓRZ"
           >
             {/* Glow background na hover */}
@@ -144,14 +144,14 @@ export function TechStack() {
             {/* Ring delikatny na hover */}
             <div
               aria-hidden
-              className="absolute top-6 md:top-8 left-1/2 -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              className="absolute top-6 md:top-8 left-1/2 -translate-x-1/2 hidden sm:block w-24 h-24 md:w-32 md:h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{
                 border: "1px solid rgb(232 178 134 / 0.25)",
               }}
             />
 
             <div
-              className="relative w-16 h-16 md:w-20 md:h-20 mb-6 md:mb-8 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
+              className="relative shrink-0 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 sm:mb-6 md:mb-8 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
               style={{
                 animation: t.spin
                   ? "tsSpin 50s linear infinite, tsPulse 6s ease-in-out infinite"
@@ -175,8 +175,9 @@ export function TechStack() {
               </svg>
             </div>
 
+            <div className="min-w-0 sm:contents">
             <h3
-              className="font-display italic text-ink mb-3 transition-colors group-hover:text-peach"
+              className="font-display italic text-ink mb-1 sm:mb-3 transition-colors group-hover:text-peach"
               style={{
                 fontSize: "clamp(1.5rem, 1rem + 1.4vw, 2rem)",
                 letterSpacing: "-0.02em",
@@ -186,12 +187,13 @@ export function TechStack() {
               {t.label}
             </h3>
 
-            <p className="text-ink-mute text-xs md:text-sm leading-relaxed max-w-[24ch]">
+            <p className="text-ink-mute text-[13px] md:text-sm leading-snug sm:leading-relaxed sm:max-w-[24ch]">
               {t.caption}
             </p>
+            </div>
 
-            <span className="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint group-hover:text-peach transition-colors flex items-center gap-1.5">
-              <span>Zobacz</span>
+            <span className="ml-auto shrink-0 sm:ml-0 sm:mt-auto sm:pt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint group-hover:text-peach transition-colors flex items-center gap-1.5">
+              <span className="hidden sm:inline">Zobacz</span>
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </span>
           </Link>

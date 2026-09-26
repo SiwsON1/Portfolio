@@ -88,7 +88,7 @@ export default function OMniePage() {
 
       {/* FACTS row — full width strip */}
       <section className="px-6 md:px-10 border-t border-line">
-        <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-line">
+        <div className="grid grid-cols-2 md:grid-cols-5 md:divide-x divide-line">
           {[
             { label: "Bazuję", value: "Wrocław · PL" },
             { label: "Pracuję od", value: "2020" },
@@ -98,7 +98,7 @@ export default function OMniePage() {
           ].map((f, i) => (
             <div
               key={i}
-              className="px-4 py-8 md:px-6 md:py-10 first:pl-0 last:pr-0 group"
+              className="min-w-0 border-b border-line py-6 pr-4 odd:pl-0 even:border-l even:pl-4 last:col-span-2 md:border-b-0 md:even:border-l-0 md:px-6 md:py-10 md:first:pl-0 md:last:col-span-1 md:last:pr-0 group"
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
                 {f.label}

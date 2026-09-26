@@ -355,7 +355,7 @@ export default async function ProjektPage({
           className="group relative inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-8 py-4"
           data-cursor="START"
         >
-          <span>Napisz mail</span>
+          <span>Zapytaj o wycenę</span>
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </Link>
       </section>
