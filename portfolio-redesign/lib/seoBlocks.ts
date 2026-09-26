@@ -560,4 +560,387 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       },
     ],
   },
+  "opieka-wordpress": {
+    heading: "Opieka nad stroną WordPress: zakres, koszty i zasady współpracy",
+    intro: [
+      "**W tej części dowiesz się, od czego zależy zakres opieki nad stroną WordPress, jakie zadania możesz rozliczać w banku godzin i kiedy miesięczny abonament ma sens.** Wyjaśniam również, jak przejmuję serwis po innym wykonawcy, w jaki sposób ograniczam ryzyko związane z aktualizacjami oraz gdzie przebiega granica między stałą administracją a osobno wycenianym rozwojem strony.",
+      "Dzięki temu łatwiej porównasz oferty wykonawców i sprawdzisz, czy potrzebujesz regularnego wsparcia, czy raczej pomocy przy pojedynczych zadaniach. **Dobrze dopasowana opieka WordPress wynika z rzeczywistego sposobu korzystania ze strony**, a nie tylko z jej wyglądu lub liczby podstron.",
+    ],
+    sections: [
+      {
+        id: "koszt-opieki-wynika-z-zakresu-odpowiedzialnosci",
+        heading: "Koszt opieki wynika z zakresu odpowiedzialności",
+        body: [
+          "Koszt opieki nad stroną WordPress zależy przede wszystkim od rodzaju serwisu. Prosta wizytówka firmowa zwykle wymaga mniejszego zakresu kontroli niż regularnie rozwijany blog albo sklep WooCommerce. W przypadku sklepu po zmianach technicznych trzeba uwzględnić między innymi koszyk, formularze zamówienia, płatności i wiadomości wysyłane do klientów. Większa liczba zależności oznacza szerszy zakres testów.",
+          "Znaczenie ma również liczba i rodzaj używanych wtyczek. Każda z nich może być aktualizowana w innym terminie, współpracować z motywem lub wpływać na inne elementy strony. Instalacja z kilkoma sprawdzonymi rozszerzeniami jest łatwiejsza w utrzymaniu niż serwis, w którym wiele wtyczek odpowiada za nakładające się funkcje.",
+          "Przy ustalaniu zakresu biorę pod uwagę także częstotliwość zmian, wielkość banku godzin i oczekiwany czas reakcji. Firma publikująca nowe materiały co tydzień potrzebuje innego wsparcia niż właściciel strony aktualizujący ofertę raz na kilka miesięcy. Dlatego **abonament na opiekę strony ustalam po rozmowie i sprawdzeniu instalacji**, zamiast przypisywać każdej witrynie taki sam pakiet.",
+        ],
+      },
+      {
+        id: "bank-godzin-sluzy-do-biezacych-niewielkich-zmian",
+        heading: "Bank godzin służy do bieżących, niewielkich zmian",
+        body: [
+          "Bank godzin pozwala przekazywać mi drobne zadania bez osobnego ustalania całego projektu przy każdym zgłoszeniu. Sprawdza się zwłaszcza wtedy, gdy strona jest aktywnym narzędziem sprzedaży, a oferta, zespół, realizacje lub informacje dla klientów zmieniają się regularnie.",
+          "W ramach dostępnego czasu mogę wykonywać między innymi:",
+        ],
+        list: [
+          "podmianę zdjęć i grafik w istniejących sekcjach,",
+          "aktualizację cennika, danych kontaktowych lub godzin działania,",
+          "zmianę tekstów przekazanych w gotowej formie,",
+          "dodanie podstrony na podstawie istniejącego układu,",
+          "poprawkę formularza kontaktowego,",
+          "uzupełnienie nowych realizacji albo pozycji w ofercie,",
+          "zmianę linków, przycisków lub elementów stopki,",
+          "niewielkie poprawki wyglądu na telefonie albo komputerze.",
+        ],
+        outro: [
+          "**Bank godzin nie oznacza nielimitowanego rozwoju strony.** Jego wielkość dobieram do przewidywanej liczby zgłoszeń, a sposób rozliczania ustalam na początku współpracy. Dzięki temu wiesz, które zadania mieszczą się w bieżącej obsłudze, a które powinny zostać zaplanowane jako oddzielny etap.",
+        ],
+      },
+      {
+        id: "wieksze-zmiany-wyceniam-jako-osobne-prace",
+        heading: "Większe zmiany wyceniam jako osobne prace",
+        body: [
+          "Stała opieka nad stroną WordPress dotyczy utrzymania serwisu oraz drobnych zmian, które można bezpiecznie wykonać w istniejącej strukturze. Nie obejmuje pełnej przebudowy wyglądu, zaprojektowania nowego serwisu ani wymiany całego motywu. Takie zadania wymagają ustalenia architektury, przygotowania projektu i osobnego harmonogramu, podobnie jak [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress).",
+          "Poza abonamentem znajdują się również rozbudowane nowe funkcje, takie jak konfiguratory, nietypowe formularze, integracje z zewnętrznymi systemami czy rozbudowa procesu zakupowego. Osobno wyceniam także pisanie treści, prowadzenie kampanii reklamowych oraz działania, które wymagają stałej obsługi marketingowej.",
+          "Wyraźne rozdzielenie utrzymania od rozwoju chroni Twój bank godzin przed wykorzystaniem na projekt, którego nie da się rozsądnie realizować w postaci pojedynczych poprawek. Jeśli zgłoszenie wykracza poza ustalony zakres, najpierw je oceniam i przedstawiam osobną wycenę wraz z zakresem oraz terminem.",
+        ],
+      },
+      {
+        id: "nie-kazda-strona-potrzebuje-miesiecznego-abonamentu",
+        heading: "Nie każda strona potrzebuje miesięcznego abonamentu",
+        body: [
+          "Opieka WordPress nie zawsze będzie najbardziej opłacalnym rozwiązaniem. Jeśli masz prostą stronę wizytówkową, treść pozostaje bez zmian, a pomoc jest potrzebna sporadycznie, pojedyncze zlecenia mogą być wystarczające. Płacenie co miesiąc za gotowość do zmian, których w praktyce nie zlecasz, może nie mieć uzasadnienia.",
+          "Miesięczna współpraca ma więcej sensu, gdy strona regularnie się rozwija, generuje zapytania, obsługuje sprzedaż albo zawiera elementy wymagające kontroli. Liczy się również to, jak dotkliwa byłaby awaria formularza, niedostępność ważnej podstrony czy błąd po aktualizacji. **Im większą rolę serwis odgrywa w codziennym działaniu firmy, tym bardziej uzasadniona jest stała administracja WordPress.**",
+          "Przed rozpoczęciem współpracy oceniam więc nie tylko technologię, ale też sposób wykorzystywania witryny. Czasami rozsądniejszym rozwiązaniem jest uporządkowanie serwisu w ramach jednego zlecenia, a następnie zlecanie zmian wtedy, gdy rzeczywiście się pojawią.",
+        ],
+      },
+      {
+        id: "przejecie-strony-zaczynam-od-dostepow-i-przegladu-instalacji",
+        heading: "Przejęcie strony zaczynam od dostępów i przeglądu instalacji",
+        body: [
+          "Mogę przejąć opiekę nad stroną WordPress wykonaną przez inną osobę lub firmę. Na początku potrzebuję dostępu do panelu administracyjnego WordPressa i hostingu. Zależnie od konfiguracji przydatne mogą być również dane do domeny, narzędzia zarządzającego kopiami, panelu pocztowego lub usług połączonych ze stroną. Zakres wymaganych dostępów ustalam po sprawdzeniu, gdzie znajdują się poszczególne elementy.",
+          "Następnie przeglądam motyw, aktywne i nieaktywne wtyczki, wersję WordPressa oraz podstawową konfigurację serwera. Sprawdzam, czy dostępna jest działająca kopia zapasowa i czy można ją odtworzyć. Weryfikuję też, czy w instalacji nie ma zbędnych kont, porzuconych rozszerzeń lub zaległości, które zwiększają ryzyko problemów podczas późniejszych zmian.",
+          "Po przeglądzie przygotowuję listę rzeczy do uporządkowania. Krytyczne naprawy mogą wymagać osobnego zlecenia przed uruchomieniem regularnej administracji WordPress. Jeśli strona ma również problemy z wydajnością, opiekę można poprzedzić [przyspieszeniem strony WordPress](/uslugi/przyspieszanie-stron-wordpress). Dopiero na podstawie stanu serwisu można odpowiedzialnie ustalić zakres dalszej współpracy.",
+        ],
+      },
+      {
+        id: "aktualizacja-wymaga-kopii-i-sprawdzenia-dzialania-strony",
+        heading: "Aktualizacja wymaga kopii i sprawdzenia działania strony",
+        body: [
+          "Kliknięcie przycisku aktualizacji nie kończy zadania. Nowa wersja wtyczki może zmienić sposób działania formularza, wygląd sekcji albo współpracę z motywem. Problem bywa widoczny dopiero na konkretnej podstronie lub podczas wykonywania określonej czynności, dlatego aktualizacje wymagają kontroli.",
+          "Przed zmianami tworzę kopię plików i bazy danych. Gdy konfiguracja strony na to pozwala, sprawdzam aktualizację na kopii serwisu, a następnie kontroluję kluczowe elementy. Zakres testów zależy od rodzaju witryny. Na stronie firmowej może to być formularz i prezentacja oferty, natomiast w WooCommerce również koszyk oraz proces składania zamówienia.",
+          "Jeżeli aktualizacja powoduje błąd, **możliwość powrotu do działającej wersji jest ważniejsza niż samo szybkie zainstalowanie nowego wydania**. Po przywróceniu strony można ustalić, czy problem wynika z konfliktu wtyczek, motywu lub konfiguracji. Właścicielom nowych instalacji pomocny może być również poradnik [co zrobić po instalacji WordPressa](/blog/co-zrobic-po-instalacji-wordpressa), który porządkuje podstawowe działania po uruchomieniu systemu.",
+        ],
+      },
+      {
+        id: "ai-podpowiada-rozwiazania-ale-nie-przejmuje-odpowiedzialnosc",
+        heading: "AI podpowiada rozwiązania, ale nie przejmuje odpowiedzialności za stronę",
+        body: [
+          "Narzędzie AI może wyjaśnić, gdzie zmienić tekst, przygotować fragment kodu albo zasugerować sposób rozwiązania błędu. Nie oznacza to jednak, że samodzielnie wykona bezpieczną zmianę w Twojej konkretnej instalacji. Bez odpowiednich dostępów AI nie sprawdzi konfiguracji serwera, wersji motywu, używanych wtyczek ani zależności między nimi.",
+          "AI nie odpowiada też za przygotowanie kopii zapasowej, jej odtworzenie i ocenę skutków aktualizacji. Może podać instrukcję, ale nie zauważy automatycznie, że po zmianie formularz przestał wysyłać wiadomości, układ rozjechał się na telefonie albo proces zakupowy nie dochodzi do końca. Do tego potrzebne są dostęp do strony, testy i decyzja, czy pozostawić zmianę, poprawić ją, czy wrócić do wcześniejszej wersji.",
+          "Sam korzystam z technologii jako wsparcia tam, gdzie pomaga sprawniej analizować problem, ale **opieka nad stroną WordPress obejmuje także wykonanie, weryfikację i odpowiedzialność za techniczny przebieg prac**. Dla nietechnicznego właściciela firmy różnica polega na tym, że nie musi sam oceniać, czy wygenerowana instrukcja pasuje do jego serwisu i czy jej wdrożenie nie uszkodzi innych elementów.",
+        ],
+      },
+    ],
+  },
+  "przyspieszanie-stron-wordpress": {
+    heading: "Przyspieszenie strony WordPress: co warto sprawdzić przed wyborem wykonawcy",
+    intro: [
+      "**W tym poradniku pokazuję, jak ocenić szybkość strony, rozpoznać możliwe źródła problemów i porównać zakres prac proponowany przez wykonawców.** Dowiesz się również, kiedy optymalizacja szybkości WordPress ma sens, od czego zależy jej koszt oraz w jakiej sytuacji rozsądniejszym rozwiązaniem może być przebudowa serwisu.",
+      "Wynik pojedynczego testu nie daje jeszcze pełnego obrazu. Znaczenie mają rodzaj badanej podstrony, urządzenie, dane zbierane od rzeczywistych użytkowników oraz technologia, na której zbudowano witrynę. Dlatego przed podjęciem decyzji warto zrozumieć, co dokładnie pokazują popularne narzędzia i jakie ograniczenia może mieć obecna strona.",
+    ],
+    sections: [
+      {
+        id: "jak-samodzielnie-sprawdzic-czy-strona-wordpress-jest-wolna",
+        heading: "Jak samodzielnie sprawdzić, czy strona WordPress jest wolna",
+        body: [
+          "Najprościej zacząć od PageSpeed Insights. Wpisz adres strony głównej, a następnie sprawdź również ważne podstrony, na przykład ofertę, formularz kontaktowy, artykuł oraz kartę produktu w sklepie. Każdy z tych widoków może korzystać z innego szablonu, zestawu wtyczek i skryptów. Dobry wynik strony głównej nie oznacza więc automatycznie, że cały serwis działa równie sprawnie.",
+          "PageSpeed Insights może prezentować dwa rodzaje informacji. Dane laboratoryjne powstają podczas kontrolowanego testu i pomagają znaleźć problemy techniczne. Mogą się zmieniać między kolejnymi pomiarami, ponieważ wpływają na nie między innymi warunki testu i odpowiedź serwera. Dane od użytkowników opisują natomiast doświadczenia osób, które rzeczywiście odwiedzały stronę. Nie każda witryna ma wystarczająco dużo ruchu, aby takie informacje były dostępne.",
+          "Przy ocenie [Core Web Vitals](/blog/core-web-vitals-2026) zwróć uwagę na trzy wskaźniki. LCP powinien wynosić do 2,5 sekundy, INP do 200 milisekund, a CLS do 0,1. Ocena opiera się na 75. percentylu, co oznacza, że wymagany poziom powinien być osiągany podczas co najmniej 75 procent zarejestrowanych wizyt. Warto więc patrzeć nie tylko na ogólną punktację, lecz także na konkretne wskaźniki i różnice między urządzeniami mobilnymi a komputerami.",
+        ],
+      },
+      {
+        id: "co-najczesciej-spowalnia-strone-wordpress",
+        heading: "Co najczęściej spowalnia stronę WordPress",
+        body: [
+          "Wolna strona WordPress rzadko ma jedną prostą przyczynę. Częściej jest wynikiem kilku nakładających się problemów, dlatego instalacja kolejnej wtyczki do optymalizacji nie zawsze przynosi oczekiwany efekt. Przed zmianami trzeba sprawdzić, które elementy faktycznie obciążają konkretny serwis.",
+        ],
+        table: {"caption":"Co najczęściej spowalnia stronę WordPress","head":["Obszar","W jaki sposób może spowalniać stronę"],"rows":[["Obrazy","Zbyt duże pliki, niewłaściwe wymiary i ładowanie wszystkich grafik od razu zwiększają ilość danych do pobrania."],["Kreator stron","Rozbudowany kreator może generować dużą ilość kodu, stylów i skryptów, nawet gdy dana podstrona korzysta tylko z części dostępnych funkcji."],["Wtyczki","Niektóre rozszerzenia wczytują swoje zasoby w całym serwisie, chociaż są potrzebne wyłącznie na jednej podstronie."],["Pamięć podręczna","Brak odpowiedniej konfiguracji powoduje, że serwer musi wielokrotnie wykonywać te same operacje."],["PHP i hosting","Stara wersja PHP albo zbyt słabe środowisko serwerowe mogą wydłużać czas oczekiwania na odpowiedź strony."],["Baza danych","Nagromadzone wersje wpisów, dane tymczasowe i pozostałości po usuniętych rozszerzeniach mogą zwiększać liczbę zbędnych operacji."],["Skrypty zewnętrzne","Czaty, piksele reklamowe, mapy i narzędzia analityczne mogą opóźniać ładowanie lub reakcję strony na działanie użytkownika."]]},
+        outro: [
+          "Każdy z tych obszarów wymaga innego podejścia. Kompresja zdjęć nie naprawi powolnej odpowiedzi hostingu, a pamięć podręczna nie usunie ciężkiego kodu generowanego przez motyw. W WooCommerce dodatkowo trzeba zachować ostrożność przy koszyku, płatnościach i danych aktualizowanych dynamicznie. Zbyt agresywna konfiguracja może poprawić wynik testu, ale jednocześnie zakłócić proces składania zamówienia.",
+        ],
+      },
+      {
+        id: "od-czego-zalezy-koszt-przyspieszenia-strony-wordpress",
+        heading: "Od czego zależy koszt przyspieszenia strony WordPress",
+        body: [
+          "Koszt zależy przede wszystkim od liczby elementów, które trzeba przeanalizować, zmienić i przetestować. Prosta witryna z kilkoma powtarzalnymi widokami wymaga innego zakresu pracy niż serwis wykorzystujący osobne szablony usług, wpisów, formularzy i stron docelowych. Im więcej typów podstron, tym więcej przypadków trzeba sprawdzić przed wdrożeniem i po nim.",
+          "Znaczenie ma również zastosowany kreator, liczba aktywnych wtyczek oraz możliwość bezpiecznej zmiany ich konfiguracji. W sklepie WooCommerce dochodzą karta produktu, kategorie, koszyk, finalizacja zamówienia, płatności i rozszerzenia sprzedażowe. Każdy z tych elementów może reagować inaczej na opóźnianie skryptów albo ustawienia pamięci podręcznej.",
+          "Na zakres wpływa też hosting. Jeżeli serwer odpowiada zbyt wolno, same poprawki po stronie WordPressa mogą nie wystarczyć. Dlatego wycenę przygotowuję po rozpoznaniu konstrukcji serwisu, jego kluczowych szablonów i środowiska, na którym działa. Dzięki temu zakres wynika z realnych problemów strony, a nie z jednego wyniku PageSpeed Insights.",
+        ],
+      },
+      {
+        id: "kiedy-optymalizacja-nie-wystarczy-i-lepsza-bedzie-nowa-stron",
+        heading: "Kiedy optymalizacja nie wystarczy i lepsza będzie nowa strona",
+        body: [
+          "Nie każdą witrynę opłaca się poprawiać w nieskończoność. Ciężki kreator może narzucać sposób generowania kodu i ładować zasoby, których nie da się bezpiecznie usunąć bez ingerencji w układ strony. Jeżeli każda kolejna zmiana wymaga obchodzenia ograniczeń narzędzia, optymalizacja może stać się serią kompromisów zamiast trwałym rozwiązaniem.",
+          "Podobny problem pojawia się przy przestarzałym motywie, szczególnie gdy nie jest już rozwijany albo nie współpracuje poprawnie z aktualnymi wersjami WordPressa i PHP. W takiej sytuacji trzeba porównać zakres możliwych usprawnień z zakresem przebudowy. Więcej o ograniczeniach jednego z popularnych kreatorów wyjaśniam w materiale [dlaczego odchodzę od Elementora](/blog/elementor-dlaczego-nie-warto).",
+          "Nowa strona może być rozsądniejsza, gdy obecna konstrukcja blokuje istotne zmiany, a kolejne doraźne poprawki nie usuwają głównej przyczyny problemu. Nie oznacza to jednak, że każda wolna strona wymaga wymiany. Taką decyzję podejmuję dopiero po sprawdzeniu, czy istniejący serwis daje się zoptymalizować bez naruszania jego ważnych funkcji.",
+        ],
+      },
+      {
+        id: "jak-utrzymac-efekt-po-optymalizacji-szybkosci-wordpress",
+        heading: "Jak utrzymać efekt po optymalizacji szybkości WordPress",
+        body: [
+          "Efekt może się zmieniać wraz z rozwojem strony. Duże zdjęcia dodane bez zmniejszenia wymiarów zwiększą wagę podstron, a nowa wtyczka może dołączyć dodatkowe style, skrypty lub zapytania do bazy danych. Podobnie działają kolejne narzędzia marketingowe, takie jak piksele reklamowe, czaty i zewnętrzne formularze.",
+          "Po aktualizacjach WordPressa, motywu oraz rozszerzeń warto sprawdzić najważniejsze widoki i podstawowe funkcje strony. Szczególnej kontroli wymagają sklepy, formularze oraz serwisy korzystające z wielu integracji. Sam fakt, że aktualizacja przebiegła bez komunikatu o błędzie, nie oznacza jeszcze, że wydajność pozostała bez zmian.",
+          "Jeśli nie chcesz wykonywać takich kontroli samodzielnie, możesz połączyć utrzymanie wydajności z regularną [opieką nad stroną WordPress](/uslugi/opieka-wordpress). Niezależnie od wybranego modelu najważniejsze jest traktowanie szybkości jako parametru, który warto ponownie mierzyć po większych zmianach, a nie jako jednorazowej konfiguracji.",
+        ],
+      },
+      {
+        id: "jakie-dostepy-sa-potrzebne-przed-rozpoczeciem-prac",
+        heading: "Jakie dostępy są potrzebne przed rozpoczęciem prac",
+        body: [
+          "Podstawą jest dostęp administracyjny do WordPressa, ponieważ pozwala sprawdzić motyw, aktywne wtyczki i konfigurację serwisu. W zależności od źródła problemu może być potrzebny również dostęp do panelu hostingu, plików strony, bazy danych albo ustawień mechanizmu pamięci podręcznej. Dokładny zestaw ustalam po pierwszym rozpoznaniu.",
+          "Najczęściej mogą być potrzebne:",
+        ],
+        list: [
+          "konto administratora WordPressa,",
+          "panel hostingu lub kontakt do osoby, która nim zarządza,",
+          "dostęp do plików i bazy danych, jeśli wymaga tego zakres zmian,",
+          "dostęp do konfiguracji zewnętrznej pamięci podręcznej lub CDN, jeśli są używane,",
+          "dane z narzędzi pomiarowych, jeżeli mają posłużyć do analizy ruchu rzeczywistych użytkowników.",
+        ],
+        outro: [
+          "Nie każdy projekt wymaga wszystkich tych dostępów. Najpierw sprawdzam publicznie dostępne wyniki i konstrukcję witryny, a następnie wskazuję, co będzie potrzebne do dalszej diagnostyki. Jeżeli częścią strony zarządza hosting, agencja albo inny wykonawca, zakres uprawnień i sposób współpracy ustalam przy rozpoczęciu prac.",
+        ],
+      },
+    ],
+  },
+  "nowoczesna-strona-firmowa-2026": {
+    heading: "Strona internetowa dla małej firmy: praktyczne decyzje przed zleceniem projektu",
+    intro: [
+      "**W tej części dowiesz się, czy Twojej firmie wystarczy profil w Google, jaki rodzaj strony wybrać, co wpływa na koszt oraz jakie materiały i usługi trzeba uwzględnić przed rozpoczęciem prac.** To praktyczne kwestie, które warto uporządkować, zanim zaczniesz porównywać wykonawców i otrzymane wyceny.",
+      "Dobra strona internetowa dla małej firmy nie powinna być większa ani bardziej skomplikowana, niż wymaga tego sposób pozyskiwania klientów. Powinna natomiast należeć do Ciebie, przedstawiać pełną ofertę i umożliwiać rozwijanie treści wraz z firmą. W typowych projektach usługowych jako rozwiązanie domyślne proponuję [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress). Bardziej rozbudowaną technologię rozważam dopiero wtedy, gdy potrzebujesz nietypowych funkcji, takich jak panel klienta, konfigurator lub kalkulator.",
+    ],
+    sections: [
+      {
+        id: "czy-profil-w-google-i-media-spolecznosciowe-wystarcza-malej-",
+        heading: "Czy profil w Google i media społecznościowe wystarczą małej firmie?",
+        body: [
+          "Profil Firmy w Google oraz konta w mediach społecznościowych mogą skutecznie wspierać pozyskiwanie klientów. Pozwalają publikować aktualności, zbierać opinie i pojawiać się w miejscach, w których użytkownicy szukają lokalnych usług. Nie zastępują jednak własnej strony, ponieważ działają według zasad zewnętrznej platformy i dają ograniczoną kontrolę nad sposobem prezentowania oferty.",
+          "Własna strona firmowa dla małej firmy działa pod Twoją domeną. Możesz na niej dokładnie opisać każdą usługę, pokazać realizacje, przedstawić odpowiedzi na częste pytania i skierować klienta do właściwego formularza. Nie musisz mieścić całej oferty w krótkim opisie profilu ani budować komunikacji wyłącznie wokół kolejnych postów.",
+          "Znaczenie ma również wyszukiwarka. Osobne podstrony usług mogą odpowiadać na różne pytania klientów i pojawiać się w wynikach związanych z konkretną ofertą. Profil w Google wspiera widoczność lokalną, a witryna tworzy miejsce na szczegółowe treści. **Najlepszy efekt daje traktowanie obu kanałów jako uzupełniających się elementów**, a nie wybieranie tylko jednego z nich.",
+        ],
+      },
+      {
+        id: "wybor-miedzy-wizytowka-strona-firmowa-a-sklepem-wynika-ze-sp",
+        heading: "Wybór między wizytówką, stroną firmową a sklepem wynika ze sposobu sprzedaży",
+        body: [
+          "Określenie „strona dla firmy” może oznaczać zarówno prostą wizytówkę, jak i rozbudowany serwis z ofertą wielu usług. Dlatego przed porównaniem wycen warto ustalić, co użytkownik ma zrobić po wejściu na stronę. Może jedynie sprawdzić dane i zadzwonić, zapoznać się z usługami przed wysłaniem zapytania albo kupić produkt bezpośrednio online.",
+        ],
+        table: {"caption":"Wybór między wizytówką, stroną firmową a sklepem wynika ze sposobu sprzedaży","head":["Rodzaj strony","Dla kogo","Typowy zakres","Typowy termin"],"rows":[["Wizytówka","Firma z prostą ofertą i jednym głównym celem kontaktowym","Podstawowe informacje, skrócona oferta, dane kontaktowe i formularz","2-3 tygodnie"],["Strona firmowa lub usługowa","Firma, która potrzebuje dokładnie wyjaśnić kilka usług","Strona główna, podstrony usług, informacje o firmie, kontakt, opcjonalnie realizacje lub blog","4-6 tygodni"],["Mniejszy sklep WooCommerce","Firma sprzedająca produkty bezpośrednio przez internet","Katalog, koszyk, zamówienia, płatności i podstawowa obsługa sprzedaży","6-8 tygodni"],["Średni sklep WooCommerce","Firma potrzebująca funkcji B2B, wersji językowych lub migracji","Rozbudowany katalog i proces zakupowy, dodatkowe wersje oraz przeniesienie danych","10-14 tygodni"]]},
+        outro: [
+          "Dla firmy usługowej najczęściej właściwym wyborem jest pełna strona firmowa. Wizytówka może okazać się zbyt ograniczona, jeśli klient przed kontaktem chce porównać kilka usług, poznać sposób współpracy albo sprawdzić doświadczenie wykonawcy. Sklep ma sens dopiero wtedy, gdy częścią procesu ma być zakup i obsługa zamówienia online. Jeśli nadal rozważasz kilka rozwiązań, pomocne będzie porównanie opisane w materiale [jaka technologia na stronę firmową](/blog/strona-firmowa-2026-jaka-technologia).",
+        ],
+      },
+      {
+        id: "koszt-strony-zalezy-przede-wszystkim-od-zakresu-pracy",
+        heading: "Koszt strony zależy przede wszystkim od zakresu pracy",
+        body: [
+          "Koszt strony internetowej dla małej firmy nie wynika wyłącznie z liczby pozycji w menu. Dwie witryny z taką samą liczbą podstron mogą wymagać zupełnie innego nakładu pracy. Jedna korzysta z powtarzalnego układu usług, a druga potrzebuje indywidualnego formularza, wielu typów treści i przeniesienia materiałów ze starego systemu.",
+          "Na wycenę wpływa liczba oraz różnorodność podstron, a także to, kto przygotowuje teksty i zdjęcia. Znaczenie ma również blog, rozbudowanie formularzy, liczba wersji językowych oraz konieczność migracji starej witryny. Przy przenoszeniu strony trzeba dodatkowo przeanalizować dotychczasowe adresy i przygotować przekierowania 301 dla treści, które otrzymają nowe lokalizacje.",
+          "Przed rozpoczęciem prac ustalam też, czy posiadasz gotową identyfikację wizualną, czy materiały wymagają uporządkowania i czy poszczególne usługi potrzebują osobnych widoków. Dzięki temu wycena może odnosić się do konkretnego zakresu, a nie do nieprecyzyjnego hasła „strona firmowa”. Szerzej czynniki wyceny omawiam w poradniku [ile kosztuje strona www](/blog/ile-kosztuje-strona-www-2026).",
+        ],
+      },
+      {
+        id: "domena-hosting-i-pozostale-uslugi-powinny-nalezec-do-ciebie",
+        heading: "Domena, hosting i pozostałe usługi powinny należeć do Ciebie",
+        body: [
+          "Sama realizacja witryny to jedna część projektu. Do jej działania potrzebne są również usługi utrzymaniowe. **Domenę, hosting i konta związane ze stroną najlepiej rejestrować na dane Twojej firmy**, aby dostęp do nich nie zależał od wykonawcy. Mogę pomóc Ci przejść przez zakup i konfigurację, ale właścicielem pozostajesz Ty.",
+          "Osobno trzeba uwzględnić następujące elementy:",
+        ],
+        list: [
+          "**domenę**, czyli adres wpisywany przez użytkownika w przeglądarce,",
+          "**hosting**, czyli miejsce, w którym znajdują się pliki i baza danych strony,",
+          "**pocztę firmową**, jeśli chcesz korzystać z adresów we własnej domenie,",
+          "**certyfikat SSL**, który umożliwia bezpieczne połączenie przez HTTPS,",
+          "**opcjonalną opiekę techniczną**, jeśli po wdrożeniu chcesz zlecić aktualizacje i bieżące prace.",
+        ],
+        outro: [
+          "Koszty utrzymania zależą od wybranych usług i ich dostawców. Przed zakupem warto sprawdzić nie tylko warunki początkowe, lecz także zasady odnowienia, dostępne zasoby hostingu oraz sposób zarządzania pocztą. Po zakończeniu 60-dniowej gwarancji mogę zapewnić opcjonalną opiekę w miesięcznym abonamencie bez umowy na rok, ale nie jest ona obowiązkowa.",
+        ],
+      },
+      {
+        id: "teksty-i-zdjecia-nie-musza-byc-gotowe-przed-pierwsza-rozmowa",
+        heading: "Teksty i zdjęcia nie muszą być gotowe przed pierwszą rozmową",
+        body: [
+          "Nie musisz przychodzić z kompletem gotowych tekstów. Na początku ważniejsze jest to, abyś potrafił opowiedzieć, czym zajmuje się firma, kto korzysta z jej usług, jakie problemy rozwiązujesz i o co klienci pytają przed zakupem. Na tej podstawie można określić strukturę strony oraz listę materiałów potrzebnych do przygotowania poszczególnych podstron.",
+          "Jeśli piszesz teksty samodzielnie, mogę pomóc Ci dopasować ich układ do projektu. W praktyce warto zacząć od konkretów: zakresu usługi, odbiorcy, obszaru działania, sposobu realizacji i warunków kontaktu. Ogólne hasła nie zastąpią informacji, których klient potrzebuje, aby porównać ofertę i zdecydować o wysłaniu zapytania. Zakres pomocy przy tworzeniu lub redakcji treści ustalam przy rozpoczęciu współpracy.",
+          "Brak własnych zdjęć również nie blokuje projektu. Można zaplanować sesję firmową, skorzystać z odpowiednio dobranych materiałów stockowych albo oprzeć część projektu na typografii, kolorze i prostych elementach graficznych. Najważniejsze, aby fotografie odpowiadały rzeczywistemu charakterowi działalności i nie sugerowały usług, zespołu lub zaplecza, których firma nie posiada.",
+        ],
+      },
+      {
+        id: "widocznosc-w-google-zaczyna-sie-od-poprawnej-konstrukcji-str",
+        heading: "Widoczność w Google zaczyna się od poprawnej konstrukcji strony",
+        body: [
+          "Strona www dla firmy usługowej powinna od początku mieć uporządkowaną strukturę. Przy wdrożeniu przygotowuję hierarchię nagłówków, mapę strony oraz dane strukturalne tam, gdzie pasują do rzeczywistej treści i rodzaju działalności. Konfiguruję również Google Search Console, aby wyszukiwarka mogła otrzymać informacje o witrynie i jej adresach.",
+          "Jeżeli strona ma korzystać z Google Analytics 4, uruchomienie analityki wymaga wcześniejszej zgody użytkownika na odpowiednie pliki cookies. Samo wdrożenie tych elementów nie oznacza automatycznego uzyskania konkretnej pozycji. **Techniczne SEO tworzy podstawę do indeksowania, ale widoczność zależy również od treści, konkurencji, historii domeny i dalszego rozwijania serwisu.**",
+          "W przypadku działalności lokalnej warto równolegle zadbać o Profil Firmy w Google. Dane dotyczące nazwy, oferty, adresu lub obsługiwanego obszaru powinny być spójne ze stroną. Witryna może szerzej wyjaśniać usługi, natomiast profil pomaga użytkownikowi szybko znaleźć podstawowe informacje w wynikach lokalnych. Takie połączenie daje klientowi kilka dróg dotarcia do firmy bez składania obietnic dotyczących określonej pozycji.",
+        ],
+      },
+    ],
+  },
+  "nowoczesne-strony-internetowe": {
+    heading: "Nowoczesne strony internetowe, czyli co naprawdę decyduje o jakości projektu",
+    intro: [
+      "**W tej części dowiesz się, po czym rozpoznać nowoczesne strony internetowe, jakie elementy wpływają na ich koszt i co warto ustalić przed wyborem wykonawcy.** Wygląd jest ważny, ale sam efekt wizualny nie wystarczy, jeśli użytkownik nie może szybko zrozumieć oferty, wygodnie przeczytać treści na telefonie albo dotrzeć do potrzebnej informacji.",
+      "Dobra nowoczesna strona www łączy estetykę, szybkość, dostępność i przemyślany sposób prezentowania treści. Projektuję te obszary jako elementy jednej całości. Dzięki temu ruch, grafika oraz nietypowe układy mogą wzmacniać charakter marki, ale nie odbywa się to kosztem czytelności i użyteczności.",
+    ],
+    sections: [
+      {
+        id: "nowoczesna-strona-pomaga-zrozumiec-firme-a-nie-tylko-robi-wr",
+        heading: "Nowoczesna strona pomaga zrozumieć firmę, a nie tylko robi wrażenie",
+        body: [
+          "Pierwsze wrażenie powstaje szybko, dlatego projekt wizualny powinien od razu sugerować, z jaką firmą masz do czynienia. Innego języka graficznego potrzebuje kancelaria, innego producent, restauracja czy marka kierująca ofertę do młodych rodziców. Kolory, typografia, zdjęcia i rytm poszczególnych sekcji powinny tworzyć spójny obraz, a nie być zestawem modnych rozwiązań wybranych bez związku z działalnością.",
+          "Nowoczesność oznacza również prostotę korzystania ze strony. Użytkownik powinien bez domyślania się rozpoznać, gdzie znajdzie ofertę, czym różnią się poszczególne usługi i jaki będzie kolejny krok. Na telefonie tekst musi pozostać czytelny, przyciski łatwe do wybrania, a nawigacja wygodna także wtedy, gdy strona ma nietypowy układ. Nie przenoszę więc projektu komputerowego na mniejszy ekran w skali jeden do jednego. Dobieram układ treści i interakcji do dostępnej przestrzeni.",
+          "Istotna jest też wydajność. Duże zdjęcia, filmy, fonty i animacje zwiększają ilość danych, które musi pobrać urządzenie użytkownika. Podczas projektowania nowoczesnych stron trzeba zdecydować, które materiały rzeczywiście budują wartość, a które jedynie obciążają witrynę. W projektach nastawionych na dużą szybkość i publikację wielu treści jednym z możliwych kierunków są [strony Jamstack](/uslugi/strony-jamstack), ale technologię zawsze dobieram do konkretnego zastosowania.",
+        ],
+      },
+      {
+        id: "animacje-maja-prowadzic-uwage-a-nie-przejmowac-kontrole",
+        heading: "Animacje mają prowadzić uwagę, a nie przejmować kontrolę",
+        body: [
+          "Ruch może wyjaśnić zależność między elementami, podkreślić zmianę stanu albo skierować wzrok na ważną informację. Delikatne pojawienie się treści może uporządkować odbiór sekcji, a reakcja przycisku potwierdzić użytkownikowi, że wykonał działanie. W takim zastosowaniu animacja staje się częścią komunikacji.",
+          "Problem zaczyna się wtedy, gdy użytkownik musi czekać na zakończenie efektu, zanim przeczyta ofertę albo przejdzie dalej. Uciążliwe bywają również elementy poruszające się bez wyraźnej przyczyny, nagłe zmiany układu oraz efekty uzależnione od precyzyjnego sterowania kursorem. To, co wygląda dobrze podczas krótkiej prezentacji, nie zawsze sprawdza się podczas zwykłego korzystania ze strony.",
+          "Uwzględniam również osoby, które w telefonie lub komputerze włączyły ograniczenie ruchu. W takiej sytuacji rozbudowaną animację można uprościć albo wyłączyć, zachowując tę samą treść i możliwość obsługi. **Najważniejsze informacje nie powinny być dostępne wyłącznie po odtworzeniu efektu lub wykonaniu skomplikowanego gestu.** Takie podejście poprawia komfort także na słabszych urządzeniach i przy wolniejszym połączeniu.",
+        ],
+      },
+      {
+        id: "dostepnosc-jest-czescia-nowoczesnego-projektowania",
+        heading: "Dostępność jest częścią nowoczesnego projektowania",
+        body: [
+          "Dostępna strona pozwala korzystać z treści osobom o różnych potrzebach i sposobach obsługi urządzenia. W praktyce oznacza to między innymi odpowiedni kontrast tekstu, widoczne oznaczenie aktywnego elementu, logiczną kolejność nagłówków, opisy istotnych obrazów oraz możliwość poruszania się po stronie klawiaturą. Formularz powinien jasno wskazywać, które pole zawiera błąd, zamiast komunikować problem wyłącznie kolorem.",
+          "Nie każdy obraz wymaga rozbudowanego opisu. Zdjęcie dekoracyjne może zostać pominięte przez program odczytujący stronę, natomiast wykres, schemat lub fotografia produktu powinny przekazywać sens także osobie, która ich nie widzi. Podobnie jest z ikonami. Jeżeli ikona pełni funkcję przycisku, jej znaczenie musi być możliwe do rozpoznania bez zgadywania.",
+          "Od 28 czerwca 2025 roku przepisy wdrażające *European Accessibility Act* dotyczą części produktów i usług. Mikroprzedsiębiorstwa świadczące usługi są objęte wyłączeniem, ale samo wyłączenie nie oznacza, że dostępność traci znaczenie biznesowe. Czytelna i możliwa do obsługi strona może służyć większej grupie odbiorców. Gdy zgodność ma być formalnie oceniona, potrzebny jest określony zakres oraz weryfikacja, którą może objąć osobny [audyt WCAG](/audyt-wcag).",
+        ],
+      },
+      {
+        id: "koszt-zalezy-od-zakresu-indywidualnych-rozwiazan",
+        heading: "Koszt zależy od zakresu indywidualnych rozwiązań",
+        body: [
+          "Projektowanie nowoczesnych stron może obejmować zarówno dopracowaną witrynę z kilkoma spokojnymi animacjami, jak i rozbudowany serwis z grafiką 3D, nietypowymi przejściami oraz własną logiką. Te projekty mogą wyglądać podobnie na pojedynczym zrzucie ekranu, ale różnią się liczbą stanów, które trzeba zaprojektować, wdrożyć i przetestować.",
+        ],
+        table: {"caption":"Koszt zależy od zakresu indywidualnych rozwiązań","head":["Element projektu","Jak wpływa na zakres pracy"],"rows":[["Animacje","Każdy indywidualny efekt wymaga przygotowania zachowania na różnych ekranach i sprawdzenia wydajności"],["Grafika 3D","Obejmuje przygotowanie lub dostosowanie materiałów, optymalizację oraz obsługę urządzeń o różnej wydajności"],["System zarządzania treścią","Wymaga określenia, które treści edytujesz i jak mają być zorganizowane"],["Szablony podstron","Każdy odmienny typ podstrony potrzebuje własnego układu i zestawu elementów"],["Własna logika","Kalkulatory, konfiguratory, wyszukiwarki i integracje są wyceniane według sposobu działania"]]},
+        outro: [
+          "Na koszt wpływa również liczba wersji danego widoku. Sekcja może wyglądać inaczej, gdy zawiera krótki tekst, długi opis, brak zdjęcia albo dodatkowy przycisk. Im więcej takich wariantów ma działać poprawnie, tym większy jest zakres projektowania i testowania. Po rozmowie oraz briefie określam funkcje, sposób edycji i potrzebne szablony, a następnie przygotowuję wycenę z zakresem i terminem.",
+          "Własna logika nie zawsze oznacza klasyczną aplikację. Może to być filtrowanie oferty, generowanie wielu podstron z jednej bazy albo uporządkowany proces przetwarzania danych. Przykładem serwisu rozwijanego na podstawie wspólnej bazy jest [cojestpolskie.pl](/projekty/cojestpolskie), który obejmuje ponad 900 marek i ponad 1700 podstron.",
+        ],
+      },
+      {
+        id: "dobre-materialy-ulatwiaja-zaprojektowanie-spojnej-strony",
+        heading: "Dobre materiały ułatwiają zaprojektowanie spójnej strony",
+        body: [
+          "Nie musisz przygotowywać kompletnej dokumentacji technicznej. Potrzebuję jednak materiałów, które pozwolą mi zrozumieć markę, ofertę i oczekiwany kierunek. Im wcześniej wiadomo, jakie treści oraz zdjęcia znajdą się na stronie, tym trafniej można zaplanować proporcje sekcji i sposób prowadzenia użytkownika.",
+          "Najbardziej przydatne są:",
+        ],
+        list: [
+          "logo, kolory firmowe i używane materiały identyfikacji,",
+          "teksty lub robocze informacje o usługach, produktach i firmie,",
+          "zdjęcia, ilustracje, filmy oraz inne materiały wizualne,",
+          "przykłady stron, które Ci się podobają, wraz z krótkim wyjaśnieniem dlaczego,",
+          "informacje o elementach, których nie chcesz powielać na swojej stronie.",
+        ],
+        outro: [
+          "Przykłady nie służą kopiowaniu cudzego projektu. Pomagają ustalić, czy bliższy jest Ci oszczędny układ, mocna typografia, dużo przestrzeni, ciemna kolorystyka czy bardziej dynamiczna prezentacja. Równie cenna jest informacja, że podoba Ci się nawigacja na jednej stronie, sposób prezentacji zdjęć na drugiej i spokojne animacje na trzeciej.",
+          "Brak własnych zdjęć nie zatrzymuje projektu. Mogę zaplanować układ wykorzystujący typografię, kolor, proste elementy graficzne albo odpowiednio dobrane materiały stockowe. Zakres pozyskania lub przygotowania takich materiałów ustalam na początku współpracy, ponieważ inne potrzeby ma strona eksperta, a inne oferta oparta na produktach, realizacjach czy wnętrzach.",
+        ],
+      },
+      {
+        id: "wsparcie-po-wdrozeniu-pozwala-spokojnie-rozpoczac-prace-ze-s",
+        heading: "Wsparcie po wdrożeniu pozwala spokojnie rozpocząć pracę ze stroną",
+        body: [
+          "Publikacja nie kończy odpowiedzialności za wykonany projekt. Po uruchomieniu obejmuję stronę **60 dniami gwarancji i bezpłatnych poprawek**. Ten czas pozwala wychwycić problemy związane z wdrożeniem, które mogą ujawnić się już podczas normalnego korzystania z witryny.",
+          "Po okresie gwarancji możesz samodzielnie zarządzać ustalonym zakresem treści albo skorzystać z opcjonalnej opieki w miesięcznym abonamencie. Nie wymaga ona podpisywania umowy na rok. Dokładny zakres opieki ustalam przy rozpoczęciu współpracy, aby było jasne, jakie aktualizacje, prace techniczne i zmiany obejmuje wybrany wariant.",
+          "Rozdzielenie gwarancji od dalszego rozwoju jest istotne. Gwarancja dotyczy poprawnego działania wykonanego wdrożenia, natomiast dodanie nowej podstrony, funkcji, integracji czy kolejnego rodzaju treści stanowi rozwój serwisu. Dzięki temu możesz zdecydować, czy po starcie potrzebujesz stałego wsparcia, czy wystarczy Ci samodzielna obsługa przygotowanych elementów.",
+        ],
+      },
+    ],
+  },
+  "integracja-woocommerce-z-baselinker": {
+    heading: "Integracja WooCommerce z BaseLinker w codziennej obsłudze sklepu",
+    intro: [
+      "**W tym bloku wyjaśniam, jak integracja WooCommerce z BaseLinker wpływa na codzienną sprzedaż, od czego zależy jej zakres i na co zwrócić uwagę przed uruchomieniem synchronizacji.** Dzięki temu łatwiej ocenisz, czy potrzebujesz prostego połączenia sklepu, czy konfiguracji obejmującej także magazyn, faktury, wysyłki oraz dodatkowe kanały sprzedaży.",
+      "BaseLinker WooCommerce nie jest jednym gotowym schematem odpowiednim dla każdej firmy. Inaczej wygląda konfiguracja sklepu z kilkudziesięcioma produktami i jednym miejscem sprzedaży, a inaczej system wykorzystujący warianty, kilka hurtowni, Allegro oraz zewnętrzny program magazynowy. Dlatego przed wdrożeniem ustalam nie tylko, co ma zostać połączone, lecz także jak Twoja firma rzeczywiście realizuje zamówienia.",
+    ],
+    sections: [
+      {
+        id: "co-baselinker-zmienia-w-codziennej-obsludze-woocommerce",
+        heading: "Co BaseLinker zmienia w codziennej obsłudze WooCommerce?",
+        body: [
+          "Najważniejszą zmianą jest możliwość przeniesienia obsługi zamówień do jednego środowiska. Zamiast osobno sprawdzać sklep, platformę marketplace i pozostałe kanały, możesz pracować na wspólnej kolejce zamówień. Ma to znaczenie szczególnie wtedy, gdy zamówienia obsługuje więcej niż jedna osoba albo gdy firma korzysta z kilku sposobów dostawy.",
+          "Połączenie sklepu z BaseLinkerem może również ograniczyć ręczne przepisywanie danych. Informacje potrzebne do realizacji zamówienia są pobierane z WooCommerce, a dalsze czynności można uporządkować w ramach jednego procesu. Nie oznacza to, że każda operacja od razu stanie się automatyczna. Zakres zależy od konfiguracji sklepu, dostępnych integracji oraz zasad obowiązujących w Twojej firmie.",
+          "Praktyczne korzyści najczęściej dotyczą następujących obszarów:",
+        ],
+        list: [
+          "obsługi zamówień z różnych kanałów w jednym miejscu,",
+          "korzystania ze wspólnych stanów magazynowych,",
+          "ograniczenia ręcznego kopiowania danych między systemami,",
+          "uporządkowania przygotowania dokumentów i przesyłek.",
+        ],
+        outro: [
+          "Jeżeli dopiero budujesz sklep, sposób późniejszej integracji warto uwzględnić już podczas planowania [sklepu WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Struktura produktów, wariantów i identyfikatorów może później ułatwić lub utrudnić uruchomienie całego procesu.",
+        ],
+      },
+      {
+        id: "baselinker-moze-polaczyc-sklep-takze-z-wysylkami-fakturami-i",
+        heading: "BaseLinker może połączyć sklep także z wysyłkami, fakturami i marketplace’ami",
+        body: [
+          "Integracja WooCommerce z BaseLinker nie musi kończyć się na pobieraniu zamówień. System może stać się pośrednikiem pomiędzy sklepem a narzędziami wykorzystywanymi podczas realizacji sprzedaży. Dotyczy to między innymi integracji kurierskich, generowania etykiet, obsługi dokumentów, platform marketplace oraz oprogramowania magazynowego.",
+          "Przykładem dodatkowego kanału jest Allegro. Sklep i oferty marketplace mogą korzystać z danych magazynowych zarządzanych w ustalonym miejscu, ale wcześniej trzeba prawidłowo powiązać produkty. Szczególnego znaczenia nabierają wtedy SKU, EAN oraz warianty. Realizacją łączącą WooCommerce i Allegro jest [LumiKids](/projekty/lumikids), natomiast przykładem sklepu działającego na WooCommerce pozostaje [Kosmoteka](/projekty/kosmoteka).",
+          "BaseLinker może być również połączony z systemem fakturowym, księgowym, magazynowym albo ERP, jeżeli dane narzędzie udostępnia odpowiednią integrację. **Nie zakładam z góry, że każdy używany przez Ciebie program da się podłączyć w oczekiwany sposób.** Najpierw sprawdzam dostępne możliwości, wymagane dostępy i ograniczenia, a dopiero później określam realny zakres prac.",
+        ],
+      },
+      {
+        id: "kierunek-synchronizacji-decyduje-o-tym-ktore-dane-sa-nadrzed",
+        heading: "Kierunek synchronizacji decyduje o tym, które dane są nadrzędne",
+        body: [
+          "Samo włączenie synchronizacji stanów WooCommerce nie wystarcza. Trzeba jeszcze zdecydować, gdzie znajduje się główne źródło informacji. Stan produktu może pochodzić ze sklepu, magazynu BaseLinkera, programu magazynowego albo danych przekazywanych przez hurtownię. Podobną decyzję trzeba podjąć dla cen i informacji produktowych.",
+        ],
+        table: {"caption":"Kierunek synchronizacji decyduje o tym, które dane są nadrzędne","head":["Dane","Pytanie przed konfiguracją","Ryzyko bez ustalenia zasad"],"rows":[["Stany","Który magazyn jest nadrzędny?","Sprzedaż produktu, którego faktycznie już nie ma"],["Ceny","Gdzie świadomie zmieniasz cenę?","Nadpisanie właściwej ceny wartością z innego źródła"],["Produkty","Po czym system rozpoznaje ten sam produkt?","Powstanie duplikatów lub błędne powiązania"],["Warianty","Jak rozróżniane są rozmiary, kolory lub inne opcje?","Synchronizacja danych z niewłaściwym wariantem"]]},
+        outro: [
+          "**Źródło nadrzędne powinno być jednoznaczne dla każdego rodzaju danych.** Możliwe jest na przykład pobieranie stanów z magazynu i pozostawienie cen zarządzanych w WooCommerce. Nie należy jednak przyjmować, że wszystkie informacje muszą płynąć w tym samym kierunku.",
+          "Typowym błędem jest uruchomienie kilku źródeł aktualizujących tę samą wartość. Wówczas ręcznie ustawiona cena może zostać zmieniona podczas kolejnej synchronizacji. Problemy pojawiają się również wtedy, gdy ten sam produkt ma różne SKU w sklepie, hurtowni i na platformie marketplace. Przed uruchomieniem ustalam więc nie tylko kierunek przepływu, ale też reguły identyfikacji produktów.",
+        ],
+      },
+      {
+        id: "koszt-zalezy-od-liczby-kanalow-i-jakosci-danych-produktowych",
+        heading: "Koszt zależy od liczby kanałów i jakości danych produktowych",
+        body: [
+          "Na pracochłonność wpływa przede wszystkim liczba elementów, które mają działać jako jeden system. Sklep połączony z jednym magazynem jest prostszym układem niż sprzedaż obejmująca WooCommerce, Allegro, kilka hurtowni, przewoźników i osobny program magazynowy. Każde kolejne połączenie wymaga sprawdzenia dostępnych danych, zasad synchronizacji oraz zachowania systemu w sytuacjach wyjątkowych.",
+          "Znaczenie ma również stan katalogu. Jeżeli produkty mają spójne SKU, poprawne EAN i uporządkowane warianty, łatwiej powiązać odpowiadające sobie pozycje. Braki oraz duplikaty wymagają wcześniejszego uporządkowania. Przy rozbudowanym asortymencie istotna jest też liczba wariantów, ponieważ każdy z nich powinien być jednoznacznie rozpoznawany.",
+          "Oddzielnym czynnikiem są hurtownie. Każdy dostawca może przekazywać dane w innym formacie i według innych zasad. Przed określeniem zakresu sprawdzam, jakie informacje są dostępne, jak często mogą być aktualizowane oraz czy pozwalają poprawnie powiązać produkty. Dopiero po takim rozpoznaniu mogę ocenić zakres integracji i ustalić termin.",
+        ],
+      },
+      {
+        id: "samodzielne-polaczenie-jest-mozliwe-ale-konfiguracja-wymaga-",
+        heading: "Samodzielne połączenie jest możliwe, ale konfiguracja wymaga decyzji",
+        body: [
+          "Podstawowe połączenie WooCommerce z BaseLinkerem możesz wykonać samodzielnie, jeśli swobodnie poruszasz się w panelach obu systemów. Utworzenie integracji jest jednak tylko początkiem. Najwięcej uwagi wymaga określenie, które dane mają być przesyłane, skąd mają pochodzić oraz co powinno wydarzyć się po zmianie stanu lub statusu zamówienia.",
+          "Trudność rośnie, gdy sklep już działa i zawiera niespójny katalog. Włączenie synchronizacji bez wcześniejszego sprawdzenia danych może ujawnić duplikaty, błędne warianty albo rozbieżności pomiędzy kanałami. **Przed uruchomieniem warto wiedzieć, jaki system jest źródłem prawdy dla stanów, cen i produktów.**",
+          "Jeżeli konfiguruję integrację, zaczynam od poznania obecnego sposobu pracy. Interesuje mnie nie tylko techniczna możliwość połączenia, ale też to, kto zmienia ceny, gdzie przyjmowany jest towar, jak obsługiwane są zwroty oraz z którego miejsca pracownik pobiera zamówienia. Dzięki temu konfiguracja odpowiada faktycznemu procesowi, zamiast wymuszać przypadkowy sposób obsługi.",
+        ],
+      },
+      {
+        id: "bezpieczna-integracja-zaczyna-sie-od-wlasciwych-dostepow",
+        heading: "Bezpieczna integracja zaczyna się od właściwych dostępów",
+        body: [
+          "Połączenie wykorzystujące REST API wymaga kluczy pozwalających BaseLinkerowi komunikować się z WooCommerce. Takich danych nie należy przesyłać przypadkowym osobom ani pozostawiać aktywnych bez potrzeby. **Klucz powinien mieć minimalny zakres uprawnień wystarczający do działania uzgodnionej integracji.** Ogranicza to dostęp do funkcji, które nie są potrzebne w danym wdrożeniu.",
+          "Konto BaseLinkera powinno być założone na Twoją firmę. To Ty zachowujesz kontrolę nad rozliczeniami, konfiguracją i użytkownikami. Na czas pracy potrzebuję dostępu pozwalającego ustawić integrację oraz przeprowadzić testy, ale po zakończeniu wdrożenia możesz go odebrać.",
+          "Warto również kontrolować, kto ma dostęp administracyjny do WordPressa, WooCommerce i pozostałych podłączonych narzędzi. Gdy zmienia się wykonawca albo pracownik odpowiedzialny za sprzedaż, nieużywane konta oraz klucze powinny zostać usunięte lub unieważnione. Bezpieczeństwo BaseLinker WooCommerce zależy nie tylko od samej technologii, lecz także od uporządkowanego zarządzania dostępami po uruchomieniu sprzedaży.",
+        ],
+      },
+    ],
+  },
 };
