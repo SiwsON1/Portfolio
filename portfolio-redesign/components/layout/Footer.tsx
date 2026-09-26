@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative mt-32 border-t border-line">
+    <footer className="relative mt-12 border-t border-line md:mt-24">
       <div className="px-6 py-16 md:px-10 md:py-24">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
           <div className="md:col-span-7">

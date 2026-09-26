@@ -166,7 +166,7 @@ export function PortfolioCube() {
   };
 
   return (
-    <div className="relative flex min-h-[100svh] flex-col justify-center border-b border-line px-6 pb-10 pt-28 md:px-10 md:pt-32">
+    <div className="relative flex min-h-[72svh] flex-col justify-center border-b border-line px-6 pb-10 pt-24 md:min-h-[100svh] md:px-10 md:pt-32">
       <div className="relative z-10 flex items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
         <span>{viewportLabel}</span>
         <span className="inline-flex items-center gap-2">
@@ -260,7 +260,7 @@ export function PortfolioCube() {
 
       <aside
         aria-label="Lista projektow"
-        className="pointer-events-auto fixed right-6 top-[28vh] z-30 hidden h-[52vh] w-44 overflow-hidden lg:block lg:right-10 xl:w-52"
+        className="pointer-events-auto absolute right-6 top-[28vh] z-30 hidden h-[52vh] w-44 overflow-hidden lg:block lg:right-10 xl:w-52"
         onMouseLeave={() => setActiveSlug(null)}
       >
         <div className={`portfolio-marquee ${isPaused ? "portfolio-marquee--paused" : ""}`}>

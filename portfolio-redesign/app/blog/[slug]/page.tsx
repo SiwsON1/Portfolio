@@ -328,7 +328,7 @@ export default async function PostPage({
                     >
                       {f.q}
                     </dt>
-                    <dd className="text-ink-mute leading-relaxed">{f.a}</dd>
+                    <dd className="text-ink-mute leading-relaxed">{renderInlineLinks(f.a)}</dd>
                   </div>
                 ))}
               </dl>

@@ -4,9 +4,9 @@ import { posts } from "@/lib/posts";
 import { jsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog o Next.js, WordPress i wdrożeniach AI",
   description:
-    "Notatki z pracy: ceny stron www, decyzje technologiczne Next.js vs WordPress, wdrożenia AI, Core Web Vitals.",
+    "Poradniki o tworzeniu stron: Next.js czy WordPress, koszty utrzymania, Core Web Vitals, WooCommerce, dostępność WCAG i wdrożenia AI w małych firmach.",
   alternates: { canonical: "/blog" },
 };
 

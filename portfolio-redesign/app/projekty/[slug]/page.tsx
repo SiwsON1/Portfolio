@@ -7,6 +7,27 @@ import { services, type Service } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
+/** Opis 120-160 znaków: długie skracane do pełnych zdań, krótkie uzupełniane o stack. */
+function metaDescription(p: (typeof projects)[number]): string {
+  const fit = (text: string) => {
+    if (text.length <= 160) return text;
+    let out = "";
+    for (const s of text.split(/(?<=[.!?])\s+/)) {
+      if ((out + s).trim().length > 158) break;
+      out += `${s} `;
+    }
+    if (out.trim()) return out.trim();
+    const cut = text.slice(0, 157);
+    return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + "…";
+  };
+  let d = fit(p.description);
+  if (d.length < 120) {
+    const base = /[.!?]$/.test(d) ? d : `${d}.`;
+    d = fit(`${base} Realizacja Marcina Siwonia, stack: ${p.stack.slice(0, 3).join(", ")}.`);
+  }
+  return d;
+}
+
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
@@ -20,14 +41,16 @@ export async function generateMetadata({
   const p = projects.find((x) => x.slug === slug);
   if (!p) return {};
   const title = `${p.client}: ${p.title}`;
+  const description = metaDescription(p);
   return {
-    title,
-    description: p.description,
+    // Szablon dokleja „ — Marcin Siwonia” (17 znaków); dłuższe tytuły Google ucina.
+    title: title.length + 17 > 65 ? { absolute: title } : title,
+    description,
     alternates: { canonical: `/projekty/${p.slug}` },
     ...(p.category === "lab" && { robots: { index: false, follow: true } }),
     openGraph: {
       title,
-      description: p.description,
+      description,
       url: `${SITE_URL}/projekty/${p.slug}`,
       type: "website",
       images: [{ url: p.image }],

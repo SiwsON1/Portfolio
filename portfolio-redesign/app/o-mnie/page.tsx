@@ -6,7 +6,7 @@ import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personSchema, SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "O mnie",
+  title: { absolute: "O mnie: Marcin Siwonia, web developer z Wrocławia" },
   description:
     "Marcin Siwonia, freelancer i programista Next.js z Wrocławia. Strony www, aplikacje React, wdrożenia AI. Sześć lat doświadczenia, 30+ wdrożeń.",
   alternates: { canonical: "/o-mnie" },

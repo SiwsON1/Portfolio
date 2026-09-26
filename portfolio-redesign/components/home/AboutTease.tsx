@@ -106,8 +106,8 @@ export function AboutTease() {
                 className="text-ink underline underline-offset-4 decoration-ink-faint hover:text-peach hover:decoration-peach transition-colors"
               >
                 seomantyczny.pl
-              </a>{" "}
-              — blog o AI i SEO. Nie zostawiam kodu komuś, kto go nie pisał.
+              </a>
+              , blog o AI i SEO. Nie zostawiam kodu komuś, kto go nie pisał.
             </p>
           </div>
 

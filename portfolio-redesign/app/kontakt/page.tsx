@@ -5,9 +5,9 @@ import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Kontakt",
+  title: "Kontakt: wycena strony lub aplikacji w 24h",
   description:
-    "Napisz brief, dostaniesz wycenę w 24h. Formularz, mail, LinkedIn, GitHub. Marcin Siwonia, web developer z Wrocławia.",
+    "Napisz, co chcesz zrobić i na kiedy. W ciągu 24 godzin roboczych odpiszę z pierwszą oceną. Formularz, e-mail lub LinkedIn. Web developer z Wrocławia.",
   alternates: { canonical: "/kontakt" },
 };
 
@@ -43,8 +43,8 @@ export default function KontaktPage() {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-        <div className="md:col-span-7 md:col-start-2">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-7 lg:col-start-2">
           <ContactForm />
 
           <hr className="hairline my-16" />
@@ -89,7 +89,7 @@ export default function KontaktPage() {
           </div>
         </div>
 
-        <aside className="md:col-span-3 md:col-start-10 md:sticky md:top-32 md:self-start border-l border-line pl-6">
+        <aside className="lg:col-span-3 lg:col-start-10 lg:sticky lg:top-32 lg:self-start border-l border-line pl-6">
           <p className="eyebrow mb-4">Status</p>
           <p className="text-ink mb-6 flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-peach animate-pulse" />
