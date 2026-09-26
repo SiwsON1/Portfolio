@@ -331,33 +331,84 @@ export const posts: Post[] = [
   },
   {
     slug: "next-js-15-vs-wordpress-2026",
-    title: "Next.js 15 czy WordPress? Przewodnik decyzyjny dla małej firmy",
+    title: "Next.js czy WordPress: wybór dla firmy",
     excerpt:
-      "Kiedy WordPress to słuszność, a kiedy strzelacie sobie w stopę. Pięć kryteriów decyzyjnych z liczbami.",
+      "WordPress lepiej pasuje do stron opartych głównie na treści, które chcesz samodzielnie edytować. Next.js ma więcej sensu, gdy serwis zawiera własną logikę, dane i rozbudowane integracje.",
     date: "2026-04-05",
-    readingMinutes: 11,
+    updatedAt: "2026-09-26",
+    readingMinutes: 6,
     tags: ["Next.js", "WordPress", "decyzje techniczne"],
     keyword: "Next.js czy WordPress",
-    metaTitle: "Next.js czy WordPress 2026 — przewodnik decyzyjny",
-    metaDescription:
-      "Pięć kryteriów: kto edytuje, ile ruchu, jakie funkcje, jaki zespół, jaki budżet. Konkretna decyzja z liczbami. Kiedy WP to słuszność, kiedy strzał w stopę.",
-    hero: { kind: "nextjs" },
     relatedServices: ["aplikacje-nextjs", "tworzenie-stron-wordpress", "headless-wordpress"],
-    body: [
-      "Klient: 'znajomy zrobił mi propozycję na WordPress, ale czytałem że Next.js jest lepszy'. Odpowiedź zaczyna się od pięciu pytań decyzyjnych.",
-      "Pierwsze: czy planujesz sam edytować treści? WordPress wygrywa bo ma nawigowalny edytor który działa od 2003 roku. Next.js z headless CMS (Sanity, Strapi, Contentful) też daje edycję, ale klient musi przeskoczyć krzywą uczenia się nowego panelu.",
-      "Drugie: ile będziesz miał ruchu i czy wymagasz top-tier wydajności? WordPress dobrze postawiony (LiteSpeed cache, optymalizacja obrazków) wyciąga 90+ Lighthouse. Next.js z SSG/ISR wyciąga 99+ bez wysiłku, ale dla 90% biznesów ta różnica nic nie kosztuje konwersją.",
-      "Trzecie: czy planujesz funkcje których nie zrobi gotowy plugin? Konfigurator wyceny, panel klienta, integracja z customowym API, real-time updates. WordPress można tu rozbudować, ale szybko stajesz w sytuacji 'PHP plugin który nikt już nie utrzyma'. Next.js daje czystą architekturę aplikacji.",
-      "Czwarte: jaki masz zespół i kto to będzie utrzymywał za 3 lata? WordPress ma armię developerów PHP w PL, każda agencja umie. Next.js wymaga frontend developera z React/TS, droższego, rzadszego, ale to też trend rosnący.",
-      "Piąte: jakiego budżetu długoterminowego się spodziewasz? WordPress to ~30-100 zł/miesiąc hosting + ewentualne pluginy płatne. Next.js na Vercel: 0 zł plan hobby (do limitu), 20$/mc Pro. Hostinger lub własny VPS: 30-100 zł/mc. Plus koszt CMS jeśli headless: 0-99$/mc Sanity, 0-29$/mc Strapi self-hosted.",
-      "Moja decyzja w 80% przypadków: jeśli klient ma stronę głównie do prezentacji oferty + blog → WordPress. Jeśli aplikacja przetwarzająca dane użytkownika lub integrująca się z biznesem → Next.js. Reszta zależy od pieniędzy i planów.",
+    hero: { kind: "nextjs" },
+    metaTitle: "Next.js czy WordPress: jak wybrać technologię strony",
+    metaDescription:
+      "Next.js wybierz przy własnej logice i integracjach. WordPress sprawdzi się lepiej, gdy strona opiera się na treści i chcesz edytować ją sam.",
+    lead:
+      "Jeśli zastanawiasz się, Next.js czy WordPress, zacznij od sposobu pracy ze stroną, a nie od samej technologii. WordPress będzie naturalniejszy dla firmy, która często zmienia treści, a Next.js dla projektu z własną logiką, panelami lub danymi.",
+    body: ["Jeśli zastanawiasz się, Next.js czy WordPress, zacznij od sposobu pracy ze stroną, a nie od samej technologii. WordPress będzie naturalniejszy dla firmy, która często zmienia treści, a Next.js dla projektu z własną logiką, panelami lub danymi."],
+    sections: [
+      {
+        heading: "Zacznij od pytania, czym ma być strona za kilka lat",
+        body: [
+          "Next.js czy WordPress to nie jest wybór między technologią nowoczesną i przestarzałą. To dwie różne drogi do zbudowania serwisu, który ma później działać w konkretny sposób. WordPress jest systemem zarządzania treścią z panelem edycji w standardzie. Next.js jest frameworkiem Reacta rozwijanym przez Vercel, więc sam w sobie nie daje właścicielowi firmy gotowego panelu do zarządzania tekstami, zdjęciami czy podstronami.",
+          "Dlatego na początku patrzę na rolę strony. Jeśli ma być przede wszystkim miejscem publikowania treści, prezentowania oferty, rozwijania bloga i wprowadzania zmian przez właściciela albo pracownika firmy, WordPress odpowiada na ten model bez dokładania osobnego systemu. Edytor blokowy Gutenberg jest domyślną częścią WordPressa od wersji 5.0 z grudnia 2018 roku, a sam WordPress działa na ponad 40% wszystkich stron internetowych.",
+          "Jeżeli natomiast strona ma zachowywać się bardziej jak aplikacja, sytuacja się zmienia. Konfigurator, panel klienta, portal z danymi albo rozbudowana logika biznesowa to przykłady, przy których Next.js zaczyna pasować lepiej. Nie chodzi o sam wygląd, bo oba rozwiązania mogą prowadzić do nowoczesnej strony. Różnica pojawia się w tym, co dzieje się pod warstwą treści i ile własnych zasad działania ma obsługiwać serwis.",
+          "W praktyce najpierw opisz przyszły sposób korzystania ze strony. Kto będzie dodawał treści? Czy zmiany mają odbywać się bez udziału programisty? Czy serwis ma tylko wyświetlać informacje, czy również przetwarzać dane i prowadzić użytkownika przez niestandardowe procesy? Odpowiedzi na te pytania zwykle mówią więcej niż porównywanie samych nazw technologii.",
+        ],
+      },
+      {
+        heading: "WordPress ma przewagę, gdy treść ma być pod Twoją kontrolą",
+        body: [
+          "Najbardziej oczywista przewaga WordPressa pojawia się wtedy, gdy Ty albo ktoś z firmy ma regularnie pracować z treścią. Panel administracyjny jest częścią systemu, więc nie trzeba osobno dobierać narzędzia do edycji. Możesz mieć stronę firmową, blog i rozbudowywać zawartość bez zmiany całego modelu pracy.",
+          "To ważne zwłaszcza wtedy, gdy strona ma żyć długo, a wiele zmian będzie drobnych. Nowa podstrona, poprawiony opis usługi albo kolejny wpis nie powinny za każdym razem wymagać przebudowy zaplecza. W takim scenariuszu WordPress jest po prostu zgodny z procesem, w którym treść powstaje po stronie firmy.",
+          "Dobrym przykładem z moich realizacji jest Kancelaria Maria Piontek, gdzie zastosowałem WordPress. Ten wybór pasuje do serwisu, którego podstawową rolą jest przekazywanie treści, a nie obsługa własnej logiki aplikacyjnej. Podobny kierunek ma sens wtedy, gdy sklep jest ważniejszy niż niestandardowe mechanizmy: Kosmoteka i LumiKids działają na WooCommerce, czyli rozwiązaniu opartym na WordPressie.",
+          "To nie znaczy, że WordPress powinien być domyślną odpowiedzią dla każdej firmy. Jego mocną stroną jest gotowy model zarządzania treścią. Jeśli Twoje wymagania zaczynają wychodzić poza treść i typowe funkcje serwisu, sprawdź, czy nie próbujesz zamienić systemu CMS w aplikację o dużo bardziej indywidualnym sposobie działania. Jeżeli natomiast po wdrożeniu chcesz samodzielnie rozwijać treść strony, [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress) jest naturalnym punktem odniesienia.",
+        ],
+      },
+      {
+        heading: "Next.js ma sens, gdy serwis ma własną logikę",
+        body: [
+          "Next.js jest frameworkiem Reacta rozwijanym przez Vercel, a jego aktualna wersja główna to 16. Ważniejsze od numeru wersji jest jednak to, do jakich projektów ten model pasuje. Gdy serwis ma przetwarzać dane, prowadzić użytkownika przez własny proces albo łączyć kilka niestandardowych funkcji, Next.js daje przestrzeń do budowania takiej logiki jako części aplikacji.",
+          "Dobrym przykładem jest Kantorymapa. Projekt działa w Next.js i obejmuje 1900 kantorów w 140 miastach. Taki serwis nie opiera się na publikowaniu kilku podstron z ofertą. Pracuje na dużym zbiorze danych i prezentuje go użytkownikowi w określonym kontekście. Przy takich projektach pytanie o technologię dotyczy architektury aplikacji, a nie tylko wygody edycji tekstu.",
+          "Drugi przykład to Galabau Darius. W tym projekcie Next.js obsługuje konfigurator wyceny z panelem administracyjnym. To wyraźnie inna klasa problemu niż zwykła strona informacyjna. Użytkownik wykonuje określone działania, system reaguje zgodnie z przygotowaną logiką, a po drugiej stronie potrzebne jest zaplecze do obsługi procesu.",
+          "Jeżeli planujesz podobny kierunek, [tworzenie stron Next.js](/uslugi/aplikacje-nextjs) rozpatruj jako budowę rozwiązania dopasowanego do procesu firmy. Next.js nie jest automatycznie lepszy od WordPressa. Staje się trafniejszy wtedy, gdy główną wartością serwisu nie jest sam panel treści, lecz własne zachowanie aplikacji. Jeśli już dziś wiadomo, że później dojdzie konfigurator, panel klienta albo portal z danymi, uwzględnij to przy wyborze technologii, nawet jeśli nie budujesz tych funkcji od razu.",
+        ],
+      },
+      {
+        heading: "Zespół do dalszej obsługi jest częścią decyzji",
+        body: [
+          "Technologia zostaje z firmą dłużej niż samo wdrożenie. Dlatego przy wyborze pytam nie tylko o funkcje, ale też o to, kto będzie pracował ze stroną później. Inaczej wygląda serwis, który właściciel chce sam aktualizować przez panel, a inaczej aplikacja rozwijana przez programistę.",
+          "WordPress ma panel zarządzania treścią w standardzie, więc codzienna obsługa treści może odbywać się bez dokładania kolejnego systemu. Next.js wymaga osobnego rozwiązania, jeśli treści mają edytować osoby nietechniczne: można podłączyć CMS, na przykład Sanity albo Strapi, albo wykorzystać WordPress jako sam panel treści. To dodatkowa decyzja architektoniczna, której w klasycznym WordPressie nie trzeba podejmować.",
+          "Pomyśl też o osobach, które będą rozwijały serwis po pierwszym wdrożeniu. Jeżeli projekt ma własną logikę, kolejne zmiany i tak będą wymagały pracy programistycznej, niezależnie od użytej technologii. Jeśli natomiast rozwój ma polegać głównie na publikacji nowych treści, panel WordPressa ogranicza liczbę sytuacji, w których trzeba angażować programistę do zwykłych zmian redakcyjnych.",
+        ],
+      },
+      {
+        heading: "Integracje trzeba oceniać po stopniu własnej logiki",
+        body: [
+          "Samo słowo „integracja” nie przesądza o wyborze technologii. Ważne jest to, jak bardzo integracja wpływa na zachowanie całego serwisu. Jeżeli strona pozostaje przede wszystkim miejscem publikowania treści, WordPress nadal może być właściwą bazą. Jeżeli jednak połączenia z zewnętrznymi danymi stają się rdzeniem działania projektu, rośnie sens rozwiązania budowanego jako aplikacja. Przy podejmowaniu decyzji pomagają cztery pytania:",
+          "• Czy użytkownik głównie czyta, czy wykonuje wieloetapowe działania?",
+          "• Czy serwis ma pracować na własnym zbiorze danych?",
+          "• Czy potrzebujesz panelu klienta albo konfiguratora?",
+          "• Czy integracje są dodatkiem, czy podstawą działania strony?",
+          "Jeżeli odpowiedzi kierują projekt w stronę własnego procesu i danych, Next.js staje się bardziej naturalnym wyborem. Jeżeli funkcje pozostają dodatkiem do serwisu treściowego, WordPress zachowuje prostszy model obsługi.",
+        ],
+      },
+      {
+        heading: "Model headless łączy panel WordPressa z Next.js",
+        body: [
+          "Wybór nie zawsze musi oznaczać czyste „albo WordPress, albo Next.js”. Istnieje model headless, w którym WordPress pełni rolę panelu do zarządzania treścią, a Next.js odpowiada za warstwę widoczną dla użytkownika. Można w ten sposób zachować znany sposób pracy redakcyjnej i jednocześnie budować interfejs w Next.js.",
+          "Taki układ ma sens wtedy, gdy potrzeby redakcyjne i aplikacyjne są równie ważne. Nie jest to jednak automatyczny kompromis do każdego projektu. Dochodzi kolejna warstwa architektury i trzeba świadomie zdecydować, czy rzeczywiście jest potrzebna. Jeżeli nie ma takiej potrzeby, klasyczny WordPress albo sam Next.js z innym CMS będą prostsze do uzasadnienia.",
+          "Budżet utrzymania to osobne kryterium i nie mieszam go z oceną funkcji. Koszty zależą od infrastruktury, dodatkowych narzędzi i sposobu dalszej obsługi, a szczegóły opisałem we wpisie o [kosztach utrzymania WordPress i Next.js](/blog/wordpress-vs-next-js-koszt). Jeżeli sprowadzę decyzję do jednego rozróżnienia, wygląda ono tak: WordPress wybieraj wtedy, gdy centrum projektu stanowi treść i samodzielna edycja, a Next.js wtedy, gdy centrum projektu stanowi własna logika, dane i niestandardowe procesy. Model headless ma sens pośrodku, gdy potrzebujesz obu tych rzeczy jednocześnie.",
+        ],
+      },
     ],
     faq: [
-      { q: "Czy WordPress nadaje się do biznesu w 2026?", a: "Tak, dla 60-80% małych firm. Strona usługowa, blog, prosta integracja formularzy + płatności = WordPress robi to taniej i prościej. Wymaga tylko dobrego setup (custom theme, NIE Avada/Divi/Elementor) + LiteSpeed cache." },
-      { q: "Kiedy zdecydowanie Next.js a nie WordPress?", a: "Aplikacja z customową logiką (konfigurator, panel klienta), wymóg performance Lighthouse 95+ z budżetu reklamowego (Quality Score), planowanie miłonowego ruchu organicznego, zespół z React expertise." },
-      { q: "Czy mogę zmienić zdanie po starcie?", a: "Tak, headless WordPress (WP backend + Next.js frontend) to popularna ścieżka migracji. Workflow redakcji bez zmian, performance jak Jamstack. Migracja typowo 4-8 tygodni, koszt 18-30 tys." },
-      { q: "Co jeśli nie wiem ile będzie ruchu?", a: "Default: zacznij od WordPress jeśli budżet poniżej 12 tys., od Next.js jeśli 15+. Migracja w drugą stronę (NextJS → WP) jest rzadka i nie ma sensu. Migracja WP → NextJS jest standardem dla skalujących się firm." },
-      { q: "Który stack jest tańszy długoterminowo (TCO 3 lata)?", a: "WordPress 9-25 tys., Next.js 15-36 tys. WP oszczędza 5-10 tys., ale Next.js daje lepsze SEO/performance często nadrabiające w pierwszym roku przy ruchu 1k+ wizyt/mc. Pełen breakdown w [WordPress vs Next.js: porównanie kosztów](/blog/wordpress-vs-next-js-koszt)." },
+      { q: "Czy WordPress nadal nadaje się do strony firmowej?", a: "Tak. WordPress działa na ponad 40% wszystkich stron internetowych i ma panel do edycji treści w standardzie. Dobrze pasuje do stron opartych głównie na treści, które chcesz rozwijać samodzielnie." },
+      { q: "Kiedy lepiej wybrać Next.js zamiast WordPressa?", a: "Gdy serwis ma własną logikę, na przykład konfigurator, panel klienta albo portal z danymi. Next.js pasuje szczególnie do projektów, w których strona zachowuje się bardziej jak aplikacja niż klasyczny serwis treściowy." },
+      { q: "Czy w Next.js mogę sam edytować treści?", a: "Tak, ale trzeba podłączyć system CMS, na przykład Sanity lub Strapi. Inną opcją jest WordPress używany jako panel treści w modelu headless." },
+      { q: "Czy można połączyć WordPress z Next.js?", a: "Tak. W modelu headless WordPress odpowiada za zarządzanie treścią, a Next.js za warstwę widoczną dla użytkownika. Taki układ ma sens, gdy chcesz połączyć wygodny panel redakcyjny z bardziej rozbudowaną logiką interfejsu." },
+      { q: "Co jest ważniejsze przy wyborze, technologia czy sposób obsługi strony?", a: "Sposób obsługi strony, bo technologia powinna wynikać z realnych potrzeb firmy. Jeśli najważniejsza jest samodzielna edycja treści, WordPress ma przewagę, a jeśli kluczowa jest własna logika i praca na danych, lepiej pasuje Next.js." },
     ],
   },
   {
@@ -482,33 +533,87 @@ export const posts: Post[] = [
   },
   {
     slug: "core-web-vitals-2026",
-    title: "Core Web Vitals 2026: co się zmieniło i jak to naprawić",
+    title: "Core Web Vitals: co mierzą i jak je poprawić",
     excerpt:
-      "INP zastąpiło FID, LCP cele zaostrzone, doszedł nowy metric CLS-2. Konkretne strategie napraw dla każdego.",
+      "Core Web Vitals pokazują, jak szybko strona wyświetla główną treść, reaguje na działania użytkownika i zachowuje stabilny układ. Wyjaśniam aktualne progi, pomiar i najczęstsze sposoby poprawy wyników.",
     date: "2026-02-14",
-    readingMinutes: 9,
+    updatedAt: "2026-09-26",
+    readingMinutes: 6,
     tags: ["performance", "Core Web Vitals", "SEO"],
     keyword: "Core Web Vitals 2026",
-    metaTitle: "Core Web Vitals 2026 — co się zmieniło, jak naprawić",
-    metaDescription:
-      "INP zastąpiło FID, LCP cele zaostrzone, CLS-2 mierzy shift po interakcji. Konkretne strategie napraw: next/image, RSC, font-display, edge functions. 2026.",
-    hero: { kind: "performance" },
     relatedServices: ["przyspieszanie-stron-wordpress", "aplikacje-nextjs", "tworzenie-stron-www"],
-    body: [
-      "Google podkręciło śrubę. W 2024 INP zastąpiło FID jako oficjalny metric responsywności. W 2026 są dyskusje o zaostrzeniu progów LCP z 2.5s na 2.0s i dodaniu CLS-2 mierzącego layout shift po interakcji. Co to znaczy w praktyce.",
-      "LCP (Largest Contentful Paint): czas do wyrenderowania największego elementu w viewport. Cel: poniżej 2.5s. Najczęstsze winowajce: niezoptymalizowane obrazki, blokujący JS, wolne TTFB z serwera. Naprawa: next/image z priority na hero, preload critical fonts, hosting z edge caching.",
-      "INP (Interaction to Next Paint): opóźnienie między kliknięciem/stuknięciem a odpowiedzią UI. Cel: poniżej 200ms. Najczęstsze: ciężki JS na main thread, brak Web Workers, synchronous third-party scripts. Naprawa: React Server Components, lazy load non-critical, defer analytics.",
-      "CLS (Cumulative Layout Shift): przesunięcia layoutu po wczytaniu. Cel: poniżej 0.1. Najczęstsze: obrazki bez width/height, fonty z FOIT/FOUT, dynamiczne wstawianie reklam/popupów. Naprawa: aspect-ratio CSS, font-display: swap z size-adjust, rezerwacja miejsca na dynamic content.",
-      "TTFB (Time To First Byte): odpowiedź serwera. Nie jest core ale wpływa na LCP. Cel: poniżej 800ms. Naprawa: edge functions zamiast SSR, ISR z revalidate, CDN przed origin, optymalizacja DB queries.",
-      "Narzędzia do mierzenia: PageSpeed Insights (data z field + lab), Search Console Core Web Vitals report (real users z 28 dni), Chrome DevTools Performance (debug), web-vitals npm package (own analytics).",
-      "Praktyczna strategia: ustal baseline, atakuj LCP najpierw (najwięcej impact), potem INP (drugie miejsce), CLS na końcu (zwykle daje się szybko ogarnąć). Mierz po każdej zmianie. Cel długoterminowy: 95th percentile w zielonym dla wszystkich 3 metrik.",
+    hero: { kind: "performance" },
+    metaTitle: "Core Web Vitals: co mierzą i jak poprawić wyniki",
+    metaDescription:
+      "Core Web Vitals mierzą szybkość, reakcję i stabilność strony. Sprawdź aktualne progi, sposoby pomiaru oraz metody poprawy wyników.",
+    lead:
+      "Core Web Vitals to trzy metryki opisujące szybkość wyświetlania głównej treści, reakcję strony na interakcje i stabilność jej układu. Jeśli odpowiadasz za stronę firmy, patrz na nie przez pryzmat doświadczenia rzeczywistych użytkowników, a nie pojedynczego wyniku z testu.",
+    body: ["Core Web Vitals to trzy metryki opisujące szybkość wyświetlania głównej treści, reakcję strony na interakcje i stabilność jej układu. Jeśli odpowiadasz za stronę firmy, patrz na nie przez pryzmat doświadczenia rzeczywistych użytkowników, a nie pojedynczego wyniku z testu."],
+    sections: [
+      {
+        heading: "Core Web Vitals obejmują LCP, INP i CLS",
+        body: [
+          "Google zalicza do Core Web Vitals trzy metryki: LCP, INP i CLS. Każda opisuje inny element korzystania ze strony, dlatego dobry wynik jednej z nich nie mówi jeszcze, że cała witryna działa dobrze.",
+          "LCP, czyli Largest Contentful Paint, mierzy szybkość wyświetlenia największego elementu widocznego na ekranie. W praktyce może to być duże zdjęcie, grafika albo inny istotny fragment pierwszego widoku strony. Jeśli taki element pojawia się późno, użytkownik może mieć wrażenie, że witryna długo się ładuje, nawet gdy część interfejsu była dostępna wcześniej.",
+          "INP, czyli Interaction to Next Paint, opisuje reakcję strony na interakcje użytkownika. Chodzi o to, jak sprawnie witryna odpowiada po kliknięciu, stuknięciu lub innym działaniu. Ta metryka zastąpiła FID jako Core Web Vital 12 marca 2024 roku, więc przy ocenie responsywności strony patrzy się dziś na INP, a nie na FID.",
+          "CLS, czyli Cumulative Layout Shift, mierzy stabilność układu. Problem pojawia się wtedy, gdy elementy strony przesuwają się już podczas korzystania z niej. Przykładem może być treść przesunięta przez obraz, baner albo zmianę sposobu wyświetlania fontu. Dla użytkownika oznacza to mniej przewidywalny interfejs, w którym element może znaleźć się w innym miejscu niż chwilę wcześniej.",
+          "Te metryki trzeba rozpatrywać razem. LCP odpowiada na pytanie, kiedy główna treść staje się widoczna, INP pokazuje, jak strona reaguje, a CLS mówi, czy jej układ pozostaje stabilny. Dzięki temu nie sprowadzasz oceny wydajności do samego czasu ładowania.",
+        ],
+      },
+      {
+        heading: "Aktualne progi są oceniane na 75. percentylu wizyt",
+        body: [
+          "Progi Core Web Vitals odnoszą się do 75. percentyla wizyt i są sprawdzane osobno dla telefonów oraz komputerów. To ważne, bo pojedynczy szybki test na jednym urządzeniu nie jest odpowiednikiem danych opisujących doświadczenia rzeczywistych użytkowników.",
+          "Percentyl ma tutaj praktyczne znaczenie. Nie chodzi o znalezienie jednego szczególnie szybkiego wejścia na stronę, ale o sprawdzenie, jak witryna zachowuje się w szerszym zbiorze rzeczywistych wizyt. Dzięki temu pojedynczy udany pomiar nie przesłania problemów, które występują u części odwiedzających.",
+          "Telefony i komputery trzeba rozdzielać. Ta sama witryna może zachowywać się inaczej w zależności od urządzenia, dlatego wspólny wynik nie oddawałby dobrze doświadczenia obu grup użytkowników. Jeśli problem występuje przede wszystkim na telefonach, właśnie tam szukam jego przyczyny, zamiast zakładać, że wynik z komputera opisuje całą stronę.",
+          "Nie ma przy tym potrzeby zakładać przyszłych zmian progów ani optymalizować witryny pod wartości, które nie są aktualnym standardem. Sensownym punktem odniesienia są obowiązujące definicje i progi LCP, INP oraz CLS.",
+        ],
+        table: {"caption":"Aktualne progi są oceniane na 75. percentylu wizyt","head":["Metryka","Dobry wynik","Słaby wynik"],"rows":[["LCP","do 2,5 s","powyżej 4 s"],["INP","do 200 ms","powyżej 500 ms"],["CLS","do 0,1","powyżej 0,25"]]},
+      },
+      {
+        heading: "Dane rzeczywistych użytkowników różnią się od testu laboratoryjnego",
+        body: [
+          "Jednym z najczęstszych źródeł nieporozumień jest traktowanie każdego wyniku PageSpeed Insights jak tej samej kategorii danych. Tymczasem pomiar terenowy i laboratoryjny odpowiadają na inne pytania.",
+          "Dane terenowe opisują doświadczenia rzeczywistych użytkowników. Można je znaleźć między innymi w CrUX oraz w raporcie Core Web Vitals w Google Search Console. To właśnie na danych rzeczywistych użytkowników Google opiera ocenę Core Web Vitals.",
+          "Pomiar laboratoryjny powstaje w kontrolowanych warunkach. Tak działają Lighthouse oraz laboratoryjna część PageSpeed Insights. Taki test jest przydatny do diagnozy, bo pozwala obserwować zachowanie strony w określonych warunkach i sprawdzać skutki wprowadzonych zmian. Nie można go jednak utożsamiać z tym, czego faktycznie doświadczają wszyscy odwiedzający.",
+          "Wynik laboratoryjny może wskazać problem, ale to dane terenowe pokazują, czy problem występuje podczas prawdziwych wizyt. Z kolei sam raport oparty na rzeczywistych użytkownikach nie zawsze podpowie, który element strony należy zmienić. Oba rodzaje pomiaru uzupełniają się, zamiast ze sobą konkurować.",
+          "Jeżeli widzę słaby LCP w danych terenowych, test laboratoryjny pomaga mi sprawdzić, czy największy element jest zbyt ciężki, czy serwer odpowiada wolno albo czy jego wyświetlenie opóźniają zasoby CSS i JavaScript. Przy INP diagnoza prowadzi zwykle do JavaScriptu, wtyczek lub skryptów zewnętrznych. Przy CLS trzeba obserwować elementy, które zmieniają pozycję podczas ładowania strony.",
+        ],
+      },
+      {
+        heading: "LCP poprawiam od największego elementu i sposobu jego dostarczenia",
+        body: [
+          "Problemy z LCP często wiążą się z tym, co użytkownik widzi w pierwszym ekranie strony. Ciężkie zdjęcie może opóźnić pojawienie się największego elementu, podobnie jak wolny serwer, blokujące zasoby CSS lub JavaScript oraz fonty.",
+          "Dlatego przy słabym LCP nie zaczynam od przypadkowych zmian. Najpierw ustalam, który element jest mierzony jako największy i co opóźnia jego wyświetlenie. Jeśli jest nim obraz, sprawdzam jego format i sposób przygotowania. WebP lub AVIF mogą być częścią optymalizacji obrazów, także w WordPressie. Jeśli przyczyną jest serwer, sama zmiana grafiki nie rozwiąże problemu.",
+          "Dobrym przykładem jest moja własna strona marcinsiwonia.pl działająca na Next.js 16. We wrześniu 2026 roku LCP na telefonie wynosił 4,7 s. Przyczyną była plansza intro renderowana na serwerze. Po usunięciu tego problemu LCP spadł do 2,0 s.",
+          "Ten przypadek pokazuje, dlaczego najpierw trzeba znaleźć rzeczywistą przyczynę. Sama informacja o słabym LCP nie mówi jeszcze, czy trzeba zmniejszyć obraz, zmienić sposób renderowania elementu, przyspieszyć serwer czy ograniczyć zasoby blokujące wyświetlanie. Wynik jest początkiem diagnozy, a nie gotową receptą. Jeżeli korzystasz z WordPressa, szerzej opisuję ten obszar na stronie [przyspieszanie stron WordPress](/uslugi/przyspieszanie-stron-wordpress).",
+        ],
+      },
+      {
+        heading: "INP i CLS wymagają spojrzenia na JavaScript oraz stabilność układu",
+        body: [
+          "Przy słabym INP trzeba przyjrzeć się temu, co dzieje się w przeglądarce w chwili interakcji. Typowe przyczyny to duża ilość JavaScriptu, wtyczki, skrypty zewnętrzne oraz długie zadania. Każdy z tych elementów może sprawić, że po działaniu użytkownika strona potrzebuje więcej czasu, aby pokazać kolejną zmianę interfejsu.",
+          "W WordPressie szczególnie istotna jest liczba i ciężar używanych dodatków. Ograniczenie wtyczek i rozbudowanych kreatorów to jeden ze sposobów zmniejszenia obciążenia strony, podobnie jak lekki motyw w miejsce rozwiązania dostarczającego dużo zbędnych zasobów. Nie chodzi jednak o mechaniczne usuwanie każdej wtyczki. Najpierw trzeba znaleźć elementy, które rzeczywiście dokładają JavaScript lub wydłużają pracę przeglądarki.",
+          "CLS wymaga innego spojrzenia. Tutaj problemem nie jest czas oczekiwania na reakcję, ale przesuwanie się elementów. Typowe źródła to obrazy bez określonych wymiarów, reklamy i banery wstawiane nad istniejącą treścią oraz fonty podmieniane już po rozpoczęciu wyświetlania strony.",
+          "Jeżeli przeglądarka zna wcześniej miejsce potrzebne na obraz, nie musi przesuwać sąsiedniej treści po jego załadowaniu. Podobna zasada dotyczy innych dynamicznie pojawiających się elementów. Przy fontach problem pojawia się wtedy, gdy po załadowaniu właściwego kroju zmienia się rozmiar lub układ tekstu, dlatego przy diagnozie CLS patrzę również na sposób ładowania typografii.",
+        ],
+      },
+      {
+        heading: "Na WordPressie najpierw usuwam przyczynę, a nie maskuję wynik",
+        body: [
+          "WordPress może osiągać dobre wyniki Core Web Vitals, ale droga do nich zależy od tego, co faktycznie spowalnia lub destabilizuje konkretną stronę. Typowe obszary pracy to cache, optymalizacja obrazów do WebP lub AVIF, ograniczenie wtyczek i kreatorów oraz lekki motyw.",
+          "Cache pomaga ograniczyć pracę potrzebną do dostarczenia strony, ale nie naprawi każdego rodzaju problemu. Jeśli LCP pogarsza ciężki obraz, trzeba zająć się obrazem. Jeżeli INP cierpi przez JavaScript z wielu dodatków, sam cache nie usunie pracy wykonywanej w przeglądarce. Gdy CLS wywołuje obraz bez wymiarów albo element wstawiany nad treścią, potrzebna jest poprawa układu.",
+          "Po zmianach stronę trzeba zmierzyć ponownie. Test laboratoryjny pomaga sprawdzić efekt konkretnej poprawki, a dane terenowe pokazują zachowanie witryny u rzeczywistych użytkowników. Dzięki temu można odróżnić zmianę, która poprawiła pojedynczy test, od zmiany widocznej podczas normalnego korzystania z serwisu.",
+          "Core Web Vitals są częścią sygnałów page experience, ale nie zastępują trafnej treści. Google podkreśla, że odpowiednia treść pozostaje ważniejsza, więc dobre wyniki techniczne są elementem jakości strony, a nie mechanizmem gwarantującym pozycję. Jeśli interesuje Cię wpływ sposobu renderowania strony na wyszukiwarkę, opisałem ten temat we wpisie [Next.js a SEO](/blog/next-js-a-seo).",
+        ],
+      },
     ],
     faq: [
-      { q: "Jakie są obecne progi Core Web Vitals?", a: "LCP poniżej 2.5s (good), INP poniżej 200ms, CLS poniżej 0.1. Mierzone na 75th percentile real users z 28 dni. Google rozważa zaostrzenie LCP do 2.0s w 2026." },
-      { q: "Co to INP i jak go naprawić?", a: "Interaction to Next Paint: opóźnienie między kliknięciem a odpowiedzią UI. Naprawa: React Server Components (mniej JS w bundle), lazy load non-critical, defer analytics, Web Workers dla heavy compute." },
-      { q: "Jak naprawić LCP poniżej 2.5s?", a: "next/image z priority na hero (preload), preload critical fonts (next/font), edge caching (Vercel edge functions, Cloudflare), optimized hero (WebP/AVIF, properly sized), brak blokujących third-party scripts above the fold." },
-      { q: "Czy Core Web Vitals są sygnałem rankingowym?", a: "Tak, od 2021. Wpływ ~5-10% na ranking dla competitive fraz. Słabe CWV = niższe pozycje (przy podobnych innych czynnikach). Dobre CWV = przewaga, ale nie zastąpi treści i linków." },
-      { q: "Jakie narzędzia używać do mierzenia?", a: "PageSpeed Insights (lab + field data), Search Console Core Web Vitals report (real users 28 dni), Chrome DevTools Performance (debug), web-vitals npm package (own analytics), Vercel Analytics (built-in)." },
+      { q: "Jakie są obecne progi Core Web Vitals?", a: "Dobry LCP wynosi do 2,5 s, dobry INP do 200 ms, a dobry CLS do 0,1. Za słabe uznawane są LCP powyżej 4 s, INP powyżej 500 ms i CLS powyżej 0,25. Progi odnoszą się do 75. percentyla wizyt i są oceniane osobno dla telefonów oraz komputerów." },
+      { q: "Co mierzy INP i czym różni się od FID?", a: "INP mierzy reakcję strony na interakcje użytkownika. Zastąpił FID jako Core Web Vital 12 marca 2024 roku, dlatego to na INP patrzy się obecnie przy ocenie responsywności w ramach Core Web Vitals." },
+      { q: "Jak sprawdzić Core Web Vitals mojej strony?", a: "Dane rzeczywistych użytkowników znajdziesz w CrUX i raporcie Core Web Vitals w Search Console. Lighthouse oraz laboratoryjna część PageSpeed Insights służą do pomiaru w kontrolowanych warunkach i pomagają diagnozować konkretne problemy." },
+      { q: "Jak poprawić Core Web Vitals na WordPressie?", a: "Zależnie od przyczyny pomagają cache, optymalizacja obrazów do WebP lub AVIF, ograniczenie wtyczek i rozbudowanych kreatorów oraz lekki motyw. Najpierw sprawdź jednak, czy problem dotyczy LCP, INP czy CLS, bo każda z tych metryk ma inne typowe przyczyny." },
+      { q: "Czy dobre Core Web Vitals wystarczą do wysokiej pozycji w Google?", a: "Core Web Vitals są częścią sygnałów page experience, ale Google podkreśla, że trafna treść jest ważniejsza. Dobry wynik techniczny nie jest gwarancją pozycji i nie zastępuje treści odpowiadającej na potrzeby użytkownika." },
     ],
   },
 ];
@@ -1451,7 +1556,7 @@ posts.push({
         "**Block Editor (Gutenberg, od 2018)**: edycja TREŚCI postów i stron w blokach. Nagłówki, paragrafy, obrazki, kolumny, listy, embed (YouTube, Twitter), reusable blocks. Standard do edycji treści.",
         "**Full Site Editing (FSE, od 2022)**: edycja CAŁEGO motywu w przeglądarce. Header, footer, sidebar, single post template, archive template, wszystko klikalne, bez kodu. Wymaga 'block theme' (Twenty Twenty-Three+, Blockbase, Kadence, Astra). Stary 'classic theme' nie wspiera FSE.",
         "**Wybór 2026**: dla nowej strony, block theme + FSE. Dla istniejącej na classic theme, Block Editor do treści, custom code do designu (lub migracja na block theme to projekt 4-8 tygodni).",
-        "**Page builders alternatywne** (Elementor, Bricks, Oxygen), działają niezależnie od FSE, mają własne edytory wizualne. Bardziej intuicyjne dla nie-techników, ale zwykle dodają więcej JS do strony (Elementor 200-400 KB JS na każdej podstronie). Pełna analiza dlaczego: [Elementor: dlaczego NIE warto w 2026](/blog/elementor-dlaczego-nie-warto). Najlepsza alternatywa dla wymagających performance: [headless WordPress + Next.js](/uslugi/headless-wordpress).",
+        "**Page builders alternatywne** (Elementor, Bricks, Oxygen), działają niezależnie od FSE, mają własne edytory wizualne. Są wygodniejsze dla osób nietechnicznych, ale dokładają własny CSS i JavaScript, więc wydajność trzeba sprawdzić na konkretnej stronie. Szerzej: [Elementor: czy warto go używać](/blog/elementor-dlaczego-nie-warto). Najlepsza alternatywa dla wymagających performance: [headless WordPress + Next.js](/uslugi/headless-wordpress).",
       ],
     },
   ],
@@ -1581,108 +1686,90 @@ posts.push({
 
 posts.push({
   slug: "elementor-dlaczego-nie-warto",
-  title: "Elementor — dlaczego NIE warto w 2026 (opinia praktyka)",
+  title: "Elementor: czy warto go używać do strony firmowej?",
   excerpt:
-    "Elementor to najpopularniejszy WordPress page builder. Po 30+ wdrożeniach mówię: dla większości projektów to zła decyzja w 2026. Dlaczego, co zamiast.",
+    "Elementor może być dobrym wyborem do prostej strony, zwłaszcza gdy zależy Ci na samodzielnej edycji bez programisty. Przy bardziej rozbudowanym serwisie sprawdź jednak, czy wygoda kreatora nie zaczyna utrudniać wydajności i utrzymania.",
   date: "2026-05-09",
-  readingMinutes: 10,
+  updatedAt: "2026-09-26",
+  readingMinutes: 6,
   tags: ["WordPress", "Elementor", "page builder", "opinia"],
   keyword: "Elementor dlaczego nie",
-  metaTitle: "Elementor — dlaczego NIE warto w 2026 (opinia praktyka)",
-  metaDescription:
-    "Elementor: najpopularniejszy WP page builder, ale dla większości projektów zła decyzja w 2026. Performance, lock-in, koszty, alternatywy (Bricks, FSE, custom).",
-  hero: { kind: "wordpress" },
   relatedServices: ["tworzenie-stron-wordpress", "przyspieszanie-stron-wordpress", "nowoczesne-strony-internetowe"],
-  body: [],
+  hero: { kind: "wordpress" },
+  metaTitle: "Elementor: czy warto go używać do strony firmowej?",
+  metaDescription:
+    "Elementor ma sens przy prostej stronie i samodzielnej edycji. Przy rozbudowie może utrudniać wydajność, spójność i utrzymanie WordPressa na dłużej.",
   lead:
-    "Elementor jest najpopularniejszym page builderem dla WordPress (~5 mln aktywnych instalacji). Po 30+ wdrożeniach klientów (część przejętych ze starych Elementor sites) moja opinia jako [Marcin Siwonia: freelancer Next.js i WordPress z Wrocławia](/) jest jednoznaczna: dla większości projektów w 2026 to zła decyzja. Performance, vendor lock-in, koszty długoterminowe nie zwracają początkowej oszczędności. Niżej dlaczego konkretnie i co zamiast.",
+    "Elementor ma sens wtedy, gdy potrzebujesz prostej strony, szybkiego startu i możliwości samodzielnej pracy bez programisty, ale przy bardziej wymagającym serwisie jego ograniczenia mogą zacząć przeszkadzać. W nowych projektach WordPress wybieram najczęściej własny motyw z polami ACF, choć pracowałem również ze stronami zbudowanymi na kreatorze.",
+  body: ["Elementor ma sens wtedy, gdy potrzebujesz prostej strony, szybkiego startu i możliwości samodzielnej pracy bez programisty, ale przy bardziej wymagającym serwisie jego ograniczenia mogą zacząć przeszkadzać. W nowych projektach WordPress wybieram najczęściej własny motyw z polami ACF, choć pracowałem również ze stronami zbudowanymi na kreatorze."],
   sections: [
     {
-      heading: "Dlaczego Elementor jest tak popularny (uczciwy obraz)",
+      heading: "Kreator nie jest zły, ale powinien pasować do sposobu pracy ze stroną",
       body: [
-        "Drag-and-drop interface który ROZUMIE klient bez znajomości kodu. Dosłownie chwytasz, przeciągasz, widzisz efekt. Krzywa uczenia 1-2 godziny.",
-        "Ogromny ekosystem dodatków (Essential Addons, Crocoblock JetEngine, ElementsKit). Dla każdej nietypowej funkcji jest gotowy widget.",
-        "Tysiące gotowych template'ów (free + Elementor Pro). Możesz mieć stronę za 1 dzień jeśli akceptujesz design szablonowy.",
-        "Społeczność: fora, Facebook groups, YouTube tutoriale w każdym języku. Łatwo znaleźć pomoc dla problemu.",
-        "Cena, free tier wystarcza dla prostych stron. Pro 59$/rok dla 1 strony, 99$ dla 3, 199$ dla 25, 399$ unlimited.",
+        "Elementor jest popularnym kreatorem stron dla WordPressa. Występuje w wersji darmowej oraz płatnej Pro z licencją roczną. Jego podstawowa zaleta wynika z samej idei kreatora: pozwala układać i edytować stronę bez budowania wszystkiego od podstaw przez programistę. Dla właściciela firmy, który chce mieć większą samodzielność, może to być istotny argument.",
+        "Dlatego nie traktuję wyboru kreatora jako prostego podziału na dobre i złe rozwiązania. Znacznie ważniejsze jest pytanie, czego oczekujesz od strony po uruchomieniu. Inne potrzeby ma firma, która chce szybko postawić prostą witrynę i później samodzielnie zmieniać jej zawartość, a inne firma, która rozwija serwis, dodaje kolejne funkcje i chce długo utrzymywać jeden spójny system.",
+        "Sam znam oba podejścia. Część moich starszych realizacji powstała z użyciem kreatora, na przykład [Multikon](/projekty/multikon) z 2023 roku. W nowych projektach pracuję inaczej: tworzę własny motyw, sekcje strony odwzorowuję zgodnie z projektem i udostępniam ich edycję przez pola ACF. Nie korzystam w takich realizacjach z Elementora, Divi ani Avady.",
+        "Ta zmiana podejścia nie oznacza, że każdą istniejącą stronę zbudowaną w kreatorze trzeba przebudować. Narzędzie ma sens wtedy, gdy jego sposób działania odpowiada temu, jak zamierzasz korzystać z witryny. Problem pojawia się dopiero wtedy, gdy wygoda na początku zaczyna generować ograniczenia podczas dalszego rozwoju.",
       ],
     },
     {
-      heading: "Dlaczego NIE — performance",
+      heading: "Elementor ma sens przy prostej stronie i samodzielnej edycji",
       body: [
-        "Elementor dodaje **200-400 KB JavaScript do każdej podstrony** (jQuery, Swiper, Waypoints, Elementor frontend, FontAwesome icons, własne plugin frontends). To jest baseline, niezależnie od tego ile widgetów używasz.",
-        "Z każdym dodatkiem (Essential Addons, Crocoblock) bundle rośnie. Realny case z mojej praktyki [tworzenia stron WordPress we Wrocławiu](/uslugi/tworzenie-stron-wordpress): strona klienta na Elementor + Essential Addons + Crocoblock miała **1.2 MB JS na stronie głównej**. Lighthouse Performance: 23 (na 100). LCP 6.4s. INP 480ms.",
-        "Migracja tej strony na custom theme (Bricks Builder + ACF Pro): bundle JS spadł do 80 KB, Lighthouse 96, LCP 1.1s, INP 90ms. Te same funkcje, dziesiąta część ciężaru.",
-        "Google używa Core Web Vitals jako sygnału rankingowego od 2021. Słabe CWV = niższe pozycje na konkurencyjnych frazach. Elementor strony są strukturalnie w gorszej pozycji od kompetentnie zbudowanych alternatyw.",
-        "Pełne dane o Core Web Vitals i jak je naprawić: [Core Web Vitals 2026](/blog/core-web-vitals-2026).",
+        "Najłatwiej obronić wybór kreatora wtedy, gdy strona ma być prosta, a jednym z głównych celów jest możliwość samodzielnego wprowadzania zmian. Jeżeli nie chcesz angażować programisty za każdym razem, gdy potrzebujesz zmodyfikować układ sekcji lub przygotować nową treść w ramach dostępnych elementów, wizualny sposób pracy może być wygodny.",
+        "To rozwiązanie pasuje też do projektu, w którym ważny jest szybki start. Gotowy mechanizm budowania sekcji zmniejsza zakres prac wykonywanych od podstaw. W takim przypadku nie ma sensu rezygnować z kreatora wyłącznie dlatego, że istnieją bardziej dopasowane technicznie sposoby budowy WordPressa.",
+        "Trzeba jednak rozdzielić dwie rzeczy: możliwość edycji treści oraz możliwość dowolnego przebudowywania strony. Nie każda firma potrzebuje tej drugiej. Jeśli wygląd serwisu jest ustalony, a późniejsza praca będzie polegała głównie na zmienianiu zawartości istniejących sekcji, własny motyw z przygotowanymi polami edycyjnymi również zapewni samodzielność. Różnica polega na tym, że edytujesz wtedy przewidziane elementy strony, zamiast za każdym razem budować jej układ. Przy wyborze odpowiedz sobie na kilka pytań:",
+        "• czy chcesz samodzielnie zmieniać także układ strony, czy głównie jej treść,",
+        "• czy serwis pozostanie prosty, czy będzie z czasem rozbudowywany,",
+        "• czy ważniejsza jest swoboda kreatora, czy stała struktura zgodna z projektem.",
+        "Nie ma tu jednej odpowiedzi dobrej dla każdej firmy. Im prostsza witryna i im ważniejsza samodzielna praca bez programisty, tym łatwiej uzasadnić użycie kreatora.",
       ],
     },
     {
-      heading: "Dlaczego NIE — vendor lock-in",
+      heading: "Wydajność trzeba mierzyć na konkretnej stronie",
       body: [
-        "Każdy widget Elementor zapisuje konfigurację w `wp_postmeta` jako shortcode-like JSON. Treść strony nie jest standardowym HTML, jest serializowanym Elementor metadata.",
-        "Konsekwencja: jeśli zdezaktywujesz Elementor, **strona przestaje renderować się normalnie**. Zostają shortcode'y w treści, surowy tekst bez formatowania, brak layoutu.",
-        "Migracja Elementor → Block Editor wymaga manual rewrite każdej podstrony. Dla 30 podstron = 30-60 godzin pracy. Dla 100+ podstron = projekt 4-8 tygodni.",
-        "Migracja Elementor → custom theme = praktycznie redesign od zera. Treści można wyciągnąć przez WP REST API, layouty trzeba przepisać.",
-        "Im dłużej używasz Elementor, tym droższy odejście. Klasyczny vendor lock-in.",
+        "Jednym z najczęściej podnoszonych tematów przy kreatorach jest wydajność. Nie da się jednak uczciwie powiedzieć, że każda strona zbudowana w ten sposób będzie wolna. Kreatory dokładają własny CSS i JavaScript, ale ilość dodatkowych zasobów zależy od tego, jakich widżetów i dodatków użyto na konkretnej stronie. Dwóch serwisów zbudowanych w tym samym narzędziu nie można więc oceniać wyłącznie na podstawie nazwy kreatora.",
+        "Dobrym punktem odniesienia są Core Web Vitals. Za dobry wynik uznaje się LCP, czyli czas pokazania głównej zawartości, do 2,5 s, INP, czyli reakcję strony na interakcję, do 200 ms, oraz CLS, czyli nieoczekiwane przesunięcia elementów podczas ładowania, do 0,1. Ocena dotyczy 75. percentyla wizyt.",
+        "Same progi nie mówią jednak, dlaczego strona ich nie spełnia. Nie można założyć, że winny jest kreator, zanim nie zostanie sprawdzona konkretna witryna. Podobnie nie można obiecać, że samo usunięcie jednego narzędzia automatycznie rozwiąże problemy. Jeśli zastanawiasz się nad zmianą technologii tylko z powodu szybkości, rozsądniejszym pierwszym krokiem jest pomiar. Przy [przyspieszaniu stron WordPress](/uslugi/przyspieszanie-stron-wordpress) punktem wyjścia jest rzeczywisty stan serwisu, a nie założenie, że określony kreator zawsze prowadzi do określonego wyniku.",
       ],
     },
     {
-      heading: "Dlaczego NIE — TCO długoterminowy",
+      heading: "Dodatki i licencje zwiększają liczbę zależności",
       body: [
-        "**Elementor Pro 59$/rok** za pojedynczą stronę. **Essential Addons Pro 49$/rok**. **Crocoblock JetEngine 130$/rok**. **WP Rocket 60$/rok** żeby ratować performance. Suma: ~300$/rok = 1200 zł/rok dla jednej strony.",
-        "**Hosting silniejszy**: Elementor wymaga większego compute. Cyber_folks Premium zamiast Basic (75 zł vs 25 zł/mc = 600 zł/rok więcej). Hostinger Business zamiast Single (40 zł vs 15 zł/mc = 300 zł/rok więcej).",
-        "**Maintenance droższy**: co kwartał aktualizacje Elementor Pro + addons + WP core. Często zmiany breaking (Elementor 3.x → 3.x+1 zmieniało API), naprawa zajmuje 2-5 godzin developera.",
-        "**Migracja gdy klient odejdzie z Elementor**: 5-15 tys. zł dla średniej strony. To koszt który ostatecznie ktoś poniesie (klient lub dev).",
-        "**Realny TCO 3 lata strony Elementor**: licencje 3.6 tys. zł + hosting premium 1.8-2.4 tys. zł + maintenance 6-12 tys. zł + opcjonalna migracja na końcu 5-15 tys. zł = **17-33 tys. zł**.",
+        "Kreator rzadko działa w izolacji. Elementy strony mogą korzystać z dodatkowych widżetów, wtyczek lub funkcji dostępnych w określonej wersji narzędzia. Im więcej takich zależności pojawia się w projekcie, tym ważniejsze staje się świadome utrzymanie całego zestawu.",
+        "Tutaj początkowa wygoda może po pewnym czasie zamienić się w dodatkową złożoność. Jeśli konkretna sekcja wymaga określonego dodatku, jej dalsze działanie jest związane nie tylko z WordPressem i motywem, ale także z tym rozszerzeniem. Jeżeli część możliwości strony pochodzi z wersji Pro, dochodzi zależność od rocznej licencji.",
+        "Nie oznacza to automatycznie problemu. Zależności można zaakceptować, jeśli wiadomo, po co zostały dodane. Uważać trzeba na sytuację, w której każda kolejna potrzeba jest rozwiązywana następnym dodatkiem, bo wtedy coraz trudniej spojrzeć na witrynę jako na jeden spójny system. Własny motyw pozwala mi podejść do tego inaczej: przygotowuję sekcje zgodnie z projektem i udostępniam pola potrzebne do edycji, bez dokładania kreatora tylko po to, żeby właściciel mógł zmienić tekst albo zdjęcie.",
       ],
     },
     {
-      heading: "Co zamiast — alternatywy 2026",
+      heading: "Swoboda edycji może utrudniać utrzymanie spójnego wyglądu",
       body: [
-        "**Bricks Builder** ($249 lifetime jednorazowo): modern page builder, Lighthouse 95+ out of the box, jQuery-free, native flexbox/grid. Dla freelancera/agencji najlepsza zamiana. To stack którego używam w większości [stron WordPress we Wrocławiu](/uslugi/tworzenie-stron-wordpress).",
-        "**Block Editor + custom theme + ACF Pro** ($249/rok): Gutenberg blocks dla treści, custom blocks dla powtarzalnych sekcji, ACF dla pól dynamicznych. Najczystszy WordPress, najlepsze performance.",
-        "**Full Site Editing (FSE) + block theme** (free): Twenty Twenty-Six lub Blockbase / Kadence. Edycja wszystkiego w przeglądarce, zero pluginów, modern stack. Krzywa uczenia 4-8 godzin.",
-        "**[Headless WordPress + Next.js](/uslugi/headless-wordpress)** (15-30 tys. wdrożenie), backend WP zostaje, frontend Next.js. Najlepsze performance + SEO + DX. Dla projektów które rosną. Pełen przewodnik: [migracja WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
-        "**Webflow** (płatne 200-400 zł/mc): visual builder no-code/low-code. Świetny ale vendor lock-in większy niż Elementor (cała strona na Webflow infrastructure, nie WordPress).",
+        "Możliwość samodzielnego budowania sekcji jest jedną z głównych przyczyn wyboru kreatora, ale ta sama cecha może utrudnić utrzymanie spójności. Jeżeli każdą część strony można swobodnie zmieniać, to wraz z rozwojem serwisu trzeba pilnować, aby kolejne modyfikacje nadal odpowiadały przyjętemu projektowi.",
+        "Na początku problem bywa niewidoczny, szczególnie gdy stroną zajmuje się jedna osoba, a podstron jest niewiele. Z czasem dochodzą nowe sekcje, kolejne treści i następne decyzje dotyczące układu. Wtedy znaczenie ma nie tylko to, czy zmianę da się wykonać, ale też czy następna podstrona będzie wyglądała i zachowywała się tak samo jak wcześniejsze.",
+        "Dlatego w nowych projektach wolę edycję sekcji 1:1 z projektem. Jeżeli dana sekcja ma określoną strukturę, przygotowuję odpowiadające jej pola ACF. Osoba zarządzająca stroną zmienia zawartość, ale nie musi za każdym razem odtwarzać zasad projektu przy pomocy zestawu widżetów. Takie podejście nie będzie lepsze dla każdego: jeżeli Twoim priorytetem jest samodzielne eksperymentowanie z układem, ograniczona struktura własnego motywu może być mniej wygodna.",
       ],
     },
     {
-      heading: "Kiedy Elementor MIMO WSZYSTKO ma sens",
+      heading: "Przejęcie strony po innym wykonawcy bywa trudniejsze",
       body: [
-        "Klient KONIECZNIE chce sam edytować layout (nie tylko treść) i nie ma budżetu na migrację co 2 lata. Wtedy Elementor + akceptacja TCO.",
-        "Strona jednorazowa pod konkretną kampanię (3-6 miesięcy lifecycle). Wtedy szybkość uruchomienia ważniejsza od długoterminowych kosztów.",
-        "Klient już ma zespół wewnętrzny przeszkolony z Elementor. Migracja na inny stack = retraining = większy koszt ludzki niż wybór technologii.",
-        "Bardzo prosta strona (5-10 podstron, brak custom funkcji, brak ambicji performance). Dla freelancera startującego z 1000 zł budżetu klienta.",
-        "Realnie: **dla 70% projektów wybór Elementor w 2026 to dług techniczny zaciągnięty przeciwko klientowi.** Wybór dewelopera nie klienta, łatwiej, szybciej, ale długoterminowo droższe i gorsze.",
+        "Kolejne wyzwanie pojawia się wtedy, gdy stronę ma przejąć inna osoba niż jej autor. Sam fakt użycia kreatora nie przesądza o trudności. Znaczenie ma to, jak wykonawca zbudował serwis, jakie dodatki zastosował i jak konsekwentnie korzystał z przyjętych rozwiązań. Trzeba zrozumieć, gdzie edytowane są poszczególne elementy, które funkcje zależą od dodatkowych wtyczek oraz jakie licencje są potrzebne do dalszej pracy.",
+        "Dlatego nie oceniam istniejącego serwisu na podstawie informacji, że korzysta z kreatora. Najpierw sprawdzam jego rzeczywistą budowę. Dobrze uporządkowana prosta strona może być łatwa w utrzymaniu, a rozbudowana konstrukcja z wieloma zależnościami wymaga większej ostrożności. Przejęcie strony nie oznacza automatycznie konieczności jej przebudowy: jeżeli obecne rozwiązanie spełnia potrzeby firmy, można je dalej utrzymywać.",
       ],
+    },
+    {
+      heading: "Własny motyw i edytor blokowy są alternatywami dla kreatora",
+      body: [
+        "W WordPressie nie musisz wybierać pomiędzy kreatorem a brakiem możliwości edycji. Jedną z alternatyw jest własny motyw z polami ACF, który stosuję w nowych projektach, bo łączy konkretny projekt graficzny z kontrolowaną edycją treści. Drugą drogą jest edytor blokowy WordPressa.",
+        "Jeśli zamawiasz nowy serwis, ustal sposób późniejszej edycji jeszcze przed rozpoczęciem [tworzenia strony WordPress](/uslugi/tworzenie-stron-wordpress). Pytanie „czy warto użyć kreatora?” jest w praktyce pytaniem o to, jak chcesz pracować ze stroną po jej uruchomieniu. Przy prostym serwisie i potrzebie szerokiej samodzielności kreator może być uzasadnionym wyborem. Przy projekcie, który ma zachować ściśle określoną strukturę, rozwijać się latami i ograniczać zależności, lepiej sprawdzi się własny motyw z przygotowaną edycją sekcji.",
+      ],
+      table: {"caption":"Własny motyw i edytor blokowy są alternatywami dla kreatora","head":["Podejście","Kiedy może pasować","Na co zwrócić uwagę"],"rows":[["Kreator","Prosta strona, szybki start, samodzielna praca bez programisty","Wydajność konkretnej konfiguracji, dodatki, licencje, spójność"],["Własny motyw z ACF","Projekt z ustaloną strukturą i edycją sekcji zgodną z designem","Mniejsza swoboda samodzielnego zmieniania układu"],["Edytor blokowy","WordPress bez zewnętrznego kreatora","Zakres edycji potrzebny osobie zarządzającej stroną"]]},
     },
   ],
   faq: [
-    {
-      q: "Czy Elementor jest darmowy?",
-      a: "Wersja podstawowa tak. Elementor Pro 59$/rok dla 1 strony (250 zł), 99$ dla 3 (400 zł), 199$ dla 25 (800 zł), 399$ unlimited (1600 zł). Plus addons (Essential Addons, Crocoblock), kolejne 200-500 zł/rok per strona.",
-    },
-    {
-      q: "Czy mogę zmigrować z Elementor na coś innego?",
-      a: "Tak, ale to praca. Elementor → Block Editor: manual rewrite każdej podstrony, 30-60h dla 30 podstron. Elementor → custom theme / Bricks: praktycznie redesign od zera, koszt 8-25 tys. zł dla średniej strony.",
-    },
-    {
-      q: "Czy Bricks Builder jest dużo lepszy?",
-      a: "Tak, modern stack, Lighthouse 95+ out of the box, jQuery-free, lifetime $249 jednorazowo (vs Elementor recurring). Mniej szablonów ale rosnący ekosystem. Krzywa uczenia podobna do Elementor.",
-    },
-    {
-      q: "A co z Divi, Avada, WPBakery?",
-      a: "Te same problemy co Elementor + większe (Divi i Avada to monster themes z 200-400 KB JS bazowo). W 2026 NIE polecam żadnego z nich dla nowych projektów.",
-    },
-    {
-      q: "Czy Full Site Editing to alternatywa dla Elementor?",
-      a: "Tak, jeśli akceptujesz krzywą uczenia 4-8 godzin. FSE jest darmowy, nie ma vendor lock-in (wszystko w standardowym WP), modern performance. Słabszy ekosystem template'ów niż Elementor, większy nacisk na własny design.",
-    },
-    {
-      q: "Co jeśli mam Elementor i działa OK?",
-      a: "Jeśli Lighthouse Performance 80+, Core Web Vitals zielony, klient zadowolony, brak planów rozwoju, zostaw. Migracja kosztuje. Migruj gdy: planowy redesign, dodajesz e-commerce z performance wymogami, performance spadł poniżej 70.",
-    },
+    { q: "Czy Elementor jest złym wyborem do strony firmowej?", a: "Nie. Może być rozsądnym wyborem przy prostej stronie, szybkim starcie i potrzebie samodzielnej edycji bez programisty. Problemy pojawiają się wtedy, gdy sposób działania kreatora przestaje odpowiadać rosnącym wymaganiom serwisu." },
+    { q: "Czy strona na Elementorze musi być wolna?", a: "Nie można tego stwierdzić bez pomiaru konkretnej strony. Kreatory dodają własny CSS i JavaScript, ale rzeczywisty wpływ zależy od wykorzystanych widżetów i dodatków, dlatego wydajność trzeba sprawdzić na danej witrynie." },
+    { q: "Jakie Core Web Vitals powinna osiągać moja strona?", a: "Dobre wartości to LCP do 2,5 s, INP do 200 ms oraz CLS do 0,1, oceniane dla 75. percentyla wizyt. Same wyniki nie wskazują przyczyny problemu, więc trzeba przeanalizować konkretną stronę." },
+    { q: "Co zamiast Elementora w WordPressie?", a: "Alternatywą może być własny motyw z polami ACF albo edytor blokowy. W nowych projektach stosuję własny motyw z edycją sekcji zgodną 1:1 z projektem graficznym." },
+    { q: "Czy warto przebudować istniejącą stronę na Elementorze?", a: "Nie tylko dlatego, że korzysta z kreatora. Najpierw sprawdź jej wydajność, sposób budowy, używane dodatki i to, czy obecna struktura rzeczywiście utrudnia dalszy rozwój lub utrzymanie." },
   ],
 });
 
@@ -1760,7 +1847,7 @@ posts.push({
       heading: "Custom fields i page building (3 wtyczki)",
       body: [
         "**16. Advanced Custom Fields (ACF) Pro** (paid 49$/rok), must-have dla każdego custom theme. Dynamic content fields, repeaters, flexible content, gallery, relationship. Kombinacja ACF + custom theme = czyste WP bez Elementor. Stack którego używam w [tworzeniu stron WordPress](/uslugi/tworzenie-stron-wordpress) dla większości projektów.",
-        "**17. Bricks Builder** (paid $249 lifetime), alternatywa dla Elementor, modern stack, Lighthouse 95+ out of the box. Pełen przewodnik: [Elementor: dlaczego NIE warto](/blog/elementor-dlaczego-nie-warto).",
+        "**17. Bricks Builder**, płatna alternatywa dla Elementora dla osób, które chcą pracować w kreatorze. W nowych projektach wybieram własny motyw z polami ACF, a porównanie opisałem w tekście [Elementor: czy warto go używać](/blog/elementor-dlaczego-nie-warto).",
         "**18. Carbon Fields** (free, framework dla deweloperów), alternatywa dla ACF Pro free. Definiowanie pól w PHP zamiast UI. Dla deweloperów którzy preferują code-first.",
         "**Wybór**: ACF Pro dla 90% custom theme. Bricks dla page builder zamiast Elementor. Carbon Fields dla code-first developerów.",
       ],

@@ -381,7 +381,7 @@ export default async function PostPage({
                         {s.title}
                       </p>
                       <p className="mt-4 text-sm text-ink-mute leading-relaxed line-clamp-3">
-                        {s.lead}
+                        {plainText(s.lead)}
                       </p>
                       <span className="mt-4 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-ink group-hover:text-peach transition-colors">
                         Zobacz

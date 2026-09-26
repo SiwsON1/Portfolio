@@ -122,49 +122,38 @@ export const services: Service[] = [
   {
     slug: "headless-wordpress",
     title: "Headless WordPress",
-    metaTitle: "Headless WordPress — frontend Next.js, WP zostaje jako CMS",
+    metaTitle: "Headless WordPress dla firm: WordPress i Next.js",
     metaDescription:
-      "Headless setup: WordPress jako CMS dla redakcji, frontend stawiamy w Next.js na Vercel. ISR, Lighthouse 95+, edycja w panelu jak zawsze. Migracja istniejących.",
-    h1: "Headless WordPress — szybkość Next.js, edycja WordPress",
+      "Headless WordPress dla firm: WordPress zostaje panelem do treści, a stronę wyświetla Next.js. Migracja z zachowaniem wygodnej edycji i podstaw SEO.",
+    h1: "Headless WordPress dla firm z istniejącym panelem treści",
     lead:
-      "Headless WordPress łączy edytor treści WordPressa (znany każdemu redaktorowi) z frontendem w Next.js (szybki, SEO-friendly, deploy na CDN). Dobry wybór dla firm, które mają redakcję pracującą w WordPressie, a potrzebują szybkości strony statycznej.",
+      "Łączę wygodną edycję treści w WordPressie z osobną stroną zbudowaną w Next.js. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
-      "Headless WordPress to architektura, w której WordPress zostaje, ale tylko jako backend. Treści wystawiasz przez REST API albo GraphQL (WPGraphQL), a frontend renderujesz w Next.js / Astro / Nuxt. Wynik: Lighthouse 95+, edge caching, edycja jak zawsze.",
-      "Przenoszę istniejące strony WordPress na architekturę headless: panel zostaje (administracja, edytor, role), a frontend powstaje od zera w Next.js. Klient widzi to samo co dotąd, użytkownik dostaje 3x szybszą stronę. Szczegóły kosztów [w poście o migracji WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+      "Headless WordPress to rozwiązanie, w którym WordPress nadal służy do dodawania i edycji treści, ale nie odpowiada już za wyświetlanie strony. Treści pobiera osobna warstwa w Next.js, dzięki czemu można zachować znany panel administracyjny i niezależnie rozwijać to, co widzi użytkownik.",
+      "Taki układ ma sens przede wszystkim wtedy, gdy firma chce zostać przy WordPressie jako systemie do treści, ale sama strona potrzebuje funkcji lub sposobu działania typowego dla aplikacji w Next.js. Nie stosuję tej architektury z automatu. Jeśli zwykły WordPress wystarczy, dokładanie drugiej technologii tylko zwiększyłoby złożoność projektu. Więcej o samym przejściu opisuję [we wpisie o migracji WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+      "Nie mam jeszcze wdrożenia headless WordPress w portfolio, więc nie będę udawał, że jest inaczej. Mam natomiast osobne doświadczenie z WordPressem oraz Next.js. Własny projekt [Kantorymapa](/projekty/kantorymapa) działa w Next.js, obejmuje 1900 kantorów w 140 miastach i ładuje się poniżej sekundy.",
     ],
     bullets: [
-      {
-        title: "WordPress jako CMS",
-        body: "Klient edytuje w znanym panelu: Gutenberg, ACF, własne pola, role, wersje językowe. Nie trzeba uczyć się nowego panelu.",
-      },
-      {
-        title: "Next.js jako frontend",
-        body: "ISR (Incremental Static Regeneration): strony generowane przy budowaniu i odświeżane na żądanie, gdy WordPress wyśle webhook po zmianie treści.",
-      },
-      {
-        title: "Wydajność CDN",
-        body: "Cały frontend statyczny na Vercel/Cloudflare. Brak PHP w renderingu = LCP poniżej 1.5s globalnie.",
-      },
-      {
-        title: "SEO + Schema",
-        body: "Yoast/Rank Math eksport + custom schema.org w Next.js. Sitemap auto-generowany. Pełne wsparcie indeksacji.",
-      },
+      { title: "WordPress zostaje panelem do treści", body: "Nadal edytujesz wpisy, strony i pola w znanym panelu WordPressa. Nie musisz przenosić redakcji do nowego systemu tylko dlatego, że zmienia się sposób wyświetlania strony." },
+      { title: "Next.js odpowiada za stronę dla użytkownika", body: "Widoczną część serwisu buduję osobno w Next.js. Dzięki temu mogę dopasować sposób generowania i odświeżania podstron do treści oraz funkcji projektu." },
+      { title: "Treść i warstwa wizualna są rozdzielone", body: "WordPress przechowuje dane, a Next.js je pobiera i wyświetla. Zmiany w wyglądzie strony można dzięki temu rozwijać bez przebudowy panelu, w którym pracujesz z treścią." },
+      { title: "Podstawy technicznego SEO są częścią wdrożenia", body: "Przygotowuję strukturę nagłówków, dane strukturalne tam, gdzie są potrzebne, mapę strony i konfigurację Search Console. Przed oddaniem sprawdzam też wydajność strony w Lighthouse." },
     ],
     process: [
-      { step: "01", title: "Audyt WP", body: "Inwentarz custom post types, ACF, kategorii, planów, integracji. Co trzeba wystawić przez API." },
-      { step: "02", title: "Przygotowanie backendu", body: "WPGraphQL + niezbędne pluginy ACF, własne resolvery dla pól dynamicznych." },
-      { step: "03", title: "Frontend Next.js", body: "App Router + ISR + WPGraphQL queries. Designy 1:1 z istniejącymi (lub od nowa)." },
-      { step: "04", title: "Migracja + DNS", body: "WP backend pozostaje na starym hostingu, frontend na Vercel. DNS przełącza root domenę na Next.js." },
+      { step: "01", title: "Analiza obecnego WordPressa", body: "Sprawdzam typy treści, pola ACF, kategorie, wersje językowe i integracje. Ustalam, które dane trzeba udostępnić nowej warstwie strony i czy headless rzeczywiście ma tutaj uzasadnienie." },
+      { step: "02", title: "Przygotowanie WordPressa do współpracy z Next.js", body: "Konfiguruję sposób pobierania treści z WordPressa i porządkuję dane potrzebne stronie. Dobieram rozwiązanie do istniejącej struktury, zamiast przebudowywać panel bez potrzeby." },
+      { step: "03", title: "Budowa strony w Next.js", body: "Tworzę warstwę widoczną dla użytkownika, łączę ją z treściami z WordPressa i udostępniam Ci wersję testową do sprawdzenia. Jeśli projekt obejmuje nowy wygląd, wcześniej przygotowuję makiety w Figmie z dwiema turami poprawek." },
+      { step: "04", title: "Testy i przełączenie strony", body: "Sprawdzam treści, adresy, przekierowania i działanie strony przed publikacją. Migrację przygotowuję tak, żeby przerwa była jak najkrótsza, ale przy zmianie DNS może wystąpić krótka niedostępność." },
     ],
     faq: [
-      { q: "Co to jest headless WordPress?", a: "Architektura, w której WordPress działa tylko jako zaplecze do edycji treści (headless CMS), a stronę renderuje osobny frontend, najczęściej Next.js. Treści lecą przez REST API albo WPGraphQL, użytkownik dostaje gotowy HTML z CDN." },
-      { q: "Po co headless WordPress skoro WordPress sam działa?", a: "Wydajność: frontend na CDN ładuje się 2-5x szybciej niż renderowany przez PHP/MySQL z hostingu. SEO: Lighthouse 95+ wpływa na rankingi. Bezpieczeństwo: admin panel niewidoczny dla użytkowników, redukuje attack surface." },
-      { q: "Ile kosztuje migracja na headless?", a: "Wycena zależy od liczby podstron, customowej logiki i połączenia ze sklepem WooCommerce headless. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem." },
-      { q: "Czy klient nadal sam edytuje?", a: "Tak. Wszystko w admin panelu WP jak zawsze. Po publikacji webhook wyzwala rebuild ISR i strona aktualizuje się w ~30 sekund od zapisu." },
-      { q: "Ile trwa migracja na headless WordPress?", a: "Mała strona: 4-6 tygodni. Średnia z customową logiką: 8-12 tygodni. Nowy frontend powstaje równolegle do działającej strony, więc przez cały czas migracji stara wersja normalnie pracuje." },
-      { q: "Jakie są ograniczenia?", a: "Niektóre pluginy WP (komentarze, formularze, gallery) wymagają odpowiedników po stronie Next.js. Plus dwa hostingi (WP backend + Vercel frontend), choć backend może stać na najtańszym współdzielonym." },
+      { q: "Co to jest headless WordPress?", a: "WordPress działa jako panel do zarządzania treścią, a stronę widoczną dla użytkownika wyświetla osobna aplikacja, na przykład w Next.js. Obie części komunikują się ze sobą, więc możesz nadal pracować w WordPressie bez uzależniania wyglądu strony od jego motywu." },
+      { q: "Po co headless WordPress, skoro zwykły WordPress działa?", a: "Headless ma sens wtedy, gdy chcesz zachować WordPress do edycji, ale warstwa widoczna dla użytkownika potrzebuje funkcji lub architektury wygodniejszej do zbudowania w Next.js. Jeśli typowa strona WordPress spełnia wymagania projektu, nie dokładam drugiego systemu bez konkretnego powodu." },
+      { q: "Ile kosztuje migracja na headless WordPress?", a: "Największy wpływ na koszt ma zakres funkcji, które trzeba odtworzyć po stronie Next.js. Inaczej wygląda serwis z prostymi podstronami, a inaczej projekt z formularzami, logowaniem, wyszukiwaniem czy niestandardowymi integracjami. Zakres i wycenę ustalam po analizie obecnej strony." },
+      { q: "Czy nadal będę mógł sam edytować treści?", a: "Tak. WordPress nadal służy do dodawania i aktualizowania treści, a Next.js pobiera je i pokazuje na stronie. Sposób odświeżania dobieram do projektu, żeby publikacja zmian nie wymagała ręcznej ingerencji w kod." },
+      { q: "Ile trwa migracja na headless WordPress?", a: "Termin zależy od obecnej struktury WordPressa i funkcji, które trzeba przenieść do nowej warstwy strony. Najpierw sprawdzam zakres, a dopiero potem podaję termin. Nową wersję mogę przygotowywać równolegle do działającego serwisu." },
+      { q: "Jakie są ograniczenia headless WordPress?", a: "Część wtyczek WordPressa działa tylko wtedy, gdy to WordPress wyświetla stronę, więc ich funkcje trzeba czasem odtworzyć w Next.js. Dochodzą też dwie osobne części systemu, które trzeba utrzymywać. Dlatego przed wyborem tej architektury sprawdzam, czy jej korzyści uzasadniają dodatkową złożoność." },
     ],
-    cta: "Pogadajmy o migracji na headless WordPress",
+    cta: "Opisz obecną stronę, a sprawdzę, czy headless ma w niej sens",
   },
   {
     slug: "nowoczesne-strony-internetowe",
@@ -310,87 +299,36 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-www",
     title: "Tworzenie stron www",
-    metaTitle: "Tworzenie stron www Wrocław — WordPress lub Next.js, od 2020",
+    metaTitle: "Tworzenie stron www Wrocław: WordPress, Next.js, WooCommerce",
     metaDescription:
-      "Tworzenie stron www we Wrocławiu, sześć lat doświadczenia, ponad 30 wdrożeń. WordPress lub Next.js zależnie od potrzeb. Wycena w 24h, wdrożenie w terminie.",
-    h1: "Tworzenie stron www. Wrocław, od 2020.",
+      "Tworzenie stron www Wrocław dla firm: WordPress, Next.js lub WooCommerce dobrane do potrzeb. Ponad 30 wdrożeń, projekt w Figmie i 60 dni gwarancji.",
+    h1: "Tworzenie stron www we Wrocławiu dla firm",
     lead:
-      "Hub usług webowych dla firm. Jeśli wiesz, że chcesz stronę, ale nie wiesz, w jakiej technologii, zaczynamy tu. Jeśli wiesz, że [WordPress](/uslugi/tworzenie-stron-wordpress) albo [Next.js](/uslugi/aplikacje-nextjs), idź od razu do specyficznej usługi. Sklep online: [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+      "Tworzę strony firmowe, serwisy usługowe i sklepy dla firm, dobierając technologię do tego, co strona ma robić: [WordPress](/uslugi/tworzenie-stron-wordpress), [Next.js](/uslugi/aplikacje-nextjs) albo [WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Pracuję z Wrocławia, zdalnie z całą Polską i Niemcami.",
     intro: [
-      "Tworzeniem stron www zajmuję się od 2020 roku. Sześć lat tworzenia stron internetowych, ponad 30 wdrożeń: hotele, kancelarie, sklepy, restauracje, lokalne usługi. Działam jako freelancer, nie agencja: bez narzutu na PM-ów i handlowców, rozmawiasz bezpośrednio z osobą, która pisze kod. Większość klientów wraca po kolejne projekty albo poleca dalej. Konkretne realizacje znajdziesz w [pełnej liście projektów](/projekty), a aktualne ceny rozłożyłem w [poście o cenach stron www](/blog/ile-kosztuje-strona-www-2026).",
-      "Stronę projektuję najpierw na papierze, potem w Figmie, dopiero na końcu w kodzie. Tak unikam wracania trzy razy do tego samego ekranu i klient wie, co dostanie, zanim cokolwiek zaczniemy programować. Stack dobieram zawsze po briefie, nie z góry. Decyzja idzie po dwóch pytaniach: kto będzie edytował treści i jak skomplikowana jest logika strony.",
-      "Najczęstsze ścieżki: lokalna firma usługowa z blogiem to WordPress. Marka z wyższej półki albo aplikacja z panelem klienta to Next.js. E-commerce z polskimi integracjami to WooCommerce. Headless, gdy redakcja chce panelu WP, a marketing chce wydajności Vercela.",
+      "Tworzenie stron www to moja główna usługa od 2020 roku. Mam za sobą ponad 30 wdrożeń komercyjnych dla firm z Polski i Niemiec, między innymi dla hoteli, kancelarii, sklepów, restauracji, producentów i lokalnych usług. Pracuję samodzielnie, więc od pierwszej rozmowy po wdrożenie rozmawiasz bezpośrednio ze mną.",
+      "Najpierw ustalam, jaką rolę ma pełnić strona i kto będzie ją później obsługiwał. Potem przygotowuję makiety w Figmie, zbieram uwagi w dwóch turach i dopiero po akceptacji przechodzę do kodowania. Po każdym etapie dostajesz link do wersji testowej. Przykłady gotowych serwisów znajdziesz na [pełnej liście projektów](/projekty), a osobno opisuję też [od czego zależy cena strony www](/blog/ile-kosztuje-strona-www-2026).",
+      "Technologię dobieram do potrzeb, a nie odwrotnie. WordPress sprawdza się przy stronach firmowych i serwisach z treściami, które chcesz samodzielnie edytować. Next.js wykorzystuję, gdy projekt wymaga konfiguratora, panelu użytkownika, nietypowej logiki albo rozbudowanych integracji. Przy sklepie internetowym z typowymi integracjami sprzedażowymi wdrażam WooCommerce.",
     ],
     bullets: [
-      {
-        title: "Dwa stacki, jedna jakość",
-        body:
-          "Prosty serwis informacyjny robię na WordPressie, bo łatwiej go potem edytować. Aplikację z konfiguratorem, panelem klienta albo integracją API piszę w Next.js, bo wytrzyma rozbudowę.",
-      },
-      {
-        title: "SEO od pierwszego dnia",
-        body:
-          "Struktura, nagłówki, sitemap, schema, Core Web Vitals. Nie dokładam SEO po fakcie, jest wpisane w architekturę strony.",
-      },
-      {
-        title: "Hosting i wdrożenie",
-        body:
-          "Pomogę z wyborem hostingu (Hostinger, cyber_folks, Vercel), DNS, SSL i konfiguracją skrzynek pocztowych. Klient nie musi w to wchodzić.",
-      },
-      {
-        title: "Po wdrożeniu zostaję",
-        body:
-          "Po starcie 60 dni gwarancji i bezpłatnych poprawek. Później miesięczny abonament opieki, opcjonalnie.",
-      },
+      { title: "Technologia dobrana do funkcji strony", body: "Nie zakładam z góry, że każdy projekt powinien powstać w tym samym systemie. Dobieram WordPress, Next.js albo WooCommerce do sposobu edycji treści, funkcji i planów rozwoju serwisu." },
+      { title: "Projekt akceptujesz przed kodowaniem", body: "Najpierw przygotowuję makiety w Figmie i uwzględniam dwie tury poprawek. Dzięki temu wygląd i układ strony są ustalone, zanim zacznę je programować." },
+      { title: "Techniczne podstawy wyszukiwania są częścią wdrożenia", body: "Przygotowuję strukturę nagłówków, mapę strony, dane strukturalne tam, gdzie mają zastosowanie, oraz konfigurację Search Console. Nie obiecuję konkretnych pozycji w Google." },
+      { title: "Wsparcie nie kończy się w dniu publikacji", body: "Po uruchomieniu masz 60 dni gwarancji i bezpłatnych poprawek. Później możesz korzystać z opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok." },
     ],
     process: [
-      {
-        step: "01",
-        title: "Brief i wycena",
-        body: "30-minutowa rozmowa, mailowy brief, wycena z terminem w 24h. Bez ukrytych kosztów.",
-      },
-      {
-        step: "02",
-        title: "Projekt graficzny",
-        body: "Makiety w Figmie. Dwie iteracje uwag w cenie. Klient akceptuje przed kodowaniem.",
-      },
-      {
-        step: "03",
-        title: "Programowanie",
-        body: "Stawiam stronę na środowisku roboczym z dostępem podglądowym. Klient widzi postępy na bieżąco.",
-      },
-      {
-        step: "04",
-        title: "Testy i wdrożenie",
-        body: "Lighthouse 90+ na mobile przed oddaniem, sprawdzanie na realnych urządzeniach, migracja na produkcję. SSL, sitemap, Search Console.",
-      },
-      {
-        step: "05",
-        title: "Szkolenie i opieka",
-        body: "Pokazuję jak edytować treści. 60 dni gwarancji. Dalej opcjonalna opieka miesięczna.",
-      },
+      { step: "01", title: "Rozmowa, zakres i wycena", body: "Zaczynam od krótkiej rozmowy i zebrania informacji o firmie, odbiorcach oraz funkcjach strony. Na tej podstawie przygotowuję zakres, wycenę i termin realizacji." },
+      { step: "02", title: "Projekt w Figmie", body: "Przygotowuję makiety strony i przechodzimy przez dwie tury poprawek. Kodowanie zaczynam dopiero po zaakceptowaniu projektu." },
+      { step: "03", title: "Programowanie i wersja testowa", body: "Buduję stronę w ustalonej technologii i po kolejnych etapach udostępniam Ci wersję testową w przeglądarce. Możesz sprawdzać efekt jeszcze przed publikacją." },
+      { step: "04", title: "Testy i wdrożenie", body: "Przed oddaniem sprawdzam stronę na telefonach i komputerach oraz dążę do wyniku Lighthouse 90+ na telefonie. Konfiguruję też SSL, mapę strony i Search Console, a migrację przygotowuję tak, żeby przerwa była jak najkrótsza." },
+      { step: "05", title: "Szkolenie i dalsza opieka", body: "Pokazuję Ci online, jak edytować treści w użytym systemie. Po starcie obowiązuje 60 dni gwarancji, a późniejsza opieka techniczna jest opcjonalna." },
     ],
     faq: [
-      {
-        q: "Ile kosztuje strona www?",
-        a: "Wycena zależy od zakresu wizytówki lub strony usługowej, liczby podstron, bloga, SEO, technologii i customowej logiki. Wycena zawsze indywidualna po briefie.",
-      },
-      {
-        q: "Ile trwa wdrożenie?",
-        a: "Strona prosta 2-3 tygodnie. Strona usługowa 4-6 tygodni. Aplikacja: ustalamy termin po briefie, zwykle 6-12 tygodni.",
-      },
-      {
-        q: "Co jeśli klient ma już domenę i hosting?",
-        a: "Idealnie. Migrację robię bez przerwy w działaniu, klient nawet nie zauważy, że coś się zmieniło.",
-      },
-      {
-        q: "Czy będę mógł sam edytować treści?",
-        a: "Tak. WordPress dostaje panel z edycją sekcji 1:1 z designem. Next.js, jeśli zachodzi potrzeba CMS, podłączam Sanity albo Strapi.",
-      },
-      {
-        q: "Czy strona będzie responsywna?",
-        a: "Każda strona idzie pod 3 breakpointy: telefon, tablet, desktop. Testuję na realnych urządzeniach, nie tylko w narzędziach przeglądarki.",
-      },
+      { q: "Ile kosztuje moja strona www?", a: "Największy wpływ na koszt ma zakres funkcji, które strona ma obsługiwać. Prosta prezentacja firmy wymaga innego nakładu pracy niż serwis z panelem użytkownika, konfiguratorem czy integracjami. Dokładną wycenę przygotowuję po krótkiej rozmowie i ustaleniu zakresu." },
+      { q: "Ile potrwa wdrożenie mojej strony?", a: "Prosta strona lub wizytówka zwykle zajmuje 2-3 tygodnie, a strona firmowa lub usługowa 4-6 tygodni. Aplikacja lub MVP w Next.js to zwykle 6-12 tygodni. Ostateczny termin ustalam po poznaniu zakresu projektu." },
+      { q: "Co jeśli mam już domenę i hosting?", a: "Mogę wykorzystać istniejącą domenę i sprawdzić, czy obecny hosting pasuje do wybranej technologii. Przy migracji przygotowuję przekierowania starych adresów i staram się ograniczyć przerwę do minimum. Przy zmianie DNS może jednak wystąpić krótka niedostępność." },
+      { q: "Czy będę mógł sam edytować treści?", a: "Tak, sposób edycji zależy od wybranej technologii. W nowych projektach WordPress używam własnego motywu i pól ACF, dzięki czemu edytujesz przygotowane sekcje bez kreatorów typu Elementor. Przy Next.js mogę podłączyć system zarządzania treścią, taki jak Sanity lub Strapi." },
+      { q: "Czy moja strona będzie dobrze działać na telefonie?", a: "Tak, projektuję i sprawdzam strony z myślą o różnych szerokościach ekranu, w tym telefonach, tabletach i komputerach. Przed oddaniem testuję kluczowe widoki i wydajność wersji mobilnej. Celem jest wynik Lighthouse 90+ na telefonie." },
       { q: "Który CMS wybrać do strony firmowej?", a: "W typowej stronie firmowej często sprawdza się WordPress, szczególnie jeśli chcesz później samodzielnie zmieniać ofertę, zdjęcia lub publikować wpisy. Jeżeli projekt wymaga nietypowej logiki, konfiguratora, panelu użytkownika albo rozbudowanych integracji, lepszym rozwiązaniem może być Next.js z osobnym systemem do zarządzania treścią." },
       { q: "Co jest potrzebne do stworzenia strony internetowej?", a: "Na początku najbardziej przydają się informacje o firmie, lista usług, materiały do treści, logo, zdjęcia oraz przykłady stron, których stylistyka Ci odpowiada. Jeśli masz już domenę lub hosting, potrzebne będą również dostępy. Brakujące elementy i sposób ich przygotowania ustalamy na starcie projektu." },
       { q: "Czy robisz strony dla małych firm z ograniczonym budżetem?", a: "Tak, zakres strony można dopasować do rzeczywistych potrzeb małej firmy, zamiast od razu budować rozbudowany serwis. Czasami sensowniejsza jest prostsza strona z kilkoma dobrze opracowanymi podstronami, którą później można rozwijać." },
@@ -398,7 +336,7 @@ export const services: Service[] = [
       { q: "Czy strona będzie przygotowana pod Google i wyszukiwarki AI?", a: "Przy budowie uwzględniam strukturę treści, nagłówki, szybkość, dostępność dla robotów wyszukiwarek oraz dane strukturalne tam, gdzie mają zastosowanie. Nie istnieje rozwiązanie gwarantujące pojawianie się strony w odpowiedziach AI, ale można stworzyć serwis, którego zawartość jest jednoznaczna i łatwa do interpretacji." },
       { q: "Czy pracujesz z firmami spoza Wrocławia?", a: "Tak. Współpracuję zdalnie z firmami z całej Polski oraz z Niemiec, a rozmowy o projekcie odbywają się online. Po kolejnych etapach udostępniam wersję testową dostępną w przeglądarce." },
     ],
-    cta: "Napisz brief, dostaniesz wycenę w 24h",
+    cta: "Opisz swoją stronę, a wrócę z pierwszą oceną w 24 godziny robocze",
   },
   {
     slug: "aplikacje-nextjs",
@@ -445,66 +383,34 @@ export const services: Service[] = [
   {
     slug: "aplikacje-react",
     title: "Aplikacje React",
-    metaTitle: "Programista React — komponenty, panele, dashboardy",
+    metaTitle: "Programista React: aplikacje i panele dla firm",
     metaDescription:
-      "Aplikacje React + Vite: dashboardy, panele klienta, design system shadcn/ui, TanStack Query, Vitest. Frontend do istniejącego backendu PHP/Java/Python.",
-    h1: "React tam gdzie nie potrzeba SSR",
+      "Programista React dla firm: panele, aplikacje za logowaniem i frontend do istniejącego API. React lub Next.js dobieram do funkcji i wymagań projektu.",
+    h1: "Programista React do aplikacji i paneli dla firm",
     lead:
-      "React jest świetny, gdy aplikacja działa za logowaniem albo nie ma wymagań SEO. Mniej narzutu Next.js, mniej kosztu hostingu, mniej decyzji do podjęcia po stronie infrastruktury.",
+      "Tworzę w React panele, aplikacje za logowaniem i warstwy użytkownika do istniejących systemów. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
-      "Robię React od 2020 roku. Większość projektów lab dostępnych na GitHubie to React: dashboardy, panele, aplikacje czasu rzeczywistego, sklepy edukacyjne. Część komercyjna, np. moduły do większych systemów, robiona również w React + Vite.",
-      "Klientom, którzy mają już backend (PHP, Java, Python), dokładam frontend. Komponenty, integracja z API, design system, testy.",
+      "Jako programista React pracuję przy projektach, w których użytkownik wykonuje konkretne zadania: korzysta z panelu, uzupełnia dane, obsługuje formularze albo pracuje na informacjach pobieranych z API. Jeśli firma ma już zaplecze systemu, mogę zbudować do niego nową warstwę aplikacji bez wymiany całego rozwiązania.",
+      "Sam React wybieram przede wszystkim do aplikacji działających za logowaniem i narzędzi, które nie potrzebują rozbudowanej części publicznej przeznaczonej dla wyszukiwarek. Gdy projekt ma również publiczne podstrony, wymaga generowania treści po stronie serwera albo łączy aplikację z serwisem marketingowym, częściej sięgam po [Next.js](/uslugi/aplikacje-nextjs).",
+      "Przykładem jest [Galabau Darius](/projekty/galabau-darius) dla klienta z Niemiec. W Next.js i React zbudowałem konfigurator wyceny ogrodzeń oraz panel administracyjny z logowaniem przez Clerk i bazą obsługiwaną przez Prisma. Dzięki temu część publiczna i narzędzia dostępne po zalogowaniu działają w jednym projekcie.",
     ],
     bullets: [
-      {
-        title: "Vite zamiast CRA",
-        body: "Create React App nie jest rozwijany od 2023 roku. Nowe projekty stawiam na Vite: szybsza praca, mniejsza paczka JavaScriptu, wygodniejsze narzędzia.",
-      },
-      {
-        title: "Design system",
-        body: "Zamiast pisać komponenty od zera, używam shadcn/ui jako bazy i dopasowuję do marki klienta. Kod należy do klienta, bez uzależnienia od dostawcy.",
-      },
-      {
-        title: "Zarządzanie stanem",
-        body: "Zustand albo Redux Toolkit, jeśli skala wymaga. TanStack Query dla danych z API. Bez zbędnych warstw abstrakcji.",
-      },
-      {
-        title: "Testowanie",
-        body: "Vitest + Testing Library. Krytyczne ścieżki dodatkowo w Playwright. Pokrycie tylko tam, gdzie ryzyko regresu jest realne.",
-      },
+      { title: "React do paneli i aplikacji za logowaniem", body: "Buduję interfejsy, w których użytkownik pracuje na danych, obsługuje formularze i wykonuje powtarzalne zadania. Nie dokładam Next.js tam, gdzie sam React wystarcza do rozwiązania problemu." },
+      { title: "Integracja z istniejącym API", body: "Jeśli masz już zaplecze systemu, mogę zbudować do niego nowy interfejs w React. Porządkuję komunikację z API i obsługę stanów ładowania, błędów oraz aktualizacji danych." },
+      { title: "Komponenty przygotowane do dalszej rozbudowy", body: "Powtarzalne elementy interfejsu buduję jako komponenty, dzięki czemu kolejne widoki można rozwijać bez kopiowania tej samej logiki. Biblioteki dobieram do projektu, zamiast dodawać je na zapas." },
+      { title: "Testy tam, gdzie ograniczają ryzyko", body: "Sprawdzam przede wszystkim krytyczne ścieżki aplikacji, czyli te miejsca, których awaria blokowałaby użytkownika. Zakres testów dopasowuję do funkcji i ryzyka zmian." },
     ],
     process: [
-      {
-        step: "01",
-        title: "Audyt istniejącego",
-        body: "Jeśli wchodzę na trwający projekt, najpierw audyt: co działa, co boli, gdzie najpierw wkładać pracę.",
-      },
-      {
-        step: "02",
-        title: "Plan iteracji",
-        body: "Roadmapa na 4-8 tygodni z priorytetami. Co tydzień przegląd, klient widzi efekty.",
-      },
-      {
-        step: "03",
-        title: "Code review i pair",
-        body: "Dla zespołów wewnętrznych dorzucam code review i pair programming. Wiedza zostaje w firmie.",
-      },
+      { step: "01", title: "Rozpoznanie aplikacji i istniejącego systemu", body: "Jeśli projekt już działa, najpierw sprawdzam kod, API, zależności i najważniejsze problemy. Przy nowej aplikacji ustalam funkcje, użytkowników i dane potrzebne w poszczególnych widokach." },
+      { step: "02", title: "Plan kolejnych etapów", body: "Dzielę zakres na części, które można kolejno projektować, budować i sprawdzać. Po każdym etapie udostępniam Ci wersję testową, żeby decyzje nie zapadały dopiero przy końcowym wdrożeniu." },
+      { step: "03", title: "Budowa, przegląd kodu i przekazanie", body: "Implementuję komponenty, integracje z API i potrzebne testy. Jeśli pracuję razem z Twoim zespołem, mogę również przeglądać istniejący kod i wspólnie ustalać sposób dalszej rozbudowy." },
     ],
     faq: [
-      {
-        q: "Co jeśli mamy starszy projekt na React 17?",
-        a: "Migrację 17 → 19 robiłem już kilka razy. Plan: incremental upgrade, najpierw zależności, potem hooki, potem nowe API. Bez przepisywania od zera.",
-      },
-      {
-        q: "Czy mogę zatrudnić Cię na godziny?",
-        a: "Tak, jako freelancer React. Faktura na koniec miesiąca. Wycenę przygotowuję indywidualnie po zapoznaniu się z briefem.",
-      },
-      {
-        q: "Współpraca długoterminowa?",
-        a: "Najczęstsza forma. Stawka miesięczna za określoną liczbę godzin, kontrakt B2B lub UoD.",
-      },
+      { q: "Co jeśli mamy starszy projekt w React?", a: "Najpierw sprawdzam wersję Reacta, zależności i miejsca, które mogą utrudnić aktualizację. Nie zakładam z góry przepisywania aplikacji od nowa. Plan zmian przygotowuję dopiero po sprawdzeniu obecnego kodu i sposobu działania systemu." },
+      { q: "Czy mogę zatrudnić Cię jako freelancera React na godziny?", a: "Tak, mogę pracować przy określonym zakresie albo rozliczać pracę według uzgodnionej liczby godzin. Przy takim modelu głównym czynnikiem kosztu jest liczba godzin potrzebnych na realizację zadań. Warunki ustalam przed rozpoczęciem współpracy." },
+      { q: "Czy możemy współpracować długoterminowo?", a: "Tak. Mogę rozwijać istniejącą aplikację, wdrażać kolejne funkcje i wspierać zespół przy zmianach w interfejsie lub integracjach. Zakres współpracy ustalam tak, żeby było jasne, za które elementy odpowiadam." },
     ],
-    cta: "Daj znać, czego szukasz, odpiszę w ciągu dnia",
+    cta: "Napisz, czego potrzebuje aplikacja, a ustalimy zakres prac",
   },
   {
     slug: "wdrozenia-ai",
