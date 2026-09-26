@@ -13,6 +13,7 @@ import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 import { MobileReveal } from "@/components/service/MobileReveal";
+import { industries, INDUSTRY_SERVICES } from "@/lib/industries";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -75,6 +76,12 @@ export default async function UslugaPage({
     { name: "Usługi", path: "/uslugi" },
     { name: s.title, path: `/uslugi/${s.slug}` },
   ]);
+
+  // Strona www jest ogólnym węzłem, więc linkuje do wszystkich branż.
+  const forIndustries =
+    s.slug === "tworzenie-stron-www"
+      ? industries
+      : industries.filter((ind) => INDUSTRY_SERVICES[ind.slug]?.includes(s.slug));
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -487,6 +494,34 @@ export default async function UslugaPage({
       </section>
 
       {SEO_BLOCKS[s.slug] && <SeoBlock data={SEO_BLOCKS[s.slug]} />}
+
+      {forIndustries.length > 0 && (
+        <section className="px-6 py-16 md:px-10 md:py-24 border-t border-line">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <aside className="md:col-span-3">
+              <p className="eyebrow">Branże</p>
+            </aside>
+            <div className="md:col-span-9">
+              <h2 className="display text-h2 text-ink mb-8 md:mb-10">
+                Ta usługa w <em>branżach</em>.
+              </h2>
+              <ul className="border-t border-line">
+                {forIndustries.map((ind) => (
+                  <li key={ind.slug} className="border-b border-line">
+                    <Link
+                      href={`/${ind.slug}`}
+                      className="group flex items-baseline justify-between gap-6 py-5 md:py-6 text-ink hover:text-peach transition-colors"
+                    >
+                      <span className="font-display italic text-xl md:text-2xl">{ind.h1}</span>
+                      <span aria-hidden className="font-mono text-ink-faint group-hover:text-peach transition-colors">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA — full-bleed editorial */}
       <section className="relative px-6 py-20 md:px-10 md:py-48 border-t border-line overflow-hidden">
