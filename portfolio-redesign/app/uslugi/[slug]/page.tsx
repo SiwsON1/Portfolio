@@ -5,7 +5,7 @@ import Image from "next/image";
 import { services } from "@/lib/services";
 import { projects, projectsForService } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
-import { renderInlineLinks } from "@/lib/renderInlineLinks";
+import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
@@ -82,7 +82,7 @@ export default async function UslugaPage({
     mainEntity: s.faq.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.a) },
     })),
   };
 
@@ -131,7 +131,7 @@ export default async function UslugaPage({
               {s.h1}
             </h1>
             <p className="mt-8 md:mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 }}>
-              {s.lead}
+              {renderInlineLinks(s.lead)}
             </p>
             <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link
@@ -382,7 +382,7 @@ export default async function UslugaPage({
               >
                 {b.title}
               </h3>
-              <p className="text-ink-mute leading-relaxed">{b.body}</p>
+              <p className="text-ink-mute leading-relaxed">{renderInlineLinks(b.body)}</p>
             </div>
           ))}
         </div>
@@ -479,7 +479,7 @@ export default async function UslugaPage({
                 </span>
               </summary>
               <p className="mt-5 text-ink-mute prose-bound leading-relaxed">
-                {f.a}
+                {renderInlineLinks(f.a)}
               </p>
             </details>
           ))}

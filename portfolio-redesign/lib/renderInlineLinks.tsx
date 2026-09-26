@@ -59,3 +59,11 @@ export function renderInlineLinks(text: string): ReactNode[] {
   if (lastIdx < text.length) out.push(text.slice(lastIdx));
   return out;
 }
+
+/** Ten sam tekst bez znaczników Markdown, do JSON-LD i meta. */
+export function plainText(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1")
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/`([^`]+)`/g, "$1");
+}

@@ -483,4 +483,81 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       },
     ],
   },
+  "wdrozenia-ai": {
+    heading: "Wdrożenie AI w małej firmie: od wyboru procesu do pomiaru wyniku",
+    intro: [
+      "Wdrożenie AI nie powinno zaczynać się od pytania, jaki model wybrać. Dla małej firmy ważniejsze jest najpierw wskazanie jednego procesu, który zajmuje czas, powtarza się dostatecznie często i ma jasno rozpoznawalny wynik. Dopiero później można ocenić, czy model językowy, wyszukiwanie w dokumentach albo inny element AI rzeczywiście coś poprawi.",
+      "Takie podejście ogranicza koszt i ryzyko. Zamiast budować rozbudowany system dla całej firmy, można przygotować mały prototyp, sprawdzić go na rzeczywistych danych i porównać z dotychczasowym sposobem pracy. Jeżeli rozwiązanie nie poprawia wyniku albo wymaga zbyt dużej kontroli człowieka, projekt zatrzymuje się na tym etapie.",
+    ],
+    sections: [
+      {
+        id: "procesy-dla-ai",
+        heading: "Które procesy w małej firmie nadają się do AI, a które nie",
+        body: [
+          "Dobrą wskazówką jest powtarzalność. AI ma większy sens tam, gdzie każdego dnia lub tygodnia pojawiają się podobne zadania oparte na tekście, dokumentach albo dużej liczbie informacji. Może to być na przykład klasyfikowanie przychodzących maili, wyciąganie określonych danych z dokumentów, przygotowywanie szkiców odpowiedzi, wyszukiwanie informacji w firmowej bazie wiedzy albo tworzenie pierwszych wersji opisów.",
+          "Model nie musi podejmować całej decyzji. Często lepszym rozwiązaniem jest układ, w którym AI wykonuje pierwszy etap, a człowiek zatwierdza wynik. Przy mailach system może rozpoznać temat i przygotować propozycję odpowiedzi. Przy dokumentach może wydobyć wymagane pola i oznaczyć te przypadki, co do których nie ma pewności.",
+          "Nie każdy proces wymaga AI. Jeśli zadanie można opisać prostą regułą typu „jeżeli formularz ma wartość X, wpisz Y do systemu”, zwykła automatyzacja będzie przewidywalniejsza. AI nie jest też dobrym punktem startu tam, gdzie pojedynczy błąd może wywołać poważne skutki, a nie ma skutecznej kontroli przed wykonaniem działania.",
+        ],
+      },
+      {
+        id: "wdrozenie-krok-po-kroku",
+        heading: "Jak wygląda wdrożenie krok po kroku",
+        body: [
+          "Zaczynam od rozpisania procesu w obecnej formie. Potrzebuję wiedzieć, skąd przychodzą dane, co robi z nimi pracownik, jakie decyzje podejmuje i jaki wynik powinien powstać. Na tym etapie ustalamy również przypadki wyjątkowe, bo właśnie one często decydują o tym, czy automatyzacja będzie praktyczna.",
+          "Kolejny krok to mały prototyp obejmujący jeden proces lub jego fragment. Nie chodzi jeszcze o kompletne rozwiązanie dla całej organizacji. Prototyp powinien pozwolić sprawdzić jakość na rzeczywistych przykładach i zebrać problemy, których nie było widać podczas rozmowy. Typowy przebieg wygląda tak:",
+        ],
+        list: [
+          "wybór jednego procesu i ustalenie stanu obecnego,",
+          "przygotowanie danych oraz przykładów do testu,",
+          "budowa prototypu,",
+          "test na rzeczywistych przypadkach,",
+          "poprawa zasad, integracji i kontroli jakości,",
+          "decyzja o dalszym wdrożeniu albo zakończeniu projektu.",
+        ],
+        outro: [
+          "Dopiero po udanym teście podłączam kolejne źródła danych, użytkowników albo systemy firmy. Dzięki temu nie inwestujesz w rozbudowaną architekturę, zanim wiadomo, czy podstawowy pomysł działa.",
+        ],
+      },
+      {
+        id: "koszt-wdrozenia-ai",
+        heading: "Od czego zależy koszt wdrożenia AI",
+        body: [
+          "Sam dostęp do modelu to tylko jeden składnik kosztu. W rozwiązaniach korzystających z OpenAI lub Anthropic opłaty za API zależą między innymi od wybranego modelu i skali użycia. Przy prototypie mogą być niewielkim elementem projektu, a przy dużej liczbie automatycznych zapytań stają się pozycją, którą trzeba regularnie monitorować.",
+          "Drugi ważny element to integracje. System, który przyjmuje tekst w prostym formularzu i zwraca odpowiedź, będzie miał inny zakres niż rozwiązanie pobierające dane z poczty, dokumentów, bazy klientów i wewnętrznego systemu. Im więcej miejsc trzeba połączyć i im starsze są używane narzędzia, tym więcej pracy wymaga bezpieczna wymiana danych.",
+          "Znaczenie ma również przygotowanie danych. Baza wiedzy pełna nieaktualnych dokumentów, duplikatów i sprzecznych instrukcji nie stanie się automatycznie dobrą bazą tylko dlatego, że podłączymy do niej model. Czasem przed wdrożeniem więcej pracy wymaga uporządkowanie treści niż samo stworzenie mechanizmu AI.",
+          "Do kosztu trzeba też zaliczyć kontrolę jakości i utrzymanie. Modele oraz zewnętrzne API się zmieniają, dlatego rozwiązanie produkcyjne powinno mieć testy, monitoring błędów i sposób sprawdzania, czy wynik nadal spełnia wymagania.",
+        ],
+      },
+      {
+        id: "dane-i-rodo",
+        heading: "Bezpieczeństwo danych i RODO",
+        body: [
+          "Pierwsze pytanie brzmi nie „czy możemy wysłać te dane do modelu”, tylko „czy model w ogóle musi je dostać”. Jeżeli do klasyfikacji wiadomości wystarczy temat i fragment treści, nie ma sensu przesyłać całej historii klienta. Ograniczenie zakresu danych zmniejsza ryzyko i upraszcza późniejsze obowiązki.",
+          "Tam, gdzie jest to możliwe, można również anonimizować albo pseudonimizować dane przed wysłaniem ich do zewnętrznej usługi. Numery dokumentów, dane kontaktowe czy inne identyfikatory mogą być usuwane, jeżeli nie mają znaczenia dla wykonywanego zadania.",
+          "Przy danych osobowych trzeba sprawdzić role stron i podstawę przetwarzania zgodnie z RODO. Jeżeli dostawca usługi przetwarza dane w imieniu firmy, może być potrzebna odpowiednia umowa powierzenia. Trzeba też ustalić, gdzie dane są przetwarzane i jakie warunki dotyczą transferu poza Europejski Obszar Gospodarczy. Te kwestie ocenia się dla konkretnego dostawcy i konkretnego przepływu danych, a nie na podstawie ogólnego założenia, że każde narzędzie AI działa tak samo.",
+          "W praktyce pomaga prosta mapa danych: co trafia do modelu, skąd pochodzi, jak długo jest przechowywane, kto ma do niego dostęp i gdzie znajduje się dostawca usługi. Taka mapa pokazuje elementy, które można ograniczyć jeszcze przed uruchomieniem systemu.",
+        ],
+      },
+      {
+        id: "ai-act",
+        heading: "AI Act w praktyce dla małej firmy",
+        body: [
+          "AI Act to rozporządzenie UE 2024/1689. Od 2 sierpnia 2026 roku stosuje się między innymi art. 50 dotyczący przejrzystości niektórych systemów AI. Jeśli system AI bezpośrednio rozmawia z człowiekiem, na przykład jako chatbot na stronie internetowej, użytkownik powinien zostać poinformowany, że prowadzi rozmowę z AI, chyba że wynika to jasno z okoliczności.",
+          "Przepisy obejmują również obowiązki oznaczania określonych treści generowanych lub modyfikowanych przez AI, między innymi deepfake'ów. Nie oznacza to jednak, że każde wykorzystanie modelu językowego w małej firmie automatycznie podlega najbardziej rozbudowanym obowiązkom przewidzianym przez rozporządzenie.",
+          "Obowiązki dotyczące systemów wysokiego ryzyka zostały przesunięte w czasie w ramach pakietu Digital Omnibus z 2026 roku. Typowe zastosowania, takie jak chatbot FAQ, przygotowywanie szkiców opisów czy klasyfikowanie maili, zwykle nie są systemami wysokiego ryzyka. Klasyfikację trzeba jednak sprawdzić osobno dla każdego wdrożenia, bo znaczenie ma nie sama technologia, lecz sposób jej użycia i obszar, w którym wpływa na ludzi.",
+          "Praktyczny wniosek dla małej firmy: jeszcze przed publikacją rozwiązania ustal, czy użytkownik powinien dostać informację o kontakcie z AI, jakie dane system przetwarza oraz czy jego zastosowanie nie wchodzi w kategorię wymagającą dodatkowych obowiązków.",
+        ],
+      },
+      {
+        id: "pomiar-wdrozenia-ai",
+        heading: "Jak mierzyć, czy wdrożenie AI rzeczywiście działa",
+        body: [
+          "Pomiar powinien zacząć się przed budową prototypu. Jeżeli nie wiadomo, jak długo proces trwa dziś i ile błędów powstaje bez AI, po wdrożeniu trudno ocenić, czy zmiana coś poprawiła.",
+          "W zależności od procesu można mierzyć czas potrzebny na obsługę jednej sprawy, liczbę spraw obsłużonych w danym okresie, odsetek wyników wymagających poprawy, liczbę błędów albo koszt wykonania zadania. Przy narzędziu do wyszukiwania wiedzy sprawdzam również, czy pracownik znajduje właściwą odpowiedź i czy system wskazuje odpowiednie źródło. Przy generatorze treści znaczenie ma to, ile szkiców można zaakceptować po niewielkiej korekcie, a ile trzeba napisać od nowa.",
+          "Z góry warto określić także warunek zatrzymania projektu. Jeżeli prototyp nadal wymaga ręcznego poprawiania większości wyników, nie skraca procesu albo generuje koszt niewspółmierny do efektu, dalsza rozbudowa nie powinna być automatyczną decyzją.",
+          "Dobre wdrożenie AI nie polega na tym, że firma ma nową technologię. Powinno być wiadomo, jaki proces zmieniło, co było mierzone przed uruchomieniem i jaki wynik pojawił się po wdrożeniu. Jeżeli nie da się tego pokazać, rozsądniej poprawić założenia albo wyłączyć rozwiązanie, niż utrzymywać je tylko dlatego, że już powstało.",
+        ],
+      },
+    ],
+  },
 };

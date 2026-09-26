@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { posts } from "@/lib/posts";
 import { services } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
-import { renderInlineLinks } from "@/lib/renderInlineLinks";
+import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { PostHero } from "@/components/blog/PostHero";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
@@ -87,7 +87,7 @@ export default async function PostPage({
         mainEntity: p.faq.map((f) => ({
           "@type": "Question",
           name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
+          acceptedAnswer: { "@type": "Answer", text: plainText(f.a) },
         })),
       }
     : null;

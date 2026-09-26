@@ -502,7 +502,7 @@ posts.push(
           "Blog albo magazyn: content w MDX lub headless CMS, statyczna generacja, ISR przy publikacji nowego posta. Świetny SEO out of the box.",
           "E-commerce małej-średniej skali: katalog statyczny, koszyk client-side, checkout SSR, integracja Stripe / Przelewy24. Dla większych sklepów (10k+ produktów) lepiej dedykowane platformy (Shopify, Centra).",
           "Aplikacja SaaS lub B2B narzędzie: dashboard po logowaniu, panel klienta, integracje API. Server actions zamiast osobnego backendu, edge functions dla geo-distributed users.",
-          "Dokumentacja techniczna: MDX + automatyczna generacja sidebar, sub-1s search, dark mode. Docusaurus i Mintlify są oparte o Next.js z powodu.",
+          "Dokumentacja techniczna: MDX + automatyczna generacja sidebar, sub-1s search, dark mode.",
         ],
       },
       {
@@ -1011,7 +1011,7 @@ posts.push(
     keyword: "koszt utrzymania strony WordPress vs Next.js",
     metaTitle: "Koszt utrzymania strony WordPress vs Next.js — TCO 3 lata",
     metaDescription:
-      "TCO 3 lata: WordPress 4-12 tys. zł utrzymania (hosting + pluginy + security patches) vs Next.js 0-3 tys. (Vercel + 0h maintenance). Realne liczby z faktur klientów.",
+      "TCO 3 lata: WordPress 4-12 tys. zł utrzymania (hosting + pluginy + security patches) vs Next.js 0-3 tys. (Vercel + 0h maintenance).",
     hero: { kind: "wordpress" },
     relatedServices: ["tworzenie-stron-wordpress", "tworzenie-stron-www", "aplikacje-nextjs"],
     body: [
@@ -1174,7 +1174,7 @@ posts.push(
     slug: "vercel-hosting-co-to",
     title: "Vercel — co to za hosting i czy warto",
     excerpt:
-      "Vercel: hosting stworzony przez twórców Next.js. Edge functions, automatic SSL, preview deployments per PR. Free tier wystarczy 90% projektom.",
+      "Vercel: hosting stworzony przez twórców Next.js. Edge functions, automatic SSL, preview deployments per PR. Darmowy plan Hobby jest przeznaczony do projektów prywatnych i niekomercyjnych, strona firmowa potrzebuje planu Pro.",
     date: "2026-02-04",
     readingMinutes: 7,
     tags: ["Vercel", "hosting"],
@@ -1195,7 +1195,7 @@ posts.push(
       "**Hostinger**: taniej (15-30 zł/mc vs 80 zł/mc Vercel Pro), znajome cPanel, FTP, MySQL, ale wymaga więcej manualnej roboty (SSL, backupy, deployment).",
       "Kiedy Vercel: każdy projekt Next.js, frontend SPA wymagający edge functions, projekty z preview workflow (zespół z PR review), startupy szybkie na MVP.",
       "Kiedy Hostinger: WordPress, klient KONIECZNIE chce panel admina z FTP, projekt z PHP/Laravel backendem, brak budżetu na 80 zł/mc.",
-      "Praktyczna rekomendacja: zacznij na Vercel free, upgrade do Pro tylko jeśli przekroczysz limit 100 GB. Większość projektów które robię startuje na free i tam zostaje.",
+      "Praktyczna rekomendacja: projekt prywatny możesz zacząć na darmowym planie Hobby, ale strona firmowa to użytek komercyjny, więc od startu potrzebuje planu Pro albo innego hostingu, np. własnego serwera.",
     ],
     faq: [
       { q: "Czy Vercel jest darmowy?", a: "Free tier: 100 GB bandwidth/mc, unlimited static requests, 100 GB-hours edge function execution. Wystarcza dla 90% małych i średnich stron firmowych." },
@@ -1276,7 +1276,7 @@ posts.push(
       { q: "Czy SSG nadaje się do e-commerce?", a: "Tak dla katalogu produktów (statyczne strony per produkt, regenerated z ISR przy update ceny). Koszyk i checkout client-side / SSR (per-user). Hybrid podejście jest standardem." },
       { q: "Jak długo trwa build SSG dla 1000 stron?", a: "Next.js ~2-5 minut, Astro ~1-3 min, Hugo ~10-30 sekund. Dla 10k+ stron Hugo wygrywa (Go-based, najszybszy). Dla average projektów (do 500 podstron) wszystkie OK." },
       { q: "Czy mogę używać SSG z bazą danych?", a: "Tak. Build script fetchuje dane z DB/CMS przy `next build`, generuje statyczne HTML. ISR pozwala regenerować pojedyncze strony bez full rebuild (po update content via webhook)." },
-      { q: "Jaki framework SSG wybrać 2026?", a: "Next.js dla 80% projektów (universal, najpopularniejszy, ekosystem). Astro dla content-heavy bez aplikacyjnej dynamiki. Hugo dla bardzo dużych stron (10k+ podstron). Jekyll deprecated." },
+      { q: "Jaki framework SSG wybrać 2026?", a: "Next.js dla 80% projektów (universal, najpopularniejszy, ekosystem). Astro dla content-heavy bez aplikacyjnej dynamiki. Hugo dla bardzo dużych stron (10k+ podstron). Jekyll nadal działa, ale rozwija się wolniej niż Astro czy Hugo." },
     ],
   }
 );
@@ -1287,19 +1287,19 @@ posts.push({
   slug: "wordpress-co-to-jest",
   title: "WordPress — co to jest i jak działa w 2026",
   excerpt:
-    "WordPress to najpopularniejszy CMS na świecie (60% rynku stron www). Co to jest, jak działa, dla kogo ma sens, ile kosztuje uruchomienie. Praktyczny przewodnik 2026.",
+    "WordPress to najpopularniejszy CMS na świecie (ponad 40% wszystkich stron www). Co to jest, jak działa, dla kogo ma sens, ile kosztuje uruchomienie. Praktyczny przewodnik 2026.",
   date: "2026-05-09",
   readingMinutes: 12,
   tags: ["WordPress", "podstawy", "CMS"],
   keyword: "WordPress co to jest",
   metaTitle: "WordPress — co to jest i jak działa w 2026 (pełny przewodnik)",
   metaDescription:
-    "WordPress: 60% rynku stron www. Co to jest, jak działa, ile kosztuje, dla kogo ma sens. Block Editor, FSE, motywy, pluginy, hosting. Praktyczny przewodnik 2026.",
+    "WordPress: ponad 40% wszystkich stron www. Co to jest, jak działa, ile kosztuje, dla kogo ma sens. Block Editor, FSE, motywy, pluginy, hosting. Praktyczny przewodnik 2026.",
   hero: { kind: "wordpress" },
   relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "sklepy-internetowe-woocommerce"],
   body: [],
   lead:
-    "WordPress to system zarządzania treścią (CMS) napisany w PHP, na którym działa około 60% wszystkich stron www na świecie. Jest darmowy, open-source, można go zainstalować na własnym hostingu w 5 minut. Edytujesz treści w przeglądarce bez znajomości kodu, rozszerzasz funkcjonalność przez 60+ tysięcy wtyczek. W 2026 wciąż najczęściej wybierany dla małej i średniej firmy, blogów, sklepów online (przez WooCommerce). Niżej: jak działa technicznie, kiedy ma sens, kiedy NIE.",
+    "WordPress to system zarządzania treścią (CMS) napisany w PHP, na którym działa ponad 40% wszystkich stron www na świecie. Jest darmowy, open-source, można go zainstalować na własnym hostingu w 5 minut. Edytujesz treści w przeglądarce bez znajomości kodu, rozszerzasz funkcjonalność przez 60+ tysięcy wtyczek. W 2026 wciąż najczęściej wybierany dla małej i średniej firmy, blogów, sklepów online (przez WooCommerce). Niżej: jak działa technicznie, kiedy ma sens, kiedy NIE.",
   sections: [
     {
       heading: "Czym technicznie jest WordPress",
@@ -1689,7 +1689,6 @@ posts.push({
         "**Jetpack** (Automattic): dla małych stron za dużo funkcji bundle (analytics, security, social, contact forms, wszystko w jednym pluginie). Lepiej osobne dedykowane pluginy.",
         "**All-in-One SEO Pack**: wyparte przez Yoast i Rank Math. Brak nowych funkcji od kilku lat.",
         "**Slider Revolution / LayerSlider**: ciężkie sliders z 200+ KB JS. Slidery są out of fashion w 2026 (większość użytkowników nie scrolluje przez wszystkie slajdy). Dla animacji lepiej Framer Motion / GSAP w custom theme.",
-        "**Ja Aktualizuję** / Plug-and-Play darmowe SEO/security pluginy z polskich marketplaces, często porzucone, brak aktualizacji security, ryzyko vulnerabilities.",
       ],
     },
   ],
@@ -1712,7 +1711,7 @@ posts.push({
     },
     {
       q: "Czy potrzebuję cookie consent jeśli nie używam Google Analytics?",
-      a: "Jeśli używasz JAKICHKOLWIEK third-party scripts (Google Fonts CDN, YouTube embed, Twitter widget), tak. W 2026 praktycznie każda strona wymaga cookie consent (RODO + EAA + e-Privacy).",
+      a: "Jeśli używasz JAKICHKOLWIEK third-party scripts (Google Fonts CDN, YouTube embed, Twitter widget), tak. W 2026 praktycznie każda strona wymaga cookie consent (RODO i Prawo komunikacji elektronicznej).",
     },
     {
       q: "Czy Wordfence wystarcza w wersji free?",
@@ -1737,7 +1736,7 @@ posts.push({
   relatedServices: ["aplikacje-nextjs", "next-js-software-house", "aplikacje-react"],
   body: [],
   lead:
-    "Server Actions to async funkcje wykonywane na serwerze, wywoływane bezpośrednio z komponentów React (server lub client) bez tworzenia osobnych API routes. Dostępne w Next.js 13.4+ jako stable, w 2026 standard dla mutations (form submissions, database writes, third-party API calls). Stack którego używam w każdym projekcie [tworzenia stron Next.js](/uslugi/aplikacje-nextjs). Niżej jak działa, kiedy używać, jak zabezpieczyć i typowe błędy.",
+    "Server Actions to async funkcje wykonywane na serwerze, wywoływane bezpośrednio z komponentów React (server lub client) bez tworzenia osobnych API routes. Stabilne od Next.js 14, w 2026 standard dla mutations (form submissions, database writes, third-party API calls). Stack którego używam w każdym projekcie [tworzenia stron Next.js](/uslugi/aplikacje-nextjs). Niżej jak działa, kiedy używać, jak zabezpieczyć i typowe błędy.",
   sections: [
     {
       heading: "Co to są Server Actions technicznie",
@@ -1751,7 +1750,7 @@ posts.push({
     {
       heading: "Kiedy używać Server Actions",
       body: [
-        "**Form submissions**: najbardziej oczywisty use case. Form akcja `<form action={mojaServerAction}>` wywołuje akcję z FormData jako argumentem. Bez API route, bez fetch, bez state management dla loading. Tak działa formularz kontaktowy na [marcinsiwonia.pl](/), Server Action wysyła mail przez Resend.",
+        "**Form submissions**: najbardziej oczywisty use case. Form akcja `<form action={mojaServerAction}>` wywołuje akcję z FormData jako argumentem. Bez API route, bez fetch, bez state management dla loading.",
         "**Database mutations**: INSERT / UPDATE / DELETE. Wywołujesz Prisma / Drizzle / raw SQL bezpośrednio w Server Action, bez tworzenia REST endpoint. Standard w [tworzeniu aplikacji Next.js](/uslugi/aplikacje-nextjs) z bazą Postgres.",
         "**Third-party API calls wymagające secret keys**: wysyłka maila przez Resend/SendGrid, płatność przez Stripe API, integracja z CRM. Klucze API w server-only env vars, nigdy nie wyciekną do bundle. Dla integracji bardziej złożonych: [Next.js software house](/uslugi/next-js-software-house).",
         "**Cache invalidation**: po mutation `revalidatePath('/products')` lub `revalidateTag('products')` automatycznie odświeża strony statyczne ISR.",
@@ -1783,7 +1782,7 @@ posts.push({
       heading: "Patterny które używam najczęściej",
       body: [
         "**Form action z FormData**: najprostszy pattern. `<form action={createUser}>`, w akcji `const name = formData.get('name')`. Działa nawet bez JavaScript (progressive enhancement).",
-        "**Form action z React 19 useFormState**: dla server-side form errors widocznych dla usera. `const [state, action] = useFormState(createUser, { error: null })`. Renderujesz `state.error` w komponencie.",
+        "**Form action z React 19 useActionState**: dla server-side form errors widocznych dla usera. `const [state, action] = useActionState(createUser, { error: null })`. Renderujesz `state.error` w komponencie.",
         "**Optimistic update z useOptimistic**: dla UX gdzie ważna jest natychmiastowa odpowiedź. `addOptimistic(newItem)` przed Server Action, jeśli się nie powiedzie, rollback z error message.",
         "**Server Action wywołana z client component**: nie tylko z `<form action>`. Możesz wywołać jak normalną funkcję: `<button onClick={() => deleteItem(id)}>`. Server Action wykona się po POST.",
         "**Revalidation po mutation**: `revalidatePath('/products')` w Server Action, automatycznie odświeża cache dla tej ścieżki. Dla wszystkich stron z określonym tagiem: `revalidateTag('products')` + `fetch(..., { next: { tags: ['products'] }})` przy fetchu.",
@@ -1801,7 +1800,7 @@ posts.push({
     },
     {
       q: "Jak debugować Server Actions?",
-      a: "Console.log w Server Action loguje na serwerze (terminal w dev, logs w Vercel dashboard w produkcji). Errors propagują do client jeśli `throw`, łapiesz w `useFormState` lub try/catch.",
+      a: "Console.log w Server Action loguje na serwerze (terminal w dev, logs w Vercel dashboard w produkcji). Errors propagują do client jeśli `throw`, łapiesz w `useActionState` lub try/catch.",
     },
     {
       q: "Czy mogę wywołać Server Action z innej Server Action?",

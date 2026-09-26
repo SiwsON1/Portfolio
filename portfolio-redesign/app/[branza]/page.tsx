@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { industries, INDUSTRY_CASES, INDUSTRY_SERVICES } from "@/lib/industries";
 import { services } from "@/lib/services";
 import { projects } from "@/lib/projects";
-import { renderInlineLinks } from "@/lib/renderInlineLinks";
+import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { IndustryHeroVisual } from "@/components/industry/IndustryHeroVisual";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
@@ -106,7 +106,7 @@ export default async function BranzaPage({
     mainEntity: ind.faq.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.a) },
     })),
   };
 
@@ -598,7 +598,7 @@ export default async function BranzaPage({
                   +
                 </span>
               </summary>
-              <p className="mt-5 text-ink-mute prose-bound leading-relaxed">{f.a}</p>
+              <p className="mt-5 text-ink-mute prose-bound leading-relaxed">{renderInlineLinks(f.a)}</p>
             </details>
           ))}
         </div>
