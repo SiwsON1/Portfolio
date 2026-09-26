@@ -225,7 +225,7 @@ export default async function PostPage({
                       <p key={j}>{renderInlineLinks(para)}</p>
                     ))}
                   </div>
-                  {s.table && s.table.head.length > 3 && (
+                  {s.table && s.table.head.length > 2 && (
                     <dl className="mt-10 divide-y divide-line border-y border-line md:hidden">
                       {s.table.rows.map((row, j) => (
                         <div key={j} className="py-4">
@@ -241,7 +241,7 @@ export default async function PostPage({
                     </dl>
                   )}
                   {s.table && (
-                    <div className={`mt-10 overflow-x-auto ${s.table.head.length > 3 ? "hidden md:block" : ""}`}>
+                    <div className={`mt-10 overflow-x-auto ${s.table.head.length > 2 ? "hidden md:block" : ""}`}>
                         <table className="w-full border-collapse text-left text-[0.95rem] md:text-base">
                           <caption className="caption-bottom pt-4 text-left text-sm text-ink-faint">
                             {s.table.caption}
