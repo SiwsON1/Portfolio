@@ -16,7 +16,7 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-wordpress",
     title: "Tworzenie stron WordPress",
-    metaTitle: "Tworzenie stron WordPress Wrocław — własny motyw, szybka strona",
+    metaTitle: "Tworzenie stron WordPress Wrocław: własny motyw, szybka strona",
     metaDescription:
       "Strony WordPress we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, wygodna edycja treści, szybkie działanie i techniczne SEO od startu.",
     h1: "Tworzenie stron WordPress. Wrocław, edycja bez kodu.",
@@ -57,7 +57,7 @@ export const services: Service[] = [
   {
     slug: "sklepy-internetowe-woocommerce",
     title: "Sklepy internetowe WooCommerce",
-    metaTitle: "Sklepy WooCommerce Wrocław — wdrożenie i optymalizacja",
+    metaTitle: "Sklepy WooCommerce Wrocław: wdrożenie i optymalizacja",
     metaDescription:
       "Sklepy WooCommerce we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, płatności, wysyłka, B2B, migracje i integracje sprzedażowe od startu.",
     h1: "Sklepy internetowe WooCommerce. Wrocław i cała Polska.",
@@ -319,7 +319,7 @@ export const services: Service[] = [
   {
     slug: "aplikacje-nextjs",
     title: "Tworzenie stron Next.js",
-    metaTitle: "Tworzenie stron Next.js Wrocław — App Router, edge, premium",
+    metaTitle: "Tworzenie stron Next.js Wrocław: strony i aplikacje firmowe",
     metaDescription:
       "Tworzenie stron Next.js we Wrocławiu i zdalnie w Polsce i Niemczech. Strony firmowe, integracje API, panele klienta oraz aplikacje webowe dla firm.",
     h1: "Tworzenie stron Next.js. Wrocław i cała Polska.",
@@ -426,7 +426,7 @@ export const services: Service[] = [
   {
     slug: "opieka-wordpress",
     title: "Opieka nad stroną WordPress",
-    metaTitle: "Opieka nad stroną WordPress — abonament, bez umowy na rok",
+    metaTitle: "Opieka nad stroną WordPress: abonament bez umowy na rok",
     metaDescription:
       "Opieka nad stroną WordPress: aktualizacje, kopie zapasowe, monitoring i drobne zmiany w abonamencie miesięcznym bez umowy na rok.",
     h1: "Opieka nad stroną WordPress. Strona działa, Ty pracujesz.",
@@ -461,7 +461,7 @@ export const services: Service[] = [
   {
     slug: "przyspieszanie-stron-wordpress",
     title: "Przyspieszanie stron WordPress",
-    metaTitle: "Przyspieszenie strony WordPress — Core Web Vitals na zielono",
+    metaTitle: "Przyspieszenie strony WordPress: Core Web Vitals na zielono",
     metaDescription:
       "Przyspieszenie strony WordPress z pomiarem PageSpeed i Lighthouse przed i po zmianach. Optymalizacja obrazów, kodu, pamięci podręcznej i hostingu.",
     h1: "Przyspieszanie stron WordPress. Liczby przed i po, nie obietnice.",
@@ -496,7 +496,7 @@ export const services: Service[] = [
   {
     slug: "integracja-woocommerce-z-baselinker",
     title: "Integracja WooCommerce z BaseLinker",
-    metaTitle: "Integracja WooCommerce z BaseLinker — zamówienia, stany, Allegro",
+    metaTitle: "Integracja WooCommerce z BaseLinker: zamówienia, stany, Allegro",
     metaDescription:
       "Integracja WooCommerce z BaseLinker: zamówienia, stany, ceny, hurtownie, Allegro i obsługa wysyłek w jednym procesie. Wrocław i praca zdalna.",
     h1: "Integracja WooCommerce z BaseLinker",

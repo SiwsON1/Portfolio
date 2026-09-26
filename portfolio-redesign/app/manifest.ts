@@ -6,7 +6,7 @@ import type { MetadataRoute } from "next";
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Marcin Siwonia — Web Developer Wrocław",
+    name: "Marcin Siwonia, web developer Wrocław",
     short_name: "MS Web Dev",
     description:
       "Tworzenie stron www, aplikacji Next.js i React, wdrożenia AI. Wrocław.",

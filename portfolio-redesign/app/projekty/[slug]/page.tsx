@@ -24,7 +24,14 @@ function metaDescription(p: (typeof projects)[number]): string {
   let d = fit(p.description);
   if (d.length < 120) {
     const base = /[.!?]$/.test(d) ? d : `${d}.`;
-    d = fit(`${base} Realizacja Marcina Siwonia, stack: ${p.stack.slice(0, 3).join(", ")}.`);
+    // Przy długim opisie trzy technologie przekraczają 160 znaków i fit() zostawia sam krótki opis.
+    for (const n of [3, 2, 1]) {
+      const next = `${base} Realizacja Marcina Siwonia, stack: ${p.stack.slice(0, n).join(", ")}.`;
+      if (next.length <= 160) {
+        d = next;
+        break;
+      }
+    }
   }
   return d;
 }
@@ -44,7 +51,7 @@ export async function generateMetadata({
   const title = `${p.client}: ${p.title}`;
   const description = metaDescription(p);
   return {
-    // Szablon dokleja „ — Marcin Siwonia” (17 znaków); dłuższe tytuły Google ucina.
+    // Szablon dokleja „ | Marcin Siwonia” (17 znaków); dłuższe tytuły Google ucina.
     title: title.length + 17 > 65 ? { absolute: title } : title,
     description,
     alternates: { canonical: `/projekty/${p.slug}` },

@@ -8,9 +8,9 @@ import { jsonLd } from "@/lib/schema";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.marcinsiwonia.pl";
 
 export const metadata: Metadata = {
-  title: { absolute: "Strony internetowe dla branż — kancelarie, sklepy, hotele" },
+  title: { absolute: "Strony internetowe dla branż: kancelarie, sklepy, hotele" },
   description:
-    "Strony internetowe dla kancelarii, gabinetów, marek odzieżowych, producentów mebli, hoteli, firm budowlanych i twórców. Zakres, terminy i realizacje przy każdej.",
+    "Strony dla kancelarii, gabinetów, marek odzieżowych, producentów mebli, hoteli, firm budowlanych i twórców. Zakres, terminy i realizacje dla każdej branży.",
   alternates: { canonical: "/branze" },
 };
 

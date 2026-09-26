@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Freelancer Next.js Wrocław — Marcin Siwonia | aplikacje, AI",
-    template: "%s — Marcin Siwonia",
+      "Freelancer Next.js Wrocław: strony i aplikacje | Marcin Siwonia",
+    template: "%s | Marcin Siwonia",
   },
   description:
     "Niezależny freelancer Next.js i React z Wrocławia. Aplikacje, sklepy, wdrożenia AI, headless WordPress. Sześć lat, 30+ wdrożeń dla klientów PL i DE.",
@@ -65,13 +65,13 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: SITE_URL,
     siteName: "Marcin Siwonia",
-    title: "Freelancer Next.js Wrocław — Marcin Siwonia",
+    title: "Freelancer Next.js Wrocław | Marcin Siwonia",
     description:
       "Aplikacje Next.js, sklepy, wdrożenia AI. 30+ wdrożeń dla PL i DE.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Freelancer Next.js Wrocław — Marcin Siwonia",
+    title: "Freelancer Next.js Wrocław | Marcin Siwonia",
     description:
       "Aplikacje Next.js i React, wdrożenia AI, headless WordPress.",
   },

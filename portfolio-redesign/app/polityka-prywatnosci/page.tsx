@@ -5,7 +5,7 @@ import { ConsentReset } from "@/components/legal/ConsentReset";
 export const metadata: Metadata = {
   title: "Polityka prywatności",
   description:
-    "Jakie dane zbiera marcinsiwonia.pl, w jakim celu i na jakiej podstawie: formularz kontaktowy, hosting, analityka po zgodzie. Twoje prawa i sposób wycofania zgody.",
+    "Jakie dane zbiera marcinsiwonia.pl i po co: formularz kontaktowy, hosting, analityka po zgodzie. Podstawy prawne, Twoje prawa i sposób wycofania zgody.",
   alternates: { canonical: "/polityka-prywatnosci" },
 };
 

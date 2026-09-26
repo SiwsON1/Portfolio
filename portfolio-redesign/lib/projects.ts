@@ -431,7 +431,7 @@ export const projects: Project[] = [
   },
   {
     slug: "festival-tickets",
-    title: "Festiwal — bilety",
+    title: "Festiwal: bilety",
     client: "Lab",
     year: 2023,
     category: "lab",

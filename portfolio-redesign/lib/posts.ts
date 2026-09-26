@@ -204,14 +204,14 @@ export const posts: Post[] = [
   },
   {
     slug: "wcag-2-1-aa",
-    title: "WCAG 2.1 AA — 50 kryteriów, które od 2025 obowiązują firmy",
+    title: "WCAG 2.1 AA: 50 kryteriów, które od 2025 obowiązują firmy",
     excerpt:
       "WCAG 2.1 AA to 50 kryteriów sukcesu. Od 28 czerwca 2025 są wymogiem prawnym dla firm powyżej progu mikroprzedsiębiorcy. Obowiązuje 2.1, nie nowsze 2.2, i jest ku temu konkretny powód.",
     date: "2026-09-01",
     readingMinutes: 9,
     tags: ["WCAG", "dostępność", "EAA"],
     keyword: "WCAG 2.1 AA",
-    metaTitle: "WCAG 2.1 AA — 50 kryteriów i obowiązek prawny od 2025",
+    metaTitle: "WCAG 2.1 AA: 50 kryteriów i obowiązek prawny od 2025",
     metaDescription:
       "WCAG 2.1 AA to 50 kryteriów sukcesu, obowiązkowe od 28 czerwca 2025 przez normę EN 301 549. Sprawdź poziomy zgodności, próg zwolnienia i wysokość kary.",
     hero: { kind: "seo" },
@@ -489,9 +489,9 @@ export const posts: Post[] = [
     readingMinutes: 14,
     tags: ["SEO", "pozycjonowanie"],
     keyword: "pozycjonowanie strony usługowej",
-    metaTitle: "Pozycjonowanie strony usługowej — 7 kroków do top10",
+    metaTitle: "Pozycjonowanie strony usługowej w 7 krokach",
     metaDescription:
-      "Pierwsze 6 miesięcy SEO strony usługowej krok po kroku: audyt, technika, content, linki. Co robić w tygodniu 1, w miesiącu 3, w miesiącu 6. Plan z mojej praktyki.",
+      "Pierwsze 6 miesięcy SEO strony usługowej krok po kroku: audyt, technika, treści i linki. Co zrobić w tygodniu 1, w miesiącu 3 i w miesiącu 6.",
     hero: { kind: "seo" },
     relatedServices: ["tworzenie-stron-www", "nowoczesna-strona-firmowa-2026", "przyspieszanie-stron-wordpress"],
     body: [
@@ -1066,16 +1066,16 @@ posts.push(
   },
   {
     slug: "next-js-vs-react-roznice",
-    title: "Next.js vs React — co wybrać i czym się różnią",
+    title: "Next.js vs React: co wybrać i czym się różnią",
     excerpt:
       "React to biblioteka UI. Next.js to framework wokół Reacta. Kiedy wystarczy sam React (Vite), kiedy potrzebujesz Next.js. Konkretne różnice, ceny, decyzja per typ projektu.",
     date: "2026-03-30",
     readingMinutes: 9,
     tags: ["Next.js", "React", "porównanie", "decyzje techniczne"],
     keyword: "Next.js vs React",
-    metaTitle: "Next.js vs React — różnice i co wybrać (2026)",
+    metaTitle: "Next.js vs React: różnice i co wybrać",
     metaDescription:
-      "Next.js vs React: nie są alternatywami. React = biblioteka UI, Next.js = framework wokół niej. Kiedy wystarczy sam React, kiedy potrzebujesz Next.js. Decyzja per projekt.",
+      "Next.js i React to nie alternatywy: React to biblioteka UI, a Next.js framework zbudowany wokół niej. Kiedy wystarczy sam React, a kiedy Next.js.",
     hero: { kind: "nextjs" },
     relatedServices: ["aplikacje-react", "aplikacje-nextjs", "next-js-software-house"],
     body: [],
@@ -1520,14 +1520,14 @@ posts.push(
   },
   {
     slug: "migracja-wordpress-na-nextjs",
-    title: "Migracja z WordPress na Next.js — przewodnik krok po kroku",
+    title: "Migracja z WordPress na Next.js: przewodnik krok po kroku",
     excerpt:
       "Jak przejść z WP na Next.js bez tracenia rankingów SEO. Mapa URL-i, 301 redirects, schema, sitemap, content migration. Realistyczny timeline 4-8 tygodni.",
     date: "2026-02-25",
     readingMinutes: 11,
     tags: ["migracja", "WordPress", "Next.js"],
     keyword: "migracja WordPress Next.js",
-    metaTitle: "Migracja WordPress → Next.js — przewodnik krok po kroku",
+    metaTitle: "Migracja WordPress na Next.js: przewodnik krok po kroku",
     metaDescription:
       "Jak migrować z WordPress na Next.js bez tracenia rankingów SEO: URL mapping, 301 redirects, content migration, deployment. Timeline 4-8 tygodni, koszty.",
     hero: { kind: "wordpress" },
@@ -1661,14 +1661,14 @@ posts.push(
   },
   {
     slug: "tailwind-css-co-to",
-    title: "Tailwind CSS — co to jest i czemu zastępuje tradycyjne CSS",
+    title: "Tailwind CSS: co to jest i czym różni się od zwykłego CSS",
     excerpt:
       "Tailwind CSS: utility-first CSS framework. Klasy zamiast komponentów. Czemu Tailwind 4 to nowy standard frontendu w 2026.",
     date: "2026-02-11",
     readingMinutes: 6,
     tags: ["Tailwind", "CSS"],
     keyword: "Tailwind CSS",
-    metaTitle: "Tailwind CSS — co to, czemu zastępuje tradycyjne CSS",
+    metaTitle: "Tailwind CSS: co to jest i czym różni się od zwykłego CSS",
     metaDescription:
       "Tailwind 4: utility-first framework. Klasy zamiast komponentów, mniejszy bundle, spójny design system. Stack 2026 dla 70% nowych projektów React/Next.js.",
     hero: { kind: "nextjs" },
@@ -1691,14 +1691,14 @@ posts.push(
   },
   {
     slug: "vercel-hosting-co-to",
-    title: "Vercel — co to za hosting i czy warto",
+    title: "Vercel: co to za hosting i czy warto",
     excerpt:
       "Vercel: hosting stworzony przez twórców Next.js. Edge functions, automatic SSL, preview deployments per PR. Darmowy plan Hobby jest przeznaczony do projektów prywatnych i niekomercyjnych, strona firmowa potrzebuje planu Pro.",
     date: "2026-02-04",
     readingMinutes: 7,
     tags: ["Vercel", "hosting"],
     keyword: "Vercel hosting",
-    metaTitle: "Vercel hosting — co to, czy warto, vs Hostinger",
+    metaTitle: "Vercel hosting: co to jest i czy warto (vs Hostinger)",
     metaDescription:
       "Vercel: hosting od twórców Next.js. Edge functions, automatic SSL, preview per PR, free tier 100 GB/mc. Vs polski hosting (Hostinger): kiedy warto.",
     hero: { kind: "performance" },
@@ -1918,16 +1918,16 @@ posts.push(
 
 posts.push({
   slug: "wordpress-co-to-jest",
-  title: "WordPress — co to jest i jak działa w 2026",
+  title: "WordPress: co to jest i jak działa",
   excerpt:
     "WordPress to najpopularniejszy CMS na świecie (ponad 40% wszystkich stron www). Co to jest, jak działa, dla kogo ma sens, ile kosztuje uruchomienie. Praktyczny przewodnik 2026.",
   date: "2026-05-09",
   readingMinutes: 12,
   tags: ["WordPress", "podstawy", "CMS"],
   keyword: "WordPress co to jest",
-  metaTitle: "WordPress — co to jest i jak działa w 2026 (pełny przewodnik)",
+  metaTitle: "WordPress: co to jest i jak działa (przewodnik)",
   metaDescription:
-    "WordPress: ponad 40% wszystkich stron www. Co to jest, jak działa, ile kosztuje, dla kogo ma sens. Block Editor, FSE, motywy, pluginy, hosting. Praktyczny przewodnik 2026.",
+    "WordPress działa na ponad 40% stron www. Co to jest, jak działa, ile kosztuje i dla kogo ma sens: edytor bloków, motywy, wtyczki i hosting.",
   hero: { kind: "wordpress" },
   relatedServices: ["tworzenie-stron-wordpress", "headless-wordpress", "sklepy-internetowe-woocommerce"],
   body: [],
@@ -2028,14 +2028,14 @@ posts.push({
 
 posts.push({
   slug: "co-zrobic-po-instalacji-wordpressa",
-  title: "Co zrobić po instalacji WordPressa — checklist 15 czynności",
+  title: "Co zrobić po instalacji WordPressa: lista 15 czynności",
   excerpt:
     "Świeżo zainstalowany WordPress wymaga 15 kroków konfiguracji zanim zaczniesz publikować. Permalinks, security, cache, SEO, backup, RODO. Pełna checklist 2026.",
   date: "2026-05-09",
   readingMinutes: 11,
   tags: ["WordPress", "instalacja", "konfiguracja"],
   keyword: "po instalacji WordPress",
-  metaTitle: "Co zrobić po instalacji WordPressa — checklist 15 czynności",
+  metaTitle: "Co zrobić po instalacji WordPressa: lista 15 czynności",
   metaDescription:
     "Checklist 15 kroków po instalacji WordPressa: permalinks, security headers, Wordfence, cache, Yoast, backup, RODO, 2FA. Pełna konfiguracja w 60 minut.",
   hero: { kind: "wordpress" },
@@ -2209,14 +2209,14 @@ posts.push({
 
 posts.push({
   slug: "must-have-wtyczki-wordpress-2026",
-  title: "25 must-have wtyczek WordPress 2026 — kompletna lista",
+  title: "Wtyczki WordPress: 25 najpotrzebniejszych na start",
   excerpt:
     "25 wtyczek WordPress które instaluję w każdym projekcie 2026. SEO, security, cache, formularze, backup, analytics, RODO. Free vs Pro, alternatywy.",
   date: "2026-05-09",
   readingMinutes: 13,
   tags: ["WordPress", "wtyczki", "pluginy"],
   keyword: "wtyczki WordPress",
-  metaTitle: "25 must-have wtyczek WordPress 2026 — kompletna lista",
+  metaTitle: "Wtyczki WordPress: 25 najpotrzebniejszych na start",
   metaDescription:
     "25 must-have wtyczek WordPress 2026: SEO (Yoast/Rank Math), security (Wordfence), cache (LiteSpeed/WP Rocket), formularze (WPForms), backup, RODO. Free i Pro.",
   hero: { kind: "wordpress" },
@@ -2337,16 +2337,16 @@ posts.push({
 
 posts.push({
   slug: "server-actions-nextjs",
-  title: "Server Actions w Next.js — co to i jak używać w 2026",
+  title: "Server Actions w Next.js: co to jest i jak ich używać",
   excerpt:
     "Server Actions to mutations server-side wywoływane bezpośrednio z komponentów React, bez tworzenia API routes. Co to, kiedy używać, jak zabezpieczyć.",
   date: "2026-05-09",
   readingMinutes: 9,
   tags: ["Next.js", "Server Actions", "React"],
   keyword: "Server Actions Next.js",
-  metaTitle: "Server Actions w Next.js — co to i jak używać 2026",
+  metaTitle: "Server Actions w Next.js: co to jest i jak ich używać",
   metaDescription:
-    "Server Actions Next.js: mutations server-side z komponentów React bez API routes. Jak działa, kiedy używać, walidacja, security, error handling. Przewodnik 2026.",
+    "Server Actions w Next.js zapisują dane na serwerze prosto z komponentów React, bez osobnych API routes. Jak działają, walidacja, bezpieczeństwo, błędy.",
   hero: { kind: "nextjs" },
   relatedServices: ["aplikacje-nextjs", "next-js-software-house", "aplikacje-react"],
   body: [],

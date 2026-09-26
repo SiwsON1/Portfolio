@@ -15,7 +15,7 @@ export default function BlogIndex() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Blog — Marcin Siwonia",
+    name: "Blog | Marcin Siwonia",
     numberOfItems: sorted.length,
     itemListElement: sorted.map((p, i) => ({
       "@type": "ListItem",

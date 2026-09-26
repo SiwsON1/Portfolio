@@ -1,11 +1,32 @@
 import type { Metadata } from "next";
 import { ServicesIndexList } from "@/components/service/ServicesIndexList";
+import { services } from "@/lib/services";
+import { breadcrumbsSchema } from "@/lib/breadcrumbs";
+import { jsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: { absolute: "Usługi web developera — Next.js, React, WP, AI, sklepy" },
+  title: { absolute: "Usługi web developera: Next.js, React, WordPress, AI, sklepy" },
   description:
     "Pełna lista usług: aplikacje Next.js, React, WordPress, WooCommerce, headless CMS, Jamstack, wdrożenia AI. Wycena 24h od briefa. Wrocław i online.",
   alternates: { canonical: "/uslugi" },
+};
+
+const breadcrumbs = breadcrumbsSchema([
+  { name: "Strona główna", path: "/" },
+  { name: "Usługi", path: "/uslugi" },
+]);
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Usługi Marcina Siwonia",
+  numberOfItems: services.length,
+  itemListElement: services.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `https://www.marcinsiwonia.pl/uslugi/${s.slug}`,
+    name: s.title,
+  })),
 };
 
 export default function UslugiPage() {
@@ -31,6 +52,9 @@ export default function UslugiPage() {
       </header>
 
       <ServicesIndexList />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(itemListSchema) }} />
     </article>
   );
 }
