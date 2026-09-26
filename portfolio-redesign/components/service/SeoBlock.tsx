@@ -143,6 +143,50 @@ export function SeoBlock({ data }: { data: SeoBlockData }) {
                         ))}
                       </ul>
                     )}
+                    {s.table && (
+                      <>
+                      <dl className="my-8 divide-y divide-line border-y border-line md:hidden">
+                        {s.table.rows.map((row, i) => (
+                          <div key={i} className="py-4">
+                            <dt className="mb-2 text-ink">{row[0]}</dt>
+                            {row.slice(1).map((cell, j) => (
+                              <dd key={j} className="mt-1 text-sm leading-relaxed">
+                                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{s.table!.head[j + 1]}: </span>
+                                {renderInlineLinks(cell)}
+                              </dd>
+                            ))}
+                          </div>
+                        ))}
+                      </dl>
+                      <div className="my-8 hidden overflow-x-auto md:block">
+                        <table className="w-full border-collapse text-left text-sm md:text-[0.95rem]">
+                          <caption className="caption-bottom pt-3 text-left text-xs text-ink-faint">{s.table.caption}</caption>
+                          <thead>
+                            <tr>
+                              {s.table.head.map((h, i) => (
+                                <th key={i} scope="col" className="pb-3 pr-4 align-bottom font-mono text-[10px] font-normal uppercase tracking-[0.18em] text-ink-faint">
+                                  {h}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {s.table.rows.map((row, i) => (
+                              <tr key={i} className="border-t border-line align-top">
+                                {row.map((cell, j) =>
+                                  j === 0 ? (
+                                    <th key={j} scope="row" className="py-3 pr-4 font-normal text-ink">{cell}</th>
+                                  ) : (
+                                    <td key={j} className="py-3 pr-4">{renderInlineLinks(cell)}</td>
+                                  )
+                                )}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      </>
+                    )}
                     {s.outro?.map((p, i) => (
                       <p key={`o-${i}`}>{renderInlineLinks(p)}</p>
                     ))}

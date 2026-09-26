@@ -5,6 +5,8 @@ export type SeoBlockSection = {
   body: string[];
   /** Lista po akapitach. Łamie monotonię samej prozy, nie każda sekcja ją ma. */
   list?: string[];
+  /** Tabela po liście, przed akapitami końcowymi. */
+  table?: { caption: string; head: string[]; rows: string[][] };
   /** Akapity po liście. */
   outro?: string[];
 };
@@ -140,6 +142,25 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         body: [
           "Termin rozjeżdża się rzadko przez pracę techniczną, a prawie zawsze przez czekanie. Projekt i wdrożenie mają przewidywalny czas, natomiast teksty, zdjęcia i akceptacje po stronie klienta potrafią znacznie wydłużyć harmonogram.",
           "Tempo najbardziej podnoszą trzy rzeczy: gotowe treści, jedna osoba decyzyjna zamiast zbierania sprzecznych uwag od kilku osób, oraz zebrane wcześniej materiały i dostępy. Dobrym nawykiem jest wpisanie terminów po obu stronach, nie tylko po stronie wykonawcy. Wtedy opóźnienie widać od razu, a nie na końcu.",
+        ],
+      },
+      {
+        id: "koszt-strony-wordpress",
+        heading: "Od czego zależy koszt strony WordPress",
+        body: [
+          "Przy tworzeniu stron WordPress nie określam zakresu wyłącznie na podstawie liczby pozycji w menu. Dwie strony z podobną liczbą podstron mogą wymagać zupełnie różnej ilości pracy. Znaczenie ma przede wszystkim liczba różnych szablonów, które trzeba zaprojektować i zakodować. Strona główna, usługa, realizacja, wpis blogowy czy kontakt mogą korzystać z innych układów, nawet jeśli później powstanie wiele podstron opartych na tych samych wzorcach.",
+          "W nowych projektach przygotowuję własny motyw bez Elementora. Sekcje możliwe do edycji odpowiadają projektowi strony, dzięki czemu panel nie musi dawać swobody zmieniania wszystkiego kosztem spójności wyglądu. Zakres prac zwiększają między innymi:",
+        ],
+        list: [
+          "liczba różnych szablonów podstron,",
+          "własny motyw i zestaw bloków przeznaczonych do edycji,",
+          "integracje z zewnętrznymi usługami lub systemami,",
+          "dodatkowe wersje językowe obsługiwane na przykład przez WPML albo Polylang,",
+          "migracja istniejących tekstów, zdjęć i innych treści ze starej strony,",
+          "blog wraz z potrzebnymi szablonami wpisów, kategorii i archiwów.",
+        ],
+        outro: [
+          "Osobno trzeba uwzględnić koszty, które pojawiają się już po uruchomieniu witryny. Należą do nich domena i hosting, a w zależności od rozwiązania również licencje płatnych wtyczek. Po oddaniu strony zapewniam 60 dni gwarancji i bezpłatnych poprawek. Później utrzymanie może pozostać po stronie firmy albo działać jako opcjonalna [opieka nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok.",
         ],
       },
       {
@@ -371,6 +392,93 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
           "Jako freelancer web developer działam we Wrocławiu, a współpracę przy projektach prowadzę zdalnie. Spotkanie startowe odbywa się online, dlatego lokalizacja firmy nie ogranicza projektu. Pracuję z firmami z Wrocławia, innych części Polski oraz z Niemiec.",
           "Taki model jest wygodny również dla osoby, która zamawia pierwszą stronę internetową dla firmy i nie chce śledzić technicznych szczegółów wdrożenia. Komunikacja dotyczy przede wszystkim decyzji potrzebnych do stworzenia strony: treści, układu, funkcji, materiałów i sposobu prezentowania oferty. Nie trzeba instalować środowiska programistycznego ani samodzielnie sprawdzać kodu.",
           "Po kolejnych etapach udostępniam link do wersji testowej. Możesz więc otworzyć stronę w zwykłej przeglądarce, zobaczyć aktualny stan projektu i odnieść uwagi do konkretnego widoku. Przy stronie internetowej dla firmy jest to szczególnie pomocne, ponieważ projekt można oceniać na podstawie realnego działania, a nie wyłącznie technicznego opisu tego, co dopiero ma powstać.",
+        ],
+      },
+    ],
+  },
+  "aplikacje-nextjs": {
+    heading: "Strona Next.js daje firmie szybkość dziś i swobodę rozwoju jutro",
+    intro: [
+      "**Strona Next.js sprawdza się wtedy, gdy firma potrzebuje szybkiego serwisu, dobrej widoczności w Google i rozwiązania, którego nie trzeba przebudowywać od podstaw wraz z rozwojem biznesu.** Przy tworzeniu stron Next.js mogę zacząć od stosunkowo prostego serwisu firmowego, a później rozbudować go o katalog, wyszukiwarkę, konta użytkowników, dane z zewnętrznych systemów czy funkcje typowe dla aplikacji.",
+      "Z perspektywy właściciela firmy ważniejsze od nazwy technologii jest to, jaki daje ona efekt. Next.js pozwala mi budować stronę tak, aby użytkownik szybko otrzymywał potrzebną treść, Google mogło ją poprawnie odczytać, a kolejne funkcje dało się dodawać bez wciskania ich na siłę w konstrukcję, która od początku była przeznaczona do czegoś prostszego. Poniżej wyjaśniam te różnice bez zakładania, że znasz programistyczne skróty.",
+    ],
+    sections: [
+      {
+        id: "co-zyskuje-firma",
+        heading: "Co firma zyskuje na stronie zbudowanej w Next.js",
+        body: [
+          "Dobra strona firmowa nie powinna zmuszać klienta do zastanawiania się nad technologią. Powinna otwierać się szybko, prowadzić do właściwej informacji i działać stabilnie zarówno na telefonie, jak i na komputerze. Next.js daje mi dużą kontrolę nad sposobem, w jaki strona jest dostarczana użytkownikowi. Dzięki temu mogę ograniczyć ilość niepotrzebnej pracy wykonywanej przez jego przeglądarkę i przygotować najważniejsze treści wcześniej.",
+          "Dla firmy przekłada się to przede wszystkim na cztery obszary:",
+        ],
+        list: [
+          "**szybkość**, czyli krótsze oczekiwanie na treść i mniej elementów ładowanych bez potrzeby,",
+          "**SEO**, ponieważ treść podstron może być od razu dostępna dla wyszukiwarki wraz z właściwymi adresami, tytułami i opisami,",
+          "**bezpieczeństwo**, bo publiczna strona nie musi udostępniać typowego panelu administracyjnego pod tym samym adresem,",
+          "**skalowanie**, czyli możliwość rozwijania serwisu od kilku podstron do dużej liczby lokalizacji, ofert, produktów albo funkcji opartych na danych.",
+        ],
+        outro: [
+          "Skalowanie nie musi przy tym oznaczać od razu dużej aplikacji. Dobrym przykładem jest [Kantorymapa](/projekty/kantorymapa). Serwis ma 140 podstron miast oraz 1900 stron kantorów generowanych statycznie podczas budowania. Kursy NBP są automatycznie odświeżane raz dziennie, a sam serwis ładuje się poniżej sekundy. Użytkownik widzi po prostu szybką stronę, choć pod spodem pracuje znacznie więcej elementów niż w klasycznej kilkuzakładkowej witrynie.",
+        ],
+      },
+      {
+        id: "ssr-ssg-isr",
+        heading: "SSR, SSG i ISR określają, kiedy powstaje gotowa podstrona",
+        body: [
+          "Przy stronie internetowej można uprościć temat do jednego pytania: **kiedy serwer ma przygotować treść, którą zobaczy użytkownik?** W Next.js nie muszę wybierać jednej odpowiedzi dla całego serwisu. Różne podstrony mogą działać na różne sposoby w zależności od tego, jak często zmieniają się informacje.",
+          "SSG oznacza, że gotowa podstrona powstaje wcześniej, podczas budowania serwisu. Kiedy klient ją otwiera, nie trzeba za każdym razem składać jej od nowa. To dobre rozwiązanie dla treści, które nie zmieniają się co minutę. Tak można obsłużyć na przykład katalog zawierający tysiące lokalizacji generowanych automatycznie na podstawie danych. Właśnie taki model wykorzystuję między innymi w projektach z dużą liczbą stron lokalnych.",
+          "SSR działa inaczej. Strona jest przygotowywana na serwerze wtedy, gdy pojawia się żądanie użytkownika. Ma to sens tam, gdzie zawartość zależy od aktualnych danych albo konkretnej sytuacji i powinna zostać ustalona w chwili wejścia na podstronę.",
+          "ISR znajduje się pomiędzy tymi rozwiązaniami. Serwis może korzystać z wcześniej przygotowanej strony, ale po określonym czasie odświeżyć jej wersję. Nie trzeba więc przebudowywać wszystkiego za każdym razem, gdy zmienia się pojedyncza informacja. W praktyce dobieram sposób generowania do rodzaju danych, zamiast zmuszać cały serwis do działania według jednego schematu.",
+        ],
+      },
+      {
+        id: "nextjs-a-wordpress",
+        heading: "Next.js i WordPress rozwiązują częściowo inne problemy",
+        body: [
+          "WordPress i Next.js nie są zamiennikami w każdej sytuacji. WordPress jest gotowym systemem zarządzania treścią. Next.js jest narzędziem, na którym mogę zbudować zarówno stronę, jak i bardziej indywidualny system. Dlatego wybór zależy przede wszystkim od tego, co strona ma robić teraz i jak może rozwijać się później.",
+        ],
+        table: {
+          caption: "Next.js a WordPress: porównanie z perspektywy firmy",
+          head: ["Kryterium", "Next.js", "WordPress"],
+          rows: [
+            ["Edycja treści", "Wymaga podłączenia CMS lub przygotowania własnego panelu", "Panel do zarządzania treścią jest częścią systemu"],
+            ["Szybkość", "Duża kontrola nad sposobem generowania i dostarczania każdej podstrony", "Zależy między innymi od motywu, wtyczek, hostingu i konfiguracji"],
+            ["Bezpieczeństwo", "Publiczna warstwa strony może być oddzielona od systemu do edycji treści", "Wymaga regularnego utrzymywania WordPressa, motywu i używanych wtyczek"],
+            ["Własna logika", "Dobrze nadaje się do indywidualnych funkcji, danych, kont użytkowników i integracji", "Typowe funkcje często można realizować gotowymi rozwiązaniami, bardziej nietypowe wymagają dodatkowego developmentu"],
+            ["Koszt utrzymania", "Zależy od hostingu, usług zewnętrznych i zakresu aplikacji", "Zależy między innymi od hostingu, płatnych wtyczek i opieki technicznej"],
+            ["Kiedy wybrać", "Gdy ważna jest wydajność, indywidualne funkcje lub rozwój serwisu oparty na danych", "Gdy głównym zadaniem jest publikacja i wygodna edycja typowej treści firmowej"],
+          ],
+        },
+        outro: [
+          "Te podejścia można też połączyć. Jeśli zespół dobrze zna panel WordPressa, nie trzeba z niego rezygnować tylko dlatego, że publiczną część serwisu chcemy zbudować w Next.js. Służy do tego model [headless WordPress](/uslugi/headless-wordpress), w którym WordPress odpowiada za treści, a osobna aplikacja za ich prezentację użytkownikom.",
+        ],
+      },
+      {
+        id: "edycja-tresci-nextjs",
+        heading: "Treści w Next.js możesz edytować bez zaglądania do kodu",
+        body: [
+          "Next.js sam w sobie nie narzuca jednego panelu administracyjnego. To ważna różnica względem klasycznego WordPressa. Nie oznacza jednak, że każda zmiana tekstu musi trafiać do programisty. Do projektu mogę podłączyć system zarządzania treścią i określić dokładnie, które elementy mają być dostępne do edycji.",
+          "W projektach korzystam między innymi z Sanity lub Strapi. Redaktor może wtedy pracować w panelu, zmieniając przygotowane pola, treści i dane, natomiast sam wygląd strony oraz sposób prezentacji pozostają po stronie aplikacji. Rozdzielenie tych dwóch warstw pozwala zachować spójny projekt bez konieczności budowania każdej podstrony ręcznie.",
+          "Drugą możliwością jest wykorzystanie WordPressa wyłącznie jako panelu. Treści nadal wpisujesz wtedy w znanym środowisku, ale użytkownik nie odwiedza strony generowanej przez motyw WordPressa. Next.js pobiera przygotowane informacje i wyświetla je we własnym interfejsie. Taki model może być wygodny szczególnie przy migracji serwisu, którego zespół od lat używa WordPressa do publikowania treści.",
+        ],
+      },
+      {
+        id: "migracja-do-nextjs",
+        heading: "Migrację do Next.js trzeba zaplanować także pod kątem Google",
+        body: [
+          "Zmiana technologii strony nie powinna oznaczać wyrzucenia dotychczasowej historii serwisu. Jeżeli istniejąca witryna ma podstrony widoczne w Google, wejścia z wyszukiwarki i linki prowadzące z innych miejsc, podczas migracji trzeba zachować te sygnały tak dokładnie, jak jest to możliwe.",
+          "Zaczynam od mapy obecnych adresów i odpowiadających im adresów w nowym serwisie. Jeśli dany URL może pozostać taki sam, zwykle nie ma powodu go zmieniać. Jeżeli struktura musi się zmienić, stary adres powinien kierować użytkownika oraz wyszukiwarkę pod właściwe nowe miejsce za pomocą przekierowania 301. Nie chodzi o przekierowanie wszystkiego na stronę główną, tylko o zachowanie logicznego odpowiednika każdej wartościowej podstrony.",
+          "Przenoszę również elementy mające znaczenie dla sposobu interpretowania strony, między innymi tytuły i opisy meta oraz potrzebne dane strukturalne. Po uruchomieniu nowej wersji kontroluję w Google Search Console, czy robot wyszukiwarki prawidłowo przechodzi na nowe adresy i czy nie pojawiają się błędy indeksowania. Szerzej cały proces opisuję w [przewodniku po migracji z WordPressa](/blog/migracja-wordpress-na-nextjs).",
+          "Migracja jest więc czymś więcej niż skopiowaniem tekstów do nowego wyglądu. Z punktu widzenia Google zmienia się techniczna wersja serwisu, dlatego trzeba zadbać o ciągłość adresów, informacji o podstronach oraz sposobu, w jaki wyszukiwarka trafia do treści.",
+        ],
+      },
+      {
+        id: "strona-czy-aplikacja",
+        heading: "Strona firmowa i aplikacja mogą używać tej samej technologii, ale mają inne zadania",
+        body: [
+          "Nie każdy projekt w Next.js powinien być aplikacją. Jeśli celem jest prezentacja firmy, usług, realizacji, wiedzy i danych kontaktowych, najczęściej wystarczy strona firmowa. Może mieć kilkanaście albo tysiące podstron i nadal pozostawać przede wszystkim serwisem, którego głównym zadaniem jest dostarczenie informacji.",
+          "Granica zaczyna się przesuwać, gdy użytkownik nie tylko czyta, ale wykonuje własne operacje. Loguje się, zapisuje informacje, otrzymuje indywidualny wynik, zarządza swoim kontem albo pracuje na danych przechowywanych w bazie. Wtedy projekt staje się aplikacją internetową, nawet jeśli część jego ekranów z zewnątrz wygląda jak zwykła strona.",
+          "Przykładem jest [konfigurator dla Galabau Darius](/projekty/galabau-darius). To aplikacja przygotowana dla niemieckiej firmy ogrodniczej. Użytkownik konfiguruje wycenę ogrodzenia w czasie rzeczywistym, a po drugiej stronie działa panel administracyjny z logowaniem przez Clerk i warstwa danych oparta na Prisma. Projekt jest wdrożony na Vercel. W takim przypadku Next.js nie służy wyłącznie do pokazania oferty. Obsługuje proces, w którym użytkownik wprowadza dane i od razu otrzymuje rezultat.",
+          "Podobną różnicę widać przy portalach danych. Ceny Notarialne wykorzystują Next.js do prezentowania cen transakcyjnych nieruchomości pochodzących z Rejestru Cen Nieruchomości, map MapLibre oraz tysięcy podstron lokalizacji. Technologia pozostaje ta sama, ale zakres projektu wyznacza rodzaj informacji, liczba danych i działania dostępne dla użytkownika.",
         ],
       },
     ],

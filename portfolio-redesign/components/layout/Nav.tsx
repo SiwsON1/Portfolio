@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { ServicesMegaMenu } from "./ServicesMegaMenu";
 
@@ -18,12 +18,22 @@ export function Nav() {
   const [megaOpen, setMegaOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[100] ${
-          megaOpen ? "" : "mix-blend-difference"
+        className={`fixed inset-x-0 top-0 z-[100] transition-[background-color,border-color] duration-500 border-b ${
+          scrolled
+            ? "border-line bg-bg/85 backdrop-blur-md"
+            : `border-transparent ${megaOpen ? "" : "mix-blend-difference"}`
         }`}
       >
         <nav
