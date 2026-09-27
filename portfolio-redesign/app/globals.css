@@ -529,30 +529,104 @@ html.vt-native::view-transition-new(*) { animation: none !important; }
   100% { opacity: 0; translate: calc(-50% + var(--dx)) calc(-50% + var(--dy)); }
 }
 
-/* C „Blueprint”: linie rysują się (pathLength=1), bloki wypełniają, kursor wpisuje nagłówek. */
+/* C „Blueprint” v2: trzy warstwy SVG w głębi (TiltBoard), kursor buduje stronę blok po bloku. Oś czasu w HeroWpC.tsx. */
+.hwC-board { container-type: inline-size; perspective: 1100px; }
+.hwC-3d { transform-style: preserve-3d; transform: rotateX(calc(var(--ry, 0) * 1deg)) rotateY(calc(var(--rx, 0) * 1deg)); will-change: transform; }
+.hwC-back { transform: translateZ(-30px); }
+.hwC-front { transform: translateZ(0); }
+.hwC-over { transform: translateZ(34px); }
+.hwC-cur { transform: translateZ(56px); overflow: visible; }
+@media (max-width: 767px) {
+  /* Na telefonie makieta cofa się w głąb przy przewijaniu, jak kula na stronie głównej. */
+  .hwC-stage { animation: svc-mark-scroll linear both; animation-timeline: scroll(); animation-range: 0 60vh; }
+}
+
 .hwC-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hwC-draw 900ms cubic-bezier(0.77, 0, 0.175, 1) both; }
 .hwC-frame { stroke: rgba(168, 218, 255, 0.55); stroke-width: 0.8; fill: none; }
 @keyframes hwC-draw { to { stroke-dashoffset: 0; } }
 .hwC-fill { fill: rgba(168, 218, 255, 0.10); opacity: 0; animation: hwC-fill 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.hwC-fill-solid { fill: oklch(18% 0.025 280); stroke: rgba(168, 218, 255, 0.35); stroke-width: 0.6; }
 .hwC-fill-peach { fill: oklch(78% 0.13 50); opacity: 0; animation: hwC-fill 400ms ease-out both; }
-.hwC-peach { fill: rgba(232, 178, 134, 0.75); }
+.hwC-fill-solid { fill: oklch(18% 0.025 280); stroke: rgba(168, 218, 255, 0.35); stroke-width: 0.6; }
+.hwC-peach { fill: rgba(232, 178, 134, 0.8); }
 .hwC-image { fill: rgba(58, 142, 200, 0.22); }
 .hwC-typed-bg { fill: rgba(168, 218, 255, 0.08); }
 .hwC-line { fill: rgba(232, 178, 134, 0.7); }
 .hwC-line-faint { fill: rgba(168, 218, 255, 0.25); }
 @keyframes hwC-fill { to { opacity: 1; } }
-.hwC-block { opacity: 0; transform-origin: center; translate: 0 10px; animation: hwC-block 700ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-@keyframes hwC-block { to { opacity: 1; translate: 0 0; } }
-.hwC-type { opacity: 0; animation: hwC-fill 200ms 2600ms both; }
-.hwC-typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; animation: hwC-type 1300ms steps(21, end) 2700ms both; }
-@keyframes hwC-type { to { width: calc(21ch + 21 * 0.18em); } }
+.hwC-dim { opacity: 0; animation: hwC-fill 300ms both; }
+
+/* Elementy „wskakują” jak bloki w edytorze: lekkie skalowanie z 0.94, nigdy z zera. */
+.hwC-pop { opacity: 0; transform-box: fill-box; transform-origin: center; scale: 0.94; translate: 0 4px; animation: hwC-pop 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hwC-pop { to { opacity: 1; scale: 1; translate: 0 0; } }
+.hwC-block { opacity: 0; transform-box: view-box; scale: 0.9; translate: 0 -10px; animation: hwC-pop 620ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+/* Przerywana ramka wstawiania: miga dwa razy w miejscu kliknięcia i gaśnie. */
+.hwC-insert { fill: rgba(232, 178, 134, 0.06); stroke: rgba(232, 178, 134, 0.9); stroke-width: 0.7; stroke-dasharray: 2.5 2; opacity: 0; animation: hwC-insert 700ms ease-out both; }
+@keyframes hwC-insert { 0% { opacity: 0; } 15% { opacity: 1; } 40% { opacity: 0.35; } 60% { opacity: 1; } 100% { opacity: 0; } }
+/* Połysk po wstawionym obrazie. */
+.hwC-shine { fill: rgba(232, 178, 134, 0.35); clip-path: inset(0 100% 0 0); animation: hwC-shine 700ms cubic-bezier(0.77, 0, 0.175, 1) both; }
+@keyframes hwC-shine { 0% { clip-path: inset(0 100% 0 0); opacity: 0.9; } 60% { clip-path: inset(0 0 0 0); opacity: 0.35; } 100% { clip-path: inset(0 0 0 100%); opacity: 0; } }
+/* Przycisk „Zapisz” pojawia się z paskiem, a o 5200 ms zostaje wciśnięty. */
+.hwC-save { opacity: 0; transform-box: fill-box; transform-origin: center; animation: hwC-fill 400ms ease-out both, hwC-press 260ms cubic-bezier(0.16, 1, 0.3, 1) 5200ms both; }
+.hwC-save-bg { fill: oklch(78% 0.13 50); }
+@keyframes hwC-press { 0% { scale: 1; } 35% { scale: 0.9; } 100% { scale: 1; } }
+/* CTA w makiecie oddycha po zakończeniu budowy. */
+.hwC-cta { animation: hwC-pop 520ms cubic-bezier(0.16, 1, 0.3, 1) both, hwC-breathe 3200ms ease-in-out 6000ms infinite; }
+@keyframes hwC-breathe { 50% { opacity: 0.55; } }
+/* Błysk migawki przy zapisie. */
+.hwC-flash { fill: rgba(244, 200, 160, 0.16); opacity: 0; clip-path: inset(0 100% 0 0); animation: hwC-flash 650ms cubic-bezier(0.77, 0, 0.175, 1) both; }
+@keyframes hwC-flash { 0% { opacity: 1; clip-path: inset(0 100% 0 0); } 50% { clip-path: inset(0 0 0 0); } 100% { opacity: 0; clip-path: inset(0 0 0 100%); } }
+
+/* Tekst pisany kursorem: pojawia się przy kliknięciu, litery po 62 ms; szerokość liczy tracking. */
+.hwC-type { font-size: clamp(9px, 2.5cqw, 13px); opacity: 0; animation: hwC-fill 200ms 1650ms both; }
+.hwC-typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; animation: hwC-type 1300ms steps(21, end) 1750ms both; }
+@keyframes hwC-type { to { width: calc(21ch + 21 * 0.16em); } }
 .hwC-caret { display: inline-block; width: 1px; height: 1.1em; margin-left: 2px; vertical-align: bottom; background: oklch(78% 0.13 50); animation: hwC-caret 900ms steps(2, end) infinite; }
 @keyframes hwC-caret { 50% { opacity: 0; } }
-.hwC-saved { opacity: 0; translate: 0 6px; animation: hwC-block 600ms cubic-bezier(0.16, 1, 0.3, 1) 4200ms both; }
-.hwC-seal { filter: drop-shadow(0 8px 24px rgba(58, 142, 200, 0.35)); }
-@media (prefers-reduced-motion: reduce) {
-  .hwA-planet, .hwA-sweep, .hwB-ghost, .hwB-part, .hwC-draw, .hwC-fill, .hwC-fill-peach, .hwC-block, .hwC-type, .hwC-typed, .hwC-saved { animation: none; opacity: 1; stroke-dashoffset: 0; translate: 0 0; }
-  .hwC-typed { width: calc(21ch + 21 * 0.18em); }
-  .hwB-part { opacity: 0; }
+/* Potwierdzenie zapisu: wsuwa się z dołu z lekkim rozmyciem, ptaszek dorysowuje się po nim. */
+.hwC-toast { font-size: clamp(8.5px, 2.2cqw, 11px); opacity: 0; translate: 0 -6px; filter: blur(4px); animation: hwC-toast 520ms cubic-bezier(0.16, 1, 0.3, 1) 5350ms both; box-shadow: 0 10px 30px -10px rgba(232, 178, 134, 0.35); }
+@keyframes hwC-toast { to { opacity: 1; translate: 0 0; filter: blur(0); } }
+.hwC-check { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hwC-draw 400ms cubic-bezier(0.16, 1, 0.3, 1) 5650ms both; }
+
+/* Kursor: droga w jednostkach viewBoxa (320 × 236), pozycje = miejsca kliknięć. Kliknięcia o 1600/3400/4200/5200 ms. */
+.hwC-cursor { translate: 330px 250px; opacity: 0; animation: hwC-cursor 6200ms both; }
+@keyframes hwC-cursor {
+  0%, 19% { translate: 330px 250px; opacity: 0; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  20% { opacity: 1; }
+  25.8% { translate: 62px 58px; }                /* 1600 ms: nagłówek */
+  54.8% { translate: 62px 58px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  60.6% { translate: 236px 84px; }               /* 3400 ms: obraz */
+  62% { translate: 236px 84px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  67.7% { translate: 160px 170px; }              /* 4200 ms: bloki */
+  75.8% { translate: 160px 170px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  83.9% { translate: 275px 24px; }               /* 5200 ms: Zapisz */
+  92% { translate: 275px 24px; opacity: 1; }
+  100% { translate: 282px 12px; opacity: 0; }
 }
+.hwC-cursor-click { transform-box: view-box; transform-origin: 0 0; animation: hwC-click 6200ms both; }
+@keyframes hwC-click {
+  0%, 25.8%, 27.4%, 54.8%, 56.4%, 67.7%, 69.3%, 83.9%, 85.5%, 100% { scale: 1; }
+  26.6%, 55.6%, 68.5%, 84.7% { scale: 0.82; }
+}
+.hwC-ripple { fill: none; stroke: rgba(232, 178, 134, 0.9); stroke-width: 0.8; opacity: 0; transform-box: view-box; transform-origin: 0 0; animation: hwC-ripple 6200ms both; }
+@keyframes hwC-ripple {
+  0%, 25.8%, 54.8%, 67.7%, 83.9% { opacity: 0; scale: 0.3; }
+  26% , 55% , 67.9%, 84.1% { opacity: 0.9; }
+  30% , 59% , 71.9%, 88.1% { opacity: 0; scale: 1.6; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hwA-planet, .hwA-sweep, .hwB-ghost, .hwB-part, .hwC-draw, .hwC-fill, .hwC-fill-peach, .hwC-pop, .hwC-block, .hwC-dim, .hwC-save, .hwC-cta, .hwC-type, .hwC-typed, .hwC-toast, .hwC-check { animation: none; opacity: 1; stroke-dashoffset: 0; translate: 0 0; scale: 1; filter: none; }
+  .hwC-typed { width: calc(21ch + 21 * 0.16em); }
+  .hwC-insert, .hwC-shine, .hwC-flash, .hwC-cursor, .hwB-part { animation: none; opacity: 0; }
+  .hwC-stage { animation: none; }
+}
+/* Poprawki v2: klasy z własnym fill (CSS bije atrybut fill, więc .hwC-fill zamalowywał siatkę i podpis). */
+.hwC-paper { fill: rgba(168, 218, 255, 0.05); opacity: 0; animation: hwC-fill 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hwC-gridrect { fill: url(#hwC-grid); opacity: 0; animation: hwC-fill 900ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hwC-label { fill: rgba(232, 178, 134, 0.85); opacity: 0; animation: hwC-fill 400ms ease-out both; }
+.hwC-toast { transform-origin: top right; scale: 0.9; }
+@keyframes hwC-toast { to { opacity: 1; translate: 0 0; filter: blur(0); scale: 1; } }
+@media (prefers-reduced-motion: reduce) { .hwC-paper, .hwC-gridrect, .hwC-label, .hwC-toast { animation: none; opacity: 1; scale: 1; } }
+/* Wąska makieta (telefon): krótszy dymek, żeby nie zasłaniał pisanego nagłówka. */
+@container (max-width: 430px) { .hwC-toast-more { display: none; } }

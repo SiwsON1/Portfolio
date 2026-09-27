@@ -8,7 +8,7 @@ import { HeroWpC } from "@/components/lab/HeroWpC";
 const WARIANTY = {
   a: { name: "Horyzont", desc: "planeta za nagłówkiem, trzy warstwy głębi, błysk na wejściu" },
   b: { name: "Sygnatura", desc: "typografia niesie hero, kula wielkości litery w zdaniu, licznik odlicza" },
-  c: { name: "Blueprint", desc: "szkic strony rysuje się i wypełnia, kursor edytuje nagłówek bez kodu" },
+  c: { name: "Blueprint", desc: "kursor buduje stronę blok po bloku, głębia reaguje na mysz i przechył, potwierdzenie zapisu" },
 } as const;
 type Klucz = keyof typeof WARIANTY;
 
