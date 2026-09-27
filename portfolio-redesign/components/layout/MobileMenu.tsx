@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -26,6 +27,19 @@ export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+
+  // Zamknięcie przy zmianie adresu oraz przy kliknięciu dowolnego linku (także logo w nagłówku
+  // i linku do bieżącej strony, gdzie adres się nie zmienia).
+  const pathname = usePathname();
+  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (e: MouseEvent) => {
+      if ((e.target as HTMLElement | null)?.closest("a[href]")) setOpen(false);
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, [open]);
 
   useEffect(() => {
     if (open) {
