@@ -2528,3 +2528,286 @@ posts.push({
     { q: "Skąd mam wiedzieć, do której wersji wytycznych dostosować moją witrynę?", a: "Poszczególne specyfikacje są ze sobą w pełni wstecznie zgodne, więc najbezpieczniejszym i najbardziej przewidującym kierunkiem jest celowanie w nowe wytyczne z wersji 2.2. Spełnienie wersji 2.2 oznacza również spełnienie wcześniejszych wersji wytycznych." },
   ],
 });
+
+posts.push({
+  slug: "woocommerce-co-to-jest",
+  title: "WooCommerce: co to jest i jak zacząć własny sklep",
+  excerpt:
+    "WooCommerce pozwala zmienić stronę na WordPressie w sklep internetowy. Wyjaśniam, co oferuje w standardzie, za co trzeba dopłacić i jak wygląda uruchomienie sprzedaży w Polsce.",
+  date: "2026-09-27",
+  updatedAt: "2026-09-26",
+  readingMinutes: 8,
+  tags: ["WooCommerce","WordPress","e-commerce"],
+  keyword: "WooCommerce co to jest",
+  relatedServices: ["sklepy-internetowe-woocommerce","integracja-woocommerce-z-baselinker","opieka-wordpress"],
+  hero: { kind: "wordpress" },
+  metaTitle: "WooCommerce: co to jest i ile kosztuje sklep",
+  metaDescription:
+    "WooCommerce to darmowa wtyczka do WordPressa, która dodaje produkty, koszyk i zamówienia. Sprawdź, co wymaga dopłaty i jak zacząć.",
+  lead:
+    "**WooCommerce to darmowa wtyczka, która dodaje funkcje sklepu internetowego do WordPressa.** Samo rozszerzenie nie ma opłaty licencyjnej, ale uruchomienie sklepu wymaga hostingu, domeny, konfiguracji oraz czasem płatnych dodatków. Poniżej wyjaśniam, co dostajesz w standardzie i jakie decyzje czekają Cię przed rozpoczęciem sprzedaży.",
+  body: ["**WooCommerce to darmowa wtyczka, która dodaje funkcje sklepu internetowego do WordPressa.** Samo rozszerzenie nie ma opłaty licencyjnej, ale uruchomienie sklepu wymaga hostingu, domeny, konfiguracji oraz czasem płatnych dodatków. Poniżej wyjaśniam, co dostajesz w standardzie i jakie decyzje czekają Cię przed rozpoczęciem sprzedaży."],
+  sections: [
+    {
+      heading: "WooCommerce zmienia WordPressa w sklep internetowy",
+      body: [
+        "WooCommerce jest wtyczką rozwijaną przez Automattic, czyli firmę związaną również z ekosystemem WordPressa. Pierwsza wersja została opublikowana 27.09.2011, a według WordPress.org wtyczka ma ponad 7 mln aktywnych instalacji. Wersja dostępna 26.09.2026 była oznaczona numerem 11.1.2.",
+        "W praktyce WordPress odpowiada za stronę, treści i zaplecze administracyjne, a WooCommerce dodaje katalog produktów, koszyk, składanie zamówień oraz obsługę sprzedaży. Nie jest więc oddzielną platformą, do której przenosisz witrynę. Działa wewnątrz WordPressa i korzysta z jego panelu.",
+        "Rdzeń WooCommerce jest udostępniany na licencji *GNU GPL w wersji 2 lub późniejszej*. Możesz korzystać z niego bez kupowania abonamentu za sam dostęp do oprogramowania. Nie oznacza to jednak, że cały sklep będzie bezpłatny. Nadal potrzebujesz miejsca na serwerze, domeny oraz poprawnie przygotowanej strony. Koszty mogą pojawić się także przy projekcie graficznym, wdrożeniu, utrzymaniu i dodatkowych funkcjach.",
+        "Według danych W3Techs z 26.09.2026 WooCommerce działał na 8,0% wszystkich analizowanych stron, 11,6% stron z rozpoznanym systemem zarządzania treścią oraz odpowiadał za 47,7% systemów e-commerce w tym badaniu. Skala wykorzystania ma praktyczną zaletę: istnieje rozbudowany ekosystem motywów, integracji, dokumentacji i specjalistów. Nie zwalnia to jednak z oceny jakości konkretnej wtyczki, ponieważ dodatki mogą pochodzić od różnych autorów.",
+        "Aktualne wymagania techniczne WooCommerce obejmują PHP 7.4 lub nowsze, przy czym zalecane jest PHP 8.0 lub nowsze. Potrzebna jest także baza MySQL 5.5.5 lub nowsza albo MariaDB 10.1 lub nowsza. Jako właściciel firmy nie musisz samodzielnie zarządzać tymi wersjami, ale warto upewnić się, że wybrany hosting je obsługuje i pozwala regularnie aktualizować środowisko.",
+      ],
+    },
+    {
+      heading: "W standardzie są produkty, koszyk i obsługa zamówień",
+      body: [
+        "Po instalacji WooCommerce możesz dodawać produkty fizyczne i cyfrowe. Produkt może mieć warianty, na przykład rozmiar, kolor albo pojemność. System przechowuje ceny, opisy, zdjęcia i informacje potrzebne do realizacji zamówienia. Dostajesz również koszyk, proces składania zamówienia, panel do zarządzania sprzedażą oraz możliwość zbierania opinii.",
+        "Rdzeń zapewnia strefy wysyłki. Strefa może obejmować konkretny kod pocztowy, wybrany obszar albo cały kraj, a kupujący jest przypisywany do jednej pasującej strefy. W standardzie dostępne są trzy podstawowe metody dostawy: stawka ryczałtowa, darmowa wysyłka i odbiór osobisty. Taka konfiguracja może wystarczyć w prostym sklepie, ale nie zapewnia automatycznie wyboru Paczkomatu, generowania etykiet ani przekazywania przesyłek do systemu przewoźnika.",
+        "WooCommerce pozwala także skonfigurować podatki. Możesz utworzyć klasy podatkowe, na przykład standardową i obniżoną, a następnie zdecydować, czy ceny w panelu wpisujesz z podatkiem, czy bez niego. Sama możliwość ustawienia stawek nie zastępuje jednak decyzji księgowej. To Ty odpowiadasz za to, jakie zasady podatkowe dotyczą sprzedawanych produktów i rynków.",
+        "Wbudowane REST API umożliwia łączenie sklepu z innymi systemami. Technicznie jest to sposób bezpiecznego przekazywania danych między WooCommerce a zewnętrzną usługą. Dla Ciebie korzyścią może być automatyczna wymiana informacji o produktach, stanach magazynowych i zamówieniach. Jeśli sprzedaż odbywa się również przez marketplace, przydatna może być [integrację z BaseLinkerem](/uslugi/integracja-woocommerce-z-baselinker), ale jej zakres zależy od kanałów sprzedaży i sposobu prowadzenia magazynu.",
+        "**WooCommerce daje podstawę sklepu, a nie gotowy proces firmy.** Trzeba jeszcze ustalić, jak przyjmujesz płatności, nadajesz paczki, wystawiasz dokumenty, obsługujesz zwroty i aktualizujesz stany. Im wcześniej opiszesz ten proces, tym łatwiej ocenisz, które funkcje są potrzebne od startu.",
+      ],
+    },
+    {
+      heading: "Płatne dodatki rozszerzają sklep o konkretną funkcję",
+      body: [
+        "Model WooCommerce opiera się na darmowym rdzeniu i rozszerzeniach. Część dodatków jest bezpłatna, a część działa w rocznym abonamencie obejmującym aktualizacje i wsparcie. W oficjalnym marketplace WooCommerce wybrane produkty mają 30 dni gwarancji zwrotu, ale przed zakupem warto sprawdzić warunki dotyczące konkretnego rozszerzenia.",
+        "Przykładem jest WooCommerce Subscriptions, dodatek do płatności cyklicznych rozwijany przez Woo. Według ceny widocznej 26.09.2026 kosztował 279 USD za rok albo 446,40 USD za 2 lata. Product Bundles, służący do tworzenia zestawów produktów, kosztował 79 USD za rok albo 126,40 USD za 2 lata. Te kwoty pokazują model rozliczeń konkretnych dodatków, a nie pełny zakres cen w marketplace.",
+        "Dopłata może być potrzebna również wtedy, gdy sklep ma obsługiwać rezerwacje, abonamenty, złożone zestawy, sprzedaż B2B albo nietypowe reguły cenowe. Przed zakupem wtyczki sprawdzam, czy funkcji nie da się osiągnąć przez poprawną konfigurację rdzenia. Zbyt wiele dodatków zwiększa liczbę aktualizacji, możliwych konfliktów oraz zależności od zewnętrznych autorów.",
+        "Osobną decyzją jest wygląd sklepu. Oficjalna dokumentacja wskazuje darmowy motyw Storefront jako rozwiązanie startowe. Możesz też użyć gotowego motywu albo kreatora stron, lecz każde takie narzędzie narzuca własny sposób budowania widoków. W nowych projektach przygotowuję własny motyw bez Elementora, Divi i Avady. Dzięki temu panel zawiera pola odpowiadające faktycznym sekcjom projektu, zamiast wielu opcji niezwiązanych z Twoim sklepem.",
+        "Przy rozbudowanej ofercie sam wybór narzędzia nie rozwiązuje problemu prezentacji produktów. [Sklep dla marki odzieżowej](/tworzenie-sklepow-internetowych-dla-marek-odziezowych) może wymagać wariantów rozmiarowych, tabeli rozmiarów, filtrów i obsługi kolekcji. Sklep z niewielkim katalogiem technicznym może z kolei potrzebować rozbudowanych parametrów oraz zapytań o dostępność. O kosztach często decyduje logika sprzedaży, a nie liczba ekranów widocznych na początku.",
+      ],
+    },
+    {
+      heading: "Uruchomienie sklepu zaczyna się od hostingu i domeny",
+      body: [
+        "Oficjalna dokumentacja WooCommerce opisuje start w 5 krokach: wybór hostingu, instalację WordPressa, instalację i aktywację WooCommerce, wybór motywu oraz dodanie potrzebnych rozszerzeń. W rzeczywistym wdrożeniu dochodzi do tego przygotowanie katalogu, metod dostawy, płatności, podatków, dokumentów i wiadomości wysyłanych do kupujących.",
+        "Hosting przechowuje pliki, bazę danych, zdjęcia produktów i informacje o zamówieniach. Przy wyborze sprawdź zgodność z wymaganiami WooCommerce, dostępność kopii zapasowych, certyfikatu SSL oraz możliwość zmiany zasobów, gdy sklep się rozwinie. Najtańszy pakiet nie musi być właściwy, jeżeli duży katalog albo intensywny ruch zacznie przeciążać serwer.",
+        "Domena jest adresem sklepu. Możesz kupić ją u operatora hostingu albo u oddzielnego rejestratora. Rozdzielenie tych usług nie przeszkadza w działaniu strony, ale wymaga poprawnego ustawienia DNS, czyli wskazania, na jaki serwer ma kierować domena.",
+        "WordPress można zainstalować za pomocą instalatora dostępnego u hostingodawcy albo pobrać z WordPress.org. Następnie w panelu instalujesz i aktywujesz WooCommerce. Kreator konfiguracji pomaga ustawić podstawowe dane sklepu, walutę, rodzaje produktów oraz początkowe opcje dostawy. To punkt wyjścia, a nie zamiennik testów całego procesu zakupowego.",
+        "Kolejny etap obejmuje motyw, strukturę kategorii, karty produktów i koszyk. Warto wcześniej przygotować dane produktów w spójnym układzie. Nazwy, warianty, zdjęcia, stany, ceny i klasy podatkowe powinny tworzyć katalog, który da się później rozwijać bez ręcznego poprawiania tych samych informacji w wielu miejscach.",
+        "Przed uruchomieniem potrzebne są testy na wersji testowej. Sprawdzam między innymi dodawanie wariantów do koszyka, naliczanie dostawy, przejście do płatności, zmianę statusu zamówienia oraz wiadomości wysyłane po zakupie. Przy [sklepach WooCommerce](/uslugi/sklepy-internetowe-woocommerce) istotny jest cały przebieg zamówienia, nie tylko wygląd strony głównej.",
+      ],
+    },
+    {
+      heading: "Polski sklep potrzebuje lokalnych płatności i dostaw",
+      body: [
+        "Podstawowy WooCommerce nie uruchamia automatycznie BLIKA ani szybkich przelewów. Bramkę płatniczą dodajesz za pomocą modułu operatora, a następnie konfigurujesz ją w panelu WooCommerce w ustawieniach płatności. Konieczne jest również zawarcie umowy z operatorem i uzupełnienie danych otrzymanych po aktywacji konta.",
+        "Przelewy24 udostępnia bezpłatny moduł zgodny z WooCommerce od wersji 9.x do 11.x. Obsługuje między innymi BLIK wewnątrz sklepu, karty, Google Pay i Apple Pay. PayU oferuje wtyczkę PayU GPO Payment for WooCommerce, która według WordPress.org ma ponad 10 000 aktywnych instalacji i obsługuje BLIK. Tpay również ma własną wtyczkę zgodną z WooCommerce Blocks, umożliwiającą wyświetlenie listy banków i BLIKA bezpośrednio w koszyku.",
+        "Dostawa działa podobnie. WooCommerce przechowuje reguły wysyłki, ale połączenie z konkretnym przewoźnikiem zwykle wymaga jego modułu albo integratora. Wtyczka InPost PL ma ponad 10 000 aktywnych instalacji i obsługuje Paczkomat 24/7, Kuriera InPost, Paczkę w Weekend, Szybkie Zwroty oraz pobranie. Dokumentacja InPost określa ją jako własną wtyczkę, natomiast na WordPress.org jako autor widnieje ilabs, czyli Inspire Labs, wykonawca rozwiązania dla InPost.",
+        "Przed wyborem modułu sprawdź, czy obsługuje aktualną wersję WooCommerce, wybrany sposób budowy koszyka i potrzebne metody płatności lub dostawy. Znaczenie ma także sposób aktualizacji oraz dostępność dokumentacji. Logo operatora na liście funkcji nie potwierdza jeszcze, że integracja pokryje Twój konkretny proces.",
+        "Po konfiguracji warto przeprowadzić rzeczywistą transakcję testową. Taki test pozwala zweryfikować przekierowanie do operatora, potwierdzenie płatności, zmianę statusu zamówienia, wiadomości oraz przekazanie danych do wysyłki. Dzięki temu problem nie ujawni się dopiero przy pierwszym zakupie.",
+      ],
+    },
+    {
+      heading: "Cena sklepu obejmuje więcej niż darmową wtyczkę",
+      body: [
+        "Na koszt uruchomienia wpływają projekt, sposób budowy motywu, liczba typów produktów, warianty, import danych, płatności, dostawy oraz integracje. Znaczenie ma też to, czy sklep powstaje od początku, czy zastępuje działający system z historią zamówień i istniejącymi adresami produktów.",
+        "Poniższe przykłady pochodzą z publicznych cenników dostępnych 26.09.2026. Nie są moim cennikiem ani uniwersalnym kosztem WooCommerce.",
+        "Studio Kreatywnych Stron opisuje ten cennik jako cennik 2025, mimo że strona była dostępna we wrześniu 2026. To ważne zastrzeżenie, ponieważ publiczna kwota nie gwarantuje aktualnej oferty ani identycznego zakresu dla Twojego sklepu.",
+        "Do budżetu trzeba doliczyć utrzymanie hostingu i domeny, prowizje operatorów płatności oraz ewentualne licencje rozszerzeń. Płatne dodatki mogą odnawiać się co rok, więc warto patrzeć nie tylko na koszt startu, lecz także na koszt działania sklepu po uruchomieniu. Jeśli funkcja opiera się na kilku abonamentach, każda zmiana ich cen albo warunków może wpłynąć na utrzymanie projektu.",
+      ],
+      table: {"caption":"Cena sklepu obejmuje więcej niż darmową wtyczkę","head":["Firma","Publiczna cena","Informacja z cennika"],"rows":[["KC Mobile","od 8 000 zł netto","Projekt graficzny oraz konfiguracja płatności i wysyłek"],["KC Mobile","od 979 zł miesięcznie","Opieka techniczna"],["Studio Kreatywnych Stron","od 3 750 do 10 200 zł netto","Zakres cen sklepu"],["Studio Kreatywnych Stron","4 750 zł netto","Pakiet prosty"],["Studio Kreatywnych Stron","6 060 zł netto","Pakiet standard"],["Studio Kreatywnych Stron","7 540 zł netto","Pakiet premium"]]},
+    },
+    {
+      heading: "WooCommerce daje kontrolę, a abonament upraszcza obsługę",
+      body: [
+        "WooCommerce jest dobrym wyborem, gdy chcesz prowadzić sklep na własnym WordPressie, swobodnie rozwijać wygląd oraz łączyć sprzedaż z treściami. Sprawdza się także wtedy, gdy potrzebujesz nietypowej prezentacji produktów, integracji z zewnętrznym systemem albo kontroli nad adresem i strukturą podstron.",
+        "Ta elastyczność oznacza odpowiedzialność za hosting, kopie zapasowe, aktualizacje i zgodność dodatków. Możesz zlecić te zadania, ale nie znikają one z procesu. Przy większej liczbie rozszerzeń potrzebne są testy po aktualizacjach, zwłaszcza w obszarze koszyka, płatności i dostawy.",
+        "Platforma abonamentowa może być rozsądniejsza, jeżeli priorytetem jest szybkie uruchomienie standardowego sklepu bez samodzielnego zarządzania WordPressem. Dostawca utrzymuje wtedy środowisko, a Ty korzystasz z funkcji dostępnych w wybranym planie. Ograniczeniem może być mniejsza swoboda zmian, zależność od regulaminu platformy i dodatkowe opłaty za aplikacje.",
+        "Decyzję warto oprzeć na procesie sprzedaży. Jeśli oferta mieści się w standardowym katalogu, nie wymaga nietypowych integracji, a wygoda obsługi jest ważniejsza od swobody technicznej, abonament może być prostszym rozwiązaniem. Jeżeli sklep ma być częścią rozbudowanej strony, rozwijać własne funkcje i wymieniać dane z innymi systemami, WooCommerce daje więcej możliwości, ale wymaga świadomego utrzymania.",
+      ],
+    },
+  ],
+  faq: [
+    { q: "Czy WooCommerce jest naprawdę darmowy?", a: "Tak, rdzeń WooCommerce jest darmową wtyczką na licencji *GNU GPL w wersji 2 lub późniejszej*. Zapłacisz jednak za hosting, domenę, wdrożenie oraz te rozszerzenia, których potrzebuje Twój model sprzedaży." },
+    { q: "Czy do WooCommerce potrzebuję WordPressa?", a: "Tak, WooCommerce działa jako wtyczka do WordPressa. Najpierw instalujesz WordPressa na hostingu, a następnie dodajesz i aktywujesz WooCommerce." },
+    { q: "Ile kosztuje wykonanie mojego sklepu WooCommerce?", a: "Głównym czynnikiem kosztu jest zakres procesu sprzedaży, szczególnie warianty, import produktów i integracje. Publiczne cenniki dostępne we wrześniu 2026 pokazywały między innymi ofertę KC Mobile od 8 000 zł netto oraz zakres od 3 750 do 10 200 zł netto w Studio Kreatywnych Stron." },
+    { q: "Czy WooCommerce obsługuje BLIK i Paczkomaty?", a: "Tak, ale potrzebujesz odpowiednich modułów operatorów. BLIK obsługują między innymi wtyczki Przelewy24, PayU i Tpay, a dostawy do Paczkomatów można połączyć przez InPost PL." },
+    { q: "Kiedy lepiej wybrać platformę abonamentową?", a: "Platforma abonamentowa ma sens, gdy potrzebujesz standardowego sklepu i nie chcesz zarządzać hostingiem ani aktualizacjami WordPressa. WooCommerce lepiej odpowiada projektom, w których ważne są własny wygląd, rozbudowa funkcji i integracje z innymi systemami." },
+  ],
+});
+
+posts.push({
+  slug: "baselinker-co-to-jest",
+  title: "BaseLinker: co to jest i kiedy przydaje się firmie?",
+  excerpt:
+    "BaseLinker porządkuje obsługę sprzedaży prowadzonej w sklepie internetowym i na marketplace'ach. Wyjaśniam, co łączy, ile kosztuje i kiedy jego wdrożenie ma sens.",
+  date: "2026-09-27",
+  updatedAt: "2026-09-26",
+  readingMinutes: 7,
+  tags: ["BaseLinker","WooCommerce","e-commerce"],
+  keyword: "BaseLinker co to jest",
+  relatedServices: ["integracja-woocommerce-z-baselinker","sklepy-internetowe-woocommerce"],
+  hero: { kind: "performance" },
+  metaTitle: "BaseLinker: co to jest i jak działa w e-commerce",
+  metaDescription:
+    "BaseLinker to system łączący sklep, marketplace, magazyn, kurierów i faktury. Zobacz, jak działa, ile kosztuje i kiedy warto go wdrożyć.",
+  lead:
+    "**BaseLinker to system, który łączy zamówienia, magazyn, kanały sprzedaży, dostawy i fakturowanie w jednym panelu.** Przydaje się przede wszystkim firmom sprzedającym przez kilka kanałów lub obsługującym tyle zamówień, że ręczne przenoszenie danych zaczyna powodować opóźnienia i pomyłki. Wyjaśniam, jak działa BaseLinker, jak łączy się z WooCommerce i kiedy może być zbyt rozbudowany dla Twojej firmy.",
+  body: ["**BaseLinker to system, który łączy zamówienia, magazyn, kanały sprzedaży, dostawy i fakturowanie w jednym panelu.** Przydaje się przede wszystkim firmom sprzedającym przez kilka kanałów lub obsługującym tyle zamówień, że ręczne przenoszenie danych zaczyna powodować opóźnienia i pomyłki. Wyjaśniam, jak działa BaseLinker, jak łączy się z WooCommerce i kiedy może być zbyt rozbudowany dla Twojej firmy."],
+  sections: [
+    {
+      heading: "BaseLinker łączy kanały sprzedaży i obsługę zamówień",
+      body: [
+        "Jeśli wpisujesz w wyszukiwarkę „BaseLinker co to jest”, prawdopodobnie nie szukasz kolejnego programu do prowadzenia sklepu. Chcesz raczej zrozumieć, czy system pomoże Ci uporządkować sprzedaż internetową. Najprościej ująć to tak: BaseLinker, obecnie rozwijany także pod marką Base, pełni funkcję centrum dowodzenia e-commerce.",
+        "System nie zastępuje sklepu WooCommerce, konta na Allegro ani programu księgowego. Łączy te narzędzia i pozwala zarządzać przepływem informacji pomiędzy nimi. Zamówienie złożone w sklepie lub na marketplace trafia do wspólnego panelu. Z tego miejsca można obsługiwać sprzedaż, korzystać z połączeń z przewoźnikami, przekazywać dane do systemu fakturowego oraz kontrolować informacje magazynowe.",
+        "Base deklaruje ponad 2000 integracji i obecność w 180 krajach. Z systemu ma korzystać ponad 30 000 firm, a liczba aktywnych ofert obsługiwanych przez platformę przekracza 200 mln. Te liczby pokazują skalę rozwiązania, ale nie przesądzają, czy będzie ono odpowiednie dla Twojego sklepu. Ważniejsza jest liczba procesów, które rzeczywiście chcesz połączyć.",
+        "Wśród dostępnych integracji znajdują się marketplace'y Allegro, Amazon, eBay i eMAG, platformy sklepowe WooCommerce, PrestaShop, Shoper i Magento, a także InPost, DPD oraz DHL. BaseLinker można również połączyć z Fakturownią, KSeF i systemami ERP. Dzięki temu dane nie muszą być przepisywane osobno w każdym narzędziu.",
+        "Jeżeli dopiero wybierasz silnik sklepu, przeczytaj również poradnik [WooCommerce: co to jest](/blog/woocommerce-co-to-jest). BaseLinker i WooCommerce rozwiązują inne problemy. WooCommerce odpowiada za sklep dostępny dla kupującego, natomiast BaseLinker pomaga zarządzać zapleczem sprzedaży i połączeniami z innymi kanałami.",
+      ],
+    },
+    {
+      heading: "Działanie BaseLinkera zależy od poprawnie zaplanowanych integracji",
+      body: [
+        "Sam dostęp do dużej liczby integracji nie oznacza jeszcze, że sprzedaż zacznie działać automatycznie. Najpierw trzeba ustalić, które narzędzie jest głównym źródłem danych o produktach, cenach i stanach magazynowych. Bez takiej decyzji łatwo stworzyć sytuację, w której sklep, marketplace i magazyn przekazują sobie sprzeczne informacje.",
+        "Przykładowo produkty mogą być tworzone w WooCommerce, pobierane z hurtowni albo przechowywane w zewnętrznym systemie ERP. BaseLinker powinien wiedzieć, skąd ma pobierać dane i dokąd je przekazywać. To samo dotyczy zmian stanów magazynowych. Gdy produkt zostanie kupiony na Allegro, jego dostępność w sklepie powinna zostać odpowiednio zmniejszona, jeśli oba kanały korzystają z tego samego zapasu.",
+        "Istotne są też statusy zamówień. Sklep może posługiwać się innymi nazwami niż marketplace lub program magazynowy. Podczas wdrożenia trzeba więc określić, co ma się wydarzyć po opłaceniu zamówienia, przygotowaniu przesyłki, anulowaniu zakupu albo zwrocie. System wykonuje ustalone operacje, ale wcześniej ktoś musi przełożyć rzeczywisty sposób pracy firmy na spójne reguły.",
+        "Z perspektywy właściciela sklepu największą korzyścią jest ograniczenie ręcznej obsługi powtarzalnych czynności. Nie chodzi jednak o automatyzowanie wszystkiego. Wyjątki, takie jak brak towaru, nietypowa forma dostawy czy zamówienie wymagające dodatkowej weryfikacji, nadal potrzebują jasnej procedury i czasem decyzji człowieka.",
+        "Dlatego przed uruchomieniem integracji sprawdzam nie tylko listę używanych narzędzi, lecz także drogę zamówienia od zakupu do wysyłki i dokumentu sprzedaży. Dobrze zaplanowana konfiguracja odzwierciedla faktyczny proces firmy. Źle zaplanowana może jedynie szybciej przekazywać błędne dane pomiędzy systemami.",
+      ],
+    },
+    {
+      heading: "Cennik BaseLinkera zależy od liczby zamówień i skali sprzedaży",
+      body: [
+        "Oficjalny cennik Base z września 2026 roku obejmuje plany Freemium, Business i Enterprise. Podane kwoty są cenami netto. Każdy plan pozwala korzystać z nielimitowanej liczby integracji, a przed wyborem abonamentu można uruchomić 14 dni darmowego testu z pełnym dostępem.",
+        "GMV oznacza łączną wartość sprzedaży obsługiwanej przez system. Próg dla planu Enterprise może więc wynikać z liczby zamówień albo z ich wartości. Sklep realizujący mniej transakcji, ale sprzedający drogie produkty, może osiągnąć wskazany poziom GMV wcześniej niż biznes oparty na dużej liczbie tanich produktów.",
+        "Przy ocenie kosztu nie warto patrzeć wyłącznie na miesięczny abonament. Znaczenie ma również czas potrzebny na konfigurację, uporządkowanie katalogu, dopasowanie statusów i testy. Jeśli dane produktowe są niespójne, samo podłączenie systemu nie naprawi nazw, wariantów, numerów produktów ani zasad aktualizacji cen.",
+        "Okres testowy najlepiej wykorzystać na odtworzenie reprezentatywnego procesu sprzedaży. W praktyce oznacza to sprawdzenie importu produktów, przejścia zamówienia przez kolejne statusy, zmiany stanu magazynowego oraz przekazania danych do dostawy i fakturowania. Samo zalogowanie się do panelu nie odpowie na pytanie, czy BaseLinker pasuje do sposobu działania Twojej firmy.",
+        "Cennik może się zmienić, dlatego przed decyzją trzeba sprawdzić aktualne warunki bezpośrednio na stronie Base. Szczególnie ważne jest ustalenie, które elementy mieszczą się w wybranym planie i jak opłaty będą rosły wraz z liczbą zamówień.",
+      ],
+      table: {"caption":"Cennik BaseLinkera zależy od liczby zamówień i skali sprzedaży","head":["Plan","Cena według cennika Base","Dla jakiej skali"],"rows":[["Freemium","0 zł miesięcznie","Do 100 zamówień miesięcznie"],["Business","279 zł miesięcznie oraz 0,99 zł za zamówienie","Sklepy przekraczające limit planu bezpłatnego"],["Enterprise","Wycena indywidualna","Od 5000 zamówień miesięcznie lub od 1 mln zł miesięcznego GMV"]]},
+    },
+    {
+      heading: "Połączenie WooCommerce z BaseLinkerem wymaga dostępu do danych sklepu",
+      body: [
+        "Integrację rozpoczyna się w panelu Base. W sekcji integracji dodaje się WooCommerce, podaje nazwę wyświetlaną o długości do 15 znaków oraz domenę sklepu. Następnie w WordPressie trzeba przejść do ustawień zaawansowanych WooCommerce i utworzyć klucz REST API.",
+        "REST API to mechanizm, dzięki któremu dwa systemy mogą wymieniać dane bez ręcznego kopiowania ich przez człowieka. Klucz przypisuje się do administratora i nadaje mu uprawnienia odczytu oraz zapisu. Wygenerowane dane dostępowe wkleja się następnie w panelu Base.",
+        "Base zaleca również instalację swojej oficjalnej wtyczki do WordPressa. Jej zadaniem jest wspieranie poprawnego przekazywania danych zamówień. Integracja wymaga działającego REST API oraz prawidłowej konfiguracji bezpośrednich linków w WordPressie. Jeśli ten mechanizm jest blokowany przez ustawienia strony, zabezpieczenia lub serwer, połączenie nie będzie działało prawidłowo.",
+        "Techniczne połączenie systemów jest dopiero początkiem. Trzeba jeszcze zdecydować, które produkty mają być synchronizowane, jak traktować warianty, skąd pobierać stany i ceny oraz jak odwzorować statusy zamówień. Ważne jest także przetestowanie zwrotów, anulowań i sytuacji, w których ostatnia sztuka produktu zostanie kupiona w jednym z kanałów.",
+        "Przygotowując [integrację WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker), zaczynam od rozpoznania obecnego obiegu danych. Inaczej wygląda konfiguracja sklepu prowadzącego własny magazyn, a inaczej sprzedaż oparta na kilku dostawcach. Przykładem mojego wdrożenia sklepowego jest [Kosmoteka](/projekty/kosmoteka), zbudowana na WooCommerce. Sam wybór tej platformy nie przesądza jednak o potrzebie korzystania z BaseLinkera.",
+        "Po konfiguracji warto przeprowadzić test na kontrolowanym zamówieniu. Sprawdzam wtedy, czy dane kupującego, produkty, płatność, dostawa, status i dokument sprzedaży trafiają do właściwych miejsc. Taki test pozwala wychwycić błędy przed obsługą rzeczywistych zamówień.",
+      ],
+    },
+    {
+      heading: "Moduł hurtowni pomaga aktualizować ofertę i obsługiwać dropshipping",
+      body: [
+        "BaseLinker może pobierać asortyment od dostawcy z pliku XML lub CSV udostępnionego pod wskazanym adresem. Hurtownia pojawia się wtedy jako osobny magazyn. Z jej katalogu można przygotowywać oferty przeznaczone między innymi na Allegro, eBay i Amazon.",
+        "Według materiałów Base stany magazynowe i ceny z hurtowni mogą być pobierane co godzinę, natomiast opisy oraz zdjęcia są aktualizowane codziennie. Oferty można automatycznie aktualizować albo zamykać w zależności od dostępności produktu u dostawcy. Ma to szczególne znaczenie wtedy, gdy nie przechowujesz towaru we własnym magazynie.",
+        "W przypadku hurtowni udostępniających API zamówienia mogą być przekazywane automatycznie do dostawcy. API oznacza tutaj połączenie systemowe, które pozwala wysłać dane zamówienia bez przepisywania ich do panelu hurtowni. Jest to podstawa automatyzacji dropshippingu, ale wymaga sprawdzenia, jakie informacje przyjmuje konkretny dostawca i jak raportuje realizację.",
+        "System pozwala także ustalać narzuty cenowe osobno dla poszczególnych hurtowni. Nie zwalnia to jednak z kontroli rentowności. Cena zakupu może się zmieniać, a na wynik sprzedaży wpływają również prowizje marketplace, dostawa, płatności, zwroty i podatki. Automatyczna aktualizacja ceny powinna wynikać z przemyślanej reguły, a nie wyłącznie z prostego dodania marży.",
+        "Hurtownię można połączyć przez gotowy moduł konkretnego dostawcy, Base Connect albo własną integrację wykorzystującą API. Dostępny jest również uproszczony format XML Light, który przekazuje kod produktu, stan i cenę. Wybór metody zależy przede wszystkim od jakości danych udostępnianych przez hurtownię.",
+        "Przed wdrożeniem sprawdziłbym zgodność kodów produktów, wariantów, kategorii, stawek podatku, zdjęć i opisów. Jeśli dwa źródła inaczej identyfikują ten sam produkt, aktualizacja może stworzyć duplikaty albo przypisać niewłaściwy stan. Moduł hurtowni usprawnia przepływ danych, ale jakość efektu nadal zależy od jakości danych wejściowych.",
+      ],
+    },
+    {
+      heading: "BaseLinker ma sens wtedy, gdy upraszcza realny proces sprzedaży",
+      body: [
+        "BaseLinker jest uzasadnionym wyborem, gdy sprzedajesz przez sklep i marketplace, obsługujesz kilka kont sprzedażowych, korzystasz z zewnętrznego magazynu lub potrzebujesz połączyć zamówienia z kurierami, fakturowaniem i ERP. Im więcej danych przepisujesz ręcznie między panelami, tym większa jest przestrzeń do uporządkowania pracy.",
+        "Nie oznacza to, że system jest potrzebny każdemu sklepowi. Jeśli prowadzisz jeden prosty sklep, masz niewiele zamówień, nie korzystasz z marketplace'ów, a obecna obsługa nie powoduje pomyłek ani opóźnień, dodatkowy panel może być przerostem formy. Pojawi się kolejna konfiguracja do utrzymania, mimo że problem integracji właściwie nie istnieje.",
+        "Ostrożność jest potrzebna również wtedy, gdy katalog produktów jest nieuporządkowany albo firma nie potrafi wskazać głównego źródła stanów i cen. W takiej sytuacji wdrożenie warto poprzedzić uporządkowaniem danych. Inaczej automatyzacja może rozprowadzić te same błędy do sklepu, marketplace'ów i systemu magazynowego.",
+        "Decyzję najlepiej oprzeć na konkretnym procesie, a nie na samej liczbie dostępnych funkcji. Spisz, skąd pochodzą produkty, gdzie zmieniają się ceny, kto obsługuje zamówienia, jak powstaje przesyłka i do którego systemu trafia dokument sprzedaży. Następnie wskaż ręczne czynności, opóźnienia i miejsca powstawania pomyłek.",
+        "Jeśli BaseLinker usuwa kilka takich problemów i łączy narzędzia, z których faktycznie korzystasz, może stać się ważną częścią zaplecza sklepu. Gdy miałby jedynie powielać możliwości WooCommerce, lepiej najpierw wykorzystać obecny system i wrócić do integracji po wzroście sprzedaży lub uruchomieniu kolejnego kanału.",
+      ],
+    },
+  ],
+  faq: [
+    { q: "Czy BaseLinker i Base to ten sam system?", a: "Base to marka rozwijana na stronie base.com, a nazwa BaseLinker nadal jest powszechnie używana przez właścicieli sklepów i w materiałach dotyczących integracji. W praktyce obie nazwy odnoszą się do platformy służącej do zarządzania sprzedażą i łączenia systemów e-commerce." },
+    { q: "Czy mogę połączyć mój sklep WooCommerce z BaseLinkerem?", a: "Tak, WooCommerce ma oficjalną integrację z Base. Połączenie wymaga utworzenia klucza REST API z uprawnieniami odczytu i zapisu, podania danych sklepu w panelu oraz działającego mechanizmu wymiany danych w WordPressie." },
+    { q: "Ile kosztuje BaseLinker dla mojego sklepu?", a: "Według cennika Base z września 2026 roku plan Freemium kosztuje 0 zł netto i obejmuje do 100 zamówień miesięcznie. Plan Business kosztuje 279 zł netto miesięcznie oraz 0,99 zł netto za zamówienie, a Enterprise ma indywidualną wycenę." },
+    { q: "Czy mogę przetestować BaseLinker przed wykupieniem planu?", a: "Każdy plan obejmuje 14 dni darmowego testu z pełnym dostępem. Ten czas warto przeznaczyć na sprawdzenie całej drogi zamówienia, a nie tylko na przegląd funkcji panelu." },
+    { q: "Czy BaseLinker będzie dobry dla mojego małego sklepu?", a: "Może być przydatny, jeśli sprzedajesz w kilku kanałach lub ręcznie przenosisz dane między sklepem, marketplace'em, kurierem i fakturowaniem. Przy jednym prostym sklepie i niewielkiej liczbie zamówień dodatkowy system może jednak zwiększyć złożoność zamiast ją ograniczyć." },
+  ],
+});
+
+posts.push({
+  slug: "hosting-strony-co-to-jest",
+  title: "Hosting strony internetowej: co to jest i jaki wybrać?",
+  excerpt:
+    "Hosting przechowuje pliki, bazę danych i pocztę powiązaną ze stroną. Wyjaśniam, jak odróżnić go od domeny, porównać dostępne rodzaje i ocenić rzeczywisty koszt odnowienia.",
+  date: "2026-09-27",
+  updatedAt: "2026-09-26",
+  readingMinutes: 7,
+  tags: ["hosting","WordPress","domena"],
+  keyword: "hosting strony internetowej co to jest",
+  relatedServices: ["tworzenie-stron-www","opieka-wordpress","tworzenie-stron-wordpress"],
+  hero: { kind: "performance" },
+  metaTitle: "Hosting strony internetowej: co to jest i jaki wybrać",
+  metaDescription:
+    "Hosting to miejsce na pliki i bazę strony. Sprawdź, czym różni się od domeny, ile kosztuje i jak wybrać bezpieczny pakiet dla firmy.",
+  lead:
+    "**Hosting strony internetowej to usługa udostępniająca miejsce i zasoby potrzebne do działania witryny.** Domena jest adresem, a hosting zapleczem, z którego przeglądarka pobiera treść strony. W tym poradniku pokazuję, jaki rodzaj hostingu może pasować do strony firmowej i które parametry warto sprawdzić przed zakupem.",
+  body: ["**Hosting strony internetowej to usługa udostępniająca miejsce i zasoby potrzebne do działania witryny.** Domena jest adresem, a hosting zapleczem, z którego przeglądarka pobiera treść strony. W tym poradniku pokazuję, jaki rodzaj hostingu może pasować do strony firmowej i które parametry warto sprawdzić przed zakupem."],
+  sections: [
+    {
+      heading: "Hosting strony internetowej i domena pełnią różne funkcje",
+      body: [
+        "Hosting to usługa, dzięki której pliki strony, baza danych oraz pozostałe potrzebne zasoby są dostępne na serwerze podłączonym do internetu. Gdy ktoś wpisuje adres Twojej firmy w przeglądarce, serwer odpowiada na zapytanie i przesyła zawartość witryny. Bez hostingu strona nie ma miejsca, z którego mogłaby zostać wyświetlona użytkownikowi.",
+        "Domena jest natomiast czytelnym dla człowieka adresem prowadzącym do serwera. Zamiast zapamiętywać jego adres IP, użytkownik wpisuje nazwę zakończoną odpowiednim rozszerzeniem, na przykład .pl. System DNS tłumaczy domenę na adres IP i kieruje przeglądarkę do właściwego serwera.",
+        "Najłatwiej porównać domenę do adresu firmy, a hosting do lokalu znajdującego się pod tym adresem. Sam adres nie pomieści strony, a serwer bez przypisanej domeny będzie trudny do odnalezienia przez klientów. Obie usługi współpracują, ale są kupowane, odnawiane i konfigurowane oddzielnie.",
+        "Domena i hosting nie muszą znajdować się u tego samego operatora. Możesz zarejestrować domenę w jednej firmie, a stronę utrzymywać w drugiej. Wymaga to wskazania w ustawieniach DNS, do którego serwera ma prowadzić adres. Taka konfiguracja daje większą swobodę przy zmianie usługodawcy, ale wymaga zachowania dostępu do obu paneli.",
+        "Do działania strony mogą dochodzić również poczta firmowa, certyfikat SSL, system kopii zapasowych i baza danych. Część firm umieszcza te elementy w jednym pakiecie, inne traktują je jako usługi dodatkowe. Dlatego porównanie ofert tylko na podstawie ceny wyświetlonej na początku strony sprzedażowej może prowadzić do błędnego wyboru.",
+      ],
+    },
+    {
+      heading: "Rodzaj hostingu powinien odpowiadać stronie i jej obciążeniu",
+      body: [
+        "Hosting współdzielony polega na tym, że wiele stron korzysta z zasobów jednego serwera. Operator zajmuje się jego administracją, a Ty otrzymujesz panel pozwalający dodać domenę, utworzyć skrzynkę pocztową, uruchomić bazę danych lub zainstalować WordPressa. To popularne rozwiązanie dla początkujących, stron firmowych i witryn z małym ruchem.",
+        "Współdzielenie zasobów ma jednak konsekwencje. Limity procesora, pamięci i liczby jednoczesnych operacji mogą ograniczyć stronę podczas wzrostu zainteresowania. Sama duża pojemność dysku nie oznacza więc, że pakiet poradzi sobie z rozbudowanym sklepem, importem produktów albo intensywnie używanym systemem rezerwacji.",
+        "Zarządzany hosting WordPress jest przygotowany pod ten konkretny system. Usługa może obejmować automatyczne aktualizacje, wsparcie znające WordPressa oraz infrastrukturę dobraną do sposobu jego działania. To wygodne, jeśli nie chcesz samodzielnie zajmować się administracją serwera. Przed zakupem warto jednak sprawdzić, co operator rzeczywiście rozumie przez słowo „zarządzany”, ponieważ zakres pomocy może różnić się między ofertami.",
+        "VPS zapewnia stałą, wydzieloną część zasobów fizycznego serwera. Daje większą kontrolę niż hosting współdzielony, ale zwykle wymaga administrowania systemem, aktualizacjami, zabezpieczeniami i kopiami. VPS może mieć sens dla rozbudowanej strony, aplikacji albo kilku serwisów, o ile ktoś odpowiada za jego poprawną konfigurację.",
+        "Hosting chmurowy wykorzystuje infrastrukturę obejmującą wiele serwerów i pozwala dostosowywać zasoby do zapotrzebowania. Sprawdza się, gdy obciążenie zmienia się w czasie lub ciągłość działania ma szczególne znaczenie. Sposób rozliczania może być mniej przewidywalny niż w prostym abonamencie, dlatego przed wyborem trzeba sprawdzić nie tylko cenę początkową, lecz także limity transferu, przestrzeni i operacji.",
+        "Jeśli zamawiasz [tworzenie stron www](/uslugi/tworzenie-stron-www), technologię i hosting warto dobierać razem. Zwykła strona WordPress może dobrze działać na rozsądnym hostingu współdzielonym, podczas gdy aplikacja w Next.js może wymagać innego środowiska. Kupowanie pakietu przed ustaleniem technologii często kończy się migracją jeszcze przed uruchomieniem strony.",
+      ],
+    },
+    {
+      heading: "Ile kosztuje hosting strony internetowej po promocji",
+      body: [
+        "Cena hostingu składa się zwykle z opłaty początkowej i późniejszego kosztu odnowienia. Promocja może obowiązywać wyłącznie na początku, dlatego najważniejszą wartością do porównania jest kwota płacona po jej zakończeniu. Poniższe przykłady pochodzą z publicznych cenników firm i przedstawiają stan z września 2026 roku.",
+        "Tabela nie rozstrzyga, który hosting będzie najlepszy dla Twojej firmy. Pokazuje natomiast, jak duża może być różnica między opłatą promocyjną a kolejnym rachunkiem. Szczególnie niska cena startowa nie powinna przesłaniać kosztu utrzymania usługi w następnych okresach.",
+        "Sprawdź też, czy podana kwota jest ceną netto, czy brutto, jaki okres rozliczeniowy wybrano i czy płatność obejmuje wszystkie potrzebne dodatki. Certyfikat SSL, kopie zapasowe, poczta albo migracja strony mogą być częścią pakietu, osobną usługą lub opcją dostępną dopiero w droższym planie.",
+        "Domena stanowi oddzielny koszt. Według publicznych cenników z września 2026 roku rejestracja domeny .pl w cyber_Folks kosztowała 9,90 zł netto, a odnowienie 179 zł netto rocznie. W OVHcloud rejestracja kosztowała 16,69 zł netto, odnowienie 58,99 zł netto, a transfer był bezpłatny. Porównując oferty, patrz więc na koszt utrzymania zarówno serwera, jak i adresu.",
+        "Hosting jest tylko jednym ze składników budżetu witryny. Projekt, wdrożenie, treści, późniejsze aktualizacje i rozwój to osobne obszary, które opisuję szerzej w poradniku [ile kosztuje strona www](/blog/ile-kosztuje-strona-www-2026).",
+      ],
+      table: {"caption":"Ile kosztuje hosting strony internetowej po promocji","head":["Firma i plan","Cena początkowa","Cena odnowienia","Wybrane informacje"],"rows":[["cyber_Folks cyber_START","29 zł netto za 3 miesiące lub 249 zł netto za rok","35,67 zł netto za 3 miesiące lub 306,27 zł netto za rok","5 GB, SSL, codzienne kopie przechowywane przez 28 dni"],["cyber_Folks cyber_RUN","45 zł netto za 3 miesiące lub 349 zł netto za rok","55,35 zł netto za 3 miesiące lub 429,27 zł netto za rok","30 GB, SSL, codzienne kopie przechowywane przez 28 dni"],["home.pl Hosting Start","39,90 zł netto za pierwszy rok","678,99 zł netto za rok","70 GB, SSL za 9,90 zł rocznie"],["home.pl Hosting Biznes","19,90 zł netto za pierwszy rok","698,99 zł netto za rok","100 GB"],["dhosting Start Web Hosting","39 zł netto za pierwszy rok","229 zł netto za rok","Hosting współdzielony"],["dhosting Elastyczny Web Hosting","99 zł netto na początku","399 zł netto przy odnowieniu","Pakiet ze skalowaniem zasobów"]]},
+    },
+    {
+      heading: "Dobry hosting zapewnia aktualne technologie i odzyskanie strony",
+      body: [
+        "Przy stronie WordPress zacząłbym od zgodności środowiska z aktualnymi wymaganiami systemu. WordPress.org zaleca PHP 8.3 lub nowsze, MySQL 8.0 lub nowsze albo MariaDB 10.11 lub nowsze, a także obsługę HTTPS. PHP odpowiada za wykonywanie dużej części logiki strony, natomiast MySQL i MariaDB przechowują jej dane.",
+        "Starsze wersje PHP i bazy mogą nadal uruchamiać WordPressa, ale po zakończeniu wsparcia nie otrzymują odpowiednich poprawek bezpieczeństwa. Przed zakupem sprawdź, czy wersję PHP można zmienić samodzielnie w panelu. Ważna jest również możliwość ustawienia osobnego użytkownika PHP dla każdego konta, co WordPress.org wskazuje jako zalecenie zwiększające izolację stron.",
+        "Certyfikat SSL umożliwia korzystanie z połączenia HTTPS, czyli szyfrowanego przesyłania danych pomiędzy stroną a przeglądarką. W ofercie szukaj informacji, czy SSL jest wliczony w pakiet, czy wymaga oddzielnej opłaty. Sprawdź również, czy certyfikat odnawia się automatycznie.",
+        "Kopie zapasowe mają znaczenie dopiero wtedy, gdy można z nich sprawnie odtworzyć stronę. Warto ustalić ich częstotliwość, okres przechowywania, zakres oraz sposób przywracania. Przykładowo cyber_Folks deklarował codzienne kopie z retencją 28 dni. Sama informacja „backup w cenie” nie wyjaśnia, czy kopia obejmuje pliki i bazę ani czy możesz odzyskać je bez udziału pomocy technicznej.",
+        "Lokalizacja serwera wpływa na drogę, którą dane pokonują do użytkownika, oraz na to, gdzie są fizycznie przetwarzane. Jeśli strona obsługuje klientów w Polsce, serwer w Polsce lub w pobliskim europejskim centrum danych jest rozsądnym punktem wyjścia. nazwa.pl wskazywała w swojej ofercie serwery znajdujące się w Polsce.",
+        "W panelu powinny być również widoczne limity zasobów. Pojemność dysku jest tylko jednym z parametrów. Dla działania WordPressa znaczenie mają między innymi dostępna pamięć, czas procesora, liczba procesów, limity bazy danych i obsługa pamięci podręcznej, czyli mechanizmu przyspieszającego wyświetlanie wcześniej przygotowanych treści.",
+        "Operator może oferować LiteSpeed i LS Cache. LiteSpeed jest oprogramowaniem serwera, a LS Cache współpracującym z nim mechanizmem pamięci podręcznej. Dla właściciela firmy korzyścią może być szybsze podawanie stron, ale tylko wtedy, gdy witryna jest prawidłowo skonfigurowana. Sama nazwa technologii w cenniku nie naprawi ciężkich zdjęć ani źle napisanych dodatków.",
+      ],
+    },
+    {
+      heading: "Wybór hostingu warto oprzeć na potrzebach konkretnej strony",
+      body: [
+        "Dla prostej strony firmowej na WordPressie rozsądny hosting współdzielony może być wystarczający. Szukałbym aktualnego PHP, obsługi HTTPS, automatycznych kopii, przejrzystych limitów i pomocy technicznej, która potrafi odpowiedzieć na pytania dotyczące serwera. Duża przestrzeń dyskowa ma mniejsze znaczenie, jeśli strona wykorzystuje tylko niewielką jej część.",
+        "Sklep WooCommerce potrzebuje większej rezerwy zasobów, ponieważ obsługuje koszyk, zamówienia, konta użytkowników, płatności oraz procesy wykonywane w tle. Liczy się nie tylko liczba produktów, ale też importy, integracje i natężenie ruchu. Najtańszy pakiet może działać na początku, a później ograniczać panel administracyjny lub powodować błędy podczas intensywnych operacji.",
+        "W przypadku aplikacji internetowej albo projektu z nietypowym zapleczem hosting współdzielony może w ogóle nie obsługiwać wymaganej technologii. Wtedy pod uwagę biorę VPS, chmurę lub platformę przygotowaną pod dany sposób wdrażania. Przykładowo projekty oparte na Next.js mogą działać na Vercel albo własnym VPS, zależnie od potrzeb technicznych i sposobu zarządzania.",
+        "Przed zakupem ustal również, kto będzie aktualizował stronę, kontrolował kopie i reagował na awarie. Operator hostingu odpowiada za serwer w zakresie opisanym w regulaminie, ale niekoniecznie za błędy WordPressa, konflikt dodatków lub uszkodzenie treści. Jeśli nie chcesz zajmować się tym samodzielnie, [opieka nad stroną WordPress](/uslugi/opieka-wordpress) może obejmować aktualizacje i techniczne utrzymanie witryny, niezależnie od samej usługi serwerowej.",
+        "Ważna jest także możliwość migracji. Sprawdź, czy możesz pobrać pliki, wyeksportować bazę, przenieść pocztę i zmienić ustawienia DNS. Dostęp do własnych danych ułatwia zmianę operatora, gdy koszty odnowienia wzrosną albo dotychczasowy pakiet przestanie odpowiadać wymaganiom strony.",
+      ],
+    },
+    {
+      heading: "Darmowy hosting zwykle nie pasuje do strony firmowej",
+      body: [
+        "Darmowy hosting bywa przydatny do nauki, testowania pomysłu lub utrzymywania projektu osobistego. Przy stronie firmowej ograniczenia bezpłatnego planu mogą jednak wpływać na wiarygodność, dostępność oraz możliwość rozwoju. Problemem może być brak własnej domeny, reklama operatora, mały limit zasobów, brak poczty, ograniczone kopie albo utrudniona migracja.",
+        "Trzeba też odróżnić darmowy plan od bezpłatnego okresu promocyjnego. Jeśli usługa po zakończeniu promocji przechodzi na standardowy cennik, nie jest darmowym hostingiem w dłuższej perspektywie. Przed uruchomieniem strony przeczytaj warunki odnowienia, ograniczenia zastosowań oraz zasady dotyczące ruchu komercyjnego.",
+        "Dobrym przykładem jest Vercel Hobby. Plan jest darmowy, ale przeznaczony do osobistych, niekomercyjnych projektów. Zgodnie z zasadami uczciwego użytkowania nie powinien służyć jako bezpłatny hosting komercyjnej strony firmy. Dla zastosowań komercyjnych Vercel wskazuje plan Pro kosztujący 20 USD za użytkownika miesięcznie.",
+        "Bezpłatny hosting staje się złym wyborem, gdy strona ma pozyskiwać zapytania, obsługiwać sprzedaż albo przechowywać ważne dane. W takim przypadku koszt płatnego pakietu jest częścią utrzymania narzędzia biznesowego. Najważniejsze jest nie to, czy hosting kosztuje mało na początku, lecz czy daje aktualne środowisko, kopie zapasowe, przewidywalne zasady odnowienia i możliwość przeniesienia strony.",
+      ],
+    },
+  ],
+  faq: [
+    { q: "Czy domena i hosting to ta sama usługa?", a: "Nie. Domena jest adresem wpisywanym w przeglądarce, a hosting udostępnia serwer, na którym znajdują się pliki i baza strony. Możesz kupić obie usługi u różnych operatorów i połączyć je za pomocą ustawień DNS." },
+    { q: "Jaki hosting wybrać dla mojej strony WordPress?", a: "Dla prostej strony firmowej zwykle wystarcza hosting współdzielony z PHP 8.3 lub nowszym, HTTPS i automatycznymi kopiami. Sprawdź także limity zasobów, okres przechowywania kopii oraz koszt odnowienia." },
+    { q: "Ile kosztuje hosting strony firmowej?", a: "Głównym czynnikiem wpływającym na koszt jest rodzaj pakietu oraz jego cena po promocji. W publicznych cennikach z września 2026 roku odnowienie analizowanych pakietów współdzielonych kosztowało od 229 zł netto do 698,99 zł netto za rok, zależnie od firmy i planu." },
+    { q: "Czy darmowy hosting nadaje się dla mojej firmy?", a: "Zwykle nie, jeśli strona ma pozyskiwać klientów lub obsługiwać sprzedaż. Darmowe plany mogą ograniczać zastosowania komercyjne, zasoby, kopie i możliwość podłączenia własnej domeny. Vercel Hobby jest przeznaczony do projektów osobistych i niekomercyjnych." },
+    { q: "Czy mogę później przenieść stronę na inny hosting?", a: "Tak, jeżeli masz dostęp do plików, bazy danych, domeny i ustawień DNS. Przy zmianie serwera może wystąpić krótka niedostępność związana z aktualizacją DNS, dlatego migrację warto wcześniej zaplanować i wykonać kopię strony." },
+  ],
+});
