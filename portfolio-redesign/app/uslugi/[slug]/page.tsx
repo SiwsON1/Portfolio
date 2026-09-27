@@ -6,7 +6,7 @@ import { services } from "@/lib/services";
 import { projects, projectsForService } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
-import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
+import { OrbitalMark } from "@/components/service/OrbitalMark";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
@@ -134,11 +134,17 @@ export default async function UslugaPage({
           <span className="hidden md:inline">{s.title}</span>
         </div>
 
+        {/* Telefon: kula nad nagłówkiem, jak portret w hero strony głównej. */}
+        <OrbitalMark
+          slug={s.slug}
+          className="svc-mark-mobile relative md:hidden mx-auto -mt-2 mb-4 w-[66vw] max-w-[320px] pointer-events-none"
+        />
+
         <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 svc-in" style={{ "--i": 0 } as React.CSSProperties}>
             <p className="eyebrow">Usługa</p>
           </div>
-          <div className="md:col-span-7">
+          <div className="md:col-span-6">
             <h1
               className="display text-ink"
               style={{
@@ -147,12 +153,20 @@ export default async function UslugaPage({
                 letterSpacing: "-0.025em",
               }}
             >
-              {s.h1}
+              {/* Słowo po słowie z dołu, jak wiersze nagłówka na stronie głównej. */}
+              {s.h1.split(" ").map((word, i) => (
+                <span key={i} className="inline-block overflow-hidden align-bottom pb-[0.08em] -mb-[0.08em]">
+                  <span className="svc-word inline-block" style={{ "--i": i } as React.CSSProperties}>
+                    {word}
+                  </span>
+                  {i < s.h1.split(" ").length - 1 ? " " : ""}
+                </span>
+              ))}
             </h1>
-            <p className="mt-8 md:mt-12 max-w-3xl text-ink-mute" style={{ fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 }}>
+            <p className="svc-in mt-8 md:mt-12 max-w-3xl text-ink-mute" style={{ "--i": 6, fontSize: "clamp(1rem, 0.95rem + 0.4vw, 1.375rem)", lineHeight: 1.5 } as React.CSSProperties}>
               {renderInlineLinks(s.lead)}
             </p>
-            <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="svc-in mt-8 md:mt-12 flex flex-wrap items-center gap-x-8 gap-y-4" style={{ "--i": 8 } as React.CSSProperties}>
               <Link
                 href="/kontakt"
                 className="group inline-flex min-h-11 items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-bg bg-peach hover:bg-peach-deep transition-colors px-6 py-3"
@@ -169,8 +183,8 @@ export default async function UslugaPage({
               </a>
             </div>
           </div>
-          <div className="md:col-span-3 hidden md:block">
-            <ServiceHeroVisual slug={s.slug} />
+          <div className="md:col-span-4 hidden md:block svc-in" style={{ "--i": 3 } as React.CSSProperties}>
+            <OrbitalMark slug={s.slug} className="relative w-full max-w-[520px] ml-auto" />
           </div>
         </div>
 

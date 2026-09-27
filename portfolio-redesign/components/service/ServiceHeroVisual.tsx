@@ -34,7 +34,7 @@ type IconKey =
   | "ai"
   | "seo";
 
-const SLUG_TO_ICON: Record<string, IconKey> = {
+export const SLUG_TO_ICON: Record<string, IconKey> = {
   "tworzenie-stron-wordpress": "wordpress",
   "sklepy-internetowe-woocommerce": "woocommerce",
   "integracja-woocommerce-z-baselinker": "woocommerce",
@@ -305,7 +305,7 @@ function Wordmark({ text }: { text: string }) {
   );
 }
 
-function Icon({ icon }: { icon: IconKey }) {
+export function Icon({ icon }: { icon: IconKey }) {
   switch (icon) {
     case "wordpress":
       return (
