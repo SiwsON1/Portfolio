@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const links = [
   { href: "/projekty", label: "Projekty" },
@@ -23,6 +24,8 @@ const services = [
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (open) {
@@ -71,10 +74,12 @@ export function MobileMenu() {
         <span>{open ? "Zamknij" : "Menu"}</span>
       </button>
 
-      {/* Drawer overlay */}
+      {/* Panel renderowany w body, nie w nagłówku: backdrop-filter i mix-blend na <header> robią z niego
+          containing block dla position: fixed, więc tło panelu miało wysokość nagłówka, a linki wysypywały się na treść. */}
+      {mounted && createPortal(
       <div
         aria-hidden={!open}
-        className="md:hidden fixed inset-0 z-[105] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        className="md:hidden fixed inset-0 z-[99] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
         style={{
           opacity: open ? 1 : 0,
           pointerEvents: open ? "auto" : "none",
@@ -179,7 +184,8 @@ export function MobileMenu() {
             </p>
           </div>
         </div>
-      </div>
+      </div>,
+      document.body)}
     </>
   );
 }
