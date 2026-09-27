@@ -9,6 +9,13 @@ import gsap from "gsap";
 // i był elementem LCP.
 const HIDE_IF_SEEN = `try{if(sessionStorage.getItem("intro-seen")||matchMedia("(prefers-reduced-motion: reduce)").matches){document.getElementById("ms-intro").style.display="none"}}catch(e){}`;
 
+// Hero czeka na koniec intro, żeby animacja wejścia i scena 3D nie odpalały się pod zasłoną.
+// Efekt LoadingIntro wykonuje się przed efektami strony, więc flaga jest gotowa, zanim Hero ją sprawdzi.
+function announceIntro(state: "playing" | "done") {
+  (window as unknown as { __msIntro?: string }).__msIntro = state;
+  if (state === "done") window.dispatchEvent(new Event("ms-intro-done"));
+}
+
 export function LoadingIntro() {
   // Intro tylko przy twardym wejściu na stronę główną. Landingi i wpisy
   // z wyszukiwarki pokazują treść od razu.
@@ -28,11 +35,16 @@ export function LoadingIntro() {
   const creditRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !enabled) return;
+    if (typeof window === "undefined") return;
+    if (!enabled) {
+      announceIntro("done");
+      return;
+    }
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
       setActive(false);
+      announceIntro("done");
       return;
     }
 
@@ -40,10 +52,12 @@ export function LoadingIntro() {
     if (seen) {
       setSkipped(true);
       setActive(false);
+      announceIntro("done");
       return;
     }
 
     sessionStorage.setItem("intro-seen", "1");
+    announceIntro("playing");
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -55,6 +69,7 @@ export function LoadingIntro() {
       window.clearTimeout(failsafeId);
       document.body.style.overflow = previousOverflow;
       setActive(false);
+      announceIntro("done");
     };
 
     gsap.set(rootRef.current, {

@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import {
   siNextdotjs,
@@ -33,29 +33,44 @@ export function Hero() {
   const iconPathRef = useRef<SVGPathElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
+  const [sceneReady, setSceneReady] = useState(false);
 
   useEffect(() => {
     if (!wordRef.current || !titleRef.current) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (!reduce) {
-      const lines = titleRef.current.querySelectorAll(".line");
-      gsap.from(lines, {
-        y: "110%",
-        autoAlpha: 0,
-        duration: 1.4,
-        stagger: 0.12,
-        ease: "expo.out",
-        delay: 0.2,
-      });
-      gsap.from(portraitRef.current, {
-        autoAlpha: 0,
-        scale: 0.85,
-        duration: 1.8,
-        ease: "expo.out",
-        delay: 0.1,
-      });
-    }
+    const titleEl = titleRef.current;
+    let started = false;
+    let idleId = 0;
+    // Wejście rusza dopiero po intro: wcześniej grało pod zasłoną, a ukryty nagłówek opóźniał LCP.
+    // Scena 3D montuje się w wolnej chwili, żeby nie blokować wątku przy pierwszym renderze.
+    const start = () => {
+      if (started) return;
+      started = true;
+      if (!reduce) {
+        gsap.from(titleEl.querySelectorAll(".line"), {
+          y: "110%",
+          autoAlpha: 0,
+          duration: 1.4,
+          stagger: 0.12,
+          ease: "expo.out",
+          delay: 0.2,
+        });
+        gsap.from(portraitRef.current, {
+          autoAlpha: 0,
+          scale: 0.85,
+          duration: 1.8,
+          ease: "expo.out",
+          delay: 0.1,
+        });
+      }
+      const ric = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 200));
+      idleId = ric(() => setSceneReady(true), { timeout: 1200 });
+    };
+    const introPlaying = (window as unknown as { __msIntro?: string }).__msIntro === "playing";
+    const failsafe = introPlaying ? window.setTimeout(start, 6000) : 0;
+    if (introPlaying) window.addEventListener("ms-intro-done", start, { once: true });
+    else start();
 
     const wordEl = wordRef.current;
     const iconEl = iconRef.current;
@@ -81,7 +96,12 @@ export function Hero() {
       });
     };
     const id = window.setInterval(tick, 2400);
-    return () => window.clearInterval(id);
+    return () => {
+      window.clearInterval(id);
+      window.clearTimeout(failsafe);
+      window.removeEventListener("ms-intro-done", start);
+      window.cancelIdleCallback?.(idleId);
+    };
   }, []);
 
   return (
@@ -125,7 +145,7 @@ export function Hero() {
           }}
         />
         <div className="relative w-full h-full" style={{ pointerEvents: "auto" }}>
-          <PortraitCanvas />
+          {sceneReady && <PortraitCanvas />}
         </div>
       </div>
 
