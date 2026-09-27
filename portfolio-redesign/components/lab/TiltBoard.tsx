@@ -11,7 +11,11 @@ export function TiltBoard({ children, className = "" }: { children: React.ReactN
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = ref.current;
-    if (!el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!el) return;
+    // Sekwencja CSS stoi (animation-play-state: paused) do chwili, gdy plansza wjedzie w kadr.
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.setAttribute("data-play", ""); io.disconnect(); } }, { threshold: 0.35 });
+    io.observe(el);
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return () => io.disconnect();
     const target = { x: 0, y: 0 };
     const cur = { x: 0, y: 0 };
     let raf = 0;
@@ -51,6 +55,7 @@ export function TiltBoard({ children, className = "" }: { children: React.ReactN
       window.addEventListener("mousemove", onMouse, { passive: true });
     }
     return () => {
+      io.disconnect();
       cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", onMouse);
       window.removeEventListener("deviceorientation", onOrient);
