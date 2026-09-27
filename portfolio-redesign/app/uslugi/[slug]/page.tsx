@@ -7,6 +7,7 @@ import { projects, projectsForService } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
+import { WpBlueprintHero } from "@/components/service/WpBlueprintHero";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
@@ -107,7 +108,10 @@ export default async function UslugaPage({
 
   return (
     <article className="relative">
-      {/* HERO — cinematic with massive italic display + frame mark */}
+      {/* HERO: WordPress dostaje planszę edytora (Blueprint), reszta usług klasyczny hero z frame mark */}
+      {s.slug === "tworzenie-stron-wordpress" ? (
+        <WpBlueprintHero s={s} idx={idx} total={services.length} hasRealizacje={hasRealizacje} />
+      ) : (
       <header className="relative px-6 pt-32 pb-20 md:px-10 md:pt-56 md:pb-48 overflow-hidden">
         {/* Ambient cool glow */}
         <div
@@ -175,6 +179,7 @@ export default async function UslugaPage({
         </div>
 
       </header>
+      )}
 
       {/* DEVTOOLS LIVE — slim, nad portfolio, pod hero, tylko Next.js */}
       {s.slug === "aplikacje-nextjs" && (

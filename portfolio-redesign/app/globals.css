@@ -329,3 +329,179 @@ html.lenis body {
 @media (min-width: 768px) {
   .hero-paragraph.prose-bound { max-width: min(65ch, 40vw); }
 }
+
+/* ========== Hero uslugi WordPress: Blueprint (slowa naglowka + plansza edytora) ========== */
+.svc-word {
+  translate: 0 110%;
+  opacity: 0;
+  animation: svc-word 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(120ms + var(--i, 0) * 55ms);
+}
+.svc-in {
+  translate: 0 18px;
+  opacity: 0;
+  animation: svc-in 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(260ms + var(--i, 0) * 60ms);
+}
+@keyframes svc-word { to { translate: 0 0; opacity: 1; } }
+@keyframes svc-in { to { translate: 0 0; opacity: 1; } }
+
+/* C „Blueprint” v3: miniatura strony budowana w edytorze WP. Warstwy w głębi (TiltBoard), kursor i chipy w SVG
+   o viewBoxie 320 × 236. Wszystko stoi do [data-play] (plansza w kadrze). */
+.hwC-board { container-type: inline-size; perspective: 1100px; }
+/* (przeniesione na .hwC-tilt) */
+.hwC-3d { transform-style: preserve-3d; transform: rotateX(calc(var(--ry, 0) * 1deg)) rotateY(calc(var(--rx, 0) * 1deg)); will-change: transform; }
+.hwC-panel { transform: translateZ(0); }
+.hwC-over { transform: translateZ(34px); }
+.hwC-cur { transform: translateZ(56px); overflow: visible; }
+.hwC-seal { transform: translateZ(80px); animation: hwC-seal-in 900ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both, hwC-float 6s ease-in-out 1200ms infinite; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5)); }
+@keyframes hwC-seal-in { from { opacity: 0; scale: 0.8; } to { opacity: 1; scale: 1; } }
+@keyframes hwC-float { 50% { translate: 0 -6px; } }
+.hwC-glow { border-radius: 50%; background: radial-gradient(closest-side at 58% 42%, rgba(58, 142, 200, 0.30) 0%, rgba(58, 142, 200, 0) 100%), radial-gradient(closest-side at 22% 88%, rgba(232, 178, 134, 0.18) 0%, rgba(232, 178, 134, 0) 100%); -webkit-mask-image: radial-gradient(closest-side, #000 40%, transparent 100%); mask-image: radial-gradient(closest-side, #000 40%, transparent 100%); animation: hwC-glow-breathe 6s ease-in-out infinite; }
+@keyframes hwC-glow-breathe { 50% { scale: 1.08; } }
+
+/* Plansza: szkło z górnym refleksem i głębokim cieniem, wjeżdża z rozmyciem. */
+.hwC-panel {
+  background: linear-gradient(165deg, oklch(18% 0.024 280) 0%, oklch(14.5% 0.02 280) 60%, oklch(13% 0.02 280) 100%);
+  border: 1px solid rgba(168, 218, 255, 0.16);
+  box-shadow: 0 60px 100px -40px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  opacity: 0; scale: 0.96; filter: blur(6px);
+  animation: hwC-panel 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hwC-panel { to { opacity: 1; scale: 1; filter: blur(0); } }
+.hwC-page { background-image: radial-gradient(circle, rgba(168, 218, 255, 0.16) 0.5px, transparent 1px); background-size: 3.2% 4.3%; }
+.hwC-bar { opacity: 0; translate: 0 -100%; animation: hwC-slide 600ms cubic-bezier(0.16, 1, 0.3, 1) 500ms both; }
+@keyframes hwC-slide { to { opacity: 1; translate: 0 0; } }
+.hwC-side { opacity: 0; translate: -100% 0; animation: hwC-slide 600ms cubic-bezier(0.16, 1, 0.3, 1) 700ms both; }
+.hwC-barlogo { width: 4.2cqw; height: 4.2cqw; }
+.hwC-ico-s { width: 2.2cqw; height: 2.2cqw; }
+
+/* Typografia miniatury skalowana z planszą (cqw). */
+.hwC-t-xxs { font-size: clamp(5px, 1.55cqw, 8.5px); }
+.hwC-t-xs { font-size: clamp(5.5px, 1.7cqw, 9.5px); }
+.hwC-t-sm { font-size: clamp(6px, 1.9cqw, 10.5px); line-height: 1.45; }
+.hwC-t-md { font-size: clamp(8px, 2.6cqw, 14px); }
+.hwC-h { font-size: clamp(11px, 4.4cqw, 25px); line-height: 1.02; letter-spacing: -0.02em; }
+
+/* Ikony w panelu: kaskada wejścia, zapalają się na brzoskwiniowo, gdy kursor je chwyta. */
+.hwC-ic { opacity: 0; }
+.hwC-ic-h { animation: hwC-fill 400ms ease-out 900ms both, hwC-ic-on 700ms ease-out 1500ms both; }
+.hwC-ic-i { animation: hwC-fill 400ms ease-out 980ms both, hwC-ic-on 700ms ease-out 3400ms both; }
+.hwC-ic-c { animation: hwC-fill 400ms ease-out 1060ms both, hwC-ic-on 700ms ease-out 5000ms both; }
+.hwC-ic-b { animation: hwC-fill 400ms ease-out 1140ms both; }
+@keyframes hwC-ic-on { 0% { background: transparent; color: var(--color-ink-mute); } 20% { background: oklch(78% 0.13 50); color: oklch(14% 0.02 280); } 100% { background: rgba(232, 178, 134, 0.16); color: oklch(78% 0.13 50); } }
+@keyframes hwC-fill { to { opacity: 1; } }
+.hwC-fade { opacity: 0; translate: 0 5px; animation: hwC-rise 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hwC-rise { to { opacity: 1; translate: 0 0; } }
+
+/* Przerywana ramka wstawiania: miga dwa razy w miejscu upuszczenia i gaśnie. */
+.hwC-insert { border: 1px dashed rgba(232, 178, 134, 0.9); border-radius: 3px; background: rgba(232, 178, 134, 0.06); opacity: 0; animation: hwC-insert 700ms ease-out both; }
+@keyframes hwC-insert { 0% { opacity: 0; } 15% { opacity: 1; } 40% { opacity: 0.35; } 60% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Nagłówek miniatury: słowa wjeżdżają jak pisane, kursor tekstowy mruga na końcu. */
+.hwC-w { opacity: 0; translate: 0 0.35em; filter: blur(3px); animation: hwC-word 420ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hwC-word { to { opacity: 1; translate: 0 0; filter: blur(0); } }
+.hwC-caret { display: inline-block; width: 1.5px; height: 0.9em; margin-left: 0.05em; vertical-align: -0.1em; background: oklch(78% 0.13 50); opacity: 0; animation: hwC-caret-in 1ms both, hwC-caret 900ms steps(2, end) infinite; }
+@keyframes hwC-caret-in { to { opacity: 1; } }
+@keyframes hwC-caret { 50% { opacity: 0; } }
+.hwC-cta { animation: hwC-rise 600ms cubic-bezier(0.16, 1, 0.3, 1) both, hwC-breathe 3200ms ease-in-out 7200ms infinite; }
+@keyframes hwC-breathe { 50% { opacity: 0.6; } }
+
+/* Zdjęcie: odsłania się od dołu, potem przechodzi po nim połysk. */
+.hwC-photo { clip-path: inset(100% 0 0 0); animation: hwC-reveal 700ms cubic-bezier(0.77, 0, 0.175, 1) both; }
+@keyframes hwC-reveal { to { clip-path: inset(0 0 0 0); } }
+.hwC-photo-in {
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 25%, rgba(244, 200, 160, 0.55) 0%, rgba(244, 200, 160, 0) 60%),
+    radial-gradient(ellipse 60% 70% at 80% 80%, rgba(58, 142, 200, 0.5) 0%, rgba(58, 142, 200, 0) 60%),
+    linear-gradient(200deg, oklch(42% 0.08 50) 0%, oklch(24% 0.05 280) 55%, oklch(18% 0.03 280) 100%);
+}
+.hwC-photo-in::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.4px, transparent 0.9px); background-size: 3px 3px; mix-blend-mode: overlay; }
+.hwC-shine { background: linear-gradient(105deg, transparent 30%, rgba(255, 240, 225, 0.35) 50%, transparent 70%); translate: -120% 0; animation: hwC-shine 900ms cubic-bezier(0.77, 0, 0.175, 1) both; }
+@keyframes hwC-shine { to { translate: 120% 0; } }
+
+/* Kolumny oferty wskakują jak bloki w edytorze: z 0.92 i z góry, nigdy z zera. */
+.hwC-card { opacity: 0; scale: 0.92; translate: 0 -8px; animation: hwC-pop 620ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hwC-pop { to { opacity: 1; scale: 1; translate: 0 0; } }
+
+/* Przycisk „Zapisz” zostaje wciśnięty o 6300 ms, po stronie idzie błysk migawki. */
+.hwC-save { animation: hwC-press 260ms cubic-bezier(0.16, 1, 0.3, 1) 6300ms both; }
+@keyframes hwC-press { 0% { scale: 1; } 35% { scale: 0.9; } 100% { scale: 1; } }
+.hwC-flash { background: linear-gradient(100deg, transparent 20%, rgba(244, 200, 160, 0.18) 50%, transparent 80%); translate: -100% 0; opacity: 0; animation: hwC-flash 650ms cubic-bezier(0.77, 0, 0.175, 1) both; pointer-events: none; }
+@keyframes hwC-flash { 0% { opacity: 1; translate: -100% 0; } 100% { opacity: 1; translate: 100% 0; } }
+
+/* Potwierdzenie zapisu: wyskakuje spod przycisku (origin prawy górny), ptaszek dorysowuje się po nim. */
+.hwC-toast { opacity: 0; translate: 0 -6px; scale: 0.9; filter: blur(4px); transform-origin: top right; box-shadow: 0 10px 30px -10px rgba(232, 178, 134, 0.35); animation: hwC-toast 520ms cubic-bezier(0.16, 1, 0.3, 1) 6450ms both; }
+@keyframes hwC-toast { to { opacity: 1; translate: 0 0; scale: 1; filter: blur(0); } }
+.hwC-check { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hwC-draw 400ms cubic-bezier(0.16, 1, 0.3, 1) 6750ms both; }
+@keyframes hwC-draw { to { stroke-dashoffset: 0; } }
+@container (max-width: 430px) { .hwC-toast-more { display: none; } }
+
+/* Chipy przeciągane z panelu na stronę (jednostki viewBoxa): wjazd przy chwycie, lot, zgaśnięcie przy upuszczeniu. */
+.hwC-chip rect { fill: oklch(20% 0.03 280); stroke: rgba(232, 178, 134, 0.7); stroke-width: 0.7; }
+.hwC-chip text { fill: oklch(92% 0.01 80); font-family: var(--font-mono), monospace; font-size: 6px; letter-spacing: 0.6px; text-anchor: middle; text-transform: uppercase; }
+.hwC-chip { opacity: 0; transform-box: view-box; }
+.hwC-chip1 { animation: hwC-chip1 600ms cubic-bezier(0.65, 0, 0.35, 1) 1500ms both, hwC-chip-out 220ms ease-out 2100ms forwards; }
+.hwC-chip2 { animation: hwC-chip2 550ms cubic-bezier(0.65, 0, 0.35, 1) 3400ms both, hwC-chip-out 220ms ease-out 3950ms forwards; }
+.hwC-chip3 { animation: hwC-chip3 500ms cubic-bezier(0.65, 0, 0.35, 1) 5000ms both, hwC-chip-out 220ms ease-out 5500ms forwards; }
+@keyframes hwC-chip1 { 0% { translate: 22px 62px; opacity: 0; scale: 0.8; } 18% { opacity: 1; scale: 1; } 100% { translate: 72px 60px; opacity: 1; } }
+@keyframes hwC-chip2 { 0% { translate: 22px 96px; opacity: 0; scale: 0.8; } 18% { opacity: 1; scale: 1; } 100% { translate: 222px 84px; opacity: 1; } }
+@keyframes hwC-chip3 { 0% { translate: 22px 130px; opacity: 0; scale: 0.8; } 18% { opacity: 1; scale: 1; } 100% { translate: 142px 182px; opacity: 1; } }
+@keyframes hwC-chip-out { to { opacity: 0; scale: 0.9; } }
+
+/* Kursor: droga w jednostkach viewBoxa. Chwyty 1500/3400/5000, upuszczenia 2100/3950/5500, „Zapisz” 6300. Całość 7200 ms. */
+.hwC-cursor { translate: 330px 250px; opacity: 0; transform-box: view-box; animation: hwC-cursor 7200ms both; }
+@keyframes hwC-cursor {
+  0%, 13.9% { translate: 330px 250px; opacity: 0; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  14.6% { opacity: 1; }
+  20.8% { translate: 16px 70px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  29.2% { translate: 76px 64px; }
+  41.7% { translate: 76px 64px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  47.2% { translate: 16px 106px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  54.9% { translate: 240px 88px; }
+  63.9% { translate: 240px 88px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  69.4% { translate: 16px 142px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  76.4% { translate: 160px 186px; }
+  81.9% { translate: 160px 186px; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  87.5% { translate: 280px 12px; }
+  95.8% { translate: 280px 12px; opacity: 1; }
+  100% { translate: 292px 0px; opacity: 0; }
+}
+.hwC-cursor-click { transform-box: view-box; transform-origin: 0 0; animation: hwC-click 7200ms both; }
+@keyframes hwC-click {
+  0%, 20.8%, 22.4%, 47.2%, 48.8%, 69.4%, 71%, 87.5%, 89.1%, 100% { scale: 1; }
+  21.6%, 48%, 70.2%, 88.3% { scale: 0.82; }
+}
+.hwC-ripple { fill: none; stroke: rgba(232, 178, 134, 0.9); stroke-width: 0.8; opacity: 0; transform-box: view-box; transform-origin: 0 0; animation: hwC-ripple 7200ms both; }
+@keyframes hwC-ripple {
+  0%, 29.2%, 54.9%, 76.4%, 87.5% { opacity: 0; scale: 0.3; }
+  29.4%, 55.1%, 76.6%, 87.7% { opacity: 0.9; }
+  33.4%, 59.1%, 80.6%, 91.7% { opacity: 0; scale: 1.6; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hwA-planet, .hwA-sweep, .hwB-ghost { animation: none; opacity: 1; }
+  .hwB-part { animation: none; opacity: 0; }
+  .hwC-panel, .hwC-bar, .hwC-side, .hwC-ic, .hwC-fade, .hwC-w, .hwC-photo, .hwC-card, .hwC-toast, .hwC-check, .hwC-cta, .hwC-caret { animation: none; opacity: 1; translate: 0 0; scale: 1; filter: none; clip-path: none; stroke-dashoffset: 0; }
+  .hwC-insert, .hwC-shine, .hwC-flash, .hwC-cursor, .hwC-chip { animation: none; opacity: 0; }
+}
+/* v3.1: zamiast kuli plakietka WP przy rogu planszy i obracający się znak wodny za nią. */
+.hwC-seal { display: none; }
+.hwC-badge { transform: translateZ(80px); opacity: 0; scale: 0.85; translate: 0 8px; animation: hwC-badge-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 1000ms both, hwC-float 6s ease-in-out 1800ms infinite; box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); }
+@keyframes hwC-badge-in { to { opacity: 1; scale: 1; translate: 0 0; } }
+.hwC-badge-ico { width: 8.5cqw; height: 8.5cqw; box-shadow: 0 0 0 1px rgba(232, 178, 134, 0.35), 0 0 22px rgba(232, 178, 134, 0.35); }
+.hwC-wm { opacity: 0; animation: hwC-wm-in 1600ms ease-out 400ms both; }
+@keyframes hwC-wm-in { to { opacity: 1; } }
+.hwC-wm-svg { color: transparent; fill: none; animation: hwC-spin 90s linear infinite; }
+.hwC-wm-svg path { fill: none; stroke: rgba(168, 218, 255, 0.10); stroke-width: 0.35; }
+@keyframes hwC-spin { to { rotate: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .hwC-badge, .hwC-wm { animation: none; opacity: 1; scale: 1; translate: 0 0; } .hwC-wm-svg { animation: none; } }
+/* v3.2: plansza jako .hwC-tilt (kontener 3D), podpis z żywą kropką, przycisk Odtwórz. */
+.hwC-board { perspective: none; }
+.hwC-tilt { container-type: inline-size; perspective: 1100px; }
+.hwC-tilt:not([data-play]) * { animation-play-state: paused !important; }
+.hwC-live { box-shadow: 0 0 0 0 rgba(232, 178, 134, 0.6); animation: hwC-live 2.4s ease-out infinite; }
+@keyframes hwC-live { 70% { box-shadow: 0 0 0 6px rgba(232, 178, 134, 0); } 100% { box-shadow: 0 0 0 0 rgba(232, 178, 134, 0); } }
+.hwC-replay:active { transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) { .hwC-live { animation: none; } }
