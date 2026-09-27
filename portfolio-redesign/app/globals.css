@@ -666,6 +666,17 @@ html.vt-native::view-transition-new(*) { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .hwA-planet, .hwA-sweep, .hwB-ghost { animation: none; opacity: 1; }
   .hwB-part { animation: none; opacity: 0; }
-  .hwC-panel, .hwC-bar, .hwC-side, .hwC-ic, .hwC-fade, .hwC-w, .hwC-photo, .hwC-card, .hwC-toast, .hwC-check, .hwC-seal, .hwC-cta, .hwC-caret { animation: none; opacity: 1; translate: 0 0; scale: 1; filter: none; clip-path: none; stroke-dashoffset: 0; }
+  .hwC-panel, .hwC-bar, .hwC-side, .hwC-ic, .hwC-fade, .hwC-w, .hwC-photo, .hwC-card, .hwC-toast, .hwC-check, .hwC-cta, .hwC-caret { animation: none; opacity: 1; translate: 0 0; scale: 1; filter: none; clip-path: none; stroke-dashoffset: 0; }
   .hwC-insert, .hwC-shine, .hwC-flash, .hwC-cursor, .hwC-chip { animation: none; opacity: 0; }
 }
+/* v3.1: zamiast kuli plakietka WP przy rogu planszy i obracający się znak wodny za nią. */
+.hwC-seal { display: none; }
+.hwC-badge { transform: translateZ(80px); opacity: 0; scale: 0.85; translate: 0 8px; animation: hwC-badge-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 1000ms both, hwC-float 6s ease-in-out 1800ms infinite; box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); }
+@keyframes hwC-badge-in { to { opacity: 1; scale: 1; translate: 0 0; } }
+.hwC-badge-ico { width: 8.5cqw; height: 8.5cqw; box-shadow: 0 0 0 1px rgba(232, 178, 134, 0.35), 0 0 22px rgba(232, 178, 134, 0.35); }
+.hwC-wm { opacity: 0; animation: hwC-wm-in 1600ms ease-out 400ms both; }
+@keyframes hwC-wm-in { to { opacity: 1; } }
+.hwC-wm-svg { color: transparent; fill: none; animation: hwC-spin 90s linear infinite; }
+.hwC-wm-svg path { fill: none; stroke: rgba(168, 218, 255, 0.10); stroke-width: 0.35; }
+@keyframes hwC-spin { to { rotate: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .hwC-badge, .hwC-wm { animation: none; opacity: 1; scale: 1; translate: 0 0; } .hwC-wm-svg { animation: none; } }

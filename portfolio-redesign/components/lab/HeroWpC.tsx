@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Service } from "@/lib/services";
 import { renderInlineLinks } from "@/lib/renderInlineLinks";
-import { OrbitalMark } from "@/components/service/OrbitalMark";
 import { TiltBoard } from "./TiltBoard";
 
 /**
@@ -34,11 +33,12 @@ function WpLogo({ className = "" }: { className?: string }) {
   );
 }
 
-function Board({ slug }: { slug: string }) {
+function Board() {
   return (
     <TiltBoard className="hwC-board relative mx-auto w-full max-w-[560px]">
-            {/* poświata jak za kulą na stronie głównej, poza kontekstem 3D */}
+            {/* poświata i znak wodny WordPressa, poza kontekstem 3D */}
       <div aria-hidden className="hwC-glow absolute -inset-[18%] pointer-events-none" />
+      <div aria-hidden className="hwC-wm absolute pointer-events-none" style={{ right: "-14%", top: "-30%", width: "58%" }}><WpLogo className="hwC-wm-svg h-full w-full" /></div>
       <div className="hwC-3d relative w-full" style={{ aspectRatio: "320 / 236" }}>
 
         {/* Warstwa: plansza edytora */}
@@ -123,9 +123,13 @@ function Board({ slug }: { slug: string }) {
           </g>
         </svg>
 
-        {/* Pieczęć: kula z logo WordPressa, najwyżej, lekko się unosi */}
-        <div className="hwC-seal absolute" style={{ left: "-7%", bottom: "-9%", width: "24%" }}>
-          <OrbitalMark slug={slug} className="relative w-full" />
+        {/* Plakietka: glif WordPressa i podpis, zaczepiona o róg planszy, najwyżej, lekko się unosi */}
+        <div className="hwC-badge absolute flex items-center gap-[3%] rounded-full border border-[rgba(168,218,255,0.18)] bg-[oklch(13%_0.02_280)]/92 py-[1.4%] pl-[1.4%] pr-[4.5%]" style={{ left: "-5%", bottom: "-7%" }}>
+          <span className="hwC-badge-ico flex items-center justify-center rounded-full bg-peach text-bg"><WpLogo className="h-[62%] w-[62%]" /></span>
+          <span className="flex flex-col leading-none">
+            <span className="hwC-t-md font-display text-ink whitespace-nowrap">WordPress</span>
+            <span className="hwC-t-xxs mt-[3px] font-mono uppercase tracking-[0.18em] text-ink-mute whitespace-nowrap">Edycja bez kodu</span>
+          </span>
         </div>
       </div>
     </TiltBoard>
@@ -165,7 +169,7 @@ export function HeroWpC({ s, idx, total }: { s: Service; idx: number; total: num
 
         {/* Makieta: na telefonie pod tekstem (sekwencja rusza, gdy wjedzie w kadr), od md po prawej */}
         <div className="hwC-stage md:col-span-6 pt-4 pl-3 md:pl-6">
-          <Board slug={s.slug} />
+          <Board />
         </div>
       </div>
     </header>
