@@ -467,3 +467,92 @@ html.vt-native::view-transition-new(*) { animation: none !important; }
   .svc-word, .svc-in { animation: none; translate: 0 0; opacity: 1; }
   .svc-mark { animation: none; }
 }
+
+/* ========== LAB: warianty hero usługi WordPress ========== */
+/* A „Horyzont”: warstwy głębi sterowane --mx/--my (mysz albo przechył), planeta przycięta krawędzią. */
+.hwA-dust {
+  pointer-events: none;
+  opacity: 0.7;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 65% 40%, #000 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse 70% 60% at 65% 40%, #000 30%, transparent 80%);
+}
+.hwA-dust-a {
+  background-image: radial-gradient(circle, rgba(232, 178, 134, 0.5) 0.7px, transparent 1.2px);
+  background-size: 96px 96px;
+  translate: calc(var(--mx, 0) * -10px) calc(var(--my, 0) * -8px);
+}
+.hwA-dust-b {
+  background-image: radial-gradient(circle, rgba(168, 218, 255, 0.45) 0.6px, transparent 1.1px);
+  background-size: 150px 150px;
+  background-position: 40px 70px;
+  translate: calc(var(--mx, 0) * -22px) calc(var(--my, 0) * -16px);
+}
+.hwA-planet {
+  width: min(128vw, 560px);
+  right: -46vw;
+  top: -4vh;
+  translate: calc(var(--mx, 0) * 14px) calc(var(--my, 0) * 10px);
+  animation: hwA-in 1600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (min-width: 768px) {
+  .hwA-planet { width: min(58vw, 820px); right: -10vw; top: 6vh; }
+}
+.hwA-front { translate: calc(var(--mx, 0) * 26px) calc(var(--my, 0) * 18px); }
+@keyframes hwA-in { from { opacity: 0; scale: 0.92; } to { opacity: 1; scale: 1; } }
+/* Błysk po kuli jak po literach intro: jednorazowo, ok. 1,1 s po wejściu. */
+.hwA-sweep {
+  background: linear-gradient(105deg, transparent 35%, rgba(244, 180, 129, 0.35) 50%, transparent 65%);
+  mix-blend-mode: screen;
+  translate: -120% 0;
+  animation: hwA-sweep 1400ms cubic-bezier(0.77, 0, 0.175, 1) 1100ms both;
+}
+@keyframes hwA-sweep { to { translate: 120% 0; } }
+
+/* B „Sygnatura”: duchowy numer usługi, cząstki rozpływające się z kuli w tekst. */
+.hwB-ghost {
+  font-size: clamp(9rem, 4rem + 26vw, 30rem);
+  line-height: 0.75;
+  color: transparent;
+  -webkit-text-stroke: 1px oklch(28% 0.02 280);
+  opacity: 0;
+  animation: hwB-ghost 1800ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+}
+@keyframes hwB-ghost { to { opacity: 1; } }
+.hwB-part {
+  opacity: 0;
+  translate: -50% -50%;
+  animation: hwB-part 1500ms cubic-bezier(0.16, 1, 0.3, 1) var(--d) both;
+}
+@keyframes hwB-part {
+  0% { opacity: 0; translate: -50% -50%; }
+  20% { opacity: 1; }
+  100% { opacity: 0; translate: calc(-50% + var(--dx)) calc(-50% + var(--dy)); }
+}
+
+/* C „Blueprint”: linie rysują się (pathLength=1), bloki wypełniają, kursor wpisuje nagłówek. */
+.hwC-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hwC-draw 900ms cubic-bezier(0.77, 0, 0.175, 1) both; }
+.hwC-frame { stroke: rgba(168, 218, 255, 0.55); stroke-width: 0.8; fill: none; }
+@keyframes hwC-draw { to { stroke-dashoffset: 0; } }
+.hwC-fill { fill: rgba(168, 218, 255, 0.10); opacity: 0; animation: hwC-fill 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hwC-fill-solid { fill: oklch(18% 0.025 280); stroke: rgba(168, 218, 255, 0.35); stroke-width: 0.6; }
+.hwC-fill-peach { fill: oklch(78% 0.13 50); opacity: 0; animation: hwC-fill 400ms ease-out both; }
+.hwC-peach { fill: rgba(232, 178, 134, 0.75); }
+.hwC-image { fill: rgba(58, 142, 200, 0.22); }
+.hwC-typed-bg { fill: rgba(168, 218, 255, 0.08); }
+.hwC-line { fill: rgba(232, 178, 134, 0.7); }
+.hwC-line-faint { fill: rgba(168, 218, 255, 0.25); }
+@keyframes hwC-fill { to { opacity: 1; } }
+.hwC-block { opacity: 0; transform-origin: center; translate: 0 10px; animation: hwC-block 700ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hwC-block { to { opacity: 1; translate: 0 0; } }
+.hwC-type { opacity: 0; animation: hwC-fill 200ms 2600ms both; }
+.hwC-typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; animation: hwC-type 1300ms steps(21, end) 2700ms both; }
+@keyframes hwC-type { to { width: calc(21ch + 21 * 0.18em); } }
+.hwC-caret { display: inline-block; width: 1px; height: 1.1em; margin-left: 2px; vertical-align: bottom; background: oklch(78% 0.13 50); animation: hwC-caret 900ms steps(2, end) infinite; }
+@keyframes hwC-caret { 50% { opacity: 0; } }
+.hwC-saved { opacity: 0; translate: 0 6px; animation: hwC-block 600ms cubic-bezier(0.16, 1, 0.3, 1) 4200ms both; }
+.hwC-seal { filter: drop-shadow(0 8px 24px rgba(58, 142, 200, 0.35)); }
+@media (prefers-reduced-motion: reduce) {
+  .hwA-planet, .hwA-sweep, .hwB-ghost, .hwB-part, .hwC-draw, .hwC-fill, .hwC-fill-peach, .hwC-block, .hwC-type, .hwC-typed, .hwC-saved { animation: none; opacity: 1; stroke-dashoffset: 0; translate: 0 0; }
+  .hwC-typed { width: calc(21ch + 21 * 0.18em); }
+  .hwB-part { opacity: 0; }
+}

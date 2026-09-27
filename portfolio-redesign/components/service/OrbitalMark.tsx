@@ -58,7 +58,7 @@ function norm(v: V3): V3 { const l = Math.hypot(v[0], v[1], v[2]); return [v[0] 
 
 const PARTICLES = 90;
 
-export function OrbitalMark({ slug, className = "" }: { slug: string; className?: string }) {
+export function OrbitalMark({ slug, className = "", iconClassName = "w-[38%]" }: { slug: string; className?: string; iconClassName?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const icon = SLUG_TO_ICON[slug] ?? "modern";
 
@@ -210,7 +210,7 @@ export function OrbitalMark({ slug, className = "" }: { slug: string; className?
       />
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="svc-mark-icon w-[38%]">
+        <div className={`svc-mark-icon ${iconClassName}`}>
           <Icon icon={icon} />
         </div>
       </div>
