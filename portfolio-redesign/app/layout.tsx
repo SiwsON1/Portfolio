@@ -9,6 +9,7 @@ import { CookieBanner } from "@/components/providers/CookieBanner";
 import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
 import { Analytics } from "@/components/providers/Analytics";
 import { Cursor } from "@/components/ui/Cursor";
+import { TouchGlow } from "@/components/ui/TouchGlow";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -107,6 +108,7 @@ export default function RootLayout({
           <LoadingIntro />
           <ScrollProgress />
           <Cursor />
+          <TouchGlow />
           <Nav />
           <main id="main">
             <PageTransition>{children}</PageTransition>

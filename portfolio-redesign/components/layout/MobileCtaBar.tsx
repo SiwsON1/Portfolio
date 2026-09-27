@@ -44,6 +44,7 @@ export function MobileCtaBar() {
         <Link
           href="/kontakt"
           tabIndex={visible ? 0 : -1}
+          data-haptic
           className="inline-flex min-h-12 shrink-0 items-center gap-3 bg-peach px-5 font-mono text-xs uppercase tracking-[0.2em] text-bg transition-colors active:bg-peach-deep"
         >
           Wyceń projekt <span aria-hidden>→</span>

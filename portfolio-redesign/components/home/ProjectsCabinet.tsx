@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, ViewTransition } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { featuredProjects, projects, type Project } from "@/lib/projects";
@@ -85,7 +85,12 @@ export function ProjectsCabinet() {
         </div>
       </header>
 
-      <div className="pj-stack space-y-20 md:space-y-56">
+      {/* Na telefonie realizacje przewija się palcem jak stories; od md wraca układ edytorski. */}
+      <p className="md:hidden -mt-6 mb-5 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+        <span>Przesuń palcem</span>
+        <span aria-hidden className="pj-swipe-hint text-peach">→</span>
+      </p>
+      <div className="pj-stack -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:block md:space-y-56 md:overflow-visible md:px-0 md:pb-0">
         {featuredProjects.map((p, i) => (
           <Row key={p.slug} project={p} index={i} />
         ))}
@@ -110,7 +115,7 @@ export function ProjectsCabinet() {
 function Row({ project: p, index }: { project: Project; index: number }) {
   const flip = index % 2 === 1;
   return (
-    <article className="pj-row relative grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 items-center">
+    <article className="pj-row relative grid min-w-[84vw] snap-center grid-cols-1 items-center gap-6 md:min-w-0 md:grid-cols-12 md:gap-16">
       {/* Big editorial number — outside the layout */}
       <div
         className={`pj-num absolute z-0 font-display italic text-line/70 select-none pointer-events-none hidden md:block ${
@@ -128,7 +133,7 @@ function Row({ project: p, index }: { project: Project; index: number }) {
       </div>
 
       <div
-        className={`pj-img relative aspect-[4/3] md:col-span-7 overflow-hidden bg-bg-elev z-10 ${
+        className={`pj-img relative aspect-square md:aspect-[4/3] md:col-span-7 overflow-hidden bg-bg-elev z-10 ${
           flip ? "md:col-start-6" : ""
         }`}
       >
@@ -137,14 +142,16 @@ function Row({ project: p, index }: { project: Project; index: number }) {
           data-cursor="CASE"
           className="relative block w-full h-full group"
         >
-          <Image
-            src={p.image}
-            alt={p.title}
-            fill
-            priority={index === 0}
-            className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
-            sizes="(max-width: 768px) 100vw, 60vw"
-          />
+          <ViewTransition name={`projekt-${p.slug}`} share="morph">
+            <Image
+              src={p.image}
+              alt={p.title}
+              fill
+              priority={index === 0}
+              className="pj-par object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
+          </ViewTransition>
           <div
             aria-hidden
             className="absolute inset-0 bg-gradient-to-t from-bg/30 via-transparent to-transparent pointer-events-none"
@@ -162,7 +169,7 @@ function Row({ project: p, index }: { project: Project; index: number }) {
 
       <div
         className={`pj-meta md:col-span-5 z-10 ${
-          flip ? "md:col-start-1 md:row-start-1" : "md:col-start-9"
+          flip ? "md:col-start-1 md:row-start-1" : "md:col-start-8"
         }`}
       >
         <p className="eyebrow mb-4">
@@ -179,7 +186,7 @@ function Row({ project: p, index }: { project: Project; index: number }) {
         >
           {p.client}
         </h3>
-        <p className="text-ink-mute mb-6 md:mb-8 leading-relaxed max-w-md text-sm md:text-base">{p.description}</p>
+        <p className="text-ink-mute mb-6 md:mb-8 leading-relaxed max-w-md text-sm md:text-base line-clamp-3 md:line-clamp-none">{p.description}</p>
         <ul className="flex flex-wrap gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint mb-6 md:mb-10">
           {p.stack.map((s) => (
             <li

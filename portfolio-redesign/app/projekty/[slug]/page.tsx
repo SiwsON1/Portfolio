@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ViewTransition } from "react";
 import { notFound } from "next/navigation";
 import { projects, PROJECT_SERVICES } from "@/lib/projects";
 import { services, type Service } from "@/lib/services";
@@ -156,14 +157,16 @@ export default async function ProjektPage({
       {/* MEDIA — full bleed */}
       <section className="relative px-6 md:px-10 mb-24 md:mb-32">
         <div className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden bg-bg-elev">
-          <Image
-            src={p.image}
-            alt={p.title}
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
+          <ViewTransition name={`projekt-${p.slug}`} share="morph">
+            <Image
+              src={p.image}
+              alt={p.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </ViewTransition>
           <div
             aria-hidden
             className="absolute inset-x-0 bottom-0 h-1/3"

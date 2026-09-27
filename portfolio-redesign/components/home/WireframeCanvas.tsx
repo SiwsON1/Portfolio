@@ -80,6 +80,24 @@ function InnerCore() {
   );
 }
 
+type Tilt = React.MutableRefObject<{ x: number; y: number }>;
+
+/** Cała scena przechyla się za telefonem (żyroskop). Wygładzenie, żeby ruch był miękki, a nie drgający. */
+function TiltGroup({ tilt, children }: { tilt: Tilt; children: React.ReactNode }) {
+  const ref = useRef<THREE.Group>(null);
+  const smooth = useRef({ x: 0, y: 0 });
+  useFrame(() => {
+    if (!ref.current) return;
+    smooth.current.x += (tilt.current.x - smooth.current.x) * 0.08;
+    smooth.current.y += (tilt.current.y - smooth.current.y) * 0.08;
+    ref.current.rotation.x = smooth.current.x * 0.7;
+    ref.current.rotation.y = smooth.current.y * 0.9;
+    ref.current.position.x = smooth.current.y * 0.35;
+    ref.current.position.y = -smooth.current.x * 0.25;
+  });
+  return <group ref={ref}>{children}</group>;
+}
+
 const ORBIT_COUNT = 220;
 function OrbitalParticles() {
   const ref = useRef<THREE.Points>(null);
@@ -132,6 +150,36 @@ export function WireframeCanvas() {
   const drag = useRef({ x: 0, y: 0, isDragging: false });
   const dragStart = useRef({ x: 0, y: 0, rotX: 0, rotY: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  const tilt = useRef({ x: 0, y: 0 });
+  const [tiltHint, setTiltHint] = useState<"none" | "ask" | "hint" | "off">("none");
+  const tiltListening = useRef(false);
+
+  const startTilt = () => {
+    if (tiltListening.current) return;
+    tiltListening.current = true;
+    window.addEventListener(
+      "deviceorientation",
+      (e: DeviceOrientationEvent) => {
+        if (e.beta == null || e.gamma == null) return;
+        // Telefon trzymany zwykle pod kątem ok. 45°; to punkt zerowy przechyłu.
+        tilt.current.x = Math.max(-1, Math.min(1, (e.beta - 45) / 45));
+        tilt.current.y = Math.max(-1, Math.min(1, e.gamma / 45));
+      },
+      { passive: true },
+    );
+    setTiltHint("hint");
+    window.setTimeout(() => setTiltHint("off"), 3500);
+  };
+
+  // Żyroskop tylko na ekranach dotykowych. iOS wymaga zgody wywołanej dotknięciem, więc tam czekamy na tap.
+  useEffect(() => {
+    if (!window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const DOE = window.DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<string> } | undefined;
+    if (!DOE) return;
+    if (typeof DOE.requestPermission === "function") setTiltHint("ask");
+    else startTilt();
+  }, []);
 
   // Mouse tracking AKTYWUJE SIĘ DOPIERO PO CHWYCIE planety (pointerdown).
   // Po puszczeniu nasłuchiwacz odpina się — bez ruchu globalnego.
@@ -160,6 +208,10 @@ export function WireframeCanvas() {
   }, []);
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (tiltHint === "ask") {
+      const DOE = window.DeviceOrientationEvent as unknown as { requestPermission: () => Promise<string> };
+      DOE.requestPermission().then((r) => r === "granted" && startTilt()).catch(() => setTiltHint("none"));
+    }
     drag.current.isDragging = true;
     setIsDragging(true);
     dragStart.current = {
@@ -184,9 +236,11 @@ export function WireframeCanvas() {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.3} />
-          <Wireframe drag={drag} />
-          <InnerCore />
-          <OrbitalParticles />
+          <TiltGroup tilt={tilt}>
+            <Wireframe drag={drag} />
+            <InnerCore />
+            <OrbitalParticles />
+          </TiltGroup>
         </Suspense>
       </Canvas>
       <div
@@ -199,6 +253,15 @@ export function WireframeCanvas() {
           animation: "portraitGlow 5.5s ease-in-out infinite",
         }}
       />
+      {tiltHint !== "none" && (
+        <span
+          aria-hidden
+          className="absolute left-1/2 -translate-x-1/2 bottom-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint transition-opacity duration-700"
+          style={{ opacity: tiltHint === "off" ? 0 : 0.9 }}
+        >
+          {tiltHint === "ask" ? "Dotknij kuli i przechyl telefon" : "Przechyl telefon"}
+        </span>
+      )}
     </div>
   );
 }

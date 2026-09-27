@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Płynne przejścia między stronami (React <ViewTransition>): karta realizacji przechodzi w nagłówek jej strony.
+    viewTransition: true,
+  },
   async redirects() {
     return [
       {

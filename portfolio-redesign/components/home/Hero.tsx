@@ -231,6 +231,7 @@ export function Hero() {
             href="/kontakt"
             className="group inline-flex min-h-12 items-center gap-3 bg-peach px-6 py-3 font-mono text-xs uppercase tracking-[0.22em] text-bg transition-colors hover:bg-peach-deep"
             data-cursor="START"
+            data-haptic
           >
             <span>Wyceń projekt</span>
             <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>

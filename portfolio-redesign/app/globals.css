@@ -329,3 +329,51 @@ html.lenis body {
 @media (min-width: 768px) {
   .hero-paragraph.prose-bound { max-width: min(65ch, 40vw); }
 }
+
+/* View Transitions: zdjęcie realizacji przechodzi z karty w nagłówek strony, reszta miękko się przenika. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 380ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+::view-transition-group(.morph) {
+  animation-duration: 650ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: vt-via-blur;
+}
+@keyframes vt-via-blur {
+  35% {
+    filter: blur(4px) brightness(1.15);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* Realizacje na telefonie: karta przesuwana palcem, zdjęcie jedzie wolniej niż karta (paralaksa bez JS, scroll-driven). */
+@media (max-width: 767px) {
+  .pj-stack::-webkit-scrollbar { display: none; }
+  .pj-par {
+    scale: 1.1;
+    animation: pj-par linear both;
+    animation-timeline: view(inline);
+  }
+  .pj-swipe-hint { animation: pj-swipe 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+}
+@keyframes pj-par {
+  from { translate: 4.5% 0; }
+  to { translate: -4.5% 0; }
+}
+@keyframes pj-swipe {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(6px); opacity: 0.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pj-par, .pj-swipe-hint { animation: none; }
+}
