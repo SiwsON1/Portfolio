@@ -162,7 +162,7 @@ function Row({ project: p, index }: { project: Project; index: number }) {
 
       <div
         className={`pj-meta md:col-span-5 z-10 ${
-          flip ? "md:col-start-1 md:row-start-1" : "md:col-start-9"
+          flip ? "md:col-start-1 md:row-start-1" : "md:col-start-8"
         }`}
       >
         <p className="eyebrow mb-4">
