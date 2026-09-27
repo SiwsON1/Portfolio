@@ -149,7 +149,7 @@ export default async function ProjektPage({
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-faint mb-4">
               {p.client} · {p.year}
             </p>
-            <h1 className="display text-display text-ink">{p.title}</h1>
+            <h1 className="display text-display project-title text-ink">{p.title}</h1>
           </div>
         </div>
       </header>

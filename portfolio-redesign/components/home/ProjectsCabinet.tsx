@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, ViewTransition } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, ViewTransition } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { featuredProjects, projects, type Project } from "@/lib/projects";
@@ -11,17 +11,59 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+// Wejście kart gra raz na sesję karty przeglądarki. Po powrocie z case study element docelowy
+// przejścia musi być widoczny od razu, inaczej zdjęcie lądowało w niewidocznej, przesuniętej karcie.
+let entered = false;
+const SCROLL_KEY = "pj-stack-left";
+
 /**
  * Cabinet projektów na home — alternating editorial layout, peach line
  * indicator + corner number, focus-pull blur na non-hovered (pj-stack/pj-row).
  */
 export function ProjectsCabinet() {
   const sectionRef = useRef<HTMLElement>(null);
+  const stackRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  // Karuzela wraca tam, gdzie ją zostawiono, zanim przeglądarka zrobi zrzut do przejścia.
+  useLayoutEffect(() => {
+    const el = stackRef.current;
+    if (!el) return;
+    const saved = Number(sessionStorage.getItem(SCROLL_KEY) || 0);
+    // Po powrocie układ i snap potrafią jeszcze raz ustawić karuzelę na początku, więc pozycję
+    // przywracamy też w dwóch kolejnych klatkach i przez chwilę nie nadpisujemy zapisu zerem.
+    const restoredAt = performance.now();
+    let raf = 0;
+    if (saved) {
+      el.scrollLeft = saved;
+      raf = requestAnimationFrame(() => {
+        el.scrollLeft = saved;
+        raf = requestAnimationFrame(() => (el.scrollLeft = saved));
+      });
+    }
+    const onScroll = () => {
+      const w = el.firstElementChild ? (el.firstElementChild as HTMLElement).offsetWidth : el.clientWidth;
+      setActive(Math.round(el.scrollLeft / (w + 16)));
+      if (saved && performance.now() - restoredAt < 500) return;
+      sessionStorage.setItem(SCROLL_KEY, String(el.scrollLeft));
+    };
+    // Krótka wibracja przy każdym przeskoku karty, jak kółko wyboru w iOS (działa na Androidzie).
+    const onSnap = () => navigator.vibrate?.(8);
+    el.addEventListener("scroll", onScroll, { passive: true });
+    el.addEventListener("scrollsnapchange", onSnap);
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("scroll", onScroll);
+      el.removeEventListener("scrollsnapchange", onSnap);
+    };
+  }, []);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
+    if (!sectionRef.current || entered) return;
+    entered = true;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    // Na telefonie karty są w poziomej karuzeli; pionowe wejście przy przewijaniu nic tam nie wnosi.
+    if (reduce || window.innerWidth < 768) return;
 
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".pj-row").forEach((row) => {
@@ -86,11 +128,17 @@ export function ProjectsCabinet() {
       </header>
 
       {/* Na telefonie realizacje przewija się palcem jak stories; od md wraca układ edytorski. */}
-      <p className="md:hidden -mt-6 mb-5 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
-        <span>Przesuń palcem</span>
-        <span aria-hidden className="pj-swipe-hint text-peach">→</span>
-      </p>
-      <div className="pj-stack -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:block md:space-y-56 md:overflow-visible md:px-0 md:pb-0">
+      <div className="md:hidden -mt-6 mb-5 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint" aria-hidden>
+        <span className="tabular-nums text-ink">
+          {String(Math.min(active, featuredProjects.length - 1) + 1).padStart(2, "0")}
+          <span className="text-ink-faint"> / {String(featuredProjects.length).padStart(2, "0")}</span>
+        </span>
+        <span className="relative h-px flex-1 bg-line overflow-hidden">
+          <span className="pj-progress-bar absolute inset-0 bg-peach" style={{ transform: "scaleX(0.25)" }} />
+        </span>
+        <span>Przesuń</span>
+      </div>
+      <div ref={stackRef} className="pj-stack -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:block md:space-y-56 md:overflow-visible md:px-0 md:pb-0">
         {featuredProjects.map((p, i) => (
           <Row key={p.slug} project={p} index={i} />
         ))}
@@ -115,7 +163,7 @@ export function ProjectsCabinet() {
 function Row({ project: p, index }: { project: Project; index: number }) {
   const flip = index % 2 === 1;
   return (
-    <article className="pj-row relative grid min-w-[84vw] snap-center grid-cols-1 items-center gap-6 md:min-w-0 md:grid-cols-12 md:gap-16">
+    <article className="pj-row relative grid min-w-[84vw] snap-center grid-cols-1 items-start gap-6 md:min-w-0 md:grid-cols-12 md:items-center md:gap-16">
       {/* Big editorial number — outside the layout */}
       <div
         className={`pj-num absolute z-0 font-display italic text-line/70 select-none pointer-events-none hidden md:block ${

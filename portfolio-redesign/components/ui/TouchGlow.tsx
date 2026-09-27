@@ -3,10 +3,13 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Na ekranach dotykowych zastępuje kursor: miękka brzoskwiniowa poświata idzie za palcem
- * i gaśnie po puszczeniu. Elementy z data-haptic dają krótką wibrację (Android; iOS jej nie obsługuje).
- * Tylko transform i opacity, więc przeglądarka animuje to na GPU bez przeliczania układu.
+ * Na ekranach dotykowych zastępuje kursor: naciśnięcie linku albo przycisku rozpala pod palcem
+ * brzoskwiniową poświatę (szybko w górę, wolno w dół), a kliknięcie elementu z data-haptic daje
+ * krótką wibrację. Poświata tylko przy elementach klikalnych: przy zwykłym przewijaniu zasłaniał ją palec
+ * i gasła przy starcie przewijania, więc nikt jej nie widział. Tylko transform i opacity, bez mieszania warstw.
  */
+const INTERACTIVE = "a, button, [role='button'], [data-haptic]";
+
 export function TouchGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
 
@@ -15,39 +18,33 @@ export function TouchGlow() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const el = glowRef.current;
     if (!el) return;
-    let raf = 0;
-    let x = 0;
-    let y = 0;
-    const place = () => {
-      raf = 0;
-      el.style.transform = `translate3d(${x - 90}px, ${y - 90}px, 0)`;
-    };
-    const onMove = (e: PointerEvent) => {
+
+    const show = (e: PointerEvent) => {
       if (e.pointerType !== "touch") return;
-      x = e.clientX;
-      y = e.clientY;
-      if (!raf) raf = requestAnimationFrame(place);
-    };
-    const onDown = (e: PointerEvent) => {
-      if (e.pointerType !== "touch") return;
-      onMove(e);
+      if (!(e.target as HTMLElement | null)?.closest(INTERACTIVE)) return;
+      el.style.transition = "opacity 120ms cubic-bezier(0.23,1,0.32,1), scale 420ms cubic-bezier(0.16,1,0.3,1)";
+      el.style.transform = `translate3d(${e.clientX - 110}px, ${e.clientY - 110}px, 0)`;
+      el.style.scale = "1";
       el.style.opacity = "1";
-      const target = e.target as HTMLElement | null;
-      if (target?.closest("[data-haptic]")) navigator.vibrate?.(12);
     };
-    const onUp = () => {
+    const hide = () => {
+      el.style.transition = "opacity 600ms cubic-bezier(0.23,1,0.32,1), scale 600ms cubic-bezier(0.23,1,0.32,1)";
       el.style.opacity = "0";
+      el.style.scale = "0.6";
     };
-    window.addEventListener("pointerdown", onDown, { passive: true });
-    window.addEventListener("pointermove", onMove, { passive: true });
-    window.addEventListener("pointerup", onUp, { passive: true });
-    window.addEventListener("pointercancel", onUp, { passive: true });
+    // Wibracja na click, nie na pointerdown: przewijanie zaczęte na przycisku nie może wibrować.
+    const haptic = (e: MouseEvent) => {
+      if ((e.target as HTMLElement | null)?.closest("[data-haptic]")) navigator.vibrate?.(12);
+    };
+    window.addEventListener("pointerdown", show, { passive: true });
+    window.addEventListener("pointerup", hide, { passive: true });
+    window.addEventListener("pointercancel", hide, { passive: true });
+    window.addEventListener("click", haptic, { passive: true });
     return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("pointerdown", onDown);
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerup", onUp);
-      window.removeEventListener("pointercancel", onUp);
+      window.removeEventListener("pointerdown", show);
+      window.removeEventListener("pointerup", hide);
+      window.removeEventListener("pointercancel", hide);
+      window.removeEventListener("click", haptic);
     };
   }, []);
 
@@ -55,12 +52,11 @@ export function TouchGlow() {
     <div
       ref={glowRef}
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[90] h-[180px] w-[180px] rounded-full opacity-0 md:hidden"
+      className="pointer-events-none fixed left-0 top-0 z-[90] h-[220px] w-[220px] rounded-full opacity-0 md:hidden"
       style={{
-        background: "radial-gradient(circle, rgba(244,180,129,0.45) 0%, rgba(232,178,134,0.18) 35%, rgba(232,178,134,0) 70%)",
-        mixBlendMode: "screen",
-        transition: "opacity 600ms cubic-bezier(0.16,1,0.3,1)",
-        willChange: "transform, opacity",
+        scale: "0.6",
+        background:
+          "radial-gradient(circle, rgba(244,180,129,0.30) 0%, rgba(232,178,134,0.12) 38%, rgba(232,178,134,0) 70%)",
       }}
     />
   );

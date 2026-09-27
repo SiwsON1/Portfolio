@@ -158,23 +158,28 @@ html.lenis body {
   to   { transform: rotate(360deg); }
 }
 
-.pj-stack .pj-row {
-  transition:
-    filter 700ms cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: filter, opacity, transform;
-}
-.pj-stack:has(.pj-row:hover) .pj-row:not(:hover) {
-  filter: blur(10px);
-  opacity: 0.32;
-  transform: scale(0.985);
-}
-.pj-stack:has(.pj-row:hover) .pj-row:hover {
-  transform: scale(1.005);
-}
-.pj-stack:has(.pj-row:hover) .pj-row:not(:hover) .pj-num {
-  opacity: 0.15;
+/* Focus-pull tylko dla myszy: na dotyku :hover zostaje po tapnięciu i rozmywał resztę kart. */
+@media (hover: hover) and (pointer: fine) {
+  .pj-stack .pj-row {
+    transition:
+      filter 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .pj-stack:has(.pj-row:hover) .pj-row {
+    will-change: filter, opacity, transform;
+  }
+  .pj-stack:has(.pj-row:hover) .pj-row:not(:hover) {
+    filter: blur(10px);
+    opacity: 0.32;
+    transform: scale(0.985);
+  }
+  .pj-stack:has(.pj-row:hover) .pj-row:hover {
+    transform: scale(1.005);
+  }
+  .pj-stack:has(.pj-row:hover) .pj-row:not(:hover) .pj-num {
+    opacity: 0.15;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .pj-stack .pj-row { transition: none; }
@@ -330,50 +335,95 @@ html.lenis body {
   .hero-paragraph.prose-bound { max-width: min(65ch, 40vw); }
 }
 
-/* View Transitions: zdjęcie realizacji przechodzi z karty w nagłówek strony, reszta miękko się przenika. */
+/* ========== WOW: przejścia, karty realizacji, podpowiedź przechyłu ========== */
+
+/* View Transitions. Stara strona znika szybko, zdjęcie realizacji leci samo, nowa treść wchodzi po nim.
+   Strona otwiera się kołem od miejsca dotknięcia (--vt-x/--vt-y ustawia PageTransition). */
+::view-transition-group(.page) { animation: none; }
+::view-transition-old(.page) {
+  animation: 160ms cubic-bezier(0.23, 1, 0.32, 1) both vt-out;
+}
+::view-transition-new(.page) {
+  animation: 620ms cubic-bezier(0.77, 0, 0.175, 1) both vt-iris;
+}
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 380ms;
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-duration: 260ms;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 ::view-transition-group(.morph) {
-  animation-duration: 650ms;
+  animation-duration: 700ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
 }
-::view-transition-image-pair(.morph) {
-  animation-name: vt-via-blur;
+::view-transition-image-pair(.morph) { animation-name: vt-via-blur; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-iris {
+  from { clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%)); }
+  to { clip-path: circle(150% at var(--vt-x, 50%) var(--vt-y, 50%)); }
 }
 @keyframes vt-via-blur {
-  35% {
-    filter: blur(4px) brightness(1.15);
-  }
+  35% { filter: blur(4px) brightness(1.15); }
 }
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
-  }
-}
+/* iOS ma własny podgląd przy cofaniu gestem; drugi raz animacji nie odgrywamy. */
+html.vt-native::view-transition-group(*),
+html.vt-native::view-transition-old(*),
+html.vt-native::view-transition-new(*) { animation: none !important; }
 
-/* Realizacje na telefonie: karta przesuwana palcem, zdjęcie jedzie wolniej niż karta (paralaksa bez JS, scroll-driven). */
+/* Karty realizacji na telefonie: coverflow bez JS. Karta w środku jest pełna i jasna, boczne lekko odsunięte w głąb. */
 @media (max-width: 767px) {
+  #projekty { timeline-scope: --pj; }
+  .pj-stack { scroll-timeline: --pj x; }
   .pj-stack::-webkit-scrollbar { display: none; }
+  .pj-row {
+    animation: pj-coverflow linear both;
+    animation-timeline: view(inline);
+  }
   .pj-par {
     scale: 1.1;
+    object-position: left top;
     animation: pj-par linear both;
     animation-timeline: view(inline);
   }
-  .pj-swipe-hint { animation: pj-swipe 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+  .pj-progress-bar {
+    transform-origin: 0 50%;
+    animation: pj-progress linear both;
+    animation-timeline: --pj;
+  }
+}
+@keyframes pj-coverflow {
+  0% { transform: perspective(900px) rotateY(10deg) scale(0.9); filter: brightness(0.55); }
+  50% { transform: perspective(900px) rotateY(0deg) scale(1); filter: brightness(1); }
+  100% { transform: perspective(900px) rotateY(-10deg) scale(0.9); filter: brightness(0.55); }
 }
 @keyframes pj-par {
   from { translate: 4.5% 0; }
   to { translate: -4.5% 0; }
 }
-@keyframes pj-swipe {
-  0%, 100% { transform: translateX(0); opacity: 1; }
-  50% { transform: translateX(6px); opacity: 0.5; }
+@keyframes pj-progress {
+  from { transform: scaleX(0.25); }
+  to { transform: scaleX(1); }
 }
+
+/* Ikonka telefonu w podpowiedzi przechyłu: kołysze się, pokazując gest zamiast go opisywać. */
+.tilt-glyph { animation: tilt-glyph 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite; transform-origin: 50% 80%; }
+@keyframes tilt-glyph {
+  0%, 100% { rotate: -14deg; }
+  50% { rotate: 14deg; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .pj-par, .pj-swipe-hint { animation: none; }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+  .pj-row, .pj-par, .pj-progress-bar, .tilt-glyph { animation: none; }
+}
+
+/* Tytuł case study na telefonie: długie nazwy (np. „…obserwacyjnym”) wychodziły poza ekran. */
+@media (max-width: 767px) {
+  .project-title {
+    font-size: clamp(2.6rem, 1.4rem + 7vw, 4rem);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
 }
