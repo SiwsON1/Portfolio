@@ -18,10 +18,10 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-wordpress",
     title: "Tworzenie stron WordPress",
-    metaTitle: "Tworzenie stron WordPress Wrocław: własny motyw, szybka strona",
+    metaTitle: "Tworzenie stron WordPress: własny motyw, edycja bez kodu",
     metaDescription:
-      "Strony WordPress we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, wygodna edycja treści, szybkie działanie i techniczne SEO od startu.",
-    h1: "Tworzenie stron WordPress we Wrocławiu z edycją bez kodu",
+      "Strony WordPress dla firm z Polski i Niemiec. Własny motyw, wygodna edycja treści, szybkie działanie i techniczne SEO od startu.",
+    h1: "Tworzenie stron WordPress z edycją bez kodu",
     headings: { bullets: "Co zawiera strona WordPress ode mnie", process: "Jak powstaje strona WordPress", faq: "Tworzenie stron WordPress: pytania" },
     lead:
       "Tworzę strony WordPress dla firm, które chcą samodzielnie edytować treści, ale nie chcą budować serwisu na gotowym kreatorze. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
@@ -60,10 +60,10 @@ export const services: Service[] = [
   {
     slug: "sklepy-internetowe-woocommerce",
     title: "Sklepy internetowe WooCommerce",
-    metaTitle: "Sklepy WooCommerce Wrocław: wdrożenie i optymalizacja",
+    metaTitle: "Sklepy WooCommerce: wdrożenie, integracje i optymalizacja",
     metaDescription:
-      "Sklepy WooCommerce we Wrocławiu i zdalnie w Polsce i Niemczech. Własny motyw, płatności, wysyłka, B2B, migracje i integracje sprzedażowe od startu.",
-    h1: "Sklepy internetowe WooCommerce we Wrocławiu i w całej Polsce",
+      "Sklepy WooCommerce dla firm z Polski i Niemiec. Własny motyw, płatności, wysyłka, B2B, migracje i integracje sprzedażowe od startu.",
+    h1: "Sklepy internetowe WooCommerce dla firm w całej Polsce",
     headings: { bullets: "Co zawiera wdrożenie sklepu WooCommerce", process: "Jak powstaje sklep WooCommerce", faq: "Sklepy WooCommerce: pytania" },
     lead:
       "Tworzę sklepy WooCommerce dla firm, które chcą sprzedawać na własnej stronie i potrzebują dopasowanych płatności, dostaw oraz integracji. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
@@ -311,10 +311,10 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-www",
     title: "Tworzenie stron www",
-    metaTitle: "Tworzenie stron www Wrocław: WordPress, Next.js, WooCommerce",
+    metaTitle: "Tworzenie stron www: WordPress, Next.js, WooCommerce",
     metaDescription:
-      "Tworzenie stron www Wrocław dla firm: WordPress, Next.js lub WooCommerce dobrane do potrzeb. Ponad 30 wdrożeń, projekt w Figmie i 60 dni gwarancji.",
-    h1: "Tworzenie stron www we Wrocławiu dla firm",
+      "Tworzenie stron www dla firm: WordPress, Next.js lub WooCommerce dobrane do potrzeb. Ponad 30 wdrożeń, projekt w Figmie i 60 dni gwarancji.",
+    h1: "Tworzenie stron www dla firm",
     headings: { bullets: "Co zawiera strona internetowa ode mnie", process: "Jak powstaje strona www", faq: "Tworzenie stron www: pytania" },
     lead:
       "Tworzę strony firmowe, serwisy usługowe i sklepy dla firm, dobierając technologię do tego, co strona ma robić: [WordPress](/uslugi/tworzenie-stron-wordpress), [Next.js](/uslugi/aplikacje-nextjs) albo [WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Pracuję z Wrocławia, zdalnie z całą Polską i Niemcami.",

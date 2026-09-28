@@ -9,9 +9,8 @@ import { useEffect, useRef, useState } from "react";
  * tylko, gdy jest widoczna. Po zakończeniu scenki pojawia się „Odtwórz”, który remontuje dzieci
  * (restart animacji CSS). Sama plansza jest dekoracją: aria-hidden, klucz idzie do podpisu i przycisku.
  */
-const SEQUENCE_MS = 7600;
-
-export function TiltBoard({ children, caption, className = "" }: { children: React.ReactNode; caption: string; className?: string }) {
+export function TiltBoard({ children, caption, duration = 7600, className = "" }: { children: React.ReactNode; caption: string; duration?: number; className?: string }) {
+  const SEQUENCE_MS = duration + 400;
   const ref = useRef<HTMLDivElement>(null);
   const [run, setRun] = useState(0);
   const [played, setPlayed] = useState(false);

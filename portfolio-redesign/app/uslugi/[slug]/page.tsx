@@ -7,7 +7,8 @@ import { projects, projectsForService } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ServiceHeroVisual } from "@/components/service/ServiceHeroVisual";
-import { WpBlueprintHero } from "@/components/service/WpBlueprintHero";
+import { BlueprintHero } from "@/components/service/blueprint/BlueprintHero";
+import { SCENES } from "@/components/service/blueprint/scenes";
 import { DevToolsPanel } from "@/components/service/DevToolsPanel";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { SEO_BLOCKS } from "@/lib/seoBlocks";
@@ -108,9 +109,9 @@ export default async function UslugaPage({
 
   return (
     <article className="relative">
-      {/* HERO: WordPress dostaje planszę edytora (Blueprint), reszta usług klasyczny hero z frame mark */}
-      {s.slug === "tworzenie-stron-wordpress" ? (
-        <WpBlueprintHero s={s} idx={idx} total={services.length} hasRealizacje={hasRealizacje} />
+      {/* HERO: usługa ze scenką dostaje planszę Blueprint, reszta klasyczny hero z frame mark */}
+      {SCENES[s.slug] ? (
+        <BlueprintHero s={s} idx={idx} total={services.length} hasRealizacje={hasRealizacje} scene={SCENES[s.slug]} />
       ) : (
       <header className="relative px-6 pt-32 pb-20 md:px-10 md:pt-56 md:pb-48 overflow-hidden">
         {/* Ambient cool glow */}

@@ -505,3 +505,82 @@ html.lenis body {
 @keyframes hwC-live { 70% { box-shadow: 0 0 0 6px rgba(232, 178, 134, 0); } 100% { box-shadow: 0 0 0 0 rgba(232, 178, 134, 0); } }
 .hwC-replay:active { transform: scale(0.97); }
 @media (prefers-reduced-motion: reduce) { .hwC-live { animation: none; } }
+
+/* ========== Blueprint: silnik scenek (kursor generowany per scenka, prymitywy ruchu) ========== */
+.bp-cursor { translate: 330px 250px; opacity: 0; transform-box: view-box; }
+.bp-click { transform-box: view-box; transform-origin: 0 0; }
+.bp-ripple { fill: none; stroke: rgba(232, 178, 134, 0.9); stroke-width: 0.8; opacity: 0; transform-box: view-box; transform-origin: 0 0; }
+.bp-ic { opacity: 0; }
+/* Pisanie mono: --w (ch), --steps, --dur. */
+.bp-type { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; animation: bp-type var(--dur, 1000ms) steps(var(--steps, 20), end) both; }
+@keyframes bp-type { to { width: calc(var(--w, 20ch) + 0.4ch); } }
+/* Słupki i paski. */
+.bp-grow-y { transform-origin: bottom; scale: 1 0; animation: bp-grow-y 800ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-grow-y { to { scale: 1 1; } }
+.bp-grow-x { transform-origin: left; scale: 0 1; animation: bp-grow-x var(--dur, 900ms) cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-grow-x { to { scale: 1 1; } }
+/* Panele wsuwane z boku. */
+.bp-slide-r { translate: 100% 0; opacity: 0; animation: bp-slide-r 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-slide-r { to { translate: 0 0; opacity: 1; } }
+.bp-slide-l { translate: -100% 0; opacity: 0; animation: bp-slide-l 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-slide-l { to { translate: 0 0; opacity: 1; } }
+/* Podmiana tekstu: stary gaśnie w górę z rozmyciem, nowy wjeżdża z dołu. */
+.bp-swap-out { animation: bp-swap-out 380ms ease both; }
+@keyframes bp-swap-out { to { opacity: 0; filter: blur(3px); translate: 0 -0.35em; } }
+.bp-swap-in { opacity: 0; filter: blur(3px); translate: 0 0.35em; animation: bp-swap-in 450ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-swap-in { to { opacity: 1; filter: blur(0); translate: 0 0; } }
+/* Licznik: --from → --to (Chrome/Safari/Firefox z @property). */
+@property --n { syntax: "<integer>"; initial-value: 0; inherits: false; }
+.bp-count { counter-reset: n var(--n); animation: bp-count var(--dur, 1200ms) cubic-bezier(0.16, 1, 0.3, 1) both; }
+.bp-count::after { content: counter(n); }
+@keyframes bp-count { from { --n: var(--from, 0); } to { --n: var(--to, 100); } }
+/* Cząstka lecąca o --dx/--dy. */
+.bp-flow { opacity: 0; animation: bp-flow var(--dur, 900ms) cubic-bezier(0.65, 0, 0.35, 1) both; }
+@keyframes bp-flow { 0% { opacity: 0; translate: 0 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; translate: var(--dx, 100px) var(--dy, 0px); } }
+/* Zapalenie elementu na brzoskwiniowo (stan aktywny) i na błękitno (stan „ok”). */
+.bp-on { animation: bp-on 500ms ease both; }
+@keyframes bp-on { to { background: rgba(232, 178, 134, 0.16); color: oklch(78% 0.13 50); border-color: rgba(232, 178, 134, 0.55); } }
+.bp-ok { animation: bp-ok 500ms ease both; }
+@keyframes bp-ok { to { background: rgba(168, 218, 255, 0.12); color: #a8daff; border-color: rgba(168, 218, 255, 0.5); } }
+.bp-fill-peach { animation: bp-fill-peach 400ms ease both; }
+@keyframes bp-fill-peach { to { background: oklch(78% 0.13 50); border-color: oklch(78% 0.13 50); } }
+/* Miganie podświetlenia w miejscu akcji (ramka). */
+.bp-hl { outline: 1px dashed rgba(232, 178, 134, 0.9); outline-offset: 2px; opacity: 0; animation: hwC-insert 700ms ease-out both; }
+/* Łuk wskaźnika: circle pathLength=1, --v = ułamek. */
+.bp-gauge { stroke-dasharray: 0 1; animation: bp-gauge 1300ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-gauge { to { stroke-dasharray: var(--v, 0.9) 1; } }
+/* Wibracja przy upuszczeniu/utracie. */
+.bp-shrink { transform-origin: left; animation: bp-shrink var(--dur, 900ms) cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-shrink { to { scale: var(--to, 0.3) 1; } }
+/* Zdjęcia w trzech tonacjach. */
+.bp-photo-1 { background: radial-gradient(ellipse 70% 60% at 30% 25%, rgba(168, 218, 255, 0.5) 0%, rgba(168, 218, 255, 0) 60%), radial-gradient(ellipse 60% 70% at 80% 80%, rgba(232, 178, 134, 0.35) 0%, rgba(232, 178, 134, 0) 60%), linear-gradient(200deg, oklch(36% 0.07 240) 0%, oklch(22% 0.04 280) 55%, oklch(17% 0.03 280) 100%); }
+.bp-photo-2 { background: radial-gradient(ellipse 70% 60% at 30% 25%, rgba(200, 230, 200, 0.45) 0%, rgba(200, 230, 200, 0) 60%), radial-gradient(ellipse 60% 70% at 80% 80%, rgba(232, 178, 134, 0.35) 0%, rgba(232, 178, 134, 0) 60%), linear-gradient(200deg, oklch(38% 0.06 150) 0%, oklch(22% 0.04 280) 55%, oklch(17% 0.03 280) 100%); }
+/* Ogranicz ruch: wszystko w planszy skacze do stanu końcowego, kursor i efekty przelotne znikają. */
+@media (prefers-reduced-motion: reduce) {
+  .hwC-tilt * { animation-duration: 1ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; }
+  .hwC-tilt .bp-cursor, .hwC-tilt .hwC-chip, .hwC-tilt .hwC-insert, .hwC-tilt .bp-hl, .hwC-tilt .hwC-shine, .hwC-tilt .hwC-flash, .hwC-tilt .bp-flow { animation: none !important; opacity: 0 !important; }
+}
+.bp-toast-short { display: none; }
+@container (max-width: 430px) { .bp-toast-full { display: none; } .bp-toast-short { display: inline; } }
+.bp-wm-still { animation: none; rotate: -12deg; }
+/* Terminal i log: linie mono pojawiające się po kolei. */
+.bp-term { font-family: var(--font-mono), monospace; }
+.bp-term-line { opacity: 0; translate: 0 3px; animation: hwC-rise 300ms ease-out both; }
+/* Szkielet ładowania z połyskiem. */
+.bp-skel { background: linear-gradient(90deg, rgba(168, 218, 255, 0.06) 0%, rgba(168, 218, 255, 0.14) 50%, rgba(168, 218, 255, 0.06) 100%); background-size: 200% 100%; animation: bp-skel 1.1s linear infinite; }
+@keyframes bp-skel { to { background-position: -200% 0; } }
+.bp-gone { animation: bp-gone 400ms ease both; }
+@keyframes bp-gone { to { opacity: 0; scale: 0.96; visibility: hidden; } }
+/* Przełącznik: tor i gałka przesuwana w prawo. */
+.bp-knob { translate: 0 0; animation: bp-knob 300ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-knob { to { translate: 100% 0; } }
+@keyframes bp-up { to { translate: 0 0; opacity: 1; } }
+.bp-hl-row { position: relative; }
+/* Design: ponowne odegranie wejścia (element już widoczny) i przebarwienie akcentu. */
+.bp-replay { animation: bp-replay 700ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes bp-replay { 0% { opacity: 1; translate: 0 0; } 12% { opacity: 0; translate: 0 8px; filter: blur(2px); } 100% { opacity: 1; translate: 0 0; filter: blur(0); } }
+.bp-accent { animation: bp-accent 500ms ease both; }
+@keyframes bp-accent { to { color: oklch(78% 0.13 50); } }
+@keyframes bp-accent-bg { to { background: oklch(78% 0.13 50); } }
+
+@container (max-width: 460px) { .bp-hide-narrow { display: none; } }
