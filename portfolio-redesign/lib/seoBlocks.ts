@@ -1360,83 +1360,124 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ],
   },
   "tworzenie-stron-dla-kancelarii-prawnych": {
-    heading: "Strona internetowa dla kancelarii: jak zaplanować zakres, treści i zaplecze techniczne",
-    intro: [
-      "**Znajdziesz tu konkretne wskazówki, które pomogą Ci ocenić, jak powinna wyglądać strona internetowa dla kancelarii, jakie materiały trzeba przygotować i od czego zależy zakres projektu.** To praktyczne informacje dla właściciela kancelarii, który porównuje wykonawców i chce świadomie wybrać między prostą wizytówką a rozbudowanym serwisem.",
-      "Jako freelancer odpowiadam zarówno za projekt, jak i wdrożenie. Kod piszę sam, dlatego od pierwszej rozmowy po przekazanie gotowej strony kontaktujesz się bezpośrednio ze mną. Zakres dobieram do specjalizacji, wielkości zespołu, planów publikacyjnych i sposobu pozyskiwania zapytań, zamiast automatycznie rozbudowywać witrynę o funkcje, których kancelaria nie wykorzysta.",
+    "heading": "Strona internetowa kancelarii: jak zaprojektuję serwis dopasowany do Twojej praktyki",
+    "intro": [
+      "Strona internetowa kancelarii powinna pomagać klientowi ustalić, czy zajmujesz się jego sprawą, kto może mu pomóc i jak umówić pierwszą rozmowę. Nie wystarczy elegancki projekt ze zdjęciem Temidy i listą dziedzin prawa. Potrzebujesz czytelnej struktury, konkretnych informacji o zakresie pomocy i kontaktu, który nie wymaga od odwiedzającego opisywania całej sprawy w formularzu.",
+      "Projektuję i wdrażam takie strony samodzielnie, od pierwszej rozmowy po publikację. Nie przekazuję projektu między grafikiem, programistą i osobą odpowiedzialną za treści. Dzięki temu od początku mogę połączyć wymagania Twojej kancelarii z możliwościami technicznymi strony. Ustalimy, które podstrony są potrzebne na start, jak przedstawić prawników i co przygotować, żeby później samodzielnie rozwijać serwis."
     ],
-    sections: [
+    "sections": [
       {
-        id: "strona-kancelarii-powinna-odpowiadac-na-pytania-przed-pierws",
-        heading: "Strona kancelarii powinna odpowiadać na pytania przed pierwszą konsultacją",
-        body: [
-          "Osoba odwiedzająca stronę kancelarii zwykle chce najpierw ustalić, czy trafiła pod właściwy adres. Nie zna wewnętrznej struktury zespołu i może nie wiedzieć, jak prawidłowo nazwać swój problem. **Strona internetowa dla kancelarii powinna przełożyć zakres praktyki na informacje zrozumiałe dla osoby bez przygotowania prawniczego**, nie upraszczając przy tym samej materii prawnej.",
-          "Duże znaczenie ma sposób prezentacji specjalizacji. Sam wykaz dziedzin prawa często nie wystarcza. Przy każdej z nich warto wskazać, jakiego rodzaju spraw dotyczy, do kogo jest kierowana oraz który prawnik zajmuje się danym obszarem. Profile zespołu powinny uzupełniać ofertę, a nie powtarzać jej słowo w słowo. Mogą porządkować takie informacje jak kwalifikacje, zakres praktyki, doświadczenie, publikacje i języki obsługi.",
-          "Przed rozpoczęciem projektu ustalam między innymi, czy potrzebne będą:",
+        "id": "klient-powinien-rozpoznac-swoja-sprawe-zanim-do-ciebie-zadzw",
+        "heading": "Klient powinien rozpoznać swoją sprawę, zanim do Ciebie zadzwoni",
+        "body": [
+          "Osoba szukająca adwokata może wiedzieć, że otrzymała pozew, ale niekoniecznie rozumieć, do której dziedziny prawa należy jej problem. Ktoś inny chce uregulować kontakty z dzieckiem albo potrzebuje pomocy przy umowie z kontrahentem. Jeśli na stronie znajdzie wyłącznie hasła „prawo cywilne” i „prawo rodzinne”, nadal musi domyślać się, czy trafił pod właściwy adres.",
+          "Dlatego przy tworzeniu strony dla kancelarii rozdzielam specjalizacje na osobne podstrony. Każda opisuje określony zakres pomocy, zamiast powtarzać ogólne informacje o doświadczeniu i zaangażowaniu. Przygotowuję treść tak, żeby odwiedzający mógł przejść od swojego problemu do właściwej dziedziny prawa.",
+          "Na podstronie specjalizacji warto uwzględnić:"
         ],
-        list: [
-          "osobne podstrony specjalizacji i profile prawników,",
-          "informacje o przebiegu pierwszej konsultacji,",
-          "telefon, adres e-mail oraz czytelne godziny kontaktu,",
-          "adres kancelarii, mapa i wskazówki dotyczące dojazdu,",
-          "informacje o obsłudze zdalnej lub dostępnych językach.",
+        "list": [
+          "rodzaje spraw, którymi rzeczywiście zajmuje się kancelaria,",
+          "informacje o tym, komu możesz pomóc w danym obszarze,",
+          "prawnika prowadzącego określoną praktykę, jeśli ma to zastosowanie,",
+          "sposób umówienia konsultacji i podstawowe informacje organizacyjne."
         ],
-        outro: [
-          "Informacja o pierwszej konsultacji nie musi zawierać rozbudowanego regulaminu. Powinna jednak wyjaśnić, jak umówić rozmowę, czy trzeba wcześniej przygotować dokumenty i jakim kanałem kancelaria potwierdza termin. Dzięki temu potencjalny klient wie, czego się spodziewać, a zespół kancelarii otrzymuje lepiej uporządkowane zapytania.",
-        ],
+        "outro": [
+          "Taką strukturę zastosowałem przy stronie kancelarii adwokackiej Marii Piontek w Łodzi. Pięć obszarów prawa, czyli karne, cywilne, rodzinne, administracyjne i gospodarcze, otrzymało opisy pozwalające klientowi rozpoznać rodzaj sprawy.",
+          "Nie tworzę przy tym opisów porad prawnych na własną rękę. Ty przekazujesz lub zatwierdzasz informacje merytoryczne, a ja porządkuję je pod kątem czytelności, nawigacji i prezentacji. W ramach zlecenia przygotuję strukturę specjalizacji odpowiadającą rzeczywistemu zakresowi Twojej praktyki."
+        ]
       },
       {
-        id: "strona-dla-adwokata-radcy-prawnego-i-notariusza-wymaga-inneg",
-        heading: "Strona dla adwokata, radcy prawnego i notariusza wymaga innego układu",
-        body: [
-          "Choć wszystkie te serwisy dotyczą usług prawnych, nie powinny powstawać z jednego szablonu treści. **Strona dla adwokata** może skupiać się na obszarach prowadzonych spraw, profilu zawodowym i sposobie rozpoczęcia współpracy. Strona dla radcy prawnego często wymaga czytelnego rozdzielenia obsługi przedsiębiorców i klientów indywidualnych, jeśli kancelaria działa w obu tych obszarach.",
-          "**Strona dla radcy prawnego** prowadzącego jednoosobową praktykę będzie miała inną skalę niż witryna kancelarii z kilkoma prawnikami. W pierwszym przypadku głównym punktem może być profil właściciela połączony ze specjalizacjami. W większym zespole potrzebne są relacje między prawnikami, dziedzinami prawa, publikacjami i danymi kontaktowymi. Taki podział wpływa nie tylko na liczbę podstron, lecz także na nawigację i późniejszą edycję treści.",
-          "Jeszcze inaczej planowana jest **strona kancelarii notarialnej**. Jej użytkownik może szukać konkretnej czynności, listy potrzebnych dokumentów, informacji organizacyjnych lub danych dojazdowych. Serwis powinien więc prowadzić możliwie krótką drogą do tych informacji, bez kopiowania schematu typowego dla kancelarii procesowej.",
-          "Adwokaci, radcowie prawni i notariusze podlegają innym samorządom oraz właściwym dla nich zasadom informowania o działalności. Nie interpretuję tych zasad i nie zastępuję prawnika w ocenie treści. **Układam strukturę i formę komunikacji, ale materiały dotyczące działalności kancelarii zatwierdza prawnik.** Pozwala to rozdzielić odpowiedzialność merytoryczną od pracy projektowej i technicznej.",
+        "id": "strona-dla-adwokata-radcy-prawnego-i-notariusza-wymaga-inneg",
+        "heading": "Strona dla adwokata, radcy prawnego i notariusza wymaga innego podejścia",
+        "body": [
+          "Nie każda kancelaria potrzebuje tego samego zestawu podstron. Różnice wynikają zarówno z rodzaju wykonywanych czynności, jak i sposobu, w jaki klienci szukają informacji.",
+          "Strona dla adwokata może koncentrować się na rodzajach prowadzonych spraw i osobie prawnika. Strona dla radcy prawnego obsługującego przedsiębiorców może wymagać podziału na obszary wsparcia firm oraz klientów indywidualnych. Z kolei osoba odwiedzająca stronę notariusza często szuka konkretnej czynności, listy potrzebnych dokumentów albo informacji o umówieniu wizyty."
         ],
+        "table": {
+          "caption": "Strona dla adwokata, radcy prawnego i notariusza wymaga innego podejścia",
+          "head": [
+            "Rodzaj kancelarii",
+            "Co powinno być szczególnie widoczne",
+            "Jak zaprojektuję stronę"
+          ],
+          "rows": [
+            [
+              "Adwokat",
+              "Rodzaje spraw, specjalizacje, profil zawodowy, kontakt",
+              "Oddzielne podstrony dziedzin prawa połączone z profilem adwokata"
+            ],
+            [
+              "Radca prawny",
+              "Zakres obsługi firm i osób prywatnych, obszary praktyki",
+              "Nawigacja dopasowana do grup klientów i rodzaju świadczonej pomocy"
+            ],
+            [
+              "Notariusz",
+              "Czynności notarialne, wymagane dokumenty, adres i organizacja wizyty",
+              "Czytelny wykaz czynności oraz łatwy dostęp do informacji praktycznych"
+            ]
+          ]
+        },
+        "outro": [
+          "To nie są sztywne szablony wynikające wyłącznie z tytułu zawodowego. Jednoosobowa kancelaria radcy prawnego może potrzebować prostszego układu niż wieloosobowa kancelaria adwokacka. Podobnie zakres informacji na stronie notariusza powinien wynikać z faktycznie wykonywanych czynności.",
+          "Istotne są również zasady etyki zawodowej właściwe dla poszczególnych zawodów. Nie proponuję treści porównujących kancelarie ani obietnic korzystnego zakończenia sprawy. Twoim zadaniem jest zatwierdzenie komunikacji pod kątem odpowiednich zasad, a moim przygotowanie jej do publikacji.",
+          "Zamawiając stronę, otrzymasz projekt dopasowany do własnego zakresu działalności, a nie gotowy układ z podmienioną nazwą kancelarii."
+        ]
       },
       {
-        id: "tresci-przygotowujemy-wspolnie-nawet-jesli-nie-masz-jeszcze-",
-        heading: "Treści przygotowujemy wspólnie, nawet jeśli nie masz jeszcze zdjęć",
-        body: [
-          "Są dwa rozsądne modele pracy nad tekstami. W pierwszym kancelaria dostarcza gotową merytorykę, a ja dopasowuję ją do struktury podstron, porządkuję nagłówki i dbam o czytelność. W drugim otrzymuję materiały robocze, na przykład opisy praktyk, notatki, biogramy i odpowiedzi na pytania, a następnie układam z nich spójną treść do zatwierdzenia.",
-          "W obu przypadkach prawnik pozostaje źródłem i osobą zatwierdzającą informacje merytoryczne. Ja pilnuję, aby użytkownik rozumiał, gdzie znaleźć właściwą specjalizację, czym zajmuje się konkretny członek zespołu i jaki jest następny krok. **Tekst prawniczy na stronie powinien być precyzyjny, ale nie musi brzmieć jak pismo procesowe.** Czytelna składnia, krótsze akapity i wyjaśnienie terminów pomagają odbiorcy podjąć decyzję bez spłycania tematu.",
-          "Brak profesjonalnych zdjęć nie musi blokować projektu. Można przygotować układ oparty na typografii, spokojnej kolorystyce, czytelnych danych i odpowiednio zaplanowanych sekcjach. Miejsca na fotografie zespołu mogą zostać przewidziane w projekcie, nawet jeśli materiały powstaną później. Nie warto natomiast przypadkowo mieszać zdjęć prywatnych, różnych kadrów i niespójnego oświetlenia, ponieważ profile prawników powinny tworzyć jedną całość.",
-          "Przykładem wdrożenia opartego na uporządkowanej prezentacji praktyki jest [Kancelaria Maria Piontek](/projekty/kancelaria-mpiontek). Taka realizacja może być punktem odniesienia dla struktury, ale projekt nowej strony dopasowuję do konkretnej kancelarii, jej zespołu i zakresu działalności.",
-        ],
+        "id": "tresci-i-profile-prawnikow-przygotujemy-bez-pisania-wszystki",
+        "heading": "Treści i profile prawników przygotujemy bez pisania wszystkiego od zera",
+        "body": [
+          "Nie musisz dostarczać gotowych tekstów opracowanych pod stronę internetową. Możesz przesłać dotychczasowe opisy usług, biogramy, notatki lub listę spraw, którymi się zajmujesz. Na ich podstawie ułożę strukturę i przygotuję czytelną wersję treści do Twojej akceptacji.",
+          "Rozdzielam przy tym informacje o specjalizacjach od informacji o prawnikach. Podstrona dziedziny prawa wyjaśnia, w jakich sprawach kancelaria pomaga. Profil prawnika przedstawia jego kwalifikacje, praktykę zawodową, doświadczenie i ewentualne publikacje. Obie części mogą się wzajemnie łączyć, ale nie powinny zawierać identycznych akapitów.",
+          "Jeżeli prowadzisz blog, mogę dodatkowo przygotować szablon artykułów i powiązać publikacje z odpowiednimi dziedzinami prawa. Dzięki temu wyjaśnienie określonego zagadnienia nie będzie oderwane od informacji o usługach kancelarii.",
+          "Brak aktualnych zdjęć zespołu nie musi blokować projektu. Mogę oprzeć układ na typografii, odpowiednich odstępach i czytelnej prezentacji danych, a miejsca na fotografie przewidzieć na później. Nie będę zastępował rzeczywistych prawników przypadkowymi zdjęciami osób, które nie pracują w kancelarii.",
+          "Najważniejsza pozostaje zgodność treści z rzeczywistą działalnością. Nie wymyślam osiągnięć, specjalizacji ani doświadczenia. W ramach projektu opracuję sposób prezentacji przekazanych materiałów, a Ty zatwierdzisz ich merytoryczną poprawność."
+        ]
       },
       {
-        id: "domena-hosting-i-poczta-powinny-pozostawac-pod-kontrola-kanc",
-        heading: "Domena, hosting i poczta powinny pozostawać pod kontrolą kancelarii",
-        body: [
-          "Domena nie jest tylko adresem strony. Jest również podstawą zawodowych adresów e-mail, dlatego jej dostępność i własność mają znaczenie dla ciągłości działania kancelarii. Najbezpieczniejszy organizacyjnie model zakłada, że domena i hosting są zarejestrowane na kancelarię, a osoba techniczna otrzymuje dostęp potrzebny do konfiguracji i utrzymania serwisu.",
-          "W praktyce warto uporządkować trzy osobne elementy: rejestrację domeny, usługę hostingową oraz pocztę. Mogą one działać u jednego dostawcy, ale nie muszą. Istotne jest, aby kancelaria wiedziała, gdzie znajdują się usługi, na jaki adres przychodzą powiadomienia o odnowieniu i kto ma dostęp administracyjny.",
-          "Adres w rodzaju `imię@nazwakancelarii.pl` albo `sekretariat@nazwakancelarii.pl` jest spójny z marką kancelarii i nie zależy od prywatnej skrzynki pracownika. Zakres konfiguracji poczty ustalam przy rozpoczęciu współpracy, ponieważ zależy on od wybranego dostawcy i liczby potrzebnych skrzynek.",
-          "Po uruchomieniu witryny mogę także przejąć [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok. Sama domena, hosting i ewentualne płatne rozszerzenia są rozliczane osobno, dlatego dobrze uwzględnić je już podczas planowania zaplecza technicznego.",
-        ],
+        "id": "formularz-kontaktowy-nie-powinien-zbierac-calej-historii-spr",
+        "heading": "Formularz kontaktowy nie powinien zbierać całej historii sprawy",
+        "body": [
+          "Pierwszy kontakt z kancelarią różni się od wysłania zwykłego zapytania ofertowego. Odwiedzający może chcieć opisać konflikt rodzinny, sytuację finansową, postępowanie karne albo informacje dotyczące innych osób. Strona nie powinna zachęcać go do przesyłania szczegółowych dokumentów przez podstawowy formularz.",
+          "Dlatego ograniczam formularz do niezbędnych danych, takich jak imię, adres e-mail i krótka wiadomość. Stosuję szyfrowane połączenie HTTPS i umieszczam wskazaną przez Ciebie informację dotyczącą przetwarzania danych osobowych. Zakres pól możemy dopasować do tego, jak kancelaria faktycznie obsługuje nowe zapytania.",
+          "Równie ważna jest dostępność kontaktu. Numer telefonu, adres e-mail i przyciski powinny być czytelne na telefonie. Formularz projektuję z opisanymi polami, komunikatami błędów i możliwością obsługi klawiaturą, uwzględniając zasady WCAG.",
+          "Nie zakładam też automatycznie, że każdy klient powinien wypełnić formularz. W niektórych kancelariach lepiej wyeksponować telefon, w innych kontakt e-mail lub sposób umawiania wizyty. Ustalę to z Tobą przed projektem i wdrożę kontakt odpowiadający organizacji Twojej pracy."
+        ]
       },
       {
-        id: "zakres-serwisu-dobiera-sie-do-etapu-rozwoju-kancelarii",
-        heading: "Zakres serwisu dobiera się do etapu rozwoju kancelarii",
-        body: [
-          "Nowa kancelaria nie zawsze potrzebuje od razu rozbudowanej bazy wiedzy i kilkudziesięciu podstron. Jeżeli zakres usług jest wąski, zespół niewielki, a najważniejszym celem jest wiarygodna obecność w internecie, wystarczającym początkiem może być prosta wizytówka. Powinna zawierać podstawową prezentację praktyki, profil prawnika, dane kancelarii i jasne informacje organizacyjne.",
-          "Rozbudowany serwis ma sens, gdy kancelaria prowadzi wiele specjalizacji, zatrudnia większy zespół, obsługuje różne grupy klientów lub planuje regularne publikacje. Baza wiedzy wymaga nie tylko szablonu artykułu, lecz także kategorii, powiązań ze specjalizacjami i ustalenia, kto będzie odpowiadał za aktualizowanie treści.",
-        ],
-        table: {"caption":"Zakres serwisu dobiera się do etapu rozwoju kancelarii","head":["Wariant","Kiedy warto go wybrać","Typowy termin"],"rows":[["Prosta wizytówka","Nowa kancelaria, niewielki zespół, ograniczona liczba specjalizacji","2-3 tygodnie"],["Strona firmowa lub usługowa","Więcej specjalizacji, profile zespołu, rozbudowana struktura treści","4-6 tygodni"],["Serwis z bazą wiedzy","Regularne publikacje, wiele kategorii i powiązań z ofertą","Termin ustalany po briefie"]]},
-        outro: [
-          "Terminy zależą od zakresu i gotowości materiałów. Po każdym etapie udostępniam link do wersji testowej. W przypadku WordPressa pracuję na własnym motywie i polach ACF, bez Elementora, Divi oraz Avady. Więcej o tym modelu wdrożenia opisuję na stronie [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress).",
-        ],
+        "id": "wlasna-domena-poczta-i-wordpress-powinny-zostac-pod-twoja-ko",
+        "heading": "Własna domena, poczta i WordPress powinny zostać pod Twoją kontrolą",
+        "body": [
+          "Domena kancelarii służy nie tylko do otwierania strony. Może być również podstawą zawodowych adresów e-mail i jest elementem codziennej komunikacji z klientami. Dlatego rekomenduję rejestrację domeny i hostingu na kancelarię, zamiast pozostawiania ich na koncie wykonawcy.",
+          "Przy rozpoczęciu współpracy ustalimy, kto zarządza domeną, gdzie działa poczta i kto otrzymuje powiadomienia o odnowieniach. Pomogę uporządkować techniczną konfigurację, ale dostęp do najważniejszych usług powinien pozostać po Twojej stronie.",
+          "Typową stronę kancelarii wdrażam na WordPressie z autorskim motywem i polami ACF. Nie korzystam z Elementora, Divi ani Avady. Projektuję edytowalne sekcje zgodnie z zaakceptowanym wyglądem, żeby dodanie nowego opisu lub zmiana biogramu nie wymagały przebudowy układu.",
+          "Przy uruchomieniu konfiguruję również podstawowe elementy techniczne związane z widocznością: mapę witryny, nagłówki, Google Search Console i odpowiednie dane strukturalne LocalBusiness lub LegalService. Takie oznaczenia pomagają systemom wyszukiwania identyfikować kancelarię i jej dane, ale nie gwarantują wyświetlenia w odpowiedziach AI.",
+          "Po publikacji mogę zapewnić [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok. Samo wdrożenie nie uzależnia jednak Twojej strony od stałej współpracy ze mną."
+        ]
       },
       {
-        id: "koszt-zalezy-przede-wszystkim-od-liczby-typow-tresci-i-funkc",
-        heading: "Koszt zależy przede wszystkim od liczby typów treści i funkcji",
-        body: [
-          "Na koszt wpływa nie tylko liczba pozycji w menu, lecz także liczba różnych szablonów, które trzeba zaprojektować i wdrożyć. Osobnej pracy wymagają między innymi podstrona specjalizacji, profil prawnika, artykuł, kategoria bazy wiedzy i wersja kontaktu dla konkretnej lokalizacji. Znaczenie ma również to, czy poszczególne sekcje mają być samodzielnie edytowane przez zespół kancelarii.",
-          "Wycena rośnie wraz z liczbą specjalizacji, profili oraz wersji językowych. Wpływa na nią także zakres pracy nad treścią, przygotowanie bazy wiedzy i konieczność przeniesienia materiałów ze starego serwisu. Migracja może obejmować podstrony, profile i publikacje, a przy zmianie adresów również przygotowanie przekierowań 301. Nie obiecuję przy tym zachowania dotychczasowych pozycji w wynikach wyszukiwania.",
-          "**Rzetelna wycena wymaga ustalenia zakresu, ponieważ dwie strony o podobnej liczbie podstron mogą różnić się liczbą szablonów, wersji językowych i materiałów do przeniesienia.** Po krótkiej rozmowie i briefie przygotowuję wycenę obejmującą zakres oraz termin. Dzięki temu możesz porównać nie tylko końcową ofertę, lecz także to, jakie elementy strony rzeczywiście zostaną zaprojektowane i wdrożone.",
-        ],
+        "id": "zakres-strony-dobieram-do-liczby-specjalizacji-i-wielkosci-z",
+        "heading": "Zakres strony dobieram do liczby specjalizacji i wielkości zespołu",
+        "body": [
+          "Nowa kancelaria prowadząca kilka obszarów praktyki może zacząć od niewielkiej strony z prezentacją prawnika, opisami usług i kontaktem. Nie musi od razu zamawiać rozbudowanej bazy wiedzy ani dodatkowych funkcji, których nie będzie wykorzystywać.",
+          "Większy serwis ma sens, kiedy pojawiają się kolejne specjalizacje, prawnicy, lokalizacje lub wersje językowe. Każdy dodatkowy typ treści wymaga zaplanowania sposobu wyświetlania i edycji. Profile zespołu, artykuły i podstrony usług powinny też być ze sobą logicznie połączone.",
+          "Jeżeli planujesz regularne publikowanie poradników, przygotuję kategorie, szablony i powiązania z ofertą. Sama obecność bloga nie gwarantuje ruchu z Google. Ważna jest tematyka, poprawność merytoryczna oraz dalsze rozwijanie treści. Więcej o organizacji takiej witryny przeczytasz w materiale o [pozycjonowaniu strony usługowej](/blog/pozycjonowanie-strony-uslugowej).",
+          "Nie proponuję rozbudowy wyłącznie po to, żeby strona sprawiała wrażenie większej. Jeśli wystarczy prostszy serwis, uwzględnię to w ofercie. Jeśli potrzebujesz wielu powiązanych podstron, przygotuję strukturę umożliwiającą późniejszy rozwój bez projektowania wszystkiego ponownie.",
+          "Po rozmowie i briefie określę zakres szablonów, treści oraz funkcji, które rzeczywiście trzeba uwzględnić w wycenie."
+        ]
       },
-    ],
+      {
+        "id": "projekt-zatwierdzisz-przed-kodowaniem-a-po-starcie-samodziel",
+        "heading": "Projekt zatwierdzisz przed kodowaniem, a po starcie samodzielnie zmienisz treści",
+        "body": [
+          "Współpracę zaczynam od rozmowy online i zebrania materiałów. Następnie przygotowuję strukturę strony oraz makiety w Figmie. Otrzymujesz dwie tury poprawek i zatwierdzasz projekt, zanim rozpocznę wdrożenie.",
+          "Podczas kodowania udostępniam link do wersji testowej po kolejnych etapach. Możesz sprawdzić, jak wyglądają specjalizacje, profile i formularz, zanim strona zostanie opublikowana pod docelowym adresem.",
+          "Przed przekazaniem sprawdzam działanie na urządzeniach mobilnych, podstawy dostępności i wydajność. Celuję w Lighthouse 90+ na telefonie oraz LCP poniżej 2,5 sekundy. Jeśli zastępujemy istniejącą witrynę, planuję przekierowania 301 i migrację ograniczającą przerwę w działaniu. Nie obiecuję przy tym zachowania dotychczasowych pozycji w wyszukiwarce.",
+          "Typowy termin stworzenia strony usługowej kancelarii wynosi 4-6 tygodni. Dokładną datę ustalam po poznaniu liczby specjalizacji, profili, wersji językowych i zakresu materiałów.",
+          "Po uruchomieniu przeprowadzę szkolenie online z obsługi panelu i pokażę Ci, jak aktualizować treści. Otrzymasz również 60 dni gwarancji i bezpłatnych poprawek. Jeśli chcesz zlecić mi nową stronę dla kancelarii, prześlij informacje o swojej praktyce przez formularz kontaktowy. Na ich podstawie przygotuję wycenę obejmującą zakres prac i termin realizacji."
+        ]
+      }
+    ]
   },
   "tworzenie-stron-dla-gabinetow-i-klinik": {
     heading: "Strona internetowa dla gabinetu kosmetycznego, która pomaga wybrać zabieg i umówić wizytę",
