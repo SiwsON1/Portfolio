@@ -25,189 +25,211 @@ export type SeoBlock = {
  */
 export const SEO_BLOCKS: Record<string, SeoBlock> = {
   "tworzenie-stron-wordpress": {
-    heading: "Tworzenie stron WordPress: co warto wiedzieć przed startem",
-    intro: [
-      "Tworzenie stron WordPress brzmi jak jedna usługa, a oznacza kilka zupełnie różnych sposobów pracy. Stronę można postawić na kupionym szablonie w dwa dni, złożyć z bloków w kreatorze albo napisać pod nią własny motyw. W ofercie wszystkie trzy nazywają się tak samo, a różnią się tym, ile potem kosztuje utrzymanie i jak szybko strona się otwiera.",
-      "Zebrałem tu rzeczy, które przy takim wdrożeniu zwykle wychodzą dopiero w trakcie: gdzie leży różnica między szablonem a własnym motywem, co realnie przyspiesza stronę, co ją chroni i jak wygląda panel, w którym potem sam poprawiasz treści.",
+    "heading": "Tworzenie stron WordPress: co warto wiedzieć przed zleceniem",
+    "intro": [
+      "Tworzenie stron WordPress może oznaczać zupełnie różne rozwiązania. Jedna firma dostanie kupiony szablon z podmienionymi zdjęciami, druga stronę złożoną w Elementorze, a trzecia własny motyw zaprojektowany pod jej ofertę. Wszystkie będą działać na WordPressie, ale różnice zobaczysz przy pierwszej większej zmianie, aktualizacji albo próbie przyspieszenia strony.",
+      "Jeśli zamawiasz stronę firmową, warto wiedzieć, za co płacisz i co będziesz mógł zrobić samodzielnie po odbiorze. Wyjaśniam, kiedy WordPress ma sens, jak wybieram sposób wykonania, co wpływa na szybkość i bezpieczeństwo oraz jakie elementy uwzględniam w wycenie. Dzięki temu łatwiej zdecydujesz, jaką stronę warto zlecić dla Twojej firmy."
     ],
-    sections: [
+    "sections": [
       {
-        id: "co-to-jest-wordpress",
-        heading: "Czym jest WordPress i dlaczego wciąż stoi na nim tyle stron",
-        body: [
-          "WordPress to system zarządzania treścią, czyli oprogramowanie oddzielające treść od wyglądu. Teksty, zdjęcia i podstrony siedzą w bazie danych, a motyw decyduje, jak zostaną pokazane. Dzięki temu poprawienie opisu usługi nie wymaga dotykania kodu.",
-          "Popularność bierze się z trzech rzeczy naraz: system jest darmowy i otwarty, ma ogromne zaplecze gotowych wtyczek, a na rynku łatwo znaleźć kogoś, kto potrafi go obsłużyć. To ostatnie bywa niedoceniane do momentu, w którym trzeba zmienić wykonawcę i okazuje się, że nie jesteś od nikogo uzależniony.",
-          "Ta sama otwartość bywa źródłem kłopotów. Sam WordPress jest lekki, ale rzadko instaluje się go samego: dochodzi motyw, kilkanaście wtyczek i każde z nich dokłada swój kod. Dlatego różnica między dobrą a złą stroną na WordPressie prawie nigdy nie leży w samym systemie, tylko w tym, co ktoś na nim postawił.",
-        ],
+        "id": "kiedy-wordpress-jest-dobrym-wyborem-dla-strony-firmowej",
+        "heading": "Kiedy WordPress jest dobrym wyborem dla strony firmowej",
+        "body": [
+          "WordPress sprawdza się przede wszystkim wtedy, gdy strona ma prezentować ofertę, zbierać zapytania i pozwalać właścicielowi samodzielnie aktualizować treści. Możesz dodawać usługi, zmieniać zdjęcia, publikować poradniki i rozbudowywać serwis bez zamawiania każdej zmiany u programisty.",
+          "To dobry wybór dla kancelarii, firmy usługowej, producenta czy lokalnego przedsiębiorstwa, które potrzebuje rozbudowanej oferty i bloga. Poszczególne podstrony mogą korzystać ze wspólnych układów, więc dodawanie kolejnych usług nie wymaga projektowania wszystkiego od początku.",
+          "Nie każdą funkcję trzeba jednak realizować w WordPressie. Jeśli głównym zadaniem serwisu ma być obsługa zaawansowanego panelu klienta, rozbudowane przetwarzanie danych albo działanie zbliżone do aplikacji, rozważam również inne technologie.",
+          "Sama możliwość doinstalowania wtyczki nie jest wystarczającym powodem, żeby wybierać WordPress. Ważne, jak często będziesz zmieniać treści, kto będzie obsługiwać panel i jakie funkcje naprawdę są potrzebne.",
+          "Przed wyceną sprawdzam więc, czy strona firmowa na WordPressie będzie rozwiązaniem wygodnym nie tylko w dniu uruchomienia, ale również podczas codziennej pracy."
+        ]
       },
       {
-        id: "szablon-czy-wlasny-motyw",
-        heading: "Gotowy szablon czy własny motyw",
-        body: [
-          "Kupiony szablon projektuje się tak, żeby pasował do jak największej liczby zastosowań. Restauracja, kancelaria i siłownia dostają ten sam kod z wariantami układów dla każdej z tych branż, więc Twoja strona wozi ze sobą także to, czego nigdy nie użyje.",
-          "Własny motyw pisze się pod jeden projekt i zawiera dokładnie te sekcje, które są na stronie. W praktyce oznacza to mniejszą wagę strony i brak niespodzianek po aktualizacji szablonu, którego autor postanowił coś przebudować.",
+        "id": "gotowy-szablon-elementor-czy-wlasny-motyw-wordpress",
+        "heading": "Gotowy szablon, Elementor czy własny motyw WordPress",
+        "body": [
+          "Gotowy szablon pozwala szybko rozpocząć pracę, ponieważ zawiera przygotowane układy i elementy graficzne. Problem pojawia się, gdy firma potrzebuje sekcji, której autor szablonu nie przewidział. Trzeba wtedy dostosowywać istniejące rozwiązanie albo dokładać kolejne rozszerzenia.",
+          "Kreatory typu Elementor dają większą swobodę wizualną. Możesz przesuwać elementy i budować układy w panelu. Ta swoboda oznacza jednak również więcej ustawień, dodatkowy kod i zależność od konkretnego narzędzia.",
+          "Własny motyw tworzę pod zaakceptowany projekt. Nie dostajesz całego zestawu możliwych układów, tylko te, których Twoja strona rzeczywiście potrzebuje."
         ],
-        list: [
-          "Szablon: szybki start, niski koszt wejścia, ograniczenia widoczne przy każdej nietypowej zmianie.",
-          "Własny motyw: dłuższy start, kod bez balastu, dowolność przy zmianach.",
-          "Wariant pośredni: własny motyw zbudowany na sprawdzonym szkielecie, bez pisania wszystkiego od zera.",
-        ],
-        outro: [
-          "Szablon broni się przy stronie prostej i tymczasowej. Przy stronie, która ma pracować kilka lat i zbierać ruch z wyszukiwarki, oszczędność na starcie wraca jako koszt utrzymania, bo każda nietypowa zmiana to obchodzenie cudzych ograniczeń.",
-        ],
+        "table": {
+          "caption": "Gotowy szablon, Elementor czy własny motyw WordPress",
+          "head": [
+            "Rozwiązanie",
+            "Szybkość działania",
+            "Edycja treści",
+            "Utrzymanie",
+            "Dla kogo"
+          ],
+          "rows": [
+            [
+              "Kupiony szablon",
+              "Zależy od jakości motywu i dodatków",
+              "Według możliwości szablonu",
+              "Aktualizacje motywu i zgodności dodatków",
+              "Prosta strona z typowym układem"
+            ],
+            [
+              "Kreator typu Elementor",
+              "Może wymagać dodatkowej optymalizacji",
+              "Duża swoboda, także zmiany układu",
+              "Aktualizacje kreatora i jego rozszerzeń",
+              "Strona często przebudowywana wizualnie"
+            ],
+            [
+              "Własny motyw WordPress",
+              "Kod dopasowany do potrzeb strony",
+              "Pola odpowiadające konkretnym sekcjom",
+              "Kontrola nad kodem, rozwój przez programistę",
+              "Strona firmowa rozwijana przez lata"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie twierdzę, że każda strona z Elementorem musi być wolna. Wiele zależy od sposobu jej wykonania. Problemem bywa jednak ilość generowanego kodu i trudność w kontrolowaniu całej struktury.",
+          "Na własnym serwisie z ponad 400 poradnikami zastąpiłem stronę główną zbudowaną w Elementorze rozwiązaniem składanym z bazy danych przez własną wtyczkę. To przykład sytuacji, w której lepiej zaprogramować konkretny mechanizm niż nadal rozbudowywać kreator.",
+          "Szerzej opisuję te ograniczenia we wpisie [Elementor: dlaczego nie warto](/blog/elementor-dlaczego-nie-warto).",
+          "Zlecając mi nową stronę, otrzymujesz własny motyw z panelem edycji dopasowanym do projektu, a nie kolejny zestaw ustawień uniwersalnego kreatora."
+        ]
       },
       {
-        id: "kreatory-i-elementor",
-        heading: "Dlaczego nie buduję stron na kreatorach typu Elementor",
-        body: [
-          "Kreator obiecuje, że złożysz stronę myszką, bez programisty. Przy typowym układzie to się sprawdza, a przy nietypowej sekcji zaczyna się mnożenie zagnieżdżonych kontenerów, z których każdy dokłada własny kod. Najpoważniejszy jest jednak nie ciężar, tylko uzależnienie. Treść zapisuje się w formacie kreatora, więc wyłączenie wtyczki zostawia stronę w kawałkach. Kod, który przy okazji powstaje, bywa też trudny do uporządkowania pod kątem dostępności i danych strukturalnych.",
-          "Nie znaczy to, że kreator jest zawsze złym wyborem. Znaczy tyle, że przy stronie firmowej utrzymywanej latami wolę pola edycyjne przypisane do konkretnych sekcji projektu. Szerzej opisałem to we wpisie [dlaczego nie warto budować strony na Elementorze](/blog/elementor-dlaczego-nie-warto).",
+        "id": "co-rzeczywiscie-przyspiesza-strone-wordpress",
+        "heading": "Co rzeczywiście przyspiesza stronę WordPress",
+        "body": [
+          "Na szybkość strony wpływa znacznie więcej niż wybór hostingu. Liczą się rozmiary obrazów, ilość kodu, sposób ładowania czcionek, zewnętrzne skrypty i to, jak szybko serwer odpowiada na żądania.",
+          "Google ocenia doświadczenie użytkownika między innymi przez Core Web Vitals. W praktyce sprawdzają one, kiedy pojawia się główna zawartość, jak szybko strona reaguje na działania i czy elementy nie przesuwają się podczas ładowania.",
+          "Przy projektowaniu zwracam uwagę szczególnie na:"
         ],
+        "list": [
+          "Obrazy: odpowiednie rozmiary i formaty zamiast dużych plików pomniejszanych dopiero w przeglądarce.",
+          "Kod motywu: ładowanie tylko tych elementów, które są potrzebne na konkretnej podstronie.",
+          "Pamięć podręczną: ograniczenie konieczności generowania tej samej zawartości przy kolejnych odwiedzinach.",
+          "Skrypty zewnętrzne: kontrolowanie narzędzi analitycznych, formularzy i dodatkowych bibliotek."
+        ],
+        "outro": [
+          "W nowych projektach nie instaluję kreatora tylko po to, żeby zbudować kilka sekcji. Własny motyw daje mi większą kontrolę nad tym, jakie zasoby pobiera przeglądarka.",
+          "Moim celem przed oddaniem jest Lighthouse 90+ na telefonie i LCP poniżej 2,5 s. LCP określa czas wyświetlenia głównego elementu strony. Na końcowy wynik wpływają jednak również hosting, treści i usługi zewnętrzne.",
+          "Zlecając stronę, dostajesz wdrożenie z pomiarem wydajności przed uruchomieniem, a nie wyłącznie zapewnieniem, że powinno działać szybko."
+        ]
       },
       {
-        id: "szybkosc-i-core-web-vitals",
-        heading: "Co decyduje o szybkości strony WordPress",
-        body: [
-          "Google mierzy wrażenia użytkownika zestawem wskaźników Core Web Vitals. Sprawdzają, jak szybko pojawia się główna treść, czy strona reaguje na kliknięcia bez opóźnienia i czy układ nie skacze w trakcie ładowania. To ostatnie zna każdy, kto próbował kliknąć przycisk, który w ostatniej chwili uciekł w dół.",
-          "Na WordPressie największe zyski dają cztery rzeczy, w tej kolejności:",
-        ],
-        list: [
-          "Ograniczenie wtyczek do tych faktycznie używanych.",
-          "Obrazki w nowoczesnych formatach i we właściwych rozmiarach, bo to zwykle najcięższy element strony.",
-          "Cache po stronie serwera, żeby strona nie budowała się od nowa przy każdym wejściu.",
-          "Motyw, który nie ładuje kodu zapasowego na wszelki wypadek.",
-        ],
-        outro: [
-          "Warto przy tym rozdzielić wynik w narzędziu pomiarowym od realnego odczucia. Strona z wysoką punktacją potrafi sprawiać wrażenie ociężałej, bo pierwszy ekran czeka na czcionkę albo na skrypt zewnętrzny. Optymalizacja jest skończona wtedy, gdy poprawia jedno i drugie.",
-        ],
+        "id": "jak-przygotowuje-panel-zebys-mogl-sam-edytowac-strone",
+        "heading": "Jak przygotowuję panel, żebyś mógł sam edytować stronę",
+        "body": [
+          "Samodzielna edycja treści nie powinna oznaczać konieczności samodzielnego projektowania układu. Jeśli chcesz poprawić opis usługi, nie musisz mieć dostępu do ustawień szerokości kolumn, odstępów i sposobu wyświetlania elementów.",
+          "Do przygotowania panelu wykorzystuję ACF, czyli mechanizm dodawania własnych pól w WordPressie. Każdemu edytowalnemu elementowi przypisuję pole odpowiadające jego przeznaczeniu.",
+          "Jeżeli sekcja zawiera nagłówek, opis, zdjęcie i przycisk, w panelu możesz zobaczyć dokładnie te elementy. Zmieniasz zawartość, zapisujesz i sprawdzasz wynik na stronie.",
+          "Przy bardziej rozbudowanych układach przygotowuję pola pozwalające zarządzać powtarzalnymi elementami, na przykład listą usług czy pytaniami w FAQ. Nie musisz kopiować kodu ani ręcznie odtwarzać wyglądu następnej pozycji.",
+          "Ważne jest też ustalenie granic edycji. Jeśli sekcja ma zachować określony układ, nie udostępniam ustawień, które przypadkowo mogłyby go zniszczyć.",
+          "Po uruchomieniu prowadzę szkolenie online na Twojej stronie, pokazując dodawanie i aktualizowanie treści. Zlecając mi wdrożenie, otrzymujesz więc przygotowany panel oraz instruktaż jego codziennej obsługi."
+        ]
       },
       {
-        id: "bezpieczenstwo",
-        heading: "Bezpieczeństwo strony WordPress w praktyce",
-        body: [
-          "Włamania na strony firmowe rzadko są celowanym atakiem. Stoi za nimi automat przeczesujący internet w poszukiwaniu znanej dziury w nieaktualnej wtyczce albo prostego hasła do panelu. Z tego wynika, co naprawdę chroni.",
-          "Fundamentem są aktualizacje, bo automaty korzystają z luk opisanych publicznie i dawno załatanych przez autorów wtyczek. Dalej idzie ograniczenie prób logowania i uwierzytelnianie dwuskładnikowe, które sprawia, że samo poznanie hasła przestaje wystarczać. Do tego dochodzi wtyczka filtrująca ruch.",
-          "Osobno traktuję kopie zapasowe, bo tu najczęściej pojawia się złudzenie bezpieczeństwa. Kopia zapisana na tym samym serwerze co strona ginie razem z nią, jeśli problemem okaże się awaria hostingu, a nie włamanie. Kopia ma wartość dopiero wtedy, gdy leży w innym miejscu i gdy ktoś kiedykolwiek sprawdził, że da się z niej odtworzyć stronę.",
-        ],
+        "id": "kiedy-wlasna-wtyczka-jest-lepsza-od-kilku-gotowych",
+        "heading": "Kiedy własna wtyczka jest lepsza od kilku gotowych",
+        "body": [
+          "Nie każda dodatkowa funkcja wymaga instalowania gotowej wtyczki. Czasem rozwiązanie dostępne w katalogu WordPressa zawiera wiele ustawień, integracji i modułów, chociaż potrzebujesz tylko jednego konkretnego działania.",
+          "Mam za sobą ponad 40 własnych wtyczek i mu-pluginów wdrożonych w 9 serwisach. Mu-plugin to rozszerzenie WordPressa uruchamiane automatycznie, bez zwykłego przełącznika aktywacji w panelu. Wykorzystuję takie rozwiązania między innymi do automatyzacji, SEO i GEO, integracji przez API, WooCommerce i bezpieczeństwa.",
+          "W jednym z własnych serwisów przygotowałem siedem kalkulatorów obsługiwanych przez jedną wtyczkę, w tym kalkulator kuchni na wymiar. Inna funkcja automatycznie dodaje do artykułów spisy treści, rozwijane pytania i odpowiedzi oraz powiązane wpisy.",
+          "Własny kod nie zawsze będzie lepszy. Jeśli istnieje sprawdzona wtyczka, która dokładnie odpowiada potrzebom projektu, jej wykorzystanie może być rozsądniejsze niż pisanie identycznej funkcji.",
+          "Warto jednak odróżnić wygodę instalacji od późniejszego utrzymania. Każdy dodatkowy komponent trzeba aktualizować, kontrolować pod kątem bezpieczeństwa i sprawdzać jego zgodność z pozostałymi elementami strony.",
+          "Przy wycenie oceniam, czy potrzebną funkcję lepiej wdrożyć gotowym rozwiązaniem, czy zaprogramować specjalnie dla Twojej firmy."
+        ]
       },
       {
-        id: "panel-edycji",
-        heading: "Jak wygląda panel, w którym edytujesz treści",
-        body: [
-          "Najczęstsze rozczarowanie po odbiorze strony brzmi tak: wygląda świetnie, ale nie wiem, gdzie zmienić ten jeden akapit. Bierze się stąd, że panel oddano w domyślnej postaci, a nazwy pól nijak nie odpowiadają temu, co widać na stronie.",
-          "Da się to ustawić inaczej. Pola edycyjne można nazwać dokładnie tak, jak nazywają się sekcje w projekcie, i zostawić tylko te, które faktycznie masz zmieniać. Jeśli sekcja składa się ze zdjęcia, nagłówka i trzech punktów, to w panelu widzisz zdjęcie, nagłówek i trzy punkty, a nie pusty edytor tekstu.",
-          "Sprawdzian jakości jest prosty i wart zrobienia przy odbiorze: usiądź do panelu i spróbuj samodzielnie zmienić trzy rzeczy, które będziesz poprawiać najczęściej. Jeśli trafisz bez podpowiedzi, panel jest zrobiony dobrze.",
-        ],
+        "id": "jak-przygotowuje-strone-pod-google-i-odpowiedzi-ai",
+        "heading": "Jak przygotowuję stronę pod Google i odpowiedzi AI",
+        "body": [
+          "WordPress daje możliwość ustawienia czytelnych adresów, tytułów stron i opisów widocznych w wynikach wyszukiwania. Nie oznacza to jednak, że nowa strona automatycznie będzie dobrze widoczna w Google.",
+          "Znaczenie ma struktura serwisu, jakość treści i techniczna możliwość ich odczytania. Jeśli oferujesz różne usługi, warto przygotować dla nich osobne podstrony zamiast umieszczać wszystkie informacje w jednym krótkim opisie.",
+          "Podczas wdrożenia konfiguruję strukturę nagłówków, mapę witryny, dane strukturalne i Google Search Console. Dane strukturalne pomagają wyszukiwarce rozpoznać, co znajduje się na danej podstronie.",
+          "W odpowiednich miejscach mogę zastosować FAQPage, czyli dane opisujące pytania i odpowiedzi. W jednym z serwisów generowałem je z treści na 951 podstronach lokalnych. Taki mechanizm ogranicza konieczność ręcznego przygotowywania osobnego kodu dla każdej podstrony.",
+          "Uwzględniam też GEO, czyli przygotowanie treści tak, aby ich temat, zakres i powiązania były czytelne dla systemów korzystających z AI. Nie oznacza to gwarancji cytowania przez ChatGPT ani pojawienia się w odpowiedziach innych narzędzi.",
+          "Nie obiecuję też pozycji w Google. Na widoczność wpływają czynniki wykraczające poza samo wykonanie strony.",
+          "Zlecając mi stronę WordPress, otrzymujesz techniczne podstawy SEO i uporządkowaną strukturę treści, którą możesz później rozwijać."
+        ]
       },
       {
-        id: "wordpress-a-seo",
-        heading: "WordPress a SEO: co system załatwia, a czego nie",
-        body: [
-          "WordPress daje przyzwoite podstawy techniczne. Adresy podstron są czytelne, mapa witryny generuje się sama, a wtyczka SEO pozwala ustawić tytuły i opisy widoczne w wynikach wyszukiwania oraz dane strukturalne, dzięki którym wyszukiwarka rozumie, czym jest dana podstrona.",
-          "Sam system nie decyduje jednak o pozycjach. Rozstrzygają treść odpowiadająca na realne pytania, struktura serwisu i linki prowadzące do niego z zewnątrz. Strona bez treści nie zajmie wysokiego miejsca dlatego, że stoi na WordPressie.",
-          "Uważaj też na wtyczki. Dwie wtyczki SEO naraz nie wzmacniają efektu, tylko wstawiają własne, sprzeczne znaczniki. Jedna, ustawiona świadomie, wystarcza.",
-        ],
+        "id": "jak-dobrac-hosting-i-zadbac-o-bezpieczenstwo",
+        "heading": "Jak dobrać hosting i zadbać o bezpieczeństwo",
+        "body": [
+          "Hosting wpływa na wydajność, dostępność i bezpieczeństwo strony. Przy niewielkiej witrynie firmowej nie zawsze potrzebujesz rozbudowanej infrastruktury, ale najtańszy pakiet również nie musi być najlepszym wyborem.",
+          "Przy wyborze serwera sprawdzam wersję PHP, dostępne zasoby, możliwość wykonywania kopii zapasowych, certyfikat SSL i warunki aktualizacji środowiska. Najczęściej rozważam Hostingera lub cyber_folks, zależnie od wymagań projektu.",
+          "Bezpieczeństwo nie kończy się na instalacji wtyczki ochronnej. Liczą się aktualizacje WordPressa, motywu i rozszerzeń, mocne hasła, ograniczone uprawnienia użytkowników oraz możliwość odtworzenia strony z kopii zapasowej.",
+          "Kopia przechowywana wyłącznie na tym samym serwerze nie chroni przed każdą awarią. Ważne, gdzie są przechowywane dane i czy procedura przywracania rzeczywiście działa.",
+          "Istotna jest także własność usług. Domena i hosting powinny należeć do Ciebie, a wykonawca powinien otrzymać odpowiednie dostępy techniczne. Dzięki temu nie tracisz kontroli nad stroną, jeśli zmienisz osobę odpowiedzialną za jej utrzymanie.",
+          "Po uruchomieniu mogę dalej zajmować się aktualizacjami, kopiami zapasowymi i kontrolą bezpieczeństwa w ramach opcjonalnej usługi [opieka nad stroną WordPress](/uslugi/opieka-wordpress). Przy zleceniu ustalam również wymagania hostingowe i sposób zabezpieczenia witryny."
+        ]
       },
       {
-        id: "wordpress-czy-nextjs",
-        heading: "Kiedy WordPress, a kiedy lepiej wyjść poza niego",
-        body: [
-          "WordPress sprawdza się tam, gdzie treść zmienia się często i ma ją zmieniać osoba nietechniczna. Strona firmowa z ofertą i blogiem, serwis lokalnej usługi, prosty sklep: to jego naturalne zastosowania.",
-          "Poza niego warto wyjść, gdy projekt przestaje być stroną, a staje się aplikacją. Panel klienta, logowanie użytkowników, nietypowe wyliczenia, kilka integracji naraz: to wszystko da się w WordPressie wymusić, tylko kończy się zlepkiem wtyczek, w którym każda aktualizacja bywa ryzykiem.",
-          "Istnieje też wariant pośredni, w którym WordPress zostaje wyłącznie miejscem do zarządzania treścią, a to, co widzi użytkownik, buduje się osobno. Porównanie obu podejść razem z konsekwencjami dla budżetu opisałem we wpisie [WordPress czy Next.js](/blog/wordpress-vs-next-js-koszt).",
-        ],
+        "id": "jak-przebiega-projekt-i-co-otrzymujesz-po-wdrozeniu",
+        "heading": "Jak przebiega projekt i co otrzymujesz po wdrożeniu",
+        "body": [
+          "Pracę zaczynam od rozmowy i briefu. Ustalam, do kogo kierujesz ofertę, jakie podstrony są potrzebne i które treści będziesz później samodzielnie aktualizować.",
+          "Następnie przygotowuję projekt w Figmie. Masz dwie tury poprawek, a programowanie rozpoczynam po akceptacji wyglądu strony. W ten sposób unikam sytuacji, w której większe zmiany układu pojawiają się dopiero po napisaniu motywu.",
+          "Podczas programowania udostępniam wersję testową po każdym etapie. Możesz sprawdzić wygląd, treści i działanie funkcji, zanim przeniosę stronę na docelowy serwer.",
+          "Przy wymianie starej witryny uwzględniam przekierowania 301 dla zmienionych adresów. Przygotowuję migrację tak, żeby ograniczyć przerwę w działaniu, choć zmiana DNS może spowodować krótką niedostępność.",
+          "Przed odbiorem sprawdzam formularze, wersję mobilną, wydajność, dostępność i konfigurację podstawowych narzędzi.",
+          "Po wdrożeniu otrzymujesz dostęp administracyjny do strony, przygotowany panel edycji i szkolenie online. Przez 60 dni obowiązuje gwarancja i bezpłatne poprawki.",
+          "Zlecając mi stronę, współpracujesz bezpośrednio z osobą, która projektuje jej działanie i pisze kod, bez przekazywania ustaleń między kolejnymi działami."
+        ]
       },
       {
-        id: "przebieg-wdrozenia",
-        heading: "Jak przebiega wdrożenie i co dostajesz na koniec",
-        body: [
-          "Praca zaczyna się od ustalenia, co strona ma osiągnąć i kto ma z niej korzystać. Z tego wychodzi lista podstron, a dopiero z niej projekt graficzny. Odwrotna kolejność kończy się dosypywaniem treści do gotowych ramek.",
-          "Potem powstaje projekt, na nim własny motyw, następnie wchodzą treści i testy: na telefonie, na wolnym łączu, z klawiatury, w kilku przeglądarkach. Na końcu przenoszę stronę pod docelowy adres, ustawiam przekierowania ze starych adresów i podpinam narzędzia analityczne.",
-          "Po zakończeniu powinieneś mieć komplet:",
+        "id": "ile-trwa-stworzenie-strony-i-co-wplywa-na-koszt",
+        "heading": "Ile trwa stworzenie strony i co wpływa na koszt",
+        "body": [
+          "Prosta wizytówka firmowa zajmuje zwykle 2-3 tygodnie. Typowa strona firmowa lub usługowa wymaga najczęściej 4-6 tygodni. To orientacyjne terminy, które potwierdzam po poznaniu zakresu i dostępności materiałów.",
+          "Największy wpływ na koszt ma liczba unikalnych układów podstron oraz funkcji wymagających zaprojektowania i zaprogramowania.",
+          "Strona zawierająca wiele usług korzystających z jednego układu może wymagać mniej pracy niż niewielka witryna z osobno projektowanymi widokami i nietypowymi mechanizmami.",
+          "Dodatkowy zakres mogą stanowić:"
         ],
-        list: [
-          "dostęp administratora do strony, hostingu i domeny,",
-          "działające kopie zapasowe, z których ktoś próbował już odtworzyć stronę,",
-          "ustawione tytuły, opisy i mapę witryny,",
-          "krótkie szkolenie z obsługi panelu.",
+        "list": [
+          "Integracje z systemami zewnętrznymi i własne kalkulatory.",
+          "Wersje językowe oraz migracja istniejących treści.",
+          "Dodatkowe układy bloga, realizacji i podstron ofertowych.",
+          "Funkcje wymagające osobnej wtyczki lub przetwarzania danych."
         ],
-        outro: [
-          "Jeśli czegoś z tej listy brakuje, wdrożenie nie jest skończone, tylko przerwane.",
-        ],
+        "outro": [
+          "Na harmonogram wpływa również termin dostarczenia tekstów i zdjęć. Jeśli materiały powstają dopiero podczas programowania, trudniej utrzymać uzgodnioną kolejność prac.",
+          "Pomaga wskazanie jednej osoby odpowiedzialnej za akceptację projektu oraz zebranie uwag przed rozpoczęciem kolejnego etapu.",
+          "Przy wycenie rozpisuję zakres prac i termin, żebyś wiedział, jakie widoki i funkcje obejmuje zamówienie."
+        ]
       },
       {
-        id: "ile-trwa-wdrozenie",
-        heading: "Ile trwa tworzenie strony WordPress",
-        body: [
-          "Termin rozjeżdża się rzadko przez pracę techniczną, a prawie zawsze przez czekanie. Projekt i wdrożenie mają przewidywalny czas, natomiast teksty, zdjęcia i akceptacje po stronie klienta potrafią znacznie wydłużyć harmonogram.",
-          "Tempo najbardziej podnoszą trzy rzeczy: gotowe treści, jedna osoba decyzyjna zamiast zbierania sprzecznych uwag od kilku osób, oraz zebrane wcześniej materiały i dostępy. Dobrym nawykiem jest wpisanie terminów po obu stronach, nie tylko po stronie wykonawcy. Wtedy opóźnienie widać od razu, a nie na końcu.",
-        ],
+        "id": "jak-przygotowac-tresci-zeby-strona-odpowiadala-na-pytania-kl",
+        "heading": "Jak przygotować treści, żeby strona odpowiadała na pytania klientów",
+        "body": [
+          "Projekt graficzny nie zastąpi dobrze przygotowanej oferty. Nawet atrakcyjna strona niewiele wyjaśni klientowi, jeśli nie znajdzie na niej konkretnego opisu usługi, obszaru działania albo sposobu kontaktu.",
+          "Przed rozpoczęciem projektu warto zebrać opisy usług, informacje o firmie, zdjęcia i odpowiedzi na pytania, które regularnie otrzymujesz od klientów.",
+          "Osobna podstrona usługi pozwala wyjaśnić, co obejmuje oferta, dla kogo jest przeznaczona i jak wygląda współpraca. Nie trzeba wtedy upychać różnych tematów w jednej sekcji strony głównej.",
+          "Jeśli prowadzisz blog, warto również ustalić kategorie i sposób prezentacji wpisów. Przy większej liczbie publikacji znaczenie mają powiązane artykuły, spisy treści oraz wygodne wyszukiwanie informacji.",
+          "Ważne są także dokumenty formalne, takie jak polityka prywatności i informacje dotyczące cookies. Ich treść powinna odpowiadać faktycznemu sposobowi przetwarzania danych przez firmę.",
+          "Na etapie briefu ustalam, które materiały już posiadasz, a które trzeba przygotować przed wdrożeniem, żeby projekt strony odpowiadał rzeczywistej zawartości."
+        ]
       },
       {
-        id: "koszt-strony-wordpress",
-        heading: "Od czego zależy koszt strony WordPress",
-        body: [
-          "Przy tworzeniu stron WordPress nie określam zakresu wyłącznie na podstawie liczby pozycji w menu. Dwie strony z podobną liczbą podstron mogą wymagać zupełnie różnej ilości pracy. Znaczenie ma przede wszystkim liczba różnych szablonów, które trzeba zaprojektować i zakodować. Strona główna, usługa, realizacja, wpis blogowy czy kontakt mogą korzystać z innych układów, nawet jeśli później powstanie wiele podstron opartych na tych samych wzorcach.",
-          "W nowych projektach przygotowuję własny motyw bez Elementora. Sekcje możliwe do edycji odpowiadają projektowi strony, dzięki czemu panel nie musi dawać swobody zmieniania wszystkiego kosztem spójności wyglądu. Zakres prac zwiększają między innymi:",
-        ],
-        list: [
-          "liczba różnych szablonów podstron,",
-          "własny motyw i zestaw bloków przeznaczonych do edycji,",
-          "integracje z zewnętrznymi usługami lub systemami,",
-          "dodatkowe wersje językowe obsługiwane na przykład przez WPML albo Polylang,",
-          "migracja istniejących tekstów, zdjęć i innych treści ze starej strony,",
-          "blog wraz z potrzebnymi szablonami wpisów, kategorii i archiwów.",
-        ],
-        outro: [
-          "Osobno trzeba uwzględnić koszty, które pojawiają się już po uruchomieniu witryny. Należą do nich domena i hosting, a w zależności od rozwiązania również licencje płatnych wtyczek. Po oddaniu strony zapewniam 60 dni gwarancji i bezpłatnych poprawek. Później utrzymanie może pozostać po stronie firmy albo działać jako opcjonalna [opieka nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok.",
-        ],
+        "id": "dostepnosc-wcag-warto-uwzglednic-juz-podczas-projektowania",
+        "heading": "Dostępność WCAG warto uwzględnić już podczas projektowania",
+        "body": [
+          "Dostępność cyfrowa dotyczy możliwości korzystania ze strony przez osoby o różnych potrzebach, w tym użytkowników klawiatury, czytników ekranu oraz osoby mające trudności z odczytywaniem treści.",
+          "W praktyce oznacza odpowiedni kontrast, logiczną strukturę nagłówków, opisy alternatywne obrazów, poprawne etykiety formularzy i widoczne oznaczenie aktualnie wybranego elementu.",
+          "Od 28 czerwca 2025 roku określone usługi cyfrowe podlegają ustawowym wymaganiom dostępności. Zakres obowiązków zależy jednak od rodzaju usługi i sytuacji przedsiębiorcy. Sama obecność strony firmowej nie przesądza automatycznie o wszystkich obowiązkach prawnych.",
+          "Przy wdrożeniu uwzględniam zasady WCAG od etapu projektowania. Dokładniejsza weryfikacja może wymagać ręcznych testów, ponieważ automatyczne narzędzia nie wykrywają wszystkich problemów. Zakres takiego sprawdzenia opisuję na stronie [audyt dostępności WCAG](/audyt-wcag).",
+          "Nie traktuję również nakładki z przyciskiem zmiany kontrastu jako rozwiązania wszystkich problemów dostępności. Jeśli formularz nie działa z klawiatury, dodatkowy pasek narzędzi nie naprawi jego konstrukcji.",
+          "Zlecając stronę, możesz uwzględnić dostępność już w projekcie i określić zakres wymaganych testów, zamiast zamawiać przebudowę gotowego interfejsu."
+        ]
       },
       {
-        id: "hosting",
-        heading: "Hosting pod WordPressa: co naprawdę ma znaczenie",
-        body: [
-          "Na najtańszym hostingu współdzielonym na jednym serwerze siedzi wiele stron i dzielą one te same zasoby. Przy małym ruchu to wystarcza. Kłopot pojawia się, gdy ruch rośnie, czyli zwykle w najgorszym momencie: przy kampanii albo sezonowym szczycie.",
-          "Przy wyborze warto sprawdzić kilka rzeczy, których nie widać w cenniku:",
-        ],
-        list: [
-          "wersję PHP i limity pamięci, bo od nich zależy, czy strona w ogóle ruszy sprawnie,",
-          "kopie zapasowe po stronie hostingu i to, jak długo są trzymane,",
-          "certyfikat SSL w cenie,",
-          "lokalizację serwera względem odbiorców, bo dla polskiej firmy serwer w Polsce da krótszy czas odpowiedzi niż serwer za oceanem.",
-        ],
-        outro: [
-          "Osobna sprawa to na kogo założone jest konto. Hosting i domena zarejestrowane na dane wykonawcy wyglądają wygodnie do pierwszej zmiany współpracy. Powinny należeć do firmy, a wykonawca ma dostawać dostęp.",
-        ],
-      },
-      {
-        id: "tresci",
-        heading: "Treści na stronę: kto je pisze i co muszą zawierać",
-        body: [
-          "Założenie, że teksty napiszą się na końcu, jest najczęstszą przyczyną opóźnień w całym projekcie. Powstają wtedy pod presją i zostają na stronie w takiej postaci na lata. Warto na starcie ustalić jedną rzecz: kto pisze i do kiedy.",
-          "Minimum, które musi się znaleźć, to opis każdej usługi osobno, informacja, kto prowadzi firmę, dane kontaktowe i obszar działania. Osobno idą wymogi formalne: polityka prywatności, informacja o plikach cookie, a w sklepie regulamin i zasady zwrotów.",
-          "Z punktu widzenia wyszukiwarki liczy się, żeby każda usługa miała własną podstronę z własnym tekstem. Podstrona pod jedną konkretną usługę odpowiada na konkretne zapytanie, a wspólna lista wszystkich usług nie odpowiada na żadne.",
-          "Ta sama zasada działa przy opisach realizacji. Trzy zdania o wykonanym projekcie robią więcej niż galeria bez podpisów.",
-        ],
-      },
-      {
-        id: "dostepnosc",
-        heading: "Dostępność cyfrowa: wymóg, o którym łatwo zapomnieć",
-        body: [
-          "Od 28 czerwca 2025 część firm ma prawny obowiązek zapewnienia dostępności swoich usług cyfrowych. Podstawą jest ustawa z 26 kwietnia 2024 roku, a poziom techniczny wyznacza norma zharmonizowana EN 301 549, która odsyła do WCAG 2.1 AA (jej wersja z 2026 roku włącza już WCAG 2.2). Zwolnieni są mikroprzedsiębiorcy świadczący usługi, czyli firmy zatrudniające mniej niż 10 osób i jednocześnie mające obrót lub sumę bilansową do 2 mln euro. Oba warunki muszą być spełnione naraz.",
-          "W praktyce dotyczy to rzeczy pomijanych przy zwykłym wdrożeniu: kontrastu tekstu wobec tła, opisów alternatywnych zdjęć, obsługi strony samą klawiaturą, etykiet przy polach formularza i czytelnych komunikatów błędu. Zaplanowane od początku kosztują niewiele, dokładane do gotowej strony potrafią wymagać przebudowy szablonów.",
-          "Warto sprawdzić to zawczasu, bo nakładka reklamowana jako gotowe rozwiązanie problemu zwykle zgodności nie daje. Co obejmuje rzetelne sprawdzenie i które kryteria da się ocenić wyłącznie ręcznie, opisałem na stronie [audytu WCAG](/audyt-wcag).",
-        ],
-      },
-      {
-        id: "najczestsze-bledy",
-        heading: "Najczęstsze błędy przy zamawianiu strony na WordPressie",
-        body: [
-          "Pierwszy błąd dotyczy dostępów. Domena zarejestrowana na wykonawcę i konta analityczne poza kontrolą właściciela zamieniają zwykłą zmianę współpracy w negocjacje.",
-          "Drugi to zamawianie strony pod wrażenie zamiast pod odbiorcę. Efektowna animacja na wejściu cieszy przy odbiorze, a potem opóźnia pierwszy ekran u kogoś, kto wchodzi z telefonu przy słabym zasięgu.",
-          "Trzeci to potraktowanie odbioru jako końca. Strona, której przez rok nikt nie dotknął, ma nieaktualne wtyczki, a jej treść coraz mniej odpowiada temu, co firma naprawdę sprzedaje. Nie musi to oznaczać stałej umowy, ale musi oznaczać, że ktoś raz na jakiś czas się tym zajmuje.",
-        ],
-      },
-    ],
+        "id": "jakich-bledow-uniknac-przy-zamawianiu-strony-wordpress",
+        "heading": "Jakich błędów uniknąć przy zamawianiu strony WordPress",
+        "body": [
+          "Pierwszym błędem jest wybieranie wykonawcy wyłącznie na podstawie wyglądu przykładowych stron. Warto sprawdzić również panel edycji, sposób realizacji dodatkowych funkcji i zasady późniejszego utrzymania.",
+          "Drugim jest kupowanie rozbudowanego szablonu tylko dlatego, że zawiera wiele efektów i gotowych układów. Jeśli nie korzystasz z większości tych możliwości, mogą jedynie komplikować obsługę strony.",
+          "Trzecim jest odkładanie rozmowy o dostępach do momentu zakończenia współpracy. Domena, hosting i konta analityczne powinny pozostawać pod Twoją kontrolą od początku.",
+          "Czwartym jest brak planu aktualizacji. Strona WordPress wymaga utrzymania także po uruchomieniu. Nie musisz zlecać tego na stałe, ale ktoś powinien odpowiadać za aktualizacje, kopie zapasowe i reagowanie na problemy.",
+          "Warto również przed podpisaniem ustaleń zapytać, które elementy będziesz mógł zmieniać samodzielnie, a które będą wymagały prac programistycznych.",
+          "Przyjmując zlecenie, ustalam te kwestie w briefie i zakresie wdrożenia. Dzięki temu wiesz, co otrzymujesz po uruchomieniu strony i za które obszary będziesz później odpowiadać samodzielnie."
+        ]
+      }
+    ]
   },
   "sklepy-internetowe-woocommerce": {
     "heading": "Jak zaplanować wdrożenie sklepu WooCommerce, żeby sprzedawać i wygodnie obsługiwać zamówienia",
