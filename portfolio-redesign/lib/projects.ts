@@ -562,7 +562,7 @@ const WP_FIRMOWA = ["tworzenie-stron-wordpress", "nowoczesna-strona-firmowa-2026
 
 /** Usługi (slugi z lib/services.ts), których dana realizacja jest dowodem. Lab celowo pominięty. */
 export const PROJECT_SERVICES: Record<string, string[]> = {
-  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress"],
+  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress"],
   kantorymapa: ["aplikacje-nextjs", "strony-jamstack"],
   cojestpolskie: ["strony-jamstack", "nowoczesne-strony-internetowe", "wdrozenia-ai"],
   dobrypupil: ["strony-jamstack"],
@@ -573,8 +573,9 @@ export const PROJECT_SERVICES: Record<string, string[]> = {
     "sklepy-internetowe-woocommerce",
     "przyspieszanie-stron-wordpress",
     "integracja-woocommerce-z-baselinker",
+    "tworzenie-wtyczek-wordpress",
   ],
-  mebloweporady: ["tworzenie-stron-wordpress"],
+  mebloweporady: ["tworzenie-stron-wordpress", "tworzenie-wtyczek-wordpress"],
   businesstokenizer: ["tworzenie-stron-wordpress"],
   "apartamenty-zlota-grota": ["tworzenie-stron-www", "tworzenie-stron-wordpress"],
   "kancelaria-mpiontek": [...WP_FIRMOWA, "tworzenie-stron-www"],

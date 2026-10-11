@@ -93,6 +93,11 @@ const GROUPS: Group[] = [
         line: "Zamówienia, stany i Allegro z jednego magazynu.",
       },
       {
+        slug: "tworzenie-wtyczek-wordpress",
+        title: "Wtyczki WordPress",
+        line: "Funkcje na zamówienie do strony i sklepu WooCommerce.",
+      },
+      {
         slug: "next-js-software-house",
         title: "Next.js outsourcing",
         line: "Stała współpraca 60-100 h albo MVP w 4-12 tygodni.",

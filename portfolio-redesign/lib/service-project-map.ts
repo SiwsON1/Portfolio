@@ -92,6 +92,12 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
     highlight:
       "WooCommerce + BaseLinker + powiązania magazynów z hurtownią",
   },
+  "tworzenie-wtyczek-wordpress": {
+    projectSlug: "lumikids",
+    context:
+      "W sklepie LumiKids na WooCommerce dopisałem kilka funkcji jako własne wtyczki. Jedna prosi klientów o opinię 7 dni po zrealizowaniu zamówienia i nagradza ją jednorazowym kodem rabatowym, z moderacją przed publikacją. Druga chroni zamówienia za pobraniem: zewnętrzna integracja cofała ich status, a WooCommerce po godzinie je anulował. Przyczynę znalazłem w logu serwera, wtyczka blokuje taką zmianę i zostawia notatkę w zamówieniu.",
+    highlight: "Opinie po zakupie i ochrona zamówień za pobraniem",
+  },
   "wdrozenia-ai": {
     projectSlug: "cojestpolskie",
     context:

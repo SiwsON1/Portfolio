@@ -38,6 +38,7 @@ const SLUG_TO_ICON: Record<string, IconKey> = {
   "tworzenie-stron-wordpress": "wordpress",
   "sklepy-internetowe-woocommerce": "woocommerce",
   "integracja-woocommerce-z-baselinker": "woocommerce",
+  "tworzenie-wtyczek-wordpress": "wordpress",
   "headless-wordpress": "headless",
   "nowoczesne-strony-internetowe": "modern",
   "nowoczesna-strona-firmowa-2026": "year2026",

@@ -24,6 +24,7 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
     subs: [
       "sklepy-internetowe-woocommerce",
       "integracja-woocommerce-z-baselinker",
+      "tworzenie-wtyczek-wordpress",
       "opieka-wordpress",
       "przyspieszanie-stron-wordpress",
       "headless-wordpress",
