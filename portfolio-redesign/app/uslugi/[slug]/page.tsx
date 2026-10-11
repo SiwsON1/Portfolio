@@ -15,6 +15,7 @@ import { SEO_BLOCKS } from "@/lib/seoBlocks";
 import { SeoBlock } from "@/components/service/SeoBlock";
 import { areaServed, jsonLd, personRef, SITE_URL } from "@/lib/schema";
 import { MobileReveal } from "@/components/service/MobileReveal";
+import { PluginArchive } from "@/components/service/PluginArchive";
 import { industries, INDUSTRY_SERVICES } from "@/lib/industries";
 
 /** Kursywa na dwóch ostatnich słowach, jak w nagłówkach stron branżowych. */
@@ -239,6 +240,9 @@ export default async function UslugaPage({
           </div>
         </section>
       )}
+
+      {/* ARCHIWUM WTYCZEK: zrzuty działających wtyczek i spis, tylko usługa wtyczek */}
+      {s.slug === "tworzenie-wtyczek-wordpress" && <PluginArchive />}
 
       {/* CASE STUDY — pokaż konkretną realizację w tej technologii */}
       {hasRealizacje && (
