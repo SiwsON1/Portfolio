@@ -210,97 +210,156 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ],
   },
   "sklepy-internetowe-woocommerce": {
-    heading: "Jak dobrze zaplanować sklep WooCommerce przed wdrożeniem",
-    intro: [
-      "Ten poradnik jest dla właściciela małej lub średniej firmy, który rozważa własny sklep internetowy WooCommerce i chce świadomie porównać wykonawców, zakres prac oraz możliwe rozwiązania. Jeśli szukasz usługi pod hasłem „sklepy WooCommerce Wrocław”, patrz nie tylko na wygląd strony, ale też na sposób zarządzania produktami, koszty utrzymania, możliwości rozbudowy i to, co stanie się ze sklepem kilka miesięcy po uruchomieniu.",
-      "Pracuję jako freelancer web developer z Wrocławia od 2020 roku, a projekty realizuję również zdalnie dla firm z całej Polski i z Niemiec. Nowe sklepy na WordPressie i WooCommerce buduję na własnym motywie, bez Elementora. Dzięki temu mogę dopasować rozwiązanie do konkretnego modelu sprzedaży, zamiast zaczynać od ograniczeń narzuconych przez gotowy kreator.",
+    "heading": "Jak zaplanować wdrożenie sklepu WooCommerce, żeby sprzedawać i wygodnie obsługiwać zamówienia",
+    "intro": [
+      "Sklep WooCommerce może być prostym miejscem do zamawiania kilku produktów albo rozbudowanym systemem połączonym z hurtownią, Allegro, płatnościami i narzędziami marketingowymi. W obu przypadkach najważniejsze decyzje zapadają przed rozpoczęciem kodowania. Trzeba ustalić, skąd pochodzą dane produktowe, jak klient wybiera wariant, co dzieje się po opłaceniu zamówienia i kto aktualizuje stany magazynowe. Jeśli te elementy nie są przemyślane, nawet atrakcyjny sklep potrafi wymagać codziennego ręcznego poprawiania danych.",
+      "Jestem Marcin, web developer z Wrocławia. Tworzę komercyjne strony od 2020 roku, a od końca 2022 roku pracuję na własny rachunek. Mam za sobą ponad 30 wdrożeń komercyjnych dla firm z Polski i Niemiec. Jeśli szukasz wykonawcy sklepu WooCommerce we Wrocławiu, nie musimy spotykać się osobiście, bo cały proces mogę przeprowadzić zdalnie. Sam projektuję i koduję rozwiązanie, a Ty rozmawiasz bezpośrednio ze mną. Poniżej pokazuję, jakie decyzje podejmuję podczas wdrożenia i na co warto zwrócić uwagę, zanim zamówisz sklep."
     ],
-    sections: [
+    "sections": [
       {
-        id: "woocommerce-czy-shopify",
-        heading: "WooCommerce, Shopify, Shoper czy PrestaShop, co wybrać",
-        body: [
-          "WooCommerce wybieram przede wszystkim wtedy, gdy firma chce mieć własny sklep, rozwijać go we własnym tempie i zachować dużą swobodę w zakresie danych, wyglądu oraz funkcjonalności. To rozwiązanie oparte na WordPressie, więc sklep można połączyć z rozbudowaną częścią treściową, poradnikami, landing page'ami czy stronami kategorii przygotowanymi pod ruch z wyszukiwarki.",
-          "Shopify i Shoper działają w innym modelu. To usługi SaaS, czyli platformy dostępne w ramach abonamentu. Część kwestii technicznych przejmuje dostawca, ale przedsiębiorca funkcjonuje w ramach przygotowanego przez niego środowiska, zasad oraz dostępnych rozszerzeń. Taki model może być wygodny, szczególnie gdy sklep ma być możliwie standardowy i właściciel nie potrzebuje daleko idących zmian.",
-          "WooCommerce również nie jest rozwiązaniem do wszystkiego. Przy bardzo dużym katalogu, bardzo wysokim ruchu, skomplikowanym multistore albo nietypowej architekturze sprzedażowej zwykle rozważam inne podejście. Może to być PrestaShop, a przy odpowiedniej skali również architektura headless, w której Next.js odpowiada za front, a WooCommerce pozostaje zapleczem. Technologia powinna wynikać z modelu biznesowego, a nie odwrotnie.",
+        "id": "woocommerce-shopify-shoper-czy-prestashop-wybor-zalezy-od-sp",
+        "heading": "WooCommerce, Shopify, Shoper czy PrestaShop: wybór zależy od sposobu sprzedaży",
+        "body": [
+          "Nie każda firma potrzebuje WooCommerce. Jeżeli chcesz uruchomić standardowy katalog, korzystać z funkcji oferowanych przez dostawcę i nie planujesz większych zmian technicznych, rozsądnym wyborem może być platforma abonamentowa. Jeśli natomiast ważne są własny projekt, integracje z istniejącymi systemami i możliwość rozwijania niestandardowych funkcji, WooCommerce daje mi większą swobodę wdrożenia."
         ],
+        "table": {
+          "caption": "WooCommerce, Shopify, Shoper czy PrestaShop: wybór zależy od sposobu sprzedaży",
+          "head": [
+            "Platforma",
+            "Dla kogo",
+            "Mocna strona",
+            "Ograniczenie"
+          ],
+          "rows": [
+            [
+              "WooCommerce",
+              "Firma potrzebująca własnego sklepu, treści i indywidualnych integracji",
+              "Swoboda rozbudowy WordPressa i funkcji sprzedażowych",
+              "Wymaga utrzymania technicznego, aktualizacji i odpowiedniego hostingu"
+            ],
+            [
+              "Shopify",
+              "Firma ze standardowym procesem sprzedaży",
+              "Hosting i część obsługi technicznej po stronie dostawcy",
+              "Dostosowanie funkcji zależy od możliwości platformy i aplikacji"
+            ],
+            [
+              "Shoper",
+              "Firma szukająca gotowego środowiska do prowadzenia sklepu",
+              "Zintegrowany model abonamentowy i narzędzia do obsługi sprzedaży",
+              "Rozbudowa pod nietypowe wymagania jest ograniczona możliwościami platformy"
+            ],
+            [
+              "PrestaShop",
+              "Firma z rozbudowanym katalogiem i wymaganiami sprzedażowymi",
+              "Możliwość budowy zaawansowanego sklepu z własnymi modułami",
+              "Wymaga konfiguracji, utrzymania i pracy programistycznej przy dostosowaniach"
+            ]
+          ]
+        },
+        "outro": [
+          "WooCommerce jest rozszerzeniem WordPressa, dlatego dobrze sprawdza się również wtedy, gdy chcesz rozwijać poradniki zakupowe, opisy kategorii czy strony poświęcone konkretnym zastosowaniom produktów. Możesz prowadzić sklep i część treściową w jednym systemie.",
+          "Przy niestandardowej architekturze można rozdzielić interfejs sklepu od zaplecza, wykorzystując na przykład Next.js. Różnice technologiczne opisuję szerzej w artykule [porównanie WordPressa z Next.js](/blog/next-js-15-vs-wordpress-2026). Nie traktuję jednak takiej architektury jako domyślnego wyboru dla zwykłego sklepu.",
+          "Przed przyjęciem zlecenia sprawdzam Twój model sprzedaży i dopiero wtedy proponuję WooCommerce albo inną platformę."
+        ]
       },
       {
-        id: "koszt-sklepu-woocommerce",
-        heading: "Od czego zależy koszt wdrożenia sklepu WooCommerce",
-        body: [
-          "Koszt sklepu nie wynika wyłącznie z liczby podstron. Dużo większe znaczenie ma to, co dzieje się z produktem od momentu wprowadzenia go do systemu aż do zakupu, wysyłki i późniejszej obsługi zamówienia. Dwa sklepy z podobną liczbą produktów mogą więc wymagać zupełnie innego zakresu prac.",
-          "Na zakres wdrożenia wpływają między innymi:",
+        "id": "koszt-wdrozenia-wynika-przede-wszystkim-z-integracji-i-waria",
+        "heading": "Koszt wdrożenia wynika przede wszystkim z integracji i wariantów produktów",
+        "body": [
+          "Dwa sklepy mogą mieć podobną liczbę produktów, ale wymagać zupełnie innego nakładu pracy. Sam katalog nie mówi jeszcze, jak skomplikowane będzie wdrożenie. Większe znaczenie mają warianty produktów oraz systemy, między którymi trzeba wymieniać dane.",
+          "Sklep sprzedający proste produkty z płatnościami internetowymi i dostawą ma inne wymagania niż sklep pobierający ofertę z hurtowni, aktualizujący magazyn i obsługujący zamówienia z Allegro. W drugim przypadku muszę sprawdzić nie tylko połączenie usług, ale też zachowanie danych przy zmianie statusu zamówienia, ceny lub dostępności.",
+          "Na zakres prac wpływają między innymi:"
         ],
-        list: [
-          "liczba produktów, kategorii, atrybutów i wariantów,",
-          "własny projekt oraz motyw albo adaptacja gotowego rozwiązania,",
-          "funkcje B2B i indywidualne zasady sprzedaży,",
-          "migracja ze starego systemu,",
-          "wersje językowe i sprzedaż na innych rynkach,",
-          "jakość oraz format danych produktowych,",
-          "ilość treści, które trzeba przygotować lub przenieść.",
+        "list": [
+          "Liczba wariantów produktu, atrybutów i indywidualnych zasad wyboru.",
+          "Integracje z płatnościami, dostawami, BaseLinkerem, hurtowniami i fakturowaniem.",
+          "Funkcje B2B, w tym ceny dla grup klientów i minimalne zamówienia.",
+          "Migracja danych, wersje językowe oraz jakość materiałów produktowych.",
+          "Niestandardowe funkcje, na przykład automatyczne przypomnienia i własne reguły zamówień."
         ],
-        outro: [
-          "Osobną kategorią są koszty stałe po uruchomieniu. Sklep potrzebuje domeny i hostingu, część funkcji może korzystać z płatnych wtyczek lub zewnętrznych usług, a rozwijany biznes zazwyczaj wymaga też aktualizacji i obsługi technicznej. Dlatego przy porównywaniu ofert sprawdź nie tylko zakres samego wdrożenia sklepu WooCommerce, ale również to, jakie elementy trzeba będzie utrzymywać po jego starcie.",
-        ],
+        "outro": [
+          "Warto też uwzględnić utrzymanie po uruchomieniu. Sklep potrzebuje hostingu, aktualizacji, kopii zapasowych i kontroli zgodności rozszerzeń. Niektóre usługi lub dodatki mogą wymagać opłat abonamentowych, niezależnych od samego wykonania sklepu.",
+          "Przygotowując wycenę, rozpisuję zakres funkcji i integracji. Po krótkiej rozmowie i briefie podaję termin oraz określam, co obejmuje wdrożenie."
+        ]
       },
       {
-        id: "dane-produktowe",
-        heading: "Dobre dane produktowe oszczędzają problemy podczas wdrożenia",
-        body: [
-          "Jednym z częściej niedoszacowanych etapów jest uporządkowanie danych o produktach. Samo zdjęcie, nazwa i cena zwykle nie wystarczą. Sklep potrzebuje logicznej struktury kategorii, atrybutów oraz wariantów, dzięki którym klient może filtrować ofertę i wybrać właściwy produkt.",
-          "Przed wdrożeniem ustalam więc, jakie dane są dostępne i kto je przygotowuje. Po stronie firmy mogą znajdować się zdjęcia, opisy, parametry techniczne czy przypisanie produktów do kategorii. Ja przygotowuję strukturę sklepu oraz sposób, w jaki te dane mają być przechowywane i prezentowane.",
-          "Produkty można później dodawać ręcznie w panelu WooCommerce albo importować masowo z CSV lub XML. Jeżeli dane pochodzą z hurtowni albo kilku kanałów sprzedaży, automatyzacja zwykle ma większy sens niż ręczne kopiowanie informacji. W zależności od modelu sprzedaży mogę też przygotować [integrację WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker), żeby ograniczyć ręczną obsługę produktów i zamówień pomiędzy kanałami.",
-        ],
+        "id": "dane-produktowe-musza-wspolpracowac-ze-sklepem-hurtownia-i-k",
+        "heading": "Dane produktowe muszą współpracować ze sklepem, hurtownią i kanałami sprzedaży",
+        "body": [
+          "Przed wdrożeniem sprawdzam, gdzie znajdują się informacje o produktach. Mogą być zapisane w obecnym sklepie, pliku CSV, XML albo systemie hurtowni. Ważne jest nie tylko przeniesienie nazw i cen, ale również zachowanie poprawnych identyfikatorów, wariantów, parametrów i kategorii.",
+          "Dobrze zorganizowany katalog pozwala później filtrować produkty według cech przydatnych klientowi. Przy sprzęcie technicznym będą to parametry modeli, przy odzieży rozmiary, warianty i skład materiału. Te informacje powinny mieć uporządkowaną strukturę, a nie znajdować się wyłącznie w opisach.",
+          "W jednym z moich wdrożeń BaseLinker obsługiwał połączenie z hurtownią. Pełny katalog pozostawał w jej magazynie, natomiast do sklepu trafiały wybrane produkty. Stany magazynowe i ceny były aktualizowane na podstawie pliku hurtowni. Dzięki temu właściciel nie musiał ręcznie przepisywać całej oferty ani prowadzić niezależnej aktualizacji każdego produktu.",
+          "Takie połączenie wymaga ustalenia źródła danych. Trzeba wiedzieć, czy cenę ustala sklep, hurtownia czy inny system, a także co ma się wydarzyć, gdy produkt zniknie z dostarczanego katalogu.",
+          "Przy wdrożeniu sprawdzam format danych i przygotowuję sposób ich importowania lub synchronizacji, który odpowiada Twojej codziennej pracy."
+        ]
       },
       {
-        id: "karta-produktu-i-koszyk",
-        heading: "Karta produktu i koszyk mają ułatwiać decyzję, nie tylko dobrze wyglądać",
-        body: [
-          "Karta produktu jest jednym z najważniejszych miejsc w sklepie. Klient powinien szybko zrozumieć, co kupuje, jaki wariant ma wybrać, czy produkt jest dostępny oraz jakie informacje są potrzebne przed podjęciem decyzji. Układ powinien wynikać z rodzaju asortymentu.",
-          "W sklepie odzieżowym istotne będą na przykład tabela rozmiarów i skład tkaniny. Przy bardziej technicznych produktach większe znaczenie mogą mieć parametry, porównanie wariantów albo dodatkowe materiały pomagające dobrać właściwy model. Dobrym przykładem jest [sklep LumiKids](/projekty/lumikids), gdzie przebudowałem między innymi karty produktów z tabelami rozmiarów i składem tkanin oraz architekturę kategorii.",
-          "Podobnie podchodzę do koszyka i checkoutu. Im więcej zbędnych pól, rozpraszaczy i niejasnych komunikatów, tym większa szansa, że użytkownik przerwie zakup. Szczególnie ważna jest wersja mobilna, gdzie mały ekran szybko obnaża źle zaprojektowany formularz. W odpowiednim miejscu można też zaplanować dosprzedaż produktów powiązanych, ale nie powinna ona utrudniać finalizacji zamówienia.",
-        ],
+        "id": "karta-produktu-wyszukiwarka-i-koszyk-powinny-pomagac-kliento",
+        "heading": "Karta produktu, wyszukiwarka i koszyk powinny pomagać klientowi podjąć decyzję",
+        "body": [
+          "Klient nie powinien szukać podstawowych informacji w kilku miejscach. Karta produktu ma odpowiadać na pytania o wariant, parametry, dostępność oraz sposób zakupu. Jej budowa zależy od tego, co sprzedajesz.",
+          "W sklepie ze sprzętem obserwacyjnym przygotowałem kartę z logo producenta, parametrami pobieranymi ze słownika specyfikacji, ciemną galerią zdjęć oraz przyciskiem zakupu pozostającym w zasięgu użytkownika podczas przewijania na telefonie. Wdrożyłem również filtr marek i automatyczne podstawianie zdjęć produktów z przezroczystym tłem.",
+          "Oprócz samej karty ważna jest wyszukiwarka. Przygotowywałem własne podpowiedzi w nagłówku sklepu, które wyświetlają wyniki dopasowane do wpisywanej frazy. Klient może dzięki temu przejść do szukanego produktu bez przeglądania całego katalogu.",
+          "Po dodaniu produktu do koszyka liczy się czytelny proces zamówienia. Formularz powinien pokazywać potrzebne pola, poprawne komunikaty i dostępne metody dostawy. Wdrażałem również polskie komunikaty formularzy, żeby kupujący wiedział, jakie dane musi poprawić.",
+          "W przypadku niedokończonych zakupów można zastosować przypomnienia. Przygotowałem mechanizm, który zapisuje porzucony koszyk, wysyła jedno przypomnienie e-mail i pozwala odtworzyć jego zawartość przez link. W innym etapie obsługi zamówień wdrożyłem zbieranie opinii 7 dni po realizacji, z jednorazowym kodem rabatowym ważnym 60 dni oraz moderacją opinii o sklepie.",
+          "Przy zleceniu ustalam, które funkcje rzeczywiście pomagają Twoim klientom kupować, zamiast dodawać mechanizmy sprzedażowe bez konkretnego zastosowania."
+        ]
       },
       {
-        id: "wymogi-prawne-sklepu",
-        heading: "Wymogi prawne trzeba uwzględnić również technicznie",
-        body: [
-          "Sklep internetowy musi być przygotowany nie tylko do przyjmowania zamówień. Część obowiązków prawnych wpływa bezpośrednio na sposób działania strony, kart produktów, promocji oraz narzędzi analitycznych.",
-          "Od 1 stycznia 2023 roku przy informowaniu o obniżce ceny trzeba wskazywać najniższą cenę z 30 dni przed obniżką. W sklepie oznacza to konieczność prawidłowego zapisywania historii cen i automatycznego wyświetlania wymaganej informacji przy promocjach. UOKiK wskazuje, że obowiązek dotyczy informacji o konkretnych obniżkach, również prezentowanych w sklepach internetowych.",
-          "Od 13 grudnia 2024 roku stosowane jest także unijne rozporządzenie GPSR 2023/988 dotyczące ogólnego bezpieczeństwa produktów. Przy sprzedaży na odległość oferta produktu powinna zawierać między innymi dane producenta, w tym dane kontaktowe, a także wymagane ostrzeżenia i informacje dotyczące bezpieczeństwa. Rozporządzenie zastąpiło wcześniejszą dyrektywę 2001/95/WE.",
-          "Dochodzi do tego RODO, polityka prywatności oraz prawidłowa obsługa zgód na cookies. Narzędzia analityczne wymagające zgody nie powinny rozpoczynać śledzenia użytkownika przed dokonaniem przez niego odpowiedniego wyboru. Regulamin musi także uwzględniać zasady odstąpienia od umowy. Konsument kupujący przez internet ma co do zasady 14 dni na odstąpienie od umowy bez podawania przyczyny, z uwzględnieniem przewidzianych prawem wyjątków.",
+        "id": "google-merchant-dane-strukturalne-i-ga4-wymagaja-poprawnej-k",
+        "heading": "Google Merchant, dane strukturalne i GA4 wymagają poprawnej konfiguracji",
+        "body": [
+          "Widoczność produktów zaczyna się od informacji, które sklep udostępnia wyszukiwarkom. Sama nazwa i opis nie zawsze wystarczają do jednoznacznej identyfikacji produktu. Znaczenie mają także marka, numer SKU, EAN oraz MPN, czyli numer katalogowy producenta.",
+          "Dane strukturalne przekazują informacje o produkcie w formacie zrozumiałym dla systemów przetwarzających stronę. Mogą pomagać wyszukiwarkom i systemom AI interpretować zawartość karty, ale nie gwarantują konkretnego sposobu wyświetlenia ani pozycji.",
+          "Przygotowywałem poprawki danych strukturalnych obejmujące rzeczywistą nazwę produktu, markę, SKU, EAN, MPN i nawigację okruszkową, czyli ścieżkę kategorii prowadzącą do produktu. Zakres zależał od informacji dostępnych w danym sklepie.",
+          "Osobnym elementem jest Google Merchant. To system, do którego można przekazać feed produktowy, czyli uporządkowany zestaw danych o ofercie sklepu. W wykonanej przeze mnie integracji:"
         ],
+        "list": [
+          "Kategorie sklepu były przypisywane do odpowiednich kategorii Google.",
+          "Produkty bez SKU były pomijane w feedzie.",
+          "Dane produktowe były przygotowywane do wykorzystania w Zakupach Google."
+        ],
+        "outro": [
+          "Dopuszczenie produktów do wyświetlania zależy również od wymagań Google Merchant i weryfikacji oferty.",
+          "Do pomiaru zachowania użytkowników mogę skonfigurować GA4 z Consent Mode v2. Wdrażałem również własny lekki baner cookies. Narzędzia wymagające zgody nie powinny rozpoczynać śledzenia przed odpowiednim wyborem użytkownika.",
+          "Przy wdrożeniu przygotowuję też podstawową strukturę technicznego SEO, mapę strony i Search Console, bez obiecywania określonych pozycji w Google."
+        ]
       },
       {
-        id: "migracja-i-przejecie-sklepu",
-        heading: "Migracja sklepu wymaga więcej niż skopiowania produktów",
-        body: [
-          "Przy przejęciu istniejącego sklepu najpierw sprawdzam jego stan techniczny i dane, które trzeba zachować. Dotyczy to nie tylko produktów, ale również klientów, zamówień, kategorii oraz adresów URL. Migracje realizuję między innymi z Shopera, IdoSell i Shopify do WooCommerce.",
-          "Szczególnej uwagi wymagają adresy istniejących stron. Jeżeli nowy sklep zmienia strukturę kategorii albo kart produktów, przygotowuję przekierowania 301 ze starych adresów na nowe. Bez tego użytkownicy mogą trafiać na błędy, a wypracowane wcześniej adresy przestają prowadzić do właściwych treści.",
-          "Przy przejęciu sklepu po innym wykonawcy sprawdzam też motyw, wykorzystywane wtyczki, wersje PHP i WordPressa, sposób wykonywania kopii zapasowych, wydajność oraz elementy wymagające aktualizacji. Dopiero po takim przeglądzie można rozsądnie zdecydować, które części zachować, które przebudować, a których dalsze utrzymywanie nie ma sensu. Przykładem rozbudowanego sklepu WooCommerce, nad którym pracowałem, jest [Kosmoteka](/projekty/kosmoteka), z własnym projektem kart produktów, poradnikami zakupowymi i połączeniem z danymi hurtowni.",
-        ],
+        "id": "obowiazki-prawne-trzeba-uwzglednic-w-dzialaniu-sklepu",
+        "heading": "Obowiązki prawne trzeba uwzględnić w działaniu sklepu",
+        "body": [
+          "Regulamin i polityka prywatności są ważne, ale część wymogów wpływa bezpośrednio na funkcje WooCommerce. Dotyczy to między innymi prezentowania promocji, informacji o produkcie, zgód na cookies oraz procesu składania zamówienia.",
+          "Przy ogłaszaniu obniżek cen trzeba uwzględnić zasady informowania o najniższej cenie z 30 dni przed obniżką. Oznacza to potrzebę odpowiedniego zapisywania historii cen i wyświetlania wymaganych informacji przy promocjach objętych tym obowiązkiem.",
+          "Rozporządzenie GPSR dotyczące ogólnego bezpieczeństwa produktów wpływa z kolei na informacje prezentowane w ofertach sprzedaży na odległość. W zależności od produktu potrzebne są między innymi dane producenta, dane kontaktowe i wymagane ostrzeżenia dotyczące bezpieczeństwa.",
+          "Do tego dochodzą RODO, zasady wykorzystywania cookies i informacje o prawach konsumenta, w tym o odstąpieniu od umowy. Techniczna konfiguracja sklepu musi odpowiadać przyjętym dokumentom i modelowi sprzedaży.",
+          "Nie zastępuję doradcy prawnego ani podatkowego. Przy wdrożeniu konfiguruję dostępne funkcje na podstawie zasad ustalonych dla Twojej firmy i sprawdzam ich działanie w procesie zamówienia."
+        ]
       },
       {
-        id: "b2b-i-sprzedaz-za-granice",
-        heading: "WooCommerce może obsługiwać B2B i sprzedaż zagraniczną",
-        body: [
-          "Sklep internetowy WooCommerce nie musi być ograniczony do klasycznej sprzedaży detalicznej. Przy odpowiedniej architekturze można przygotować rozwiązanie, w którym różne grupy klientów widzą inne warunki handlowe. W B2B mogą to być na przykład osobne ceny dla określonych grup odbiorców czy minimalne wartości albo ilości zamówienia.",
-          "Jeżeli firma planuje sprzedaż poza Polską, zakres prac obejmuje również wersje językowe oraz dostosowanie zawartości sklepu do poszczególnych rynków. Ustalam to na samym początku, ponieważ wielojęzyczność wpływa nie tylko na teksty, ale też na strukturę produktów, kategorie, treści informacyjne i sposób późniejszego zarządzania ofertą.",
-          "Przy średnim sklepie obejmującym B2B, wersje językowe i migrację zakładam zwykle 10-14 tygodni od warsztatu do uruchomienia. Mniejszy sklep, bez podobnie rozbudowanego zakresu, zwykle mieści się w 6-8 tygodniach. Warunkiem sprawnego wdrożenia jest jednak dostępność materiałów i danych, których sklep potrzebuje do startu.",
-        ],
+        "id": "migracja-sklepu-i-funkcje-b2b-wymagaja-zaplanowania-przeplyw",
+        "heading": "Migracja sklepu i funkcje B2B wymagają zaplanowania przepływu danych",
+        "body": [
+          "Przeniesienie sklepu z Shopera, IdoSell lub Shopify nie powinno polegać wyłącznie na zaimportowaniu produktów. Trzeba ustalić, które dane mają zostać zachowane, czy można je wyeksportować i jak będą wyglądały w WooCommerce.",
+          "Szczególnej uwagi wymagają kategorie, warianty, klienci, zamówienia oraz adresy produktów. Jeśli przebudowujesz katalog, stare adresy mogą przestać działać. Wtedy przygotowuję przekierowania 301, żeby użytkownik trafiający ze starego linku został skierowany na odpowiednią nową podstronę. Nie oznacza to gwarancji utrzymania dotychczasowej widoczności w Google.",
+          "Przy przejmowaniu działającego sklepu sprawdzam motyw, wtyczki, wersje WordPressa i PHP, kopie zapasowe oraz wydajność. Dzięki temu mogę ocenić, czy lepiej rozbudować istniejące rozwiązanie, czy przebudować wybrane części.",
+          "Jeśli prowadzisz sprzedaż B2B, trzeba dodatkowo ustalić zasady dla różnych grup odbiorców. WooCommerce można przygotować do obsługi indywidualnych cen, minimalnych zamówień i innych warunków handlowych. Wersje językowe dla Polski i Niemiec wpływają z kolei na strukturę produktów, kategorii i treści.",
+          "Mniejszy sklep wdrażam zwykle w 6-8 tygodni. Średni projekt obejmujący B2B, wersje językowe i migrację zajmuje zwykle 10-14 tygodni. Przy zleceniu określam zakres przenoszenia danych, zasady sprzedaży i termin na podstawie briefu."
+        ]
       },
       {
-        id: "aktualizacje-i-staging",
-        heading: "Po starcie potrzebne są aktualizacje, kopie zapasowe i staging",
-        body: [
-          "Uruchomienie sklepu nie oznacza końca pracy technicznej. WordPress, WooCommerce i rozszerzenia są regularnie aktualizowane, a kolejne wersje mogą zmieniać sposób działania poszczególnych funkcji. W sklepie obsługującym realne zamówienia większych zmian nie testuje się bezpośrednio na produkcji.",
-          "Dlatego przy dalszym rozwoju ważne są regularne kopie zapasowe i środowisko stagingowe, czyli oddzielna kopia sklepu służąca do testowania aktualizacji oraz nowych funkcji. Pozwala to sprawdzić zmiany przed wdrożeniem ich dla klientów, zamiast odkrywać konflikt wtyczek lub problem z koszykiem dopiero podczas składania zamówienia.",
-          "Wydajność również wymaga kontroli wraz z rozwojem katalogu i ruchu. W projektach korzystam między innymi z cache LiteSpeed, Cloudflare CDN i Redis object cache, a moim celem przy optymalizacji jest LCP poniżej 2 sekund. Jeżeli po uruchomieniu potrzebujesz stałego utrzymania technicznego, aktualizacji i reagowania na problemy, osobno realizuję [opiekę nad sklepem](/uslugi/opieka-wordpress).",
-        ],
-      },
-    ],
+        "id": "po-uruchomieniu-sklep-potrzebuje-aktualizacji-testow-i-kontr",
+        "heading": "Po uruchomieniu sklep potrzebuje aktualizacji, testów i kontroli wydajności",
+        "body": [
+          "Działający sklep przetwarza zamówienia, dlatego nie warto sprawdzać większych zmian bezpośrednio na stronie dostępnej dla klientów. Aktualizacja WordPressa, WooCommerce lub wtyczki może wpłynąć na koszyk, płatności czy integracje.",
+          "Do bezpieczniejszego rozwoju przydaje się środowisko testowe, czyli oddzielna kopia sklepu. Można na niej sprawdzić nowe funkcje, zanim zostaną udostępnione kupującym. Ważne są też kopie zapasowe i możliwość odtworzenia działania strony po problematycznej zmianie.",
+          "Nie każda funkcja wymaga osobnej gotowej wtyczki. W swoich projektach przygotowałem ponad 40 własnych wtyczek i mu-pluginów w 9 serwisach. Mu-plugin to rodzaj wtyczki WordPress ładowanej automatycznie. Własny kod stosuję wtedy, gdy pozwala wykonać konkretne zadanie bez dokładania rozbudowanego rozszerzenia.",
+          "Wydajność sprawdzam również przed uruchomieniem. Optymalizuję obrazy, kod, zapytania do bazy oraz konfigurację pamięci podręcznej, gdy jest potrzebna. Korzystam między innymi z LiteSpeed Cache, Cloudflare CDN i Redis object cache. Przed oddaniem sprawdzam Lighthouse na telefonie, z celem 90+ i LCP poniżej 2,5 sekundy. Jeśli istniejący sklep wymaga osobnych prac nad szybkością, możesz zlecić mi [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress).",
+          "Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek oraz szkolenie online z edycji treści. Jeśli chcesz, żebym dalej aktualizował sklep i reagował na problemy techniczne, możesz zamówić [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) w miesięcznym abonamencie bez umowy na rok. Zakres dalszego utrzymania ustalam z Tobą przy przekazaniu sklepu."
+        ]
+      }
+    ]
   },
   "tworzenie-stron-www": {
     heading: "Jakie strony www tworzę dla firm we Wrocławiu i nie tylko",
