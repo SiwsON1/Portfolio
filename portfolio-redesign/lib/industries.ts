@@ -183,7 +183,7 @@ export const industries: Industry[] = [
       },
       {
         title: "Dostępność także dla osób z ograniczeniami",
-        body: "Uwzględnię zasady WCAG podczas projektowania nawigacji, formularzy, kontrastów i obsługi klawiaturą. Zadbam o czytelne etykiety pól, widoczny stan aktywnego elementu i logiczną strukturę nagłówków. Jeżeli masz już witrynę i chcesz ustalić zakres potrzebnych zmian, mogę też przeprowadzić [audyt dostępności WCAG](/audyt-wcag)."
+        body: "Uwzględnię zasady WCAG podczas projektowania nawigacji, formularzy, kontrastów i obsługi klawiaturą. Zadbam o czytelne etykiety pól, widoczny stan aktywnego elementu i logiczną strukturę nagłówków. Jeżeli masz już witrynę i chcesz ustalić zakres potrzebnych zmian, mogę też przeprowadzić audyt dostępności WCAG."
       },
       {
         title: "Dane kancelarii zrozumiałe dla wyszukiwarek",
