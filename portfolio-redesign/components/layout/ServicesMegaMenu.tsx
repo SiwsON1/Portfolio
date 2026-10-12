@@ -33,12 +33,12 @@ const GROUPS: Group[] = [
       {
         slug: "tworzenie-stron-wordpress",
         title: "Strony WordPress",
-        line: "Custom theme bez Elementora, CWV 95+, edycja w panelu.",
+        line: "Własny motyw bez Elementora, Lighthouse 90+ na telefonie.",
       },
       {
         slug: "aplikacje-nextjs",
         title: "Strony Next.js",
-        line: "Premium stack, edge deploy, sub-200ms FCP globalnie.",
+        line: "Strona lub aplikacja od zera, na przykład Kantorymapa.",
       },
       {
         slug: "opieka-wordpress",
@@ -48,23 +48,23 @@ const GROUPS: Group[] = [
       {
         slug: "przyspieszanie-stron-wordpress",
         title: "Przyspieszanie stron",
-        line: "Core Web Vitals na zielono, raport przed i po.",
+        line: "Szukam przyczyny spowolnienia. Raport przed i po.",
       },
       {
         slug: "nowoczesna-strona-firmowa-2026",
         title: "Strona firmowa MŚP",
-        line: "Pakiet dla firm 5-50 osób. Wycena 24h.",
+        line: "Prosty zakres, edycja w panelu WordPress.",
       },
     ],
   },
   {
     label: "Design + animacje",
-    caption: "Awwwards-style, custom interactions.",
+    caption: "Animacje i interakcje, które mają zadanie.",
     items: [
       {
         slug: "nowoczesne-strony-internetowe",
         title: "Nowoczesne strony internetowe",
-        line: "GSAP, custom cursor, page transitions, R3F.",
+        line: "GSAP, animacje przejść, grafika 3D.",
       },
       {
         slug: "headless-wordpress",
@@ -74,7 +74,7 @@ const GROUPS: Group[] = [
       {
         slug: "strony-jamstack",
         title: "Strony Jamstack",
-        line: "Pre-render, headless CMS, sub-1s LCP globalnie.",
+        line: "Statyczne strony z CMS, bez bazy przy każdym wejściu.",
       },
     ],
   },
@@ -100,7 +100,7 @@ const GROUPS: Group[] = [
       {
         slug: "next-js-software-house",
         title: "Next.js outsourcing",
-        line: "Stała współpraca 60-100 h albo MVP w 4-12 tygodni.",
+        line: "MVP, dołączenie do zespołu albo przejęcie rozwoju.",
       },
       {
         slug: "aplikacje-react",

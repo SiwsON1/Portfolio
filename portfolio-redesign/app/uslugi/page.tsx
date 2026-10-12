@@ -7,7 +7,7 @@ import { jsonLd } from "@/lib/schema";
 export const metadata: Metadata = {
   title: { absolute: "Usługi web developera: Next.js, React, WordPress, AI, sklepy" },
   description:
-    "Pełna lista usług: aplikacje Next.js, React, WordPress, WooCommerce, headless CMS, Jamstack, wdrożenia AI. Wycena 24h od briefa. Wrocław i online.",
+    "Pełna lista usług: aplikacje Next.js, React, WordPress, WooCommerce, headless CMS, Jamstack, wdrożenia AI. Pierwsza odpowiedź w 24 h robocze. Wrocław i online.",
   alternates: { canonical: "/uslugi" },
 };
 
