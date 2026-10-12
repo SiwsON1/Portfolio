@@ -221,9 +221,7 @@ export default async function PostPage({
                     {s.heading}
                   </h2>
                   <div className="space-y-5 text-lg">
-                    {s.body.map((para, j) => (
-                      <p key={j}>{renderInlineLinks(para)}</p>
-                    ))}
+                    {s.body.slice(0, s.tableAt ?? s.body.length).map((para, j) => renderPara(para, j))}
                   </div>
                   {s.table && s.table.head.length > 2 && (
                     <dl className="mt-10 divide-y divide-line border-y border-line md:hidden">
@@ -277,6 +275,11 @@ export default async function PostPage({
                             ))}
                           </tbody>
                         </table>
+                    </div>
+                  )}
+                  {s.tableAt !== undefined && (
+                    <div className="mt-10 space-y-5 text-lg">
+                      {s.body.slice(s.tableAt).map((para, j) => renderPara(para, j))}
                     </div>
                   )}
                 </section>
@@ -466,6 +469,23 @@ export default async function PostPage({
         />
       )}
     </article>
+  );
+}
+
+/** Akapit wpisu; akapit zaczynający się od ``` to blok kodu (pierwszy wiersz to język). */
+function renderPara(para: string, key: number) {
+  if (!para.startsWith("```")) return <p key={key}>{renderInlineLinks(para)}</p>;
+  const lines = para.split("\n");
+  const lang = lines[0].slice(3).trim();
+  const code = lines.slice(1, lines[lines.length - 1].trim() === "```" ? -1 : undefined).join("\n");
+  return (
+    <pre
+      key={key}
+      aria-label={lang ? `Kod ${lang}` : "Kod"}
+      className="overflow-x-auto rounded-lg border border-line bg-bg-elev px-5 py-4 font-mono text-[0.85rem] leading-relaxed text-ink"
+    >
+      <code>{code}</code>
+    </pre>
   );
 }
 

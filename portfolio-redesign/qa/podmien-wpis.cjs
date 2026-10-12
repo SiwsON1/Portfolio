@@ -20,13 +20,25 @@ const sections = bodyPart.split(/^## /m).filter((x) => x.trim()).map((chunk) => 
     const rows = tbl.filter((l) => !/^\s*\|?\s*:?-{2,}/.test(l)).map(cells);
     table = { caption: heading, head: rows[0], rows: rows.slice(1) };
   }
+  let tableAt;
+  let code = null;
   for (const l of lines) {
     const t = l.trim();
-    if (!t || t.startsWith("|")) continue;
+    // Blok kodu zostaje jednym akapitem zaczynającym się od ```, z zachowanymi wcięciami i pustymi wierszami.
+    if (code !== null) {
+      code.push(l.replace(/\s+$/, ""));
+      if (t.startsWith("```")) { body.push(code.join("\n")); code = null; }
+      continue;
+    }
+    if (t.startsWith("```")) { code = [t]; continue; }
+    if (t.startsWith("|")) { if (tableAt === undefined) tableAt = body.length; continue; }
+    if (!t) continue;
     body.push(t.replace(/^- /, "• "));
   }
   // lista punktowana: sklejam kolejne punkty w jeden akapit z punktorami w osobnych wierszach nie istnieje w szablonie, więc każdy punkt to akapit
-  return table ? { heading, body, table } : { heading, body };
+  if (!table) return { heading, body };
+  // tableAt: tabela stoi tam, gdzie w tekście, a nie zawsze pod ostatnim akapitem.
+  return tableAt < body.length ? { heading, body, table, tableAt } : { heading, body, table };
 });
 const faq = faqStart < 0 ? [] : raw.slice(faqStart).split("\n").filter((l) => /^- P:/.test(l.trim())).map((l) => {
   const m = l.trim().match(/^- P:\s*(.+?)\s*\|\s*O:\s*(.+)$/);
@@ -95,6 +107,7 @@ const out = [
     sec.body.map((p) => `          ${q(p)},`).join("\n"),
     `        ],`,
     sec.table ? `        table: ${q(sec.table)},` : null,
+    sec.tableAt !== undefined ? `        tableAt: ${sec.tableAt},` : null,
     `      },`,
   ].filter(Boolean).join("\n")),
   `    ],`,
