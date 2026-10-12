@@ -1,0 +1,318 @@
+{
+ "page": {
+  "slug": "tworzenie-sklepow-internetowych-dla-marek-odziezowych",
+  "title": "Marki odzieżowe",
+  "keyword": "tworzenie sklepów internetowych dla marek odzieżowych",
+  "metaTitle": "Tworzenie sklepów internetowych dla marek odzieżowych",
+  "metaDescription": "Tworzenie sklepów internetowych dla marek odzieżowych: warianty, tabela rozmiarów, płatności i Allegro. Realizacja 6-8 tygodni.",
+  "h1": "Tworzenie sklepów internetowych dla marek odzieżowych",
+  "lead": "Buduję sklepy dla marek odzieżowych, w których rozmiary, kolory, stany magazynowe i kolekcje pozostają czytelne również na telefonie. Pracuję z Wrocławia, zdalnie z markami z całej Polski i z Niemiec.",
+  "intro": [
+   "W sklepie odzieżowym karta produktu musi pomagać wybrać właściwy wariant, a nie dokładać kolejnych pytań przed zakupem. Przy tworzeniu sklepów internetowych dla marek odzieżowych porządkuję kategorie, warianty, tabele wymiarów i informacje o dostępności. Wdrożenie mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce) z własnym motywem i panelem do edycji treści.",
+   "Przy sklepie [LumiKids](/projekty/lumikids) pracowałem nad warstwą wizualną, stronami kolekcji, kartami produktów i strukturą kategorii. Przy migracji przygotowuję przekierowania starych adresów i sprawdzam techniczne elementy SEO, ale nie obiecuję zachowania dotychczasowych pozycji w Google."
+  ],
+  "pains": [
+   {
+    "title": "Chaos w wariantach",
+    "body": "Gdy wybór rozmiaru i koloru jest nieczytelny, klient może zamówić niewłaściwy wariant albo zrezygnować z zakupu. Na karcie produktu pokazuję stan danego wariantu, odpowiednie zdjęcie i łatwy dostęp do tabeli wymiarów."
+   },
+   {
+    "title": "Niepewny dobór rozmiaru",
+    "body": "Klient odkłada zakup, gdy nie potrafi porównać wymiarów ubrania ze swoją sylwetką. Sklep odzieżowy ogranicza tę niepewność przez tabelę, instrukcję mierzenia i informację o kroju."
+   },
+   {
+    "title": "Rozproszone stany magazynowe",
+    "body": "Sprzedaż w witrynie i na Allegro może przyjąć zamówienie produktu, którego już nie ma. Integracja synchronizuje ceny oraz stany między kanałami w zakresie, na jaki pozwala użyty system."
+   },
+   {
+    "title": "Słaba sprzedaż mobilna",
+    "body": "Duże zdjęcia, filtry i wybór wariantów łatwo przeciążają mały ekran. Projektuję responsywny sklep tak, aby znalezienie produktu, dodanie go do koszyka i płatność wymagały minimum działań."
+   }
+  ],
+  "mustHave": [
+   {
+    "title": "Warianty bez pomyłek",
+    "body": "Rozmiary i kolory łączę z konkretnymi stanami, zdjęciami oraz oznaczeniami dostępności. Niedostępnego połączenia klient nie może przypadkowo dodać do koszyka."
+   },
+   {
+    "title": "Czytelna tabela rozmiarów",
+    "body": "Tabela może różnić się między kategoriami lub producentami odzieży. Obok wymiarów umieszczam prostą instrukcję mierzenia i ważne informacje o fasonie."
+   },
+   {
+    "title": "Landingi kolekcji",
+    "body": "Każda kolekcja otrzymuje własną stronę, narrację, zdjęcia i dobrany zestaw produktów. Stronę kolekcji można opublikować przed premierą, a po sezonie zostawić w serwisie, żeby nie tracić jej pozycji w Google."
+   },
+   {
+    "title": "Kategorie pod wyszukiwarkę",
+    "body": "Frazy zakupowe przypisuję do kategorii i filtrów tak, aby podstrony nie konkurowały ze sobą. Opisy wspierają pozycjonowanie, pomagają wybrać produkt i nie zasłaniają katalogu."
+   },
+   {
+    "title": "Płatności i dostawy",
+    "body": "Sklep może obsługiwać Przelewy24, BLIK, InPost i Paczkomaty. Klient widzi dostępne metody, koszt oraz sposób odbioru przed zatwierdzeniem zamówienia."
+   },
+   {
+    "title": "Pomiar sprzedaży",
+    "body": "GA4 rejestruje między innymi wyświetlenia kart produktów, dodania do koszyka i zakupy. Dane wskazują etap, na którym klienci najczęściej rezygnują."
+   }
+  ],
+  "stack": [
+   {
+    "label": "WooCommerce",
+    "body": "WooCommerce to sklep na WordPressie: obsługuje katalog, warianty, zamówienia i kupony, a Ty nie jesteś uwiązany do zamkniętej platformy. Przy kilku tysiącach produktów albo sprzedaży na kilka rynków warto rozważyć headless na Next.js."
+   },
+   {
+    "label": "Allegro",
+    "body": "Integracja sklepu z Allegro może synchronizować oferty, ceny, zamówienia i stany magazynowe w zakresie, jaki udostępnia wybrane rozwiązanie."
+   },
+   {
+    "label": "InPost",
+    "body": "Klient wybiera Paczkomat na mapie, a dane punktu trafiają do zamówienia i procesu przygotowania przesyłki."
+   },
+   {
+    "label": "Przelewy24",
+    "body": "Bramka zapewnia szybkie płatności, w tym BLIK, oraz automatycznie przekazuje do sklepu informację o opłaceniu zamówienia."
+   }
+  ],
+  "pricing": {
+   "time": "6-8 tygodni",
+   "note": "Wycena zależy od liczby szablonów, wariantów produktów, integracji oraz zakresu migracji danych. Migracja ze starego sklepu potrafi ważyć więcej niż sam projekt, więc pytam o nią na początku rozmowy."
+  },
+  "faq": [
+   {
+    "q": "Ile będzie kosztować sklep dla mojej marki odzieżowej?",
+    "a": "Największy wpływ mają warianty produktów, integracje i ewentualna migracja starego katalogu. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
+   },
+   {
+    "q": "Ile potrwa przygotowanie mojego sklepu odzieżowego?",
+    "a": "Mniejszy sklep WooCommerce zwykle zajmuje 6-8 tygodni. Przy bardziej rozbudowanym sklepie z B2B, wersjami językowymi albo migracją typowy termin to 10-14 tygodni."
+   },
+   {
+    "q": "Czy przeniesiesz mój sklep z Shopera albo Shopify?",
+    "a": "Mogę przeprowadzić migrację po sprawdzeniu danych dostępnych do eksportu. Przed przenosinami ustalam mapowanie kategorii, wariantów i adresów, a dla zmienionych adresów przygotowuję przekierowania 301."
+   },
+   {
+    "q": "Czy mój sklep może synchronizować stany z Allegro?",
+    "a": "Tak, jeśli wybrane rozwiązanie obsługuje strukturę Twoich ofert i wariantów. Przed wdrożeniem ustalam, który system ma być źródłem cen, stanów i opisów."
+   },
+   {
+    "q": "Kto wprowadzi produkty do mojego sklepu?",
+    "a": "Zakres produktów potrzebnych do uruchomienia ustalamy przed pracą. Mogę też przygotować wzorzec i panel, dzięki którym później samodzielnie dodasz kolejne pozycje, albo zaplanować import, jeśli masz uporządkowane dane."
+   },
+   {
+    "q": "Czy przygotujesz zdjęcia produktów?",
+    "a": "Nie wykonuję sesji fotograficznych. Mogę określić potrzebne kadry, proporcje i formaty, a przekazane zdjęcia przygotować do użycia w sklepie i przypisać do wariantów."
+   },
+   {
+    "q": "Jakie stałe koszty będzie miał mój sklep?",
+    "a": "Po Twojej stronie pozostają między innymi domena, hosting, operator płatności, dostawy i używane płatne rozszerzenia. Pomagam dobrać hosting, na przykład Hostinger albo cyber_folks, i przed uruchomieniem wskazuję elementy, które będą generować stałe opłaty."
+   },
+   {
+    "q": "Czy wdrożysz obsługę zwrotów w moim sklepie?",
+    "a": "Mogę przygotować uzgodnioną procedurę, formularz i powiadomienia. Treść dokumentów prawnych przekazujesz mi po zatwierdzeniu samodzielnie albo z prawnikiem."
+   },
+   {
+    "q": "Czy sklep poradzi sobie z większym ruchem podczas premiery?",
+    "a": "Przed oddaniem sprawdzam wydajność strony, a celem jest Lighthouse 90+ na telefonie i LCP poniżej 2,5 s. Dobór hostingu i dodatkowych zasobów ustalam do konkretnego projektu oraz spodziewanego obciążenia."
+   },
+   {
+    "q": "Czy WooCommerce nadaje się dla małej marki odzieżowej?",
+    "a": "Tak, WooCommerce może obsłużyć katalog ubrań, warianty, kolekcje, zamówienia oraz integracje z zewnętrznymi systemami. Polecam go szczególnie wtedy, gdy zależy Ci na własnym projekcie sklepu i możliwości dalszego rozwoju funkcji."
+   },
+   {
+    "q": "Jak ograniczyć zwroty w sklepie z ubraniami?",
+    "a": "Przygotowuję czytelne tabele wymiarów, instrukcje mierzenia oraz miejsce na informacje o fasonie, materiale i rozmiarze prezentowanym na modelce. Dbam też o to, aby zdjęcia i opisy odpowiadały konkretnym wariantom produktu."
+   },
+   {
+    "q": "Czy sklep może obsługiwać przedsprzedaż i dropy kolekcji?",
+    "a": "Tak, mogę przygotować zapowiedzi produktów, strony premierowe, przedsprzedaż oraz powiadomienia o dostępności. Sposób realizacji zamówień zawierających produkty dostępne i przedsprzedażowe ustalam przy rozpoczęciu współpracy."
+   },
+   {
+    "q": "Czy mogę sprzedawać jednocześnie w sklepie i na Allegro?",
+    "a": "Tak, mogę połączyć WooCommerce z Allegro bezpośrednio albo przez system pośredni, na przykład BaseLinker. Przed wdrożeniem ustalam, który system będzie źródłem stanów, cen, opisów i danych o zamówieniach."
+   },
+   {
+    "q": "Jak pokazywać promocje zgodnie z dyrektywą Omnibus?",
+    "a": "Przy informacji o obniżce przygotowuję miejsce na najniższą cenę produktu z 30 dni przed jej wprowadzeniem. Ostateczną treść komunikatów i dokumentów prawnych przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
+   }
+  ],
+  "cta": "Prześlij brief kolekcji i kanałów sprzedaży, a wycenię sklep dla Twojej marki odzieżowej",
+  "deliverables": [
+   {
+    "label": "Sklep WooCommerce",
+    "body": "Przygotowuję sklep WooCommerce z koszykiem, zamówieniem bez rejestracji, kontem klienta i wiadomościami transakcyjnymi."
+   },
+   {
+    "label": "Warianty kolekcji",
+    "body": "Konfiguruję rozmiary, kolory, tabele wymiarów, filtry kolekcji i komunikaty o dostępności. Liczbę produktów startowych ustalamy w zakresie projektu."
+   },
+   {
+    "label": "Płatności i wysyłka",
+    "body": "Podłączam uzgodnione metody płatności i dostawy oraz konfiguruję zasady wysyłki zgodnie z zakresem sklepu."
+   },
+   {
+    "label": "Obsługa zwrotów",
+    "body": "Przygotowuję miejsce na procedurę zwrotu, formularz zgłoszenia, wskazany dokument do pobrania i wiadomość potwierdzającą przyjęcie zgłoszenia."
+   },
+   {
+    "label": "Start sprzedaży",
+    "body": "Testuję zakup na telefonie, konfiguruję uzgodnione ustawienia sklepu i prowadzę szkolenie online z obsługi zamówień oraz produktów."
+   }
+  ],
+  "headings": {
+   "pains": "Co nie działa w sklepach marek odzieżowych",
+   "mustHave": "Czego wymaga sklep marki odzieżowej",
+   "cases": "Sklepy dla marek odzieżowych, które zrobiłem",
+   "stack": "Jak tworzę sklepy dla marek odzieżowych",
+   "pricing": "Ile kosztuje sklep internetowy dla marki odzieżowej",
+   "faq": "Tworzenie sklepów dla marek odzieżowych: pytania"
+  },
+  "process": [
+   {
+    "step": "01",
+    "title": "Brief",
+    "body": "Kolekcje, warianty, tabele rozmiarów i kanały, w których już sprzedajesz."
+   },
+   {
+    "step": "02",
+    "title": "Architektura",
+    "body": "Kategorie i filtry układam pod frazy zakupowe, żeby podstrony nie biły się między sobą."
+   },
+   {
+    "step": "03",
+    "title": "Projekt",
+    "body": "Kartę produktu i koszyk projektuję najpierw na telefon, bo tam zapada decyzja."
+   },
+   {
+    "step": "04",
+    "title": "Wdrożenie",
+    "body": "WooCommerce, warianty, płatności, InPost, integracja z Allegro i tabele rozmiarów."
+   },
+   {
+    "step": "05",
+    "title": "Start i pomiar",
+    "body": "Testowe zamówienia, GA4 z lejkiem zakupowym, szkolenie z dodawania produktów."
+   }
+  ],
+  "notFor": [
+   "Chcesz, żebym wprowadził kilka tysięcy produktów ręcznie. Potrzebny jest plik albo integracja.",
+   "Nie masz zdjęć produktowych i nie planujesz sesji. Sklep odzieżowy bez zdjęć nie sprzedaje.",
+   "Sprzedajesz wyłącznie przez Allegro i nie budujesz własnej marki. Wtedy sklep to zbędny koszt."
+  ]
+ },
+ "block": {
+  "heading": "Sklep internetowy dla marki odzieżowej: jak wybrać platformę i przygotować sprzedaż",
+  "intro": [
+   "**W tym poradniku pokazuję, jak zaplanować sklep internetowy dla marki odzieżowej, wybrać odpowiednią platformę oraz przygotować sprzedaż kolekcji we własnym sklepie i na Allegro.** Omawiam także przedsprzedaż, premiery dropów, prezentację rozmiarów, synchronizację stanów magazynowych oraz obowiązki związane z promocjami i informacjami o produktach.",
+   "Jeżeli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd projektu. Sklep z odzieżą powinien odpowiadać sposobowi, w jaki prowadzisz markę: liczbie wariantów, częstotliwości premier, kanałom sprzedaży i temu, kto będzie aktualizował katalog. Dobrze dobrana technologia ma ułatwiać codzienną obsługę, a nie uzależniać każdą zmianę od programisty."
+  ],
+  "sections": [
+   {
+    "id": "woocommerce-shopify-czy-shoper-moga-pasowac-do-roznych-model",
+    "heading": "WooCommerce, Shopify czy Shoper mogą pasować do różnych modeli sprzedaży",
+    "body": [
+     "Nie ma jednej platformy odpowiedniej dla każdej marki. Przy wyborze sprawdzam przede wszystkim, czy potrzebujesz własnych funkcji, jak często zmieniasz kolekcje, gdzie jeszcze sprzedajesz i jak duży wpływ chcesz mieć na rozwój sklepu. Znaczenie ma również to, czy akceptujesz stały abonament i ograniczenia narzucone przez dostawcę platformy."
+    ],
+    "table": {
+     "caption": "WooCommerce, Shopify czy Shoper mogą pasować do różnych modeli sprzedaży",
+     "head": [
+      "Kryterium",
+      "WooCommerce",
+      "Shopify",
+      "Shoper"
+     ],
+     "rows": [
+      [
+       "Własność sklepu",
+       "Sklep działa na Twoim WordPressie i hostingu",
+       "Sklep działa w usłudze dostawcy",
+       "Sklep działa w usłudze dostawcy"
+      ],
+      [
+       "Abonament",
+       "Brak abonamentu za sam WooCommerce, pozostają koszty hostingu i rozszerzeń",
+       "Stały abonament zależny od wybranego planu",
+       "Stały abonament zależny od wybranego planu"
+      ],
+      [
+       "Prowizje",
+       "Zależą między innymi od operatora płatności i wybranych usług",
+       "Mogą zależeć od planu oraz sposobu obsługi płatności",
+       "Zależą od planu, operatora płatności i dodatkowych usług"
+      ],
+      [
+       "Elastyczność",
+       "Duża możliwość zmiany wyglądu, danych i funkcji",
+       "Rozwój w granicach platformy i dostępnych aplikacji",
+       "Rozwój w granicach platformy i dostępnych integracji"
+      ],
+      [
+       "Integracje z Allegro",
+       "Możliwe bezpośrednio lub przez system pośredni, na przykład BaseLinker",
+       "Zależne od dostępnych aplikacji i systemów pośrednich",
+       "Zależne od aktualnej oferty integracji i systemów pośrednich"
+      ]
+     ]
+    },
+    "outro": [
+     "Platforma abonamentowa może wystarczyć, gdy chcesz szybko uruchomić standardowy sklep internetowy z ubraniami, nie potrzebujesz nietypowych funkcji i akceptujesz sposób działania gotowego systemu. To rozsądna opcja także wtedy, gdy prostota obsługi jest ważniejsza niż pełna kontrola nad kodem i rozwojem sklepu.",
+     "WooCommerce wybieram wtedy, gdy marka potrzebuje większej swobody w projektowaniu kart produktów, stron kolekcji, wariantów i integracji. Przygotowuję [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) na własnym motywie, bez Elementora, Divi i innych kreatorów w nowych projektach. Dzięki temu panel może pozostać dopasowany do treści, które rzeczywiście edytujesz."
+    ]
+   },
+   {
+    "id": "dobor-rozmiaru-zaczyna-sie-od-informacji-a-nie-od-samej-tabe",
+    "heading": "Dobór rozmiaru zaczyna się od informacji, a nie od samej tabeli",
+    "body": [
+     "Tabela rozmiarów pomaga tylko wtedy, gdy klient rozumie, czego dotyczą podane wartości. Inaczej mierzy się ciało, a inaczej ubranie rozłożone na płasko. Dlatego przy każdym zestawie wymiarów trzeba jasno opisać sposób pomiaru, jednostkę oraz ewentualny margines wynikający z konstrukcji lub materiału.",
+     "W sklepie obejmującym różne grupy produktów jedna uniwersalna tabela może wprowadzać w błąd. Koszula, spodnie i luźna bluza mają inne punkty pomiarowe, a rozmiar oznaczony tą samą literą nie zawsze odpowiada identycznym wymiarom. Tabele warto więc przypisywać do kategorii, kolekcji albo konkretnych produktów.",
+     "Na karcie produktu mogą znaleźć się informacje, które pomagają podjąć decyzję:"
+    ],
+    "list": [
+     "wymiary ubrania i instrukcja mierzenia,",
+     "wzrost modelki lub modela oraz prezentowany rozmiar,",
+     "informacja, czy fason jest dopasowany, regularny czy luźny,",
+     "skład materiału oraz wskazówka dotycząca jego elastyczności,",
+     "osobne zdjęcia kolorów i charakterystycznych detali."
+    ],
+    "outro": [
+     "Zdjęcie na modelce daje kontekst, którego nie zapewnia packshot. Pozwala ocenić długość, proporcje i sposób układania się materiału. Nie zastępuje jednak dokładnych wymiarów, dlatego te dwa rodzaje informacji powinny się uzupełniać. **Im mniej klient musi zgadywać przed zakupem, tym mniejsze ryzyko zwrotu wynikającego z niewłaściwego rozmiaru lub błędnego wyobrażenia o kroju.**"
+    ]
+   },
+   {
+    "id": "kolekcje-dropy-i-przedsprzedaz-wymagaja-osobnego-scenariusza",
+    "heading": "Kolekcje, dropy i przedsprzedaż wymagają osobnego scenariusza",
+    "body": [
+     "Strona kolekcji nie musi być zwykłą kategorią produktów. Może przedstawiać motyw premiery, sesję zdjęciową, najważniejsze modele i kontekst, w którym powstał drop. Produkty pozostają częścią katalogu, ale kolekcja otrzymuje własną narrację oraz adres, który można wykorzystywać w kampaniach i publikacjach w mediach społecznościowych.",
+     "Przy premierze dropu warto rozdzielić trzy stany produktu: zapowiedź, sprzedaż i brak dostępności. Produkt zapowiadany może mieć zdjęcia, opis oraz datę premiery bez aktywnego przycisku zakupu. Po rozpoczęciu sprzedaży karta działa standardowo, a po wyczerpaniu danego wariantu może udostępniać zapis na powiadomienie o ponownej dostępności.",
+     "Przedsprzedaż wymaga jeszcze wyraźniejszej komunikacji. Klient powinien przed złożeniem zamówienia wiedzieć, że produkt nie jest dostępny od ręki oraz jaki termin realizacji obowiązuje dla danego zamówienia. Jeżeli w jednym koszyku mogą znaleźć się produkty dostępne i przedsprzedażowe, trzeba także określić sposób wysyłki. Taki scenariusz ustalam przed wdrożeniem, ponieważ wpływa na kartę produktu, koszyk, wiadomości transakcyjne i obsługę zamówień."
+    ]
+   },
+   {
+    "id": "wspolne-stany-lacza-sklep-allegro-i-ruch-z-mediow-spolecznos",
+    "heading": "Wspólne stany łączą sklep, Allegro i ruch z mediów społecznościowych",
+    "body": [
+     "Sprzedaż wielokanałowa działa sprawnie, gdy wiadomo, który system jest głównym źródłem danych o produktach, cenach i dostępności. Bez takiej decyzji łatwo doprowadzić do sytuacji, w której ten sam wariant ma inny stan w sklepie, a inny w ofercie na Allegro. Szczególnej uwagi wymagają produkty występujące jednocześnie w wielu rozmiarach i kolorach.",
+     "BaseLinker może pośredniczyć między WooCommerce a Allegro, przekazywać zamówienia oraz aktualizować stany w zakresie obsługiwanym przez wybraną konfigurację. Przed wdrożeniem [integracji WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker) ustalam strukturę wariantów, sposób powiązania ofert oraz miejsce, w którym zespół będzie obsługiwać zamówienia. Trzeba też określić zasady zmian cen i opisów, aby dane nie były nadpisywane w niewłaściwym kierunku.",
+     "Instagram i TikTok pełnią inną funkcję niż marketplace. Materiał pokazujący stylizację lub premierę powinien prowadzić użytkownika możliwie blisko zakupu, najlepiej do właściwej karty produktu albo strony kolekcji. Ponieważ takie przejście odbywa się zwykle na telefonie, karta musi szybko pokazać zdjęcia, cenę, dostępne warianty, tabelę rozmiarów i przycisk dodania do koszyka. W realizacji [LumiKids](/projekty/lumikids) pracowałem między innymi nad warstwą wizualną, stronami kolekcji, kartami produktów i strukturą kategorii."
+    ]
+   },
+   {
+    "id": "promocje-i-informacje-o-produkcie-trzeba-uwzglednic-juz-w-pr",
+    "heading": "Promocje i informacje o produkcie trzeba uwzględnić już w projekcie",
+    "body": [
+     "Od 1 stycznia 2023 roku przy informowaniu o obniżce ceny należy pokazać również najniższą cenę tego produktu z 30 dni przed wprowadzeniem obniżki. Zasada wynikająca z przepisów określanych jako *Omnibus* wpływa na kartę produktu, listy produktów i inne miejsca, w których prezentowana jest promocja. **Samo przekreślenie wcześniejszej ceny nie wystarcza, jeśli komunikat przedstawia ofertę jako obniżkę.**",
+     "Sklep powinien także przekazywać klientowi informacje dotyczące prawa do odstąpienia od umowy zawartej na odległość. Co do zasady konsument ma na to 14 dni, choć w konkretnych sytuacjach mogą mieć zastosowanie wyjątki. Procedura, formularz i komunikaty muszą być spójne z regulaminem przygotowanym lub zatwierdzonym dla Twojego sklepu.",
+     "Od 13 grudnia 2024 roku obowiązuje *GPSR*, czyli unijne rozporządzenie dotyczące ogólnego bezpieczeństwa produktów. Oferta internetowa powinna zawierać wymagane dane producenta, a w odpowiednich przypadkach także dane podmiotu odpowiedzialnego oraz informacje lub ostrzeżenia dotyczące bezpieczeństwa. Przy odzieży zakres danych zależy od produktu i podmiotu wprowadzającego go do sprzedaży, dlatego układ karty powinien przewidywać miejsce na ich czytelną prezentację. Dokumenty prawne i ostateczny zakres informacji przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
+    ]
+   },
+   {
+    "id": "koszt-sklepu-zalezy-od-katalogu-integracji-i-gotowosci-mater",
+    "heading": "Koszt sklepu zależy od katalogu, integracji i gotowości materiałów",
+    "body": [
+     "Koszt sklepu internetowego dla marki odzieżowej określam po poznaniu zakresu, ponieważ podobna liczba produktów może oznaczać zupełnie inną ilość pracy. Dziesięć prostych modeli bez wariantów to inny katalog niż dziesięć modeli dostępnych w wielu rozmiarach i kolorach, z osobnymi zdjęciami, tabelami oraz stanami magazynowymi.",
+     "Na wycenę wpływają przede wszystkim liczba produktów i wariantów, sposób prezentowania kolekcji, integracje z Allegro lub systemem magazynowym oraz ewentualna migracja. Przy przenoszeniu sklepu sprawdzam jakość eksportu, strukturę kategorii, adresy podstron i możliwość prawidłowego połączenia wariantów. Dla zmienionych adresów przygotowuję przekierowania 301, ale nie obiecuję zachowania dotychczasowych pozycji w Google.",
+     "Znaczenie ma również przygotowanie zdjęć. Nie wykonuję sesji fotograficznych, więc organizuje ją marka. Mogę natomiast określić potrzebne kadry, proporcje i formaty, przygotować przekazane materiały do użycia w sklepie oraz przypisać zdjęcia do odpowiednich wariantów. Po krótkiej rozmowie i briefie przygotowuję wycenę z zakresem oraz terminem, uwzględniając także to, które dane i materiały będą gotowe przed rozpoczęciem wdrożenia."
+    ]
+   }
+  ]
+ }
+}

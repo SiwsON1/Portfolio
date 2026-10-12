@@ -535,158 +535,158 @@ export const industries: Industry[] = [
     title: "Marki odzieżowe",
     keyword: "tworzenie sklepów internetowych dla marek odzieżowych",
     metaTitle: "Tworzenie sklepów internetowych dla marek odzieżowych",
-    metaDescription: "Tworzenie sklepów internetowych dla marek odzieżowych: warianty, tabela rozmiarów, płatności i Allegro. Realizacja 6-8 tygodni.",
+    metaDescription: "Tworzę sklepy internetowe dla marek odzieżowych na WooCommerce. Rozmiary, kolory, stany magazynowe, Allegro i BaseLinker. Wdrożenie w 6-8 tygodni.",
     h1: "Tworzenie sklepów internetowych dla marek odzieżowych",
-    lead: "Buduję sklepy dla marek odzieżowych, w których rozmiary, kolory, stany magazynowe i kolekcje pozostają czytelne również na telefonie. Pracuję z Wrocławia, zdalnie z markami z całej Polski i z Niemiec.",
+    lead: "Projektuję sklepy dla marek odzieżowych, w których klient bez zgadywania wybiera rozmiar i kolor, sprawdza dostępność i zamawia ubrania również na telefonie. Pracuję z Wrocławia, zdalnie z markami z całej Polski i z Niemiec.",
     intro: [
-      "W sklepie odzieżowym karta produktu musi pomagać wybrać właściwy wariant, a nie dokładać kolejnych pytań przed zakupem. Przy tworzeniu sklepów internetowych dla marek odzieżowych porządkuję kategorie, warianty, tabele wymiarów i informacje o dostępności. Wdrożenie mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce) z własnym motywem i panelem do edycji treści.",
-      "Przy sklepie [LumiKids](/projekty/lumikids) pracowałem nad warstwą wizualną, stronami kolekcji, kartami produktów i strukturą kategorii. Przy migracji przygotowuję przekierowania starych adresów i sprawdzam techniczne elementy SEO, ale nie obiecuję zachowania dotychczasowych pozycji w Google."
+      "Sprzedajesz ubrania przez Instagram, Allegro albo własny sklep, ale klienci ciągle pytają o wymiary, dostępność kolorów i terminy wysyłki? Przy tworzeniu sklepów internetowych dla marek odzieżowych zaczynam od tego, co utrudnia zakupy i obsługę zamówień. Projektuję karty produktów z czytelnym wyborem rozmiaru, tabelą wymiarów i składem tkanin. Każdy wariant ma własny stan magazynowy, a klient widzi, co faktycznie może zamówić. Buduję sklepy na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce), z własnym motywem i panelem, w którym samodzielnie zmienisz kolekcje, zdjęcia i opisy.",
+      "W sklepie [LumiKids](/projekty/lumikids), który sprzedaje polską odzież dziecięcą i młodzieżową szytą w Turcji, poprawiałem między innymi wybór rozmiarów. Produkt wyświetlał się jako dostępny, chociaż wszystkie jego rozmiary miały zerowe stany. Przyczyną było odczytywanie dostępności produktu głównego zamiast poszczególnych wariantów. Zmieniłem tę logikę. Niedostępne rozmiary pozostały widoczne, ale są wyszarzone i przekreślone. Poprawiłem też wyszukiwarkę na telefonie oraz obsługę zamówień za pobraniem, których statusy cofała integracja z BaseLinkerem. Tak podchodzę do wdrożenia: sklep ma nie tylko dobrze wyglądać, ale też prawidłowo obsługiwać codzienną sprzedaż."
     ],
     pains: [
       {
-        title: "Chaos w wariantach",
-        body: "Gdy wybór rozmiaru i koloru jest nieczytelny, klient może zamówić niewłaściwy wariant albo zrezygnować z zakupu. Na karcie produktu pokazuję stan danego wariantu, odpowiednie zdjęcie i łatwy dostęp do tabeli wymiarów."
+        title: "Klient nie wie, który rozmiar wybrać",
+        body: "Masz kilka fasonów, a każdy wypada trochę inaczej? Samo oznaczenie S, M czy L nie wystarczy, żeby ocenić wymiary ubrania. Projektuję karty produktów z tabelą rozmiarów, instrukcją mierzenia i miejscem na informację o kroju. Tabelę mogę przypisać do konkretnego produktu lub grupy ubrań, żeby klient nie musiał szukać wymiarów w wiadomościach na Instagramie."
       },
       {
-        title: "Niepewny dobór rozmiaru",
-        body: "Klient odkłada zakup, gdy nie potrafi porównać wymiarów ubrania ze swoją sylwetką. Sklep odzieżowy ogranicza tę niepewność przez tabelę, instrukcję mierzenia i informację o kroju."
+        title: "Sklep pokazuje ubrania, których nie ma",
+        body: "Klient wybiera bluzę, dodaje ją do koszyka, a później okazuje się, że jego rozmiar jest niedostępny. Taki błąd znalazłem w LumiKids. Konfiguruję warianty produktu tak, żeby dostępność wynikała ze stanu konkretnego rozmiaru i koloru, a nie tylko z ustawienia produktu głównego. Niedostępny wariant może pozostać widoczny, ale nie pozwala na zakup."
       },
       {
-        title: "Rozproszone stany magazynowe",
-        body: "Sprzedaż w witrynie i na Allegro może przyjąć zamówienie produktu, którego już nie ma. Integracja synchronizuje ceny oraz stany między kanałami w zakresie, na jaki pozwala użyty system."
+        title: "Allegro i sklep mają różne stany",
+        body: "Ten sam komplet sprzedajesz na Allegro i we własnym sklepie. Jeśli systemy nie wymieniają poprawnie informacji, możesz przyjąć dwa zamówienia na ostatnią sztukę. Łączę WooCommerce z Allegro, również przez BaseLinker, i ustalam, skąd mają pochodzić stany, ceny oraz dane zamówień. Sprawdzam też, czy synchronizacja nie zmienia statusów w niewłaściwy sposób."
       },
       {
-        title: "Słaba sprzedaż mobilna",
-        body: "Duże zdjęcia, filtry i wybór wariantów łatwo przeciążają mały ekran. Projektuję responsywny sklep tak, aby znalezienie produktu, dodanie go do koszyka i płatność wymagały minimum działań."
+        title: "Zakupy na telefonie są niewygodne",
+        body: "Klient trafia z Instagrama do sklepu, ale nie może wygodnie wyszukać produktu, otworzyć tabeli rozmiarów albo wybrać wariantu. W LumiKids wyszukiwarka mobilna ucinała pole wpisywania. Poprawiłem ją, żeby dało się normalnie szukać ubrań. Przy projektowaniu sprawdzam cały zakup na małym ekranie, od wejścia na kartę produktu do potwierdzenia zamówienia."
       }
     ],
     mustHave: [
       {
-        title: "Warianty bez pomyłek",
-        body: "Rozmiary i kolory łączę z konkretnymi stanami, zdjęciami oraz oznaczeniami dostępności. Niedostępnego połączenia klient nie może przypadkowo dodać do koszyka."
+        title: "Rozmiary i kolory z rzeczywistymi stanami",
+        body: "Konfiguruję warianty produktu osobno dla rozmiaru i koloru, z przypisanymi zdjęciami oraz stanem magazynowym każdego połączenia. Jeżeli czarna bluza w rozmiarze M jest wyprzedana, klient zobaczy tę informację, nawet gdy pozostałe rozmiary są dostępne. Sprawdzam również dodawanie produktów do koszyka. Komunikat „Dodano do koszyka” powinien pojawić się dopiero po rzeczywistym dodaniu wybranego wariantu, a nie po samym kliknięciu."
       },
       {
-        title: "Czytelna tabela rozmiarów",
-        body: "Tabela może różnić się między kategoriami lub producentami odzieży. Obok wymiarów umieszczam prostą instrukcję mierzenia i ważne informacje o fasonie."
+        title: "Tabela rozmiarów i skład tkanin",
+        body: "Na karcie produktu umieszczam wymiary ubrania, sposób mierzenia, skład materiału i informacje o fasonie. Nie zakładam, że jedna tabela pasuje do sukienek, bluz i spodni. Jeżeli kolekcje różnią się krojem albo rozmiarówką, przygotowuję odpowiednie zestawy wymiarów. Klient może porównać je przed zakupem, bez szukania informacji w osobnej zakładce kontaktowej."
       },
       {
-        title: "Landingi kolekcji",
-        body: "Każda kolekcja otrzymuje własną stronę, narrację, zdjęcia i dobrany zestaw produktów. Stronę kolekcji można opublikować przed premierą, a po sezonie zostawić w serwisie, żeby nie tracić jej pozycji w Google."
+        title: "Strony kolekcji i rozmiarów",
+        body: "Projektuję osobne strony kolekcji sezonowych, premier i grup produktów. W LumiKids przygotowałem architekturę kategorii dla dziewczynek, chłopców, typów ubrań i okazji, a także 12 stron rozmiarowych dla kompletów i spodni dziewczęcych w rozmiarach 134-164. Wynikało to z podpowiedzi Google dla konkretnych zapytań. Nie tworzę takich stron automatycznie dla całego katalogu, tylko tam, gdzie mają uzasadnienie w sposobie wyszukiwania ubrań."
       },
       {
-        title: "Kategorie pod wyszukiwarkę",
-        body: "Frazy zakupowe przypisuję do kategorii i filtrów tak, aby podstrony nie konkurowały ze sobą. Opisy wspierają pozycjonowanie, pomagają wybrać produkt i nie zasłaniają katalogu."
+        title: "Kategorie, które ułatwiają znalezienie ubrania",
+        body: "Klient powinien łatwo przejść od kategorii do konkretnego modelu, rozmiaru i koloru. Układam kategorie, filtry i opisy wokół rzeczywistych grup produktów oraz fraz zakupowych. Dbam o unikalność opisów, adresy podstron, nagłówki i dane strukturalne produktów, czyli informacje o ofercie zapisane w formacie zrozumiałym dla wyszukiwarki. Przy wdrożeniu konfiguruję również mapę strony i Google Search Console."
       },
       {
-        title: "Płatności i dostawy",
-        body: "Sklep może obsługiwać Przelewy24, BLIK, InPost i Paczkomaty. Klient widzi dostępne metody, koszt oraz sposób odbioru przed zatwierdzeniem zamówienia."
+        title: "Płatności, dostawy i wspólne zamówienia",
+        body: "Podłączam uzgodnione metody płatności, na przykład Przelewy24 i BLIK, oraz dostawę przez InPost z wyborem Paczkomatu. Jeśli sprzedajesz również na Allegro, konfiguruję odpowiednią integrację z systemem obsługi zamówień. Sprawdzam cały proces na zamówieniach testowych, w tym przekazywanie informacji o płatności, wybranej dostawie i aktualizację dostępności produktów."
       },
       {
-        title: "Pomiar sprzedaży",
-        body: "GA4 rejestruje między innymi wyświetlenia kart produktów, dodania do koszyka i zakupy. Dane wskazują etap, na którym klienci najczęściej rezygnują."
+        title: "Szybki sklep i pomiar zakupów",
+        body: "Zdjęcia ubrań są ważne, ale nie powinny blokować ładowania strony. Optymalizuję obrazy, kod i działanie sklepu na telefonie. Przed oddaniem celuję w wynik Lighthouse 90+ na urządzeniach mobilnych i LCP poniżej 2,5 sekundy, czyli szybkie wyświetlenie głównej zawartości strony. Konfiguruję też GA4, które po uzyskaniu zgody na cookies może rejestrować oglądanie produktów, dodawanie do koszyka i zakupy."
       }
     ],
     stack: [
       {
         label: "WooCommerce",
-        body: "WooCommerce to sklep na WordPressie: obsługuje katalog, warianty, zamówienia i kupony, a Ty nie jesteś uwiązany do zamkniętej platformy. Przy kilku tysiącach produktów albo sprzedaży na kilka rynków warto rozważyć headless na Next.js."
+        body: "Buduję sklep z ubraniami WooCommerce na WordPressie, z własnym motywem bez Elementora, Divi i innych kreatorów. Panel edycji dopasowuję do kolekcji, produktów i treści, które będziesz zmieniać. Do edycji sekcji wykorzystuję ACF. Przy bardziej rozbudowanym katalogu lub sprzedaży na kilka rynków mogę rozważyć architekturę headless z Next.js, czyli osobny interfejs sklepu połączony z systemem obsługującym dane."
       },
       {
         label: "Allegro",
-        body: "Integracja sklepu z Allegro może synchronizować oferty, ceny, zamówienia i stany magazynowe w zakresie, jaki udostępnia wybrane rozwiązanie."
+        body: "Łączę sklep z Allegro bezpośrednio albo przez BaseLinker, zależnie od Twojego sposobu sprzedaży. Ustalam, który system zarządza stanami, cenami, ofertami i zamówieniami. Konfiguruję synchronizację w zakresie obsługiwanym przez wybrane rozwiązanie i sprawdzam jej działanie na konkretnych wariantach produktów, żeby dane nie nadpisywały się w niewłaściwym kierunku."
       },
       {
         label: "InPost",
-        body: "Klient wybiera Paczkomat na mapie, a dane punktu trafiają do zamówienia i procesu przygotowania przesyłki."
+        body: "Konfiguruję dostawę do Paczkomatów oraz przekazywanie wybranego punktu odbioru do zamówienia. Klient może wskazać dogodną lokalizację podczas zakupów, a Ty otrzymujesz dane potrzebne do przygotowania przesyłki. Przed uruchomieniem testuję wybór punktu i zapis informacji o dostawie."
       },
       {
         label: "Przelewy24",
-        body: "Bramka zapewnia szybkie płatności, w tym BLIK, oraz automatycznie przekazuje do sklepu informację o opłaceniu zamówienia."
+        body: "Podłączam bramkę płatności umożliwiającą szybkie przelewy i BLIK. Konfiguruję przekazywanie informacji o opłaceniu zamówienia do WooCommerce i sprawdzam zachowanie sklepu przy różnych wynikach płatności. Dzięki temu obsługa zamówień nie musi opierać się wyłącznie na ręcznym sprawdzaniu wpłat."
       }
     ],
     pricing: {
       time: "6-8 tygodni",
-      note: "Wycena zależy od liczby szablonów, wariantów produktów, integracji oraz zakresu migracji danych. Migracja ze starego sklepu potrafi ważyć więcej niż sam projekt, więc pytam o nią na początku rozmowy."
+      note: "Koszt zależy przede wszystkim od liczby wariantów produktów i szablonów stron, integracji z systemami sprzedaży oraz zakresu migracji danych ze starego sklepu. Po rozmowie i briefie przygotowuję wycenę z zakresem prac oraz terminem."
     },
     faq: [
       {
         q: "Ile będzie kosztować sklep dla mojej marki odzieżowej?",
-        a: "Największy wpływ mają warianty produktów, integracje i ewentualna migracja starego katalogu. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
+        a: "Wyceniam projekt po poznaniu katalogu i zakresu prac. Najwięcej zależy od liczby wariantów rozmiarów i kolorów, szablonów stron, integracji z Allegro lub BaseLinkerem oraz ewentualnej migracji danych. Po krótkiej rozmowie i briefie otrzymasz wycenę z zakresem i terminem."
       },
       {
         q: "Ile potrwa przygotowanie mojego sklepu odzieżowego?",
-        a: "Mniejszy sklep WooCommerce zwykle zajmuje 6-8 tygodni. Przy bardziej rozbudowanym sklepie z B2B, wersjami językowymi albo migracją typowy termin to 10-14 tygodni."
+        a: "Mniejszy sklep WooCommerce zwykle przygotowuję w 6-8 tygodni. Przy większym katalogu, funkcjach B2B, wersjach językowych i migracji termin może wynosić 10-14 tygodni. Konkretny harmonogram ustalam po sprawdzeniu zakresu prac i dostępności materiałów."
       },
       {
         q: "Czy przeniesiesz mój sklep z Shopera albo Shopify?",
-        a: "Mogę przeprowadzić migrację po sprawdzeniu danych dostępnych do eksportu. Przed przenosinami ustalam mapowanie kategorii, wariantów i adresów, a dla zmienionych adresów przygotowuję przekierowania 301."
+        a: "Tak, po sprawdzeniu, jakie dane możesz wyeksportować z obecnej platformy. Ustalam sposób przeniesienia produktów, wariantów, kategorii i pozostałych danych objętych projektem. Dla zmienionych adresów przygotowuję przekierowania 301. Planuję migrację tak, żeby przerwa była jak najkrótsza, ale nie obiecuję zachowania dotychczasowych pozycji w Google."
       },
       {
         q: "Czy mój sklep może synchronizować stany z Allegro?",
-        a: "Tak, jeśli wybrane rozwiązanie obsługuje strukturę Twoich ofert i wariantów. Przed wdrożeniem ustalam, który system ma być źródłem cen, stanów i opisów."
+        a: "Tak, jeśli wybrane rozwiązanie obsługuje strukturę Twoich ofert i wariantów. Mogę połączyć WooCommerce z Allegro przez BaseLinker. Najpierw ustalam, który system jest głównym źródłem stanów, a następnie testuję synchronizację rozmiarów, kolorów i zamówień."
       },
       {
         q: "Kto wprowadzi produkty do mojego sklepu?",
-        a: "Zakres produktów potrzebnych do uruchomienia ustalamy przed pracą. Mogę też przygotować wzorzec i panel, dzięki którym później samodzielnie dodasz kolejne pozycje, albo zaplanować import, jeśli masz uporządkowane dane."
+        a: "Przed rozpoczęciem ustalamy liczbę produktów objętych wdrożeniem. Mogę przygotować szablon karty produktu, zaimportować uporządkowane dane i skonfigurować panel do samodzielnego dodawania kolejnych modeli. Przy większym katalogu planuję import zamiast ręcznego przepisywania każdej pozycji."
       },
       {
         q: "Czy przygotujesz zdjęcia produktów?",
-        a: "Nie wykonuję sesji fotograficznych. Mogę określić potrzebne kadry, proporcje i formaty, a przekazane zdjęcia przygotować do użycia w sklepie i przypisać do wariantów."
+        a: "Nie wykonuję sesji fotograficznych, ale mogę wskazać potrzebne ujęcia, proporcje i formaty plików. Otrzymane zdjęcia przygotuję do wykorzystania w sklepie, zoptymalizuję i przypiszę do odpowiednich produktów oraz wariantów kolorystycznych."
       },
       {
         q: "Jakie stałe koszty będzie miał mój sklep?",
-        a: "Po Twojej stronie pozostają między innymi domena, hosting, operator płatności, dostawy i używane płatne rozszerzenia. Pomagam dobrać hosting, na przykład Hostinger albo cyber_folks, i przed uruchomieniem wskazuję elementy, które będą generować stałe opłaty."
+        a: "Musisz uwzględnić domenę, hosting, opłaty operatorów płatności i dostaw oraz ewentualne płatne rozszerzenia. Pomogę dobrać hosting, na przykład Hostinger albo cyber_folks. Przed uruchomieniem wskażę, które elementy będą wymagały odnawiania lub regularnych opłat. Po 60 dniach gwarancji możesz też zdecydować się na opcjonalną opiekę miesięczną bez umowy na rok."
       },
       {
         q: "Czy wdrożysz obsługę zwrotów w moim sklepie?",
-        a: "Mogę przygotować uzgodnioną procedurę, formularz i powiadomienia. Treść dokumentów prawnych przekazujesz mi po zatwierdzeniu samodzielnie albo z prawnikiem."
+        a: "Tak, mogę przygotować formularz zgłoszenia, miejsce na procedurę zwrotu, dokument do pobrania i odpowiednie powiadomienia. Treść regulaminu i dokumentów prawnych przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
       },
       {
         q: "Czy sklep poradzi sobie z większym ruchem podczas premiery?",
-        a: "Przed oddaniem sprawdzam wydajność strony, a celem jest Lighthouse 90+ na telefonie i LCP poniżej 2,5 s. Dobór hostingu i dodatkowych zasobów ustalam do konkretnego projektu oraz spodziewanego obciążenia."
+        a: "Projektuję i testuję sklep również pod kątem wydajności na telefonie. Przed oddaniem celuję w Lighthouse 90+ i LCP poniżej 2,5 sekundy. Wydajność podczas konkretnej premiery zależy też od hostingu, liczby użytkowników i obciążenia systemów zewnętrznych, dlatego dobór zasobów ustalam do planowanego scenariusza."
       },
       {
         q: "Czy WooCommerce nadaje się dla małej marki odzieżowej?",
-        a: "Tak, WooCommerce może obsłużyć katalog ubrań, warianty, kolekcje, zamówienia oraz integracje z zewnętrznymi systemami. Polecam go szczególnie wtedy, gdy zależy Ci na własnym projekcie sklepu i możliwości dalszego rozwoju funkcji."
+        a: "Tak. WooCommerce obsługuje produkty z wariantami, kolekcje, kupony, płatności, dostawy i zamówienia. Polecam go szczególnie markom, które chcą mieć własny wygląd sklepu, kontrolę nad katalogiem i możliwość rozwijania funkcji bez uzależnienia od jednego zamkniętego dostawcy."
       },
       {
         q: "Jak ograniczyć zwroty w sklepie z ubraniami?",
-        a: "Przygotowuję czytelne tabele wymiarów, instrukcje mierzenia oraz miejsce na informacje o fasonie, materiale i rozmiarze prezentowanym na modelce. Dbam też o to, aby zdjęcia i opisy odpowiadały konkretnym wariantom produktu."
+        a: "Warto zacząć od usunięcia niejasności przed zakupem. Przygotowuję miejsce na dokładną tabelę wymiarów, instrukcję mierzenia, skład tkaniny, opis fasonu i informację o rozmiarze prezentowanym na modelce. Dbam też o zgodność zdjęć z wybranym kolorem produktu. Nie obiecuję konkretnego spadku liczby zwrotów."
       },
       {
         q: "Czy sklep może obsługiwać przedsprzedaż i dropy kolekcji?",
-        a: "Tak, mogę przygotować zapowiedzi produktów, strony premierowe, przedsprzedaż oraz powiadomienia o dostępności. Sposób realizacji zamówień zawierających produkty dostępne i przedsprzedażowe ustalam przy rozpoczęciu współpracy."
+        a: "Tak. Mogę przygotować strony zapowiedzi kolekcji, daty premier, produkty w przedsprzedaży oraz powiadomienia o dostępności. Ustalam również, jak sklep ma obsługiwać zamówienia zawierające jednocześnie produkty dostępne i przedsprzedażowe, żeby klient znał zasady oraz termin wysyłki przed zakupem."
       },
       {
         q: "Czy mogę sprzedawać jednocześnie w sklepie i na Allegro?",
-        a: "Tak, mogę połączyć WooCommerce z Allegro bezpośrednio albo przez system pośredni, na przykład BaseLinker. Przed wdrożeniem ustalam, który system będzie źródłem stanów, cen, opisów i danych o zamówieniach."
+        a: "Tak. Mogę skonfigurować WooCommerce do sprzedaży równoległej z Allegro, bezpośrednio lub przez BaseLinker. W LumiKids oba kanały działają równolegle, a zamówienia przechodzą przez BaseLinker. Przy Twoim wdrożeniu ustalam źródło danych o stanach, cenach, produktach i zamówieniach oraz sprawdzam poprawność ich wymiany."
       },
       {
         q: "Jak pokazywać promocje zgodnie z dyrektywą Omnibus?",
-        a: "Przy informacji o obniżce przygotowuję miejsce na najniższą cenę produktu z 30 dni przed jej wprowadzeniem. Ostateczną treść komunikatów i dokumentów prawnych przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
+        a: "Przy komunikowaniu obniżki przygotowuję miejsce na najniższą cenę produktu z 30 dni przed jej wprowadzeniem. Uwzględniam odpowiednią prezentację informacji na karcie produktu i w pozostałych uzgodnionych miejscach sklepu. Ostateczne komunikaty i dokumenty prawne przekazujesz mi po samodzielnym zatwierdzeniu albo konsultacji z prawnikiem."
       }
     ],
-    cta: "Prześlij brief kolekcji i kanałów sprzedaży, a wycenię sklep dla Twojej marki odzieżowej",
+    cta: "Opisz swoją markę, kolekcje i kanały sprzedaży, a przygotuję wycenę Twojego sklepu odzieżowego.",
     deliverables: [
       {
-        label: "Sklep WooCommerce",
-        body: "Przygotowuję sklep WooCommerce z koszykiem, zamówieniem bez rejestracji, kontem klienta i wiadomościami transakcyjnymi."
+        label: "Gotowy sklep WooCommerce",
+        body: "Wdrażam responsywny sklep z własnym motywem, katalogiem, koszykiem, zakupem bez rejestracji, kontem klienta i wiadomościami transakcyjnymi. Otrzymujesz panel do edycji produktów, kolekcji i uzgodnionych treści, bez konieczności angażowania programisty do każdej zmiany zdjęcia czy opisu."
       },
       {
-        label: "Warianty kolekcji",
-        body: "Konfiguruję rozmiary, kolory, tabele wymiarów, filtry kolekcji i komunikaty o dostępności. Liczbę produktów startowych ustalamy w zakresie projektu."
+        label: "Katalog i warianty kolekcji",
+        body: "Konfiguruję rozmiary, kolory, stany magazynowe, tabele wymiarów, skład tkanin i filtry produktów. Przygotowuję uzgodnione szablony kart produktów oraz stron kolekcji. Jeśli przenosisz sklep, sprawdzam dane do importu, odwzorowuję warianty i przygotowuję przekierowania 301 dla zmienionych adresów."
       },
       {
         label: "Płatności i wysyłka",
-        body: "Podłączam uzgodnione metody płatności i dostawy oraz konfiguruję zasady wysyłki zgodnie z zakresem sklepu."
+        body: "Podłączam uzgodnione metody płatności i dostawy, konfiguruję zasady wysyłki i testuję przechodzenie zamówień przez sklep. Jeśli korzystasz z Allegro lub BaseLinkera, przygotowuję również uzgodnione połączenie i sprawdzam przepływ stanów oraz danych zamówień."
       },
       {
         label: "Obsługa zwrotów",
-        body: "Przygotowuję miejsce na procedurę zwrotu, formularz zgłoszenia, wskazany dokument do pobrania i wiadomość potwierdzającą przyjęcie zgłoszenia."
+        body: "Przygotowuję miejsce na zasady zwrotów, formularz zgłoszenia, dokument do pobrania i powiadomienie potwierdzające przyjęcie zgłoszenia. Układ interfejsu dopasowuję do ustalonej procedury. Regulamin i pozostałe dokumenty prawne dostarczasz po własnym zatwierdzeniu lub konsultacji z prawnikiem."
       },
       {
-        label: "Start sprzedaży",
-        body: "Testuję zakup na telefonie, konfiguruję uzgodnione ustawienia sklepu i prowadzę szkolenie online z obsługi zamówień oraz produktów."
+        label: "Testy, uruchomienie i szkolenie",
+        body: "Przeprowadzam testowe zakupy na telefonie i komputerze, sprawdzam warianty, płatności, dostawy, wydajność i podstawy technicznego SEO. Konfiguruję pomiar GA4 z uwzględnieniem zgody na cookies oraz szkolę Cię online z obsługi sklepu. Po uruchomieniu masz 60 dni gwarancji i bezpłatnych poprawek, a późniejsza opieka jest opcjonalna."
       }
     ],
     headings: {
@@ -700,34 +700,34 @@ export const industries: Industry[] = [
     process: [
       {
         step: "01",
-        title: "Brief",
-        body: "Kolekcje, warianty, tabele rozmiarów i kanały, w których już sprzedajesz."
+        title: "Brief i poznanie kolekcji",
+        body: "Zaczynam od rozmowy o Twojej marce, produktach i obecnych kanałach sprzedaży. Sprawdzam, ile masz modeli, jak wyglądają warianty rozmiarów i kolorów oraz gdzie prowadzisz magazyn. Pytam o Allegro, BaseLinkera, częstotliwość premier i materiały produktowe. Jeśli masz już sklep, analizuję możliwość przeniesienia katalogu, zamówień i adresów. Na tej podstawie ustalam zakres oraz termin wdrożenia."
       },
       {
         step: "02",
-        title: "Architektura",
-        body: "Kategorie i filtry układam pod frazy zakupowe, żeby podstrony nie biły się między sobą."
+        title: "Architektura katalogu",
+        body: "Układam strukturę kategorii, kolekcji, filtrów i kart produktów. Sprawdzam, jakie podstrony odpowiadają konkretnym typom ubrań, okazjom i rozmiarom. Ustalam również sposób prezentacji tabel wymiarów, stanów magazynowych oraz informacji o materiale. Jeżeli przenosisz sklep, przygotowuję mapowanie dotychczasowych adresów i plan przekierowań 301."
       },
       {
         step: "03",
-        title: "Projekt",
-        body: "Kartę produktu i koszyk projektuję najpierw na telefon, bo tam zapada decyzja."
+        title: "Projekt wyglądu sklepu",
+        body: "Przygotowuję makiety w Figmie, zaczynając od najważniejszych ekranów mobilnych. Projektuję stronę główną, listy produktów, karty ubrań, koszyk i proces zamówienia. Pokazuję, jak klient wybierze wariant, otworzy tabelę rozmiarów i sprawdzi dostępność. Przewiduję dwie tury poprawek. Po zaakceptowaniu projektu przechodzę do kodowania."
       },
       {
         step: "04",
-        title: "Wdrożenie",
-        body: "WooCommerce, warianty, płatności, InPost, integracja z Allegro i tabele rozmiarów."
+        title: "Wdrożenie i integracje",
+        body: "Koduję własny motyw WordPress, konfiguruję WooCommerce, warianty, płatności i dostawy. Podłączam uzgodnione integracje z Allegro lub BaseLinkerem. Testuję stany każdego wariantu i reakcję koszyka na niedostępny produkt. Przygotowuję dane strukturalne, techniczne elementy SEO i ustawienia panelu, abyś mógł samodzielnie zarządzać kolekcjami."
       },
       {
         step: "05",
-        title: "Start i pomiar",
-        body: "Testowe zamówienia, GA4 z lejkiem zakupowym, szkolenie z dodawania produktów."
+        title: "Testy, start i pomiar",
+        body: "Przechodzę pełną ścieżkę zakupu na telefonie i komputerze. Sprawdzam wyszukiwarkę, filtry, warianty, wiadomości o zamówieniach oraz synchronizację danych. Mierzę wydajność i konfiguruję GA4 uruchamiane po zgodzie użytkownika. Po każdym etapie udostępniam wersję testową. Przed startem ustalam sposób uruchomienia sklepu, a na koniec prowadzę szkolenie online z obsługi produktów i zamówień."
       }
     ],
     notFor: [
-      "Chcesz, żebym wprowadził kilka tysięcy produktów ręcznie. Potrzebny jest plik albo integracja.",
-      "Nie masz zdjęć produktowych i nie planujesz sesji. Sklep odzieżowy bez zdjęć nie sprzedaje.",
-      "Sprzedajesz wyłącznie przez Allegro i nie budujesz własnej marki. Wtedy sklep to zbędny koszt."
+      "Jeśli oczekujesz ręcznego wprowadzenia kilku tysięcy produktów bez przygotowanych danych, najpierw potrzebujemy pliku do importu albo integracji, bo ręczne przepisywanie całego katalogu nie jest rozsądnym sposobem wdrożenia.",
+      "Jeśli nie masz zdjęć produktów i nie planujesz ich przygotować, nie wykonam za Ciebie sesji fotograficznej, ale mogę określić potrzebne kadry, formaty i sposób prezentacji ubrań.",
+      "Jeśli sprzedajesz wyłącznie na Allegro i nie planujesz rozwijać własnej marki ani niezależnego kanału sprzedaży, budowa osobnego sklepu może nie mieć teraz uzasadnienia."
     ]
   },
   {
