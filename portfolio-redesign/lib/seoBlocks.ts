@@ -2358,7 +2358,7 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         "body": [
           "Nowa kancelaria prowadząca kilka obszarów praktyki może zacząć od niewielkiej strony z prezentacją prawnika, opisami usług i kontaktem. Nie musi od razu zamawiać rozbudowanej bazy wiedzy ani dodatkowych funkcji, których nie będzie wykorzystywać.",
           "Większy serwis ma sens, kiedy pojawiają się kolejne specjalizacje, prawnicy, lokalizacje lub wersje językowe. Każdy dodatkowy typ treści wymaga zaplanowania sposobu wyświetlania i edycji. Profile zespołu, artykuły i podstrony usług powinny też być ze sobą logicznie połączone.",
-          "Jeżeli planujesz regularne publikowanie poradników, przygotuję kategorie, szablony i powiązania z ofertą. Sama obecność bloga nie gwarantuje ruchu z Google. Ważna jest tematyka, poprawność merytoryczna oraz dalsze rozwijanie treści. Więcej o organizacji takiej witryny przeczytasz w materiale o [pozycjonowaniu strony usługowej](/blog/pozycjonowanie-strony-uslugowej).",
+          "Jeżeli planujesz regularne publikowanie poradników, przygotuję kategorie, szablony i powiązania z ofertą. Sama obecność bloga nie gwarantuje ruchu z Google. Ważna jest tematyka, poprawność merytoryczna oraz dalsze rozwijanie treści.",
           "Nie proponuję rozbudowy wyłącznie po to, żeby strona sprawiała wrażenie większej. Jeśli wystarczy prostszy serwis, uwzględnię to w ofercie. Jeśli potrzebujesz wielu powiązanych podstron, przygotuję strukturę umożliwiającą późniejszy rozwój bez projektowania wszystkiego ponownie.",
           "Po rozmowie i briefie określę zakres szablonów, treści oraz funkcji, które rzeczywiście trzeba uwzględnić w wycenie."
         ]

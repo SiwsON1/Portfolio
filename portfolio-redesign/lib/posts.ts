@@ -2059,7 +2059,7 @@ posts.push({
       body: [
         "**6. Permalinks, KRYTYCZNE.** Settings → Permalinks → wybierz 'Post name' (`/sample-post/`). Default to `?p=123` co jest SEO-killer. Zrób to PRZED publikacją pierwszego posta, zmiana później generuje 404 jeśli URL-e już zindeksowane.",
         "**7. Zainstaluj Yoast SEO lub Rank Math** (oba free w wersji podstawowej). Yoast bardziej popularny w PL, Rank Math więcej funkcji w free. Skonfiguruj: title separator, default meta, sitemap, schema.org Organization/Person, integracja z Google Search Console.",
-        "**8. Wygeneruj i wyślij sitemap.xml**: w Yoast: SEO → General → Features → XML sitemaps ON. URL: `twojadomena.pl/sitemap_index.xml`. Wyślij do Search Console (`https://search.google.com/search-console`). Dla pełnej strategii SEO strony usługowej zobacz [pozycjonowanie strony usługowej: 7 kroków](/blog/pozycjonowanie-strony-uslugowej).",
+        "**8. Wygeneruj i wyślij sitemap.xml**: w Yoast: SEO → General → Features → XML sitemaps ON. URL: `twojadomena.pl/sitemap_index.xml`. Wyślij do Search Console (`https://search.google.com/search-console`).",
         "**9. Robots.txt, sprawdź lub dodaj.** WordPress generuje virtual robots.txt. Sprawdź `twojadomena.pl/robots.txt`. Powinien zawierać `Sitemap: https://twojadomena.pl/sitemap_index.xml`. Dodaj jeśli brak, przez plugin SEO lub ręcznie.",
       ],
     },
@@ -2811,3 +2811,13 @@ posts.push({
     { q: "Czy mogę później przenieść stronę na inny hosting?", a: "Tak, jeżeli masz dostęp do plików, bazy danych, domeny i ustawień DNS. Przy zmianie serwera może wystąpić krótka niedostępność związana z aktualizacją DNS, dlatego migrację warto wcześniej zaplanować i wykonać kopię strony." },
   ],
 });
+
+// Wpisy przekierowane 301 (ta sama lista w next.config.ts). Treść zostaje w pliku, ale nie trafia na blog, do sitemapy ani do llms.txt.
+export const REDIRECTED_POSTS: Record<string, string> = {
+  "pozycjonowanie-strony-uslugowej": "strona-firmowa-2026-jaka-technologia",
+  "tailwind-css-co-to": "next-js-co-to-jest",
+  "vercel-hosting-co-to": "hosting-strony-co-to-jest",
+};
+for (let i = posts.length - 1; i >= 0; i--) {
+  if (posts[i].slug in REDIRECTED_POSTS) posts.splice(i, 1);
+}
