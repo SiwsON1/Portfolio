@@ -1853,81 +1853,171 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ]
   },
   "next-js-software-house": {
-    heading: "Software house Next.js, freelancer czy zespół: jak wybrać wykonawcę aplikacji",
-    intro: [
-      "**W tym bloku dowiesz się, jak porównać software house Next.js, freelancera i mały zespół, a także jak wyglądają wycena, budowa MVP, dobór technologii oraz opieka nad aplikacją po wdrożeniu.** To najważniejsze kwestie, jeśli nie zajmujesz się technologią na co dzień, ale chcesz świadomie wybrać wykonawcę i ocenić, czy proponowany sposób pracy odpowiada potrzebom Twojej firmy.",
-      "Nie każda aplikacja wymaga rozbudowanego zespołu. W wielu projektach sprawdza się bezpośrednia współpraca z jednym programistą Next.js, szczególnie gdy zakres można jasno uporządkować, a decyzje powinny zapadać sprawnie. Są jednak przedsięwzięcia, przy których udział dodatkowych specjalistów jest uzasadniony. Dlatego przed rozpoczęciem prac warto ocenić nie tylko technologię i koszt, lecz także odpowiedzialność za projekt, sposób komunikacji oraz możliwości późniejszego skalowania.",
+    "heading": "Outsourcing Next.js: freelancer, software house czy wsparcie Twojego zespołu?",
+    "intro": [
+      "Outsourcing Next.js pozwala zbudować aplikację lub rozwinąć istniejący projekt bez zatrudniania programisty na etat. Możesz zlecić wykonanie MVP od początku do końca albo zaprosić zewnętrznego specjalistę do zespołu, któremu brakuje czasu lub doświadczenia z konkretnymi funkcjami. W obu przypadkach ważne jest nie tylko to, kto napisze kod, ale też kto będzie podejmować decyzje techniczne, gdzie znajdzie się repozytorium i jak przekażesz projekt kolejnym osobom.",
+      "Sam pracuję jako freelancer Next.js. Od 2020 roku tworzę komercyjne strony i aplikacje, początkowo jako frontend developer w software house we Wrocławiu, a od końca 2022 roku na własny rachunek. Znam więc współpracę zarówno wewnątrz zespołu, jak i bezpośrednio z klientem. Nie uważam, że jeden model pasuje do każdej aplikacji. Jeśli rozwijasz startup albo szukasz programisty Next.js na kilka tygodni lub miesięcy, pomogę Ci ocenić, czy mogę samodzielnie poprowadzić projekt, czy lepiej dołączyć do Twojego zespołu."
     ],
-    sections: [
+    "sections": [
       {
-        id: "software-house-freelancer-czy-maly-zespol-moga-pasowac-do-ro",
-        heading: "Software house, freelancer czy mały zespół mogą pasować do różnych projektów",
-        body: [
-          "Nazwa „software house Next.js” nie przesądza jeszcze o tym, jak będzie wyglądała codzienna współpraca. W większej firmie możesz rozmawiać z opiekunem projektu, który przekazuje ustalenia do projektantów i programistów. Mały zespół ogranicza liczbę pośredników, ale nadal dzieli odpowiedzialność pomiędzy kilka osób. Freelancer zazwyczaj sam prowadzi rozmowy, podejmuje decyzje techniczne i tworzy kod.",
-          "W moim przypadku rozmawiasz bezpośrednio ze mną, a ja sam piszę kod aplikacji. Dzięki temu pytania biznesowe i techniczne trafiają do osoby, która faktycznie wdraża ustalenia. Poniższe porównanie pomaga ocenić różnice między modelami współpracy, ale nie wskazuje jednego rozwiązania jako najlepszego w każdej sytuacji.",
+        "id": "freelancer-czy-software-house-next-js-co-dostajesz-w-kazdym",
+        "heading": "Freelancer czy software house Next.js: co dostajesz w każdym modelu?",
+        "body": [
+          "Największa różnica między freelancerem a software house'em nie sprowadza się do samego programowania. Chodzi o organizację pracy, komunikację i liczbę osób, które mogą jednocześnie zajmować się Twoim projektem.",
+          "Kiedy współpracujesz ze mną, rozmawiasz bezpośrednio z programistą, który później wdraża ustalenia. Jeśli podczas omawiania funkcji pojawi się problem techniczny, mogę od razu wyjaśnić, z czego wynika i jakie mamy możliwości. Nie muszę przekazywać pytania przez opiekuna projektu. Jednocześnie nie dysponuję zespołem, który może równolegle projektować, programować i testować kilka dużych modułów.",
+          "W software house'ie zadania mogą być rozdzielone między programistów, projektantów i osoby zarządzające projektem. To przydatne, jeśli aplikacja wymaga wielu specjalizacji dostępnych jednocześnie. Codzienny kontakt i sposób podejmowania decyzji zależą jednak od organizacji konkretnej firmy.",
+          "Freelancer czy software house: co dostajesz?"
         ],
-        table: {"caption":"Software house, freelancer czy mały zespół mogą pasować do różnych projektów","head":["Kryterium","Freelancer","Mały zespół Next.js","Software house Next.js"],"rows":[["Kontakt","Bezpośrednio z wykonawcą","Z wybranymi członkami zespołu","Często przez osobę prowadzącą projekt"],["Koszt struktury","Utrzymanie jednej osoby","Koszt kilku specjalistów","Koszt zespołu i organizacji firmy"],["Szybkość decyzji","Krótka ścieżka ustaleń","Zależna od podziału odpowiedzialności","Zależna od procesu i liczby osób"],["Skalowanie prac","Ograniczone dostępnością jednej osoby","Możliwe przez zwiększenie zaangażowania zespołu","Możliwe przez przydzielenie kolejnych specjalistów"],["Ryzyko","Zależność od jednej osoby","Zależność od dostępności kilku osób","Ryzyko zmian składu zespołu lub przepływu informacji"]]},
-        outro: [
-          "Model freelancerski sprawdza się przede wszystkim wtedy, gdy zależy Ci na bezpośrednim kontakcie i jasno określonej odpowiedzialności. Jeżeli zakres wymaga równoległej pracy wielu programistów albo kilku specjalizacji dostępnych jednocześnie, uczciwie informuję, że potrzebny będzie większy zespół Next.js. Taka ocena powinna nastąpić przed rozpoczęciem projektu, a nie dopiero wtedy, gdy jego skala zacznie utrudniać realizację.",
-        ],
+        "table": {
+          "caption": "Freelancer czy software house Next.js: co dostajesz w każdym modelu?",
+          "head": [
+            "Kryterium",
+            "Freelancer Next.js",
+            "Software house Next.js"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Kontakt",
+              "Bezpośrednio z osobą piszącą kod",
+              "Z programistą lub osobą prowadzącą projekt"
+            ],
+            [
+              "Odpowiedzialność",
+              "Jeden wykonawca odpowiada za uzgodniony zakres",
+              "Odpowiedzialność może być podzielona między specjalistów"
+            ],
+            [
+              "Decyzje techniczne",
+              "Omawiasz je bezpośrednio z wykonawcą",
+              "Zależą od przyjętego sposobu pracy zespołu"
+            ],
+            [
+              "Równoległe zadania",
+              "Ograniczone dostępnością jednej osoby",
+              "Możliwość zaangażowania kilku osób jednocześnie"
+            ],
+            [
+              "Rozwój projektu",
+              "Możliwy samodzielnie lub po dołączeniu kolejnych programistów",
+              "Możliwość rozszerzania zespołu w ramach firmy"
+            ],
+            [
+              "Ryzyko organizacyjne",
+              "Nieobecność jednej osoby może wstrzymać prace",
+              "Zmiany w składzie zespołu mogą wymagać przekazania wiedzy"
+            ],
+            [
+              "Przekazanie kodu",
+              "Zależy od repozytorium i dokumentacji",
+              "Zależy od zasad dostępu i dokumentowania projektu"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie traktuję tego porównania jako argumentu przeciwko software house'om. Sam pracowałem w takim środowisku i wiem, że większy zespół ma sens przy odpowiednio rozbudowanym zakresie.",
+          "Jeśli aplikacja wymaga intensywnej pracy wielu programistów jednocześnie, nie będę obiecywał, że sam wykonam ją w tym samym trybie. Przy rozmowie o zleceniu sprawdzam więc nie tylko wymagania techniczne, ale również dostępność i realną możliwość prowadzenia prac."
+        ]
       },
       {
-        id: "od-briefu-do-mvp-prowadzi-kilka-etapow-decyzyjnych",
-        heading: "Od briefu do MVP prowadzi kilka etapów decyzyjnych",
-        body: [
-          "Budowa MVP nie polega na umieszczeniu wszystkich pomysłów w pierwszej wersji. Jej celem jest wybranie funkcji, które pozwolą uruchomić produkt i sprawdzić jego działanie w praktyce. Na początku rozpoznaję więc proces biznesowy, grupę użytkowników, wymagane integracje oraz dane, które aplikacja ma gromadzić lub przetwarzać.",
-          "Następnie przygotowuję makiety w Figmie. Na tym etapie można ocenić układ ekranów, kolejność działań i logikę obsługi bez ponoszenia kosztu przebudowy gotowego kodu. Po akceptacji makiet przechodzę do programowania, a po kolejnych etapach udostępniam Ci link do wersji testowej. Możesz na bieżąco sprawdzać rozwój produktu, zamiast zobaczyć całość dopiero przed publikacją.",
-          "Typowy przebieg obejmuje:",
+        "id": "projekt-od-zera-i-dolaczenie-do-zespolu-to-dwa-rozne-rodzaje",
+        "heading": "Projekt od zera i dołączenie do zespołu to dwa różne rodzaje outsourcingu",
+        "body": [
+          "Jeśli masz pomysł na produkt, ale nie masz własnego zaplecza technicznego, mogę przeprowadzić Cię przez budowę pierwszej wersji. Zaczynamy od ustalenia, kto będzie korzystał z aplikacji i co użytkownik powinien móc w niej zrobić. Następnie przygotowuję projekt ekranów, koduję funkcje i uruchamiam gotowe rozwiązanie.",
+          "W tym modelu odpowiadam za całą uzgodnioną realizację. Nie musisz samodzielnie organizować pracy projektanta interfejsu i programisty ani rozstrzygać, które narzędzie będzie odpowiednie do obsługi bazy danych.",
+          "Inaczej wygląda współpraca, gdy masz już programistów, ale brakuje Ci dodatkowej osoby. Wtedy nie potrzebujesz wykonawcy całej aplikacji. Potrzebujesz kogoś, kto zapozna się z istniejącym kodem i zacznie rozwiązywać konkretne problemy.",
+          "W takim przypadku mogę:"
         ],
-        list: [
-          "rozpoznanie celu, użytkowników i najważniejszych funkcji,",
-          "przygotowanie makiet oraz dwóch tur poprawek,",
-          "budowę kolejnych elementów i testowanie ich pod udostępnionym adresem,",
-          "uruchomienie wersji produkcyjnej.",
+        "list": [
+          "Dołączyć do Twojego repozytorium i pracować na istniejącej aplikacji Next.js.",
+          "Przejrzeć kod przed rozpoczęciem zmian i rozpoznać zależności między funkcjami.",
+          "Realizować zadania ustalone przez Twój zespół, np. nowe widoki, formularze, logowanie lub integracje.",
+          "Uczestniczyć w przeglądach kodu i wprowadzać poprawki zgodnie z przyjętymi zasadami.",
+          "Przekazać wykonane rozwiązania wraz z informacjami potrzebnymi do ich dalszego utrzymania."
         ],
-        outro: [
-          "Aplikacja lub MVP w Next.js powstaje zwykle w ciągu 6 do 12 tygodni. Dokładny termin zależy od zakresu, integracji i złożoności funkcji, dlatego ustalam go dopiero po briefie. Jeżeli chcesz wcześniej zrozumieć możliwości technologii, pomocne będzie wyjaśnienie [Next.js: co to jest](/blog/next-js-co-to-jest).",
-        ],
+        "outro": [
+          "Nie zakładam, że każdy istniejący projekt trzeba przebudować. Jeśli aplikacja działa, a problem dotyczy jednego modułu, najpierw sprawdzam możliwość zmiany właśnie tego elementu.",
+          "Taka współpraca może trwać kilka tygodni albo miesięcy. Jej zakres zależy od liczby zadań, organizacji Twojego zespołu i mojej dostępności. Przy rozpoczęciu zlecenia ustalamy, za które części kodu odpowiadam i jak będą odbierane wykonane prace."
+        ]
       },
       {
-        id: "stala-wycena-wymaga-jasno-opisanego-zakresu",
-        heading: "Stała wycena wymaga jasno opisanego zakresu",
-        body: [
-          "Projekt wyceniam po krótkiej rozmowie i briefie. Najpierw ustalam, co dokładnie ma znaleźć się w aplikacji, które funkcje są konieczne na start oraz od jakich systemów zewnętrznych będzie zależało wdrożenie. Na tej podstawie przedstawiam stałą wycenę uzgodnionego zakresu wraz z terminem realizacji.",
-          "Taki model ułatwia porównanie ofert, o ile każda z nich obejmuje ten sam zakres. Sama końcowa wartość niewiele mówi, gdy jedna firma Next.js uwzględnia projekt interfejsu, logowanie i panel administracyjny, a druga wycenia jedynie część widoczną dla użytkownika. Dlatego zakres powinien opisywać funkcje i odpowiedzialność wykonawcy, a nie ograniczać się do liczby ekranów.",
-          "Jeżeli w trakcie prac pojawi się pomysł na dodatkową integrację, nowy typ konta albo rozbudowanie panelu, traktuję go jako zmianę zakresu i wyceniam osobno. Dzięki temu możesz zdecydować, czy dana funkcja jest potrzebna przed startem, czy lepiej zaplanować ją jako kolejny etap rozwoju. Nie każda dobra koncepcja musi od razu trafić do pierwszej wersji produktu.",
+        "id": "mvp-w-next-js-zaczyna-sie-od-wyboru-najwazniejszych-funkcji",
+        "heading": "MVP w Next.js zaczyna się od wyboru najważniejszych funkcji",
+        "body": [
+          "MVP to pierwsza użyteczna wersja produktu. Nie musi zawierać wszystkiego, co planujesz na kolejne miesiące. Powinna natomiast pozwolić użytkownikowi wykonać najważniejsze zadanie, dla którego aplikacja powstaje.",
+          "Załóżmy, że tworzysz platformę, na której klient konfiguruje produkt i wysyła zapytanie. W pierwszej wersji potrzebujesz mechanizmu wyboru elementów, obliczania wyniku i przekazania danych firmie. Rozbudowany panel statystyk albo dodatkowe sposoby personalizacji mogą poczekać, jeśli nie są konieczne do obsługi pierwszych użytkowników.",
+          "Podczas briefu staram się odróżnić funkcje niezbędne od pomysłów na późniejszy rozwój. Sam spis ekranów nie wystarcza do rzetelnej wyceny. Dwa podobnie wyglądające formularze mogą wymagać zupełnie innej ilości pracy, jeśli jeden tylko wysyła wiadomość, a drugi przelicza dane, sprawdza uprawnienia i zapisuje wyniki w bazie.",
+          "Budowę MVP prowadzę etapami:"
         ],
+        "list": [
+          "Brief i zakres. Ustalam cel produktu, użytkowników, najważniejsze funkcje oraz potrzebne integracje.",
+          "Makiety w Figmie. Przygotowuję układ ekranów, uwzględniam dwie tury poprawek i czekam na akceptację.",
+          "Programowanie. Buduję uzgodnione funkcje, zaczynając od tych, które tworzą podstawowy sposób działania aplikacji.",
+          "Wersja testowa. Po każdym etapie przekazuję link, pod którym możesz sprawdzić działanie rozwiązania.",
+          "Wdrożenie. Uruchamiam aplikację produkcyjnie, sprawdzam jej działanie i przekazuję dokumentację."
+        ],
+        "outro": [
+          "MVP w Next.js powstaje zwykle w ciągu 6 do 12 tygodni. Nie jest to jednak termin dla dowolnej aplikacji. Projekt z prostym panelem i kilkoma formularzami będzie wymagał innego nakładu pracy niż produkt z wieloma poziomami uprawnień, płatnościami i połączeniami z zewnętrznymi usługami.",
+          "Jeśli dopiero poznajesz tę technologię, przeczytaj również poradnik [czym jest Next.js](/blog/next-js-co-to-jest). Wyjaśnia podstawy, które pomogą Ci zrozumieć techniczny wybór przed rozpoczęciem zlecenia."
+        ]
       },
       {
-        id: "stack-powinien-wynikac-z-funkcji-aplikacji",
-        heading: "Stack powinien wynikać z funkcji aplikacji",
-        body: [
-          "W projektach korzystam z Next.js App Router, Reacta, TypeScriptu i Tailwinda. Te technologie pozwalają zbudować interfejs oraz logikę aplikacji w jednym uporządkowanym środowisku. TypeScript pomaga wcześniej wykrywać część błędów związanych z danymi i ułatwia późniejsze rozwijanie kodu, szczególnie gdy projekt przejmuje kolejny programista Next.js.",
-          "Warstwę danych mogę oprzeć na bazie Postgres oraz Prisma lub Drizzle. Jeżeli aplikacja wymaga kont użytkowników, dobieram Clerk albo NextAuth. Płatności można obsłużyć przez Stripe, natomiast treści redakcyjne przez Sanity lub Strapi. Wybór nie polega na dołączeniu wszystkich dostępnych narzędzi, lecz na dopasowaniu ich do rzeczywistych funkcji produktu.",
-          "Wdrożenie może działać na Vercel albo na własnym VPS. Vercel jest naturalnie powiązany z ekosystemem Next.js, natomiast własny serwer może być uzasadniony przez wymagania infrastrukturalne konkretnego projektu. Decyzję podejmuję po rozpoznaniu sposobu działania aplikacji, jej integracji i wymagań dotyczących utrzymania.",
-          "Dobrze dobrany stack powinien odpowiadać na konkretne pytania: gdzie będą przechowywane dane, kto może je odczytywać, jak użytkownik się zaloguje, w jaki sposób zostanie wykonana płatność i kto będzie edytować treść. Samo użycie popularnych technologii nie zastępuje właściwego zaprojektowania tych zależności. Więcej o zakresie takich realizacji znajdziesz na stronie [tworzenie stron Next.js](/uslugi/aplikacje-nextjs).",
-        ],
+        "id": "wycena-aplikacji-zalezy-przede-wszystkim-od-jej-logiki",
+        "heading": "Wycena aplikacji zależy przede wszystkim od jej logiki",
+        "body": [
+          "Przy wycenianiu projektu nie liczę wyłącznie ekranów. Ważniejsze jest to, co ma się wydarzyć po kliknięciu przycisku, zapisaniu formularza czy zalogowaniu użytkownika.",
+          "Widok listy produktów może być stosunkowo prosty. Jeżeli jednak użytkownik ma filtrować produkty według własnych reguł, zapisywać konfiguracje, otrzymywać indywidualne wyceny i płacić za zamówienie, zakres prac znacząco się zmienia.",
+          "Największy wpływ na koszt ma liczba i złożoność funkcji z własną logiką, które mają znaleźć się w pierwszej wersji. Znaczenie mają również integracje, sposób przechowywania danych i zależności między poszczególnymi modułami.",
+          "Dlatego przed przedstawieniem wyceny rozmawiam z Tobą o wymaganiach. Ustalam, co ma działać na start, które funkcje mogą poczekać i jakie systemy zewnętrzne trzeba połączyć z aplikacją.",
+          "Przy projekcie o zamkniętym zakresie przygotowuję stałą wycenę wraz z terminem realizacji. Jeśli później pojawi się potrzeba dodania kolejnego modułu, wyceniam go osobno. Możesz wtedy zdecydować, czy rozszerzyć bieżące wdrożenie, czy zaplanować zmianę na następny etap.",
+          "Przy współpracy z istniejącym zespołem zakres może ewoluować wraz z kolejnymi zadaniami. Sposób rozliczenia dobieram wtedy do charakteru współpracy, zamiast z góry zakładać jeden model dla wszystkich projektów.",
+          "Podczas ustalania zlecenia zależy mi na tym, żebyś wiedział, jakie funkcje obejmuje wycena, co otrzymasz po wdrożeniu i które pomysły pozostają poza aktualnym zakresem."
+        ]
       },
       {
-        id: "realizacje-pokazuja-rozne-zastosowania-next-js",
-        heading: "Realizacje pokazują różne zastosowania Next.js",
-        body: [
-          "Własnym projektem zbudowanym w Next.js jest [Kantorymapa](/projekty/kantorymapa). Serwis obejmuje 1900 kantorów w 140 miastach i codziennie publikuje kursy NBP. Wykorzystuje programmatic SEO, czyli tworzenie dużej liczby uporządkowanych stron na podstawie danych, a sama aplikacja ładuje się poniżej sekundy.",
-          "Ceny Notarialne to inny przykład pracy z rozbudowanym zbiorem informacji. Projekt prezentuje ceny transakcyjne z RCN, wykorzystuje mapy MapLibre i obejmuje tysiące podstron lokalizacji. W takim serwisie znaczenie ma nie tylko warstwa wizualna, lecz także sposób organizacji danych oraz generowania stron dla poszczególnych miejsc.",
-          "Dla firmy Galabau Darius z Niemiec przygotowałem konfigurator wyceny ogrodzeń działający na żywo. Użytkownik może dobierać elementy, a firma korzysta z panelu administracyjnego zabezpieczonego przez Clerk. Projekt wykorzystuje również Prisma i działa na Vercel.",
-          "Te realizacje pokazują trzy różne scenariusze: serwis oparty na regularnie aktualizowanych danych, rozbudowaną strukturę lokalizacji oraz narzędzie wspierające wycenę produktu. Dlatego wybierając wykonawcę, warto porównać nie tylko wygląd jego projektów. Istotne jest również to, czy potrafi połączyć interfejs, dane, logowanie, mapy lub inne funkcje potrzebne w Twoim modelu biznesowym.",
-        ],
+        "id": "technologie-dobieram-do-funkcji-nie-do-dlugosci-listy-narzed",
+        "heading": "Technologie dobieram do funkcji, nie do długości listy narzędzi",
+        "body": [
+          "Next.js pozwala tworzyć zarówno interfejs, jak i część logiki działającej po stronie serwera. Dzięki temu można wykorzystać go do budowy aplikacji z kontami użytkowników, bazą danych, płatnościami czy panelem administracyjnym.",
+          "W moich projektach korzystam z Next.js App Router, który odpowiada za organizację adresów i widoków aplikacji, oraz TypeScriptu. Ten drugi pomaga kontrolować typy danych, wychwytywać część problemów podczas programowania i ułatwia zrozumienie kodu przy późniejszym rozwoju.",
+          "Gdy aplikacja potrzebuje własnej bazy danych, mogę zastosować Postgres z Prisma lub Drizzle. Te narzędzia pomagają aplikacji odczytywać i zapisywać informacje. Do logowania użytkowników dobieram Clerk albo NextAuth, a do obsługi płatności Stripe.",
+          "Jeżeli właściciel firmy chce samodzielnie edytować treści, rozważam również system zarządzania treścią, taki jak Sanity lub Strapi. Nie każda aplikacja potrzebuje jednak osobnego CMS-a.",
+          "Wdrożenie mogę przygotować na Vercel albo własnym VPS, czyli serwerze, nad którego konfiguracją masz większą kontrolę. Wybór zależy od potrzeb aplikacji i wymagań dotyczących jej utrzymania.",
+          "Nie łączę wszystkich tych narzędzi automatycznie. Najpierw odpowiadam na praktyczne pytania: kto ma dostęp do danych, jak użytkownik wykonuje płatność, co może edytować administrator i jakie informacje aplikacja wymienia z innymi systemami.",
+          "Przy zleceniu dobieram więc technologię do ustalonych funkcji i dalszego sposobu rozwijania produktu, a nie odwrotnie."
+        ]
       },
       {
-        id: "po-uruchomieniu-aplikacja-wymaga-okreslonych-zasad-opieki",
-        heading: "Po uruchomieniu aplikacja wymaga określonych zasad opieki",
-        body: [
-          "Start wersji produkcyjnej nie oznacza, że aplikacja przestaje wymagać uwagi. Po wdrożeniu sprawdzam jej działanie i obejmuję projekt 60 dniami gwarancji oraz bezpłatnych poprawek. Ten okres służy usunięciu błędów dotyczących uzgodnionego i wdrożonego zakresu.",
-          "Po zakończeniu gwarancji możesz skorzystać z opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok. Współpraca może dotyczyć utrzymania istniejących funkcji albo dalszego rozwoju produktu. Zakres opieki ustalam przy jej rozpoczęciu, ponieważ inne potrzeby ma stabilna aplikacja używana przez stałą grupę klientów, a inne produkt, do którego regularnie dochodzą nowe moduły.",
-          "Jeżeli projekt z czasem urośnie, oceniam, czy nadal mogę odpowiedzialnie rozwijać go sam. Gdy tempo prac lub liczba równoległych zadań zaczynają wymagać większego zespołu Next.js, mówię o tym wprost. Uporządkowany kod i dokumentacja ułatwiają włączenie kolejnego programisty, choć czas potrzebny na przejęcie części prac zawsze zależy od złożoności aplikacji.",
-        ],
+        "id": "gotowe-realizacje-pokazuja-z-jakimi-problemami-pracuje",
+        "heading": "Gotowe realizacje pokazują, z jakimi problemami pracuję",
+        "body": [
+          "Nie każda aplikacja Next.js wygląda jak typowy panel klienta. Czasami jej najważniejszą częścią jest konfigurator produktu, czasami baza danych z dużą liczbą podstron, a czasami narzędzie do codziennej pracy firmy.",
+          "Dla niemieckiej firmy Galabau Darius przygotowałem konfigurator wyceny ogrodzeń działający na żywo. Użytkownik wybiera elementy, a aplikacja przelicza konfigurację. Po stronie firmy dostępny jest panel administracyjny zabezpieczony logowaniem przez Clerk. Projekt wykorzystuje również Prisma i działa na Vercel.",
+          "W tej realizacji istotne było połączenie interfejsu z logiką konfiguratora i możliwością zarządzania danymi. To przykład aplikacji, w której nie wystarczy zaprojektować atrakcyjnych ekranów. Trzeba też zadbać o działanie poszczególnych funkcji i przepływ informacji.",
+          "Innym przykładem jest Kantorymapa, mój własny serwis zbudowany w Next.js. Obejmuje 1900 kantorów w 140 miastach, codziennie aktualizuje kursy NBP i ładuje się poniżej sekundy. Wykorzystuje programmatic SEO, czyli generowanie uporządkowanych podstron na podstawie zgromadzonych danych.",
+          "Przy takim produkcie ważna jest organizacja informacji, aktualizacja danych i sprawne generowanie widoków dla różnych lokalizacji. To inny rodzaj problemu niż logowanie do panelu czy konfiguracja produktu, ale nadal wymaga połączenia interfejsu z zapleczem aplikacji.",
+          "Pracowałem też nad projektem Ceny Notarialne, który prezentuje ceny transakcyjne z Rejestru Cen Nieruchomości, wykorzystuje mapy MapLibre i obejmuje tysiące podstron lokalizacji. W tym przypadku duże znaczenie ma sposób prezentacji i porządkowania danych.",
+          "Kiedy rozmawiamy o Twoim zleceniu, nie próbuję dopasować go na siłę do jednej z tych realizacji. Sprawdzam, jakie podobne problemy techniczne już rozwiązywałem i które doświadczenia można wykorzystać w nowym projekcie."
+        ]
       },
-    ],
+      {
+        "id": "kod-i-dokumentacja-powinny-umozliwiac-dalszy-rozwoj-bez-free",
+        "heading": "Kod i dokumentacja powinny umożliwiać dalszy rozwój bez freelancera",
+        "body": [
+          "Współpraca z jedną osobą ma oczywistą słabość: jeśli ta osoba przestanie być dostępna, ktoś inny musi poznać projekt. Nie da się całkowicie usunąć tego ryzyka, ale można ograniczyć zależność od wykonawcy.",
+          "Dlatego kod tworzę od początku w repozytorium klienta. Masz dostęp do historii zmian i aktualnej wersji projektu, a nie dostajesz całej aplikacji dopiero przy końcowym rozliczeniu.",
+          "Dbam też o uporządkowaną strukturę kodu i dokumentację. Dzięki temu kolejny programista może sprawdzić, jak zorganizowane są funkcje, z jakich narzędzi korzysta aplikacja i gdzie znajdują się jej poszczególne elementy.",
+          "Nie oznacza to, że nowy wykonawca przejmie rozbudowany projekt bez czasu potrzebnego na zapoznanie się z kodem. Im więcej zależności i własnej logiki zawiera aplikacja, tym ważniejsze staje się dobre przekazanie wiedzy.",
+          "Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek. Następnie możesz zdecydować, czy nadal mam rozwijać produkt, czy potrzebujesz wyłącznie utrzymania istniejących funkcji. Oferuję opcjonalną opiekę w miesięcznym abonamencie bez konieczności podpisywania umowy na rok.",
+          "Jeżeli firma rośnie i potrzebuje kilku programistów pracujących równolegle, możemy przygotować przekazanie projektu większemu zespołowi. Nie obiecuję, że samodzielnie obsłużę dowolną skalę rozwoju.",
+          "Przy zakończeniu współpracy przekazuję kod i dokumentację, abyś mógł dalej rozwijać aplikację z własnym programistą, kolejnym freelancerem albo software house'em."
+        ]
+      }
+    ]
   },
   "tworzenie-stron-dla-kancelarii-prawnych": {
     "heading": "Strona internetowa kancelarii: jak zaprojektuję serwis dopasowany do Twojej praktyki",
