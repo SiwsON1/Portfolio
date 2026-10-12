@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 import { posts } from "@/lib/posts";
 import { services } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
@@ -135,17 +136,25 @@ export default async function PostPage({
           </div>
           <div className="md:col-span-9">
             <h1
-              className="display text-ink"
+              className="display post-title text-ink"
               style={{ fontSize: "clamp(2.25rem, 1rem + 5vw, 5.5rem)", lineHeight: 1.05 }}
             >
-              {p.title}
+              {p.title.split(" ").map((word, i, all) => (
+                <Fragment key={i}>
+                  <span className="post-title-word">
+                    <span style={{ animationDelay: `${120 + i * 55}ms` }}>{word}</span>
+                  </span>
+                  {i < all.length - 1 && " "}
+                </Fragment>
+              ))}
             </h1>
+            <span aria-hidden className="post-title-rule" style={{ animationDelay: `${260 + p.title.split(" ").length * 55}ms` }} />
             {p.lead ? (
               <p
-                className="mt-10 max-w-3xl text-ink"
-                style={{ fontSize: "clamp(1.125rem, 1rem + 0.5vw, 1.5rem)", lineHeight: 1.55 }}
+                className="post-lead mt-10 max-w-3xl text-ink"
+                style={{ fontSize: "clamp(1.125rem, 1rem + 0.5vw, 1.5rem)", lineHeight: 1.55, animationDelay: `${420 + p.title.split(" ").length * 55}ms` }}
               >
-                {renderInlineLinks(p.lead)}
+                {leadWithKeyword(p.lead, p.keyword)}
               </p>
             ) : (
               <p
@@ -448,6 +457,21 @@ export default async function PostPage({
         />
       )}
     </article>
+  );
+}
+
+/** Lead z wyróżnioną frazą tematu: podkreślenie dorysowuje się po wjeździe leadu. */
+function leadWithKeyword(lead: string, rawKeyword?: string) {
+  // Fraza bywa z rokiem („Core Web Vitals 2026”), którego lead nie powtarza.
+  const keyword = rawKeyword && lead.toLowerCase().includes(rawKeyword.toLowerCase()) ? rawKeyword : rawKeyword?.replace(/\s*\d{4}\s*$/, "");
+  const i = keyword ? lead.toLowerCase().indexOf(keyword.toLowerCase()) : -1;
+  if (!keyword || i < 0) return renderInlineLinks(lead);
+  return (
+    <>
+      {renderInlineLinks(lead.slice(0, i))}
+      <span className="post-lead-key">{lead.slice(i, i + keyword.length)}</span>
+      {renderInlineLinks(lead.slice(i + keyword.length))}
+    </>
   );
 }
 

@@ -631,3 +631,19 @@ html.lenis body {
   .flow-caption { transition: none; }
 }
 
+
+/* ── Wpis: wjazd tytułu i leadu ─────────────────────────────── */
+.post-title-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.post-title-word > span { display: inline-block; animation: title-rise 1100ms cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes title-rise { from { transform: translateY(105%) rotate(2.5deg); } to { transform: none; } }
+.post-title-rule { display: block; height: 1px; width: min(14rem, 40%); margin-top: 2rem; background: var(--color-peach); transform-origin: left; animation: rule-draw 900ms cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes rule-draw { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+.post-lead { animation: lead-in 1000ms cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes lead-in { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+.post-lead-key { background-image: linear-gradient(oklch(78% 0.13 50 / 0.55), oklch(78% 0.13 50 / 0.55)); background-repeat: no-repeat; background-position: 0 92%; background-size: 0% 0.12em; animation: key-ink 900ms cubic-bezier(0.25,1,0.5,1) 1.6s both; }
+@keyframes key-ink { to { background-size: 100% 0.12em; } }
+@media (prefers-reduced-motion: reduce) {
+  .post-title-word > span, .post-title-rule, .post-lead { animation: none; }
+  .post-lead-key { animation: none; background-size: 100% 0.12em; }
+}
+
