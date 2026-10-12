@@ -17,6 +17,8 @@ export const GLYPH = {
   store: "M4 9.5 5.3 4h13.4L20 9.5M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5.5 12v8h13v-8M10 20v-5h4v5",
   layers: "M12 3 3 8l9 5 9-5-9-5ZM3 12l9 5 9-5M3 16l9 5 9-5",
   code: "M8 7 3 12l5 5M16 7l5 5-5 5M13.5 5l-3 14",
+  move: "M4 8h13M13.5 4.5 17 8l-3.5 3.5M20 16H7M10.5 12.5 7 16l3.5 3.5",
+  sliders: "M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1M15 4v4M9 10v4M17 16v4",
 } as const;
 export type GlyphKey = keyof typeof GLYPH;
 

@@ -3542,4 +3542,442 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       }
     ]
   },
+  "integracje-woocommerce": {
+    "heading": "Integracja WooCommerce z Allegro, hurtownią i innymi systemami. Jak zaplanować wymianę danych?",
+    "intro": [
+      "W tym poradniku znajdziesz informacje o najczęstszych integracjach WooCommerce, sposobach wymiany danych i problemach, które warto sprawdzić przed podłączeniem kolejnego systemu. Wyjaśniam też, kiedy wystarczy gotowa wtyczka, kiedy rozważyć rozwiązanie pośredniczące i jak testuję integrację, żeby wychwycić błędy w zamówieniach, płatnościach oraz stanach magazynowych.",
+      "Najważniejsza decyzja dotyczy tego, który system odpowiada za konkretne dane.",
+      "Sklep, hurtownia, Allegro i program do obsługi zamówień mogą przechowywać informacje o tych samych produktach, ale nie powinny dowolnie nadpisywać swoich zmian. Jeśli obsługujesz sprzedaż w kilku miejscach, samo połączenie paneli nie wystarczy. Trzeba jeszcze określić zasady aktualizacji i postępowania w sytuacjach wyjątkowych."
+    ],
+    "sections": [
+      {
+        "id": "jakie-systemy-mozna-polaczyc-z-woocommerce-i-jakie-dane-mied",
+        "heading": "Jakie systemy można połączyć z WooCommerce i jakie dane między nimi przepływają?",
+        "body": [
+          "WooCommerce może wymieniać informacje z narzędziami obsługującymi różne etapy sprzedaży. Jedne połączenia przekazują status płatności, inne tworzą przesyłki, aktualizują dostępność towaru albo informują system reklamowy o zakupie. Dlatego przed wdrożeniem rozdzielam integracje według ich zadań."
+        ],
+        "table": {
+          "caption": "Jakie systemy można połączyć z WooCommerce i jakie dane między nimi przepływają?",
+          "head": [
+            "Integracja",
+            "Co przesyła",
+            "Na co uważam"
+          ],
+          "rows": [
+            [
+              "Bramki płatności WooCommerce, np. Przelewy24, imoje, BLIK",
+              "Informacje o transakcjach, potwierdzeniach i statusach płatności",
+              "Czy sklep poprawnie rozpoznaje płatność zakończoną, niedokończoną i odrzuconą"
+            ],
+            [
+              "WooCommerce, integracja z kurierami, np. InPost",
+              "Dane odbiorcy, adres dostawy, informacje potrzebne do przygotowania przesyłki",
+              "Czy metoda dostawy i dane odbiorcy są poprawne oraz czy przesyłka nie powstaje ponownie"
+            ],
+            [
+              "Marketplace, np. Allegro",
+              "Zamówienia, dane produktów, ceny i dostępność, zależnie od sposobu połączenia",
+              "Czy sprzedaż w jednym kanale aktualizuje pozostałe i nie powoduje konfliktu statusów"
+            ],
+            [
+              "Hurtownia lub dostawca",
+              "Katalog produktów, ceny, stany magazynowe, czasem zdjęcia i opisy",
+              "Jak rozpoznawane są produkty i czy aktualizacja nie nadpisuje danych przygotowanych w sklepie"
+            ],
+            [
+              "System księgowy i fakturowanie",
+              "Dane zamówienia, nabywcy, pozycje dokumentu i informacje potrzebne do rozliczenia",
+              "Czy dane są kompletne, kiedy powstaje dokument i jak uniknąć jego ponownego utworzenia"
+            ],
+            [
+              "Reklama i analityka, np. Meta, GA4",
+              "Zdarzenia takie jak wyświetlenie produktu, dodanie do koszyka lub zakup",
+              "Czy zdarzenia docierają, nie dublują się i są przekazywane zgodnie z ustawieniami zgód"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie każde połączenie wymaga przesyłania informacji w obie strony. Hurtownia może dostarczać stany magazynowe, ale nie potrzebuje możliwości zmieniania opisów przygotowanych przez Ciebie. Operator płatności ma potwierdzać transakcję, a nie zarządzać całym procesem wysyłki.",
+          "W ramach zlecenia ustalam dokładnie, które informacje mają przechodzić między Twoimi systemami i jakie operacje powinny pozostać po stronie sklepu."
+        ]
+      },
+      {
+        "id": "ktory-system-powinien-decydowac-o-stanach-magazynowych-cenac",
+        "heading": "Który system powinien decydować o stanach magazynowych, cenach i statusach zamówień?",
+        "body": [
+          "Źródło prawdy to system, którego dane uznajemy za nadrzędne dla określonej informacji.",
+          "Nie musi to być jeden program odpowiadający za wszystko. Stany magazynowe mogą pochodzić z hurtowni, ceny detaliczne z WooCommerce, a informacja o opłaceniu zamówienia od operatora płatności.",
+          "Przykładowo sklep sprzedaje produkt dostępny u zewnętrznego dostawcy. Hurtownia przekazuje stan magazynowy, natomiast właściciel sklepu ustala własną cenę. Jeśli automatyczna aktualizacja hurtowni nadpisze również cenę detaliczną, naruszy zasadę, którą należało ustalić przed uruchomieniem synchronizacji.",
+          "Podobnie jest z zamówieniami. Operator płatności potwierdza otrzymanie środków, pracownik sklepu przygotowuje wysyłkę, a zewnętrzny system może aktualizować postęp realizacji. Każdy z nich ma inną odpowiedzialność.",
+          "Przed połączeniem ustalam więc:"
+        ],
+        "list": [
+          "Który system może tworzyć i zmieniać konkretny rodzaj danych.",
+          "W jakim kierunku przebiega aktualizacja i kiedy jest wykonywana.",
+          "Co zrobić, jeśli dwa systemy zwrócą różne wartości albo aktualizacja się nie powiedzie."
+        ],
+        "outro": [
+          "Ważne jest również rozpoznawanie produktów. SKU, czyli unikalny kod identyfikujący produkt, pomaga dopasować pozycje między systemami. Jeśli kodów brakuje albo powtarzają się przy wariantach, synchronizacja może aktualizować nieodpowiednie produkty.",
+          "Te zasady zapisuję przed wdrożeniem, żeby integracja odpowiadała faktycznemu sposobowi obsługi Twojego sklepu, a nie przypadkowym ustawieniom wtyczki."
+        ]
+      },
+      {
+        "id": "kiedy-wystarczy-gotowa-wtyczka-a-kiedy-potrzebna-jest-integr",
+        "heading": "Kiedy wystarczy gotowa wtyczka, a kiedy potrzebna jest integracja na zamówienie?",
+        "body": [
+          "Nie każda integracja wymaga pisania własnego kodu. Gotowe wtyczki często wystarczają przy standardowych płatnościach, dostawach lub połączeniach, dla których dostawcy przygotowali obsługiwane rozwiązania.",
+          "Przed wyborem sprawdzam jednak nie tylko listę dostępnych funkcji. Ważne jest również to, czy narzędzie obsługuje Twój sposób realizacji zamówień, odpowiednie statusy, warianty produktów i nietypowe sytuacje.",
+          "Gotowa wtyczka ma sens, gdy oferuje potrzebny przepływ danych, pozwala ustawić właściwe reguły i nie koliduje z innymi połączeniami. Jeżeli problem wynika wyłącznie z konfiguracji, wolę ją poprawić, niż budować kolejne narzędzie.",
+          "BaseLinker można rozważyć, gdy sklep współpracuje z dodatkowymi kanałami sprzedaży i dostawcami, a obsługa zamówień ma odbywać się przez system pośredniczący. Powstaje wtedy dodatkowa warstwa między WooCommerce a pozostałymi usługami. Trzeba świadomie ustalić jej uprawnienia do zmieniania statusów i stanów.",
+          "Integracja na zamówienie ma sens, jeśli gotowe rozwiązanie nie obsługuje potrzebnej reguły albo trzeba zabezpieczyć konkretny etap synchronizacji. Może to być niewielka funkcja zamiast osobnej, rozbudowanej aplikacji.",
+          "Przy własnym połączeniu sprawdzam dokumentację API, czyli interfejsu umożliwiającego programom pobieranie i przesyłanie danych. Oceniam też, czy system obsługuje webhooki, czyli automatyczne powiadomienia o zdarzeniach, dzięki którym sklep nie musi stale pytać o każdą zmianę.",
+          "Jeśli potrzebna jest funkcja przygotowana specjalnie do WordPressa, opisuję taką usługę osobno jako [wtyczki WordPress na zamówienie](/uslugi/tworzenie-wtyczek-wordpress).",
+          "W Twoim projekcie wybieram sposób integracji dopiero po sprawdzeniu możliwości systemów i zasad, według których obsługujesz sprzedaż."
+        ]
+      },
+      {
+        "id": "dlaczego-integracje-cofaja-statusy-dubluja-zamowienia-i-rozj",
+        "heading": "Dlaczego integracje cofają statusy, dublują zamówienia i rozjeżdżają stany magazynowe?",
+        "body": [
+          "Wiele problemów nie wynika z całkowitego braku połączenia. Dane docierają do systemu, ale są błędnie interpretowane, przetwarzane ponownie albo nadpisywane przez kolejną aktualizację.",
+          "Dobrym przykładem jest LumiKids. W tym sklepie zamówienia za pobraniem anulowały się automatycznie. Z analizy logu serwera wynikało, że integracja z BaseLinkerem cofała statusy zamówień. WooCommerce uznawał je następnie za nieopłacone i po 60 minutach anulował. Problem rozwiązałem małą wtyczką ochronną.",
+          "To pokazuje, dlaczego nie wystarczy sprawdzić ostatniego statusu. Trzeba ustalić, który system go zmienił, kiedy to zrobił i jak zareagował WooCommerce.",
+          "Inne ryzyka, które biorę pod uwagę przy projektowaniu i testach, to:"
+        ],
+        "list": [
+          "Podwójne zamówienia. Powtórne przesłanie tej samej informacji nie powinno tworzyć drugiego zamówienia. Sprawdzam, jak system rozpoznaje już odebrane dane.",
+          "Rozbieżne stany magazynowe. Aktualizacja z hurtowni może nadpisać zmianę wykonaną w sklepie. Potrzebna jest jasna reguła pierwszeństwa.",
+          "Nieprawidłowe potwierdzenia płatności. Przy BLIK trzeba odróżnić niedokończoną transakcję od błędu sklepu, porównując notatki zamówienia z panelem operatora.",
+          "Duplikaty lub brak zdarzeń reklamowych. Wysyłanie informacji z przeglądarki i serwera wymaga sprawdzenia, czy system reklamowy poprawnie rozpoznaje zdarzenia dotyczące tego samego zakupu."
+        ],
+        "outro": [
+          "W LumiKids zajmowałem się również integracją Meta. Darmowa wtyczka Pixel Manager miała ustawienie, które wyłączało całą integrację. Po jego zmianie zdarzenia serwerowe zaczęły działać bez konieczności przechodzenia na płatną wersję.",
+          "Przy naprawie Twojej integracji szukam konkretnego źródła błędu i sprawdzam jego skutki w całym przepływie zamówienia, nie tylko w panelu jednej wtyczki."
+        ]
+      },
+      {
+        "id": "jak-sprawdzam-czy-integracja-woocommerce-dziala-prawidlowo-p",
+        "heading": "Jak sprawdzam, czy integracja WooCommerce działa prawidłowo po wdrożeniu?",
+        "body": [
+          "Samo pojawienie się komunikatu o poprawnym połączeniu nie potwierdza, że integracja zadziała przy rzeczywistym zamówieniu. Dlatego sprawdzam osobno różne scenariusze, zwłaszcza tam, gdzie uczestniczy kilka systemów.",
+          "Przy płatnościach wykonuję zamówienia testowe każdą skonfigurowaną metodą, na ile pozwala środowisko i operator. Kontroluję poprawnie zakończoną transakcję, płatność niedokończoną oraz reakcję sklepu na brak potwierdzenia.",
+          "Przy dostawach sprawdzam przekazywane dane odbiorcy i wybraną metodę wysyłki. Przy hurtowni porównuję identyfikatory produktów, warianty oraz aktualizację dostępności.",
+          "Następnie korzystam z kilku źródeł informacji:"
+        ],
+        "list": [
+          "Notatki zamówień pokazują historię komunikatów i zmian zapisanych w WooCommerce.",
+          "Logi techniczne, czyli zapisy działania systemu, pomagają powiązać problem z konkretną operacją lub błędem.",
+          "Panel zewnętrznego operatora pozwala porównać dane widoczne w sklepie z informacjami o transakcji lub przesyłce.",
+          "Raport zamówień z ostatnich tygodni pomaga wybrać przypadki do sprawdzenia, szczególnie przy błędach pojawiających się nieregularnie."
+        ],
+        "outro": [
+          "Nie zakładam, że pojedynczy udany zakup oznacza prawidłowe działanie każdej ścieżki. Osobno sprawdzam sytuacje, w których informacja dociera ponownie, zostaje opóźniona lub nie zawiera oczekiwanych danych.",
+          "Jeśli dopiero planujesz sprzedaż internetową i nie masz jeszcze działającego sklepu, zakres budowy od podstaw opisuję na stronie [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+          "Przed zakończeniem zlecenia sprawdzam scenariusze odpowiadające Twojej konfiguracji i wskazuję, gdzie kontrolować działanie połączenia podczas codziennej obsługi zamówień."
+        ]
+      },
+      {
+        "id": "co-przygotowac-przed-rozmowa-o-integracji-woocommerce-z-inny",
+        "heading": "Co przygotować przed rozmową o integracji WooCommerce z innym systemem?",
+        "body": [
+          "Nie potrzebujesz gotowej dokumentacji technicznej, żeby opisać problem. Najbardziej pomaga mi konkretny przykład: co robisz w sklepie, jakie informacje przenosisz ręcznie i w którym momencie proces przestaje działać tak, jak oczekujesz.",
+          "Przed rozmową przygotuj, jeśli masz taką możliwość:"
+        ],
+        "list": [
+          "Listę systemów. Nazwy hurtowni, operatorów płatności, kurierów, marketplace i programów wykorzystywanych do zamówień lub faktur.",
+          "Informacje o dostępie do API. Dokumentację albo informację od dostawcy, czy umożliwia automatyczną wymianę danych. Nie przesyłaj haseł ani kluczy dostępu w pierwszej wiadomości.",
+          "Opis osoby obsługującej zamówienia. Kto zatwierdza płatność, zmienia status, przygotowuje wysyłkę i poprawia stany magazynowe.",
+          "Orientacyjną liczbę zamówień dziennie. Pozwala mi zrozumieć skalę wymiany danych i częstotliwość potrzebnych aktualizacji.",
+          "Listę czynności wykonywanych ręcznie. Na przykład przepisywanie adresów do panelu kuriera, poprawianie stanów albo wprowadzanie danych do programu fakturowego."
+        ],
+        "outro": [
+          "Jeżeli integracja już działa nieprawidłowo, przyda się również numer przykładowego zamówienia, opis oczekiwanego zachowania i informacja, od kiedy występuje problem. Nie musisz samodzielnie szukać błędów w kodzie.",
+          "Przy integracji z systemem księgowym lub ERP dodatkowo sprawdzę, czy dostawca oferuje gotowy łącznik lub udokumentowany interfejs wymiany danych. Nie wdrażałem dotąd połączeń z Subiektem, Optimą, wFirmą, iFirmą ani Fakturownią, dlatego ich możliwości oceniam po rozpoznaniu konkretnego przypadku.",
+          "Na podstawie tych informacji mogę ustalić, czy Twoje zlecenie wymaga nowego połączenia, poprawienia konfiguracji czy naprawy istniejącego mechanizmu. Napisz, z jakich systemów korzystasz i co chcesz zautomatyzować, a w ciągu 24 godzin roboczych odpowiem z pierwszą oceną możliwego rozwiązania."
+        ]
+      }
+    ]
+  },
+  "migracja-sklepu-do-woocommerce": {
+    "heading": "Przeniesienie sklepu internetowego do WooCommerce krok po kroku",
+    "intro": [
+      "W tym poradniku znajdziesz informacje o tym, jakie dane trzeba przenieść ze starego sklepu, jak przygotować przekierowania adresów i co sprawdzić przed uruchomieniem WooCommerce. Wyjaśniam też różnice między migracją z Shopera, PrestaShop i innych platform oraz pokazuję, dlaczego sam import produktów nie wystarcza do rozpoczęcia sprzedaży.",
+      "Zmiana platformy dotyczy trzech powiązanych obszarów: danych, adresów i funkcji sklepu. Najpierw trzeba upewnić się, że nowy system poprawnie przechowuje informacje o produktach, klientach i zamówieniach. Następnie należy zadbać o stare adresy odwiedzane przez klientów i wyszukiwarki. Dopiero na tak przygotowanej podstawie można uruchamiać płatności, dostawy i dodatkowe integracje. Taką kolejność stosuję przy planowaniu migracji, ponieważ pozwala wychwycić błędy przed przełączeniem działającej sprzedaży."
+    ],
+    "sections": [
+      {
+        "id": "jakie-dane-trzeba-przeniesc-ze-starego-sklepu-do-woocommerce",
+        "heading": "Jakie dane trzeba przenieść ze starego sklepu do WooCommerce?",
+        "body": [
+          "Pierwszym etapem jest ustalenie, co rzeczywiście znajduje się w obecnym sklepie. Sama liczba produktów niewiele mówi o stopniu trudności migracji. Produkt prosty, mający jedną cenę i jedno zdjęcie, jest łatwiejszy do przeniesienia niż produkt z kilkoma wariantami, osobnymi stanami magazynowymi i różnymi zdjęciami dla poszczególnych wersji.",
+          "Ważne są też informacje, których nie widać w katalogu: konta klientów, adresy dostawy, historia zakupów, opinie i strony informacyjne. Każdy rodzaj danych wymaga sprawdzenia, czy można go pobrać z dotychczasowej platformy oraz jak ma zostać zapisany w WooCommerce."
+        ],
+        "table": {
+          "caption": "Jakie dane trzeba przenieść ze starego sklepu do WooCommerce?",
+          "head": [
+            "Dane",
+            "Skąd",
+            "Na co uważam"
+          ],
+          "rows": [
+            [
+              "Produkty i warianty",
+              "Eksport katalogu, baza danych lub API, czyli interfejs udostępniający dane sklepu",
+              "Ceny, stany magazynowe, SKU, czyli unikalne identyfikatory produktów, oraz powiązania wariantów"
+            ],
+            [
+              "Zdjęcia",
+              "Biblioteka plików, adresy zdjęć lub eksport produktów",
+              "Oryginalne pliki, rozdzielczości, kolejność galerii i przypisanie do wariantów"
+            ],
+            [
+              "Kategorie",
+              "Struktura katalogu i eksport produktów",
+              "Hierarchia kategorii, przypisania produktów i adresy podstron"
+            ],
+            [
+              "Klienci i hasła",
+              "Baza kont klientów lub dostępny eksport",
+              "Dane osobowe, zgodność sposobu przechowywania haseł i ewentualne ponowne ustawienie hasła"
+            ],
+            [
+              "Historia zamówień",
+              "Panel zamówień, eksport lub baza źródłowa",
+              "Statusy, daty, kupione produkty, kwoty, adresy i powiązania z kontami"
+            ],
+            [
+              "Opinie",
+              "Moduł opinii lub osobny eksport",
+              "Autorzy, oceny, treść i przypisanie opinii do właściwych produktów"
+            ],
+            [
+              "Strony informacyjne",
+              "Treści obecnego sklepu lub system zarządzania treścią",
+              "Regulamin, polityka prywatności, dostawy, zwroty i formatowanie"
+            ],
+            [
+              "Adresy URL",
+              "Mapa witryny, eksport adresów, dane analityczne i Search Console",
+              "Dopasowanie starych adresów do nowych oraz przekierowania 301"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie każda platforma pozwala pobrać wszystkie informacje w taki sam sposób. Szczególną uwagę zwracam na hasła klientów, ponieważ przeniesienie samego konta nie oznacza automatycznie, że dotychczasowe hasło zadziała w WooCommerce.",
+          "Dlatego przed właściwą migracją wykonuję próbny import reprezentatywnych danych i sprawdzam ich poprawność, zamiast oceniać powodzenie przeniesienia wyłącznie po komunikacie o zakończonym imporcie."
+        ]
+      },
+      {
+        "id": "dlaczego-mapa-przekierowan-301-jest-tak-wazna-dla-ruchu-z-go",
+        "heading": "Dlaczego mapa przekierowań 301 jest tak ważna dla ruchu z Google?",
+        "body": [
+          "Gdy zmieniasz platformę sklepową, często zmieniają się również adresy produktów i kategorii. Produkt dostępny wcześniej pod adresem zawierającym określoną strukturę kategorii może w WooCommerce otrzymać zupełnie inny adres.",
+          "Jeśli klient kliknie stary wynik wyszukiwania i zobaczy błąd 404, nie trafi do poszukiwanego produktu. Podobny problem dotyczy linków zapisanych w artykułach, wiadomościach e-mail i innych witrynach.",
+          "Przekierowanie 301 to stałe przekierowanie ze starego adresu na nowy.",
+          "Informuje przeglądarkę i wyszukiwarkę, że strona została przeniesiona. Najlepiej kierować użytkownika bezpośrednio do odpowiadającego produktu lub kategorii, a nie automatycznie odsyłać wszystkie stare adresy na stronę główną.",
+          "W jednym z serwisów na WordPressie Google Search Console pokazywał 106 błędów 404 ze starych adresów. Przygotowałem mapę 163 par adresów. Spośród nich 161 zwracało błąd 404, a dwa miały już przekierowanie. Następnie wdrożyłem stałe przekierowania 301.",
+          "Google odwiedzał stare adresy jeszcze przez kilka tygodni. To pokazuje, dlaczego nie należy usuwać przekierowań zaraz po uruchomieniu nowej witryny.",
+          "Przy migracji sklepu uwzględniam:"
+        ],
+        "list": [
+          "Zebranie starych adresów produktów, kategorii i ważnych podstron oraz dopasowanie ich do nowych odpowiedników.",
+          "Wdrożenie stałych przekierowań po stronie serwera, aktualizację linków wewnętrznych i nowej mapy witryny.",
+          "Sprawdzenie błędów 404 i indeksowania w Google Search Console po uruchomieniu."
+        ],
+        "outro": [
+          "Google zaleca utrzymywanie przekierowań przez co najmniej rok, a często warto zachować je dłużej. Trzeba też pamiętać, że nawet prawidłowo przygotowana migracja sklepu internetowego bez utraty pozycji nie jest czymś, co można zagwarantować. Przejściowe wahania widoczności są możliwe.",
+          "Przed przyjęciem zlecenia sprawdzam więc skalę zmian adresów i uwzględniam przygotowanie mapy przekierowań w zakresie prac."
+        ]
+      },
+      {
+        "id": "czym-rozni-sie-migracja-z-shopera-prestashop-i-innych-platfo",
+        "heading": "Czym różni się migracja z Shopera, PrestaShop i innych platform?",
+        "body": [
+          "Różnica nie sprowadza się do wyglądu panelu administracyjnego. Najważniejsze jest to, jak dana platforma zapisuje dane, jakie informacje udostępnia na zewnątrz i czy można pobrać je w formie pozwalającej odtworzyć powiązania w WooCommerce.",
+          "Migracja z Shoper do WooCommerce wymaga sprawdzenia dostępnych mechanizmów eksportu oraz możliwości pobrania danych, których nie obejmuje podstawowy eksport produktów. Trzeba osobno zweryfikować klientów, zamówienia, warianty, opinie i sposób działania dodatkowych aplikacji. To, że sklep udostępnia plik z katalogiem, nie oznacza jeszcze dostępności wszystkich danych potrzebnych do migracji.",
+          "Przeniesienie sklepu z PrestaShop do WooCommerce może wymagać analizy struktury bazy danych, sposobu zapisywania kombinacji produktów oraz modułów, z których korzysta obecny sklep. Eksport katalogu może nie obejmować wszystkich informacji o zamówieniach lub niestandardowych polach. Osobnym zagadnieniem pozostają konta i hasła klientów.",
+          "W innych platformach najpierw sprawdzam, czy dostępny jest eksport plikowy, dostęp do bazy albo API, czyli mechanizm pozwalający jednemu systemowi odczytywać dane drugiego. Znaczenie ma również to, czy zdjęcia można pobrać automatycznie i czy eksport zachowuje identyfikatory produktów.",
+          "W realizowanym sklepie z częściami samochodowymi katalog oraz zdjęcia pobrałem automatycznie z obecnego sklepu przez jego publiczne API produktów. Dzięki temu nie było potrzeby ręcznego przepisywania katalogu. Wdrożenie pozostaje w toku.",
+          "Przy Twoim sklepie najpierw sprawdzę dostępne sposoby eksportu i dopiero wtedy wybiorę metodę przeniesienia danych do WooCommerce."
+        ]
+      },
+      {
+        "id": "dlaczego-warto-uporzadkowac-sku-warianty-i-rozmiary-przed-im",
+        "heading": "Dlaczego warto uporządkować SKU, warianty i rozmiary przed importem?",
+        "body": [
+          "Zmiana platformy jest dobrym momentem na wykrycie problemów, które w starym sklepie mogły pozostawać niezauważone. Szczególnie dotyczy to katalogów rozwijanych przez dłuższy czas, kiedy produkty były dodawane ręcznie, importowane z różnych źródeł albo synchronizowane z zewnętrznymi systemami.",
+          "SKU to unikalny identyfikator produktu, który pomaga poprawnie dopasowywać towary między sklepem, magazynem i integracjami.",
+          "Jeśli kilka produktów ma ten sam SKU lub część wariantów nie ma go wcale, automatyczna aktualizacja stanów magazynowych może dotyczyć niewłaściwych pozycji.",
+          "W sklepie [LumiKids](/projekty/lumikids) import wykonany wtyczką przeniósł 59 produktów bez błędów. Problemy z brakującymi SKU i lokalną rozmiarówką dotyczyły produktów dodanych później ręcznie. To ważne rozróżnienie: poprawnie zakończony import nie oznacza, że cały katalog pozostanie spójny podczas dalszej obsługi.",
+          "Przy porządkowaniu danych zwracam uwagę na:"
+        ],
+        "list": [
+          "Unikalność SKU, spójność nazw wariantów, przypisanie rozmiarów i kolorów oraz brakujące opisy lub zdjęcia.",
+          "Powiązania między produktem głównym a wariantami, osobne stany magazynowe i zgodność danych wykorzystywanych przez integracje."
+        ],
+        "outro": [
+          "Nie każda różnica wymaga automatycznej poprawki. Czasami potrzebna jest decyzja właściciela sklepu, na przykład czy dwie nazwy rozmiaru oznaczają ten sam wariant albo czy podobne produkty powinny zostać połączone.",
+          "Podczas przygotowywania migracji mogę wskazać takie rozbieżności i ustalić z Tobą, które dane uporządkować przed importem, a które pozostawić zgodne ze źródłem."
+        ]
+      },
+      {
+        "id": "jak-przelaczyc-sklep-na-woocommerce-przy-mozliwie-najkrotsze",
+        "heading": "Jak przełączyć sklep na WooCommerce przy możliwie najkrótszej przerwie w sprzedaży?",
+        "body": [
+          "Największym wyzwaniem nie jest samo uruchomienie WooCommerce, ale różnica między danymi przeniesionymi wcześniej a tymi, które powstały w starym sklepie tuż przed przełączeniem.",
+          "Dlatego najpierw przygotowuję wersję testową nowego sklepu. Można na niej sprawdzić wygląd produktów, warianty, koszyk, płatności i sposoby dostawy, podczas gdy dotychczasowy sklep nadal obsługuje sprzedaż.",
+          "Po zaakceptowaniu wersji testowej ustalam moment zamrożenia zmian, czyli czasowego ograniczenia edycji danych w starym sklepie. Zakres takiego ograniczenia zależy od możliwości platformy. Chodzi o to, aby podczas końcowego przenoszenia nie powstawały niekontrolowane różnice między obiema bazami.",
+          "Następnie wykonuję ostatnią synchronizację zamówień, klientów i stanów magazynowych w zakresie, na jaki pozwalają oba systemy. Porównuję dane źródłowe i docelowe, zwracając szczególną uwagę na zakupy złożone po wcześniejszym imporcie.",
+          "Kolejnym etapem jest zmiana DNS, czyli ustawień wskazujących, na który serwer kieruje domena sklepu. Samo przełączenie planuję w okresie najmniejszego ruchu. Rozchodzenie się nowych ustawień DNS może jednak powodować, że przez pewien czas użytkownicy będą trafiać do różnych środowisk.",
+          "Nie obiecuję więc całkowitego braku przerwy. Przygotowuję migrację tak, aby ograniczyć niedostępność i ryzyko pominięcia zamówień. Ważne jest także sprawdzenie certyfikatu HTTPS, działania domeny i sposobu obsługi zakupów w okresie przełączenia.",
+          "W przypadku Twojego sklepu termin uruchomienia i szczegóły synchronizacji ustalę po poznaniu możliwości starej platformy oraz rytmu sprzedaży."
+        ]
+      },
+      {
+        "id": "co-sprawdzam-w-pierwszych-tygodniach-po-migracji-sklepu",
+        "heading": "Co sprawdzam w pierwszych tygodniach po migracji sklepu?",
+        "body": [
+          "Uruchomienie WooCommerce nie kończy kontroli technicznej. Dopiero rzeczywiste wizyty klientów, zamówienia i ponowne odwiedziny wyszukiwarki pokazują, czy wszystkie elementy funkcjonują prawidłowo.",
+          "Pierwszym obszarem jest Google Search Console, gdzie można obserwować problemy z indeksowaniem nowych adresów. Sprawdzam błędy 404, działanie przekierowań, dostępność mapy witryny oraz to, czy ważne podstrony są dostępne dla wyszukiwarki. Nie każda zmiana liczby zaindeksowanych stron oznacza problem, ale nieoczekiwane błędy wymagają sprawdzenia.",
+          "Drugim obszarem jest pamięć podręczna, czyli cache. W jednym z serwisów na WordPressie wtyczka cache podawała Google stare tytuły na 39 z 93 wpisów. Od tego czasu po zmianach porównuję wersję strony pobieraną z pamięci podręcznej i wersję bez niej. To istotne również w sklepie, gdzie nieaktualne dane mogą dotyczyć treści produktów lub elementów procesu zakupowego.",
+          "Trzecim obszarem są płatności i obsługa zamówień. Sprawdzam, czy płatność zmienia status zamówienia zgodnie z oczekiwaniem, czy klient otrzymuje potwierdzenie zakupu i czy sklep wysyła odpowiednie wiadomości przy kolejnych etapach realizacji. Kontroluję również koszty dostawy oraz współpracę z zewnętrznymi systemami.",
+          "Ważne jest też zachowanie klientów korzystających ze starych kont. Jeśli migracja wymagała ponownego ustawienia haseł, trzeba upewnić się, że wiadomości docierają do odbiorców, a formularz odzyskiwania dostępu działa prawidłowo.",
+          "Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek dotyczących wykonanego wdrożenia. Jeśli potrzebujesz późniejszego utrzymania, osobno oferuję [opiekę nad stroną WordPress](/uslugi/opieka-wordpress). Przy zmianie architektury serwisu, a nie platformy sklepowej, innym zagadnieniem jest [migracja z WordPressa na Next.js](/blog/migracja-wordpress-na-nextjs).",
+          "W ramach zlecenia migracji ustalam, które elementy wymagają kontroli po uruchomieniu, abyś wiedział, co zostało sprawdzone i jakie ewentualne problemy trzeba jeszcze rozwiązać."
+        ]
+      }
+    ]
+  },
+  "konfigurator-produktu": {
+    "heading": "Kalkulator wyceny na stronę czy konfigurator produktu w sklepie? Jak wybrać rozwiązanie dla firmy",
+    "intro": [
+      "W tym poradniku znajdziesz porównanie trzech sposobów wdrożenia konfiguratora, zasady przygotowania cennika, metody pokazywania ceny oraz możliwości obsługi zapytań i zamówień. Wyjaśnię też, jak zaplanować edycję stawek i działanie na telefonie, żeby narzędzie było użyteczne zarówno dla klienta, jak i dla Ciebie.",
+      "Przed wyborem technologii warto ustalić, co klient ma zrobić po wpisaniu wymiarów i zaznaczeniu opcji. Czy powinien natychmiast zobaczyć kwotę? Czy chcesz, żeby kupił produkt w sklepie? A może potrzebujesz kompletnego zapytania, które pracownik sprawdzi przed przygotowaniem oferty? Od tej decyzji zależy budowa konfiguratora, sposób przechowywania danych oraz zakres prac programistycznych."
+    ],
+    "sections": [
+      {
+        "id": "kalkulator-na-stronie-konfigurator-woocommerce-i-aplikacja-n",
+        "heading": "Kalkulator na stronie, konfigurator WooCommerce i aplikacja Next.js rozwiązują różne problemy",
+        "body": [
+          "Pod nazwą „konfigurator” kryją się rozwiązania o różnych możliwościach. Prosty kalkulator może obliczać koszt materiału na podstawie powierzchni. Konfigurator sklepu powinien dodatkowo współpracować z koszykiem i zamówieniem. Osobna aplikacja może obsługiwać skomplikowane warunki, zapisywać wyceny i udostępniać firmie panel do zarządzania nimi.",
+          "Nie wybieram technologii wyłącznie na podstawie liczby parametrów. Ważniejsze jest to, co stanie się z danymi po zakończeniu konfiguracji."
+        ],
+        "table": {
+          "caption": "Kalkulator na stronie, konfigurator WooCommerce i aplikacja Next.js rozwiązują różne problemy",
+          "head": [
+            "Forma",
+            "Kiedy pasuje",
+            "Co dostaje klient"
+          ],
+          "rows": [
+            [
+              "Kalkulator na stronie WordPress",
+              "Gdy obliczenia są stosunkowo proste, a celem jest szybka informacja o cenie lub ilości materiału.",
+              "Formularz z wynikiem aktualizowanym po zmianie danych, ewentualnie możliwość wysłania zapytania."
+            ],
+            [
+              "Konfigurator produktu WooCommerce",
+              "Gdy sprzedajesz produkt z opcjami i chcesz przyjmować zamówienia bezpośrednio w sklepie.",
+              "Wybór wariantów, aktualną cenę oraz możliwość dodania skonfigurowanego produktu do koszyka."
+            ],
+            [
+              "Aplikacja Next.js",
+              "Gdy potrzebujesz bardziej złożonych obliczeń, zapisu danych lub osobnego panelu administratora.",
+              "Wieloetapową konfigurację, wycenę albo zapytanie oraz funkcje dopasowane do procesu firmy."
+            ]
+          ]
+        },
+        "outro": [
+          "Przykładem pierwszego rozwiązania jest mój serwis Mebloweporady.pl, w którym umieściłem siedem kalkulatorów napisanych w JavaScripcie. Obliczenia działają bez konieczności uruchamiania osobnej aplikacji. Przy osadzaniu kodu musiałem uwzględnić automatyczne formatowanie edytora WordPressa, które potrafiło wstawiać znaczniki akapitów wewnątrz skryptu.",
+          "Inaczej wygląda projekt Galabau Darius. Tam przygotowałem aplikację Next.js z konfiguracją ogrodzeń i wyceną aktualizowaną na żywo. Rozwiązanie obejmuje również panel administratora z logowaniem.",
+          "Jeżeli masz już stronę lub sklep, najpierw sprawdzę, czy konfigurator da się do niego rozsądnie dołączyć.",
+          "Nie ma potrzeby budowania osobnej aplikacji, gdy potrzebujesz jedynie kilku pól i prostego wzoru.",
+          "Przy bardziej rozbudowanym procesie od początku zaplanuję architekturę, która pomieści wymagane funkcje."
+        ]
+      },
+      {
+        "id": "reguly-wyceny-trzeba-uporzadkowac-zanim-zacznie-sie-programo",
+        "heading": "Reguły wyceny trzeba uporządkować, zanim zacznie się programowanie",
+        "body": [
+          "Najtrudniejszą częścią konfiguratora często nie jest sam formularz, lecz zapisanie zasad, według których firma wycenia produkt. Pracownik może znać je z doświadczenia i stosować automatycznie, ale program potrzebuje jednoznacznych warunków.",
+          "Przykładowo przy ogrodzeniu znaczenie mogą mieć długość, wysokość, materiał, liczba elementów i sposób montażu. Przy meblach na wymiar dochodzą wymiary, rodzaj płyty, okucia i wykończenie. Samo wypisanie tych parametrów nie wystarczy. Trzeba jeszcze określić, jak na siebie wpływają.",
+          "Przed rozpoczęciem kodowania proponuję spisać:"
+        ],
+        "list": [
+          "Cenę bazową: od jakiej wartości zaczyna się obliczenie i czego ona dotyczy.",
+          "Parametry ilościowe: czy liczymy metry bieżące, metry kwadratowe, sztuki czy zestawy.",
+          "Dopłaty: które opcje zwiększają cenę o stałą wartość, a które procentowo.",
+          "Minimalne zamówienia: czy obowiązuje minimalna ilość, powierzchnia albo wartość.",
+          "Wyjątki: jakie kombinacje są niedostępne i kiedy potrzebna jest ręczna wycena.",
+          "Zaokrąglenia: czy wynik zaokrąglamy do pełnych jednostek i na jakim etapie obliczeń."
+        ],
+        "outro": [
+          "Ważna jest także kolejność działań. Jeżeli dopłata procentowa dotyczy tylko materiału, nie powinna automatycznie obejmować montażu. Jeśli cena zależy od przedziału wymiarów, trzeba ustalić, co dzieje się dokładnie na jego granicy.",
+          "Proszę również o przykłady rzeczywistych zamówień z obliczoną ceną. Mogę wtedy porównać wynik programu z Twoimi dotychczasowymi kalkulacjami. Uwzględniam też błędne dane, takie jak ujemna długość, puste pole czy zestaw niedostępnych opcji.",
+          "Na tej podstawie przygotowuję opis reguł wyceny do zaakceptowania przed kodowaniem, żeby podczas wdrożenia sprawdzać działanie programu na konkretnych przypadkach, a nie na przypuszczeniach."
+        ]
+      },
+      {
+        "id": "pelna-cena-cena-od-i-zapytanie-ofertowe-wymagaja-innych-zasa",
+        "heading": "Pełna cena, cena „od” i zapytanie ofertowe wymagają innych zasad",
+        "body": [
+          "Nie każdy konfigurator musi kończyć się podaniem dokładnej kwoty. Sposób prezentowania ceny powinien wynikać z tego, ile informacji wystarcza do jej wiarygodnego obliczenia.",
+          "Pełna cena ma sens wtedy, gdy wszystkie istotne parametry można ująć w regułach. Klient wybiera produkt, widzi koszt i może zdecydować o zakupie. Trzeba jednak przewidzieć ograniczenia, takie jak niedostępne warianty czy dodatkowe prace, których kalkulator nie obejmuje.",
+          "Cena „od” lub orientacyjna sprawdza się przy usługach, gdzie część kosztów zależy od warunków wykonania. Kalkulator może obliczyć koszt podstawowy, a obok wyniku wskazać, co wymaga potwierdzenia. Ważne, żeby klient rozumiał, jakie elementy zostały uwzględnione, a jakie nie.",
+          "Zapytanie ofertowe jest dobrym rozwiązaniem, gdy cena zależy od indywidualnej oceny. Zamiast obiecywać konkretną kwotę, konfigurator zbiera parametry potrzebne pracownikowi do jej przygotowania.",
+          "Możliwe jest również połączenie tych metod. Standardowe warianty mogą pokazywać cenę, natomiast nietypowe zamówienie uruchamia formularz zapytania. Przykładowo klient wybierający wymiar spoza dostępnego zakresu otrzymuje informację, że firma musi sprawdzić możliwość realizacji.",
+          "Podczas projektowania ustalę z Tobą, które wyniki mogą być ostateczne, które powinny być orientacyjne i przy jakich warunkach konfigurator ma przejść do zapytania ofertowego."
+        ]
+      },
+      {
+        "id": "po-kliknieciu-przycisku-dane-musza-trafic-we-wlasciwe-miejsc",
+        "heading": "Po kliknięciu przycisku dane muszą trafić we właściwe miejsce",
+        "body": [
+          "Obliczenie ceny to tylko część procesu. Równie ważne jest to, co dzieje się po kliknięciu „Dodaj do koszyka”, „Wyślij zapytanie” albo „Zapisz wycenę”.",
+          "W [sklepie WooCommerce](/uslugi/sklepy-internetowe-woocommerce) konfigurator powinien przekazać do koszyka nie tylko cenę, ale też informacje o wybranym produkcie. Jeśli klient skonfigurował kolor, rozmiar i dodatkowe wyposażenie, dane te muszą pozostać dostępne podczas składania zamówienia.",
+          "Cena powinna również zostać sprawdzona przez mechanizm sklepu. Nie wystarczy zmienić kwoty widocznej na ekranie, ponieważ dane przesłane z przeglądarki mogą zostać zmodyfikowane. Przygotowując konfigurator zakupowy, uwzględniam więc sprawdzanie parametrów i obliczeń przed zapisaniem zamówienia.",
+          "Przy zapytaniach ofertowych proces wygląda inaczej. Klient może otrzymać podsumowanie wybranych opcji, a firma wiadomość zawierającą wszystkie informacje potrzebne do dalszej obsługi. Warto też zaplanować, które pola są obowiązkowe, oraz jasno określić, czy wysłanie formularza oznacza zamówienie, czy jedynie prośbę o ofertę.",
+          "W bardziej rozbudowanej aplikacji wyceny można zapisywać w panelu firmy. Taki model pozwala zaplanować przeglądanie zgłoszeń, ich statusy czy późniejsze odtworzenie konfiguracji, jeśli te funkcje są potrzebne.",
+          "Nie każda firma potrzebuje wszystkich tych możliwości. Dla niewielkiego kalkulatora wiadomość z podsumowaniem może być wystarczająca. Dla procesu obejmującego wiele etapów warto rozważyć zapis danych w aplikacji.",
+          "Przed przygotowaniem konfiguratora ustalę z Tobą, kto otrzymuje wynik, jakie informacje są potrzebne do realizacji i czy klient powinien móc wrócić do wcześniejszego wyboru."
+        ]
+      },
+      {
+        "id": "panel-administratora-pozwala-zmieniac-stawki-bez-edytowania",
+        "heading": "Panel administratora pozwala zmieniać stawki bez edytowania kodu",
+        "body": [
+          "Cennik nie jest elementem, który raz wpisujesz do programu i zostawiasz na zawsze. Zmieniają się ceny materiałów, dopłaty za dodatkowe wyposażenie, dostępność wariantów oraz minimalne wartości zamówień.",
+          "Dlatego podczas planowania konfiguratora rozdzielam dane, które możesz zmieniać samodzielnie, od reguł wymagających ingerencji w program.",
+          "W panelu administratora można przewidzieć edycję takich elementów jak:"
+        ],
+        "list": [
+          "stawki bazowe i ceny jednostkowe,",
+          "dopłaty za materiały, kolory lub dodatki,",
+          "dostępne warianty produktu,",
+          "minimalne i maksymalne wartości parametrów,",
+          "opisy oraz komunikaty wyświetlane klientowi."
+        ],
+        "outro": [
+          "Zakres edycji zależy od sposobu działania kalkulatora. Prosta tabela stawek może być wygodna do samodzielnego zarządzania. Zmiana całego wzoru obliczeniowego, na przykład wprowadzenie nowego sposobu naliczania ceny dla kilku powiązanych parametrów, może wymagać aktualizacji kodu.",
+          "W projekcie Galabau Darius wdrożyłem panel administratora zabezpieczony logowaniem przez Clerk. Przy nowym zleceniu ustalę osobno, które ustawienia mają być dostępne w panelu i jakie uprawnienia są potrzebne użytkownikom.",
+          "Warto również przewidzieć sprawdzanie obliczeń po zmianie cennika. Jeżeli zmodyfikujesz stawkę, powinieneś móc zweryfikować wynik na przykładowej konfiguracji przed wykorzystaniem nowych wartości w sprzedaży.",
+          "Projektując panel dla Twojej firmy, określę zakres samodzielnej edycji i pokażę Ci podczas szkolenia, jak zmieniać ustawienia bez naruszania zasad działania kalkulatora."
+        ]
+      },
+      {
+        "id": "konfigurator-powinien-wygodnie-dzialac-na-telefonie-i-nie-ob",
+        "heading": "Konfigurator powinien wygodnie działać na telefonie i nie obciążać strony",
+        "body": [
+          "Formularz, który dobrze wygląda na szerokim monitorze, nie zawsze nadaje się do obsługi na telefonie. Szczególnie gdy klient musi wpisać kilka wymiarów, porównać opcje i kontrolować aktualną cenę.",
+          "Na mniejszym ekranie znaczenie ma przede wszystkim kolejność pól. Zamiast pokazywać wszystkie ustawienia jednocześnie, można podzielić konfigurację na etapy. Klient wybiera najpierw rodzaj produktu, później wymiary i dodatki, a na końcu sprawdza podsumowanie.",
+          "Warto przy tym zadbać o czytelne etykiety, odpowiednie pola do wpisywania liczb i komunikaty wyjaśniające, dlaczego dana wartość jest niedostępna. Jeśli zmiana jednego parametru wpływa na pozostałe opcje, formularz powinien jasno pokazywać tę zależność.",
+          "Osobną kwestią jest wydajność. Kalkulator nie powinien ładować dużych bibliotek tylko po to, żeby wykonać kilka prostych działań matematycznych. Nie ma też potrzeby wysyłania każdego wpisanego wymiaru do serwera, jeżeli wynik można bezpiecznie obliczyć w przeglądarce.",
+          "Inaczej jest przy cenach, które muszą zostać sprawdzone przed zamówieniem, lub przy danych wymagających zapisu. Wtedy część operacji powinna odbywać się po stronie serwera.",
+          "Przy personalizatorach produktów znaczenie mają również zdjęcia. Przykładowo w przygotowanym przeze mnie personalizatorze koszulki w React wybór koloru i rozmiaru aktualizuje podgląd oraz cenę na żywo. Przy bardziej rozbudowanych wizualizacjach trzeba dodatkowo uwzględnić rozmiar obrazów i sposób ich ładowania.",
+          "Przed oddaniem wdrożenia sprawdzam działanie na telefonie i wydajność strony, dążąc do wyniku Lighthouse 90+ oraz czasu ładowania największego elementu poniżej 2,5 sekundy. Rzeczywiste wyniki weryfikuję na gotowej wersji testowej, ponieważ wpływa na nie także środowisko, w którym działa konfigurator.",
+          "Jeżeli zlecisz mi kalkulator wyceny lub konfigurator online dla firmy, zaplanuję jego działanie na urządzeniach mobilnych już na etapie projektu, a nie dopiero po napisaniu całego formularza."
+        ]
+      }
+    ]
+  },
 };

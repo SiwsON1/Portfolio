@@ -562,20 +562,21 @@ const WP_FIRMOWA = ["tworzenie-stron-wordpress", "nowoczesna-strona-firmowa-2026
 
 /** Usługi (slugi z lib/services.ts), których dana realizacja jest dowodem. Lab celowo pominięty. */
 export const PROJECT_SERVICES: Record<string, string[]> = {
-  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress"],
+  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress", "integracje-woocommerce"],
   kantorymapa: ["aplikacje-nextjs", "strony-jamstack"],
   cojestpolskie: ["strony-jamstack", "nowoczesne-strony-internetowe", "wdrozenia-ai"],
   dobrypupil: ["strony-jamstack"],
   owodzie: ["strony-jamstack"],
   cenynotarialne: ["aplikacje-nextjs", "aplikacje-react", "next-js-software-house"],
-  "galabau-darius": ["aplikacje-nextjs", "aplikacje-react"],
+  "galabau-darius": ["aplikacje-nextjs", "aplikacje-react", "konfigurator-produktu"],
   kosmoteka: [
     "sklepy-internetowe-woocommerce",
     "przyspieszanie-stron-wordpress",
     "integracja-woocommerce-z-baselinker",
     "tworzenie-wtyczek-wordpress",
+    "integracje-woocommerce",
   ],
-  mebloweporady: ["tworzenie-stron-wordpress", "tworzenie-wtyczek-wordpress"],
+  mebloweporady: ["tworzenie-stron-wordpress", "tworzenie-wtyczek-wordpress", "konfigurator-produktu"],
   businesstokenizer: ["tworzenie-stron-wordpress"],
   "apartamenty-zlota-grota": ["tworzenie-stron-www", "tworzenie-stron-wordpress"],
   "kancelaria-mpiontek": [...WP_FIRMOWA, "tworzenie-stron-www"],

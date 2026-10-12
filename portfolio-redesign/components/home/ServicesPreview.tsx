@@ -24,6 +24,8 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
     subs: [
       "sklepy-internetowe-woocommerce",
       "integracja-woocommerce-z-baselinker",
+      "integracje-woocommerce",
+      "migracja-sklepu-do-woocommerce",
       "tworzenie-wtyczek-wordpress",
       "opieka-wordpress",
       "przyspieszanie-stron-wordpress",
@@ -33,7 +35,7 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
   {
     main: "aplikacje-nextjs",
     line: "Szybkie strony i aplikacje z własną logiką: panele klienta, konfiguratory, portale z danymi.",
-    subs: ["aplikacje-react", "next-js-software-house"],
+    subs: ["aplikacje-react", "konfigurator-produktu", "next-js-software-house"],
   },
   {
     main: "wdrozenia-ai",

@@ -14,8 +14,11 @@ import { scene as firmowa } from "./nowoczesna-strona-firmowa-2026";
 import { scene as opieka } from "./opieka-wordpress";
 import { scene as speed } from "./przyspieszanie-stron-wordpress";
 import { scene as wtyczki } from "./tworzenie-wtyczek-wordpress";
+import { scene as integracje } from "./integracje-woocommerce";
+import { scene as migracja } from "./migracja-sklepu-do-woocommerce";
+import { scene as konfigurator } from "./konfigurator-produktu";
 
-/** Scenka per slug usługi (wszystkie 15). Usługa bez scenki dostałaby klasyczny hero (ServiceHeroVisual). */
+/** Scenka per slug usługi (wszystkie 18). Usługa bez scenki dostałaby klasyczny hero (ServiceHeroVisual). */
 export const SCENES: Record<string, Scene> = {
   "tworzenie-stron-wordpress": wordpress,
   "sklepy-internetowe-woocommerce": woocommerce,
@@ -32,4 +35,7 @@ export const SCENES: Record<string, Scene> = {
   "opieka-wordpress": opieka,
   "przyspieszanie-stron-wordpress": speed,
   "tworzenie-wtyczek-wordpress": wtyczki,
+  "integracje-woocommerce": integracje,
+  "migracja-sklepu-do-woocommerce": migracja,
+  "konfigurator-produktu": konfigurator,
 };

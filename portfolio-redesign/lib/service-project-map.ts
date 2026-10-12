@@ -98,6 +98,18 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "W sklepie LumiKids na WooCommerce dopisałem kilka funkcji jako własne wtyczki. Jedna prosi klientów o opinię 7 dni po zrealizowaniu zamówienia i nagradza ją jednorazowym kodem rabatowym, z moderacją przed publikacją. Druga chroni zamówienia za pobraniem: zewnętrzna integracja cofała ich status, a WooCommerce po godzinie je anulował. Przyczynę znalazłem w logu serwera, wtyczka blokuje taką zmianę i zostawia notatkę w zamówieniu.",
     highlight: "Opinie po zakupie i ochrona zamówień za pobraniem",
   },
+  "integracje-woocommerce": {
+    projectSlug: "lumikids",
+    context:
+      "LumiKids sprzedaje przez sklep WooCommerce i równolegle przez Allegro, a zamówienia obsługuje BaseLinker. Zamówienia za pobraniem anulowały się same: integracja cofała ich status, a WooCommerce po godzinie uznawał je za nieopłacone. Przyczynę znalazłem w logu serwera i zablokowałem taką zmianę małą wtyczką, bez wyłączania integracji.",
+    highlight: "WooCommerce, Allegro i BaseLinker bez cofanych statusów",
+  },
+  "konfigurator-produktu": {
+    projectSlug: "galabau-darius",
+    context:
+      "Galabau Darius, firma ogrodnicza z Niemiec, dostała konfigurator wyceny ogrodzeń: klient wybiera parametry i od razu widzi wycenę, a firma ma panel administratora z logowaniem. Aplikacja działa na Next.js z bazą przez Prisma i wdrożeniem na Vercel.",
+    highlight: "Wycena ogrodzeń na żywo i panel firmy",
+  },
   "wdrozenia-ai": {
     projectSlug: "cojestpolskie",
     context:

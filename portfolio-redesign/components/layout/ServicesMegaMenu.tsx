@@ -76,6 +76,11 @@ const GROUPS: Group[] = [
         title: "Strony Jamstack",
         line: "Statyczne strony z CMS, bez bazy przy każdym wejściu.",
       },
+      {
+        slug: "konfigurator-produktu",
+        title: "Konfiguratory i kalkulatory",
+        line: "Wycena na stronie, zanim klient napisze maila.",
+      },
     ],
   },
   {
@@ -91,6 +96,16 @@ const GROUPS: Group[] = [
         slug: "integracja-woocommerce-z-baselinker",
         title: "Integracja z BaseLinker",
         line: "Zamówienia, stany i Allegro z jednego magazynu.",
+      },
+      {
+        slug: "integracje-woocommerce",
+        title: "Integracje WooCommerce",
+        line: "Płatności, kurierzy, Allegro i hurtownia bez przepisywania.",
+      },
+      {
+        slug: "migracja-sklepu-do-woocommerce",
+        title: "Migracja sklepu",
+        line: "Z Shopera lub PrestaShop do WooCommerce, z przekierowaniami.",
       },
       {
         slug: "tworzenie-wtyczek-wordpress",
