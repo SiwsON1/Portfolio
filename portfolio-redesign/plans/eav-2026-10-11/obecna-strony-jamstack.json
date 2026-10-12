@@ -1,0 +1,233 @@
+{
+ "page": {
+  "slug": "strony-jamstack",
+  "title": "Strony Jamstack",
+  "metaTitle": "Strony Jamstack dla firm: szybkie strony z CMS",
+  "metaDescription": "Strony Jamstack dla firm: szybkie strony generowane z góry, CMS do edycji i wdrożenie z Wrocławia. Pracuję zdalnie w całej Polsce i Niemczech.",
+  "h1": "Strony Jamstack dla firm, które stawiają na szybkość i prostą obsługę",
+  "lead": "Tworzę strony Jamstack, czyli serwisy, których gotowe podstrony są generowane z góry i trafiają do użytkownika szybko, bez składania każdej strony od początku przy każdym wejściu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Strony Jamstack oddzielają treść od sposobu jej wyświetlania. W praktyce oznacza to, że część albo całość podstron przygotowuję wcześniej, a użytkownik dostaje gotowy wynik. Treść nadal możesz zmieniać przez CMS, na przykład Sanity lub Strapi, bez edytowania kodu. Więcej o samym podejściu wyjaśniam [w poście Jamstack co to jest](/blog/jamstack-co-to-jest).",
+   "Takie rozwiązanie pasuje przede wszystkim do stron firmowych, serwisów z treścią, katalogów i projektów, w których zawartość nie musi być budowana od nowa dla każdego użytkownika. Jeśli projekt wymaga rozbudowanego panelu, danych zmieniających się indywidualnie dla zalogowanej osoby albo wielu operacji wykonywanych na żywo, lepiej od razu rozważyć architekturę aplikacji zamiast wciskać wszystko w stronę statyczną.",
+   "Dobrym przykładem jest [cojestpolskie.pl](/projekty/cojestpolskie), mój własny serwis zbudowany w Astro. Jedna baza danych zasila ponad 1700 podstron dotyczących ponad 900 marek. Treść jest generowana z uporządkowanych danych, a informacje o właścicielach marek powstają w procesie wykorzystującym AI i kontrolę w KRS oraz CRBR."
+  ],
+  "bullets": [
+   {
+    "title": "Gotowe podstrony zamiast składania ich przy każdym wejściu",
+    "body": "Tam, gdzie treść nie musi powstawać na żywo, przygotowuję ją wcześniej. Dzięki temu przeglądarka szybciej dostaje gotową stronę, bez czekania za każdym razem na zapytania do bazy i generowanie całego widoku."
+   },
+   {
+    "title": "Treść edytowana przez CMS",
+    "body": "Mogę podłączyć Sanity lub Strapi, abyś zmieniał teksty, zdjęcia i inne dane z panelu. Po publikacji nowych treści strona odświeża odpowiednie podstrony bez ręcznej ingerencji w kod."
+   },
+   {
+    "title": "Architektura dopasowana do rodzaju treści",
+    "body": "Nie wszystko musi działać statycznie. Formularze, wyszukiwanie lub inne elementy wymagające przetwarzania danych mogą korzystać z osobnej logiki, a zwykłe podstrony pozostają proste."
+   },
+   {
+    "title": "Dobra baza techniczna pod SEO",
+    "body": "Przy wdrożeniu dbam o strukturę nagłówków, dane strukturalne, mapę strony i konfigurację Search Console. To pomaga wyszukiwarce prawidłowo odczytać serwis, ale nie jest obietnicą konkretnej pozycji w Google."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Ustalenie architektury",
+    "body": "Najpierw sprawdzam, które treści mogą być generowane z góry, a które funkcje wymagają przetwarzania danych po stronie serwera. Na tej podstawie dobieram CMS, hosting i potrzebne integracje."
+   },
+   {
+    "step": "02",
+    "title": "Konfiguracja CMS",
+    "body": "Tworzę strukturę treści, pola i zależności między nimi. Dzięki temu panel odpowiada temu, co rzeczywiście edytujesz na stronie, zamiast być zbiorem przypadkowych ustawień."
+   },
+   {
+    "step": "03",
+    "title": "Budowa strony",
+    "body": "Koduję widoki i podłączam dane z CMS. Jeśli projekt tego wymaga, korzystam z Next.js albo Astro i dodaję tylko te dynamiczne funkcje, które są potrzebne."
+   },
+   {
+    "step": "04",
+    "title": "Wdrożenie i pomiary",
+    "body": "Uruchamiam stronę na Vercel albo odpowiednio dobranym serwerze, sprawdzam jej działanie i przed oddaniem mierzę wydajność. Celem jest wynik Lighthouse co najmniej 90 na telefonie oraz LCP poniżej 2,5 s."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Czym strona Jamstack różni się od tradycyjnego WordPressa?",
+    "a": "W typowym WordPressie serwer składa stronę z PHP i danych z bazy przy kolejnych wejściach. W Jamstacku wiele podstron przygotowuję wcześniej i podaję jako gotowe pliki. Różnica dotyczy przede wszystkim architektury, a nie tego, czy będziesz mieć panel do edycji treści."
+   },
+   {
+    "q": "Ile kosztuje strona Jamstack?",
+    "a": "Największy wpływ na koszt ma zakres niestandardowych funkcji poza zwykłą prezentacją treści. Prosty serwis z kilkoma typami podstron wymaga mniej pracy niż katalog z filtrowaniem, integracjami i własną logiką. Po krótkiej rozmowie i briefie podaję zakres oraz termin."
+   },
+   {
+    "q": "Ile trwa wdrożenie strony Jamstack?",
+    "a": "Typowa strona firmowa lub usługowa zajmuje orientacyjnie od 4 do 6 tygodni. Ostateczny harmonogram zależy od zakresu i ustalam go po briefie."
+   },
+   {
+    "q": "Co jeśli mam już stronę na WordPressie?",
+    "a": "Migrację planuję tak, aby przerwa była jak najkrótsza. Stare adresy mogę zachować albo przekierować kodem 301, ale przy zmianie DNS może wystąpić krótka niedostępność i nie gwarantuję zachowania dotychczasowych pozycji w Google."
+   },
+   {
+    "q": "Czy SEO działa na stronie Jamstack?",
+    "a": "Tak. Przygotowuję poprawną strukturę nagłówków, dane strukturalne, mapę strony i Search Console przy wdrożeniu. Sama technologia nie gwarantuje jednak konkretnej pozycji, bo widoczność zależy także od treści, konkurencji i wielu innych czynników."
+   },
+   {
+    "q": "Czy na stronie Jamstack sam edytuję treści?",
+    "a": "Tak, mogę podłączyć panel Sanity lub Strapi i przygotować pola dopasowane do zawartości strony. Jeśli treści zmieniają się bardzo rzadko, mogę też oprzeć je na plikach projektu. Dla osoby nietechnicznej zazwyczaj wybieram panel CMS i po wdrożeniu prowadzę szkolenie online."
+   },
+   {
+    "q": "Czy strona Jamstack nadaje się do sklepu internetowego?",
+    "a": "Może obsługiwać sprzedaż przez zewnętrzny system lub indywidualną integrację, ale nie zawsze będzie najpraktyczniejszym wyborem. Przy rozbudowanym sklepie porównuję to rozwiązanie z WooCommerce albo architekturą aplikacji. Dobieram technologię do procesów sprzedażowych i potrzebnych integracji."
+   },
+   {
+    "q": "Jak działają formularze na stronie statycznej?",
+    "a": "Podłączam formularz do osobnej usługi albo logiki działającej po stronie serwera. Sama podstrona może pozostać wygenerowana wcześniej, a tylko wysłanie danych jest obsługiwane dynamicznie. Sposób przetwarzania zgłoszeń ustalam przy rozpoczęciu współpracy."
+   },
+   {
+    "q": "Czy Jamstack jest lepszy dla SEO niż WordPress?",
+    "a": "Sama technologia nie gwarantuje lepszej widoczności ani konkretnej pozycji. Przy wdrożeniu przygotowuję strukturę nagłówków, dane strukturalne, mapę strony i konfigurację Search Console. Oceniam też wydajność, ale wynik SEO zależy również od treści, konkurencji oraz jakości całego serwisu."
+   },
+   {
+    "q": "Czy mogę przenieść stronę z WordPressa na Jamstack?",
+    "a": "Tak, mogę przenieść treści i przygotować nową strukturę strony. Analizuję istniejące adresy oraz konfiguruję przekierowania 301 tam, gdzie adresy ulegają zmianie. Nie gwarantuję zachowania pozycji w Google, a przy zmianie DNS może wystąpić krótka niedostępność."
+   },
+   {
+    "q": "Ile kosztuje utrzymanie strony Jamstack?",
+    "a": "Koszt zależy od wybranego hostingu, CMS i usług obsługujących funkcje dynamiczne. Inaczej wygląda utrzymanie prostej strony, a inaczej serwisu z wyszukiwarką, formularzami i płatnościami. Konkretny model oraz ewentualną opiekę w miesięcznym abonamencie ustalam przy rozpoczęciu współpracy."
+   }
+  ],
+  "cta": "Napisz, co ma robić Twoja strona, a sprawdzę, czy Jamstack ma w tym projekcie sens"
+ },
+ "block": {
+  "heading": "Strony Jamstack w praktyce: co warto wiedzieć przed wyborem wykonawcy",
+  "intro": [
+   "**W tym bloku dowiesz się, jak działają strony Jamstack, czym różnią się od WordPressa i w jakich projektach warto zastosować taką architekturę.** Wyjaśnię też, jak wygląda edycja treści, obsługa formularzy, wycena oraz przeniesienie istniejącej witryny.",
+   "Nie musisz znać technologii, aby świadomie porównać oferty wykonawców. Najważniejsze jest to, czy proponowane rozwiązanie pasuje do sposobu, w jaki publikujesz treści, rozwijasz firmę i obsługujesz klientów. Strona statyczna może mieć wygodny panel administracyjny oraz funkcje dynamiczne, ale nie każdy projekt powinien być budowany w ten sposób."
+  ],
+  "sections": [
+   {
+    "id": "jak-dzialaja-strony-jamstack-z-perspektywy-wlasciciela-firmy",
+    "heading": "Jak działają strony Jamstack z perspektywy właściciela firmy?",
+    "body": [
+     "W tradycyjnym systemie strona może być składana przez serwer dopiero wtedy, gdy użytkownik otworzy konkretny adres. Pobierane są dane, wykonywany jest kod, a następnie powstaje widok wysyłany do przeglądarki. W architekturze Jamstack wiele podstron przygotowuję wcześniej, podczas publikacji lub aktualizacji serwisu.",
+     "Gotowe pliki mogą być dostarczane przez sieć serwerów znajdujących się w różnych lokalizacjach. Użytkownik otrzymuje więc przygotowaną stronę bez konieczności uruchamiania przy każdym wejściu całego systemu zarządzania treścią i wykonywania kolejnych zapytań do bazy. Dokładniej opisuję ten mechanizm w poradniku [Jamstack: co to jest](/blog/jamstack-co-to-jest).",
+     "Nie oznacza to, że witryna pozostaje całkowicie nieruchoma. Formularze, płatności, wyszukiwarka albo logowanie mogą działać jako osobne usługi połączone z warstwą statyczną. **Jamstack jest sposobem projektowania architektury, a nie rezygnacją z funkcji potrzebnych użytkownikom.**"
+    ]
+   },
+   {
+    "id": "czym-jamstack-rozni-sie-od-wordpressa",
+    "heading": "Czym Jamstack różni się od WordPressa?",
+    "body": [
+     "WordPress i Jamstack mogą prowadzić do podobnego efektu wizualnego, ale inaczej obsługują treści, funkcje oraz generowanie podstron. WordPress jest kompletnym systemem działającym na serwerze. Strony Jamstack oddzielają interfejs od panelu treści i dodatkowych usług, dlatego każdy z tych elementów można dobrać do projektu osobno."
+    ],
+    "table": {
+     "caption": "Czym Jamstack różni się od WordPressa?",
+     "head": [
+      "Obszar",
+      "Jamstack",
+      "WordPress"
+     ],
+     "rows": [
+      [
+       "Edycja treści",
+       "Panel CMS, na przykład Sanity lub Strapi, albo edycja plików",
+       "Panel WordPressa z polami dopasowanymi do strony"
+      ],
+      [
+       "Szybkość",
+       "Podstrony mogą być wygenerowane wcześniej i podawane jako gotowe pliki",
+       "Wynik zależy między innymi od motywu, wtyczek, serwera i konfiguracji pamięci podręcznej"
+      ],
+      [
+       "Bezpieczeństwo",
+       "Publiczna część strony nie musi mieć bezpośredniego połączenia z panelem i bazą danych",
+       "System, motyw oraz wtyczki wymagają aktualizacji i właściwego zabezpieczenia"
+      ],
+      [
+       "Wtyczki",
+       "Funkcje dobiera się jako integracje lub tworzy w kodzie",
+       "Dostępny jest rozbudowany ekosystem gotowych wtyczek"
+      ],
+      [
+       "Koszt utrzymania",
+       "Zależy od hostingu, CMS i używanych usług zewnętrznych",
+       "Zależy od hostingu, opieki technicznej oraz płatnych rozszerzeń"
+      ],
+      [
+       "Sklep",
+       "Możliwy przez zewnętrzny system sprzedażowy lub indywidualną integrację",
+       "WooCommerce zapewnia gotowe zaplecze do prowadzenia sklepu"
+      ]
+     ]
+    },
+    "outro": [
+     "**Nie traktuję Jamstacku jako automatycznie lepszego zamiennika WordPressa.** Jeśli liczy się szybka strona firmowa bez WordPressa, uporządkowana architektura i ograniczenie liczby elementów działających na serwerze, Jamstack może być dobrym wyborem. Jeżeli projekt wymaga wielu gotowych rozszerzeń lub rozbudowanej obsługi sprzedaży, WordPress z WooCommerce może okazać się praktyczniejszy."
+    ]
+   },
+   {
+    "id": "jak-mozesz-samodzielnie-edytowac-tresci",
+    "heading": "Jak możesz samodzielnie edytować treści?",
+    "body": [
+     "Strony Jamstack mogą korzystać z panelu CMS, mimo że sam interfejs witryny działa niezależnie od niego. W projektach wymagających regularnych aktualizacji mogę podłączyć Sanity albo Strapi. W takim panelu edytujesz przygotowane pola, na przykład tytuł, opis, zdjęcie, dane usługi czy element katalogu. Po publikacji system uruchamia aktualizację potrzebnych podstron.",
+     "Drugą możliwością jest przechowywanie treści bezpośrednio w plikach projektu. Takie rozwiązanie ogranicza liczbę usług, ale wymaga pracy z plikami i sposobem ich zapisu. Sprawdza się głównie wtedy, gdy zawartość zmienia się rzadko albo aktualizacjami zajmuje się osoba techniczna.",
+     "Dla nietechnicznego właściciela firmy zwykle wybieram panel CMS, jeśli samodzielna edycja jest częścią codziennej pracy. Zakres pól ustalam na podstawie rzeczywistych potrzeb, aby nie obciążać panelu ustawieniami, których nikt nie będzie używać. Po wdrożeniu prowadzę szkolenie online z edycji treści."
+    ]
+   },
+   {
+    "id": "jak-formularze-i-wyszukiwarka-dzialaja-na-stronie-statycznej",
+    "heading": "Jak formularze i wyszukiwarka działają na stronie statycznej?",
+    "body": [
+     "Określenie „strona statyczna” dotyczy przede wszystkim sposobu przygotowania i wyświetlania treści. Nie wyklucza ono przesyłania zapytań, filtrowania katalogu ani pobierania aktualnych danych. Więcej o samym generowaniu gotowych widoków wyjaśniam w materiale [static site generation](/blog/static-site-generation-co-to).",
+     "Poszczególne funkcje mogą działać niezależnie:"
+    ],
+    "list": [
+     "formularz przekazuje dane do osobnej usługi lub logiki po stronie serwera,",
+     "wyszukiwarka korzysta z przygotowanego indeksu albo zewnętrznego mechanizmu,",
+     "płatność jest obsługiwana przez przeznaczony do tego system,",
+     "dane zmieniające się na żywo są pobierane z odpowiedniego źródła."
+    ],
+    "outro": [
+     "Dzięki temu nie trzeba budować całej witryny jak rozbudowanej aplikacji tylko dlatego, że jedna sekcja wymaga dynamicznego działania. Najpierw rozdzielam zwykłe podstrony od funkcji przetwarzających dane, a następnie dobieram rozwiązanie do każdej z nich. Pozwala to ocenić zakres prac na podstawie faktycznych potrzeb, a nie samej liczby funkcji wymienionych w zapytaniu."
+    ]
+   },
+   {
+    "id": "jak-jamstack-sprawdza-sie-w-wiekszych-serwisach",
+    "heading": "Jak Jamstack sprawdza się w większych serwisach?",
+    "body": [
+     "Strony Jamstack nie muszą ograniczać się do kilku zakładek firmowych. Własny serwis [cojestpolskie.pl](/projekty/cojestpolskie) zbudowałem w Astro. Z jednej bazy generowanych jest ponad 1700 podstron dotyczących ponad 900 marek. To przykład projektu, w którym uporządkowane dane służą do tworzenia wielu powtarzalnych widoków.",
+     "Astro sprawdza się w serwisach, w których dominują treści i dane możliwe do przygotowania z wyprzedzeniem. Poszczególne typy podstron korzystają wtedy ze wspólnych szablonów, a dodanie kolejnego rekordu nie wymaga ręcznego projektowania osobnej strony. **Skala serwisu zależy więc nie tylko od liczby adresów, lecz także od jakości struktury danych i szablonów.**",
+     "Innym przykładem jest Kantorymapa, mój produkt zbudowany w Next.js. Serwis obejmuje 1900 kantorów w 140 miastach, codziennie pobiera kursy NBP i ładuje się poniżej sekundy. Ten projekt pokazuje, że przy wyborze technologii trzeba uwzględnić również aktualizowane dane i logikę aplikacji. Nie każdy serwis z dużą liczbą podstron powinien być wykonany wyłącznie jako strona statyczna."
+    ]
+   },
+   {
+    "id": "od-czego-zaleza-koszt-i-termin-wykonania",
+    "heading": "Od czego zależą koszt i termin wykonania?",
+    "body": [
+     "Koszt stron Jamstack wynika przede wszystkim z liczby różnych szablonów, sposobu zarządzania treścią i zakresu funkcji, które muszą działać dynamicznie. Dziesięć podstron korzystających z jednego schematu może wymagać mniej pracy niż kilka podstron o całkowicie odmiennej strukturze. Znaczenie ma również to, czy panel CMS ma obsługiwać proste teksty, rozbudowany katalog, wiele typów danych lub zależności między nimi.",
+     "Na zakres wpływają najczęściej:"
+    ],
+    "list": [
+     "liczba unikalnych widoków i typów treści,",
+     "konfiguracja Sanity lub Strapi,",
+     "formularze, wyszukiwarka, płatności i inne integracje,",
+     "przygotowanie danych oraz migracja istniejących materiałów,",
+     "przeniesienie z WordPressa i opracowanie przekierowań 301."
+    ],
+    "outro": [
+     "Prosta strona lub wizytówka powstaje zwykle w ciągu 2 do 3 tygodni. Typowa strona firmowa albo usługowa zajmuje od 4 do 6 tygodni. Ostateczny termin ustalam po krótkiej rozmowie i briefie, ponieważ migracja, niestandardowe funkcje oraz liczba szablonów mogą istotnie zmienić harmonogram.",
+     "Przy przenoszeniu witryny z WordPressa analizuję także dotychczasowe adresy. Dla zmienionych podstron przygotowuję przekierowania 301, aby użytkownicy i wyszukiwarki trafiali pod właściwe adresy. Migrację planuję tak, by przerwa była jak najkrótsza, jednak przy zmianie DNS może wystąpić krótka niedostępność. Nie obiecuję zachowania konkretnych pozycji w Google."
+    ]
+   },
+   {
+    "id": "kiedy-strony-jamstack-nie-beda-wlasciwym-wyborem",
+    "heading": "Kiedy strony Jamstack nie będą właściwym wyborem?",
+    "body": [
+     "Jamstack może nie być najlepszym rozwiązaniem dla rozbudowanego sklepu, który wymaga wielu procesów sprzedażowych, gotowych integracji oraz wygodnego zaplecza do zarządzania zamówieniami. W takim przypadku WooCommerce albo indywidualna aplikacja mogą lepiej odpowiadać zakresowi projektu. Decyzja zależy od sposobu sprzedaży, a nie od samej liczby produktów.",
+     "Ostrożnie podchodzę również do projektów, w których wiele osób zmienia treści niemal bez przerwy. Bez odpowiednio zaprojektowanego CMS taki model pracy będzie niewygodny. Jeżeli serwis ma rozbudowane konta użytkowników, indywidualne dane po zalogowaniu lub liczne operacje wykonywane na żywo, rozważam architekturę aplikacji w Next.js zamiast klasycznej strony statycznej.",
+     "**Technologię dobieram do procesów firmy, częstotliwości zmian i funkcji serwisu.** Dzięki temu strona nie jest nazywana Jamstackiem tylko ze względu na użyte narzędzia, lecz rzeczywiście wykorzystuje ten model tam, gdzie przynosi praktyczną korzyść."
+    ]
+   }
+  ]
+ }
+}
