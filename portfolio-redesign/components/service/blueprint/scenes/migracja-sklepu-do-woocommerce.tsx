@@ -20,7 +20,7 @@ export const scene: Scene = {
   badge: { title: "Migracja", sub: "Sklep do WooCommerce", icon: <Glyph name="move" className="h-[58%] w-[58%]" /> },
   watermark: <Watermark name="move" />,
   cursor: [{ at: 900, x: 285, y: 12, click: true }],
-  toast: { at: 5600, text: "Sklep przeniesiony, stare adresy działają", short: "Sklep przeniesiony" },
+  toast: { at: 5600, text: "Sklep przeniesiony, stare adresy działają", short: "Sklep przeniesiony", style: { right: "auto", left: "3%", top: "56%" } },
   panel: (
     <>
       <EditorBar icon="move" label="Migracja:" strong="stary sklep → WooCommerce" action={<span>Przenieś</span>} actionAt={900} />

@@ -20,7 +20,7 @@ export const scene: Scene = {
   badge: { title: "Integracje", sub: "WooCommerce z systemami", icon: <Glyph name="layers" className="h-[58%] w-[58%]" /> },
   watermark: <Watermark name="layers" />,
   cursor: [{ at: 900, x: 289, y: 12, click: true }],
-  toast: { at: 5600, text: "Zamówienie przeszło przez 4 systemy", short: "4 systemy OK" },
+  toast: { at: 5600, text: "Zamówienie przeszło przez 4 systemy", short: "4 systemy OK", style: { right: "auto", left: "3%", top: "74%" } },
   panel: (
     <>
       <EditorBar icon="woocommerce" label="Sklep:" strong="integracje zamówień" action={<span>Test</span>} actionAt={900} />

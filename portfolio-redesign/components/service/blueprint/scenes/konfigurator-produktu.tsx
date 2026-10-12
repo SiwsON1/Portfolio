@@ -19,7 +19,7 @@ export const scene: Scene = {
   badge: { title: "Konfigurator", sub: "Wycena na stronie", icon: <Glyph name="sliders" className="h-[58%] w-[58%]" /> },
   watermark: <Watermark name="sliders" />,
   cursor: [{ at: 4400, x: 287, y: 12, click: true }],
-  toast: { at: 5000, text: "Wycena wysłana do firmy", short: "Wycena wysłana" },
+  toast: { at: 5000, text: "Wycena wysłana do firmy", short: "Wycena wysłana", style: { right: "auto", left: "3%", top: "74%" } },
   panel: (
     <>
       <EditorBar icon="sliders" label="Konfigurator:" strong="ogrodzenie panelowe" action={<span>Wyślij</span>} actionAt={4400} />
@@ -45,7 +45,7 @@ export const scene: Scene = {
         </div>
 
         {/* podsumowanie */}
-        <div className="hwC-card absolute rounded-[3px] border border-[rgba(168,218,255,0.2)] bg-[rgba(168,218,255,0.04)] px-[3.5%] py-[3%]" style={{ left: "64%", right: "5%", top: "7%", bottom: "12%", animationDelay: "600ms" }}>
+        <div className="hwC-card absolute rounded-[3px] border border-[rgba(168,218,255,0.2)] bg-[rgba(168,218,255,0.04)] px-[3.5%] py-[3%]" style={{ left: "64%", right: "5%", top: "7%", bottom: "36%", animationDelay: "600ms" }}>
           <p className="hwC-t-xxs font-mono uppercase tracking-[0.16em] text-ink-mute">Twoja wycena</p>
           {STEPS.map(([label, opts, pick, at]) => (
             <p key={label} className="hwC-fade mt-[10%] flex justify-between hwC-t-xxs" style={{ animationDelay: `${at + 150}ms` }}>
