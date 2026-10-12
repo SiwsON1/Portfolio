@@ -335,158 +335,158 @@ export const industries: Industry[] = [
     title: "Gabinety i kliniki",
     keyword: "tworzenie stron dla gabinetów i klinik",
     metaTitle: "Tworzenie stron dla gabinetów i klinik: rejestracja",
-    metaDescription: "Tworzenie stron dla gabinetów i klinik: rejestracja online, cennik zabiegów i formularz zgodny z RODO. Realizacja 4-6 tygodni.",
+    metaDescription: "Tworzę strony dla gabinetów i klinik z cennikiem zabiegów, profilami specjalistów i rejestracją online. WordPress, szybkie działanie i łatwa edycja.",
     h1: "Tworzenie stron dla gabinetów i klinik",
-    lead: "Projektuję strony dla gabinetów i klinik, na których pacjent szybko znajduje usługę, cennik, kontakt i sposób umówienia wizyty. Pracuję z Wrocławia, zdalnie z placówkami z całej Polski i z Niemiec.",
+    lead: "Projektuję strony dla gabinetów i klinik, na których pacjent sprawdzi cenę i czas zabiegu, pozna specjalistę i przejdzie do rezerwacji bez szukania numeru recepcji. Pracuję z Wrocławia, zdalnie z placówkami z całej Polski i z Niemiec.",
     intro: [
-      "Pacjent często trafia na stronę z telefonu i chce od razu wiedzieć, gdzie przyjmuje specjalista, ile kosztuje usługa i jak się zapisać. Przy tworzeniu stron dla gabinetów i klinik porządkuję ofertę, cennik oraz ścieżkę kontaktu, a formularz ograniczam do danych potrzebnych na pierwszym etapie. Stronę mogę oprzeć na [WordPressie z własnym motywem](/uslugi/tworzenie-stron-wordpress).",
-      "Dla kliniki kosmetologii Queen Scarlet przygotowałem stronę WordPress prezentującą między innymi kriolipolizę i laserową stymulację kolagenu. [Projekt Queen Scarlet](/projekty/queen-scarlet) pokazuje układ oferty zabiegowej, profili specjalistów i zapisów. Po publikacji mogę zapewnić [opiekę nad WordPressem](/uslugi/opieka-wordpress) albo zająć się [przyspieszeniem istniejącej witryny](/uslugi/przyspieszanie-stron-wordpress)."
+      "Pacjent wchodzi na stronę Twojego gabinetu, bo chce sprawdzić konkretny zabieg. Interesuje go cena, czas trwania, przeciwwskazania i najbliższy możliwy termin. Jeśli tych informacji nie znajdzie, zadzwoni do recepcji albo będzie szukał dalej. Przy tworzeniu stron dla gabinetów i klinik układam ofertę tak, żeby odpowiedzi były pod ręką. Każdy zabieg może mieć osobną podstronę z cennikiem, przygotowaniem do wizyty i przyciskiem „Umów wizytę”. Przycisk łączę z systemem rezerwacji, którego już używasz, na przykład Booksy, Versum lub ZnanyLekarz, jeśli pozwala na takie przejście. Stronę buduję na [WordPressie z własnym motywem](/uslugi/tworzenie-stron-wordpress), dzięki czemu możesz później samodzielnie zmieniać ceny i opisy.",
+      "W 2024 roku przygotowałem stronę WordPress dla kliniki kosmetologii Queen Scarlet. Oferta obejmowała między innymi kriolipolizę i laserową stymulację kolagenu. Zaprojektowałem układ prezentacji zabiegów, profili specjalistów i zapisów, żeby osoba odwiedzająca stronę mogła poznać usługę i znaleźć drogę do rejestracji. Zobacz [Projekt Queen Scarlet](/projekty/queen-scarlet). Podobnie mogę uporządkować stronę gabinetu kosmetycznego, fizjoterapeutycznego, stomatologicznego lub małej kliniki. Po uruchomieniu witryny oferuję również [opiekę nad WordPressem](/uslugi/opieka-wordpress), jeśli wolisz powierzyć mi aktualizacje, kopie zapasowe i techniczne utrzymanie strony."
     ],
     pains: [
       {
-        title: "Rejestracja bez jasnej ścieżki",
-        body: "Kilka numerów, formularzy i różnych sposobów zapisu potrafi utrudnić pacjentowi wybór właściwej drogi. Łączę więc każdą usługę z odpowiednią metodą rejestracji i pokazuję ją w stałym, łatwym do znalezienia miejscu."
+        title: "Pacjenci dzwonią, żeby zapytać o cenę",
+        body: "Gdy cennik zabiegów jest schowany w pliku PDF albo w ogóle go nie ma, recepcja musi odpowiadać na te same pytania. Uporządkuję usługi w kategorie, pokażę ceny przy zabiegach i przygotuję cennik do samodzielnej edycji. Pacjent sprawdzi podstawowe informacje bez wykonywania telefonu."
       },
       {
-        title: "Oferta bez cen",
-        body: "Brak nawet orientacyjnego cennika utrudnia porównanie zabiegów i zwiększa liczbę podstawowych pytań. Tworzę przejrzystą tabelę, którą personel może później aktualizować w CMS."
+        title: "Rejestracja zaczyna się od szukania kontaktu",
+        body: "Pacjent przeczytał opis zabiegu, ale nie wie, gdzie sprawdzić wolne terminy. Musi wracać do menu, szukać telefonu albo otwierać osobny portal. Umieszczę przycisk „Umów wizytę” przy konkretnej usłudze i połączę go z dostępnym sposobem rezerwacji. Bez zbędnego krążenia między podstronami."
       },
       {
-        title: "Wrażliwe dane pacjentów",
-        body: "Zwykły formularz kontaktowy nie powinien zbierać obszernego wywiadu medycznego. Rozdzielam pierwszy kontakt od przekazywania danych o zdrowiu i dodaję wymagane informacje o ich przetwarzaniu."
+        title: "Oferta nie pomaga wybrać właściwego zabiegu",
+        body: "Same nazwy zabiegów niewiele mówią osobie, która pierwszy raz odwiedza gabinet. Zaprojektuję podstrony wyjaśniające wskazania, przeciwwskazania, przygotowanie, czas trwania i cenę. Dodam też profile specjalistów z kwalifikacjami. Dzięki temu pacjent łatwiej ustali, o jaką usługę chce zapytać lub którą zarezerwować."
       },
       {
-        title: "Ciężkie zdjęcia zabiegów",
-        body: "Duże pliki pogarszają Core Web Vitals i wydłużają otwieranie witryny na telefonie. Konwertuję fotografie do WebP lub AVIF oraz dobieram ich rozmiar do ekranu."
+        title: "Strona na telefonie działa zbyt wolno",
+        body: "Ciężkie zdjęcia gabinetu, rozbudowane galerie i niepotrzebne skrypty wydłużają ładowanie strony. Zoptymalizuję fotografie, ograniczę zbędny kod i sprawdzę działanie na urządzeniach mobilnych. Pacjent powinien móc szybko otworzyć cennik, znaleźć adres i przejść do zapisów."
       }
     ],
     mustHave: [
       {
-        title: "Rejestracja online",
-        body: "Przycisk zapisu prowadzi z podstrony zabiegu bezpośrednio do właściwego kalendarza albo usługi. Integrację dopasowuję do systemu używanego przez Twój gabinet."
+        title: "Rejestracja online przy konkretnym zabiegu",
+        body: "Przy opisie usługi umieszczę przycisk prowadzący do systemu rezerwacji, z którego już korzystasz. Może to być Booksy, Versum, ZnanyLekarz lub inne rozwiązanie. Sprawdzę, czy system pozwala otworzyć konkretny zabieg, czy tylko ogólny kalendarz. Jeśli nie korzystasz z takiego narzędzia, mogę przygotować prosty formularz kontaktowy. Nie tworzę od podstaw oprogramowania do zarządzania wizytami."
       },
       {
-        title: "Mobilna ścieżka kontaktu",
-        body: "Responsywna wersja mobilna pozwala wybrać numer jednym dotknięciem. Adres, godziny, mapa i formularz pozostają łatwo dostępne na małym ekranie."
+        title: "Cennik zabiegów, który łatwo aktualizujesz",
+        body: "Podzielę ofertę na czytelne kategorie i połączę ceny z opisami usług. Każdy zabieg może mieć własną podstronę z ceną, czasem trwania, przygotowaniem i przeciwwskazaniami. W WordPressie przygotuję pola do edycji, żeby zmiana ceny albo dodanie nowej usługi nie wymagały poprawiania kodu."
       },
       {
-        title: "Przejrzysty cennik",
-        body: "Ceny grupuję według rodzaju konsultacji lub zabiegu. Cennik można aktualizować przez CMS bez przebudowy całej strony placówki."
+        title: "Profile specjalistów i informacje o placówce",
+        body: "Przygotuję miejsce na kwalifikacje, specjalizacje, zakres świadczonych usług oraz zdjęcia zespołu. Dodam też adres, godziny przyjęć, telefon i wskazówki dojazdu. Pacjent będzie mógł sprawdzić, kto wykonuje dany zabieg i gdzie odbywa się wizyta, zanim skontaktuje się z recepcją."
       },
       {
-        title: "Legalna galeria efektów",
-        body: "Zdjęcia przed zabiegiem i po nim publikujesz po uzyskaniu odpowiedniej zgody pacjenta. Galeria zawiera rzeczowy opis bez gwarantowania identycznego rezultatu każdej osobie."
+        title: "Galeria efektów publikowana za zgodą",
+        body: "Zdjęcia przed i po zabiegu mogą być częścią oferty, jeśli masz odpowiednie zgody na ich publikację. Przygotuję galerię z miejscem na rzeczowe opisy procedur, bez sugerowania gwarantowanego efektu. Dobiorę też format i rozmiar fotografii, żeby rozbudowana galeria nie spowalniała strony."
       },
       {
-        title: "Lokalna widoczność",
-        body: "Spójny adres, mapa i opinie z Profilu Firmy w Google pomagają potwierdzić lokalizację. Podstrony usług wspierają lokalne pozycjonowanie bez sztucznego powtarzania fraz."
+        title: "Lokalizacja i uporządkowane informacje dla Google",
+        body: "Zadbam o spójność nazwy placówki, adresu i godzin otwarcia z Profilem Firmy w Google. Przygotuję strukturę nagłówków, mapę strony, dane strukturalne opisujące placówkę oraz podłączenie Google Search Console. Dzięki temu informacje o gabinecie będą technicznie uporządkowane, bez obiecywania określonej pozycji w wyszukiwarce."
       },
       {
-        title: "Odpowiedzialne opisy usług",
-        body: "Treści wyjaśniają przebieg, wskazania, przeciwwskazania i sposób umówienia wizyty. Nie zawierają obietnic, które mogłyby naruszać ograniczenia reklamy usług medycznych."
+        title: "Szybka strona i pomiar zapisów",
+        body: "Przed oddaniem sprawdzę witrynę w Lighthouse na telefonie. Moim celem jest wynik 90+ oraz LCP, czyli czas wyświetlenia głównego elementu strony, poniżej 2,5 sekundy. Mogę też skonfigurować GA4 uruchamiane po zgodzie na cookies i pomiar kliknięć w przyciski „Umów wizytę”. Zobaczysz, z których usług użytkownicy przechodzą do rezerwacji, choć samo kliknięcie nie oznacza jeszcze zapisu."
       }
     ],
     stack: [
       {
         label: "Booksy, Docplanner, Proassist",
-        body: "Podłączam wybrany system rejestracji do witryny, aby pacjent przechodził z konkretnej usługi prosto do dostępnych terminów."
+        body: "Sprawdzam możliwości systemu, którego używasz, i łączę go ze stroną. Tam, gdzie to możliwe, przycisk przy zabiegu prowadzi bezpośrednio do właściwej usługi. Nie zastępuję Twojego kalendarza własnym systemem rezerwacji."
       },
       {
         label: "Profil Firmy w Google",
-        body: "Dane placówki, mapa i opinie tworzą spójną drogę od lokalnego wyniku wyszukiwania Google do strony oraz rejestracji."
+        body: "Ujednolicam nazwę, adres, telefon i godziny placówki. Dodaję czytelną lokalizację i mapę, aby pacjent przechodzący z Google mógł potwierdzić dane gabinetu i znaleźć sposób umówienia wizyty."
       },
       {
         label: "WordPress",
-        body: "Bazowo stawiam gabinet na WordPressie z autorskim motywem, bo cennik i opisy zabiegów zmieniasz samodzielnie w panelu. Next.js proponuję dopiero przy własnym systemie zapisów albo strefie pacjenta za logowaniem."
+        body: "Tworzę autorski motyw z polami ACF do edycji zabiegów, cen i profili zespołu. Nie używam Elementora, Divi ani Avady w nowych projektach. Uzgodnione sekcje możesz aktualizować bez znajomości kodu."
       },
       {
         label: "RODO i SSL",
-        body: "Formularz ma szyfrowane połączenie SSL, ograniczony zakres pól i klauzulę RODO dopasowaną do celu zbierania danych."
+        body: "Wdrażam szyfrowane połączenie HTTPS i formularz zbierający tylko dane potrzebne do kontaktu, bez informacji o zdrowiu. Oddzielam zgody od pozostałych pól oraz przygotowuję miejsce na informacje o przetwarzaniu danych do zatwierdzenia przez placówkę."
       }
     ],
     pricing: {
       time: "4-6 tygodni",
-      note: "Na wycenę wpływają liczba usług, rozbudowanie cennika, galeria efektów oraz wybrany system rejestracji. Najwięcej zmienia to ostatnie, bo rejestracja bywa wtyczką, a bywa integracją z zewnętrznym systemem."
+      note: "Koszt strony zależy od liczby zabiegów, rozbudowania cennika, galerii efektów i sposobu podłączenia rezerwacji. Typowy czas realizacji strony gabinetu lub kliniki to 4-6 tygodni, a po rozmowie i briefie przygotuję wycenę z konkretnym zakresem oraz terminem."
     },
     faq: [
       {
         q: "Ile będzie kosztować strona mojego gabinetu lub kliniki?",
-        a: "Najwięcej zmienia sposób rejestracji, bo prosty formularz to inny zakres niż połączenie strony z zewnętrznym systemem. Biorę też pod uwagę liczbę usług, cennik i galerię. Po rozmowie i briefie przygotuję wycenę z zakresem oraz terminem."
+        a: "Cenę ustalam po rozmowie i briefie. Znaczenie ma liczba zabiegów, rozbudowanie cennika, galeria zdjęć oraz sposób integracji rezerwacji. Prosty przycisk do zewnętrznego kalendarza oznacza inny zakres niż bardziej zaawansowane połączenie. Przygotuję wycenę z opisem prac i terminem."
       },
       {
         q: "Ile potrwa przygotowanie strony mojej placówki?",
-        a: "Dla strony firmowej lub usługowej typowy termin to 4-6 tygodni. Dokładny harmonogram zależy od zakresu i gotowości materiałów."
+        a: "Typowa realizacja strony gabinetu lub kliniki trwa 4-6 tygodni. Harmonogram zależy od liczby podstron, sposobu podłączenia rezerwacji i gotowości materiałów. Dokładny termin ustalimy po briefie."
       },
       {
         q: "Jaki system rejestracji połączysz ze stroną mojego gabinetu?",
-        a: "Najpierw sprawdzam, z jakiego systemu już korzystasz i w jaki sposób pozwala połączyć się ze stroną. Dopiero wtedy ustalam najlepszy sposób przejścia z konkretnej usługi do zapisu."
+        a: "Najpierw sprawdzę, z czego już korzystasz, na przykład Booksy, Versum, ZnanyLekarz lub innego systemu. Następnie ustalę, czy można kierować pacjenta do konkretnego zabiegu, kalendarza czy tylko ogólnego profilu. Nie tworzę własnego systemu zapisów."
       },
       {
         q: "Czy formularz na stronie może zbierać dane o zdrowiu?",
-        a: "Na etapie pierwszego kontaktu ograniczam formularz do podstawowych danych i wyboru usługi. Nie projektuję zwykłego formularza kontaktowego jako miejsca na szczegółowy wywiad medyczny."
+        a: "Zwykły formularz pierwszego kontaktu ograniczam do danych potrzebnych do odpowiedzi i ewentualnego wyboru usługi. Nie dodaję pól na diagnozę, historię chorób ani szczegółowy wywiad medyczny. Informacje o przetwarzaniu danych i osobne zgody przygotowuję do zatwierdzenia przez placówkę."
       },
       {
         q: "Czy mogę pokazywać na stronie zdjęcia efektów zabiegów?",
-        a: "Mogę przygotować galerię na materiały, które masz prawo publikować. Zdjęcia opisuję rzeczowo, bez obietnicy, że każda osoba uzyska taki sam rezultat."
+        a: "Tak, jeśli masz odpowiednie zgody na publikację konkretnych fotografii. Przygotuję galerię i miejsce na rzeczowy opis zabiegu. Nie będę przedstawiał indywidualnego efektu jako rezultatu gwarantowanego każdemu pacjentowi."
       },
       {
         q: "Czy przygotujesz stronę pod lokalną widoczność w Google?",
-        a: "Tak. Przy wdrożeniu dbam między innymi o strukturę nagłówków, dane strukturalne, mapę strony i Google Search Console. Nie obiecuję konkretnych pozycji w wynikach wyszukiwania."
+        a: "Tak. Zadbam o nagłówki, adresy podstron, dane strukturalne, mapę strony i Google Search Console. Sprawdzę również spójność danych z Profilem Firmy w Google. Nie gwarantuję określonych pozycji w wynikach wyszukiwania."
       },
       {
         q: "Jaki hosting wybrać dla strony mojego gabinetu?",
-        a: "Pomagam dobrać hosting do strony i sposobu rejestracji, na przykład Hostinger albo cyber_folks. Sprawdzam też wymagania techniczne projektu, kopie zapasowe i zasoby potrzebne do sprawnego działania."
+        a: "Pomogę dobrać hosting do wielkości witryny, galerii zdjęć i wymagań technicznych. Możemy rozważyć na przykład Hostinger lub cyber_folks. Sprawdzę dostępne zasoby, kopie zapasowe, certyfikat SSL i możliwość sprawnej obsługi WordPressa."
       },
       {
         q: "Czy przeniesiesz starą stronę kliniki bez przerwy?",
-        a: "Nową wersję przygotowuję przed przełączeniem domeny i migrację planuję tak, żeby przerwa była jak najkrótsza. Przy zmianie DNS może jednak wystąpić krótka niedostępność."
+        a: "Przygotuję nową wersję przed przełączeniem domeny i zaplanuję migrację tak, żeby przerwa była jak najkrótsza. Ustawię przekierowania 301 dla zmienionych adresów. Przy aktualizacji DNS może jednak wystąpić krótka niedostępność."
       },
       {
         q: "Czy przygotujesz stronę zgodnie z wymaganiami dostępności?",
-        a: "Mogę wdrożyć uzgodnione wymagania techniczne, w tym zadbać o kontrast, obsługę klawiaturą, opisy pól i strukturę nagłówków. Jeśli Twoją placówkę obejmują szczególne obowiązki prawne, potrzebuję od Ciebie ich zatwierdzonej interpretacji."
+        a: "Mogę wdrożyć uzgodnione wymagania, takie jak odpowiedni kontrast, obsługa klawiaturą, opisy pól formularzy i logiczna struktura nagłówków. Jeśli Twoją placówkę obowiązują szczególne przepisy, zakres prawny wymaga potwierdzenia po Twojej stronie."
       },
       {
         q: "Czy potrzebuję strony, skoro mam profil w portalu rezerwacyjnym?",
-        a: "Profil może wystarczyć do przyjmowania zapisów, ale nie zastępuje własnej domeny ani pełnej prezentacji oferty. Projektuję stronę jako miejsce na opisy zabiegów, cennik, zespół i treści widoczne w Google, a portal może nadal obsługiwać rezerwacje."
+        a: "Portal może nadal obsługiwać terminy, ale własna strona daje Ci miejsce na szczegółowe opisy zabiegów, cennik, przygotowanie do wizyty i przedstawienie specjalistów. Nie musisz rezygnować z portalu. Połączę oba rozwiązania w jedną ścieżkę dla pacjenta."
       },
       {
-        q: "Czy mogę sama edytować cennik zabiegów?",
-        a: "Tak, mogę przygotować cennik oraz inne uzgodnione sekcje do samodzielnej edycji w WordPressie. Podczas szkolenia pokazuję, jak zmieniać treści bez przebudowy całej strony."
+        q: "Czy mogę samodzielnie edytować cennik zabiegów?",
+        a: "Tak. Przygotuję pola w WordPressie do zmiany cen, czasu trwania i opisów usług. Nie będziesz potrzebować znajomości kodu ani edytora wizualnego. Podczas szkolenia pokażę Ci, jak wprowadzać zmiany."
       },
       {
         q: "Czy strona połączy się z Booksy albo innym systemem rezerwacji?",
-        a: "Najpierw sprawdzam, jakiego systemu używasz i jakie sposoby integracji udostępnia. Na tej podstawie ustalam, czy możliwe będzie przejście bezpośrednio do usługi, osadzenie wybranego elementu, czy jedynie skierowanie użytkownika do profilu rezerwacyjnego."
+        a: "Sprawdzę możliwości techniczne konkretnej platformy. W zależności od systemu mogę skierować pacjenta do wybranego zabiegu, osadzić udostępniony element rezerwacji lub dodać przejście do ogólnego profilu. Nie obiecuję funkcji, których dany system nie udostępnia."
       },
       {
         q: "Jakie materiały przygotować do strony gabinetu?",
-        a: "Potrzebuję informacji o zabiegach, cennika, danych placówki, sposobu rejestracji, opisów zespołu oraz zdjęć, które możesz legalnie publikować. Dokładną listę materiałów ustalam przy rozpoczęciu współpracy, ponieważ zależy ona od zakresu strony."
+        a: "Przydadzą się lista zabiegów, aktualny cennik, czas trwania usług, informacje o przeciwwskazaniach i przygotowaniu, dane kontaktowe, godziny pracy, kwalifikacje zespołu oraz zdjęcia z prawem do publikacji. Po briefie prześlę Ci listę dopasowaną do zakresu projektu."
       },
       {
         q: "Czy warto prowadzić bloga na stronie gabinetu?",
-        a: "Warto, jeśli możesz regularnie publikować rzetelne treści odpowiadające na rzeczywiste pytania klientów lub pacjentów. Pomagam zaplanować strukturę sekcji poradnikowej, ale nie traktuję bloga jako obowiązkowego dodatku do każdej strony ani nie obiecuję dzięki niemu konkretnych pozycji w Google."
+        a: "Tak, jeśli masz tematy odpowiadające na rzeczywiste pytania pacjentów i możliwość przygotowywania rzetelnych treści. Mogę zaprojektować sekcję poradnikową z kategoriami i edycją wpisów w WordPressie. Blog nie jest jednak obowiązkowy i sam w sobie nie gwarantuje widoczności w Google."
       }
     ],
-    cta: "Prześlij brief gabinetu, a przygotuję wycenę strony z rejestracją",
+    cta: "Opisz mi swój gabinet i sposób rejestracji, a przygotuję wycenę strony z zakresem prac i terminem.",
     deliverables: [
       {
         label: "Katalog zabiegów",
-        body: "Przygotowuję podstrony usług z miejscem na wskazania, przeciwwskazania, przygotowanie, przebieg i zalecenia. Zakres ustalamy przed wdrożeniem."
+        body: "Przygotuję osobne podstrony usług z ceną, czasem trwania, wskazaniami, przeciwwskazaniami i przygotowaniem do wizyty. Wszystkie otrzymają spójny układ, aby pacjent mógł wygodnie porównywać zabiegi."
       },
       {
         label: "Zespół placówki",
-        body: "Tworzę szablon profilu specjalisty z kwalifikacjami, zakresem świadczeń, miejscem przyjęć i odnośnikiem do rejestracji."
+        body: "Zaprojektuję profile specjalistów z kwalifikacjami, zakresem wykonywanych usług, miejscem przyjęć i możliwością przejścia do rejestracji. Aktualizację danych zespołu udostępnię w panelu WordPress."
       },
       {
         label: "Rejestracja wizyt",
-        body: "Łączę stronę z wybranym sposobem rejestracji, ustawiam przyciski zapisu przy usługach i testuję ścieżkę na telefonie."
+        body: "Podłączę uzgodniony system zapisów lub prosty formularz. Umieszczę przyciski przy odpowiednich zabiegach i przetestuję przejścia na komputerze oraz telefonie, uwzględniając ograniczenia systemu rezerwacyjnego."
       },
       {
         label: "Informacje dla pacjenta",
-        body: "Przygotowuję sekcje na cennik, przygotowanie do wizyty, pliki do pobrania, dojazd i zasady odwoływania terminów."
+        body: "Przygotuję cennik, dane kontaktowe, godziny, dojazd, zasady odwoływania wizyt oraz miejsce na dokumenty do pobrania. Rozmieszczę je tak, żeby ważne odpowiedzi nie ginęły w menu."
       },
       {
         label: "Kontrola wydajności",
-        body: "Optymalizuję stronę pod Core Web Vitals i przed oddaniem sprawdzam wynik Lighthouse na telefonie. Celem jest wynik 90+ oraz LCP poniżej 2,5 s."
+        body: "Zoptymalizuję zdjęcia i kod, a przed publikacją sprawdzę witrynę w mobilnym Lighthouse. Celem jest wynik 90+ i LCP poniżej 2,5 s. Skontroluję też formularze, przyciski zapisów i wyświetlanie podstron."
       }
     ],
     headings: {
@@ -500,34 +500,34 @@ export const industries: Industry[] = [
     process: [
       {
         step: "01",
-        title: "Brief",
-        body: "Spisujemy zabiegi, cennik, godziny i to, kto przyjmuje w gabinecie."
+        title: "Brief i uporządkowanie oferty",
+        body: "Zaczynam od rozmowy o Twoim gabinecie. Ustalamy listę zabiegów, cennik, informacje o specjalistach, godziny przyjęć i materiały do publikacji. Sprawdzam istniejącą stronę, jeśli ją masz, oraz ustalam, co pacjent powinien znaleźć przed kontaktem z recepcją."
       },
       {
         step: "02",
-        title: "Rejestracja",
-        body: "Wybieramy system zapisów i sprawdzam, jak realnie wpina się w stronę."
+        title: "Ustalenie sposobu rejestracji",
+        body: "Sprawdzam, jakiego systemu zapisów używasz i jakie możliwości połączenia udostępnia. Ustalamy, które zabiegi można rezerwować samodzielnie, a które wymagają kontaktu telefonicznego lub konsultacji. Na tej podstawie planuję przyciski i formularze."
       },
       {
         step: "03",
-        title: "Projekt",
-        body: "Makieta powstaje od ekranu telefonu, bo stamtąd przychodzi większość pacjentów."
+        title: "Projekt widoków w Figmie",
+        body: "Przygotowuję makiety, zaczynając od telefonu. Pokazuję układ oferty, cennika, profili specjalistów i rejestracji. Masz dwie tury poprawek, a kodowanie rozpoczynam po zaakceptowaniu projektu. Pracujesz bezpośrednio ze mną, bez pośredników."
       },
       {
         step: "04",
-        title: "Wdrożenie",
-        body: "Motyw, cennik do samodzielnej edycji, formularz z klauzulą RODO, galeria efektów z kontrolą zgód."
+        title: "Wdrożenie i testowanie",
+        body: "Koduję stronę na WordPressie z własnym motywem i przygotowuję edycję treści. Podłączam rezerwację, konfiguruję formularz, optymalizuję zdjęcia oraz wdrażam uzgodnione elementy techniczne SEO. Po etapie udostępniam Ci wersję testową do sprawdzenia przed publikacją."
       },
       {
         step: "05",
-        title: "Start",
-        body: "Publikacja, uporządkowany Profil Firmy w Google i szkolenie z dodawania zabiegów."
+        title: "Publikacja i szkolenie",
+        body: "Uruchamiam stronę, sprawdzam działanie zapisów i podstawowe informacje o placówce. Jeśli zastępujemy starą witrynę, przygotowuję przekierowania 301 i planuję migrację z możliwie krótką przerwą. Pokazuję Ci online, jak edytować zabiegi i ceny. Po starcie zapewniam 60 dni gwarancji i bezpłatnych poprawek objętych jej zakresem."
       }
     ],
     notFor: [
-      "Potrzebujesz systemu do dokumentacji medycznej. To osobne oprogramowanie, nie strona internetowa.",
-      "Chcesz publikować zdjęcia pacjentów bez zgód albo obiecywać konkretny efekt zabiegu.",
-      "Zależy Ci wyłącznie na najniższej cenie. Poniżej pewnego progu zostaje szablon, nie wdrożenie."
+      "Jeśli potrzebujesz systemu dokumentacji medycznej, kart pacjentów albo pełnego zarządzania placówką, nie zastąpię go stroną internetową ani nie będę pisał takiego oprogramowania w ramach tego zlecenia.",
+      "Jeśli chcesz publikować fotografie pacjentów bez odpowiednich zgód lub przedstawiać efekty zabiegów jako gwarantowane, nie przygotuję strony opartej na takich materiałach i obietnicach.",
+      "Jeśli zależy Ci wyłącznie na najniższej cenie i gotowym szablonie bez porządkowania oferty, rejestracji i testów, moja usługa prawdopodobnie nie będzie dla Ciebie odpowiednia."
     ]
   },
   {

@@ -1645,86 +1645,159 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ]
   },
   "tworzenie-stron-dla-gabinetow-i-klinik": {
-    heading: "Strona internetowa dla gabinetu kosmetycznego, która pomaga wybrać zabieg i umówić wizytę",
-    intro: [
-      "**W tym poradniku pokazuję, jak powinna być zaplanowana strona internetowa dla gabinetu kosmetycznego, aby ułatwiała poznanie oferty, porównanie zabiegów i przejście do rezerwacji.** Wyjaśniam też, jakie informacje warto przygotować przed rozpoczęciem projektu oraz od czego zależy zakres prac.",
-      "Dobra strona dla kliniki lub salonu nie powinna być wyłącznie wizytówką z numerem telefonu i kilkoma zdjęciami. Jej zadaniem jest przeprowadzenie osoby zainteresowanej od pytania o konkretny problem, przez wybór usługi, aż do zapisu. Projektuję tę ścieżkę tak, żeby była zrozumiała również dla kogoś, kto nie zna nazw zabiegów i dopiero porównuje dostępne możliwości.",
+    "heading": "Strona internetowa dla gabinetu kosmetycznego i kliniki: od cennika zabiegów do rejestracji online",
+    "intro": [
+      "Strona internetowa dla gabinetu powinna odpowiadać na pytania, z którymi pacjenci najczęściej dzwonią do recepcji: ile kosztuje zabieg, jak długo trwa, kto go wykonuje i gdzie można sprawdzić wolne terminy. Jeśli te informacje są rozrzucone po kilku podstronach albo dostępne wyłącznie przez telefon, nawet zainteresowana osoba może mieć problem z umówieniem wizyty. Dlatego projektuję strony, na których poznanie oferty i przejście do rejestracji tworzą jedną, zrozumiałą ścieżkę.",
+      "Przy tworzeniu stron dla gabinetów i klinik zaczynam od tego, jak placówka rzeczywiście pracuje. Gabinet kosmetologii z rozbudowanym cennikiem potrzebuje innego układu niż fizjoterapeuta przyjmujący po wcześniejszej konsultacji. Nie każda usługa nadaje się też do natychmiastowej rezerwacji. Pokażę Ci, jak porządkuję zabiegi, podłączam istniejący system zapisów, prezentuję specjalistów i przygotowuję stronę do samodzielnej edycji. Dzięki temu przed zleceniem projektu możesz ustalić, jakie informacje i funkcje będą potrzebne w Twojej placówce."
     ],
-    sections: [
+    "sections": [
       {
-        id: "rezerwacja-online-powinna-zaczynac-sie-przy-konkretnym-zabie",
-        heading: "Rezerwacja online powinna zaczynać się przy konkretnym zabiegu",
-        body: [
-          "Strona gabinetu z rezerwacją online działa najlepiej wtedy, gdy zapis jest naturalnym kolejnym krokiem po przeczytaniu opisu usługi. Zamiast ograniczać dostęp do kalendarza do jednego przycisku w menu, umieszczam odpowiednie odnośniki także przy zabiegach. Osoba zainteresowana nie musi wówczas wracać na stronę główną ani ponownie szukać właściwej kategorii w systemie rezerwacyjnym.",
-          "Jeżeli korzystasz już z Booksy, Versum, Moment albo innego rozwiązania, najpierw sprawdzam dostępne sposoby jego połączenia ze stroną. Zakres integracji zależy od możliwości konkretnego systemu. Czasami można skierować użytkownika bezpośrednio do wybranej usługi, a czasami dostępny jest tylko ogólny profil lub zewnętrzny kalendarz. Nie zakładam z góry, że każda platforma pozwoli osadzić terminarz albo automatycznie wymieniać dane.",
-          "Nie każdy gabinet potrzebuje rozbudowanej rezerwacji. Telefon może wystarczyć, gdy termin wymaga wcześniejszej kwalifikacji, zakres zabiegu ustala się indywidualnie albo recepcja musi najpierw zebrać podstawowe informacje. W takim przypadku projektuję czytelny przycisk połączenia i jasno opisuję, w jakich godzinach można się zapisać. Najważniejsze, aby sposób rejestracji odpowiadał rzeczywistemu procesowi obsługi, a nie zmuszał zespołu do korzystania z rozwiązania, które komplikuje pracę.",
-        ],
+        "id": "rejestracja-online-powinna-zaczynac-sie-przy-konkretnym-zabi",
+        "heading": "Rejestracja online powinna zaczynać się przy konkretnym zabiegu",
+        "body": [
+          "Wyobraź sobie, że pacjent czyta opis kriolipolizy. Sprawdził wskazania, cenę i czas trwania. Chce zobaczyć dostępne terminy, ale na stronie znajduje tylko ogólny przycisk „Kontakt”. Musi zadzwonić albo samodzielnie szukać zabiegu w zewnętrznym kalendarzu.",
+          "Dlatego przycisk „Umów wizytę” umieszczam przy konkretnej usłudze, a nie wyłącznie w menu. Po kliknięciu pacjent powinien trafić możliwie blisko właściwego terminu. Jeśli system rezerwacyjny na to pozwala, kieruję go bezpośrednio do wybranego zabiegu. Jeżeli udostępnia tylko ogólny profil placówki, projektuję przejście uwzględniające to ograniczenie.",
+          "Nie piszę własnego systemu rezerwacji. Sprawdzam, czy mogę połączyć stronę z rozwiązaniem, którego już używasz, na przykład Booksy, Versum albo ZnanyLekarz. Zakres integracji zależy od możliwości konkretnego narzędzia. Nie każdy system pozwala otworzyć określoną usługę, osadzić kalendarz czy automatycznie przekazywać informacje.",
+          "Czasami lepszy będzie prosty formularz kontaktowy. Dotyczy to między innymi usług wymagających wcześniejszej konsultacji lub indywidualnego ustalenia zakresu wizyty. Taki formularz ograniczam do danych potrzebnych do kontaktu, bez zbierania informacji o zdrowiu. Osobno przygotowuję zgody i informacje o przetwarzaniu danych do zatwierdzenia przez placówkę.",
+          "Przy wdrożeniu testuję całą ścieżkę, od opisu zabiegu do otwarcia właściwego sposobu rejestracji, również na telefonie."
+        ]
       },
       {
-        id: "cennik-i-opisy-pomagaja-swiadomie-wybrac-usluge",
-        heading: "Cennik i opisy pomagają świadomie wybrać usługę",
-        body: [
-          "Strona internetowa dla gabinetu kosmetycznego powinna porządkować ofertę według potrzeb odbiorcy, a nie wyłącznie według specjalistycznych nazw urządzeń lub technologii. Osoba odwiedzająca witrynę może wiedzieć, jaki problem chce rozwiązać, ale nie musi rozumieć różnic pomiędzy podobnymi procedurami. Dlatego tworzę logiczne kategorie i dbam o to, aby z cennika można było łatwo przejść do pełnego opisu zabiegu.",
-          "Przy każdej usłudze warto odpowiedzieć na najczęstsze pytania przed wizytą:",
+        "id": "cennik-zabiegow-i-opisy-uslug-powinny-odpowiadac-na-pytania",
+        "heading": "Cennik zabiegów i opisy usług powinny odpowiadać na pytania przed wizytą",
+        "body": [
+          "Pacjent nie zawsze zna profesjonalną nazwę zabiegu. Może szukać sposobu rozwiązania konkretnego problemu albo porównywać kilka dostępnych procedur. Jeśli strona gabinetu kosmetycznego pokazuje tylko listę nazw i cen, trudno mu ocenić różnice.",
+          "Zaczynam więc od uporządkowania oferty w czytelne kategorie. Każda prowadzi do odpowiednich usług, a z cennika można przejść do pełnego opisu. Przy większej liczbie zabiegów przygotowuję powtarzalny układ podstron, żeby pacjent za każdym razem znajdował informacje w tych samych miejscach.",
+          "Na podstronie konkretnego zabiegu przewiduję miejsce na:"
         ],
-        list: [
-          "dla kogo przeznaczony jest zabieg i jakie ma wskazania,",
-          "jakie są przeciwwskazania i kiedy potrzebna jest konsultacja,",
-          "jak przygotować się do wizyty,",
-          "jak przebiega zabieg i czego można spodziewać się po jego wykonaniu,",
-          "jaka jest cena lub od czego zależy jej ostateczna wysokość.",
+        "list": [
+          "Cenę zabiegu lub informację, od czego zależy ostateczny koszt, oraz czas trwania wizyty.",
+          "Wskazania i przeciwwskazania, w tym sytuacje wymagające wcześniejszej konsultacji.",
+          "Przygotowanie do wizyty, przebieg zabiegu i istotne zalecenia.",
+          "Informację o specjaliście wykonującym usługę i sposób umówienia terminu."
         ],
-        outro: [
-          "Opis efektów powinien być konkretny, lecz ostrożny. Nie przedstawiam indywidualnego rezultatu jako gwarancji dla każdej osoby. Treść ma pomagać zrozumieć usługę, porównać dostępne możliwości i przygotować się do rozmowy ze specjalistą. Przy większej liczbie zabiegów projektuję powtarzalny układ podstron, dzięki czemu użytkownik nie musi za każdym razem uczyć się nawigacji od początku.",
-        ],
+        "outro": [
+          "Nie uzupełniam tych informacji własnymi domysłami. Materiały dotyczące przebiegu zabiegów, przeciwwskazań i zaleceń powinny pochodzić od Twojego zespołu i zostać przez niego zatwierdzone. Moim zadaniem jest nadanie im czytelnej struktury.",
+          "W WordPressie przygotowuję osobne pola na cenę, czas trwania, opis i pozostałe ustalone informacje. Jeśli zmienisz cennik albo dodasz usługę, nie będziesz musiał przebudowywać całej podstrony.",
+          "Tak zaprojektowana strona dla kliniki pozwala pacjentowi porównać zabiegi bez przeskakiwania między plikami PDF, wiadomościami i kalendarzem. Przy wdrożeniu łączę cennik z opisami oraz rejestracją, żeby każda z tych części prowadziła do kolejnego potrzebnego kroku."
+        ]
       },
       {
-        id: "zdjecia-przed-i-po-wymagaja-zgody-oraz-rzeczowego-kontekstu",
-        heading: "Zdjęcia przed i po wymagają zgody oraz rzeczowego kontekstu",
-        body: [
-          "Galeria rezultatów może ułatwić ocenę charakteru zabiegu, ale sama fotografia nie wyjaśnia stanu wyjściowego, przebiegu procedury ani indywidualnych uwarunkowań. Dlatego zdjęcia przed i po powinny być publikowane wyłącznie po uzyskaniu odpowiedniej zgody pacjenta lub klienta. Warto również uporządkować dokumenty tak, aby było wiadomo, którego materiału dotyczy zgoda i w jakim zakresie pozwala na jego wykorzystanie.",
-          "Przy każdej realizacji można dodać krótki, rzeczowy opis. Powinien on wskazywać rodzaj wykonanego zabiegu i istotny kontekst, ale nie może sugerować, że identyczny efekt jest pewny u kolejnej osoby. Szczególną ostrożność zachowuję przy treściach dotyczących zabiegów medycznych, ponieważ sposób ich prezentowania może podlegać dodatkowym ograniczeniom dotyczącym reklamy.",
-          "Jako wykonawca przygotowuję miejsce na galerię, sposób prezentacji zdjęć oraz czytelny układ opisów. **Ostateczne materiały i treści zatwierdza właściciel placówki**, który zna zakres świadczonych usług i odpowiada za możliwość publikacji fotografii. Przykładem uporządkowania rozbudowanej oferty zabiegowej jest realizacja [Queen Scarlet](/projekty/queen-scarlet).",
-        ],
+        "id": "profile-specjalistow-pomagaja-pacjentowi-wybrac-wlasciwa-oso",
+        "heading": "Profile specjalistów pomagają pacjentowi wybrać właściwą osobę",
+        "body": [
+          "W gabinecie fizjoterapii, stomatologii czy klinice kosmetologii sama nazwa zabiegu nie zawsze wystarczy do podjęcia decyzji. Pacjent może chcieć wiedzieć, kto przeprowadza konsultację, jakie ma kwalifikacje i czy zajmuje się daną usługą.",
+          "Dlatego przygotowuję profile specjalistów zawierające ich kwalifikacje, zakres wykonywanych świadczeń, miejsce przyjęć i zdjęcie, jeśli placówka chce je publikować. Z profilu można przejść do powiązanych usług oraz rejestracji, o ile wykorzystywany system umożliwia odpowiedni wybór specjalisty.",
+          "Nie ograniczam tej sekcji do przypadkowej galerii portretów. Ważniejsze od samego zdjęcia jest wyjaśnienie, czym dana osoba zajmuje się w placówce. Przy rozbudowanym zespole porządkuję również specjalizacje, aby pacjent nie musiał czytać każdego profilu w poszukiwaniu właściwej osoby.",
+          "Takie rozwiązanie uwzględniłem w stronie kliniki kosmetologii Queen Scarlet, przygotowanej w 2024 roku na WordPressie. Projekt obejmował układ oferty zabiegowej, między innymi kriolipolizy i laserowej stymulacji kolagenu, profili specjalistów oraz zapisów.",
+          "Nie przypisuję tej realizacji wyników, których nie mierzyłem. Pokazuje ona natomiast, jak można uporządkować różne rodzaje informacji w jednej witrynie. Przy podobnym zleceniu projektuję wspólną strukturę opisów zabiegów i zespołu, dopasowaną do faktycznej oferty Twojego gabinetu."
+        ]
       },
       {
-        id: "profil-firmy-w-google-i-strona-powinny-przekazywac-spojne-in",
-        heading: "Profil Firmy w Google i strona powinny przekazywać spójne informacje",
-        body: [
-          "Widoczność lokalna nie zależy od jednego elementu. Strona dla salonu kosmetycznego oraz Profil Firmy w Google powinny podawać spójną nazwę, adres, numer telefonu, godziny działania i adres witryny. Rozbieżne informacje mogą utrudniać użytkownikowi ustalenie, czy trafił na właściwą placówkę oraz czy dane są nadal aktualne.",
-          "Na stronie warto jasno wskazać obszar działalności, na przykład gabinet i miasto, oraz przygotować osobne opisy najważniejszych usług. Nie polega to na wielokrotnym powtarzaniu nazwy miejscowości. Znacznie ważniejsze jest dostarczenie informacji, które pomagają podjąć decyzję: lokalizacji, możliwości dojazdu, zakresu zabiegów, kwalifikacji zespołu, cen i sposobu rezerwacji.",
-          "Opinie w Profilu Firmy mogą potwierdzać doświadczenia klientów, ale nie zastępują pełnej prezentacji oferty. Podczas wdrożenia dbam o strukturę nagłówków, dane strukturalne, mapę strony i podłączenie Google Search Console. Nie obiecuję określonej pozycji w wynikach wyszukiwania, ponieważ zależy ona również od konkurencji, jakości treści, historii domeny i dalszego rozwijania serwisu.",
-        ],
+        "id": "zdjecia-przed-i-po-wymagaja-zgody-oraz-rzeczowego-opisu",
+        "heading": "Zdjęcia przed i po wymagają zgody oraz rzeczowego opisu",
+        "body": [
+          "Galeria efektów może pomóc pacjentowi zrozumieć charakter zabiegu. Nie powinna jednak sugerować, że rezultat pokazany na fotografii wystąpi u każdej osoby.",
+          "Zdjęcia przed i po umieszczam wyłącznie w zakresie materiałów, do których publikacji placówka ma odpowiednie zgody. Przygotowuję miejsce na opis wykonanej procedury i istotny kontekst, bez obiecywania określonego rezultatu. Właściciel gabinetu zatwierdza materiały oraz potwierdza możliwość ich wykorzystania.",
+          "Ma to znaczenie szczególnie w przypadku usług medycznych, których reklama podlega ograniczeniom. Strona powinna rzetelnie informować o świadczeniach, zamiast opierać przekaz na gwarancjach efektu czy przesadnych obietnicach.",
+          "Galeria to również kwestia techniczna. Fotografie wykonane aparatem lub telefonem mogą mieć duże rozmiary, a ich niepotrzebne ładowanie spowalnia witrynę. Przygotowuję więc obrazy w formatach WebP lub AVIF, dopasowuję ich rozdzielczość i sposób wyświetlania.",
+          "Przy wdrożeniu układam zdjęcia w czytelną galerię, dbam o ich wydajność i pozostawiam możliwość późniejszej aktualizacji materiałów w WordPressie."
+        ]
       },
       {
-        id: "profil-w-portalu-rezerwacyjnym-nie-zastepuje-wlasnej-strony",
-        heading: "Profil w portalu rezerwacyjnym nie zastępuje własnej strony",
-        body: [
-          "Portal rezerwacyjny jest użytecznym kanałem pozyskiwania zapisów, ale prezentuje Twój gabinet według zasad i układu ustalonego przez operatora platformy. Masz ograniczony wpływ na kolejność informacji, wygląd profilu i sposób przedstawienia rozbudowanej oferty. Użytkownik pozostaje też w otoczeniu innych firm, które może od razu porównywać.",
-          "Własna strona internetowa dla gabinetu kosmetycznego daje miejsce na treści, których często nie da się wygodnie rozwinąć w profilu rezerwacyjnym. Należą do nich szczegółowe wskazania i przeciwwskazania, przygotowanie do wizyty, profile specjalistów, odpowiedzi na pytania, galerie oraz informacje o standardzie obsługi. Treści są publikowane we własnej domenie i mogą być odnajdywane w Google jako część serwisu gabinetu.",
-          "Nie trzeba przy tym wybierać pomiędzy własną stroną a portalem. Witryna może wyjaśniać ofertę i budować rozpoznawalność marki, a wybrany system nadal obsługiwać dostępne terminy. W projektach opartych na [tworzeniu stron WordPress](/uslugi/tworzenie-stron-wordpress) przygotowuję również możliwość samodzielnej edycji ustalonych sekcji bez korzystania z kreatorów takich jak Elementor, Divi czy Avada.",
-        ],
+        "id": "profil-firmy-w-google-i-strona-gabinetu-powinny-zawierac-spo",
+        "heading": "Profil Firmy w Google i strona gabinetu powinny zawierać spójne dane",
+        "body": [
+          "Pacjent może trafić na Twój gabinet przez Google, mapę albo bezpośrednio przez stronę. W każdym z tych miejsc powinien zobaczyć zgodne informacje.",
+          "Nazwa placówki, adres, numer telefonu i godziny otwarcia wymagają szczególnej uwagi. Jeśli Profil Firmy w Google podaje inne godziny niż strona, pacjent może nie wiedzieć, które są aktualne. Podobny problem powstaje przy zmianie lokalizacji albo numeru rejestracji.",
+          "Na stronie umieszczam czytelne dane kontaktowe, informacje o dojeździe i mapę. Przygotowuję również dane strukturalne placówki, czyli informacje zapisane w formacie ułatwiającym wyszukiwarce rozpoznanie rodzaju działalności, adresu i innych podstawowych danych.",
+          "Podczas wdrożenia zajmuję się także strukturą nagłówków, mapą strony dla wyszukiwarek i konfiguracją Google Search Console. Dla ważnych zabiegów przewiduję oddzielne podstrony z rzeczowymi opisami, zamiast powtarzać nazwę miasta w każdym akapicie.",
+          "Nie obiecuję konkretnych pozycji w Google. Mogę natomiast zadbać o techniczne podstawy strony i spójne przedstawienie informacji o Twojej placówce.",
+          "Jeżeli chcesz mierzyć zainteresowanie zapisami, konfiguruję także Google Analytics 4, czyli GA4. Uruchamiam je dopiero po wymaganej zgodzie na cookies i ustawiam pomiar kliknięć w przyciski rezerwacji. Dzięki temu można sprawdzić, z których podstron użytkownicy przechodzą do zapisów. Samo kliknięcie nie potwierdza jednak, że wizyta została zarezerwowana."
+        ]
       },
       {
-        id: "koszt-strony-zalezy-od-oferty-i-sposobu-obslugi-zapisow",
-        heading: "Koszt strony zależy od oferty i sposobu obsługi zapisów",
-        body: [
-          "Wycenę przygotowuję po krótkiej rozmowie i briefie, ponieważ dwie placówki o podobnej wielkości mogą potrzebować zupełnie innych rozwiązań. Największe znaczenie ma sposób rezerwacji. Przycisk prowadzący do zewnętrznego profilu jest innym zakresem niż bardziej rozbudowane połączenie z systemem, o ile jego możliwości techniczne pozwalają na taką integrację.",
-          "Na zakres projektu wpływają również:",
+        "id": "portal-rezerwacyjny-i-wlasna-strona-pelnia-rozne-funkcje",
+        "heading": "Portal rezerwacyjny i własna strona pełnią różne funkcje",
+        "body": [
+          "Jeśli masz już profil w Booksy albo innym portalu, możesz zastanawiać się, czy potrzebujesz dodatkowo własnej witryny. Te rozwiązania nie muszą ze sobą konkurować.",
+          "Portal udostępnia mechanizm rezerwacji według zasad swojej platformy. Własna strona daje więcej miejsca na przedstawienie oferty, wyjaśnienie przebiegu zabiegów, cennik i informacje o zespole."
         ],
-        list: [
-          "liczba zabiegów oraz sposób ich podziału na kategorie,",
-          "rozbudowanie cennika i liczba pól do samodzielnej edycji,",
-          "galeria zdjęć przed i po,",
-          "sekcja poradnikowa lub blog,",
-          "dodatkowe wersje językowe,",
-          "ilość materiałów wymagających uporządkowania przed wdrożeniem.",
-        ],
-        outro: [
-          "Znaczenie ma też stan obecnej witryny. Jeśli strona już działa, sprawdzam, które treści warto zachować i czy potrzebne będą przekierowania starych adresów. Osobnym zakresem może być [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress), gdy problemem jest wydajność istniejącego serwisu, a nie potrzeba budowy wszystkiego od początku. Po ustaleniu wymagań przedstawiam wycenę wraz z zakresem i terminem, dzięki czemu możesz porównać nie tylko końcową cenę, ale też to, jakie elementy obejmuje realizacja.",
-        ],
+        "table": {
+          "caption": "Portal rezerwacyjny i własna strona pełnią różne funkcje",
+          "head": [
+            "Obszar",
+            "Portal rezerwacyjny",
+            "Własna strona gabinetu"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Zapisy",
+              "Udostępnia kalendarz i obsługuje rezerwacje według swoich funkcji.",
+              "Kieruje pacjenta do właściwej usługi w portalu lub do formularza."
+            ],
+            [
+              "Cennik",
+              "Prezentuje ceny w układzie narzuconym przez platformę.",
+              "Pozwala tworzyć własne kategorie i rozbudowane opisy zabiegów."
+            ],
+            [
+              "Specjaliści",
+              "Pokazuje informacje w ramach dostępnych pól profilu.",
+              "Daje miejsce na kwalifikacje, zdjęcia i szczegółowy zakres usług."
+            ],
+            [
+              "Wygląd",
+              "Zależy od szablonu operatora.",
+              "Możesz dopasować układ do identyfikacji swojej placówki."
+            ],
+            [
+              "Treści poradnikowe",
+              "Możliwości publikacji zależą od portalu.",
+              "Możesz rozwijać własne podstrony zabiegów i poradniki."
+            ],
+            [
+              "Domena",
+              "Profil działa w serwisie operatora.",
+              "Treści publikujesz pod własnym adresem internetowym."
+            ]
+          ]
+        },
+        "outro": [
+          "Nie ma potrzeby przenosić całego procesu rezerwacji na stronę gabinetu. Jeśli obecny system dobrze obsługuje terminy, pozostawiam go w tej roli. Strona internetowa wyjaśnia ofertę, przedstawia specjalistów i prowadzi pacjenta do właściwego miejsca zapisu.",
+          "W nowych projektach WordPress używam własnego motywu i pól ACF, które pozwalają edytować ustalone sekcje zgodnie z projektem. Nie opieram ich na kreatorach Elementor, Divi czy Avada. Dzięki temu możesz samodzielnie aktualizować ceny, zabiegi i informacje o zespole bez przebudowy wyglądu witryny.",
+          "Przy wdrożeniu sprawdzam też działanie wszystkich przejść między własną stroną a portalem. Pacjent nie powinien trafiać z opisu konkretnego zabiegu w miejsce, w którym musi od początku szukać odpowiedniej usługi, jeśli system pozwala tego uniknąć."
+        ]
       },
-    ],
+      {
+        "id": "koszt-i-czas-przygotowania-strony-zaleza-od-zakresu-oferty-o",
+        "heading": "Koszt i czas przygotowania strony zależą od zakresu oferty oraz zapisów",
+        "body": [
+          "Nie wyceniam strony dla gabinetu wyłącznie na podstawie liczby zakładek. Dwie placówki mogą mieć podobną liczbę podstron, ale zupełnie inny zakres prac.",
+          "Największą różnicę może stanowić rejestracja. Zwykłe przekierowanie do portalu jest prostsze niż integracja wymagająca dodatkowej konfiguracji, o ile system udostępnia odpowiednie możliwości. Istotne jest również, ile informacji trzeba uporządkować przed rozpoczęciem projektowania.",
+          "Przy wycenie biorę pod uwagę przede wszystkim:"
+        ],
+        "list": [
+          "Liczbę zabiegów, kategorii i indywidualnych podstron usług.",
+          "Rozbudowanie cennika i zakres danych do samodzielnej edycji.",
+          "Liczbę profili specjalistów oraz sposób powiązania ich z usługami.",
+          "Galerię efektów, przygotowanie zdjęć i układ opisów.",
+          "Sposób podłączenia rezerwacji oraz stan obecnej strony, jeśli ją wymieniamy."
+        ],
+        "outro": [
+          "Typowy termin realizacji strony usługowej wynosi 4-6 tygodni. Zaczynam od briefu i uporządkowania materiałów, następnie przygotowuję makiety w Figmie. Przewiduję dwie tury poprawek i rozpoczynam kodowanie po zatwierdzeniu projektu.",
+          "Po wdrożeniu testuję stronę na telefonie, w tym cennik, formularz i przyciski rezerwacji. Przed oddaniem sprawdzam mobilny wynik Lighthouse, dążąc do 90+ punktów oraz LCP poniżej 2,5 sekundy. LCP oznacza czas potrzebny na wyświetlenie głównego elementu widocznej części strony.",
+          "Jeśli masz już witrynę, nie zawsze trzeba budować wszystko od początku. Sprawdzam, czy obecny układ odpowiada potrzebom placówki, czy można zachować treści i czy problemem nie jest przede wszystkim wolne działanie. W takim przypadku osobnym rozwiązaniem może być [przyspieszenie istniejącej witryny](/uslugi/przyspieszanie-stron-wordpress).",
+          "Przy wymianie strony planuję również przekierowania 301 ze starych adresów i możliwie krótką przerwę podczas migracji. Po publikacji pokazuję Ci online, jak aktualizować zabiegi, cennik oraz profile zespołu. Zapewniam 60 dni gwarancji i bezpłatnych poprawek objętych jej zakresem, a dalsza opieka jest opcjonalna.",
+          "Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem prac oraz terminem. Będziesz wiedzieć, które elementy strony wykonam, jak połączę ją z rejestracją i jakie materiały musisz dostarczyć, zanim rozpoczniemy projekt."
+        ]
+      }
+    ]
   },
   "tworzenie-sklepow-internetowych-dla-marek-odziezowych": {
     "heading": "Sklep internetowy dla marki odzieżowej: jak wybrać platformę i przygotować sprzedaż",
