@@ -1,0 +1,190 @@
+{
+ "page": {
+  "slug": "opieka-wordpress",
+  "title": "Opieka nad stroną WordPress",
+  "metaTitle": "Opieka nad stroną WordPress: abonament bez umowy na rok",
+  "metaDescription": "Opieka nad stroną WordPress: aktualizacje, kopie zapasowe, monitoring i drobne zmiany w abonamencie miesięcznym bez umowy na rok.",
+  "h1": "Opieka nad stroną WordPress dla firm bez własnego działu IT",
+  "headings": {
+   "bullets": "Co obejmuje opieka nad stroną WordPress",
+   "process": "Jak zaczynam opiekę nad stroną",
+   "faq": "Opieka nad stroną WordPress: pytania"
+  },
+  "lead": "Prowadzę stałą opiekę nad WordPressem dla firm, które chcą zlecić aktualizacje, kopie zapasowe, monitoring i drobne zmiany jednej osobie. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Opieka nad stroną WordPress oznacza, że nie musisz sam pilnować aktualizacji, kopii zapasowych ani reagować na techniczne problemy. Sprawdzam stan strony, aktualizuję WordPress i wtyczki, kontroluję dostępność oraz dbam o podstawowe zabezpieczenia.",
+   "W abonamencie mogą mieścić się również drobne prace, takie jak podmiana zdjęcia, zmiana tekstu, aktualizacja cennika czy poprawka w formularzu. Dokładny zakres ustalam przed rozpoczęciem współpracy, żeby było jasne, co wykonuję w ramach stałej opieki, a co wymaga osobnej wyceny.",
+   "Najczęściej opiekuję się stronami, które sam zbudowałem w ramach [tworzenia stron WordPress](/uslugi/tworzenie-stron-wordpress), ale mogę też przejąć serwis po innym wykonawcy. Zaczynam wtedy od sprawdzenia motywu, wtyczek, hostingu i kopii zapasowych. Jeśli problemem jest również wydajność, mogę połączyć opiekę z [przyspieszeniem strony WordPress](/uslugi/przyspieszanie-stron-wordpress). Taki abonament nie zawsze ma sens: jeśli strona jest prosta, prawie się nie zmienia i potrzebujesz pomocy raz lub dwa razy w roku, pojedyncze zlecenia mogą być rozsądniejszym rozwiązaniem."
+  ],
+  "bullets": [
+   {
+    "title": "Bezpieczne aktualizacje WordPressa",
+    "body": "Rdzeń i wtyczki aktualizuję po sprawdzeniu zmian na kopii strony. Jeśli aktualizacja powoduje błąd, mogę wrócić do działającej wersji i znaleźć przyczynę zamiast zostawiać problem na stronie firmowej."
+   },
+   {
+    "title": "Kopie zapasowe poza hostingiem",
+    "body": "Dbam o regularne kopie bazy danych i plików oraz możliwość ich odtworzenia. Kopia przechowywana niezależnie od głównego hostingu daje dodatkowe zabezpieczenie na wypadek awarii lub błędnej aktualizacji."
+   },
+   {
+    "title": "Monitoring i podstawowe zabezpieczenia",
+    "body": "Kontroluję dostępność strony oraz konfiguruję zabezpieczenia logowania i ochronę przed typowymi próbami włamania. Gdy pojawi się problem techniczny, nie musisz najpierw szukać osoby, która zna Twoją instalację."
+   },
+   {
+    "title": "Drobne zmiany w ramach abonamentu",
+    "body": "Ustalony bank godzin możesz wykorzystać na niewielkie poprawki, na przykład zmianę zdjęcia, tekstu, cennika, stopki albo formularza. Większe przebudowy i nowe funkcje wyceniam osobno przed rozpoczęciem prac."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Przegląd strony",
+    "body": "Sprawdzam WordPress, motyw, wtyczki, hosting, kopie zapasowe i podstawowe zabezpieczenia. Jeśli przejmuję stronę po innym wykonawcy, wskazuję rzeczy, które trzeba uporządkować przed uruchomieniem stałej opieki."
+   },
+   {
+    "step": "02",
+    "title": "Porządki i konfiguracja opieki",
+    "body": "Usuwam najważniejsze zaległości, konfiguruję kopie zapasowe, monitoring i zabezpieczenia oraz ustalam zakres prac wykonywanych w abonamencie."
+   },
+   {
+    "step": "03",
+    "title": "Stała obsługa strony",
+    "body": "Regularnie wykonuję uzgodnione prace i reaguję na zgłoszenia. Po zakończeniu miesiąca możesz sprawdzić, co zostało zrobione i ile czasu wykorzystały dodatkowe zmiany."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Ile kosztuje opieka nad stroną WordPress?",
+    "a": "Głównym czynnikiem kosztu jest rodzaj strony i związany z nim zakres odpowiedzialności. Prosta witryna firmowa wymaga innej obsługi niż WooCommerce, gdzie po aktualizacjach trzeba również sprawdzać działanie procesu zakupowego. Zakres i miesięczne rozliczenie ustalam po krótkiej rozmowie i sprawdzeniu strony."
+   },
+   {
+    "q": "Jak szybko reagujesz na awarię?",
+    "a": "Sposób obsługi pilnych zgłoszeń ustalam przed rozpoczęciem współpracy, zależnie od zakresu opieki. Monitoring pozwala szybciej zauważyć część problemów z dostępnością, ale nie obiecuję stałej obecności przez całą dobę. Przy zgłoszeniu od razu oceniam, czy problem wymaga pilnej naprawy."
+   },
+   {
+    "q": "Czy wiąże mnie umowa na rok?",
+    "a": "Nie. Opiekę rozliczam miesięcznie i nie wymagam umowy na cały rok. Jeśli stała obsługa przestanie być potrzebna, możesz z niej zrezygnować zgodnie z ustalonym okresem rozliczeniowym."
+   },
+   {
+    "q": "Moja strona stoi u innej firmy. Przejmiesz ją?",
+    "a": "Tak. Najpierw potrzebuję dostępu do panelu WordPress i hostingu, żebym mógł sprawdzić stan motywu, wtyczek, kopii oraz konfiguracji serwera. Jeśli przed rozpoczęciem opieki potrzebne są dodatkowe naprawy, opisuję je i ustalam zakres osobno."
+   },
+   {
+    "q": "Strona już została zhakowana. Pomożesz?",
+    "a": "Mogę najpierw zająć się usunięciem skutków włamania jako osobnym zleceniem. Sprawdzam źródło problemu, usuwam złośliwe pliki i porządkuję dostępy oraz zabezpieczenia. Dopiero po doprowadzeniu strony do prawidłowego stanu ma sens objęcie jej stałą opieką."
+   },
+   {
+    "q": "Czy opieka obejmuje też hosting?",
+    "a": "Hosting opłacasz bezpośrednio u jego dostawcy, dzięki czemu konto i usługa pozostają po Twojej stronie. Mogę pomóc dobrać środowisko i przenieść stronę, jeśli obecny serwer jest problemem. W codziennej opiece zajmuję się stroną działającą na tym hostingu, a nie odsprzedażą samej usługi serwerowej."
+   },
+   {
+    "q": "Czy niewykorzystane godziny przechodzą na kolejny miesiąc?",
+    "a": "Sposób rozliczania niewykorzystanych godzin ustalam przy rozpoczęciu współpracy. Zapisuję tę zasadę w uzgodnionym zakresie opieki, żeby było jasne, jak rozliczamy bank godzin w kolejnych miesiącach."
+   },
+   {
+    "q": "Co, jeśli strona przestanie działać w weekend?",
+    "a": "Zasady obsługi zgłoszeń poza dniami roboczymi ustalam przed rozpoczęciem opieki. Nie deklaruję stałej dostępności przez całą dobę, jeśli nie została ona wcześniej uzgodniona w zakresie współpracy."
+   },
+   {
+    "q": "Co się dzieje, gdy wykorzystam limit godzin w miesiącu?",
+    "a": "Informuję Cię o wykorzystaniu ustalonego limitu i oceniam pozostałe zadania. Dodatkowy czas lub przeniesienie prac na kolejny okres ustalam z Tobą przed ich wykonaniem."
+   },
+   {
+    "q": "Czy mogę zmienić zakres opieki w trakcie współpracy?",
+    "a": "Taką zmianę mogę omówić z Tobą w trakcie współpracy. Nowy zakres, bank godzin i zasady obsługi ustalam przed rozpoczęciem pracy na zmienionych warunkach."
+   },
+   {
+    "q": "Po co mi opieka, skoro mogę poprosić AI o zmiany na stronie?",
+    "a": "AI może przygotować instrukcję lub kod, ale nie ma automatycznie dostępu do Twojego serwera i nie odpowiada za kopię zapasową. Ja wykonuję zmianę w konkretnej instalacji, sprawdzam jej skutki i mogę przywrócić działającą wersję, jeśli pojawi się problem."
+   },
+   {
+    "q": "Jakie dostępy muszę Ci przekazać?",
+    "a": "Zwykle potrzebuję dostępu do panelu WordPressa i hostingu. Po sprawdzeniu konfiguracji informuję, czy konieczne są również dostępy do domeny, kopii zapasowych albo usług połączonych ze stroną."
+   }
+  ],
+  "cta": "Podeślij adres strony, a sprawdzę, jaki zakres opieki będzie miał sens"
+ },
+ "block": {
+  "heading": "Opieka nad stroną WordPress: zakres, koszty i zasady współpracy",
+  "intro": [
+   "**W tej części dowiesz się, od czego zależy zakres opieki nad stroną WordPress, jakie zadania możesz rozliczać w banku godzin i kiedy miesięczny abonament ma sens.** Wyjaśniam również, jak przejmuję serwis po innym wykonawcy, w jaki sposób ograniczam ryzyko związane z aktualizacjami oraz gdzie przebiega granica między stałą administracją a osobno wycenianym rozwojem strony.",
+   "Dzięki temu łatwiej porównasz oferty wykonawców i sprawdzisz, czy potrzebujesz regularnego wsparcia, czy raczej pomocy przy pojedynczych zadaniach. **Dobrze dopasowana opieka WordPress wynika z rzeczywistego sposobu korzystania ze strony**, a nie tylko z jej wyglądu lub liczby podstron."
+  ],
+  "sections": [
+   {
+    "id": "koszt-opieki-wynika-z-zakresu-odpowiedzialnosci",
+    "heading": "Koszt opieki wynika z zakresu odpowiedzialności",
+    "body": [
+     "Koszt opieki nad stroną WordPress zależy przede wszystkim od rodzaju serwisu. Prosta wizytówka firmowa zwykle wymaga mniejszego zakresu kontroli niż regularnie rozwijany blog albo sklep WooCommerce. W przypadku sklepu po zmianach technicznych trzeba uwzględnić między innymi koszyk, formularze zamówienia, płatności i wiadomości wysyłane do klientów. Większa liczba zależności oznacza szerszy zakres testów.",
+     "Znaczenie ma również liczba i rodzaj używanych wtyczek. Każda z nich może być aktualizowana w innym terminie, współpracować z motywem lub wpływać na inne elementy strony. Instalacja z kilkoma sprawdzonymi rozszerzeniami jest łatwiejsza w utrzymaniu niż serwis, w którym wiele wtyczek odpowiada za nakładające się funkcje.",
+     "Przy ustalaniu zakresu biorę pod uwagę także częstotliwość zmian, wielkość banku godzin i oczekiwany czas reakcji. Firma publikująca nowe materiały co tydzień potrzebuje innego wsparcia niż właściciel strony aktualizujący ofertę raz na kilka miesięcy. Dlatego **abonament na opiekę strony ustalam po rozmowie i sprawdzeniu instalacji**, zamiast przypisywać każdej witrynie taki sam pakiet."
+    ]
+   },
+   {
+    "id": "bank-godzin-sluzy-do-biezacych-niewielkich-zmian",
+    "heading": "Bank godzin służy do bieżących, niewielkich zmian",
+    "body": [
+     "Bank godzin pozwala przekazywać mi drobne zadania bez osobnego ustalania całego projektu przy każdym zgłoszeniu. Sprawdza się zwłaszcza wtedy, gdy strona jest aktywnym narzędziem sprzedaży, a oferta, zespół, realizacje lub informacje dla klientów zmieniają się regularnie.",
+     "W ramach dostępnego czasu mogę wykonywać między innymi:"
+    ],
+    "list": [
+     "podmianę zdjęć i grafik w istniejących sekcjach,",
+     "aktualizację cennika, danych kontaktowych lub godzin działania,",
+     "zmianę tekstów przekazanych w gotowej formie,",
+     "dodanie podstrony na podstawie istniejącego układu,",
+     "poprawkę formularza kontaktowego,",
+     "uzupełnienie nowych realizacji albo pozycji w ofercie,",
+     "zmianę linków, przycisków lub elementów stopki,",
+     "niewielkie poprawki wyglądu na telefonie albo komputerze."
+    ],
+    "outro": [
+     "**Bank godzin nie oznacza nielimitowanego rozwoju strony.** Jego wielkość dobieram do przewidywanej liczby zgłoszeń, a sposób rozliczania ustalam na początku współpracy. Dzięki temu wiesz, które zadania mieszczą się w bieżącej obsłudze, a które powinny zostać zaplanowane jako oddzielny etap."
+    ]
+   },
+   {
+    "id": "wieksze-zmiany-wyceniam-jako-osobne-prace",
+    "heading": "Większe zmiany wyceniam jako osobne prace",
+    "body": [
+     "Stała opieka nad stroną WordPress dotyczy utrzymania serwisu oraz drobnych zmian, które można bezpiecznie wykonać w istniejącej strukturze. Nie obejmuje pełnej przebudowy wyglądu, zaprojektowania nowego serwisu ani wymiany całego motywu. Takie zadania wymagają ustalenia architektury, przygotowania projektu i osobnego harmonogramu, podobnie jak [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress).",
+     "Poza abonamentem znajdują się również rozbudowane nowe funkcje, takie jak konfiguratory, nietypowe formularze, integracje z zewnętrznymi systemami czy rozbudowa procesu zakupowego. Osobno wyceniam także pisanie treści, prowadzenie kampanii reklamowych oraz działania, które wymagają stałej obsługi marketingowej.",
+     "Wyraźne rozdzielenie utrzymania od rozwoju chroni Twój bank godzin przed wykorzystaniem na projekt, którego nie da się rozsądnie realizować w postaci pojedynczych poprawek. Jeśli zgłoszenie wykracza poza ustalony zakres, najpierw je oceniam i przedstawiam osobną wycenę wraz z zakresem oraz terminem."
+    ]
+   },
+   {
+    "id": "nie-kazda-strona-potrzebuje-miesiecznego-abonamentu",
+    "heading": "Nie każda strona potrzebuje miesięcznego abonamentu",
+    "body": [
+     "Opieka WordPress nie zawsze będzie najbardziej opłacalnym rozwiązaniem. Jeśli masz prostą stronę wizytówkową, treść pozostaje bez zmian, a pomoc jest potrzebna sporadycznie, pojedyncze zlecenia mogą być wystarczające. Płacenie co miesiąc za gotowość do zmian, których w praktyce nie zlecasz, może nie mieć uzasadnienia.",
+     "Miesięczna współpraca ma więcej sensu, gdy strona regularnie się rozwija, generuje zapytania, obsługuje sprzedaż albo zawiera elementy wymagające kontroli. Liczy się również to, jak dotkliwa byłaby awaria formularza, niedostępność ważnej podstrony czy błąd po aktualizacji. **Im większą rolę serwis odgrywa w codziennym działaniu firmy, tym bardziej uzasadniona jest stała administracja WordPress.**",
+     "Przed rozpoczęciem współpracy oceniam więc nie tylko technologię, ale też sposób wykorzystywania witryny. Czasami rozsądniejszym rozwiązaniem jest uporządkowanie serwisu w ramach jednego zlecenia, a następnie zlecanie zmian wtedy, gdy rzeczywiście się pojawią."
+    ]
+   },
+   {
+    "id": "przejecie-strony-zaczynam-od-dostepow-i-przegladu-instalacji",
+    "heading": "Przejęcie strony zaczynam od dostępów i przeglądu instalacji",
+    "body": [
+     "Mogę przejąć opiekę nad stroną WordPress wykonaną przez inną osobę lub firmę. Na początku potrzebuję dostępu do panelu administracyjnego WordPressa i hostingu. Zależnie od konfiguracji przydatne mogą być również dane do domeny, narzędzia zarządzającego kopiami, panelu pocztowego lub usług połączonych ze stroną. Zakres wymaganych dostępów ustalam po sprawdzeniu, gdzie znajdują się poszczególne elementy.",
+     "Następnie przeglądam motyw, aktywne i nieaktywne wtyczki, wersję WordPressa oraz podstawową konfigurację serwera. Sprawdzam, czy dostępna jest działająca kopia zapasowa i czy można ją odtworzyć. Weryfikuję też, czy w instalacji nie ma zbędnych kont, porzuconych rozszerzeń lub zaległości, które zwiększają ryzyko problemów podczas późniejszych zmian.",
+     "Po przeglądzie przygotowuję listę rzeczy do uporządkowania. Krytyczne naprawy mogą wymagać osobnego zlecenia przed uruchomieniem regularnej administracji WordPress. Jeśli strona ma również problemy z wydajnością, opiekę można poprzedzić [przyspieszeniem strony WordPress](/uslugi/przyspieszanie-stron-wordpress). Dopiero na podstawie stanu serwisu można odpowiedzialnie ustalić zakres dalszej współpracy."
+    ]
+   },
+   {
+    "id": "aktualizacja-wymaga-kopii-i-sprawdzenia-dzialania-strony",
+    "heading": "Aktualizacja wymaga kopii i sprawdzenia działania strony",
+    "body": [
+     "Kliknięcie przycisku aktualizacji nie kończy zadania. Nowa wersja wtyczki może zmienić sposób działania formularza, wygląd sekcji albo współpracę z motywem. Problem bywa widoczny dopiero na konkretnej podstronie lub podczas wykonywania określonej czynności, dlatego aktualizacje wymagają kontroli.",
+     "Przed zmianami tworzę kopię plików i bazy danych. Gdy konfiguracja strony na to pozwala, sprawdzam aktualizację na kopii serwisu, a następnie kontroluję kluczowe elementy. Zakres testów zależy od rodzaju witryny. Na stronie firmowej może to być formularz i prezentacja oferty, natomiast w WooCommerce również koszyk oraz proces składania zamówienia.",
+     "Jeżeli aktualizacja powoduje błąd, **możliwość powrotu do działającej wersji jest ważniejsza niż samo szybkie zainstalowanie nowego wydania**. Po przywróceniu strony można ustalić, czy problem wynika z konfliktu wtyczek, motywu lub konfiguracji. Właścicielom nowych instalacji pomocny może być również poradnik [co zrobić po instalacji WordPressa](/blog/co-zrobic-po-instalacji-wordpressa), który porządkuje podstawowe działania po uruchomieniu systemu."
+    ]
+   },
+   {
+    "id": "ai-podpowiada-rozwiazania-ale-nie-przejmuje-odpowiedzialnosc",
+    "heading": "AI podpowiada rozwiązania, ale nie przejmuje odpowiedzialności za stronę",
+    "body": [
+     "Narzędzie AI może wyjaśnić, gdzie zmienić tekst, przygotować fragment kodu albo zasugerować sposób rozwiązania błędu. Nie oznacza to jednak, że samodzielnie wykona bezpieczną zmianę w Twojej konkretnej instalacji. Bez odpowiednich dostępów AI nie sprawdzi konfiguracji serwera, wersji motywu, używanych wtyczek ani zależności między nimi.",
+     "AI nie odpowiada też za przygotowanie kopii zapasowej, jej odtworzenie i ocenę skutków aktualizacji. Może podać instrukcję, ale nie zauważy automatycznie, że po zmianie formularz przestał wysyłać wiadomości, układ rozjechał się na telefonie albo proces zakupowy nie dochodzi do końca. Do tego potrzebne są dostęp do strony, testy i decyzja, czy pozostawić zmianę, poprawić ją, czy wrócić do wcześniejszej wersji.",
+     "Sam korzystam z technologii jako wsparcia tam, gdzie pomaga sprawniej analizować problem, ale **opieka nad stroną WordPress obejmuje także wykonanie, weryfikację i odpowiedzialność za techniczny przebieg prac**. Dla nietechnicznego właściciela firmy różnica polega na tym, że nie musi sam oceniać, czy wygenerowana instrukcja pasuje do jego serwisu i czy jej wdrożenie nie uszkodzi innych elementów."
+    ]
+   }
+  ]
+ }
+}

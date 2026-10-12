@@ -1,0 +1,205 @@
+{
+ "page": {
+  "slug": "tworzenie-stron-www",
+  "title": "Tworzenie stron www",
+  "metaTitle": "Tworzenie stron www: WordPress, Next.js, WooCommerce",
+  "metaDescription": "Tworzenie stron www dla firm: WordPress, Next.js lub WooCommerce dobrane do potrzeb. Ponad 30 wdrożeń, projekt w Figmie i 60 dni gwarancji.",
+  "h1": "Tworzenie stron www dla firm",
+  "headings": {
+   "bullets": "Co zawiera strona internetowa ode mnie",
+   "process": "Jak powstaje strona www",
+   "faq": "Tworzenie stron www: pytania"
+  },
+  "lead": "Tworzę strony firmowe, serwisy usługowe i sklepy dla firm, dobierając technologię do tego, co strona ma robić: [WordPress](/uslugi/tworzenie-stron-wordpress), [Next.js](/uslugi/aplikacje-nextjs) albo [WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Pracuję z Wrocławia, zdalnie z całą Polską i Niemcami.",
+  "intro": [
+   "Tworzenie stron www to moja główna usługa od 2020 roku. Mam za sobą ponad 30 wdrożeń komercyjnych dla firm z Polski i Niemiec, między innymi dla hoteli, kancelarii, sklepów, restauracji, producentów i lokalnych usług. Pracuję samodzielnie, więc od pierwszej rozmowy po wdrożenie rozmawiasz bezpośrednio ze mną.",
+   "Najpierw ustalam, jaką rolę ma pełnić strona i kto będzie ją później obsługiwał. Potem przygotowuję makiety w Figmie, zbieram uwagi w dwóch turach i dopiero po akceptacji przechodzę do kodowania. Po każdym etapie dostajesz link do wersji testowej. Przykłady gotowych serwisów znajdziesz na [pełnej liście projektów](/projekty), a osobno opisuję też [od czego zależy cena strony www](/blog/ile-kosztuje-strona-www-2026).",
+   "Technologię dobieram do potrzeb, a nie odwrotnie. WordPress sprawdza się przy stronach firmowych i serwisach z treściami, które chcesz samodzielnie edytować. Next.js wykorzystuję, gdy projekt wymaga konfiguratora, panelu użytkownika, nietypowej logiki albo rozbudowanych integracji. Przy sklepie internetowym z typowymi integracjami sprzedażowymi wdrażam WooCommerce."
+  ],
+  "bullets": [
+   {
+    "title": "Technologia dobrana do funkcji strony",
+    "body": "Nie zakładam z góry, że każdy projekt powinien powstać w tym samym systemie. Dobieram WordPress, Next.js albo WooCommerce do sposobu edycji treści, funkcji i planów rozwoju serwisu."
+   },
+   {
+    "title": "Projekt akceptujesz przed kodowaniem",
+    "body": "Najpierw przygotowuję makiety w Figmie i uwzględniam dwie tury poprawek. Dzięki temu wygląd i układ strony są ustalone, zanim zacznę je programować."
+   },
+   {
+    "title": "Techniczne podstawy wyszukiwania są częścią wdrożenia",
+    "body": "Przygotowuję strukturę nagłówków, mapę strony, dane strukturalne tam, gdzie mają zastosowanie, oraz konfigurację Search Console. Nie obiecuję konkretnych pozycji w Google."
+   },
+   {
+    "title": "Wsparcie nie kończy się w dniu publikacji",
+    "body": "Po uruchomieniu masz 60 dni gwarancji i bezpłatnych poprawek. Później możesz korzystać z opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Rozmowa, zakres i wycena",
+    "body": "Zaczynam od krótkiej rozmowy i zebrania informacji o firmie, odbiorcach oraz funkcjach strony. Na tej podstawie przygotowuję zakres, wycenę i termin realizacji."
+   },
+   {
+    "step": "02",
+    "title": "Projekt w Figmie",
+    "body": "Przygotowuję makiety strony i przechodzimy przez dwie tury poprawek. Kodowanie zaczynam dopiero po zaakceptowaniu projektu."
+   },
+   {
+    "step": "03",
+    "title": "Programowanie i wersja testowa",
+    "body": "Buduję stronę w ustalonej technologii i po kolejnych etapach udostępniam Ci wersję testową w przeglądarce. Możesz sprawdzać efekt jeszcze przed publikacją."
+   },
+   {
+    "step": "04",
+    "title": "Testy i wdrożenie",
+    "body": "Przed oddaniem sprawdzam stronę na telefonach i komputerach oraz dążę do wyniku Lighthouse 90+ na telefonie. Konfiguruję też SSL, mapę strony i Search Console, a migrację przygotowuję tak, żeby przerwa była jak najkrótsza."
+   },
+   {
+    "step": "05",
+    "title": "Szkolenie i dalsza opieka",
+    "body": "Pokazuję Ci online, jak edytować treści w użytym systemie. Po starcie obowiązuje 60 dni gwarancji, a późniejsza opieka techniczna jest opcjonalna."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Ile kosztuje moja strona www?",
+    "a": "Największy wpływ na koszt ma zakres funkcji, które strona ma obsługiwać. Prosta prezentacja firmy wymaga innego nakładu pracy niż serwis z panelem użytkownika, konfiguratorem czy integracjami. Dokładną wycenę przygotowuję po krótkiej rozmowie i ustaleniu zakresu."
+   },
+   {
+    "q": "Ile potrwa wdrożenie mojej strony?",
+    "a": "Prosta strona lub wizytówka zwykle zajmuje 2-3 tygodnie, a strona firmowa lub usługowa 4-6 tygodni. Aplikacja lub MVP w Next.js to zwykle 6-12 tygodni. Ostateczny termin ustalam po poznaniu zakresu projektu."
+   },
+   {
+    "q": "Co jeśli mam już domenę i hosting?",
+    "a": "Mogę wykorzystać istniejącą domenę i sprawdzić, czy obecny hosting pasuje do wybranej technologii. Przy migracji przygotowuję przekierowania starych adresów i staram się ograniczyć przerwę do minimum. Przy zmianie DNS może jednak wystąpić krótka niedostępność."
+   },
+   {
+    "q": "Czy będę mógł sam edytować treści?",
+    "a": "Tak, sposób edycji zależy od wybranej technologii. W nowych projektach WordPress używam własnego motywu i pól ACF, dzięki czemu edytujesz przygotowane sekcje bez kreatorów typu Elementor. Przy Next.js mogę podłączyć system zarządzania treścią, taki jak Sanity lub Strapi."
+   },
+   {
+    "q": "Czy moja strona będzie dobrze działać na telefonie?",
+    "a": "Tak, projektuję i sprawdzam strony z myślą o różnych szerokościach ekranu, w tym telefonach, tabletach i komputerach. Przed oddaniem testuję kluczowe widoki i wydajność wersji mobilnej. Celem jest wynik Lighthouse 90+ na telefonie."
+   },
+   {
+    "q": "Który CMS wybrać do strony firmowej?",
+    "a": "W typowej stronie firmowej często sprawdza się WordPress, szczególnie jeśli chcesz później samodzielnie zmieniać ofertę, zdjęcia lub publikować wpisy. Jeżeli projekt wymaga nietypowej logiki, konfiguratora, panelu użytkownika albo rozbudowanych integracji, lepszym rozwiązaniem może być Next.js z osobnym systemem do zarządzania treścią."
+   },
+   {
+    "q": "Co jest potrzebne do stworzenia strony internetowej?",
+    "a": "Na początku najbardziej przydają się informacje o firmie, lista usług, materiały do treści, logo, zdjęcia oraz przykłady stron, których stylistyka Ci odpowiada. Jeśli masz już domenę lub hosting, potrzebne będą również dostępy. Brakujące elementy i sposób ich przygotowania ustalamy na starcie projektu."
+   },
+   {
+    "q": "Czy robisz strony dla małych firm z ograniczonym budżetem?",
+    "a": "Tak, zakres strony można dopasować do rzeczywistych potrzeb małej firmy, zamiast od razu budować rozbudowany serwis. Czasami sensowniejsza jest prostsza strona z kilkoma dobrze opracowanymi podstronami, którą później można rozwijać."
+   },
+   {
+    "q": "Czy strona będzie bezpieczna?",
+    "a": "Przy wdrożeniu uwzględniam między innymi SSL i techniczną konfigurację strony, a dalsze wymagania zależą od użytej technologii i funkcji serwisu. W systemach wymagających aktualizacji ważne jest ich regularne wykonywanie oraz kopie zapasowe. Po uruchomieniu możliwa jest opcjonalna opieka techniczna."
+   },
+   {
+    "q": "Czy strona będzie przygotowana pod Google i wyszukiwarki AI?",
+    "a": "Przy budowie uwzględniam strukturę treści, nagłówki, szybkość, dostępność dla robotów wyszukiwarek oraz dane strukturalne tam, gdzie mają zastosowanie. Nie istnieje rozwiązanie gwarantujące pojawianie się strony w odpowiedziach AI, ale można stworzyć serwis, którego zawartość jest jednoznaczna i łatwa do interpretacji."
+   },
+   {
+    "q": "Czy pracujesz z firmami spoza Wrocławia?",
+    "a": "Tak. Współpracuję zdalnie z firmami z całej Polski oraz z Niemiec, a rozmowy o projekcie odbywają się online. Po kolejnych etapach udostępniam wersję testową dostępną w przeglądarce."
+   }
+  ],
+  "cta": "Opisz swoją stronę, a wrócę z pierwszą oceną w 24 godziny robocze"
+ },
+ "block": {
+  "heading": "Jakie strony www tworzę dla firm we Wrocławiu i nie tylko",
+  "intro": [
+   "**Tworzę strony www, które dobieram do sposobu działania firmy, jej oferty i tego, co strona ma faktycznie robić dla klienta.** Przy tworzeniu stron www we Wrocławiu nie zaczynam od wyboru technologii, lecz od prostszego pytania: czy potrzebujesz przede wszystkim dobrze pokazać ofertę, pozyskiwać zapytania, prowadzić kampanie, publikować treści, sprzedawać online, czy obsługiwać bardziej niestandardowy proces.",
+   "Dla właściciela małej firmy oznacza to, że nie musisz wiedzieć, czym różni się CMS od frameworka ani zastanawiać się, jakie rozwiązanie jest modne. Wyjaśniam różnice po ludzku i proponuję technologię adekwatną do celu. Od 2020 roku realizuję komercyjne wdrożenia dla firm z Polski i Niemiec, między innymi z branży hotelarskiej, prawniczej, gastronomicznej, e-commerce i lokalnych usług. Kod przygotowuję sam, więc w sprawach dotyczących projektu rozmawiasz bezpośrednio ze mną."
+  ],
+  "sections": [
+   {
+    "id": "jaka-strona-wybrac",
+    "heading": "Jaką stronę wybrać do swojej firmy",
+    "body": [
+     "Nie każda firma potrzebuje rozbudowanego serwisu. Czasami kilka dobrze przygotowanych podstron wystarcza, żeby jasno przedstawić ofertę i ułatwić klientowi podjęcie decyzji. Innym razem strona musi obsługiwać kampanie reklamowe, regularne publikacje albo sprzedaż. Dlatego zakres dopasowuję do konkretnego modelu biznesowego.",
+     "Najczęściej powstają u mnie:"
+    ],
+    "list": [
+     "**wizytówka internetowa**, dla jednoosobowej działalności lub małej firmy, która potrzebuje podstawowej obecności w sieci i prostego przedstawienia usług;",
+     "**strona firmowa z ofertą**, dla firmy mającej kilka usług, grup klientów lub obszarów działalności, które trzeba czytelnie uporządkować;",
+     "**landing page pod kampanię**, dla firmy kierującej ruch z Google Ads, Meta Ads, newslettera lub konkretnej akcji promocyjnej;",
+     "**strona z blogiem lub bazą wiedzy**, dla firmy, która chce regularnie publikować treści, odpowiadać na pytania klientów i rozwijać widoczność w wyszukiwarkach;",
+     "**sklep internetowy**, dla firmy sprzedającej produkty online i potrzebującej katalogu, koszyka, płatności oraz zarządzania zamówieniami."
+    ],
+    "outro": [
+     "W praktyce jedna strona może łączyć kilka z tych funkcji. Serwis usługowy może mieć blog, a strona producenta dodatkowy katalog produktów bez sprzedaży online. Jeśli sprzedaż jest kluczową częścią projektu, mogę przygotować [sklep na WooCommerce](/uslugi/sklepy-internetowe-woocommerce)."
+    ]
+   },
+   {
+    "id": "wordpress-czy-nextjs",
+    "heading": "WordPress czy Next.js zależy przede wszystkim od sposobu korzystania ze strony",
+    "body": [
+     "Technologię dobieram do tego, **kto będzie edytował treści i jak dużo własnej logiki potrzebuje strona**. Jeśli właściciel lub pracownicy firmy chcą samodzielnie zmieniać teksty, zdjęcia, ofertę czy wpisy, dobrym rozwiązaniem zwykle jest [strona na WordPressie](/uslugi/tworzenie-stron-wordpress). W nowych projektach przygotowuję własny motyw zamiast budować stronę w Elementorze. Dzięki temu edytowane sekcje odpowiadają projektowi, zamiast zamieniać panel w zestaw przypadkowych klocków.",
+     "Next.js wybieram wtedy, kiedy projekt wychodzi poza klasyczną stronę informacyjną. Może chodzić o konfigurator, panel klienta, nietypowe formularze, własne procesy lub integracje z API. W takim przypadku przygotowuję [stronę w Next.js](/uslugi/aplikacje-nextjs), a jeśli potrzebna jest wygodna edycja treści, można połączyć ją z systemem takim jak Sanity lub Strapi.",
+     "Kreator typu Wix również może być sensownym wyborem. Jeżeli potrzebujesz bardzo prostej strony, akceptujesz działanie w ramach jednego ekosystemu i nie przewidujesz większego rozwoju, nie zawsze istnieje powód, żeby budować rozwiązanie indywidualne. Problem pojawia się wtedy, gdy firma zaczyna potrzebować większej swobody, nietypowych funkcji albo chce uniezależnić rozwój strony od ograniczeń konkretnej platformy. Patrz więc nie tylko na łatwość uruchomienia strony, ale też na własność rozwiązania, możliwości rozbudowy oraz koszty utrzymania w dłuższej perspektywie."
+    ]
+   },
+   {
+    "id": "koszt-strony-www",
+    "heading": "Od czego zależy koszt strony www",
+    "body": [
+     "Koszt stworzenia strony www zależy przede wszystkim od zakresu prac. Dwie strony o podobnej liczbie podstron mogą wymagać zupełnie innego nakładu pracy, jeśli jedna bazuje na kilku powtarzalnych układach, a druga ma wiele indywidualnych widoków, funkcji i integracji.",
+     "Znaczenie ma liczba podstron oraz liczba różnych szablonów. Osobnym zadaniem jest zaprojektowanie strony głównej, podstrony usługi, wpisu blogowego czy widoku konkretnego typu oferty. Na wycenę wpływa również to, czy projekt interfejsu powstaje indywidualnie, czy bazuje na gotowym szablonie. Podobnie jest z treściami i zdjęciami. Jeżeli materiały są gotowe, można od razu uwzględnić je w strukturze. Jeśli dopiero mają powstać, sposób ich przygotowania ustalamy na starcie.",
+     "Kolejna grupa to funkcje dodatkowe. Formularz kontaktowy jest znacznie prostszym elementem niż system rezerwacji, płatności, połączenie z zewnętrznym systemem czy bardziej rozbudowana automatyzacja. Zakres zwiększają także wersje językowe i blog, szczególnie gdy wymagają dodatkowych szablonów lub odmiennej organizacji treści.",
+     "Po uruchomieniu strony pozostają również koszty stałe. Najczęściej są to domena i hosting, a opcjonalnie także bieżąca opieka techniczna. Ich rodzaj zależy od technologii oraz wielkości projektu, dlatego uwzględniam je już przy wyborze rozwiązania, zamiast patrzeć wyłącznie na koszt samego wykonania strony."
+    ]
+   },
+   {
+    "id": "co-przygotowac",
+    "heading": "Co warto przygotować przed rozpoczęciem projektu",
+    "body": [
+     "Nie musisz przychodzić z kompletną dokumentacją ani gotową makietą strony. Im więcej podstawowych materiałów uda się jednak zebrać przed startem, tym łatwiej ustalić strukturę serwisu i uniknąć sytuacji, w której na późnym etapie okazuje się, że brakuje ważnej usługi albo całej grupy treści.",
+     "Najbardziej przydatne są:"
+    ],
+    "list": [
+     "logo i podstawowe materiały związane z identyfikacją firmy;",
+     "zdjęcia, jeśli firma ma własne fotografie produktów, realizacji, zespołu lub miejsca;",
+     "gotowe teksty albo materiały, na podstawie których teksty będą przygotowywane;",
+     "lista usług, produktów lub głównych obszarów oferty;",
+     "dostęp do domeny i hostingu, jeśli są już wykupione;",
+     "przykłady stron, które Ci się podobają, najlepiej z krótką informacją, co konkretnie zwróciło Twoją uwagę."
+    ],
+    "outro": [
+     "Nie trzeba też czekać z projektem do momentu, kiedy każdy materiał będzie idealny. Ważniejsze jest ustalenie, co już istnieje, czego brakuje i co musi znaleźć się na stronie przed publikacją. Dzięki temu projekt można oprzeć na rzeczywistych potrzebach firmy zamiast wypełniać strukturę przypadkową treścią."
+    ]
+   },
+   {
+    "id": "google-i-wyszukiwarki-ai",
+    "heading": "Strona powinna być przygotowana pod Google i wyszukiwarki AI",
+    "body": [
+     "Tworzenie stron internetowych we Wrocławiu coraz rzadziej sprowadza się do samego zdobycia pozycji na kilka fraz. Strona powinna mieć strukturę, którą potrafią poprawnie interpretować zarówno tradycyjne wyszukiwarki, jak i systemy korzystające z treści internetowych do generowania odpowiedzi.",
+     "Podstawą jest logiczna hierarchia nagłówków i jasne przypisanie tematu do konkretnej podstrony. Strona główna nie powinna próbować odpowiadać szczegółowo na każde możliwe pytanie. Osobne usługi, lokalizacje czy istotne zagadnienia warto rozdzielić tam, gdzie ma to sens dla użytkownika. Pomaga to również wyszukiwarce zrozumieć relacje między poszczególnymi częściami serwisu.",
+     "Znaczenie ma szybkość działania, poprawny kod oraz dane strukturalne, jeśli odpowiadają rodzajowi zawartości strony. W przypadku firmy działającej lokalnie dochodzi lokalne SEO, czyli między innymi spójne informacje o działalności, odpowiednio przygotowane podstrony usług i logiczne powiązanie treści z lokalizacją. Po publikacji istotnym narzędziem jest Google Search Console, dzięki któremu można sprawdzać indeksowanie i wykrywać problemy techniczne związane z obecnością strony w Google.",
+     "Przygotowanie pod wyszukiwarki AI nie polega na dodaniu specjalnego przycisku ani magicznego pliku, który gwarantuje cytowanie firmy. Najważniejsze pozostają jednoznaczne informacje, dobrze zorganizowana treść, techniczna dostępność strony i takie opisanie usług, aby zarówno człowiek, jak i system analizujący stronę mógł zrozumieć, czym firma się zajmuje, dla kogo pracuje i czego dotyczą poszczególne podstrony."
+    ]
+   },
+   {
+    "id": "bezpieczenstwo-rodo-dostepnosc",
+    "heading": "Bezpieczeństwo, RODO i dostępność trzeba uwzględnić przed publikacją",
+    "body": [
+     "Bezpieczeństwo strony zaczyna się od poprawnej konfiguracji SSL i sposobu jej utrzymania. W rozwiązaniach, które wymagają aktualizacji systemu, wtyczek lub zależności, ważne jest ich regularne wykonywanie. Potrzebne są też kopie zapasowe dopasowane do charakteru serwisu, szczególnie gdy na stronie regularnie zmieniają się treści albo pojawiają się dane użytkowników.",
+     "Osobnym tematem jest RODO i analityka. Jeżeli strona wykorzystuje narzędzia zapisujące pliki cookies wymagające zgody, mechanizm zgody powinien działać przed uruchomieniem takiej analityki. Potrzebna jest również polityka prywatności odpowiadająca temu, jakie dane strona faktycznie zbiera i za pomocą jakich narzędzi. Zakres wymaganych dokumentów i konfiguracji zależy więc od funkcji konkretnej strony.",
+     "Coraz większe znaczenie ma także dostępność cyfrowa. Czytelna struktura, odpowiedni kontrast, obsługa klawiaturą, teksty alternatywne i poprawna semantyka pomagają korzystać ze strony osobom z różnymi niepełnosprawnościami, a przy okazji zwykle poprawiają ogólną jakość interfejsu. Wykonuję również [audyt dostępności](/audyt-wcag) według WCAG 2.1 AA, jeśli firma potrzebuje osobnego sprawdzenia istniejącego serwisu."
+    ]
+   },
+   {
+    "id": "wspolpraca-zdalna",
+    "heading": "Współpracuję zdalnie z firmami z Wrocławia, całej Polski i Niemiec",
+    "body": [
+     "Jako freelancer web developer działam we Wrocławiu, a współpracę przy projektach prowadzę zdalnie. Spotkanie startowe odbywa się online, dlatego lokalizacja firmy nie ogranicza projektu. Pracuję z firmami z Wrocławia, innych części Polski oraz z Niemiec.",
+     "Taki model jest wygodny również dla osoby, która zamawia pierwszą stronę internetową dla firmy i nie chce śledzić technicznych szczegółów wdrożenia. Komunikacja dotyczy przede wszystkim decyzji potrzebnych do stworzenia strony: treści, układu, funkcji, materiałów i sposobu prezentowania oferty. Nie trzeba instalować środowiska programistycznego ani samodzielnie sprawdzać kodu.",
+     "Po kolejnych etapach udostępniam link do wersji testowej. Możesz więc otworzyć stronę w zwykłej przeglądarce, zobaczyć aktualny stan projektu i odnieść uwagi do konkretnego widoku. Przy stronie internetowej dla firmy jest to szczególnie pomocne, ponieważ projekt można oceniać na podstawie realnego działania, a nie wyłącznie technicznego opisu tego, co dopiero ma powstać."
+    ]
+   }
+  ]
+ }
+}

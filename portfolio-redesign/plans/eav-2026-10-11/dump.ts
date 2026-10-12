@@ -2,7 +2,7 @@ import { services } from "../../lib/services";
 import { SEO_BLOCKS } from "../../lib/seoBlocks";
 import { industries } from "../../lib/industries";
 import fs from "fs";
-for (const slug of ["sklepy-internetowe-woocommerce", "tworzenie-stron-wordpress", "tworzenie-stron-dla-kancelarii-prawnych"]) {
+for (const slug of process.argv.slice(2)) {
   const s: any = services.find((x) => x.slug === slug) ?? (industries as any[]).find((x) => x.slug === slug);
   const b = SEO_BLOCKS[slug];
   fs.writeFileSync(`plans/eav-2026-10-11/obecna-${slug}.json`, JSON.stringify({ page: s, block: b }, null, 1));

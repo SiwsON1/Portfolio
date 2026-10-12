@@ -949,79 +949,146 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ],
   },
   "integracja-woocommerce-z-baselinker": {
-    heading: "Integracja WooCommerce z BaseLinker w codziennej obsłudze sklepu",
-    intro: [
-      "**W tym bloku wyjaśniam, jak integracja WooCommerce z BaseLinker wpływa na codzienną sprzedaż, od czego zależy jej zakres i na co zwrócić uwagę przed uruchomieniem synchronizacji.** Dzięki temu łatwiej ocenisz, czy potrzebujesz prostego połączenia sklepu, czy konfiguracji obejmującej także magazyn, faktury, wysyłki oraz dodatkowe kanały sprzedaży.",
-      "BaseLinker WooCommerce nie jest jednym gotowym schematem odpowiednim dla każdej firmy. Inaczej wygląda konfiguracja sklepu z kilkudziesięcioma produktami i jednym miejscem sprzedaży, a inaczej system wykorzystujący warianty, kilka hurtowni, Allegro oraz zewnętrzny program magazynowy. Dlatego przed wdrożeniem ustalam nie tylko, co ma zostać połączone, lecz także jak Twoja firma rzeczywiście realizuje zamówienia.",
+    "heading": "Integracja WooCommerce z BaseLinker: jak połączyć sprzedaż, magazyny i hurtownie bez błędów?",
+    "intro": [
+      "Integracja WooCommerce z BaseLinker ma uporządkować obsługę sprzedaży, a nie dokładać Ci kolejny panel, w którym trzeba ręcznie poprawiać zamówienia. Jeśli sprzedajesz jednocześnie w sklepie i na Allegro, korzystasz z hurtowni albo masz osobny program magazynowy, najważniejsze jest ustalenie, które narzędzie odpowiada za konkretne dane. Bez tego nawet poprawnie nawiązane połączenie może powodować nieprawidłowe stany, nadpisywać ceny lub zmieniać statusy zamówień.",
+      "Przy wdrożeniu zaczynam od sprawdzenia obecnego sposobu sprzedaży. Ustalam, skąd pochodzą produkty, gdzie obsługujesz zamówienia, który magazyn jest nadrzędny i jakie informacje powinny wracać do WooCommerce. Dopiero później konfiguruję integrację i testuję przepływ danych. Jeśli dopiero poznajesz system, przeczytaj, [czym jest BaseLinker](/blog/baselinker-co-to-jest). Tutaj skupiam się na tym, co konkretnie robię przy podłączaniu sklepu i naprawianiu istniejących połączeń."
     ],
-    sections: [
+    "sections": [
       {
-        id: "co-baselinker-zmienia-w-codziennej-obsludze-woocommerce",
-        heading: "Co BaseLinker zmienia w codziennej obsłudze WooCommerce?",
-        body: [
-          "Najważniejszą zmianą jest możliwość przeniesienia obsługi zamówień do jednego środowiska. Zamiast osobno sprawdzać sklep, platformę marketplace i pozostałe kanały, możesz pracować na wspólnej kolejce zamówień. Ma to znaczenie szczególnie wtedy, gdy zamówienia obsługuje więcej niż jedna osoba albo gdy firma korzysta z kilku sposobów dostawy.",
-          "Połączenie sklepu z BaseLinkerem może również ograniczyć ręczne przepisywanie danych. Informacje potrzebne do realizacji zamówienia są pobierane z WooCommerce, a dalsze czynności można uporządkować w ramach jednego procesu. Nie oznacza to, że każda operacja od razu stanie się automatyczna. Zakres zależy od konfiguracji sklepu, dostępnych integracji oraz zasad obowiązujących w Twojej firmie.",
-          "Praktyczne korzyści najczęściej dotyczą następujących obszarów:",
+        "id": "jak-integracja-woocommerce-z-baselinker-zmienia-obsluge-zamo",
+        "heading": "Jak integracja WooCommerce z BaseLinker zmienia obsługę zamówień?",
+        "body": [
+          "Gdy prowadzisz sprzedaż w WooCommerce i na Allegro, zamówienia powstają w dwóch różnych miejscach. Bez połączenia musisz osobno sprawdzać oba kanały, przenosić potrzebne informacje i pilnować aktualizacji stanów magazynowych. BaseLinker pozwala zebrać zamówienia w jednym panelu, z którego prowadzisz dalszą obsługę sprzedaży.",
+          "Połączenie WooCommerce z BaseLinkerem działa przez REST API, czyli mechanizm pozwalający obu systemom wymieniać dane. W panelu sklepu tworzę klucz z odpowiednimi uprawnieniami, a następnie wykorzystuję go do autoryzacji połączenia. BaseLinker pobiera zamówienia ze sklepu i, zgodnie z konfiguracją, przekazuje do WooCommerce aktualizacje stanów, cen oraz statusów.",
+          "Istotne jest rozróżnienie pobierania zamówień od zmieniania ich statusów. Zamówienie trafia z WooCommerce do BaseLinkera, ale późniejsze zmiany statusu w BaseLinkerze wracają do sklepu. Żeby działało to prawidłowo, trzeba powiązać statusy obu systemów w ustawieniach integracji.",
+          "Przy takiej konfiguracji sprawdzam przede wszystkim:"
         ],
-        list: [
-          "obsługi zamówień z różnych kanałów w jednym miejscu,",
-          "korzystania ze wspólnych stanów magazynowych,",
-          "ograniczenia ręcznego kopiowania danych między systemami,",
-          "uporządkowania przygotowania dokumentów i przesyłek.",
+        "list": [
+          "które zamówienia mają trafiać z WooCommerce do BaseLinkera,",
+          "jakie statusy w obu systemach odpowiadają sobie nawzajem,",
+          "skąd mają pochodzić informacje o dostępności produktów,",
+          "które czynności związane z wysyłką i dokumentami mają być obsługiwane w połączonych narzędziach."
         ],
-        outro: [
-          "Jeżeli dopiero budujesz sklep, sposób późniejszej integracji warto uwzględnić już podczas planowania [sklepu WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Struktura produktów, wariantów i identyfikatorów może później ułatwić lub utrudnić uruchomienie całego procesu.",
-        ],
+        "outro": [
+          "Nie zakładam, że każdy proces trzeba automatyzować. Jeśli określony etap obsługujesz ręcznie z konkretnego powodu, uwzględniam to podczas konfiguracji. Przy integracji ustawiam przepływ zamówień zgodnie z rzeczywistym sposobem pracy Twojej firmy, zamiast dostosowywać obsługę sklepu do przypadkowych ustawień systemu."
+        ]
       },
       {
-        id: "baselinker-moze-polaczyc-sklep-takze-z-wysylkami-fakturami-i",
-        heading: "BaseLinker może połączyć sklep także z wysyłkami, fakturami i marketplace’ami",
-        body: [
-          "Integracja WooCommerce z BaseLinker nie musi kończyć się na pobieraniu zamówień. System może stać się pośrednikiem pomiędzy sklepem a narzędziami wykorzystywanymi podczas realizacji sprzedaży. Dotyczy to między innymi integracji kurierskich, generowania etykiet, obsługi dokumentów, platform marketplace oraz oprogramowania magazynowego.",
-          "Przykładem dodatkowego kanału jest Allegro. Sklep i oferty marketplace mogą korzystać z danych magazynowych zarządzanych w ustalonym miejscu, ale wcześniej trzeba prawidłowo powiązać produkty. Szczególnego znaczenia nabierają wtedy SKU, EAN oraz warianty. Realizacją łączącą WooCommerce i Allegro jest [LumiKids](/projekty/lumikids), natomiast przykładem sklepu działającego na WooCommerce pozostaje [Kosmoteka](/projekty/kosmoteka).",
-          "BaseLinker może być również połączony z systemem fakturowym, księgowym, magazynowym albo ERP, jeżeli dane narzędzie udostępnia odpowiednią integrację. **Nie zakładam z góry, że każdy używany przez Ciebie program da się podłączyć w oczekiwany sposób.** Najpierw sprawdzam dostępne możliwości, wymagane dostępy i ograniczenia, a dopiero później określam realny zakres prac.",
+        "id": "jak-podlaczam-hurtownie-zeby-do-woocommerce-nie-trafil-caly",
+        "heading": "Jak podłączam hurtownię, żeby do WooCommerce nie trafił cały katalog dostawcy?",
+        "body": [
+          "Jednym z częstszych problemów przy podłączaniu hurtowni jest wybór źródła produktów dla sklepu. Hurtownia udostępnia własny katalog, ale nie oznacza to, że chcesz sprzedawać wszystkie znajdujące się w nim towary. Dlatego nie podłączam WooCommerce bezpośrednio do pełnego magazynu dostawcy. Stosuję model z trzema warstwami:"
         ],
+        "list": [
+          "Magazyn hurtowni. Zawiera pełny katalog dostawcy. Służy jako źródło danych, które można przeglądać i wykorzystywać do aktualizacji powiązanych produktów.",
+          "Magazyn BaseLinker. Kopiuję do niego wybrane produkty i tworzę powiązania magazynowe z odpowiednimi pozycjami hurtowni. Dzięki temu stany i ceny aktualizują się na podstawie danych dostawcy.",
+          "Sklep WooCommerce. Podłączam go do Magazynu BaseLinker, a nie bezpośrednio do magazynu hurtowni. W ten sposób sklep korzysta z wybranego asortymentu zamiast całego katalogu dostawcy."
+        ],
+        "outro": [
+          "Takie rozwiązanie zastosowałem w sklepie z teleskopami, który korzysta z oferty dystrybutora Levenhuk. Katalog dostawcy pozostaje w jego magazynie, a do WooCommerce trafiają wybrane produkty przez Magazyn BaseLinker. Stany magazynowe i ceny aktualizują się na podstawie pliku hurtowni.",
+          "Ten sam schemat stosuję przy kilku hurtowniach. Każdy dostawca ma własne dane produktowe, a wybrane pozycje są powiązane z magazynem wykorzystywanym przez sklep. Trzeba przy tym sprawdzić, jak produkty są identyfikowane, żeby nie powiązać ze sobą niewłaściwych towarów.",
+          "Base.com nie jest hurtownią i nie dostarcza produktów. To pośrednik umożliwiający zarządzanie połączeniami, synchronizację danych i obsługę zamówień. Z każdym dostawcą musisz zawrzeć osobną umowę na swoją firmę, podając wymagane dane, w tym NIP. Akceptacja zazwyczaj trwa kilka dni roboczych, czasami dłużej. Hurtownia może również odmówić współpracy.",
+          "Przy zleceniu konfiguruję magazyny i powiązania produktów po uzyskaniu dostępu do danych udostępnionych przez dostawcę. Nie traktuję samego założenia konta BaseLinker jako gwarancji dostępu do oferty hurtowni."
+        ]
       },
       {
-        id: "kierunek-synchronizacji-decyduje-o-tym-ktore-dane-sa-nadrzed",
-        heading: "Kierunek synchronizacji decyduje o tym, które dane są nadrzędne",
-        body: [
-          "Samo włączenie synchronizacji stanów WooCommerce nie wystarcza. Trzeba jeszcze zdecydować, gdzie znajduje się główne źródło informacji. Stan produktu może pochodzić ze sklepu, magazynu BaseLinkera, programu magazynowego albo danych przekazywanych przez hurtownię. Podobną decyzję trzeba podjąć dla cen i informacji produktowych.",
+        "id": "ktory-system-powinien-aktualizowac-stany-ceny-i-produkty",
+        "heading": "Który system powinien aktualizować stany, ceny i produkty?",
+        "body": [
+          "Synchronizacja stanów WooCommerce wymaga ustalenia jednego nadrzędnego źródła dla określonych danych. Problem zaczyna się wtedy, gdy BaseLinker aktualizuje stany produktów, ale równocześnie robi to osobna integracja z programem magazynowym. Oba narzędzia zapisują wartości w tym samym miejscu, a kolejna aktualizacja potrafi nadpisać poprzednią.",
+          "Podobnie jest z cenami. Możesz ręcznie zmienić cenę produktu w WooCommerce, ale jeśli inny system odpowiada za aktualizację tego pola, następna synchronizacja przywróci wartość z magazynu lub hurtowni. Dlatego przed konfiguracją pytam, gdzie faktycznie zarządzasz cenami i stanami."
         ],
-        table: {"caption":"Kierunek synchronizacji decyduje o tym, które dane są nadrzędne","head":["Dane","Pytanie przed konfiguracją","Ryzyko bez ustalenia zasad"],"rows":[["Stany","Który magazyn jest nadrzędny?","Sprzedaż produktu, którego faktycznie już nie ma"],["Ceny","Gdzie świadomie zmieniasz cenę?","Nadpisanie właściwej ceny wartością z innego źródła"],["Produkty","Po czym system rozpoznaje ten sam produkt?","Powstanie duplikatów lub błędne powiązania"],["Warianty","Jak rozróżniane są rozmiary, kolory lub inne opcje?","Synchronizacja danych z niewłaściwym wariantem"]]},
-        outro: [
-          "**Źródło nadrzędne powinno być jednoznaczne dla każdego rodzaju danych.** Możliwe jest na przykład pobieranie stanów z magazynu i pozostawienie cen zarządzanych w WooCommerce. Nie należy jednak przyjmować, że wszystkie informacje muszą płynąć w tym samym kierunku.",
-          "Typowym błędem jest uruchomienie kilku źródeł aktualizujących tę samą wartość. Wówczas ręcznie ustawiona cena może zostać zmieniona podczas kolejnej synchronizacji. Problemy pojawiają się również wtedy, gdy ten sam produkt ma różne SKU w sklepie, hurtowni i na platformie marketplace. Przed uruchomieniem ustalam więc nie tylko kierunek przepływu, ale też reguły identyfikacji produktów.",
-        ],
+        "table": {
+          "caption": "Który system powinien aktualizować stany, ceny i produkty?",
+          "head": [
+            "Dane",
+            "Pytanie przed konfiguracją",
+            "Ryzyko bez ustalenia zasad"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Stany magazynowe",
+              "Który magazyn jest nadrzędny?",
+              "Sprzedaż produktu, którego nie ma już w magazynie"
+            ],
+            [
+              "Ceny",
+              "Gdzie zmieniasz ceny produktów?",
+              "Nadpisanie prawidłowej ceny wartością z innego systemu"
+            ],
+            [
+              "Produkty",
+              "Po czym system rozpoznaje ten sam produkt?",
+              "Duplikaty lub błędne powiązania"
+            ],
+            [
+              "Warianty",
+              "Jak odróżniane są rozmiary, kolory i inne opcje?",
+              "Aktualizacja danych niewłaściwego wariantu"
+            ],
+            [
+              "Statusy zamówień",
+              "Który status w BaseLinkerze odpowiada statusowi WooCommerce?",
+              "Nieprawidłowa zmiana statusu, a nawet anulowanie zamówienia"
+            ]
+          ]
+        },
+        "outro": [
+          "Dane nie muszą płynąć w jednym kierunku. Można na przykład pobierać stany magazynowe z systemu zewnętrznego, a ceny pozostawić pod kontrolą WooCommerce. Warunkiem jest takie ustawienie synchronizacji, żeby poszczególne narzędzia nie nadpisywały sobie informacji.",
+          "Sprawdzam także SKU, czyli indywidualne oznaczenia produktów w katalogu, oraz EAN, czyli kody identyfikujące towary. Przy produktach z wariantami ważne są również atrybuty, dzięki którym system odróżnia na przykład poszczególne rozmiary tego samego ubrania.",
+          "Przy integracji ustalam nadrzędne źródło każdej grupy danych, weryfikuję powiązania produktów i testuję aktualizacje, zanim uruchomię je w działającym sklepie."
+        ]
       },
       {
-        id: "koszt-zalezy-od-liczby-kanalow-i-jakosci-danych-produktowych",
-        heading: "Koszt zależy od liczby kanałów i jakości danych produktowych",
-        body: [
-          "Na pracochłonność wpływa przede wszystkim liczba elementów, które mają działać jako jeden system. Sklep połączony z jednym magazynem jest prostszym układem niż sprzedaż obejmująca WooCommerce, Allegro, kilka hurtowni, przewoźników i osobny program magazynowy. Każde kolejne połączenie wymaga sprawdzenia dostępnych danych, zasad synchronizacji oraz zachowania systemu w sytuacjach wyjątkowych.",
-          "Znaczenie ma również stan katalogu. Jeżeli produkty mają spójne SKU, poprawne EAN i uporządkowane warianty, łatwiej powiązać odpowiadające sobie pozycje. Braki oraz duplikaty wymagają wcześniejszego uporządkowania. Przy rozbudowanym asortymencie istotna jest też liczba wariantów, ponieważ każdy z nich powinien być jednoznacznie rozpoznawany.",
-          "Oddzielnym czynnikiem są hurtownie. Każdy dostawca może przekazywać dane w innym formacie i według innych zasad. Przed określeniem zakresu sprawdzam, jakie informacje są dostępne, jak często mogą być aktualizowane oraz czy pozwalają poprawnie powiązać produkty. Dopiero po takim rozpoznaniu mogę ocenić zakres integracji i ustalić termin.",
-        ],
+        "id": "dlaczego-zamowienia-same-zmieniaja-status-lub-zostaja-anulow",
+        "heading": "Dlaczego zamówienia same zmieniają status lub zostają anulowane?",
+        "body": [
+          "Nie wszystkie błędy integracji objawiają się brakiem połączenia. Czasem zamówienia prawidłowo trafiają do BaseLinkera, ale później zmieniają status w WooCommerce bez działania właściciela sklepu.",
+          "Miałem taki przypadek w sklepie z odzieżą dziecięcą, który sprzedaje również na Allegro. Klientki składały zamówienia za pobraniem, po czym otrzymywały wiadomości o ich anulowaniu. W panelu WooCommerce jako wykonawca zmiany widniał tylko „system”, więc z samej historii zamówienia nie dało się ustalić przyczyny.",
+          "Sprawdziłem logi serwera. Wynikało z nich, że od jednej do trzech minut po złożeniu zamówienia BaseLinker wysyłał przez REST API zmianę statusu na „oczekujące na płatność”. WooCommerce traktował następnie takie zamówienie jako nieopłacone i po 60 minutach je anulował.",
+          "Problem nie dotyczył pobierania zamówień, ale przepływu statusów między systemami. Rozwiązaniem była mała własna wtyczka, która blokuje cofnięcie statusu dla zamówień za pobraniem i zapisuje odpowiednią notatkę w zamówieniu. Wskazałem również powiązanie statusów wymagające poprawy po stronie BaseLinkera.",
+          "Przetestowałem oba scenariusze. Bez wtyczki błąd się powtarzał, a po jej włączeniu zamówienia za pobraniem nie były już anulowane w ten sposób. Przygotowałem także monitoring z raportem automatycznych anulowań i cofnięć statusów z 30 dni.",
+          "Przy diagnozowaniu podobnych problemów nie ograniczam się do ponownego połączenia sklepu. Sprawdzam historię zamówień, logi i ustawienia statusów, żeby ustalić, który system wykonał zmianę i dlaczego WooCommerce zareagował w określony sposób."
+        ]
       },
       {
-        id: "samodzielne-polaczenie-jest-mozliwe-ale-konfiguracja-wymaga-",
-        heading: "Samodzielne połączenie jest możliwe, ale konfiguracja wymaga decyzji",
-        body: [
-          "Podstawowe połączenie WooCommerce z BaseLinkerem możesz wykonać samodzielnie, jeśli swobodnie poruszasz się w panelach obu systemów. Utworzenie integracji jest jednak tylko początkiem. Najwięcej uwagi wymaga określenie, które dane mają być przesyłane, skąd mają pochodzić oraz co powinno wydarzyć się po zmianie stanu lub statusu zamówienia.",
-          "Trudność rośnie, gdy sklep już działa i zawiera niespójny katalog. Włączenie synchronizacji bez wcześniejszego sprawdzenia danych może ujawnić duplikaty, błędne warianty albo rozbieżności pomiędzy kanałami. **Przed uruchomieniem warto wiedzieć, jaki system jest źródłem prawdy dla stanów, cen i produktów.**",
-          "Jeżeli konfiguruję integrację, zaczynam od poznania obecnego sposobu pracy. Interesuje mnie nie tylko techniczna możliwość połączenia, ale też to, kto zmienia ceny, gdzie przyjmowany jest towar, jak obsługiwane są zwroty oraz z którego miejsca pracownik pobiera zamówienia. Dzięki temu konfiguracja odpowiada faktycznemu procesowi, zamiast wymuszać przypadkowy sposób obsługi.",
-        ],
+        "id": "czy-przebudowa-sklepu-moze-uszkodzic-dzialajaca-synchronizac",
+        "heading": "Czy przebudowa sklepu może uszkodzić działającą synchronizację z BaseLinkerem?",
+        "body": [
+          "Przebudowa WooCommerce nie zawsze oznacza konieczność zmiany integracji sprzedażowej. Można zmienić wygląd sklepu, sposób wyszukiwania produktów i strukturę katalogu, pozostawiając obsługę zamówień w BaseLinkerze.",
+          "Pracuję nad takim rozwiązaniem w sklepie z częściami samochodowymi, który ma ponad 5 tysięcy produktów i sprzedaje również na Allegro. Zamówienia są obsługiwane przez BaseLinkera, natomiast przebudowa obejmuje wygląd i sposób poruszania się po katalogu.",
+          "Dotychczasowe kategorie pochodziły z Allegro i tworzyły chaotyczną strukturę. Nowy katalog został zaplanowany według marki pojazdu, modelu i grupy części. Nie umieściłem go jednak jako zwykłych kategorii WooCommerce, ponieważ synchronizacja kategorii z BaseLinkera mogłaby nadpisać nową strukturę.",
+          "Zamiast tego nowy katalog działa jako osobna taksonomia, czyli niezależny sposób grupowania produktów w WordPressie. Dzięki temu można budować czytelną nawigację bez opierania jej na kategoriach aktualizowanych przez zewnętrzny system. Wyszukiwarka po numerze OEM, czyli oznaczeniu części nadanym przez producenta, korzysta z numerów zapisanych w atrybutach produktów.",
+          "Przy podobnych zleceniach sprawdzam, które pola i kategorie są synchronizowane przez BaseLinkera, zanim zmienię strukturę katalogu. Oddzielam nowe mechanizmy nawigacji od danych zarządzanych przez integrację, żeby aktualizacja zewnętrzna nie nadpisywała zmian wprowadzonych podczas przebudowy."
+        ]
       },
       {
-        id: "bezpieczna-integracja-zaczyna-sie-od-wlasciwych-dostepow",
-        heading: "Bezpieczna integracja zaczyna się od właściwych dostępów",
-        body: [
-          "Połączenie wykorzystujące REST API wymaga kluczy pozwalających BaseLinkerowi komunikować się z WooCommerce. Takich danych nie należy przesyłać przypadkowym osobom ani pozostawiać aktywnych bez potrzeby. **Klucz powinien mieć minimalny zakres uprawnień wystarczający do działania uzgodnionej integracji.** Ogranicza to dostęp do funkcji, które nie są potrzebne w danym wdrożeniu.",
-          "Konto BaseLinkera powinno być założone na Twoją firmę. To Ty zachowujesz kontrolę nad rozliczeniami, konfiguracją i użytkownikami. Na czas pracy potrzebuję dostępu pozwalającego ustawić integrację oraz przeprowadzić testy, ale po zakończeniu wdrożenia możesz go odebrać.",
-          "Warto również kontrolować, kto ma dostęp administracyjny do WordPressa, WooCommerce i pozostałych podłączonych narzędzi. Gdy zmienia się wykonawca albo pracownik odpowiedzialny za sprzedaż, nieużywane konta oraz klucze powinny zostać usunięte lub unieważnione. Bezpieczeństwo BaseLinker WooCommerce zależy nie tylko od samej technologii, lecz także od uporządkowanego zarządzania dostępami po uruchomieniu sprzedaży.",
-        ],
+        "id": "od-czego-zalezy-zakres-i-koszt-polaczenia-woocommerce-z-base",
+        "heading": "Od czego zależy zakres i koszt połączenia WooCommerce z BaseLinkerem?",
+        "body": [
+          "Największy wpływ na zakres prac ma liczba kanałów sprzedaży, magazynów i hurtowni oraz stan katalogu produktów. Podłączenie jednego sklepu do jednego magazynu oznacza inny zakres konfiguracji niż połączenie WooCommerce, Allegro, kilku dostawców i dodatkowego programu magazynowego.",
+          "Znaczenie ma również to, czy integracja powstaje od początku, czy trzeba naprawić już działające połączenie. Przy błędach zamówień najpierw diagnozuję przyczynę. Przy hurtowniach sprawdzam dostępność danych oraz sposób powiązania produktów. Przy katalogu z wariantami analizuję identyfikatory i atrybuty, żeby nie łączyć nieodpowiadających sobie pozycji.",
+          "Sprawdzam też narzędzia dodatkowe, takie jak systemy fakturowe, programy magazynowe, kurierzy czy mechanizmy tworzenia etykiet. BaseLinker obsługuje połączenia z różnymi systemami, ale nie przyjmuję automatycznie, że konkretny program używany w Twojej firmie będzie współpracował w oczekiwany sposób. Najpierw weryfikuję dostępne możliwości.",
+          "Termin i zakres integracji określam po krótkiej rozmowie oraz sprawdzeniu obecnej konfiguracji. Nie podaję stałego czasu wdrożenia dla wszystkich sklepów, ponieważ dodatkowe kanały, błędne dane oraz konieczność uzyskania dostępu do hurtowni zmieniają zakres potrzebnych prac."
+        ]
       },
-    ],
+      {
+        "id": "jak-dbam-o-dostep-do-sklepu-i-dzialanie-integracji-po-wdroze",
+        "heading": "Jak dbam o dostęp do sklepu i działanie integracji po wdrożeniu?",
+        "body": [
+          "Do połączenia BaseLinkera z WooCommerce potrzebny jest klucz REST API. Nadaję mu uprawnienia odpowiednie do ustalonego zakresu integracji. Nie udostępniam dostępu do funkcji, których połączone systemy nie potrzebują do wymiany danych.",
+          "Konto Base.com zakładasz na własną firmę i samodzielnie je opłacasz. Dzięki temu zachowujesz kontrolę nad ustawieniami, rozliczeniami i użytkownikami. Na czas konfiguracji potrzebuję dostępu pozwalającego połączyć systemy i przeprowadzić testy, ale po zakończeniu prac możesz mi go odebrać.",
+          "Samo uruchomienie synchronizacji nie oznacza, że sklep nigdy nie będzie wymagał dalszych zmian. Nowa hurtownia, dodatkowy kanał sprzedaży lub przebudowa katalogu wymagają sprawdzenia obecnych ustawień. Jeżeli potrzebujesz regularnego wsparcia technicznego także poza integracją, zobacz [opiekę nad sklepem WordPress](/uslugi/opieka-wordpress).",
+          "Przy zakończeniu zlecenia testuję uzgodnioną ścieżkę zamówienia, przekazuję Ci informacje o sposobie obsługi połączenia i pozostawiam konto Base.com pod Twoją kontrolą. Dzięki temu wiesz, gdzie sprawdzać zamówienia, które systemy aktualizują dane i jakie ustawienia wymagają uwagi przy kolejnych zmianach w sklepie."
+        ]
+      }
+    ]
   },
   "headless-wordpress": {
     heading: "Headless WordPress w praktyce: jak ocenić, czy ta architektura pasuje do Twojej firmy",

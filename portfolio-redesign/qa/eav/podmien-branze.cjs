@@ -7,7 +7,7 @@ const [slug, fObecna, fBranza, fBlok] = process.argv.slice(2);
 const S = fs.readFileSync(fBranza, "utf8").replace(/\r/g, "");
 const cur = JSON.parse(fs.readFileSync(fObecna, "utf8")).page;
 const field = (name) => { const m = S.match(new RegExp("^" + name + ":[ \\t]*(.*)$", "m")); if (!m) throw name; return m[1].trim(); };
-const section = (name, next) => { const m = S.match(new RegExp("^" + name + ":\\n([^]*?)\\n" + next + ":", "m")); if (!m) throw name; return m[1].trim(); };
+const section = (name, next) => { const m = S.match(new RegExp("^" + name + ":[ \\t]*\\n?([^]*?)\\n+" + next + ":", "m")); if (!m) throw name; return m[1].trim(); };
 const pipe = (block, a, b) => block.split("\n").filter((l) => l.startsWith("- ")).map((l) => { const [x, y] = l.slice(2).split(" | "); return [x.replace(a, "").trim(), y.replace(b, "").trim()]; });
 
 const next = {
