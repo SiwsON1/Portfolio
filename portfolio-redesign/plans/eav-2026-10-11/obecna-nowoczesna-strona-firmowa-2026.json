@@ -1,0 +1,214 @@
+{
+ "page": {
+  "slug": "nowoczesna-strona-firmowa-2026",
+  "title": "Strona firmowa MŚP",
+  "metaTitle": "Strona internetowa dla małej firmy | Marcin Siwonia",
+  "metaDescription": "Strona internetowa dla małej firmy: oferta, usługi, kontakt, blog i łatwa edycja. Tworzę we Wrocławiu, zdalnie dla małych firm z Polski i Niemiec.",
+  "h1": "Strona internetowa dla małej firmy z prostym zakresem",
+  "lead": "Tworzę strony firmowe dla małych firm, które chcą jasno pokazać ofertę i ułatwić klientowi kontakt. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Strona internetowa dla małej firmy nie musi być rozbudowanym projektem technologicznym. Powinna przede wszystkim szybko wyjaśniać, czym się zajmujesz, dla kogo jest Twoja oferta, dlaczego warto się z Tobą skontaktować i jak ten kontakt rozpocząć.",
+   "Typowy zakres obejmuje stronę główną, podstrony usług, sekcję o firmie, kontakt, formularz i opcjonalnie blog. Najczęściej wybieram tutaj WordPress z własnym motywem, bo pozwala później wygodnie edytować treści bez używania kreatorów stron. Jeśli potrzebujesz kalkulatora, panelu klienta albo bardziej złożonej logiki, może to już być zakres dla [aplikacji Next.js](/uslugi/aplikacje-nextjs).",
+   "Przykładem takiej realizacji jest [strona Kancelarii Marii Piontek](/projekty/kancelaria-mpiontek) wykonana w WordPressie. W tego typu projekcie najważniejsze nie są efekty wizualne dla samych efektów, tylko czytelna prezentacja usług, wiarygodny wygląd i wygodna obsługa treści po wdrożeniu."
+  ],
+  "bullets": [
+   {
+    "title": "Jasna prezentacja oferty na telefonie i komputerze",
+    "body": "Projektuję układ tak, żeby osoba odwiedzająca stronę szybko znalazła zakres usług, najważniejsze informacje o firmie i drogę do kontaktu. Strona działa responsywnie, bez zakładania z góry, z jakiego urządzenia przyjdzie większość klientów."
+   },
+   {
+    "title": "Podstawy technicznego SEO od startu",
+    "body": "Przygotowuję prawidłową strukturę nagłówków, dane strukturalne tam, gdzie mają zastosowanie, mapę strony i konfigurację Search Console. To tworzy techniczne podstawy do dalszej pracy nad widocznością, ale nie obiecuję konkretnej pozycji w Google."
+   },
+   {
+    "title": "Zakres ustalony przed rozpoczęciem prac",
+    "body": "Po rozmowie i briefie dostajesz wycenę z opisanym zakresem oraz terminem. Jeśli w trakcie pojawi się nowa funkcja lub dodatkowa podstrona poza tym zakresem, ustalam ją z Tobą osobno."
+   },
+   {
+    "title": "Samodzielna edycja treści po wdrożeniu",
+    "body": "W nowych stronach WordPress korzystam z własnego motywu i pól ACF dopasowanych do projektu. Możesz aktualizować wskazane treści bez przebudowywania strony i bez korzystania z Elementora, Divi czy Avady."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Rozmowa i ustalenie zakresu",
+    "body": "Ustalam, co sprzedajesz, kto ma korzystać ze strony, jakie podstrony są potrzebne i jakie materiały już masz. Na tej podstawie przygotowuję wycenę, zakres oraz termin."
+   },
+   {
+    "step": "02",
+    "title": "Makiety i projekt w Figmie",
+    "body": "Projektuję najważniejsze widoki strony i pokazuję, jak będą rozmieszczone oferta, treści oraz elementy kontaktowe. Masz dwie tury poprawek, a kodowanie zaczynam po zaakceptowaniu projektu."
+   },
+   {
+    "step": "03",
+    "title": "Wdrożenie na WordPressie",
+    "body": "Najczęściej buduję stronę na WordPressie z własnym motywem i edycją sekcji dopasowaną do projektu. W trakcie prac otrzymujesz link do wersji testowej i możesz śledzić kolejne etapy."
+   },
+   {
+    "step": "04",
+    "title": "Publikacja i przekazanie strony",
+    "body": "Przed startem sprawdzam działanie strony, konfiguruję mapę strony i Search Console oraz przygotowuję migrację. Przy zmianie DNS może wystąpić krótka niedostępność. Po publikacji przeprowadzam szkolenie z edycji i obejmuję stronę 60-dniową gwarancją."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Co powinna zawierać strona internetowa małej firmy?",
+    "a": "Minimum to jasna oferta, opis najważniejszych usług, informacje o firmie oraz dane kontaktowe. W zależności od branży dobrze sprawdzają się realizacje, odpowiedzi na częste pytania, blog albo formularz dopasowany do rodzaju zapytania. Zakres powinien wynikać z tego, czego klient potrzebuje przed podjęciem kontaktu."
+   },
+   {
+    "q": "Co jest w typowym zakresie strony firmowej?",
+    "a": "Najczęściej jest to strona główna, kilka podstron usługowych, kontakt i formularz, a czasem również blog. Głównym czynnikiem kosztu jest liczba i różnorodność podstron, które trzeba zaprojektować oraz wdrożyć. Dokładny zakres ustalam po briefie."
+   },
+   {
+    "q": "WordPress czy Next.js dla małej firmy?",
+    "a": "W typowej stronie usługowej najczęściej wybieram WordPress, szczególnie gdy zależy Ci na prostej edycji treści. Next.js ma więcej sensu przy niestandardowej logice, panelach, kalkulatorach lub aplikacjach. Nie wybieram technologii tylko dlatego, że jest nowsza."
+   },
+   {
+    "q": "Ile trwa wykonanie strony dla mojej firmy?",
+    "a": "Prosta wizytówka zajmuje zwykle od 2 do 3 tygodni. Typowa strona firmowa lub usługowa powstaje zwykle w ciągu 4-6 tygodni. Termin ustalam po poznaniu liczby podstron, dostępności materiałów i całego zakresu."
+   },
+   {
+    "q": "Co jeśli mam już starą stronę?",
+    "a": "Mogę przygotować nową wersję i przeprowadzić migrację. Stare adresy, które mają odpowiedniki w nowej strukturze, przekierowuję za pomocą przekierowań 301, ale sama migracja nie daje gwarancji utrzymania dotychczasowych pozycji w Google. Przy zmianie DNS może też wystąpić krótka niedostępność."
+   },
+   {
+    "q": "Czy przygotujesz dane strukturalne dla mojej firmy?",
+    "a": "Tak, dodaję dane strukturalne tam, gdzie odpowiadają rzeczywistej treści i typowi działalności. Pomagają wyszukiwarce poprawnie rozumieć informacje na stronie, ale nie gwarantują obecności ani konkretnej pozycji w lokalnych wynikach."
+   },
+   {
+    "q": "Czy moja firma musi mieć stronę internetową?",
+    "a": "Nie każda firma ma formalny obowiązek posiadania strony, ale własna witryna daje Ci kontrolę nad ofertą, domeną i sposobem kontaktu. Jest szczególnie przydatna, gdy klient chce porównać usługi i sprawdzić szczegóły przed wysłaniem zapytania."
+   },
+   {
+    "q": "Czy pomagasz w zakupie domeny i hostingu?",
+    "a": "Tak, mogę pomóc Ci wybrać oraz skonfigurować domenę i hosting odpowiednie do projektu. Usługi są zakładane na Ciebie lub Twoją firmę, dzięki czemu pozostajesz ich właścicielem."
+   },
+   {
+    "q": "Jakie są koszty utrzymania strony po wdrożeniu?",
+    "a": "Po wdrożeniu opłacasz przede wszystkim domenę, hosting i ewentualną pocztę firmową. Dokładne koszty zależą od wybranego dostawcy i parametrów usług, dlatego ustalam je przy rozpoczęciu współpracy. Po 60-dniowej gwarancji możesz też wybrać opcjonalną opiekę w miesięcznym abonamencie bez umowy na rok."
+   },
+   {
+    "q": "Kto przygotuje teksty na stronę?",
+    "a": "Możesz dostarczyć własne teksty, a ja pomogę dopasować ich układ do projektu. Jeśli potrzebujesz szerszego wsparcia w przygotowaniu lub redakcji treści, ustalam jego zakres przed rozpoczęciem współpracy."
+   },
+   {
+    "q": "Czy strona będzie widoczna w Google?",
+    "a": "Przy wdrożeniu przygotowuję strukturę nagłówków, mapę strony, odpowiednie dane strukturalne i konfiguruję Google Search Console. Są to techniczne podstawy widoczności, ale nie obiecuję konkretnej pozycji w wynikach wyszukiwania."
+   },
+   {
+    "q": "Czym różni się domena od hostingu?",
+    "a": "Domena to adres strony, na przykład nazwa Twojej firmy zakończona odpowiednim rozszerzeniem. Hosting jest miejscem, w którym przechowywane są pliki i baza danych witryny. Do działania strony potrzebujesz obu tych elementów."
+   }
+  ],
+  "cta": "Napisz, czego potrzebuje Twoja firma, a przygotuję zakres i termin strony"
+ },
+ "block": {
+  "heading": "Strona internetowa dla małej firmy: praktyczne decyzje przed zleceniem projektu",
+  "intro": [
+   "**W tej części dowiesz się, czy Twojej firmie wystarczy profil w Google, jaki rodzaj strony wybrać, co wpływa na koszt oraz jakie materiały i usługi trzeba uwzględnić przed rozpoczęciem prac.** To praktyczne kwestie, które warto uporządkować, zanim zaczniesz porównywać wykonawców i otrzymane wyceny.",
+   "Dobra strona internetowa dla małej firmy nie powinna być większa ani bardziej skomplikowana, niż wymaga tego sposób pozyskiwania klientów. Powinna natomiast należeć do Ciebie, przedstawiać pełną ofertę i umożliwiać rozwijanie treści wraz z firmą. W typowych projektach usługowych jako rozwiązanie domyślne proponuję [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress). Bardziej rozbudowaną technologię rozważam dopiero wtedy, gdy potrzebujesz nietypowych funkcji, takich jak panel klienta, konfigurator lub kalkulator."
+  ],
+  "sections": [
+   {
+    "id": "czy-profil-w-google-i-media-spolecznosciowe-wystarcza-malej-",
+    "heading": "Czy profil w Google i media społecznościowe wystarczą małej firmie?",
+    "body": [
+     "Profil Firmy w Google oraz konta w mediach społecznościowych mogą skutecznie wspierać pozyskiwanie klientów. Pozwalają publikować aktualności, zbierać opinie i pojawiać się w miejscach, w których użytkownicy szukają lokalnych usług. Nie zastępują jednak własnej strony, ponieważ działają według zasad zewnętrznej platformy i dają ograniczoną kontrolę nad sposobem prezentowania oferty.",
+     "Własna strona firmowa dla małej firmy działa pod Twoją domeną. Możesz na niej dokładnie opisać każdą usługę, pokazać realizacje, przedstawić odpowiedzi na częste pytania i skierować klienta do właściwego formularza. Nie musisz mieścić całej oferty w krótkim opisie profilu ani budować komunikacji wyłącznie wokół kolejnych postów.",
+     "Znaczenie ma również wyszukiwarka. Osobne podstrony usług mogą odpowiadać na różne pytania klientów i pojawiać się w wynikach związanych z konkretną ofertą. Profil w Google wspiera widoczność lokalną, a witryna tworzy miejsce na szczegółowe treści. **Najlepszy efekt daje traktowanie obu kanałów jako uzupełniających się elementów**, a nie wybieranie tylko jednego z nich."
+    ]
+   },
+   {
+    "id": "wybor-miedzy-wizytowka-strona-firmowa-a-sklepem-wynika-ze-sp",
+    "heading": "Wybór między wizytówką, stroną firmową a sklepem wynika ze sposobu sprzedaży",
+    "body": [
+     "Określenie „strona dla firmy” może oznaczać zarówno prostą wizytówkę, jak i rozbudowany serwis z ofertą wielu usług. Dlatego przed porównaniem wycen warto ustalić, co użytkownik ma zrobić po wejściu na stronę. Może jedynie sprawdzić dane i zadzwonić, zapoznać się z usługami przed wysłaniem zapytania albo kupić produkt bezpośrednio online."
+    ],
+    "table": {
+     "caption": "Wybór między wizytówką, stroną firmową a sklepem wynika ze sposobu sprzedaży",
+     "head": [
+      "Rodzaj strony",
+      "Dla kogo",
+      "Typowy zakres",
+      "Typowy termin"
+     ],
+     "rows": [
+      [
+       "Wizytówka",
+       "Firma z prostą ofertą i jednym głównym celem kontaktowym",
+       "Podstawowe informacje, skrócona oferta, dane kontaktowe i formularz",
+       "2-3 tygodnie"
+      ],
+      [
+       "Strona firmowa lub usługowa",
+       "Firma, która potrzebuje dokładnie wyjaśnić kilka usług",
+       "Strona główna, podstrony usług, informacje o firmie, kontakt, opcjonalnie realizacje lub blog",
+       "4-6 tygodni"
+      ],
+      [
+       "Mniejszy sklep WooCommerce",
+       "Firma sprzedająca produkty bezpośrednio przez internet",
+       "Katalog, koszyk, zamówienia, płatności i podstawowa obsługa sprzedaży",
+       "6-8 tygodni"
+      ],
+      [
+       "Średni sklep WooCommerce",
+       "Firma potrzebująca funkcji B2B, wersji językowych lub migracji",
+       "Rozbudowany katalog i proces zakupowy, dodatkowe wersje oraz przeniesienie danych",
+       "10-14 tygodni"
+      ]
+     ]
+    },
+    "outro": [
+     "Dla firmy usługowej najczęściej właściwym wyborem jest pełna strona firmowa. Wizytówka może okazać się zbyt ograniczona, jeśli klient przed kontaktem chce porównać kilka usług, poznać sposób współpracy albo sprawdzić doświadczenie wykonawcy. Sklep ma sens dopiero wtedy, gdy częścią procesu ma być zakup i obsługa zamówienia online. Jeśli nadal rozważasz kilka rozwiązań, pomocne będzie porównanie opisane w materiale [jaka technologia na stronę firmową](/blog/strona-firmowa-2026-jaka-technologia)."
+    ]
+   },
+   {
+    "id": "koszt-strony-zalezy-przede-wszystkim-od-zakresu-pracy",
+    "heading": "Koszt strony zależy przede wszystkim od zakresu pracy",
+    "body": [
+     "Koszt strony internetowej dla małej firmy nie wynika wyłącznie z liczby pozycji w menu. Dwie witryny z taką samą liczbą podstron mogą wymagać zupełnie innego nakładu pracy. Jedna korzysta z powtarzalnego układu usług, a druga potrzebuje indywidualnego formularza, wielu typów treści i przeniesienia materiałów ze starego systemu.",
+     "Na wycenę wpływa liczba oraz różnorodność podstron, a także to, kto przygotowuje teksty i zdjęcia. Znaczenie ma również blog, rozbudowanie formularzy, liczba wersji językowych oraz konieczność migracji starej witryny. Przy przenoszeniu strony trzeba dodatkowo przeanalizować dotychczasowe adresy i przygotować przekierowania 301 dla treści, które otrzymają nowe lokalizacje.",
+     "Przed rozpoczęciem prac ustalam też, czy posiadasz gotową identyfikację wizualną, czy materiały wymagają uporządkowania i czy poszczególne usługi potrzebują osobnych widoków. Dzięki temu wycena może odnosić się do konkretnego zakresu, a nie do nieprecyzyjnego hasła „strona firmowa”. Szerzej czynniki wyceny omawiam w poradniku [ile kosztuje strona www](/blog/ile-kosztuje-strona-www-2026)."
+    ]
+   },
+   {
+    "id": "domena-hosting-i-pozostale-uslugi-powinny-nalezec-do-ciebie",
+    "heading": "Domena, hosting i pozostałe usługi powinny należeć do Ciebie",
+    "body": [
+     "Sama realizacja witryny to jedna część projektu. Do jej działania potrzebne są również usługi utrzymaniowe. **Domenę, hosting i konta związane ze stroną najlepiej rejestrować na dane Twojej firmy**, aby dostęp do nich nie zależał od wykonawcy. Mogę pomóc Ci przejść przez zakup i konfigurację, ale właścicielem pozostajesz Ty.",
+     "Osobno trzeba uwzględnić następujące elementy:"
+    ],
+    "list": [
+     "**domenę**, czyli adres wpisywany przez użytkownika w przeglądarce,",
+     "**hosting**, czyli miejsce, w którym znajdują się pliki i baza danych strony,",
+     "**pocztę firmową**, jeśli chcesz korzystać z adresów we własnej domenie,",
+     "**certyfikat SSL**, który umożliwia bezpieczne połączenie przez HTTPS,",
+     "**opcjonalną opiekę techniczną**, jeśli po wdrożeniu chcesz zlecić aktualizacje i bieżące prace."
+    ],
+    "outro": [
+     "Koszty utrzymania zależą od wybranych usług i ich dostawców. Przed zakupem warto sprawdzić nie tylko warunki początkowe, lecz także zasady odnowienia, dostępne zasoby hostingu oraz sposób zarządzania pocztą. Po zakończeniu 60-dniowej gwarancji mogę zapewnić opcjonalną opiekę w miesięcznym abonamencie bez umowy na rok, ale nie jest ona obowiązkowa."
+    ]
+   },
+   {
+    "id": "teksty-i-zdjecia-nie-musza-byc-gotowe-przed-pierwsza-rozmowa",
+    "heading": "Teksty i zdjęcia nie muszą być gotowe przed pierwszą rozmową",
+    "body": [
+     "Nie musisz przychodzić z kompletem gotowych tekstów. Na początku ważniejsze jest to, abyś potrafił opowiedzieć, czym zajmuje się firma, kto korzysta z jej usług, jakie problemy rozwiązujesz i o co klienci pytają przed zakupem. Na tej podstawie można określić strukturę strony oraz listę materiałów potrzebnych do przygotowania poszczególnych podstron.",
+     "Jeśli piszesz teksty samodzielnie, mogę pomóc Ci dopasować ich układ do projektu. W praktyce warto zacząć od konkretów: zakresu usługi, odbiorcy, obszaru działania, sposobu realizacji i warunków kontaktu. Ogólne hasła nie zastąpią informacji, których klient potrzebuje, aby porównać ofertę i zdecydować o wysłaniu zapytania. Zakres pomocy przy tworzeniu lub redakcji treści ustalam przy rozpoczęciu współpracy.",
+     "Brak własnych zdjęć również nie blokuje projektu. Można zaplanować sesję firmową, skorzystać z odpowiednio dobranych materiałów stockowych albo oprzeć część projektu na typografii, kolorze i prostych elementach graficznych. Najważniejsze, aby fotografie odpowiadały rzeczywistemu charakterowi działalności i nie sugerowały usług, zespołu lub zaplecza, których firma nie posiada."
+    ]
+   },
+   {
+    "id": "widocznosc-w-google-zaczyna-sie-od-poprawnej-konstrukcji-str",
+    "heading": "Widoczność w Google zaczyna się od poprawnej konstrukcji strony",
+    "body": [
+     "Strona www dla firmy usługowej powinna od początku mieć uporządkowaną strukturę. Przy wdrożeniu przygotowuję hierarchię nagłówków, mapę strony oraz dane strukturalne tam, gdzie pasują do rzeczywistej treści i rodzaju działalności. Konfiguruję również Google Search Console, aby wyszukiwarka mogła otrzymać informacje o witrynie i jej adresach.",
+     "Jeżeli strona ma korzystać z Google Analytics 4, uruchomienie analityki wymaga wcześniejszej zgody użytkownika na odpowiednie pliki cookies. Samo wdrożenie tych elementów nie oznacza automatycznego uzyskania konkretnej pozycji. **Techniczne SEO tworzy podstawę do indeksowania, ale widoczność zależy również od treści, konkurencji, historii domeny i dalszego rozwijania serwisu.**",
+     "W przypadku działalności lokalnej warto równolegle zadbać o Profil Firmy w Google. Dane dotyczące nazwy, oferty, adresu lub obsługiwanego obszaru powinny być spójne ze stroną. Witryna może szerzej wyjaśniać usługi, natomiast profil pomaga użytkownikowi szybko znaleźć podstawowe informacje w wynikach lokalnych. Takie połączenie daje klientowi kilka dróg dotarcia do firmy bez składania obietnic dotyczących określonej pozycji."
+    ]
+   }
+  ]
+ }
+}
