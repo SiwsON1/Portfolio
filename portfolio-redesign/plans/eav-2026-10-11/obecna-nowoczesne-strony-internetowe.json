@@ -1,0 +1,210 @@
+{
+ "page": {
+  "slug": "nowoczesne-strony-internetowe",
+  "title": "Nowoczesne strony internetowe",
+  "metaTitle": "Nowoczesne strony internetowe dla firm | Marcin Siwonia",
+  "metaDescription": "Nowoczesne strony internetowe dla firm: dopracowany wygląd, animacje i szybkie działanie. Projektuję we Wrocławiu, pracuję zdalnie w Polsce i Niemczech.",
+  "h1": "Nowoczesne strony internetowe dla firm, które chcą się wyróżnić",
+  "lead": "Projektuję dopracowane wizualnie strony dla firm, którym nie wystarcza prosty szablon. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Nowoczesne strony internetowe mają sens wtedy, gdy wygląd jest częścią sprzedaży: firma chce pokazać jakość swojej oferty, zbudować zaufanie i zostać zapamiętana. Projektuję wtedy układ, typografię, animacje i mikrointerakcje jako jedną całość, zamiast dokładać efekty do gotowego szablonu.",
+   "Nie każda firma tego potrzebuje. Jeżeli najważniejsze są prosta prezentacja usług, szybka edycja treści i rozsądny zakres, lepszym wyborem może być klasyczna [strona WordPress](/uslugi/tworzenie-stron-wordpress). Bardziej rozbudowane interakcje, własna logika albo panel mogą z kolei przemawiać za [aplikacją Next.js](/uslugi/aplikacje-nextjs).",
+   "Technologię dobieram dopiero po ustaleniu, co strona ma robić. Przykładem jest [Kantorymapa](/projekty/kantorymapa): własny serwis w Next.js z 1900 kantorami w 140 miastach, codziennymi kursami NBP i tysiącami stron tworzonych z danych. Serwis ładuje się poniżej sekundy, więc rozbudowana warstwa wizualna i funkcjonalna nie musi oznaczać ciężkiej strony."
+  ],
+  "bullets": [
+   {
+    "title": "Dopracowany wygląd dopasowany do marki",
+    "body": "Projektuję stronę od początku w Figmie, bez dopasowywania firmy do gotowego szablonu. Układ, typografia, kolory i sposób prezentowania treści wynikają z charakteru marki i celu strony."
+   },
+   {
+    "title": "Animacje i mikrointerakcje z konkretnym zadaniem",
+    "body": "Ruch może prowadzić wzrok, pokazywać zależności między elementami albo podkreślać ważną część oferty. Jeżeli efekt niczego nie ułatwia albo przeszkadza w korzystaniu ze strony, nie dokładam go tylko po to, żeby strona była bardziej efektowna."
+   },
+   {
+    "title": "Szybkie działanie mimo rozbudowanej warstwy wizualnej",
+    "body": "Animacje, zdjęcia i dodatkowe efekty wdrażam z uwzględnieniem wydajności. Przed oddaniem sprawdzam stronę w Lighthouse, a celem jest wynik 90+ na telefonie i LCP poniżej 2,5 s."
+   },
+   {
+    "title": "Strona wygodna także dla osób ograniczających animacje",
+    "body": "Projektuję interakcje tak, aby podstawowa treść i obsługa strony nie zależały od efektów ruchowych. Osoba korzystająca z ustawienia ograniczającego animacje nadal może normalnie przeczytać ofertę, przejść między podstronami i wysłać formularz."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Rozpoznanie celu i kierunku wizualnego",
+    "body": "Zaczynam od rozmowy o firmie, odbiorcach i roli strony. Jeśli masz obecną witrynę, sprawdzam też jej strukturę i wydajność. Ustalamy kilka referencji, które pomagają określić oczekiwany poziom i charakter projektu."
+   },
+   {
+    "step": "02",
+    "title": "Projekt w Figmie",
+    "body": "Przygotowuję makiety i kluczowe widoki w Figmie. W cenie projektu są dwie tury poprawek, a kodowanie zaczynam dopiero po zaakceptowaniu projektu."
+   },
+   {
+    "step": "03",
+    "title": "Wdrożenie dopasowane do funkcji strony",
+    "body": "Dobieram WordPress, Next.js, Astro albo inne narzędzie z mojego stosu do sposobu edycji treści i funkcji strony. Po kolejnych etapach wysyłam link do wersji testowej, żebyś mógł sprawdzać postęp."
+   },
+   {
+    "step": "04",
+    "title": "Testy, SEO techniczne i start",
+    "body": "Przed publikacją sprawdzam stronę na telefonach i komputerach, wydajność oraz podstawy technicznego SEO. Przy wdrożeniu konfiguruję między innymi strukturę nagłówków, mapę strony i Search Console, a GA4 podłączam po uzyskaniu zgody na cookies."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Czym nowoczesna strona różni się od zwykłej strony firmowej?",
+    "a": "Przede wszystkim większą rolą projektu wizualnego i interakcji. Nadal ma jasno prezentować ofertę i prowadzić do kontaktu, ale może robić to za pomocą bardziej indywidualnego układu, animacji i mikrointerakcji. Technologia jest środkiem do osiągnięcia tego efektu, a nie celem samym w sobie."
+   },
+   {
+    "q": "Na jakiej technologii zrobisz moją stronę?",
+    "a": "Dobieram ją po poznaniu zakresu projektu. Strona oparta głównie na treściach może powstać na WordPressie z własnym motywem, a projekt z rozbudowaną logiką może wymagać Next.js. Więcej o drugim rozwiązaniu opisuję przy [aplikacjach Next.js](/uslugi/aplikacje-nextjs)."
+   },
+   {
+    "q": "Ile kosztuje nowoczesna strona internetowa?",
+    "a": "Największy wpływ na koszt ma zakres indywidualnych animacji i interakcji. Inaczej wycenia się stronę z kilkoma subtelnymi przejściami, a inaczej projekt z rozbudowanymi scenami, elementami 3D i wieloma nietypowymi widokami. Zakres i termin podaję po krótkiej rozmowie i briefie."
+   },
+   {
+    "q": "Ile trwa projekt nowoczesnej strony?",
+    "a": "Dla typowej strony firmowej przyjmuję zwykle od 4 do 6 tygodni. Jeśli projekt ma nietypową logikę albo staje się aplikacją, termin ustalam osobno zgodnie z zakresem. Makiety w Figmie akceptujesz przed rozpoczęciem kodowania."
+   },
+   {
+    "q": "Czy będę mógł sam edytować treść?",
+    "a": "Tak, jeśli samodzielna edycja jest potrzebna, dobieram do strony odpowiedni system zarządzania treścią. W WordPressie przygotowuję własny motyw i pola odpowiadające projektowi, bez Elementora, Divi czy Avady. Możesz więc zmieniać ustalone treści bez ingerowania w kod."
+   },
+   {
+    "q": "Czy animacje będą działać dobrze dla każdego użytkownika?",
+    "a": "Projektuję je tak, aby strona pozostała użyteczna również bez ruchomych efektów. Uwzględniam systemowe ustawienie ograniczania animacji i pilnuję, żeby formularze, nawigacja i treści nie były od nich zależne. Na telefonach mogę też zastąpić cięższy efekt prostszą wersją."
+   },
+   {
+    "q": "Jakie materiały muszę przygotować?",
+    "a": "Proszę przede wszystkim o logo, dostępne teksty, zdjęcia oraz przykłady stron, które Ci się podobają. Materiały nie muszą być od początku kompletne, ale ich zakres i termin przekazania ustalam przy rozpoczęciu współpracy. Pomagam też określić, czego brakuje do zaprojektowania poszczególnych podstron."
+   },
+   {
+    "q": "Co ze zdjęciami, jeśli ich nie mam?",
+    "a": "Mogę zaplanować projekt oparty na typografii, kolorze, prostych elementach graficznych albo materiałach stockowych. Wybór zależy od charakteru firmy i sposobu prezentowania oferty. Zakres wyszukania lub przygotowania materiałów ustalam przed rozpoczęciem projektu."
+   },
+   {
+    "q": "Czy animacje nie spowolnią strony?",
+    "a": "Każda animacja może zwiększyć obciążenie, dlatego dobieram jej formę do urządzeń i znaczenia danego efektu. Ograniczam niepotrzebne zasoby, a cięższe rozwiązania mogę uprościć na telefonach. Przed oddaniem sprawdzam wydajność, przyjmując jako cel wynik Lighthouse 90+ na telefonie i LCP poniżej 2,5 sekundy."
+   },
+   {
+    "q": "Czy strona będzie dostosowana do telefonów?",
+    "a": "Tak, przygotowuję układ z myślą o różnych rozmiarach ekranów. Dostosowuję nie tylko szerokość elementów, lecz także kolejność treści, nawigację, przyciski i zachowanie animacji. Dzięki temu strona pozostaje czytelna oraz wygodna w obsłudze na telefonie."
+   },
+   {
+    "q": "Czy po wdrożeniu płacę jakiś abonament?",
+    "a": "Stała opieka po wdrożeniu jest opcjonalna i może działać w miesięcznym abonamencie bez umowy na rok. Przez pierwsze 60 dni zapewniam gwarancję i bezpłatne poprawki związane z wykonanym wdrożeniem. Zakres późniejszej opieki oraz pozostałe koszty utrzymania ustalam przy rozpoczęciu współpracy."
+   },
+   {
+    "q": "Czy nowoczesna strona będzie zgodna z WCAG?",
+    "a": "Uwzględniam dostępność podczas projektowania i wdrażania, między innymi kontrast, obsługę klawiaturą, strukturę treści oraz opisy obrazów. Pełną zgodność z określonym poziomem WCAG trzeba jednak ustalić jako konkretny zakres i zweryfikować w audycie. Nie deklaruję formalnej zgodności bez takiego sprawdzenia."
+   }
+  ],
+  "cta": "Opowiedz mi, jaką stronę chcesz zbudować, a przygotuję zakres i termin"
+ },
+ "block": {
+  "heading": "Nowoczesne strony internetowe, czyli co naprawdę decyduje o jakości projektu",
+  "intro": [
+   "**W tej części dowiesz się, po czym rozpoznać nowoczesne strony internetowe, jakie elementy wpływają na ich koszt i co warto ustalić przed wyborem wykonawcy.** Wygląd jest ważny, ale sam efekt wizualny nie wystarczy, jeśli użytkownik nie może szybko zrozumieć oferty, wygodnie przeczytać treści na telefonie albo dotrzeć do potrzebnej informacji.",
+   "Dobra nowoczesna strona www łączy estetykę, szybkość, dostępność i przemyślany sposób prezentowania treści. Projektuję te obszary jako elementy jednej całości. Dzięki temu ruch, grafika oraz nietypowe układy mogą wzmacniać charakter marki, ale nie odbywa się to kosztem czytelności i użyteczności."
+  ],
+  "sections": [
+   {
+    "id": "nowoczesna-strona-pomaga-zrozumiec-firme-a-nie-tylko-robi-wr",
+    "heading": "Nowoczesna strona pomaga zrozumieć firmę, a nie tylko robi wrażenie",
+    "body": [
+     "Pierwsze wrażenie powstaje szybko, dlatego projekt wizualny powinien od razu sugerować, z jaką firmą masz do czynienia. Innego języka graficznego potrzebuje kancelaria, innego producent, restauracja czy marka kierująca ofertę do młodych rodziców. Kolory, typografia, zdjęcia i rytm poszczególnych sekcji powinny tworzyć spójny obraz, a nie być zestawem modnych rozwiązań wybranych bez związku z działalnością.",
+     "Nowoczesność oznacza również prostotę korzystania ze strony. Użytkownik powinien bez domyślania się rozpoznać, gdzie znajdzie ofertę, czym różnią się poszczególne usługi i jaki będzie kolejny krok. Na telefonie tekst musi pozostać czytelny, przyciski łatwe do wybrania, a nawigacja wygodna także wtedy, gdy strona ma nietypowy układ. Nie przenoszę więc projektu komputerowego na mniejszy ekran w skali jeden do jednego. Dobieram układ treści i interakcji do dostępnej przestrzeni.",
+     "Istotna jest też wydajność. Duże zdjęcia, filmy, fonty i animacje zwiększają ilość danych, które musi pobrać urządzenie użytkownika. Podczas projektowania nowoczesnych stron trzeba zdecydować, które materiały rzeczywiście budują wartość, a które jedynie obciążają witrynę. W projektach nastawionych na dużą szybkość i publikację wielu treści jednym z możliwych kierunków są [strony Jamstack](/uslugi/strony-jamstack), ale technologię zawsze dobieram do konkretnego zastosowania."
+    ]
+   },
+   {
+    "id": "animacje-maja-prowadzic-uwage-a-nie-przejmowac-kontrole",
+    "heading": "Animacje mają prowadzić uwagę, a nie przejmować kontrolę",
+    "body": [
+     "Ruch może wyjaśnić zależność między elementami, podkreślić zmianę stanu albo skierować wzrok na ważną informację. Delikatne pojawienie się treści może uporządkować odbiór sekcji, a reakcja przycisku potwierdzić użytkownikowi, że wykonał działanie. W takim zastosowaniu animacja staje się częścią komunikacji.",
+     "Problem zaczyna się wtedy, gdy użytkownik musi czekać na zakończenie efektu, zanim przeczyta ofertę albo przejdzie dalej. Uciążliwe bywają również elementy poruszające się bez wyraźnej przyczyny, nagłe zmiany układu oraz efekty uzależnione od precyzyjnego sterowania kursorem. To, co wygląda dobrze podczas krótkiej prezentacji, nie zawsze sprawdza się podczas zwykłego korzystania ze strony.",
+     "Uwzględniam również osoby, które w telefonie lub komputerze włączyły ograniczenie ruchu. W takiej sytuacji rozbudowaną animację można uprościć albo wyłączyć, zachowując tę samą treść i możliwość obsługi. **Najważniejsze informacje nie powinny być dostępne wyłącznie po odtworzeniu efektu lub wykonaniu skomplikowanego gestu.** Takie podejście poprawia komfort także na słabszych urządzeniach i przy wolniejszym połączeniu."
+    ]
+   },
+   {
+    "id": "dostepnosc-jest-czescia-nowoczesnego-projektowania",
+    "heading": "Dostępność jest częścią nowoczesnego projektowania",
+    "body": [
+     "Dostępna strona pozwala korzystać z treści osobom o różnych potrzebach i sposobach obsługi urządzenia. W praktyce oznacza to między innymi odpowiedni kontrast tekstu, widoczne oznaczenie aktywnego elementu, logiczną kolejność nagłówków, opisy istotnych obrazów oraz możliwość poruszania się po stronie klawiaturą. Formularz powinien jasno wskazywać, które pole zawiera błąd, zamiast komunikować problem wyłącznie kolorem.",
+     "Nie każdy obraz wymaga rozbudowanego opisu. Zdjęcie dekoracyjne może zostać pominięte przez program odczytujący stronę, natomiast wykres, schemat lub fotografia produktu powinny przekazywać sens także osobie, która ich nie widzi. Podobnie jest z ikonami. Jeżeli ikona pełni funkcję przycisku, jej znaczenie musi być możliwe do rozpoznania bez zgadywania.",
+     "Od 28 czerwca 2025 roku przepisy wdrażające *European Accessibility Act* dotyczą części produktów i usług. Mikroprzedsiębiorstwa świadczące usługi są objęte wyłączeniem, ale samo wyłączenie nie oznacza, że dostępność traci znaczenie biznesowe. Czytelna i możliwa do obsługi strona może służyć większej grupie odbiorców. Gdy zgodność ma być formalnie oceniona, potrzebny jest określony zakres oraz weryfikacja, którą może objąć osobny [audyt WCAG](/audyt-wcag)."
+    ]
+   },
+   {
+    "id": "koszt-zalezy-od-zakresu-indywidualnych-rozwiazan",
+    "heading": "Koszt zależy od zakresu indywidualnych rozwiązań",
+    "body": [
+     "Projektowanie nowoczesnych stron może obejmować zarówno dopracowaną witrynę z kilkoma spokojnymi animacjami, jak i rozbudowany serwis z grafiką 3D, nietypowymi przejściami oraz własną logiką. Te projekty mogą wyglądać podobnie na pojedynczym zrzucie ekranu, ale różnią się liczbą stanów, które trzeba zaprojektować, wdrożyć i przetestować."
+    ],
+    "table": {
+     "caption": "Koszt zależy od zakresu indywidualnych rozwiązań",
+     "head": [
+      "Element projektu",
+      "Jak wpływa na zakres pracy"
+     ],
+     "rows": [
+      [
+       "Animacje",
+       "Każdy indywidualny efekt wymaga przygotowania zachowania na różnych ekranach i sprawdzenia wydajności"
+      ],
+      [
+       "Grafika 3D",
+       "Obejmuje przygotowanie lub dostosowanie materiałów, optymalizację oraz obsługę urządzeń o różnej wydajności"
+      ],
+      [
+       "System zarządzania treścią",
+       "Wymaga określenia, które treści edytujesz i jak mają być zorganizowane"
+      ],
+      [
+       "Szablony podstron",
+       "Każdy odmienny typ podstrony potrzebuje własnego układu i zestawu elementów"
+      ],
+      [
+       "Własna logika",
+       "Kalkulatory, konfiguratory, wyszukiwarki i integracje są wyceniane według sposobu działania"
+      ]
+     ]
+    },
+    "outro": [
+     "Na koszt wpływa również liczba wersji danego widoku. Sekcja może wyglądać inaczej, gdy zawiera krótki tekst, długi opis, brak zdjęcia albo dodatkowy przycisk. Im więcej takich wariantów ma działać poprawnie, tym większy jest zakres projektowania i testowania. Po rozmowie oraz briefie określam funkcje, sposób edycji i potrzebne szablony, a następnie przygotowuję wycenę z zakresem i terminem.",
+     "Własna logika nie zawsze oznacza klasyczną aplikację. Może to być filtrowanie oferty, generowanie wielu podstron z jednej bazy albo uporządkowany proces przetwarzania danych. Przykładem serwisu rozwijanego na podstawie wspólnej bazy jest [cojestpolskie.pl](/projekty/cojestpolskie), który obejmuje ponad 900 marek i ponad 1700 podstron."
+    ]
+   },
+   {
+    "id": "dobre-materialy-ulatwiaja-zaprojektowanie-spojnej-strony",
+    "heading": "Dobre materiały ułatwiają zaprojektowanie spójnej strony",
+    "body": [
+     "Nie musisz przygotowywać kompletnej dokumentacji technicznej. Potrzebuję jednak materiałów, które pozwolą mi zrozumieć markę, ofertę i oczekiwany kierunek. Im wcześniej wiadomo, jakie treści oraz zdjęcia znajdą się na stronie, tym trafniej można zaplanować proporcje sekcji i sposób prowadzenia użytkownika.",
+     "Najbardziej przydatne są:"
+    ],
+    "list": [
+     "logo, kolory firmowe i używane materiały identyfikacji,",
+     "teksty lub robocze informacje o usługach, produktach i firmie,",
+     "zdjęcia, ilustracje, filmy oraz inne materiały wizualne,",
+     "przykłady stron, które Ci się podobają, wraz z krótkim wyjaśnieniem dlaczego,",
+     "informacje o elementach, których nie chcesz powielać na swojej stronie."
+    ],
+    "outro": [
+     "Przykłady nie służą kopiowaniu cudzego projektu. Pomagają ustalić, czy bliższy jest Ci oszczędny układ, mocna typografia, dużo przestrzeni, ciemna kolorystyka czy bardziej dynamiczna prezentacja. Równie cenna jest informacja, że podoba Ci się nawigacja na jednej stronie, sposób prezentacji zdjęć na drugiej i spokojne animacje na trzeciej.",
+     "Brak własnych zdjęć nie zatrzymuje projektu. Mogę zaplanować układ wykorzystujący typografię, kolor, proste elementy graficzne albo odpowiednio dobrane materiały stockowe. Zakres pozyskania lub przygotowania takich materiałów ustalam na początku współpracy, ponieważ inne potrzeby ma strona eksperta, a inne oferta oparta na produktach, realizacjach czy wnętrzach."
+    ]
+   },
+   {
+    "id": "wsparcie-po-wdrozeniu-pozwala-spokojnie-rozpoczac-prace-ze-s",
+    "heading": "Wsparcie po wdrożeniu pozwala spokojnie rozpocząć pracę ze stroną",
+    "body": [
+     "Publikacja nie kończy odpowiedzialności za wykonany projekt. Po uruchomieniu obejmuję stronę **60 dniami gwarancji i bezpłatnych poprawek**. Ten czas pozwala wychwycić problemy związane z wdrożeniem, które mogą ujawnić się już podczas normalnego korzystania z witryny.",
+     "Po okresie gwarancji możesz samodzielnie zarządzać ustalonym zakresem treści albo skorzystać z opcjonalnej opieki w miesięcznym abonamencie. Nie wymaga ona podpisywania umowy na rok. Dokładny zakres opieki ustalam przy rozpoczęciu współpracy, aby było jasne, jakie aktualizacje, prace techniczne i zmiany obejmuje wybrany wariant.",
+     "Rozdzielenie gwarancji od dalszego rozwoju jest istotne. Gwarancja dotyczy poprawnego działania wykonanego wdrożenia, natomiast dodanie nowej podstrony, funkcji, integracji czy kolejnego rodzaju treści stanowi rozwój serwisu. Dzięki temu możesz zdecydować, czy po starcie potrzebujesz stałego wsparcia, czy wystarczy Ci samodzielna obsługa przygotowanych elementów."
+    ]
+   }
+  ]
+ }
+}
