@@ -1,0 +1,7 @@
+Użyj skilla Mistrz Blogowania.
+
+ZADANIE: przepisz stronę usługi „TYTUL” (marcinsiwonia.pl/uslugi/SLUG) i jej blok poradnikowy. Obecna treść jest w załączonym pliku obecna-SLUG.json (page = strona, block = blok). Pisz po ludzku, pierwsza osoba (ja, Marcin), do czytelnika na „Ty”.
+METATITLE i H1 przepisz BEZ ZMIAN z pliku (fraza główna zostaje).
+
+## Anty-kanibalizacja (ważne)
+Na stronie są osobne usługi: tworzenie stron Next.js (główna strona Next.js: strona lub aplikacja firmowa od zera), headless WordPress, aplikacje React (panele za logowaniem), strony Jamstack (statyczne strony z CMS), outsourcing Next.js (dla startupów i zespołów), nowoczesne strony internetowe (design, animacje, dostępność), strona internetowa dla małej firmy (prosty zakres, WordPress), tworzenie stron www (ogólna). Ta strona trzyma się TYLKO swojego tematu; inne odeślij jednym zdaniem.
