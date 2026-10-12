@@ -515,10 +515,10 @@ export const services: Service[] = [
   {
     slug: "przyspieszanie-stron-wordpress",
     title: "Przyspieszanie stron WordPress",
-    metaTitle: "Przyspieszenie strony WordPress — Core Web Vitals na zielono",
+    metaTitle: "Przyspieszenie strony WordPress: Core Web Vitals na zielono",
     metaDescription:
       "Przyspieszenie strony WordPress i sklepu WooCommerce. Znajduję przyczyny spowolnień, poprawiam kod, obrazy i cache. Sprawdź, jak pracuję i co mierzę.",
-    h1: "Przyspieszanie stron WordPress. Liczby przed i po, nie obietnice.",
+    h1: "Przyspieszenie strony WordPress dla firm i sklepów",
     headings: { bullets: "Co robię przy przyspieszaniu WordPressa", process: "Jak przebiega przyspieszenie strony", faq: "Przyspieszenie strony WordPress: pytania" },
     lead:
       "Twoja strona WordPress ładuje się zbyt długo, a kolejne wtyczki do optymalizacji nic nie zmieniają? Sprawdzę, co ją spowalnia, usunę przyczyny i pokażę wyniki przed i po. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",

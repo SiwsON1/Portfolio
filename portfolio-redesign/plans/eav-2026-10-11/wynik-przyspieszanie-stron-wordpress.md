@@ -1,10 +1,10 @@
 === STRONA: przyspieszanie-stron-wordpress ===
 
-METATITLE: Przyspieszenie strony WordPress — Core Web Vitals na zielono
+METATITLE: Przyspieszenie strony WordPress: Core Web Vitals na zielono
 
 METADESCRIPTION: Przyspieszenie strony WordPress i sklepu WooCommerce. Znajduję przyczyny spowolnień, poprawiam kod, obrazy i cache. Sprawdź, jak pracuję i co mierzę.
 
-H1: Przyspieszanie stron WordPress. Liczby przed i po, nie obietnice.
+H1: Przyspieszenie strony WordPress dla firm i sklepów
 
 LEAD: Twoja strona WordPress ładuje się zbyt długo, a kolejne wtyczki do optymalizacji nic nie zmieniają? Sprawdzę, co ją spowalnia, usunę przyczyny i pokażę wyniki przed i po. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.
 

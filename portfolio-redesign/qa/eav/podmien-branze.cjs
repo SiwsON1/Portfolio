@@ -12,9 +12,8 @@ const pipe = (block, a, b) => block.split("\n").filter((l) => l.startsWith("- ")
 
 const next = {
   ...cur,
-  metaTitle: field("METATITLE"),
+  // METATITLE i H1 zostają z obecnej wersji (ChatGPT bywa, że je przerabia).
   metaDescription: field("METADESCRIPTION"),
-  h1: field("H1"),
   lead: section("LEAD", "INTRO"),
   intro: section("INTRO", "PAINS").split(/\n\n+/).map((x) => x.trim()).filter(Boolean),
   pains: pipe(section("PAINS", "MUSTHAVE"), "Tytuł:", "Treść:").map(([title, body]) => ({ title, body })),

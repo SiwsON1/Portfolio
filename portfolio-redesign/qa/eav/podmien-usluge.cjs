@@ -20,6 +20,9 @@ const old = svc.slice(start, end);
 const keep = (re) => { const m = old.match(re); return m ? m[0] : null; };
 const title = keep(/^    title: .*$/m);
 const headings = keep(/^    headings: .*$/m);
+// METATITLE i H1 zawsze z obecnej treści: ChatGPT bywa, że je przerabia.
+const metaTitle = keep(/^    metaTitle: .*$/m);
+const h1 = keep(/^    h1: .*$/m);
 const lead = section("LEAD", "INTRO");
 const intro = section("INTRO", "KORZYŚCI").split(/\n\n+/).map((x) => x.trim()).filter(Boolean);
 const bullets = pipe(section("KORZYŚCI", "PROCES"), "Tytuł:", "Treść:");
@@ -28,10 +31,10 @@ const faq = pipe(section("FAQ", "CTA"), "P:", "O:");
 const entry = `  {
     slug: "${slug}",
 ${title}
-    metaTitle: ${q(field("METATITLE"))},
+${metaTitle}
     metaDescription:
       ${q(field("METADESCRIPTION"))},
-    h1: ${q(field("H1"))},
+${h1}
 ${headings ? headings + "\n" : ""}    lead:
       ${q(lead)},
     intro: [
