@@ -5,6 +5,8 @@ import { posts } from "@/lib/posts";
 import { services } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
+import { ListenControl } from "@/components/blog/ListenControl";
+import { ReadingRail } from "@/components/blog/ReadingRail";
 import { PostHero } from "@/components/blog/PostHero";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
@@ -163,6 +165,7 @@ export default async function PostPage({
                 </li>
               ))}
             </ul>
+            {hasNewSchema && <ListenControl minutes={p.readingMinutes} />}
           </div>
         </div>
       </header>
@@ -171,39 +174,15 @@ export default async function PostPage({
         <section className="px-6 py-16 md:px-10 md:py-24 border-t border-line">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <aside className="md:col-span-3 md:sticky md:top-32 md:self-start">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-4">
-                Spis treści
-              </p>
-              <ol className="space-y-3 text-sm text-ink-mute">
-                {p.sections!.map((s, i) => (
-                  <li key={i}>
-                    <a
-                      href={`#section-${i}`}
-                      className="hover:text-peach transition-colors block leading-snug"
-                    >
-                      <span className="font-mono text-[10px] text-ink-faint mr-2">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      {s.heading}
-                    </a>
-                  </li>
-                ))}
-                {p.faq && p.faq.length > 0 && (
-                  <li>
-                    <a
-                      href="#faq"
-                      className="hover:text-peach transition-colors block leading-snug"
-                    >
-                      <span className="font-mono text-[10px] text-ink-faint mr-2">
-                        {String(p.sections!.length + 1).padStart(2, "0")}
-                      </span>
-                      Najczęstsze pytania (FAQ)
-                    </a>
-                  </li>
-                )}
-              </ol>
+              <ReadingRail
+                minutes={p.readingMinutes}
+                items={[
+                  ...p.sections!.map((sec, i) => ({ id: `section-${i}`, label: sec.heading })),
+                  ...(p.faq && p.faq.length > 0 ? [{ id: "faq", label: "Najczęstsze pytania (FAQ)" }] : []),
+                ]}
+              />
             </aside>
-            <div className="md:col-span-8 md:col-start-5 prose-bound space-y-16 text-ink leading-relaxed">
+            <div id="post-body" className="md:col-span-8 md:col-start-5 prose-bound space-y-16 text-ink leading-relaxed">
               {p.sections!.map((s, i) => (
                 <section
                   key={i}
