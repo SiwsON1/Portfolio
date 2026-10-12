@@ -1,0 +1,315 @@
+{
+ "page": {
+  "slug": "tworzenie-stron-dla-producentow-mebli",
+  "title": "Producenci mebli",
+  "keyword": "tworzenie stron dla producentów mebli",
+  "metaTitle": "Tworzenie stron dla producentów mebli: katalog B2B",
+  "metaDescription": "Tworzenie stron dla producentów mebli: filtrowany katalog, pliki PDF i DWG oraz zapytanie ofertowe. Wdrożenie 6-8 tygodni.",
+  "h1": "Tworzenie stron dla producentów mebli",
+  "lead": "Projektuję strony i katalogi dla producentów mebli, stolarni oraz dostawców akcesoriów, z osobnymi ścieżkami dla odbiorców hurtowych i detalicznych. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Producent potrzebuje strony, która porządkuje nie tylko zdjęcia, lecz także wymiary, materiały, warianty, dokumentację i sposób składania zapytań. Przy tworzeniu stron dla producentów mebli projektuję katalog pod realne dane produktowe i rozdzielam potrzeby partnera B2B od klienta detalicznego. Jeśli produkty mają ustalone ceny i warunki zakupu, sprzedaż mogę oprzeć na [WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+   "Pracowałem przy stronach Multikonu, producenta nóg, stelaży krzeseł i innych akcesoriów, oraz Stys-Glass, firmy zajmującej się hartowaniem szkła, balustradami i lustrami na wymiar. Możesz zobaczyć [serwis Multikon](/projekty/multikon) i [realizację Stys-Glass](/projekty/stys-glass). Jeśli katalog wymaga indywidualnej logiki, integracji z innymi systemami lub własnego panelu, mogę wykorzystać [Next.js](/uslugi/aplikacje-nextjs)."
+  ],
+  "pains": [
+   {
+    "title": "Katalog trudny do przeszukania",
+    "body": "Rozbudowany katalog bez filtrów zmusza odbiorcę do otwierania kolejnych kart produktów i ręcznego porównywania parametrów. Dlatego buduję filtrowanie według materiału, wymiaru, zastosowania i innych cech, które rzeczywiście występują w ofercie producenta."
+   },
+   {
+    "title": "Jedna oferta dla wszystkich",
+    "body": "Hurtownik potrzebuje dokumentacji i warunków współpracy, a klient detaliczny inspiracji oraz jasnego sposobu zakupu. Strona rozdziela komunikację, cennik B2B i działania dostępne dla obu grup."
+   },
+   {
+    "title": "Ręczne przepisywanie danych",
+    "body": "Aktualizowanie tych samych nazw, stanów i parametrów w kilku systemach prowadzi do pomyłek. Integracja z PIM lub ERP może automatycznie zasilać katalog głównymi danymi."
+   },
+   {
+    "title": "Brak materiałów technicznych",
+    "body": "Projektant lub dystrybutor rezygnuje z produktu, jeśli nie znajdzie rysunku i dokładnych wymiarów. Na karcie produktu umieszczam uporządkowane pliki PDF oraz DWG do pobrania."
+   }
+  ],
+  "mustHave": [
+   {
+    "title": "Filtry produktowe",
+    "body": "Parametry wynikają ze sposobu, w jaki klienci szukają elementów i mebli. Odpowiednio zaplanowane adresy kategorii mogą też wspierać pozycjonowanie strony producenta."
+   },
+   {
+    "title": "Dwie ścieżki sprzedaży",
+    "body": "Hurtownik trafia do informacji handlowych, logowania i dokumentacji. Odbiorca końcowy widzi warianty, zastosowania oraz formularz kontaktowy właściwy dla jego zapytania."
+   },
+   {
+    "title": "Cennik po zalogowaniu",
+    "body": "Ceny i warunki mogą być dostępne wyłącznie dla zatwierdzonych partnerów. Uprawnienia pozwalają różnicować widok wybranych grup kontrahentów w katalogu B2B."
+   },
+   {
+    "title": "Kompletna karta produktu",
+    "body": "Jedna karta łączy fotografie, wymiary, materiały, warianty i dokumenty techniczne. Odbiorca nie musi prosić handlowca o podstawowe dane produktu."
+   },
+   {
+    "title": "Lista do wyceny",
+    "body": "Klient dodaje kilka pozycji wraz z ilościami, a następnie wysyła jedno zapytanie. To trafniejsze rozwiązanie niż koszyk, gdy koszt zależy od konfiguracji i warunków handlowych."
+   },
+   {
+    "title": "Obsługa wielu języków",
+    "body": "Wersje eksportowe mają własne adresy, metadane i strukturę kategorii. Produkty można tłumaczyć w CMS bez tworzenia odrębnej witryny dla każdego rynku."
+   }
+  ],
+  "stack": [
+   {
+    "label": "WooCommerce",
+    "body": "WooCommerce to sklep na WordPressie: obsługuje katalog, warianty, konta odbiorców, widoczność cen i sprzedaż produktów mających ustalone warunki zakupu."
+   },
+   {
+    "label": "PIM i ERP",
+    "body": "Integracja zasila stronę producenta danymi produktowymi z głównego systemu i ogranicza powtarzalną pracę przy aktualizacjach katalogu."
+   },
+   {
+    "label": "Next.js",
+    "body": "Next.js pozwala tworzyć szybkie, responsywne katalogi z indywidualnymi filtrami, rozbudowaną logiką i połączeniami z zewnętrznymi usługami."
+   },
+   {
+    "label": "PDF i DWG",
+    "body": "Dokumenty PDF i DWG przypisuję do odpowiednich wariantów oraz udostępniam w czytelnej sekcji karty produktu."
+   }
+  ],
+  "pricing": {
+   "time": "6-8 tygodni",
+   "note": "O kwocie decydują liczba produktów, sposób importu danych, filtry, logowanie kontrahentów i wersje językowe."
+  },
+  "faq": [
+   {
+    "q": "Ile będzie kosztować strona dla mojego zakładu lub marki meblowej?",
+    "a": "Najwięcej zależy od sposobu zasilania katalogu danymi, filtrów, logowania kontrahentów i wersji językowych. Po rozmowie i briefie przygotuję wycenę z konkretnym zakresem oraz terminem."
+   },
+   {
+    "q": "Ile potrwa przygotowanie mojego katalogu produktów?",
+    "a": "Jeśli projekt ma zakres zbliżony do sklepu internetowego, typowy termin dla mniejszego wdrożenia to 6-8 tygodni. Przy bardziej złożonych integracjach termin ustalam po rozpoznaniu zakresu."
+   },
+   {
+    "q": "Czy strona może pobierać produkty z mojej bazy?",
+    "a": "Tak, jeśli źródło danych na to pozwala. Przy prostszym katalogu mogę oprzeć import na uporządkowanych danych, a przy rozbudowanym rozwiązaniu najpierw sprawdzam możliwości wskazanego systemu i dopiero wtedy planuję integrację."
+   },
+   {
+    "q": "Czy potrzebuję sklepu, czy wystarczy formularz wyceny?",
+    "a": "Sklep wybieram wtedy, gdy produkty mają ustaloną cenę, warunki dostawy i warianty możliwe do samodzielnego zamówienia. Przy produkcji na wymiar albo indywidualnych warunkach handlowych mogę zamiast koszyka przygotować listę produktów wysyłaną jako jedno zapytanie."
+   },
+   {
+    "q": "Czy moja strona może mieć kilka wersji językowych?",
+    "a": "Tak. Mogę przygotować osobne adresy, treści i metadane dla wersji językowych, a strukturę planuję tak, żeby katalog dało się rozwijać bez stawiania osobnego serwisu dla każdego rynku."
+   },
+   {
+    "q": "Czy przygotujesz zdjęcia do katalogu mebli?",
+    "a": "Nie wykonuję sesji produktowych. Mogę określić potrzebne kadry i proporcje, a dostarczone fotografie zoptymalizować do użycia na stronie."
+   },
+   {
+    "q": "Jak będę aktualizować produkty w katalogu?",
+    "a": "Sposób zależy od źródła danych. Mogę przygotować edycję w CMS, import z uporządkowanego pliku albo integrację ze wskazanym systemem, jeśli jego możliwości na to pozwalają."
+   },
+   {
+    "q": "Czy przy zmianie strony zachowasz obecne adresy produktów?",
+    "a": "Tam, gdzie nowa struktura na to pozwala, zachowuję adresy. Dla pozostałych przygotowuję przekierowania 301, a po wdrożeniu podłączam Google Search Console. Nie obiecuję zachowania dotychczasowych pozycji w wyszukiwarce."
+   },
+   {
+    "q": "Jaki hosting wybrać dla mojego katalogu?",
+    "a": "Pomagam dobrać hosting do technologii, wielkości katalogu i sposobu przechowywania zdjęć oraz dokumentów, na przykład Hostinger albo cyber_folks. Jeśli projekt wymaga Next.js, mogę wdrożyć go na Vercel albo własnym VPS."
+   },
+   {
+    "q": "Czy sama galeria realizacji wystarczy na stronie producenta mebli?",
+    "a": "Nie, ponieważ zdjęcia nie odpowiadają na pytania o wymiary, materiały, warianty i sposób zamówienia. Projektuję galerię jako część szerszej prezentacji, która prowadzi do karty produktu, opisu realizacji albo właściwego formularza."
+   },
+   {
+    "q": "Czy podawać ceny mebli na wymiar?",
+    "a": "Jeśli końcowa cena zależy od wymiarów, materiałów, wyposażenia i montażu, nie przedstawiałbym jednej kwoty jako ceny gotowego produktu. Mogę zaplanować prezentację przykładowego zakresu lub mechanizm wyceny, ale sposób podawania cen ustalam przy rozpoczęciu współpracy na podstawie rzeczywistego modelu sprzedaży."
+   },
+   {
+    "q": "Jak powinien wyglądać formularz wyceny?",
+    "a": "Dobieram pola do rodzaju mebli i informacji potrzebnych do wstępnej oceny zlecenia. Formularz może zbierać wymiary, zdjęcia pomieszczenia, miejscowość, oczekiwany termin oraz rodzaj zabudowy, a jednocześnie pozostać zrozumiały dla nietechnicznego użytkownika."
+   },
+   {
+    "q": "Czy strona producenta mebli potrzebuje wersji B2B?",
+    "a": "Przygotowałbym ją wtedy, gdy architekci, salony lub dystrybutorzy potrzebują innych informacji niż klienci detaliczni. Nie zawsze musi to być strefa po zalogowaniu. Czasem wystarczy osobna ścieżka z katalogami, plikami technicznymi, zasadami współpracy i listą punktów sprzedaży."
+   },
+   {
+    "q": "Czy zmieszczę na stronie dużo zdjęć bez spowolnienia?",
+    "a": "Tak, jeśli obrazy zostaną odpowiednio przygotowane i nie będą ładowane jednocześnie w pełnej rozdzielczości. Optymalizuję rozmiary, formaty oraz sposób wczytywania zdjęć, a przed oddaniem strony sprawdzam jej wydajność na telefonie."
+   }
+  ],
+  "cta": "Prześlij brief katalogu, a wycenię tworzenie strony dla Twojej marki meblowej",
+  "deliverables": [
+   {
+    "label": "Katalog kolekcji",
+    "body": "Przygotowuję katalog z podziałem na uzgodnione kolekcje, zastosowania, materiały i wykończenia. Zakres produktów ustalamy na podstawie danych, którymi dysponujesz."
+   },
+   {
+    "label": "Karta produktu",
+    "body": "Tworzę szablon karty z wymiarami, wariantami, galerią, dokumentami technicznymi, informacją o realizacji i formularzem zapytania."
+   },
+   {
+    "label": "Strefa dla partnerów",
+    "body": "Jeśli wymaga tego model sprzedaży, mogę przygotować chronioną część katalogu z materiałami dostępnymi po zalogowaniu i formularzem zgłoszenia dostępu."
+   },
+   {
+    "label": "Zapytania handlowe",
+    "body": "Rozdzielam zapytania według uzgodnionych reguł, na przykład regionu, kolekcji albo rodzaju produktu, i kieruję je do właściwych osób."
+   },
+   {
+    "label": "Import danych",
+    "body": "Przygotowuję import uzgodnionych pól z uporządkowanego źródła danych i wskazuję rekordy wymagające ręcznej korekty."
+   }
+  ],
+  "headings": {
+   "pains": "Co nie działa na stronach producentów mebli",
+   "mustHave": "Czego wymaga strona producenta mebli",
+   "cases": "Strony dla producentów mebli, które zrobiłem",
+   "stack": "Jak tworzę strony dla producentów mebli",
+   "pricing": "Ile kosztuje strona dla producenta mebli",
+   "faq": "Tworzenie stron dla producentów mebli: pytania"
+  },
+  "process": [
+   {
+    "step": "01",
+    "title": "Brief i dane",
+    "body": "Sprawdzam, w jakim stanie są dane produktowe i skąd katalog będzie je pobierał."
+   },
+   {
+    "step": "02",
+    "title": "Struktura katalogu",
+    "body": "Filtry, warianty i rozdzielenie ścieżki hurtowej od detalicznej."
+   },
+   {
+    "step": "03",
+    "title": "Projekt",
+    "body": "Karta produktu z wymiarami, plikami do pobrania i zapytaniem ofertowym zamiast koszyka."
+   },
+   {
+    "step": "04",
+    "title": "Wdrożenie",
+    "body": "Katalog, import z PIM lub ERP, konta kontrahentów, cennik po zalogowaniu."
+   },
+   {
+    "step": "05",
+    "title": "Start",
+    "body": "Testy importu, wersje językowe pod eksport, szkolenie z aktualizacji oferty."
+   }
+  ],
+  "notFor": [
+   "Nie masz żadnych danych produktowych ani zdjęć. Katalog musi mieć z czego powstać.",
+   "Oczekujesz kompletnego systemu B2B z rabatami kontraktowymi w dwa tygodnie.",
+   "Chcesz przenieść oferty jeden do jednego z katalogu PDF bez porządkowania parametrów."
+  ]
+ },
+ "block": {
+  "heading": "Strona internetowa dla producenta mebli: jak zaplanować katalog, wyceny i sprzedaż B2B",
+  "intro": [
+   "**W tym poradniku pokazuję, jakie funkcje powinna mieć strona internetowa dla producenta mebli, aby odpowiadała sposobowi sprzedaży, ułatwiała składanie zapytań i prezentowała ofertę w użytecznej formie.** Inaczej projektuje się serwis dla marki sprzedającej gotowe kolekcje, inaczej stronę dla stolarni, a jeszcze inaczej katalog przeznaczony głównie dla architektów, salonów i dystrybutorów.",
+   "Zanim zaproponuję strukturę strony, sprawdzam, kto podejmuje decyzję o zakupie, jak powstaje wycena oraz jakie informacje są potrzebne przed rozmową z handlowcem. Dzięki temu strona nie jest tylko zbiorem efektownych zdjęć. Prowadzi użytkownika od poznania oferty do konkretnego działania, na przykład wysłania wymiarów, pobrania dokumentacji albo znalezienia najbliższego punktu sprzedaży."
+  ],
+  "sections": [
+   {
+    "id": "katalog-sklep-czy-formularz-wyceny-powinien-wynikac-ze-sposo",
+    "heading": "Katalog, sklep czy formularz wyceny powinien wynikać ze sposobu sprzedaży",
+    "body": [
+     "Pierwszą decyzją nie jest wybór technologii, lecz określenie, czy klient może samodzielnie kupić produkt. Jeżeli mebel ma stałą cenę, jasno opisane warianty i przewidywalne warunki dostawy, odpowiednim rozwiązaniem może być sklep. Jeśli cena zależy od wymiarów, materiału, miejsca montażu albo indywidualnych ustaleń, klasyczny koszyk często nie odpowiada rzeczywistemu procesowi sprzedaży."
+    ],
+    "table": {
+     "caption": "Katalog, sklep czy formularz wyceny powinien wynikać ze sposobu sprzedaży",
+     "head": [
+      "Model strony",
+      "Kiedy warto go wybrać",
+      "Główne działanie użytkownika"
+     ],
+     "rows": [
+      [
+       "Katalog mebli",
+       "Oferta wymaga prezentacji, ale zamówienie jest ustalane indywidualnie",
+       "Przegląda kolekcje i wysyła zapytanie"
+      ],
+      [
+       "Sklep internetowy",
+       "Produkty mają ustalone ceny, warianty i zasady dostawy",
+       "Dodaje produkt do koszyka i składa zamówienie"
+      ],
+      [
+       "Formularz wyceny",
+       "Meble powstają na wymiar lub wymagają konsultacji",
+       "Przekazuje dane potrzebne do przygotowania oferty"
+      ],
+      [
+       "Model mieszany",
+       "Część produktów jest gotowa, a część konfigurowana",
+       "Kupuje lub prosi o indywidualną wycenę"
+      ]
+     ]
+    },
+    "outro": [
+     "Strona z katalogiem mebli może również łączyć kilka modeli. Gotowe krzesła lub akcesoria mogą być sprzedawane bezpośrednio, podczas gdy zabudowy kuchenne trafiają do formularza wyceny. W przypadku produktów ze stałymi warunkami zakupu mogę wykorzystać [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce). Najważniejsze, aby klient od razu rozumiał, co może kupić online, a co wymaga kontaktu i dodatkowych ustaleń."
+    ]
+   },
+   {
+    "id": "formularz-wyceny-powinien-przygotowac-klienta-do-konkretnej-",
+    "heading": "Formularz wyceny powinien przygotować klienta do konkretnej rozmowy",
+    "body": [
+     "Dobra strona dla mebli na wymiar nie ogranicza formularza do pól „imię”, „telefon” i „wiadomość”. Taki kontakt zwykle nie dostarcza informacji potrzebnych do oceny zlecenia. Handlowiec musi później dopytywać o podstawowe dane, a klient ponownie opisuje to, co mógł przekazać już podczas pierwszego zgłoszenia.",
+     "Projektując formularz, dobieram pola do rodzaju realizacji. Przy kuchni potrzebne informacje mogą dotyczyć układu pomieszczenia, przy szafie wnękowej jej szerokości i wysokości, a przy meblach hotelowych liczby pomieszczeń. W typowym zgłoszeniu warto umożliwić podanie wymiarów, miejscowości, oczekiwanego terminu oraz rodzaju zabudowy. Przydatna jest też możliwość dodania zdjęć pomieszczenia, rzutu, szkicu lub inspiracji.",
+     "**Formularz nie zastępuje pomiaru ani konsultacji technicznej.** Jego zadaniem jest zebranie danych do wstępnej oceny zapytania. Pola powinny być zrozumiałe dla osoby, która nie zna fachowej terminologii. Zamiast wymagać specjalistycznych nazw, można zastosować krótkie podpowiedzi i przykłady. Dzięki temu do firmy trafia pełniejszy opis, a rozmowa może szybciej przejść do materiałów, możliwości wykonania i kolejnych etapów."
+    ]
+   },
+   {
+    "id": "strefa-b2b-powinna-odpowiadac-na-potrzeby-architekta-i-dystr",
+    "heading": "Strefa B2B powinna odpowiadać na potrzeby architekta i dystrybutora",
+    "body": [
+     "Odbiorca detaliczny patrzy przede wszystkim na wygląd, zastosowanie i możliwość dopasowania mebla. Architekt potrzebuje wymiarów, materiałów oraz plików do projektu. Dystrybutor albo salon chce natomiast poznać kolekcje, dostępne warianty, zasady współpracy i materiały wspierające sprzedaż. **Strona internetowa dla producenta mebli powinna rozdzielać te potrzeby, zamiast prowadzić wszystkie grupy tą samą ścieżką.**",
+     "Strefa partnera może mieć część ogólnodostępną oraz zasoby dostępne po zalogowaniu. W zależności od modelu współpracy mogą znaleźć się tam katalogi PDF, zdjęcia produktowe, instrukcje, próbki wykończeń w formie cyfrowej oraz pliki techniczne. Jeżeli producent nie potrzebuje kont użytkowników, materiały można uporządkować w zwykłym centrum pobierania, podzielonym według kolekcji lub typów produktów.",
+     "Ważnym elementem bywa także lista punktów sprzedaży. Powinna zawierać dane niezbędne do odwiedzenia salonu, w tym adres, zakres dostępnej ekspozycji i dane kontaktowe, jeżeli producent nimi dysponuje. Przy planowaniu takiej ścieżki pomocna jest analiza sposobu prezentowania produktów technicznych, na przykład w projekcie [Multikon](/projekty/multikon)."
+    ]
+   },
+   {
+    "id": "wersje-jezykowe-wymagaja-osobnej-struktury-dla-kazdego-rynku",
+    "heading": "Wersje językowe wymagają osobnej struktury dla każdego rynku",
+    "body": [
+     "Jeśli oferta jest kierowana do odbiorców w Polsce i Niemczech, samo automatyczne przetłumaczenie tekstów nie wystarczy. Niemiecka wersja strony powinna mieć własne adresy, tytuły, opisy kategorii i dane kontaktowe właściwe dla obsługi danego rynku. Dotyczy to również dokumentów, formularzy, komunikatów systemowych oraz zgód pojawiających się przy wysyłaniu zapytania.",
+     "Przed wdrożeniem ustalam, które produkty są dostępne na danym rynku i czy sposób obsługi zapytań jest taki sam. Nie każda kolekcja, opcja dostawy lub usługa montażu musi być oferowana w obu krajach. Osobne treści pozwalają pokazać te różnice jasno, bez dopisków i wyjątków rozproszonych po całej stronie.",
+     "Wielojęzyczna strona z katalogiem mebli powinna też umożliwiać niezależne uzupełnianie danych. Brak tłumaczenia jednego produktu nie może prowadzić do przypadkowej mieszanki języków. Warto również ustalić, czy katalogi PDF i pliki techniczne mają wspólną wersję, czy potrzebują osobnych materiałów dla każdego rynku."
+    ]
+   },
+   {
+    "id": "galeria-realizacji-sprzedaje-wtedy-gdy-wyjasnia-zakres-wykon",
+    "heading": "Galeria realizacji sprzedaje wtedy, gdy wyjaśnia zakres wykonanej pracy",
+    "body": [
+     "Liczba realizacji powinna pozwalać pokazać różne typy zleceń bez publikowania wielu niemal identycznych zestawów zdjęć. Lepiej przedstawić kilka dobrze opisanych przykładów dla poszczególnych kategorii niż tworzyć długą galerię, w której użytkownik nie wie, czym różnią się kolejne projekty. W przypadku strony dla stolarni mogą to być osobne realizacje kuchni, garderób, zabudów salonu albo mebli do lokali usługowych.",
+     "Każda realizacja powinna wyjaśniać, co zostało wykonane, gdzie zastosowano dane rozwiązanie i jakie materiały wykorzystano. Warto podać rodzaj frontów, blatów, okuć lub wykończenia, jeśli informacje te można ujawnić. Zdjęcia z montażu pomagają pokazać skalę prac, dopasowanie zabudowy oraz elementy, których nie widać na końcowych fotografiach wnętrza.",
+     "Fotografie muszą być przygotowane w odpowiednich rozmiarach i formatach. Strona może zawierać dużo zdjęć, ale nie powinna pobierać od razu wszystkich plików w pełnej rozdzielczości. Dobieram sposób kompresji, warianty obrazów i kolejność ładowania do układu galerii. W branży związanej z obróbką materiałów podobne znaczenie ma pokazanie zarówno efektu, jak i zastosowania produktu, co można zobaczyć w realizacji [Stys-Glass](/projekty/stys-glass)."
+    ]
+   },
+   {
+    "id": "najczestsze-bledy-utrudniaja-ocene-oferty-i-wyslanie-zapytan",
+    "heading": "Najczęstsze błędy utrudniają ocenę oferty i wysłanie zapytania",
+    "body": [
+     "Problemy na stronach producentów mebli rzadko wynikają z braku animacji lub ozdobnych elementów. Znacznie częściej użytkownik widzi produkt, ale nie może sprawdzić jego podstawowych parametrów, porównać wariantów ani ustalić, co powinien zrobić dalej.",
+     "Najczęstsze błędy to:"
+    ],
+    "list": [
+     "sama galeria bez nazw, opisów materiałów i informacji o zastosowaniu,",
+     "brak wymiarów lub niejasne oznaczenie, które parametry można zmienić,",
+     "publikowanie ciężkich zdjęć bez odpowiednich rozmiarów i kompresji,",
+     "jedna ścieżka kontaktu dla klienta detalicznego, architekta i hurtownika,",
+     "formularz wymagający opisania całego zapytania w jednym pustym polu,",
+     "pliki techniczne rozproszone pomiędzy kartami produktów i katalogami PDF."
+    ],
+    "outro": [
+     "Naprawa tych problemów zaczyna się od uporządkowania informacji, a nie od zmiany kolorów strony. Użytkownik powinien móc przejść od inspiracji do danych technicznych i właściwego sposobu kontaktu. Jeśli oferta ma część detaliczną oraz hurtową, obie ścieżki powinny być widoczne już na poziomie menu, kategorii lub karty produktu."
+    ]
+   },
+   {
+    "id": "koszt-strony-internetowej-dla-producenta-mebli-zalezy-od-dan",
+    "heading": "Koszt strony internetowej dla producenta mebli zależy od danych i funkcji",
+    "body": [
+     "Na zakres prac wpływa przede wszystkim wielkość katalogu oraz sposób przygotowania danych. Ręczne dodanie kilkunastu kolekcji jest innym zadaniem niż import rozbudowanej bazy produktów z wieloma wariantami. Znaczenie ma również to, czy dane są kompletne i spójne. Jeżeli nazwy materiałów, wymiary lub oznaczenia występują w kilku formach, przed importem trzeba ustalić wspólną strukturę.",
+     "Kolejnym czynnikiem są filtry. Prosty podział według rodzaju mebla wymaga mniejszego zakresu niż filtrowanie według wymiarów, materiałów, kolorów, zastosowania i dostępnych wariantów. Na koszt wpływają także logowanie partnerów, uprawnienia do materiałów B2B, osobne wersje językowe oraz połączenie katalogu z zewnętrznym źródłem danych.",
+     "Przed wyceną ustalam też, czy zawartość będzie wpisywana w panelu, importowana z uporządkowanego pliku, czy pobierana z innego systemu. Dopiero po poznaniu tych informacji mogę określić zakres i termin. **Największą różnicę robi nie sama liczba podstron, lecz liczba zależności pomiędzy produktami, wariantami, odbiorcami i źródłami danych.**"
+    ]
+   }
+  ]
+ }
+}
