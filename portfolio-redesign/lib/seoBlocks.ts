@@ -980,78 +980,159 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ]
   },
   "przyspieszanie-stron-wordpress": {
-    heading: "Przyspieszenie strony WordPress: co warto sprawdzić przed wyborem wykonawcy",
-    intro: [
-      "**W tym poradniku pokazuję, jak ocenić szybkość strony, rozpoznać możliwe źródła problemów i porównać zakres prac proponowany przez wykonawców.** Dowiesz się również, kiedy optymalizacja szybkości WordPress ma sens, od czego zależy jej koszt oraz w jakiej sytuacji rozsądniejszym rozwiązaniem może być przebudowa serwisu.",
-      "Wynik pojedynczego testu nie daje jeszcze pełnego obrazu. Znaczenie mają rodzaj badanej podstrony, urządzenie, dane zbierane od rzeczywistych użytkowników oraz technologia, na której zbudowano witrynę. Dlatego przed podjęciem decyzji warto zrozumieć, co dokładnie pokazują popularne narzędzia i jakie ograniczenia może mieć obecna strona.",
+    "heading": "Optymalizacja szybkości WordPress. Co spowalnia stronę i jak to naprawiam?",
+    "intro": [
+      "Wolna strona WordPress potrafi wyglądać zupełnie normalnie, dopóki nie otworzysz jej na telefonie albo nie sprawdzisz w PageSpeed Insights. Obrazy pojawiają się z opóźnieniem, przyciski reagują dopiero po chwili, a wynik wydajności świeci na czerwono. Przyczyną nie musi być jednak ciężki motyw czy słaby hosting. Czasem pojedynczy skrypt opóźnia wyświetlenie najważniejszego elementu strony, a czasem niewielki fragment kodu wykonuje niepotrzebne zapytania do bazy danych. Dlatego nie zaczynam od instalowania kolejnej wtyczki do optymalizacji. Najpierw sprawdzam, co rzeczywiście zabiera czas.",
+      "Przyspieszenie strony WordPress to dla mnie znalezienie i usunięcie konkretnych przyczyn spowolnienia, a nie zdobycie zielonego wyniku za wszelką cenę. Mierzę wydajność, analizuję kod, obrazy, pamięć podręczną i działanie serwera. Następnie wprowadzam poprawki i ponawiam testy. Patrzę przy tym na stronę tak, jak korzysta z niej Twój klient: od wejścia na stronę główną, przez przeglądanie oferty, aż po wysłanie formularza lub złożenie zamówienia. Po zakończeniu zlecenia pokazuję, jakie problemy znalazłem, co poprawiłem i jak zmieniły się wyniki."
     ],
-    sections: [
+    "sections": [
       {
-        id: "jak-samodzielnie-sprawdzic-czy-strona-wordpress-jest-wolna",
-        heading: "Jak samodzielnie sprawdzić, czy strona WordPress jest wolna",
-        body: [
-          "Najprościej zacząć od PageSpeed Insights. Wpisz adres strony głównej, a następnie sprawdź również ważne podstrony, na przykład ofertę, formularz kontaktowy, artykuł oraz kartę produktu w sklepie. Każdy z tych widoków może korzystać z innego szablonu, zestawu wtyczek i skryptów. Dobry wynik strony głównej nie oznacza więc automatycznie, że cały serwis działa równie sprawnie.",
-          "PageSpeed Insights może prezentować dwa rodzaje informacji. Dane laboratoryjne powstają podczas kontrolowanego testu i pomagają znaleźć problemy techniczne. Mogą się zmieniać między kolejnymi pomiarami, ponieważ wpływają na nie między innymi warunki testu i odpowiedź serwera. Dane od użytkowników opisują natomiast doświadczenia osób, które rzeczywiście odwiedzały stronę. Nie każda witryna ma wystarczająco dużo ruchu, aby takie informacje były dostępne.",
-          "Przy ocenie [Core Web Vitals](/blog/core-web-vitals-2026) zwróć uwagę na trzy wskaźniki. LCP powinien wynosić do 2,5 sekundy, INP do 200 milisekund, a CLS do 0,1. Ocena opiera się na 75. percentylu, co oznacza, że wymagany poziom powinien być osiągany podczas co najmniej 75 procent zarejestrowanych wizyt. Warto więc patrzeć nie tylko na ogólną punktację, lecz także na konkretne wskaźniki i różnice między urządzeniami mobilnymi a komputerami.",
+        "id": "pagespeed-insights-pokazuje-problem-ale-nie-zawsze-jego-przy",
+        "heading": "PageSpeed Insights pokazuje problem, ale nie zawsze jego przyczynę",
+        "body": [
+          "PageSpeed Insights to dobre miejsce na rozpoczęcie analizy. Pokazuje ocenę wydajności i wskazuje elementy, które mogą spowalniać stronę. Sam wynik nie mówi jednak wszystkiego. Dwie witryny z podobną oceną mogą wymagać zupełnie innych poprawek.",
+          "W pierwszej problemem będzie zbyt duże zdjęcie wyświetlane na górze strony. W drugiej przeglądarka pobierze zdjęcie szybko, ale nie pokaże go od razu, bo czeka na wykonanie skryptu. W trzeciej przeglądarka nie dostanie na czas gotowego dokumentu HTML, ponieważ serwer wykonuje zbyt wiele operacji.",
+          "Dlatego analizuję poszczególne wskaźniki [Core Web Vitals](/blog/core-web-vitals-2026):"
         ],
+        "list": [
+          "CLS (Cumulative Layout Shift) opisuje nieoczekiwane przesunięcia elementów. Jeśli próbujesz kliknąć przycisk, a nagle nad nim pojawia się zdjęcie i cała zawartość przeskakuje, problem dotyczy właśnie stabilności układu."
+        ],
+        "outro": [
+          "Sprawdzam też czas odpowiedzi serwera, kolejność pobierania zasobów oraz skrypty blokujące wyświetlanie treści. Odróżniam dane pochodzące od rzeczywistych użytkowników od wyników testu laboratoryjnego Lighthouse, ponieważ pokazują wydajność z różnych perspektyw.",
+          "W ramach zlecenia wykonuję pomiary przed zmianami i wykorzystuję je do ustalenia kolejności napraw, zamiast poprawiać każde ostrzeżenie z raportu bez względu na jego znaczenie."
+        ]
       },
       {
-        id: "co-najczesciej-spowalnia-strone-wordpress",
-        heading: "Co najczęściej spowalnia stronę WordPress",
-        body: [
-          "Wolna strona WordPress rzadko ma jedną prostą przyczynę. Częściej jest wynikiem kilku nakładających się problemów, dlatego instalacja kolejnej wtyczki do optymalizacji nie zawsze przynosi oczekiwany efekt. Przed zmianami trzeba sprawdzić, które elementy faktycznie obciążają konkretny serwis.",
-        ],
-        table: {"caption":"Co najczęściej spowalnia stronę WordPress","head":["Obszar","W jaki sposób może spowalniać stronę"],"rows":[["Obrazy","Zbyt duże pliki, niewłaściwe wymiary i ładowanie wszystkich grafik od razu zwiększają ilość danych do pobrania."],["Kreator stron","Rozbudowany kreator może generować dużą ilość kodu, stylów i skryptów, nawet gdy dana podstrona korzysta tylko z części dostępnych funkcji."],["Wtyczki","Niektóre rozszerzenia wczytują swoje zasoby w całym serwisie, chociaż są potrzebne wyłącznie na jednej podstronie."],["Pamięć podręczna","Brak odpowiedniej konfiguracji powoduje, że serwer musi wielokrotnie wykonywać te same operacje."],["PHP i hosting","Stara wersja PHP albo zbyt słabe środowisko serwerowe mogą wydłużać czas oczekiwania na odpowiedź strony."],["Baza danych","Nagromadzone wersje wpisów, dane tymczasowe i pozostałości po usuniętych rozszerzeniach mogą zwiększać liczbę zbędnych operacji."],["Skrypty zewnętrzne","Czaty, piksele reklamowe, mapy i narzędzia analityczne mogą opóźniać ładowanie lub reakcję strony na działanie użytkownika."]]},
-        outro: [
-          "Każdy z tych obszarów wymaga innego podejścia. Kompresja zdjęć nie naprawi powolnej odpowiedzi hostingu, a pamięć podręczna nie usunie ciężkiego kodu generowanego przez motyw. W WooCommerce dodatkowo trzeba zachować ostrożność przy koszyku, płatnościach i danych aktualizowanych dynamicznie. Zbyt agresywna konfiguracja może poprawić wynik testu, ale jednocześnie zakłócić proces składania zamówienia.",
-        ],
+        "id": "najpierw-ustalam-ktory-element-odpowiada-za-lcp",
+        "heading": "Najpierw ustalam, który element odpowiada za LCP",
+        "body": [
+          "LCP często kojarzy się z dużym zdjęciem na pierwszym ekranie. To rozsądny punkt wyjścia, ale nie zawsze prawdziwa przyczyna problemu. Największym elementem może być tekst, grafika albo część animacji.",
+          "Przekonałem się o tym na własnej stronie marcinsiwonia.pl, zbudowanej w Next.js, a nie w WordPressie. LCP wynosił 4,7 sekundy, chociaż problemem nie było duże zdjęcie. Okazało się, że elementem LCP na każdej podstronie była pojedyncza litera animacji wejściowej. Jej wyświetlenie czekało na załadowanie skryptów. Po znalezieniu i usunięciu przyczyny LCP spadł do 2,0 sekundy.",
+          "W tej samej witrynie ograniczyłem również rozmiar kroju pisma z 494 KB do 156 KB. Strona z realizacjami, która wcześniej ważyła 27 MB, po poprawnym przeskalowaniu zdjęć pobierała 240 KB. To przykład pracy nad wydajnością poza WordPressem, ale dobrze pokazuje metodę, którą stosuję również przy stronach klientów: najpierw identyfikuję element i wąskie gardło, a dopiero później zmieniam kod.",
+          "Podczas analizy sprawdzam, czy opóźnienie wynika z czasu odpowiedzi serwera, późnego rozpoczęcia pobierania zasobu, długości pobierania czy oczekiwania na wyświetlenie elementu. To ważne rozróżnienie. Kompresowanie obrazu nie rozwiąże problemu, jeśli przeglądarka i tak czeka na skrypt, zanim będzie mogła go pokazać.",
+          "Przy przyspieszaniu Twojej strony identyfikuję rzeczywisty element LCP na istotnych podstronach i poprawiam mechanizm, który opóźnia jego wyświetlenie."
+        ]
       },
       {
-        id: "od-czego-zalezy-koszt-przyspieszenia-strony-wordpress",
-        heading: "Od czego zależy koszt przyspieszenia strony WordPress",
-        body: [
-          "Koszt zależy przede wszystkim od liczby elementów, które trzeba przeanalizować, zmienić i przetestować. Prosta witryna z kilkoma powtarzalnymi widokami wymaga innego zakresu pracy niż serwis wykorzystujący osobne szablony usług, wpisów, formularzy i stron docelowych. Im więcej typów podstron, tym więcej przypadków trzeba sprawdzić przed wdrożeniem i po nim.",
-          "Znaczenie ma również zastosowany kreator, liczba aktywnych wtyczek oraz możliwość bezpiecznej zmiany ich konfiguracji. W sklepie WooCommerce dochodzą karta produktu, kategorie, koszyk, finalizacja zamówienia, płatności i rozszerzenia sprzedażowe. Każdy z tych elementów może reagować inaczej na opóźnianie skryptów albo ustawienia pamięci podręcznej.",
-          "Na zakres wpływa też hosting. Jeżeli serwer odpowiada zbyt wolno, same poprawki po stronie WordPressa mogą nie wystarczyć. Dlatego wycenę przygotowuję po rozpoznaniu konstrukcji serwisu, jego kluczowych szablonów i środowiska, na którym działa. Dzięki temu zakres wynika z realnych problemów strony, a nie z jednego wyniku PageSpeed Insights.",
+        "id": "co-najczesciej-spowalnia-wordpress-i-jak-rozpoznaje-przyczyn",
+        "heading": "Co najczęściej spowalnia WordPress i jak rozpoznaję przyczynę?",
+        "body": [
+          "Optymalizacja szybkości WordPress wymaga sprawdzenia zarówno części widocznej dla użytkownika, jak i kodu wykonywanego przez serwer. Niektóre problemy widać od razu w narzędziach przeglądarki. Inne ujawniają się dopiero podczas analizy zapytań do bazy danych lub logów serwera."
         ],
+        "table": {
+          "caption": "Co najczęściej spowalnia WordPress i jak rozpoznaję przyczynę?",
+          "head": [
+            "Przyczyna spowolnienia",
+            "Jak ją rozpoznaję",
+            "Co robię"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Zbyt duże zdjęcia",
+              "Sprawdzam rozmiary plików i wymiary obrazów względem miejsca ich wyświetlania.",
+              "Skaluję zdjęcia, dobieram formaty i ustawiam odpowiednie warianty rozmiarów."
+            ],
+            [
+              "Najważniejszy obraz pobierany zbyt późno",
+              "Analizuję element LCP i kolejność żądań w przeglądarce.",
+              "Ustawiam priorytet pobierania lub preload, czyli wcześniejsze rozpoczęcie pobierania ważnego zasobu."
+            ],
+            [
+              "Niepotrzebne zapytania do bazy",
+              "Sprawdzam liczbę zapytań, powtarzające się operacje i funkcje pobierające dane.",
+              "Poprawiam kod, ograniczam powtarzane zapytania i wykorzystuję pamięć podręczną WordPressa."
+            ],
+            [
+              "Skrypty opóźniające wyświetlanie",
+              "Analizuję wykonywanie JavaScript i zależności między skryptami.",
+              "Zmieniam sposób ich ładowania, ograniczam zbędny kod i testuję działanie funkcji strony."
+            ],
+            [
+              "Nadmiarowy CSS",
+              "Sprawdzam arkusze stylów i zasoby potrzebne do wyświetlenia pierwszego ekranu.",
+              "Ograniczam zbędne style i poprawiam sposób dostarczania tych potrzebnych od razu."
+            ],
+            [
+              "Nieprawidłowo działający cache",
+              "Porównuję odpowiedź z pamięci podręcznej i bez niej, kontroluję nagłówki oraz rzeczywistą treść.",
+              "Poprawiam konfigurację i sposób czyszczenia cache, a następnie weryfikuję wyniki."
+            ],
+            [
+              "Wolna odpowiedź serwera",
+              "Sprawdzam czas oczekiwania na HTML oraz operacje wykonywane przed wysłaniem odpowiedzi.",
+              "Szukam kosztownych operacji w WordPressie i wskazuję ograniczenia hostingu, jeśli to on stanowi problem."
+            ],
+            [
+              "Zewnętrzne skrypty i integracje",
+              "Sprawdzam żądania do zewnętrznych usług oraz ich wpływ na ładowanie strony.",
+              "Ograniczam niepotrzebne zasoby i dostosowuję sposób ładowania tam, gdzie nie zaburza to działania integracji."
+            ]
+          ]
+        },
+        "outro": [
+          "W praktyce kilka przyczyn może występować jednocześnie. Duże zdjęcie, niewłaściwa kolejność skryptów i wolna odpowiedź serwera potrafią wpływać na ten sam wskaźnik, ale wymagają osobnych działań.",
+          "Nie usuwam też kodu wyłącznie dlatego, że narzędzie oznaczyło go jako nieużywany. Skrypt może być potrzebny dopiero po kliknięciu przycisku, otwarciu formularza lub wybraniu wariantu produktu.",
+          "W ramach zlecenia sprawdzam zależności między problemami i wdrażam poprawki w takiej kolejności, żeby rzeczywiście skracały czas ładowania bez ograniczania funkcjonalności strony."
+        ]
       },
       {
-        id: "kiedy-optymalizacja-nie-wystarczy-i-lepsza-bedzie-nowa-stron",
-        heading: "Kiedy optymalizacja nie wystarczy i lepsza będzie nowa strona",
-        body: [
-          "Nie każdą witrynę opłaca się poprawiać w nieskończoność. Ciężki kreator może narzucać sposób generowania kodu i ładować zasoby, których nie da się bezpiecznie usunąć bez ingerencji w układ strony. Jeżeli każda kolejna zmiana wymaga obchodzenia ograniczeń narzędzia, optymalizacja może stać się serią kompromisów zamiast trwałym rozwiązaniem.",
-          "Podobny problem pojawia się przy przestarzałym motywie, szczególnie gdy nie jest już rozwijany albo nie współpracuje poprawnie z aktualnymi wersjami WordPressa i PHP. W takiej sytuacji trzeba porównać zakres możliwych usprawnień z zakresem przebudowy. Więcej o ograniczeniach jednego z popularnych kreatorów wyjaśniam w materiale [dlaczego odchodzę od Elementora](/blog/elementor-dlaczego-nie-warto).",
-          "Nowa strona może być rozsądniejsza, gdy obecna konstrukcja blokuje istotne zmiany, a kolejne doraźne poprawki nie usuwają głównej przyczyny problemu. Nie oznacza to jednak, że każda wolna strona wymaga wymiany. Taką decyzję podejmuję dopiero po sprawdzeniu, czy istniejący serwis daje się zoptymalizować bez naruszania jego ważnych funkcji.",
-        ],
+        "id": "przyspieszenie-sklepu-woocommerce-wymaga-sprawdzenia-bazy-da",
+        "heading": "Przyspieszenie sklepu WooCommerce wymaga sprawdzenia bazy danych",
+        "body": [
+          "W sklepie WooCommerce samo zmniejszenie zdjęć produktów często nie wystarcza. Sklep pobiera informacje o produktach, cenach, wariantach, kategoriach i stanie koszyka. Każda dodatkowa operacja po stronie serwera może wydłużyć przygotowanie strony.",
+          "Szczególnie uważnie sprawdzam listy produktów. Jedna karta produktu może wyglądać niewinnie, ale jeśli zawiera funkcję wykonującą osobne zapytanie do bazy, jej koszt powtarza się dla każdego elementu listy.",
+          "Taki problem nie musi pojawić się w raporcie PageSpeed jako wskazówka dotycząca konkretnej funkcji PHP. Widać go dopiero przy sprawdzaniu kodu i liczby wykonywanych zapytań. Dlatego nie ograniczam audytu do zasobów pobieranych przez przeglądarkę.",
+          "Weryfikuję też działanie pamięci podręcznej WordPressa, szczególnie przy danych wielokrotnie wykorzystywanych na jednej stronie. Czasem wystarczy zmienić sposób pobierania informacji, żeby usunąć powtarzaną pracę serwera.",
+          "Osobną kwestią jest cache całych stron. W WooCommerce nie wolno bezmyślnie traktować wszystkich adresów tak samo. Koszyk, finalizacja zamówienia i informacje zależne od użytkownika wymagają odpowiedniej konfiguracji. Przyspieszenie strony nie może prowadzić do wyświetlania niewłaściwych danych.",
+          "Sprawdzam również, czy optymalizacja skryptów nie blokuje wyboru wariantów, aktualizacji koszyka lub działania płatności. Wydajność ma sens tylko wtedy, gdy klient nadal może bez problemu kupić produkt.",
+          "Przy zleceniu przyspieszenia sklepu sprawdzam zarówno kod generujący katalog produktów, jak i działanie całej ścieżki zakupowej po każdej istotnej zmianie."
+        ]
       },
       {
-        id: "jak-utrzymac-efekt-po-optymalizacji-szybkosci-wordpress",
-        heading: "Jak utrzymać efekt po optymalizacji szybkości WordPress",
-        body: [
-          "Efekt może się zmieniać wraz z rozwojem strony. Duże zdjęcia dodane bez zmniejszenia wymiarów zwiększą wagę podstron, a nowa wtyczka może dołączyć dodatkowe style, skrypty lub zapytania do bazy danych. Podobnie działają kolejne narzędzia marketingowe, takie jak piksele reklamowe, czaty i zewnętrzne formularze.",
-          "Po aktualizacjach WordPressa, motywu oraz rozszerzeń warto sprawdzić najważniejsze widoki i podstawowe funkcje strony. Szczególnej kontroli wymagają sklepy, formularze oraz serwisy korzystające z wielu integracji. Sam fakt, że aktualizacja przebiegła bez komunikatu o błędzie, nie oznacza jeszcze, że wydajność pozostała bez zmian.",
-          "Jeśli nie chcesz wykonywać takich kontroli samodzielnie, możesz połączyć utrzymanie wydajności z regularną [opieką nad stroną WordPress](/uslugi/opieka-wordpress). Niezależnie od wybranego modelu najważniejsze jest traktowanie szybkości jako parametru, który warto ponownie mierzyć po większych zmianach, a nie jako jednorazowej konfiguracji.",
-        ],
+        "id": "cache-pomaga-tylko-wtedy-gdy-odwiedzajacy-widza-aktualna-str",
+        "heading": "Cache pomaga tylko wtedy, gdy odwiedzający widzą aktualną stronę",
+        "body": [
+          "Pamięć podręczna, czyli cache, pozwala ponownie wykorzystać wcześniej przygotowaną zawartość zamiast generować ją od początku przy każdym wejściu. Dobrze skonfigurowany mechanizm ogranicza pracę serwera i skraca oczekiwanie na odpowiedź.",
+          "Problem pojawia się wtedy, gdy przechowywana zawartość nie jest prawidłowo odświeżana.",
+          "W jednym z serwisów WordPress z branży windykacyjnej wykryłem sytuację, w której panel administracyjny pokazywał nowe tytuły wpisów, natomiast odwiedzający i Google nadal otrzymywali stare. Problem dotyczył 39 z 93 wpisów. Co ważne, przycisk czyszczenia cache nie usuwał nieaktualnych wersji.",
+          "To dobry przykład, dlaczego sama informacja, że wtyczka cache jest aktywna, nie wystarcza do oceny jej działania. Trzeba jeszcze sprawdzić rzeczywistą odpowiedź serwera.",
+          "Rozróżniam pamięć podręczną całej strony, cache obiektowy przechowujący wyniki operacji WordPressa oraz cache przeglądarki. Każdy z tych mechanizmów działa inaczej i może wymagać osobnej kontroli.",
+          "Po wdrożeniu poprawek porównuję wersję strony pobieraną z cache z wersją bez niego. Sprawdzam, czy zmiany treści i kodu faktycznie docierają do użytkownika. Samo naciśnięcie przycisku „Wyczyść pamięć podręczną” nie jest dla mnie potwierdzeniem poprawnego działania.",
+          "W ramach przyspieszania konfiguruję i weryfikuję cache tak, aby ograniczał zbędną pracę serwera, ale nie powodował wyświetlania nieaktualnych treści."
+        ]
       },
       {
-        id: "jakie-dostepy-sa-potrzebne-przed-rozpoczeciem-prac",
-        heading: "Jakie dostępy są potrzebne przed rozpoczęciem prac",
-        body: [
-          "Podstawą jest dostęp administracyjny do WordPressa, ponieważ pozwala sprawdzić motyw, aktywne wtyczki i konfigurację serwisu. W zależności od źródła problemu może być potrzebny również dostęp do panelu hostingu, plików strony, bazy danych albo ustawień mechanizmu pamięci podręcznej. Dokładny zestaw ustalam po pierwszym rozpoznaniu.",
-          "Najczęściej mogą być potrzebne:",
-        ],
-        list: [
-          "konto administratora WordPressa,",
-          "panel hostingu lub kontakt do osoby, która nim zarządza,",
-          "dostęp do plików i bazy danych, jeśli wymaga tego zakres zmian,",
-          "dostęp do konfiguracji zewnętrznej pamięci podręcznej lub CDN, jeśli są używane,",
-          "dane z narzędzi pomiarowych, jeżeli mają posłużyć do analizy ruchu rzeczywistych użytkowników.",
-        ],
-        outro: [
-          "Nie każdy projekt wymaga wszystkich tych dostępów. Najpierw sprawdzam publicznie dostępne wyniki i konstrukcję witryny, a następnie wskazuję, co będzie potrzebne do dalszej diagnostyki. Jeżeli częścią strony zarządza hosting, agencja albo inny wykonawca, zakres uprawnień i sposób współpracy ustalam przy rozpoczęciu prac.",
-        ],
+        "id": "dlaczego-kreator-stron-i-dodatkowe-wtyczki-moga-utrudniac-op",
+        "heading": "Dlaczego kreator stron i dodatkowe wtyczki mogą utrudniać optymalizację?",
+        "body": [
+          "WordPress pozwala budować strony na wiele sposobów. Gotowe motywy, kreatory wizualne i rozbudowane wtyczki upraszczają dodawanie funkcji, ale mogą też zwiększać ilość kodu pobieranego przez przeglądarkę.",
+          "Kreator może ładować style i skrypty potrzebne do obsługi komponentów, których dana podstrona w ogóle nie wykorzystuje. Dodatkowe wtyczki również mogą dodawać własne zasoby lub operacje wykonywane na serwerze.",
+          "Nie oznacza to, że każdy kreator jest z definicji wolny albo że trzeba od razu przebudować całą witrynę. W istniejącej stronie najpierw sprawdzam, które zasoby faktycznie wpływają na wydajność.",
+          "Przy stronach z Elementorem analizuję między innymi liczbę ładowanych plików, strukturę elementów, działanie animacji i skryptów. Szerzej opisuję swoje podejście w tekście [dlaczego odchodzę od Elementora](/blog/elementor-dlaczego-nie-warto).",
+          "Przy optymalizacji nie wyłączam jednak funkcji na ślepo. Skrypt uznany za zbędny na stronie głównej może być niezbędny w formularzu kontaktowym albo w innym szablonie.",
+          "Sprawdzam także, czy używane wtyczki nie wykonują tych samych operacji. Dwa mechanizmy optymalizacji JavaScript albo nakładające się ustawienia cache potrafią utrudnić ustalenie rzeczywistej przyczyny problemu.",
+          "Przy zleceniu oceniam obecny motyw i zestaw wtyczek, ograniczam zbędne obciążenia tam, gdzie jest to bezpieczne, i wyraźnie wskazuję, jeśli dalsza poprawa wymagałaby szerszej przebudowy."
+        ]
       },
-    ],
+      {
+        "id": "po-optymalizacji-sprawdzam-dzialanie-strony-nie-tylko-wynik",
+        "heading": "Po optymalizacji sprawdzam działanie strony, nie tylko wynik Lighthouse",
+        "body": [
+          "Poprawa wyniku w narzędziu testowym nie oznacza automatycznie, że prace są zakończone. Strona musi nadal poprawnie wyświetlać treści, obsługiwać formularze i działać na różnych urządzeniach.",
+          "Szczególnie ważne jest testowanie zmian w kodzie. Przy jednej z własnych wtyczek optymalizujących obrazy pojawił się błąd 500 na części kart produktów. Wtyczka próbowała uzyskać dane produktu, zanim były dostępne. Znalazłem przyczynę w logu serwera i wgrałem poprawkę tego samego dnia.",
+          "Ten przypadek pokazuje, dlaczego test pojedynczej karty produktu nie wystarcza. Różne produkty mogą korzystać z innych wariantów danych, układów i funkcji.",
+          "Po wdrożeniu sprawdzam więc nie tylko stronę główną, ale również istotne typy podstron. Kontroluję zachowanie obrazów, skryptów, formularzy i elementów interaktywnych. W sklepie sprawdzam również koszyk oraz finalizację zamówienia.",
+          "Następnie wykonuję ponowne pomiary i zestawiam je ze stanem początkowym. Oddzielam zmiany wynikające z moich poprawek od ograniczeń związanych z serwerem czy usługami zewnętrznymi. Nie traktuję pojedynczego wyniku Lighthouse jako pełnego obrazu wydajności.",
+          "W raporcie opisuję wykonane prace, wyniki przed i po oraz problemy, które nadal wpływają na szybkość. Dzięki temu nie musisz zgadywać, czy zmieniły się wyłącznie ustawienia wtyczki, czy rzeczywisty sposób działania strony.",
+          "Jeśli zlecasz mi przyspieszenie strony WordPress, kończę pracę dopiero po sprawdzeniu wdrożonych poprawek, najważniejszych funkcji serwisu i wyników ponownego pomiaru."
+        ]
+      }
+    ]
   },
   "nowoczesna-strona-firmowa-2026": {
     "heading": "Strona dla małej firmy: co warto ustalić przed zleceniem projektu?",
