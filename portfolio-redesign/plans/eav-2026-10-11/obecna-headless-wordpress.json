@@ -1,0 +1,228 @@
+{
+ "page": {
+  "slug": "headless-wordpress",
+  "title": "Headless WordPress",
+  "metaTitle": "Headless WordPress dla firm: WordPress i Next.js",
+  "metaDescription": "Headless WordPress dla firm: WordPress zostaje panelem do treści, a stronę wyświetla Next.js. Migracja z zachowaniem wygodnej edycji i podstaw SEO.",
+  "h1": "Headless WordPress dla firm z istniejącym panelem treści",
+  "lead": "Łączę wygodną edycję treści w WordPressie z osobną stroną zbudowaną w Next.js. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Headless WordPress to rozwiązanie, w którym WordPress nadal służy do dodawania i edycji treści, ale nie odpowiada już za wyświetlanie strony. Treści pobiera osobna warstwa w Next.js, dzięki czemu można zachować znany panel administracyjny i niezależnie rozwijać to, co widzi użytkownik.",
+   "Taki układ ma sens przede wszystkim wtedy, gdy firma chce zostać przy WordPressie jako systemie do treści, ale sama strona potrzebuje funkcji lub sposobu działania typowego dla aplikacji w Next.js. Nie stosuję tej architektury z automatu. Jeśli zwykły WordPress wystarczy, dokładanie drugiej technologii tylko zwiększyłoby złożoność projektu. Więcej o samym przejściu opisuję [we wpisie o migracji WordPress na Next.js](/blog/migracja-wordpress-na-nextjs).",
+   "Nie mam jeszcze wdrożenia headless WordPress w portfolio, więc nie będę udawał, że jest inaczej. Mam natomiast osobne doświadczenie z WordPressem oraz Next.js. Własny projekt [Kantorymapa](/projekty/kantorymapa) działa w Next.js, obejmuje 1900 kantorów w 140 miastach i ładuje się poniżej sekundy."
+  ],
+  "bullets": [
+   {
+    "title": "WordPress zostaje panelem do treści",
+    "body": "Nadal edytujesz wpisy, strony i pola w znanym panelu WordPressa. Nie musisz przenosić redakcji do nowego systemu tylko dlatego, że zmienia się sposób wyświetlania strony."
+   },
+   {
+    "title": "Next.js odpowiada za stronę dla użytkownika",
+    "body": "Widoczną część serwisu buduję osobno w Next.js. Dzięki temu mogę dopasować sposób generowania i odświeżania podstron do treści oraz funkcji projektu."
+   },
+   {
+    "title": "Treść i warstwa wizualna są rozdzielone",
+    "body": "WordPress przechowuje dane, a Next.js je pobiera i wyświetla. Zmiany w wyglądzie strony można dzięki temu rozwijać bez przebudowy panelu, w którym pracujesz z treścią."
+   },
+   {
+    "title": "Podstawy technicznego SEO są częścią wdrożenia",
+    "body": "Przygotowuję strukturę nagłówków, dane strukturalne tam, gdzie są potrzebne, mapę strony i konfigurację Search Console. Przed oddaniem sprawdzam też wydajność strony w Lighthouse."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Analiza obecnego WordPressa",
+    "body": "Sprawdzam typy treści, pola ACF, kategorie, wersje językowe i integracje. Ustalam, które dane trzeba udostępnić nowej warstwie strony i czy headless rzeczywiście ma tutaj uzasadnienie."
+   },
+   {
+    "step": "02",
+    "title": "Przygotowanie WordPressa do współpracy z Next.js",
+    "body": "Konfiguruję sposób pobierania treści z WordPressa i porządkuję dane potrzebne stronie. Dobieram rozwiązanie do istniejącej struktury, zamiast przebudowywać panel bez potrzeby."
+   },
+   {
+    "step": "03",
+    "title": "Budowa strony w Next.js",
+    "body": "Tworzę warstwę widoczną dla użytkownika, łączę ją z treściami z WordPressa i udostępniam Ci wersję testową do sprawdzenia. Jeśli projekt obejmuje nowy wygląd, wcześniej przygotowuję makiety w Figmie z dwiema turami poprawek."
+   },
+   {
+    "step": "04",
+    "title": "Testy i przełączenie strony",
+    "body": "Sprawdzam treści, adresy, przekierowania i działanie strony przed publikacją. Migrację przygotowuję tak, żeby przerwa była jak najkrótsza, ale przy zmianie DNS może wystąpić krótka niedostępność."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Co to jest headless WordPress?",
+    "a": "WordPress działa jako panel do zarządzania treścią, a stronę widoczną dla użytkownika wyświetla osobna aplikacja, na przykład w Next.js. Obie części komunikują się ze sobą, więc możesz nadal pracować w WordPressie bez uzależniania wyglądu strony od jego motywu."
+   },
+   {
+    "q": "Po co headless WordPress, skoro zwykły WordPress działa?",
+    "a": "Headless ma sens wtedy, gdy chcesz zachować WordPress do edycji, ale warstwa widoczna dla użytkownika potrzebuje funkcji lub architektury wygodniejszej do zbudowania w Next.js. Jeśli typowa strona WordPress spełnia wymagania projektu, nie dokładam drugiego systemu bez konkretnego powodu."
+   },
+   {
+    "q": "Ile kosztuje migracja na headless WordPress?",
+    "a": "Największy wpływ na koszt ma zakres funkcji, które trzeba odtworzyć po stronie Next.js. Inaczej wygląda serwis z prostymi podstronami, a inaczej projekt z formularzami, logowaniem, wyszukiwaniem czy niestandardowymi integracjami. Zakres i wycenę ustalam po analizie obecnej strony."
+   },
+   {
+    "q": "Czy nadal będę mógł sam edytować treści?",
+    "a": "Tak. WordPress nadal służy do dodawania i aktualizowania treści, a Next.js pobiera je i pokazuje na stronie. Sposób odświeżania dobieram do projektu, żeby publikacja zmian nie wymagała ręcznej ingerencji w kod."
+   },
+   {
+    "q": "Ile trwa migracja na headless WordPress?",
+    "a": "Termin zależy od obecnej struktury WordPressa i funkcji, które trzeba przenieść do nowej warstwy strony. Najpierw sprawdzam zakres, a dopiero potem podaję termin. Nową wersję mogę przygotowywać równolegle do działającego serwisu."
+   },
+   {
+    "q": "Jakie są ograniczenia headless WordPress?",
+    "a": "Część wtyczek WordPressa działa tylko wtedy, gdy to WordPress wyświetla stronę, więc ich funkcje trzeba czasem odtworzyć w Next.js. Dochodzą też dwie osobne części systemu, które trzeba utrzymywać. Dlatego przed wyborem tej architektury sprawdzam, czy jej korzyści uzasadniają dodatkową złożoność."
+   },
+   {
+    "q": "Czy po przejściu na headless nadal edytuję treści w WordPressie?",
+    "a": "Tak. Pozostawiam WordPress jako panel do dodawania i aktualizowania treści, a front pobiera z niego potrzebne dane. Sposób publikacji konfiguruję odpowiednio do struktury serwisu."
+   },
+   {
+    "q": "Czy wtyczki SEO działają w headless WordPressie?",
+    "a": "Część wtyczek może nadal przechowywać dane SEO w WordPressie, ale ich ustawienia nie pojawią się automatycznie na froncie. Pobieram potrzebne dane przez API i obsługuję je w aplikacji Next.js."
+   },
+   {
+    "q": "Czy mogę zobaczyć podgląd wpisu przed publikacją?",
+    "a": "Tak, jeśli tryb podglądu zostanie uwzględniony w zakresie wdrożenia. Przygotowuję wtedy bezpieczny sposób wyświetlania roboczej wersji treści na froncie przed jej opublikowaniem."
+   },
+   {
+    "q": "Gdzie hostowany jest front, a gdzie WordPress?",
+    "a": "WordPress może działać na zwykłym hostingu, natomiast front umieszczam na Vercel albo na własnym VPS. Przy komercyjnej stronie na Vercel korzystam z planu Pro."
+   },
+   {
+    "q": "Czy moją obecną stronę WordPress da się przenieść na headless?",
+    "a": "Najpierw sprawdzam typy treści, pola, wtyczki, formularze i integracje. Treści mogą pozostać w WordPressie, natomiast front buduję od nowa i przygotowuję potrzebne przekierowania 301."
+   },
+   {
+    "q": "Kiedy headless WordPress nie ma sensu?",
+    "a": "Nie rekomenduję go, gdy standardowa strona firmowa może działać sprawnie na WordPressie z własnym motywem. Jeśli osobny front nie rozwiązuje konkretnego problemu biznesowego lub technicznego, jego wdrożenie niepotrzebnie zwiększyłoby złożoność utrzymania."
+   }
+  ],
+  "cta": "Opisz obecną stronę, a sprawdzę, czy headless ma w niej sens"
+ },
+ "block": {
+  "heading": "Headless WordPress w praktyce: jak ocenić, czy ta architektura pasuje do Twojej firmy",
+  "intro": [
+   "**W tym poradniku dowiesz się, kiedy headless WordPress jest uzasadnionym wyborem, jakie ma ograniczenia oraz czym różni się od klasycznej strony opartej na WordPressie.** Wyjaśniam też, co dzieje się z wtyczkami, podglądem treści i formularzami, gdzie hostowane są obie części systemu oraz jak wygląda migracja istniejącej strony.",
+   "Jeśli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd realizacji, lecz także na sposób rozwiązania codziennej edycji, publikacji i późniejszego utrzymania. WordPress jako headless CMS daje dużą swobodę, ale wprowadza dodatkową warstwę techniczną. Dlatego przed zaproponowaniem tej architektury sprawdzam, czy przyniesie Twojej firmie konkretną korzyść."
+  ],
+  "sections": [
+   {
+    "id": "headless-wordpress-ma-sens-tylko-przy-konkretnych-wymaganiac",
+    "heading": "Headless WordPress ma sens tylko przy konkretnych wymaganiach",
+    "body": [
+     "Zwykły WordPress z własnym motywem wystarcza większości stron firmowych. Można w nim przygotować szybki serwis, wygodną edycję sekcji przez pola ACF oraz indywidualny wygląd bez korzystania z Elementora, Divi czy innych kreatorów. Jeżeli potrzebujesz strony usługowej, firmowego bloga, prezentacji oferty i formularza kontaktowego, oddzielanie panelu od frontu może nie dać korzyści proporcjonalnych do kosztu i złożoności.",
+     "Headless WordPress zaczyna mieć sens, gdy strona ma współpracować z funkcjami typowymi dla aplikacji, korzystać z wielu źródeł danych albo udostępniać treści w kilku kanałach. To także rozwiązanie dla firmy, która chce zachować znany panel redakcyjny, lecz potrzebuje frontu rozwijanego niezależnie w Next.js.",
+     "Przed wyborem tej architektury warto odpowiedzieć na kilka pytań:"
+    ],
+    "list": [
+     "Czy strona będzie miała funkcje wykraczające poza standardowy serwis firmowy?",
+     "Czy te same treści mają trafiać do więcej niż jednego kanału?",
+     "Czy niezależny rozwój frontu jest ważniejszy niż prostota całego systemu?",
+     "Czy firma akceptuje utrzymanie dwóch połączonych środowisk?"
+    ],
+    "outro": [
+     "Jeżeli na większość tych pytań odpowiadasz przecząco, częściej rekomenduję klasyczny WordPress. Usługę [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress) traktuję jako pełnoprawną alternatywę, a nie słabszą wersję rozwiązania headless."
+    ]
+   },
+   {
+    "id": "klasyczny-wordpress-i-headless-roznia-sie-nie-tylko-technolo",
+    "heading": "Klasyczny WordPress i headless różnią się nie tylko technologią",
+    "body": [
+     "W klasycznym WordPressie panel, motyw i mechanizm wyświetlania strony działają w jednym systemie. W architekturze headless WordPress przechowuje treści, natomiast osobny front pobiera je przez API. Szersze wyjaśnienie tego modelu znajdziesz w materiale [headless CMS: co to jest](/blog/headless-cms-co-to)."
+    ],
+    "table": {
+     "caption": "Klasyczny WordPress i headless różnią się nie tylko technologią",
+     "head": [
+      "Obszar",
+      "Klasyczny WordPress",
+      "Headless WordPress"
+     ],
+     "rows": [
+      [
+       "Edycja treści",
+       "Odbywa się w panelu WordPressa",
+       "Nadal odbywa się w panelu WordPressa"
+      ],
+      [
+       "Szybkość",
+       "Zależy od motywu, wtyczek, hostingu i optymalizacji",
+       "Zależy głównie od sposobu zbudowania i udostępniania frontu"
+      ],
+      [
+       "Wtyczki",
+       "Mogą wpływać bezpośrednio na wygląd i działanie strony",
+       "Działają tylko wtedy, gdy ich dane lub funkcje zostaną obsłużone przez front"
+      ],
+      [
+       "Hosting",
+       "Zwykle jedno środowisko",
+       "Osobny hosting WordPressa i frontu"
+      ],
+      [
+       "Koszt utrzymania",
+       "Zwykle niższy przy prostych stronach",
+       "Może być wyższy ze względu na dwa środowiska"
+      ],
+      [
+       "Podgląd treści",
+       "Najczęściej dostępny od razu",
+       "Wymaga przygotowania trybu podglądu"
+      ]
+     ]
+    },
+    "outro": [
+     "Najważniejsza różnica dotyczy odpowiedzialności za działanie strony. W klasycznym modelu wiele funkcji można dodać i skonfigurować wewnątrz WordPressa. Przy połączeniu WordPress z Next.js trzeba świadomie zdecydować, które dane udostępnia panel, a które zachowania implementuje front."
+    ]
+   },
+   {
+    "id": "nie-kazda-wtyczka-dziala-po-oddzieleniu-frontu",
+    "heading": "Nie każda wtyczka działa po oddzieleniu frontu",
+    "body": [
+     "Po przejściu na headless przestają działać przede wszystkim te wtyczki, które zmieniają kod lub wygląd strony generowanej przez motyw WordPressa. Dotyczy to między innymi kreatorów wizualnych, części galerii, formularzy oraz dodatków osadzających gotowe elementy w szablonie. Wtyczka może nadal działać w panelu, ale jej rezultat nie pojawi się automatycznie na froncie w Next.js.",
+     "Podobna zasada dotyczy SEO. Wtyczka może przechowywać tytuł, opis, adres kanoniczny lub ustawienia indeksowania, jednak front musi pobrać te informacje przez API i umieścić je w odpowiednim miejscu strony. Samo zainstalowanie dodatku SEO nie oznacza jeszcze, że wszystkie jego funkcje będą widoczne dla wyszukiwarki.",
+     "Rozwiązuję to na poziomie architektury wdrożenia. Dane SEO udostępniam frontowi, formularze obsługuję po stronie aplikacji, a dla nieopublikowanych treści przygotowuję tryb podglądu. Zakres zależy od używanych wtyczek i sposobu pracy redakcji. Dlatego przed migracją sprawdzam nie tylko listę dodatków, lecz także to, do czego rzeczywiście są wykorzystywane."
+    ]
+   },
+   {
+    "id": "wordpress-i-front-wymagaja-osobnych-srodowisk-hostingowych",
+    "heading": "WordPress i front wymagają osobnych środowisk hostingowych",
+    "body": [
+     "WordPress może pozostać na zwykłym hostingu, o ile środowisko zapewnia stabilne działanie panelu i dostęp do danych przez API. Nie musi już obsługiwać całego widoku strony dla użytkownika, ale nadal przechowuje treści, konta redaktorów, media i ustawienia potrzebne do publikacji.",
+     "Front w Next.js umieszczam na Vercel albo na własnym VPS. Przy stronie komercyjnej korzystanie z Vercel oznacza wybór planu Pro. Własny VPS może być alternatywą, jeśli przemawiają za nim wymagania techniczne projektu, sposób zarządzania infrastrukturą lub pozostałe usługi działające w firmie.",
+     "Dwie części oznaczają też dwa obszary, które trzeba aktualizować, monitorować i zabezpieczać. Awaria panelu nie zawsze musi wyłączyć opublikowaną stronę, ale może uniemożliwić dodawanie nowych treści. Z kolei problem z frontem może wpłynąć na dostępność serwisu mimo prawidłowego działania WordPressa. Sposób publikacji i odświeżania danych dobieram więc do tego, jak często zmieniasz treści i jak szybko aktualizacje powinny pojawiać się na stronie."
+    ]
+   },
+   {
+    "id": "migracja-zachowuje-tresci-ale-wymaga-zbudowania-nowego-front",
+    "heading": "Migracja zachowuje treści, ale wymaga zbudowania nowego frontu",
+    "body": [
+     "Migracja istniejącej strony nie polega na automatycznej zamianie obecnego motywu na aplikację Next.js. Treści mogą pozostać w panelu WordPressa, ale trzeba zbudować nowy front, połączyć go z właściwymi typami danych oraz odtworzyć potrzebne funkcje. Obejmuje to również pola ACF, kategorie, multimedia, wersje językowe i zależności pomiędzy podstronami.",
+     "Przed rozpoczęciem sprawdzam strukturę adresów i ustalam, które podstrony mają zachować dotychczasowe adresy. Jeśli adres musi się zmienić, przygotowuję przekierowanie 301 ze starego adresu na nowy. Pomaga to użytkownikom i wyszukiwarkom trafić do właściwej treści, ale **nie obiecuję zachowania konkretnych pozycji w Google**.",
+     "Nową wersję można przygotowywać równolegle do działającego serwisu, a przełączenie planuję tak, aby przerwa była jak najkrótsza. Przy zmianie DNS może jednak wystąpić krótka niedostępność. Więcej elementów wymagających kontroli opisuję w poradniku [migracja z WordPress na Next.js](/blog/migracja-wordpress-na-nextjs)."
+    ]
+   },
+   {
+    "id": "koszt-i-czas-zaleza-od-funkcji-ktore-trzeba-odtworzyc",
+    "heading": "Koszt i czas zależą od funkcji, które trzeba odtworzyć",
+    "body": [
+     "Koszt wdrożenia wynika przede wszystkim z zakresu nowego frontu, a nie z samego połączenia WordPressa z API. Prosta prezentacja treści wymaga mniej pracy niż serwis z rozbudowanym filtrowaniem, wieloma formularzami, wyszukiwaniem, kontami użytkowników albo integracjami z zewnętrznymi usługami.",
+     "Na zakres prac wpływają przede wszystkim:"
+    ],
+    "list": [
+     "liczba typów treści i pól, które ma obsługiwać WordPress,",
+     "przygotowanie podglądu nieopublikowanych materiałów,",
+     "liczba i sposób działania formularzy,",
+     "wersje językowe oraz zależności między tłumaczeniami,",
+     "integracje, wyszukiwanie i funkcje aplikacyjne."
+    ],
+    "outro": [
+     "Termin podaję po rozpoznaniu obecnej strony i oczekiwań wobec nowego frontu. Aplikacje i projekty MVP w Next.js powstają zwykle w ciągu 6 do 12 tygodni, ale nie przypisuję tego przedziału automatycznie każdej migracji. Strona z prostą strukturą treści i serwis z wieloma integracjami wymagają innego planu, dlatego wycena obejmuje ustalony zakres oraz termin dopasowany do projektu."
+    ]
+   }
+  ]
+ }
+}
