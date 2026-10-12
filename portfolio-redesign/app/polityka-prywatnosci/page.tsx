@@ -26,7 +26,7 @@ const SECTIONS: { heading: string; body: React.ReactNode[] }[] = [
   {
     heading: "Formularz kontaktowy i korespondencja",
     body: [
-      "Formularz zbiera imię, adres e-mail, temat i treść wiadomości. Dane służą wyłącznie do odpowiedzi na zapytanie i ewentualnego przygotowania oferty. Podstawą jest art. 6 ust. 1 lit. b RODO (działania przed zawarciem umowy na Twoje żądanie), a w pozostałym zakresie art. 6 ust. 1 lit. f RODO (prowadzenie korespondencji jako prawnie uzasadniony interes administratora).",
+      "Formularz zbiera imię, adres e-mail, temat i treść wiadomości. Razem z wiadomością wysyła też adres strony, z której trafiłeś do serwisu (np. wyszukiwarka), oraz listę podstron otwartych przed wysłaniem w tej karcie przeglądarki; te informacje nie są zapisywane na Twoim urządzeniu. Dane służą wyłącznie do odpowiedzi na zapytanie i ewentualnego przygotowania oferty. Podstawą jest art. 6 ust. 1 lit. b RODO (działania przed zawarciem umowy na Twoje żądanie), a w pozostałym zakresie art. 6 ust. 1 lit. f RODO (prowadzenie korespondencji jako prawnie uzasadniony interes administratora).",
       "Wiadomość z formularza jest wysyłana e-mailem przez usługę Resend i trafia do skrzynki pocztowej administratora. Dane przechowuję przez czas prowadzenia korespondencji, a jeśli dojdzie do współpracy, przez okres wymagany przepisami podatkowymi i do przedawnienia roszczeń.",
       "Podanie danych jest dobrowolne, ale bez adresu e-mail nie mogę odpowiedzieć na wiadomość.",
     ],

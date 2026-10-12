@@ -1,7 +1,9 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { recordPath, trackEvent } from "@/lib/leadContext";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -13,6 +15,21 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
  */
 export function Analytics() {
   const [consent, setConsent] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname) recordPath(pathname);
+  }, [pathname]);
+
+  // Kliknięcie w adres e-mail to też zapytanie; liczy się tylko, gdy GA4 działa po zgodzie.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.('a[href^="mailto:"]');
+      if (a) trackEvent("click_email", { page_path: location.pathname });
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;

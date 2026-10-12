@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { leadContext, trackEvent } from "@/lib/leadContext";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -27,6 +28,7 @@ export default function ContactForm() {
       subject: String(formData.get("subject") ?? ""),
       message: String(formData.get("message") ?? ""),
       website: String(formData.get("website") ?? ""),
+      source: leadContext(),
     };
 
     try {
@@ -48,6 +50,11 @@ export default function ContactForm() {
       }
 
       setStatus("success");
+      trackEvent("generate_lead", {
+        form_subject: payload.subject,
+        landing_page: payload.source.landing,
+        referrer_host: payload.source.referrer,
+      });
       form.reset();
       setSubject("");
     } catch {

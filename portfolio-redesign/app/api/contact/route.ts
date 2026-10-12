@@ -70,6 +70,18 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // Skąd przyszło zapytanie: zewnętrzny referrer, strona wejścia i ostatnie podstrony (z formularza, tylko do maila).
+  const src = (data.source ?? {}) as Record<string, unknown>;
+  const path = (v: unknown) => (typeof v === "string" && /^\/[\w\-/.%]*$/.test(v) ? v.slice(0, 200) : "");
+  const referrer = typeof src.referrer === "string" && /^[\w.-]{1,100}$/.test(src.referrer) ? src.referrer : "";
+  const landing = path(src.landing);
+  const pages = Array.isArray(src.pages) ? src.pages.map(path).filter(Boolean).slice(-8) : [];
+  const sourceLines = [
+    `Przyszedł z: ${referrer || "wejście bezpośrednie lub brak danych"}`,
+    landing ? `Strona wejścia: ${landing}` : "",
+    pages.length ? `Oglądał: ${pages.join(" > ")}` : "",
+  ].filter(Boolean);
+
   const html = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.55; color: #1a1a1a; max-width: 560px; margin: 0 auto; padding: 24px;">
       <p style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #888; margin: 0 0 8px;">Nowa wiadomość — marcinsiwonia.pl</p>
@@ -80,6 +92,7 @@ export async function POST(request: NextRequest) {
       </table>
       <hr style="border: 0; border-top: 1px solid #eee; margin: 24px 0;" />
       <div style="white-space: pre-wrap; font-size: 15px;">${escapeHtml(message)}</div>
+      <p style="font-size: 12px; color: #888; margin: 24px 0 0;">${sourceLines.map(escapeHtml).join("<br />")}</p>
     </div>
   `;
 
@@ -90,6 +103,8 @@ E-mail: ${email}
 Temat: ${subject}
 
 ${message}
+
+${sourceLines.join("\n")}
 `;
 
   try {
