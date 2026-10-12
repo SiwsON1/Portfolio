@@ -3033,83 +3033,136 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ]
   },
   "tworzenie-stron-dla-influencerow": {
-    heading: "Strona internetowa dla influencera jako centrum współprac i sprzedaży",
-    intro: [
-      "**W tym poradniku pokazuję, jak strona internetowa dla influencera może uporządkować ofertę dla marek, zastąpić szybko dezaktualizujący się PDF i wspierać sprzedaż własnych produktów.** Wyjaśniam również, czym takie rozwiązanie różni się od linku w bio, jakie informacje warto zbierać w formularzu oraz co wpływa na zakres i koszt realizacji.",
-      "Dobrze zaplanowana strona dla twórcy internetowego nie musi być rozbudowanym portalem. Powinna przede wszystkim skracać drogę do najważniejszych informacji i pozwalać Ci rozwijać własny kanał niezależnie od zmian zachodzących na platformach społecznościowych. Projektując taką stronę, biorę pod uwagę zarówno potrzeby odbiorców, jak i osób odpowiedzialnych za kampanie po stronie marek.",
+    "heading": "Strona dla twórcy internetowego jako centrum współprac, media kitu i sprzedaży",
+    "intro": [
+      "Strona dla twórcy internetowego pozwala zebrać media kit, portfolio współprac, kontakt dla marek i własne produkty pod jednym adresem. Nie musisz za każdym razem wysyłać nowego PDF-a ze statystykami ani odsyłać potencjalnego partnera do kilku profili społecznościowych. Możesz aktualizować ofertę w panelu strony, a marka korzysta z tego samego linku, niezależnie od tego, kiedy go od Ciebie otrzymała.",
+      "Nie oznacza to, że musisz rezygnować z Instagrama, TikToka czy YouTube'a. Twoje profile nadal służą do publikowania materiałów i kontaktu ze społecznością. Własna strona pełni inną funkcję: porządkuje informacje potrzebne markom i daje odbiorcom miejsce, w którym mogą zapisać się do newslettera albo kupić Twój produkt. Projektując taką stronę, skupiam się na tym, żeby była wygodna na telefonie, prosta w aktualizacji i możliwa do rozbudowania, kiedy zmienią się Twoje potrzeby."
     ],
-    sections: [
+    "sections": [
       {
-        id: "media-kit-online-mozna-aktualizowac-bez-wysylania-kolejnych-",
-        heading: "Media kit online można aktualizować bez wysyłania kolejnych plików",
-        body: [
-          "Klasyczny media kit w PDF sprawdza się do momentu, w którym zmieniają się statystyki, formaty współpracy albo dane o odbiorcach. Po każdej aktualizacji powstaje nowa wersja dokumentu, ale wcześniejsze pliki nadal mogą znajdować się w skrzynkach potencjalnych partnerów. **Media kit online działa pod jednym adresem, dlatego osoba reprezentująca markę zawsze może zobaczyć aktualną wersję oferty.**",
-          "Na takiej podstronie warto umieścić informacje, które pomagają szybko ocenić dopasowanie twórcy do kampanii:",
+        "id": "media-kit-online-mozesz-aktualizowac-bez-wysylania-kolejnych",
+        "heading": "Media kit online możesz aktualizować bez wysyłania kolejnych PDF-ów",
+        "body": [
+          "Załóżmy, że wysyłasz marce media kit w poniedziałek. Dokument zawiera statystyki Twoich kanałów, charakterystykę odbiorców, dostępne formaty reklamowe i przykłady współprac. Po pewnym czasie dane się zmieniają, ale osoba, która otrzymała plik, nadal ma poprzednią wersję. Jeśli wróci do rozmowy po kilku miesiącach, może opierać się na nieaktualnych informacjach.",
+          "Media kit online rozwiązuje problem wielu wersji tego samego dokumentu. Przygotuję go jako podstronę pod Twoją domeną. Kiedy zmienisz statystyki lub ofertę, zaktualizujesz dane w panelu, a adres pozostanie bez zmian.",
+          "Na takiej podstronie możemy umieścić:"
         ],
-        list: [
-          "aktualne dane dotyczące zasięgów i zaangażowania,",
-          "charakterystykę odbiorców, w tym ich zainteresowania i podstawowe dane demograficzne,",
-          "dostępne kanały oraz formaty publikacji,",
-          "przykłady wcześniejszych współprac i zaakceptowane materiały,",
-          "stawki, jeżeli chcesz udostępniać je publicznie.",
+        "list": [
+          "aktualne zasięgi i dane o zaangażowaniu odbiorców na poszczególnych platformach,",
+          "charakterystykę społeczności, w tym zainteresowania i dostępne dane demograficzne,",
+          "formaty współpracy, na przykład filmy, relacje, publikacje sponsorowane lub materiały UGC,",
+          "przykłady wcześniejszych kampanii i materiały zatwierdzone do publikacji,",
+          "stawki, jeśli chcesz je udostępniać, oraz formularz kontaktowy dla marek."
         ],
-        outro: [
-          "Dane nie muszą być wpisane na stałe w kodzie. Mogę przygotować panel, w którym samodzielnie zmienisz liczby, opis grupy odbiorców, formaty oraz przykłady realizacji. Aktualizacja nie zmienia adresu strony, więc nie trzeba przygotowywać nowego pliku i ponownie przesyłać go wszystkim zainteresowanym.",
-          "Stawki są opcjonalnym elementem media kitu. Możesz pokazać je publicznie, ukryć na podstronie zabezpieczonej hasłem albo całkowicie zrezygnować z ich publikowania. Takie podejście pozwala dostosować sposób prezentowania oferty do rodzaju współprac i przyjętego modelu negocjacji.",
-        ],
+        "outro": [
+          "Nie wszystkie te informacje muszą być publiczne. Możesz zdecydować, że opis oferty zobaczy każdy odwiedzający, ale stawki udostępnisz wyłącznie zainteresowanym partnerom. Mogę przygotować osobną podstronę chronioną hasłem albo pozostawić wycenę współprac poza serwisem.",
+          "Ważna jest również aktualizacja statystyk. Najprostszym rozwiązaniem jest panel, w którym samodzielnie wpisujesz liczby. Możliwe jest także automatyczne pobieranie części danych, ale zależy to od API platformy, dostępnych uprawnień i zakresu udostępnianych informacji. Nie mogę obiecać automatycznej synchronizacji każdego wskaźnika z Instagrama, TikToka i YouTube'a.",
+          "Przed rozpoczęciem projektu sprawdzę więc, które informacje chcesz pokazywać i jak mają być aktualizowane. Na tej podstawie zaproponuję sposób wdrożenia media kitu, który będzie wygodny również wtedy, gdy Twoja oferta się zmieni."
+        ]
       },
       {
-        id: "wlasna-strona-daje-wiecej-mozliwosci-niz-sam-link-w-bio",
-        heading: "Własna strona daje więcej możliwości niż sam link w bio",
-        body: [
-          "Link w bio dobrze sprawdza się jako proste menu prowadzące do kilku miejsc. Nie musi jednak być docelowym centrum Twojej marki. **Strona internetowa dla influencera może pełnić jednocześnie funkcję media kitu online, portfolio, formularza dla marek, sklepu i miejsca zapisu do newslettera.** Wszystkie te elementy działają pod własną domeną i mogą rozwijać się razem z działalnością.",
+        "id": "wlasna-strona-daje-ci-wiecej-niz-sam-link-w-bio",
+        "heading": "Własna strona daje Ci więcej niż sam link w bio",
+        "body": [
+          "Link w bio jest przydatny, kiedy chcesz skierować odbiorców do kilku miejsc. Możesz umieścić tam odnośnik do najnowszego filmu, sklepu, podcastu czy pozostałych profili. Nie każdemu twórcy potrzeba czegoś bardziej rozbudowanego.",
+          "Problem pojawia się wtedy, gdy oprócz odnośników chcesz przedstawić markom ofertę, pokazać portfolio i zbierać zapytania. Lista linków prowadzi do informacji, ale sama zazwyczaj ich nie porządkuje. Z kolei PDF z media kitem zawiera więcej szczegółów, lecz wymaga ponownego przygotowania i wysyłania po zmianach."
         ],
-        table: {"caption":"Własna strona daje więcej możliwości niż sam link w bio","head":["Obszar","Własna strona","Link w bio","Kreator stron dla twórców"],"rows":[["Własność","Strona i treści pozostają pod Twoją kontrolą","Profil działa w zewnętrznej usłudze","Zakres kontroli zależy od platformy"],["Domena","Własny, rozpoznawalny adres","Zwykle adres platformy lub przekierowanie","Własna domena może zależeć od planu"],["Możliwości","Media kit, formularze, sklep, newsletter i treści","Głównie lista odnośników","Funkcje dostępne w ramach kreatora"],["SEO","Możliwość rozwijania treści i podstron widocznych w wyszukiwarce","Bardzo ograniczony zakres","Zależny od ustawień i konstrukcji platformy"],["Koszt","Zależy od projektu, funkcji i utrzymania","Zwykle niski lub abonamentowy","Najczęściej abonament zależny od planu"]]},
-        outro: [
-          "Nie każdy twórca od razu potrzebuje indywidualnego serwisu. Jeżeli chcesz wyłącznie zebrać kilka odnośników, prosty kreator może wystarczyć. Własna strona zaczyna mieć większe znaczenie wtedy, gdy potrzebujesz spójnej oferty dla partnerów, chcesz publikować treści, budować bazę mailingową lub sprzedawać bez odsyłania odbiorców do kilku różnych narzędzi.",
-          "Projekt mogę oprzeć na rozwiązaniu dopasowanym do potrzeb i planów rozwoju. Może to być WordPress z wygodną edycją treści albo jedna z [nowoczesnych stron internetowych](/uslugi/nowoczesne-strony-internetowe), jeśli potrzebne są bardziej niestandardowe funkcje. Przy serwisie generowanym z uporządkowanych danych mogę również rozważyć [strony Jamstack](/uslugi/strony-jamstack).",
-        ],
+        "table": {
+          "caption": "Własna strona daje Ci więcej niż sam link w bio",
+          "head": [
+            "Rozwiązanie",
+            "Co Ci daje",
+            "Główne ograniczenie"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Link w bio",
+              "Szybki dostęp do kanałów, materiałów i zewnętrznych serwisów",
+              "Sam w sobie nie zastępuje pełnej oferty i formularza dla marek"
+            ],
+            [
+              "Media kit w PDF",
+              "Dokument ze statystykami, odbiorcami i ofertą, który możesz przesłać partnerowi",
+              "Wysłane kopie nie aktualizują się po zmianie danych"
+            ],
+            [
+              "Własna strona",
+              "Media kit online, portfolio, kontakt, newsletter i sklep pod własną domeną",
+              "Wymaga zaprojektowania, wdrożenia i utrzymania"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie proponuję indywidualnej strony każdemu, kto prowadzi profil w mediach społecznościowych. Jeśli potrzebujesz tylko kilku przycisków prowadzących do innych miejsc, prosty kreator może Ci wystarczyć.",
+          "Własna strona zaczyna mieć większy sens, kiedy masz już materiały do pokazania, współpracujesz z markami albo chcesz rozwijać własne produkty. Możesz zacząć od media kitu i portfolio, a dopiero później uruchomić newsletter czy sprzedaż.",
+          "Przygotuję strukturę strony z uwzględnieniem tych planów. Nie musisz zamawiać wszystkich funkcji od razu, ale dobrze wiedzieć przed wdrożeniem, czy prosta strona twórcy ma z czasem stać się rozbudowanym serwisem."
+        ]
       },
       {
-        id: "formularz-dla-marek-pomaga-odroznic-konkretne-propozycje-od-",
-        heading: "Formularz dla marek pomaga odróżnić konkretne propozycje od ogólnych zapytań",
-        body: [
-          "Wiadomość z pytaniem o możliwość współpracy często nie zawiera danych potrzebnych do podjęcia decyzji. Brakuje budżetu, terminu, rodzaju publikacji albo informacji o produkcie. W efekcie pierwsza odpowiedź nie dotyczy warunków kampanii, lecz służy zebraniu podstawowych informacji.",
-          "Formularz dla marek może prowadzić osobę wysyłającą zapytanie przez zestaw konkretnych pól. W zależności od Twojego modelu współpracy mogą to być nazwa marki, dane kontaktowe, promowany produkt, planowany budżet, termin kampanii, oczekiwane platformy oraz formaty materiałów. Można również dodać miejsce na opis założeń, odnośnik do briefu i dane potrzebne do dalszej rozmowy.",
-          "**Dobrze zaprojektowany formularz nie gwarantuje wartościowych propozycji, ale ogranicza liczbę wiadomości pozbawionych konkretów.** Marka przed wysłaniem zapytania widzi, jakich informacji potrzebujesz, a Ty możesz szybciej ocenić zgodność projektu z tematyką kanału i dostępnością.",
-          "Formularz powinien zawierać odpowiednią informację dotyczącą przetwarzania danych oraz wymagane zgody RODO. Jego zakres ustalam na podstawie tego, jakie dane rzeczywiście są potrzebne do obsługi zapytania. Mogę również zastosować zabezpieczenie przed spamem, aby formularz nie stał się dodatkowym źródłem niechcianych wiadomości.",
-        ],
+        "id": "formularz-dla-marek-powinien-zbierac-konkrety-zanim-odpowies",
+        "heading": "Formularz dla marek powinien zbierać konkrety, zanim odpowiesz",
+        "body": [
+          "Wiadomość „Cześć, jesteśmy zainteresowani współpracą” niewiele mówi o planowanej kampanii. Nie znasz budżetu, terminu, produktu ani oczekiwanego formatu publikacji. Musisz dopytać o podstawowe informacje, zanim ocenisz, czy propozycja w ogóle Ci odpowiada.",
+          "Na własnej stronie możemy zastąpić zwykłe pole wiadomości formularzem przygotowanym z myślą o współpracach reklamowych.",
+          "Poproszę markę o wskazanie rodzaju współpracy, planowanego budżetu, terminu kampanii i oczekiwanych materiałów. Możemy dodać pola na nazwę firmy, promowany produkt, kanały publikacji oraz odnośnik do briefu. Jeśli pracujesz z różnymi rodzajami partnerów, dopasuję pytania do Twojego sposobu przyjmowania zleceń.",
+          "Nie warto jednak tworzyć formularza, który wygląda jak długa ankieta. Zbyt wiele obowiązkowych pól może utrudniać pierwszy kontakt. Dlatego ustalimy, czego rzeczywiście potrzebujesz na początku rozmowy, a jakie szczegóły możesz omówić później.",
+          "Formularz nie zagwarantuje większej liczby ani lepszej jakości współprac. Może natomiast sprawić, że otrzymasz bardziej kompletne informacje i łatwiej ocenisz propozycję.",
+          "Przy wdrożeniu zadbam też o ochronę przed spamem oraz miejsce na odpowiednie informacje dotyczące przetwarzania danych i wymagane zgody. Zaprojektuję formularz jako część oferty, a nie przypadkowy dodatek na dole strony."
+        ]
       },
       {
-        id: "wspolprace-reklamowe-powinny-byc-prezentowane-w-sposob-czyte",
-        heading: "Współprace reklamowe powinny być prezentowane w sposób czytelny",
-        body: [
-          "Strona dla content creatora może porządkować nie tylko ofertę, lecz także opublikowane współprace. Portfolio daje markom możliwość zobaczenia, w jakich formatach pracujesz, jakie tematy podejmujesz i jak materiały sponsorowane wpisują się w pozostałą komunikację. Przy każdym przykładzie można wskazać kanał, rodzaj publikacji, zakres działań oraz materiały, na których pokazanie zgodził się partner.",
-          "Jawność ma znaczenie również dla odbiorców. **Materiał reklamowy powinien być przedstawiony w sposób, który pozwala rozpoznać jego komercyjny charakter.** Dotyczy to treści publikowanych w mediach społecznościowych, materiałów osadzonych na stronie oraz wpisów przygotowanych w ramach współpracy.",
-          "Nie interpretuję przepisów ani nie zastępuję doradcy prawnego. Mogę natomiast zaprojektować czytelne miejsce na oznaczenie partnera, charakteru materiału i informacji wymaganych w danym typie publikacji. Ostateczną treść oznaczeń oraz zasady wykorzystania logotypów, wyników kampanii i materiałów przekazanych przez markę należy ustalić zgodnie z warunkami konkretnej współpracy.",
-          "Przejrzyste portfolio nie musi ujawniać danych poufnych. Jeśli nie masz zgody na publikację wyników, można pokazać sam zakres działań, wykorzystane kanały i zatwierdzone materiały. Pozwala to przedstawić doświadczenie bez udostępniania informacji zastrzeżonych przez partnera.",
-        ],
+        "id": "portfolio-wspolprac-pokazuje-markom-jakie-materialy-tworzysz",
+        "heading": "Portfolio współprac pokazuje markom, jakie materiały tworzysz",
+        "body": [
+          "Liczby w media kicie to tylko część informacji, które mogą zainteresować potencjalnego partnera. Marka może też chcieć zobaczyć, jak prezentujesz produkty, jakim językiem komunikujesz się z odbiorcami i jakie formaty potrafisz przygotować.",
+          "Dlatego proponuję osobną sekcję portfolio. Nie musi przypominać katalogu wszystkich opublikowanych materiałów. Lepiej wybrać współprace, które pokazują różne rodzaje publikacji i odpowiadają temu, co aktualnie oferujesz.",
+          "Przy każdym przykładzie możemy umieścić nazwę marki, wykorzystaną platformę, zakres działań i zatwierdzone materiały. Jeśli masz zgodę na pokazanie konkretnych wyników kampanii, znajdziemy na nie miejsce. Jeśli nie możesz ich ujawniać, samo przedstawienie formatu i sposobu wykonania materiału również pomoże zaprezentować Twoją pracę.",
+          "W portfolio trzeba też zadbać o czytelne oznaczanie materiałów reklamowych. Osoba oglądająca publikację powinna rozpoznawać jej komercyjny charakter. Dotyczy to również materiałów sponsorowanych osadzanych na własnej stronie.",
+          "Nie musisz przy tym publikować poufnych ustaleń, wewnętrznych raportów czy logotypów, na których wykorzystanie nie masz zgody. Dobór materiałów ustalimy przed wdrożeniem.",
+          "Przygotuję portfolio tak, abyś mógł samodzielnie dodawać kolejne współprace, zmieniać opisy i ukrywać starsze przykłady bez przebudowy strony. Dzięki temu nie będzie to jednorazowa prezentacja, lecz część oferty, którą rozwijasz razem ze swoją działalnością."
+        ]
       },
       {
-        id: "strona-moze-laczyc-wspolprace-z-wlasnymi-zrodlami-przychodu",
-        heading: "Strona może łączyć współprace z własnymi źródłami przychodu",
-        body: [
-          "Strona internetowa dla influencera nie musi ograniczać się do obsługi kampanii reklamowych. Może stać się miejscem sprzedaży produktów fizycznych, materiałów cyfrowych, dostępu do treści albo innych elementów oferty. Dzięki temu osoba trafiająca z filmu, podcastu lub profilu społecznościowego przechodzi bezpośrednio do strony produktu, a nie do kolejnej listy odnośników.",
-          "Jeżeli potrzebujesz sprzedaży, mogę przygotować [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) obsługujące produkty cyfrowe lub fizyczne. Zakres może obejmować karty produktów, płatności, kupony, zamówienia oraz przekazywanie plików po zakupie. Sposób dostawy, dokumenty i treści związane z zamówieniem ustalam przed wdrożeniem.",
-          "Drugim kierunkiem monetyzacji jest newsletter. Formularz zapisu może przekazywać adresy do wybranego systemu mailingowego, zapisywać wymagane zgody i kierować użytkownika na stronę podziękowania. Lista mailingowa daje możliwość informowania odbiorców o nowych materiałach i produktach bez opierania całej komunikacji na zasięgu jednej platformy.",
-          "Warto zaplanować te funkcje przed rozpoczęciem projektu, nawet jeśli mają zostać uruchomione później. **Strona dla twórcy internetowego może wystartować jako media kit online, a następnie zostać rozbudowana o newsletter lub sklep**, o ile jej struktura i technologia uwzględniają taki rozwój.",
-        ],
+        "id": "newsletter-i-sklep-pozwalaja-rozwijac-dzialalnosc-poza-platf",
+        "heading": "Newsletter i sklep pozwalają rozwijać działalność poza platformami",
+        "body": [
+          "Współprace reklamowe nie muszą być jedynym zastosowaniem Twojej strony. Możesz wykorzystać ją również do udostępniania własnych materiałów, budowania listy mailingowej i sprzedaży produktów.",
+          "Newsletter jest szczególnie przydatny, jeśli chcesz utrzymywać kontakt z osobami zainteresowanymi Twoimi treściami bez polegania wyłącznie na powiadomieniach i zasięgach platform społecznościowych.",
+          "Mogę podłączyć wybrany system mailingowy, przygotować formularz zapisu, potwierdzenie subskrypcji i stronę podziękowania. Uwzględnię też wymagane zgody. Dzięki temu adresy nie będą trafiać do przypadkowego pliku, lecz do narzędzia przeznaczonego do obsługi Twojej listy.",
+          "Drugim rozwiązaniem jest sprzedaż. Jeśli przygotowujesz poradniki, materiały cyfrowe, odzież lub inne produkty, mogę wdrożyć [sklep na WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
+          "Zakres sklepu dopasuję do tego, co sprzedajesz. Przy produktach cyfrowych możemy przygotować automatyczne udostępnianie plików po zakupie. Przy fizycznych potrzebna będzie również obsługa wysyłki. W obu przypadkach ustalimy sposób płatności, karty produktów, zamówienia i treści związane ze sprzedażą.",
+          "Nie musisz jednak od razu budować pełnego sklepu. Jeśli obecnie potrzebujesz przede wszystkim strony dla marek, zaplanuję strukturę tak, aby późniejsze dodanie sprzedaży nie wymagało zaczynania całego projektu od nowa."
+        ]
       },
       {
-        id: "koszt-zalezy-od-sposobu-aktualizacji-danych-i-dodatkowych-fu",
-        heading: "Koszt zależy od sposobu aktualizacji danych i dodatkowych funkcji",
-        body: [
-          "Na koszt wpływa przede wszystkim zakres, a nie sama liczba widocznych sekcji. Prosta strona internetowa dla influencera z ręcznie aktualizowanym media kitem będzie wymagała innego nakładu pracy niż serwis pobierający statystyki automatycznie. Integracje zależą od możliwości poszczególnych platform, zakresu dostępnych danych oraz sposobu autoryzacji.",
-          "Znaczenie ma również formularz dla marek. Podstawowe zapytanie kontaktowe jest prostsze niż wieloetapowy formularz z wyborem formatów, budżetem, terminem i dodatkowymi załącznikami. Kolejne elementy wpływające na wycenę to newsletter, sklep, płatności, rodzaje produktów, liczba wersji językowych oraz indywidualne funkcje dla partnerów.",
-          "Stronę z media kitem, ofertą współprac i formularzem dla marek realizuję zwykle w terminie 3-5 tygodni. Ostateczny termin zależy między innymi od dostępności zdjęć, tekstów, statystyk i materiałów do portfolio. Po krótkiej rozmowie oraz briefie przygotowuję wycenę z ustalonym zakresem i harmonogramem.",
-        ],
+        "id": "strona-tworcy-musi-dobrze-dzialac-na-telefonie-i-byc-latwa-w",
+        "heading": "Strona twórcy musi dobrze działać na telefonie i być łatwa w obsłudze",
+        "body": [
+          "Osoba odwiedzająca Twoją stronę może trafić na nią bezpośrednio z Instagrama, TikToka albo opisu filmu na YouTubie. Dlatego od początku projektuję widok mobilny, zamiast dopasowywać go dopiero po przygotowaniu wersji komputerowej.",
+          "Na telefonie najważniejsze informacje powinny być łatwe do znalezienia. Marka musi móc otworzyć media kit, sprawdzić ofertę i przejść do formularza bez szukania odpowiedniego przycisku. Odbiorca powinien równie łatwo dotrzeć do sklepu lub zapisu na newsletter.",
+          "Przygotowuję makiety w Figmie, pokazuję Ci projekt i uwzględniam dwie tury poprawek przed kodowaniem. Po akceptacji wdrażam stronę, a po kolejnych etapach udostępniam wersję testową.",
+          "Dobór technologii zależy od potrzeb. WordPress z własnym motywem i polami ACF sprawdzi się, jeśli chcesz wygodnie edytować media kit, portfolio i inne sekcje. Przy niestandardowych funkcjach mogę wykorzystać Next.js i odpowiednio dobrany system zarządzania treścią.",
+          "Przed oddaniem sprawdzam też wydajność. Moim celem jest wynik Lighthouse 90+ na telefonie i LCP poniżej 2,5 sekundy, czyli czas wyświetlenia największego widocznego elementu strony. Przygotowuję podstawy SEO, mapę strony i podłączenie Search Console. GA4 uruchamiam po uzyskaniu odpowiedniej zgody na cookies.",
+          "Po wdrożeniu przeprowadzę szkolenie online, żebyś nie musiał kontaktować się ze mną przy każdej zmianie statystyk, zdjęcia czy opisu współpracy."
+        ]
       },
-    ],
+      {
+        "id": "koszt-strony-zalezy-glownie-od-aktualizacji-statystyk-i-doda",
+        "heading": "Koszt strony zależy głównie od aktualizacji statystyk i dodatkowych funkcji",
+        "body": [
+          "Nie wyceniam strony dla influencera wyłącznie na podstawie liczby zakładek. Dwa serwisy z podobnym wyglądem mogą wymagać zupełnie innego nakładu pracy.",
+          "Największa różnica pojawia się przy media kicie. Jeśli samodzielnie wpisujesz statystyki w panelu, wdrożenie jest prostsze. Automatyczne pobieranie danych wymaga sprawdzenia API poszczególnych platform, dostępnych uprawnień oraz możliwości integracji. Nie każda informacja będzie dostępna automatycznie.",
+          "Na koszt wpływają również formularz dla marek, newsletter, sklep WooCommerce, płatności, liczba produktów i dodatkowe funkcje. Innego zakresu wymaga strona z ofertą i kontaktem, a innego serwis z rozbudowanym portfolio oraz sprzedażą.",
+          "Stronę z media kitem online, ofertą współprac i formularzem realizuję zwykle w 3-5 tygodni. Ostateczny termin zależy również od tego, czy masz przygotowane zdjęcia, statystyki, opisy i materiały do portfolio.",
+          "Zaczynam od krótkiej rozmowy online i briefu. Następnie przedstawiam zakres prac, wycenę i harmonogram. Przez cały projekt kontaktujesz się bezpośrednio ze mną, a po uruchomieniu otrzymujesz 60 dni gwarancji i bezpłatnych poprawek. Dalsza opieka jest opcjonalna, więc możesz samodzielnie prowadzić stronę albo zlecić mi jej utrzymanie w miesięcznym abonamencie bez umowy na rok."
+        ]
+      }
+    ]
   },
   "tworzenie-stron-dla-streamerow": {
     heading: "Strona internetowa dla streamera jako niezależne centrum Twojej marki",
