@@ -384,97 +384,148 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
     ]
   },
   "tworzenie-stron-www": {
-    heading: "Jakie strony www tworzę dla firm we Wrocławiu i nie tylko",
-    intro: [
-      "**Tworzę strony www, które dobieram do sposobu działania firmy, jej oferty i tego, co strona ma faktycznie robić dla klienta.** Przy tworzeniu stron www we Wrocławiu nie zaczynam od wyboru technologii, lecz od prostszego pytania: czy potrzebujesz przede wszystkim dobrze pokazać ofertę, pozyskiwać zapytania, prowadzić kampanie, publikować treści, sprzedawać online, czy obsługiwać bardziej niestandardowy proces.",
-      "Dla właściciela małej firmy oznacza to, że nie musisz wiedzieć, czym różni się CMS od frameworka ani zastanawiać się, jakie rozwiązanie jest modne. Wyjaśniam różnice po ludzku i proponuję technologię adekwatną do celu. Od 2020 roku realizuję komercyjne wdrożenia dla firm z Polski i Niemiec, między innymi z branży hotelarskiej, prawniczej, gastronomicznej, e-commerce i lokalnych usług. Kod przygotowuję sam, więc w sprawach dotyczących projektu rozmawiasz bezpośrednio ze mną.",
+    "heading": "Tworzenie stron www dla firm. Jaką stronę zamówić i co dostaniesz w ramach współpracy?",
+    "intro": [
+      "Dobrze zaprojektowana strona internetowa dla firmy powinna przede wszystkim pomagać klientowi zrozumieć ofertę i wykonać kolejny krok. Dla kancelarii będzie to kontakt w sprawie konsultacji, dla firmy usługowej wysłanie zapytania, a dla sklepu zakup produktu. Dlatego zanim zacznę projektowanie stron www, pytam Cię, kto odwiedza Twoją stronę, czego szuka i co powinien na niej znaleźć. Dopiero na tej podstawie ustalam strukturę, funkcje i technologię.",
+      "Tworzę strony internetowe zawodowo od 2020 roku. Zrealizowałem ponad 30 komercyjnych wdrożeń dla firm z Polski i Niemiec. Sam projektuję i piszę kod, bez przekazywania prac kolejnym wykonawcom. Pracuję z Wrocławia, a cały projekt prowadzę zdalnie. Po kolejnych etapach dostajesz link do wersji testowej, więc widzisz, za co płacisz i jak rozwija się Twoja strona, jeszcze zanim trafi do klientów."
     ],
-    sections: [
+    "sections": [
       {
-        id: "jaka-strona-wybrac",
-        heading: "Jaką stronę wybrać do swojej firmy",
-        body: [
-          "Nie każda firma potrzebuje rozbudowanego serwisu. Czasami kilka dobrze przygotowanych podstron wystarcza, żeby jasno przedstawić ofertę i ułatwić klientowi podjęcie decyzji. Innym razem strona musi obsługiwać kampanie reklamowe, regularne publikacje albo sprzedaż. Dlatego zakres dopasowuję do konkretnego modelu biznesowego.",
-          "Najczęściej powstają u mnie:",
+        "id": "rodzaj-strony-dobieram-do-tego-jak-dziala-twoja-firma",
+        "heading": "Rodzaj strony dobieram do tego, jak działa Twoja firma",
+        "body": [
+          "Jeśli prowadzisz lokalną działalność i potrzebujesz przede wszystkim przedstawić usługi oraz dane kontaktowe, przygotuję prostą wizytówkę. Jeśli masz kilka grup klientów, rozbudowaną ofertę lub regularnie publikujesz poradniki, lepiej sprawdzi się strona firmowa z osobnymi podstronami. Sklep wymaga już obsługi produktów, zamówień i płatności, natomiast aplikacja internetowa może potrzebować konfiguratora, panelu użytkownika lub własnych procesów.",
+          "Poniżej znajdziesz typowe terminy, które stosuję przy planowaniu projektów. Ostateczny harmonogram ustalam po briefie."
         ],
-        list: [
-          "**wizytówka internetowa**, dla jednoosobowej działalności lub małej firmy, która potrzebuje podstawowej obecności w sieci i prostego przedstawienia usług;",
-          "**strona firmowa z ofertą**, dla firmy mającej kilka usług, grup klientów lub obszarów działalności, które trzeba czytelnie uporządkować;",
-          "**landing page pod kampanię**, dla firmy kierującej ruch z Google Ads, Meta Ads, newslettera lub konkretnej akcji promocyjnej;",
-          "**strona z blogiem lub bazą wiedzy**, dla firmy, która chce regularnie publikować treści, odpowiadać na pytania klientów i rozwijać widoczność w wyszukiwarkach;",
-          "**sklep internetowy**, dla firmy sprzedającej produkty online i potrzebującej katalogu, koszyka, płatności oraz zarządzania zamówieniami.",
-        ],
-        outro: [
-          "W praktyce jedna strona może łączyć kilka z tych funkcji. Serwis usługowy może mieć blog, a strona producenta dodatkowy katalog produktów bez sprzedaży online. Jeśli sprzedaż jest kluczową częścią projektu, mogę przygotować [sklep na WooCommerce](/uslugi/sklepy-internetowe-woocommerce).",
-        ],
+        "table": {
+          "caption": "Rodzaj strony dobieram do tego, jak działa Twoja firma",
+          "head": [
+            "Rodzaj strony",
+            "Dla kogo",
+            "Technologia",
+            "Typowy termin"
+          ],
+          "rows": [
+            [
+              "---",
+              "---",
+              "---",
+              "---"
+            ],
+            [
+              "Wizytówka internetowa",
+              "Mała firma, jednoosobowa działalność, lokalna usługa",
+              "WordPress",
+              "2-3 tygodnie"
+            ],
+            [
+              "Strona firmowa lub usługowa",
+              "Firma z kilkoma usługami, ofertą i treściami do edycji",
+              "WordPress + ACF",
+              "4-6 tygodni"
+            ],
+            [
+              "Mniejszy sklep internetowy",
+              "Firma rozpoczynająca lub rozwijająca sprzedaż online",
+              "WooCommerce",
+              "6-8 tygodni"
+            ],
+            [
+              "Aplikacja internetowa lub MVP",
+              "Firma potrzebująca konfiguratora, panelu albo własnych funkcji",
+              "Next.js",
+              "6-12 tygodni"
+            ]
+          ]
+        },
+        "outro": [
+          "Strona usługowa może również zawierać blog, bazę wiedzy, katalog realizacji czy podstrony przygotowane pod kampanie reklamowe. Nie oznacza to konieczności budowania osobnych serwisów. Łączę te funkcje w jednej, logicznie uporządkowanej witrynie.",
+          "Przy wycenie pytam, jakie zadania strona ma realizować od dnia publikacji, a które funkcje chcesz dodać później. Dzięki temu ustalam zakres konkretnego wdrożenia, zamiast przygotowywać listę elementów, z których nie będziesz korzystać."
+        ]
       },
       {
-        id: "wordpress-czy-nextjs",
-        heading: "WordPress czy Next.js zależy przede wszystkim od sposobu korzystania ze strony",
-        body: [
-          "Technologię dobieram do tego, **kto będzie edytował treści i jak dużo własnej logiki potrzebuje strona**. Jeśli właściciel lub pracownicy firmy chcą samodzielnie zmieniać teksty, zdjęcia, ofertę czy wpisy, dobrym rozwiązaniem zwykle jest [strona na WordPressie](/uslugi/tworzenie-stron-wordpress). W nowych projektach przygotowuję własny motyw zamiast budować stronę w Elementorze. Dzięki temu edytowane sekcje odpowiadają projektowi, zamiast zamieniać panel w zestaw przypadkowych klocków.",
-          "Next.js wybieram wtedy, kiedy projekt wychodzi poza klasyczną stronę informacyjną. Może chodzić o konfigurator, panel klienta, nietypowe formularze, własne procesy lub integracje z API. W takim przypadku przygotowuję [stronę w Next.js](/uslugi/aplikacje-nextjs), a jeśli potrzebna jest wygodna edycja treści, można połączyć ją z systemem takim jak Sanity lub Strapi.",
-          "Kreator typu Wix również może być sensownym wyborem. Jeżeli potrzebujesz bardzo prostej strony, akceptujesz działanie w ramach jednego ekosystemu i nie przewidujesz większego rozwoju, nie zawsze istnieje powód, żeby budować rozwiązanie indywidualne. Problem pojawia się wtedy, gdy firma zaczyna potrzebować większej swobody, nietypowych funkcji albo chce uniezależnić rozwój strony od ograniczeń konkretnej platformy. Patrz więc nie tylko na łatwość uruchomienia strony, ale też na własność rozwiązania, możliwości rozbudowy oraz koszty utrzymania w dłuższej perspektywie.",
-        ],
+        "id": "wordpress-woocommerce-czy-next-js-wybieram-wedlug-funkcji-ni",
+        "heading": "WordPress, WooCommerce czy Next.js wybieram według funkcji, nie popularności",
+        "body": [
+          "Do klasycznej strony firmowej najczęściej wykorzystuję WordPress. Jeśli chcesz samodzielnie zmieniać opisy usług, zdjęcia, wpisy czy sekcje oferty, przygotowuję własny motyw z polami ACF. W panelu widzisz pola odpowiadające zaprojektowanym sekcjom, zamiast budować układ z przypadkowych elementów.",
+          "W nowych projektach nie używam kreatorów takich jak Elementor, Divi czy Avada. Kod piszę sam, a potrzebne funkcje przygotowuję również jako własne wtyczki. Dotychczas stworzyłem ponad 40 wtyczek i mu-pluginów WordPress działających w 9 serwisach. Pozwala mi to dopasować zachowanie strony do konkretnego zadania, bez dokładania osobnego dodatku do każdej niewielkiej funkcji.",
+          "Kiedy projekt obejmuje sprzedaż internetową, wybieram WooCommerce. To rozwiązanie do obsługi produktów, koszyka, zamówień i integracji sprzedażowych. Sposób prezentacji katalogu, potrzebne płatności oraz zakres integracji ustalam przed rozpoczęciem prac.",
+          "Next.js wykorzystuję przy bardziej rozbudowanych projektach. Jeśli klient ma sam skonfigurować produkt, zobaczyć wynik obliczeń, zalogować się do panelu albo korzystać z danych pochodzących z zewnętrznych systemów, przygotowuję odpowiednią logikę aplikacji. Do samodzielnej edycji treści podłączam system Sanity lub Strapi.",
+          "Nie musisz znać różnicy między frameworkiem a systemem zarządzania treścią. Przy pierwszej rozmowie wystarczy, że pokażesz mi, co użytkownik ma zrobić na stronie i które informacje będziesz aktualizować samodzielnie. Na tej podstawie zaproponuję technologię oraz opiszę, jak będzie wyglądała codzienna obsługa serwisu."
+        ]
       },
       {
-        id: "koszt-strony-www",
-        heading: "Od czego zależy koszt strony www",
-        body: [
-          "Koszt stworzenia strony www zależy przede wszystkim od zakresu prac. Dwie strony o podobnej liczbie podstron mogą wymagać zupełnie innego nakładu pracy, jeśli jedna bazuje na kilku powtarzalnych układach, a druga ma wiele indywidualnych widoków, funkcji i integracji.",
-          "Znaczenie ma liczba podstron oraz liczba różnych szablonów. Osobnym zadaniem jest zaprojektowanie strony głównej, podstrony usługi, wpisu blogowego czy widoku konkretnego typu oferty. Na wycenę wpływa również to, czy projekt interfejsu powstaje indywidualnie, czy bazuje na gotowym szablonie. Podobnie jest z treściami i zdjęciami. Jeżeli materiały są gotowe, można od razu uwzględnić je w strukturze. Jeśli dopiero mają powstać, sposób ich przygotowania ustalamy na starcie.",
-          "Kolejna grupa to funkcje dodatkowe. Formularz kontaktowy jest znacznie prostszym elementem niż system rezerwacji, płatności, połączenie z zewnętrznym systemem czy bardziej rozbudowana automatyzacja. Zakres zwiększają także wersje językowe i blog, szczególnie gdy wymagają dodatkowych szablonów lub odmiennej organizacji treści.",
-          "Po uruchomieniu strony pozostają również koszty stałe. Najczęściej są to domena i hosting, a opcjonalnie także bieżąca opieka techniczna. Ich rodzaj zależy od technologii oraz wielkości projektu, dlatego uwzględniam je już przy wyborze rozwiązania, zamiast patrzeć wyłącznie na koszt samego wykonania strony.",
+        "id": "gotowe-realizacje-pokazuja-jakie-funkcje-potrafie-wdrozyc",
+        "heading": "Gotowe realizacje pokazują, jakie funkcje potrafię wdrożyć",
+        "body": [
+          "Przy wyborze wykonawcy warto zobaczyć nie tylko wygląd jego projektów, ale również to, jakie problemy zostały w nich rozwiązane. Strona z rozbudowaną bazą danych wymaga innego podejścia niż witryna kancelarii czy konfigurator dla firmy usługowej.",
+          "W moich realizacjach znajdziesz takie przykłady:"
         ],
+        "list": [
+          "[Kantorymapa](/projekty/kantorymapa) to mój serwis w Next.js obejmujący 1900 kantorów w 140 miastach, z codziennie aktualizowanymi kursami i czasem ładowania poniżej sekundy.",
+          "Mebloweporady.pl to serwis WordPress z ponad 400 poradnikami, własnymi wtyczkami, stroną główną składaną przez dedykowaną wtyczkę i siedmioma kalkulatorami.",
+          "Galabau Darius to projekt Next.js dla firmy z Niemiec, w którym wdrożyłem konfigurator wyceny ogrodzeń na żywo oraz panel administracyjny.",
+          "Kancelaria Maria Piontek to strona kancelarii zrealizowana na WordPressie, przeznaczona do prezentacji działalności i oferty."
+        ],
+        "outro": [
+          "Każda z tych realizacji wymagała innego zakresu prac. W Kantorymapie ważna była obsługa dużej liczby lokalizacji i danych, w Mebloweporadach publikowanie treści oraz własne narzędzia, a w Galabau Darius proces wyceny wykonywany bezpośrednio przez użytkownika.",
+          "Pozostałe wdrożenia znajdziesz na stronie [pełna lista projektów](/projekty). Jeśli planujesz podobny serwis, podczas rozmowy pokażę Ci, które rozwiązania z moich realizacji odpowiadają Twoim potrzebom i jaki zakres trzeba przewidzieć w projekcie."
+        ]
       },
       {
-        id: "co-przygotowac",
-        heading: "Co warto przygotować przed rozpoczęciem projektu",
-        body: [
-          "Nie musisz przychodzić z kompletną dokumentacją ani gotową makietą strony. Im więcej podstawowych materiałów uda się jednak zebrać przed startem, tym łatwiej ustalić strukturę serwisu i uniknąć sytuacji, w której na późnym etapie okazuje się, że brakuje ważnej usługi albo całej grupy treści.",
-          "Najbardziej przydatne są:",
-        ],
-        list: [
-          "logo i podstawowe materiały związane z identyfikacją firmy;",
-          "zdjęcia, jeśli firma ma własne fotografie produktów, realizacji, zespołu lub miejsca;",
-          "gotowe teksty albo materiały, na podstawie których teksty będą przygotowywane;",
-          "lista usług, produktów lub głównych obszarów oferty;",
-          "dostęp do domeny i hostingu, jeśli są już wykupione;",
-          "przykłady stron, które Ci się podobają, najlepiej z krótką informacją, co konkretnie zwróciło Twoją uwagę.",
-        ],
-        outro: [
-          "Nie trzeba też czekać z projektem do momentu, kiedy każdy materiał będzie idealny. Ważniejsze jest ustalenie, co już istnieje, czego brakuje i co musi znaleźć się na stronie przed publikacją. Dzięki temu projekt można oprzeć na rzeczywistych potrzebach firmy zamiast wypełniać strukturę przypadkową treścią.",
-        ],
+        "id": "cene-ustalam-na-podstawie-liczby-unikalnych-widokow-i-integr",
+        "heading": "Cenę ustalam na podstawie liczby unikalnych widoków i integracji",
+        "body": [
+          "Sama liczba podstron nie mówi jeszcze wiele o nakładzie pracy. Serwis z kilkunastoma usługami korzystającymi z jednego układu może być prostszy do przygotowania niż witryna z kilkoma podstronami, z których każda ma inne funkcje i indywidualny projekt.",
+          "Najważniejsze są dla mnie dwa elementy: liczba unikalnych szablonów podstron oraz zakres integracji. Osobnym szablonem może być strona główna, opis usługi, karta produktu, wpis poradnikowy czy widok katalogu. Każdy taki układ trzeba zaprojektować, zakodować i sprawdzić na różnych urządzeniach.",
+          "Integracje również wymagają osobnego rozpoznania. Zwykły formularz kontaktowy to inne zadanie niż konfigurator, system rezerwacji, płatności online albo połączenie z zewnętrzną bazą danych. Przy bardziej złożonych funkcjach ustalam, jakie informacje mają być przesyłane, gdzie będą przechowywane i jak użytkownik zobaczy wynik działania.",
+          "Na zakres wpływają także materiały, które już posiadasz. Jeśli masz gotowe opisy usług, zdjęcia i logo, wykorzystuję je podczas projektowania. Jeśli treści dopiero powstaną, ustalamy wcześniej ich strukturę i sposób przygotowania. Przy wersjach językowych sprawdzam, czy potrzebne będą osobne układy albo dodatkowe funkcje.",
+          "Po wdrożeniu dochodzą koszty domeny, hostingu oraz ewentualnego utrzymania technicznego. Uwzględniam je podczas wyboru rozwiązania, żebyś wiedział, czego strona będzie potrzebowała po uruchomieniu.",
+          "Przy wycenie proszę Cię o opis działalności, listę potrzebnych podstron i funkcji oraz informację, czy masz już działającą witrynę. Po krótkiej rozmowie i briefie przygotowuję konkretny zakres prac wraz z terminem realizacji."
+        ]
       },
       {
-        id: "google-i-wyszukiwarki-ai",
-        heading: "Strona powinna być przygotowana pod Google i wyszukiwarki AI",
-        body: [
-          "Tworzenie stron internetowych we Wrocławiu coraz rzadziej sprowadza się do samego zdobycia pozycji na kilka fraz. Strona powinna mieć strukturę, którą potrafią poprawnie interpretować zarówno tradycyjne wyszukiwarki, jak i systemy korzystające z treści internetowych do generowania odpowiedzi.",
-          "Podstawą jest logiczna hierarchia nagłówków i jasne przypisanie tematu do konkretnej podstrony. Strona główna nie powinna próbować odpowiadać szczegółowo na każde możliwe pytanie. Osobne usługi, lokalizacje czy istotne zagadnienia warto rozdzielić tam, gdzie ma to sens dla użytkownika. Pomaga to również wyszukiwarce zrozumieć relacje między poszczególnymi częściami serwisu.",
-          "Znaczenie ma szybkość działania, poprawny kod oraz dane strukturalne, jeśli odpowiadają rodzajowi zawartości strony. W przypadku firmy działającej lokalnie dochodzi lokalne SEO, czyli między innymi spójne informacje o działalności, odpowiednio przygotowane podstrony usług i logiczne powiązanie treści z lokalizacją. Po publikacji istotnym narzędziem jest Google Search Console, dzięki któremu można sprawdzać indeksowanie i wykrywać problemy techniczne związane z obecnością strony w Google.",
-          "Przygotowanie pod wyszukiwarki AI nie polega na dodaniu specjalnego przycisku ani magicznego pliku, który gwarantuje cytowanie firmy. Najważniejsze pozostają jednoznaczne informacje, dobrze zorganizowana treść, techniczna dostępność strony i takie opisanie usług, aby zarówno człowiek, jak i system analizujący stronę mógł zrozumieć, czym firma się zajmuje, dla kogo pracuje i czego dotyczą poszczególne podstrony.",
+        "id": "szybkosc-google-i-wyszukiwarki-ai-uwzgledniam-juz-podczas-bu",
+        "heading": "Szybkość, Google i wyszukiwarki AI uwzględniam już podczas budowy",
+        "body": [
+          "Szybkość strony ma znaczenie szczególnie na telefonie, gdzie użytkownik często przegląda ofertę przy słabszym połączeniu. Dlatego przed oddaniem projektu wykonuję testy Lighthouse z celem wyniku 90+ na urządzeniach mobilnych. Sprawdzam również LCP, czyli czas pojawienia się największego widocznego elementu strony, dążąc do wartości poniżej 2,5 sekundy. Przygotowanie techniczne pod wyszukiwarki obejmuje między innymi:"
         ],
+        "list": [
+          "logiczną hierarchię nagłówków i osobne adresy dla istotnych tematów,",
+          "dane strukturalne opisujące zawartość i rodzaj strony,",
+          "mapę strony oraz konfigurację Google Search Console,",
+          "czytelne opisy usług, pytania i odpowiedzi w FAQ,",
+          "kod i strukturę umożliwiające wyszukiwarkom odczytywanie treści."
+        ],
+        "outro": [
+          "Przygotowuję również strony z myślą o wyszukiwarkach AI. Nie polega to na instalacji dodatku, który zapewni cytowanie firmy w odpowiedziach. Liczy się jednoznaczne przedstawienie usług, odbiorców, lokalizacji i informacji o działalności. System analizujący stronę powinien rozumieć, czym zajmuje się Twoja firma, bez konieczności domyślania się tego z ogólnych sloganów.",
+          "Jeśli wdrażam Google Analytics 4, konfiguruję go tak, żeby uruchamiał się dopiero po uzyskaniu zgody na cookies. Dzięki temu pomiar zachowania użytkowników jest częścią przemyślanego wdrożenia, a nie przypadkowym skryptem dodanym do strony.",
+          "Podczas ustalania zakresu pytam Cię, na jakie usługi chcesz pozyskiwać zapytania i jakich informacji szukają Twoi klienci. Na tej podstawie planuję strukturę podstron, treści i elementy techniczne, bez obiecywania konkretnych pozycji w Google lub obecności w odpowiedziach AI."
+        ]
       },
       {
-        id: "bezpieczenstwo-rodo-dostepnosc",
-        heading: "Bezpieczeństwo, RODO i dostępność trzeba uwzględnić przed publikacją",
-        body: [
-          "Bezpieczeństwo strony zaczyna się od poprawnej konfiguracji SSL i sposobu jej utrzymania. W rozwiązaniach, które wymagają aktualizacji systemu, wtyczek lub zależności, ważne jest ich regularne wykonywanie. Potrzebne są też kopie zapasowe dopasowane do charakteru serwisu, szczególnie gdy na stronie regularnie zmieniają się treści albo pojawiają się dane użytkowników.",
-          "Osobnym tematem jest RODO i analityka. Jeżeli strona wykorzystuje narzędzia zapisujące pliki cookies wymagające zgody, mechanizm zgody powinien działać przed uruchomieniem takiej analityki. Potrzebna jest również polityka prywatności odpowiadająca temu, jakie dane strona faktycznie zbiera i za pomocą jakich narzędzi. Zakres wymaganych dokumentów i konfiguracji zależy więc od funkcji konkretnej strony.",
-          "Coraz większe znaczenie ma także dostępność cyfrowa. Czytelna struktura, odpowiedni kontrast, obsługa klawiaturą, teksty alternatywne i poprawna semantyka pomagają korzystać ze strony osobom z różnymi niepełnosprawnościami, a przy okazji zwykle poprawiają ogólną jakość interfejsu. Wykonuję również [audyt dostępności](/audyt-wcag) według WCAG 2.1 AA, jeśli firma potrzebuje osobnego sprawdzenia istniejącego serwisu.",
-        ],
+        "id": "bezpieczenstwo-i-dostepnosc-sprawdzam-przed-publikacja",
+        "heading": "Bezpieczeństwo i dostępność sprawdzam przed publikacją",
+        "body": [
+          "Przed uruchomieniem konfiguruję certyfikat SSL, sprawdzam działanie formularzy, nawigację oraz zachowanie strony na telefonach i komputerach. W projektach opartych na WordPressie ważne są również aktualizacje systemu, motywu i wtyczek oraz odpowiednio przygotowane kopie zapasowe.",
+          "Przy projektowaniu dbam o czytelność tekstów, kontrast, logiczną strukturę nagłówków i możliwość korzystania ze strony za pomocą klawiatury. Sprawdzam też, czy elementy interaktywne mają zrozumiałe etykiety, a obrazy wymagające opisu otrzymują odpowiednie teksty alternatywne.",
+          "Dla firm, które potrzebują dokładniejszej oceny serwisu, wykonuję osobny [audyt dostępności WCAG](/audyt-wcag). Analizuję wtedy wskazane wymagania dostępności i wskazuję problemy wymagające poprawy. Samo stosowanie dobrych praktyk przy projektowaniu nie jest równoznaczne z potwierdzeniem zgodności prawnej całego serwisu.",
+          "Jeśli masz już stronę i planujesz jej przeniesienie, uwzględniam również dotychczasowe adresy. Przygotowuję przekierowania 301, które prowadzą ze starych adresów na odpowiadające im nowe podstrony. Planuję migrację tak, żeby przerwa była możliwie krótka, choć zmiana DNS może spowodować czasową niedostępność. Nie gwarantuję zachowania dotychczasowych pozycji w Google.",
+          "Przy zamówieniu ustalam z Tobą wymagania dotyczące bezpieczeństwa, dostępności i ewentualnego przeniesienia obecnej strony, zanim rozpocznę kodowanie."
+        ]
       },
       {
-        id: "wspolpraca-zdalna",
-        heading: "Współpracuję zdalnie z firmami z Wrocławia, całej Polski i Niemiec",
-        body: [
-          "Jako freelancer web developer działam we Wrocławiu, a współpracę przy projektach prowadzę zdalnie. Spotkanie startowe odbywa się online, dlatego lokalizacja firmy nie ogranicza projektu. Pracuję z firmami z Wrocławia, innych części Polski oraz z Niemiec.",
-          "Taki model jest wygodny również dla osoby, która zamawia pierwszą stronę internetową dla firmy i nie chce śledzić technicznych szczegółów wdrożenia. Komunikacja dotyczy przede wszystkim decyzji potrzebnych do stworzenia strony: treści, układu, funkcji, materiałów i sposobu prezentowania oferty. Nie trzeba instalować środowiska programistycznego ani samodzielnie sprawdzać kodu.",
-          "Po kolejnych etapach udostępniam link do wersji testowej. Możesz więc otworzyć stronę w zwykłej przeglądarce, zobaczyć aktualny stan projektu i odnieść uwagi do konkretnego widoku. Przy stronie internetowej dla firmy jest to szczególnie pomocne, ponieważ projekt można oceniać na podstawie realnego działania, a nie wyłącznie technicznego opisu tego, co dopiero ma powstać.",
-        ],
-      },
-    ],
+        "id": "cala-wspolprace-prowadze-osobiscie-od-rozmowy-do-szkolenia",
+        "heading": "Całą współpracę prowadzę osobiście, od rozmowy do szkolenia",
+        "body": [
+          "Pracuję zdalnie z firmami z Wrocławia, innych części Polski i z Niemiec. Pierwszą rozmowę organizuję online. Omawiamy działalność, ofertę, materiały, zakres strony oraz sposób, w jaki klienci mają z niej korzystać.",
+          "Następnie przygotowuję makiety w Figmie. Masz dwie tury poprawek, podczas których ustalamy wygląd, układ i sposób prezentacji treści. Po zaakceptowaniu projektu przechodzę do kodowania, a po kolejnych etapach otrzymujesz link do wersji testowej. Nie musisz niczego instalować. Otwierasz stronę w przeglądarce i sprawdzasz konkretne widoki oraz funkcje.",
+          "Przed publikacją przeprowadzam testy, konfiguruję potrzebne elementy techniczne i wdrażam serwis. Później pokazuję Ci online, jak samodzielnie aktualizować treści. Jeśli projekt obejmuje własne sekcje WordPressa, szkolenie dotyczy dokładnie tych pól i funkcji, z których będziesz korzystać.",
+          "Po uruchomieniu otrzymujesz 60 dni gwarancji i bezpłatnych poprawek. Dalszą opiekę techniczną możesz zamówić w miesięcznym abonamencie bez umowy na rok. Jeśli wolisz samodzielnie zajmować się treścią strony, po szkoleniu masz przygotowane do tego narzędzia.",
+          "Jeżeli chcesz zlecić mi stworzenie nowej strony albo przebudowę obecnej, opisz firmę, najważniejsze usługi i funkcje, których potrzebujesz. Możesz skorzystać z formularza na stronie kontaktowej lub napisać na marcin.siwonia.firma@gmail.com. W ciągu 24 godzin roboczych wrócę do Ciebie z pierwszą oceną projektu."
+        ]
+      }
+    ]
   },
   "aplikacje-nextjs": {
     heading: "Strona Next.js daje firmie szybkość dziś i swobodę rozwoju jutro",
