@@ -1,0 +1,306 @@
+{
+ "page": {
+  "slug": "tworzenie-stron-dla-hoteli-i-pensjonatow",
+  "title": "Hotele i pensjonaty",
+  "keyword": "tworzenie stron dla hoteli i pensjonatów",
+  "metaTitle": "Tworzenie stron dla hoteli i pensjonatów: rezerwacje",
+  "metaDescription": "Tworzenie stron dla hoteli i pensjonatów: rezerwacja bezpośrednia, kalendarz dostępności i galeria pokoi. Realizacja 5-8 tygodni.",
+  "h1": "Tworzenie stron dla hoteli i pensjonatów",
+  "lead": "Projektuję strony dla hoteli, pensjonatów i apartamentów, które prowadzą gościa od zdjęć i dostępności do rezerwacji bezpośredniej. Pracuję z Wrocławia, zdalnie z obiektami z całej Polski i z Niemiec.",
+  "intro": [
+   "Dobra strona obiektu noclegowego nie kończy się na galerii. Tworzenie stron dla hoteli i pensjonatów układam wokół wyboru pokoju, sprawdzenia dostępności, ceny, zasad odwołania i możliwie krótkiej drogi do rezerwacji. Fundamentem może być [strona WordPress z własnym motywem](/uslugi/tworzenie-stron-wordpress), połączona z używanym przez Ciebie systemem rezerwacji.",
+   "Dla Apartamentów Złota Grota we Wrocławiu przygotowałem prezentację apartamentów z jacuzzi, pobytów dla par, samodzielnego zameldowania i rezerwacji bez pośredników. Możesz zobaczyć [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) i [pensjonat Maciejanka](/projekty/maciejanka). Po starcie mogę też prowadzić [techniczną opiekę nad stroną](/uslugi/opieka-wordpress)."
+  ],
+  "pains": [
+   {
+    "title": "Zależność od pośredników",
+    "body": "Portal rezerwacyjny pomaga dotrzeć do gości, ale uzależnia część sprzedaży od pośrednika i jego warunków. Własna strona daje Ci dodatkowy kanał rezerwacji bezpośredniej, na którym sam pokazujesz pokoje, pakiety, ceny i zasady pobytu."
+   },
+   {
+    "title": "Nieaktualna dostępność",
+    "body": "Kalendarz niespójny z pozostałymi kanałami prowadzi do podwójnych rezerwacji. Dobieram silnik, który synchronizuje terminy witryny z używanymi portalami i ogranicza ręczne aktualizacje."
+   },
+   {
+    "title": "Galeria spowalnia stronę",
+    "body": "Dziesiątki fotografii w pełnej rozdzielczości długo ładują się na telefonie i pogarszają Core Web Vitals. Przygotowuję odpowiednie rozmiary, nowoczesne formaty oraz kolejność wczytywania zdjęć."
+   },
+   {
+    "title": "Ukryte zasady pobytu",
+    "body": "Gość może przerwać rezerwację, jeśli nie rozumie płatności, zameldowania lub warunków odwołania. Najważniejsze reguły pokazuję przed potwierdzeniem terminu, a regulamin i informacje RODO pozostają łatwo dostępne."
+   }
+  ],
+  "mustHave": [
+   {
+    "title": "Silnik rezerwacji",
+    "body": "Gość wybiera daty, liczbę osób i dostępny pokój bez wymiany wielu wiadomości. System rezerwacji na stronie pensjonatu może obsługiwać płatność oraz synchronizację kalendarzy."
+   },
+   {
+    "title": "Lekka galeria zdjęć",
+    "body": "Fotografie przedstawiają pokoje, części wspólne i otoczenie w logicznej kolejności. Pliki są dopasowane do urządzenia, dzięki czemu galeria szybko działa również w wersji mobilnej."
+   },
+   {
+    "title": "Oferta pobytów",
+    "body": "Pakiety dla par, rodzin lub uczestników wydarzeń mają osobne warunki i terminy. Karta pobytu wyjaśnia, co zawiera cena i jak przejść do rezerwacji."
+   },
+   {
+    "title": "Opis okolicy",
+    "body": "Atrakcje, trasy i praktyczne wskazówki odpowiadają na pytania osób planujących wyjazd. Takie podstrony wspierają lokalne pozycjonowanie obiektu w Google."
+   },
+   {
+    "title": "Mapa i dojazd",
+    "body": "Adres, parking oraz instrukcja dotarcia są dostępne z poziomu telefonu. Przy samodzielnym zameldowaniu witryna może jasno opisywać kolejne czynności."
+   },
+   {
+    "title": "Regulamin rezerwacji",
+    "body": "Warunki płatności, odwołania i pobytu są napisane zrozumiale oraz podlinkowane przy zamówieniu. Obok nich umieszczam wymagane zgody i informacje o przetwarzaniu danych."
+   }
+  ],
+  "stack": [
+   {
+    "label": "WordPress",
+    "body": "Autorski motyw pozwala edytować pokoje, pakiety, atrakcje i galerie bez ciężkiego kreatora. Przy kilku obiektach w jednym serwisie albo własnym silniku rezerwacji sięgam po Next.js."
+   },
+   {
+    "label": "Silnik rezerwacji",
+    "body": "Integracja przekazuje terminy, ceny i liczbę gości między stroną hotelu a narzędziem obsługującym rezerwacje."
+   },
+   {
+    "label": "Profil Firmy w Google",
+    "body": "Mapa, dane kontaktowe i opinie potwierdzają lokalizację obiektu oraz kierują użytkownika z Google bezpośrednio do witryny."
+   },
+   {
+    "label": "WebP i AVIF",
+    "body": "Nowoczesne formaty ograniczają wagę galerii, zachowując jakość potrzebną do prezentacji pokoi na komputerach i telefonach."
+   }
+  ],
+  "pricing": {
+   "time": "5-8 tygodni",
+   "note": "Wycena strony hotelu zależy od liczby typów pokoi, silnika rezerwacji, płatności, wersji językowych i zakresu galerii. Osobnej pracy wymaga synchronizacja z kanałami sprzedaży, jeśli obiekt już z nich korzysta."
+  },
+  "faq": [
+   {
+    "q": "Ile będzie kosztować strona dla mojego hotelu lub pensjonatu?",
+    "a": "Najwięcej na zakres wpływa sposób obsługi rezerwacji. Prosty kalendarz z zapytaniem to inna praca niż płatność online i synchronizacja z kanałami sprzedaży. Po krótkiej rozmowie i briefie przygotuję wycenę z zakresem i terminem."
+   },
+   {
+    "q": "Ile potrwa strona dla mojego hotelu?",
+    "a": "Stronę obiektu z integracją rezerwacji realizuję zwykle w 5-8 tygodni. Jeśli dochodzi kilka wersji językowych albo migracja istniejącego serwisu, termin doprecyzuję po briefie."
+   },
+   {
+    "q": "Jaki system rezerwacji wybrać do mojej strony?",
+    "a": "Najpierw sprawdzę, jak dziś przyjmujesz rezerwacje, z jakich portali korzystasz i czy potrzebujesz płatności oraz synchronizacji kalendarzy. Na tej podstawie porównam rozwiązania pasujące do Twojego procesu."
+   },
+   {
+    "q": "Czy własna strona zastąpi mi portale rezerwacyjne?",
+    "a": "Nie zakładam, że zastąpi je automatycznie. Buduję dodatkowy kanał rezerwacji bezpośredniej dla osób, które znają obiekt albo trafiają na niego z Google, map czy polecenia."
+   },
+   {
+    "q": "Czy potrzebuję profesjonalnej sesji zdjęciowej?",
+    "a": "Przy hotelu lub pensjonacie dobre zdjęcia mają duże znaczenie, bo pokazują pokoje i standard obiektu przed rezerwacją. Mogę przygotować listę potrzebnych ujęć i wymagania techniczne, a wykonanie sesji zlecasz fotografowi."
+   },
+   {
+    "q": "Czy moja strona może mieć kilka wersji językowych?",
+    "a": "Tak. Mogę przygotować osobne wersje treści dla pokoi, pakietów, regulaminu i pozostałych podstron. Sprawdzę też, czy wybrany system rezerwacji obsługuje potrzebne języki i waluty."
+   },
+   {
+    "q": "Kiedy najlepiej uruchomić nową stronę przed sezonem?",
+    "a": "Start najlepiej zaplanować z wyprzedzeniem, żeby po publikacji sprawdzić indeksowanie, przejść całą rezerwację na telefonie i poprawić treści przed najważniejszym okresem sprzedaży. Konkretny termin ustalę z Tobą na początku projektu."
+   },
+   {
+    "q": "Czy mogę zachować obecną domenę hotelu?",
+    "a": "Tak. Mogę podłączyć nową stronę do obecnej domeny i pomóc dobrać hosting, na przykład Hostinger albo cyber_folks. Przy migracji przygotuję zmianę tak, żeby przerwa była możliwie krótka, choć przy zmianie DNS może wystąpić krótka niedostępność."
+   },
+   {
+    "q": "Jakie informacje prawne muszę przygotować na stronę pensjonatu?",
+    "a": "Potrzebuję od Ciebie zatwierdzonego regulaminu, polityki prywatności, zasad anulowania i innych treści wynikających z Twojego sposobu rezerwacji. Umieszczę je w odpowiednich miejscach strony i skonfiguruję wymagane zgody związane z formularzami oraz analityką."
+   },
+   {
+    "q": "Czy strona będzie zgodna z RODO?",
+    "a": "Konfiguruję mechanizm zgód cookies, formularze i uruchamianie GA4 dopiero po uzyskaniu wymaganej zgody. Potrzebuję od Ciebie zatwierdzonej polityki prywatności, regulaminu i pozostałych treści prawnych właściwych dla Twojego sposobu działania. Ich zakres ustalam przy rozpoczęciu współpracy."
+   },
+   {
+    "q": "Jak sprawdzę, skąd przychodzą rezerwacje?",
+    "a": "Konfiguruję GA4 oraz zdarzenia związane z przejściem do rezerwacji, wysłaniem formularza i potwierdzeniem pobytu, jeśli system rezerwacyjny pozwala przekazać takie dane. Dzięki temu możesz porównywać źródła wizyt, pamiętając, że analityka działa po zgodzie na cookies i nie obejmie wszystkich użytkowników."
+   },
+   {
+    "q": "Czy sam zmienię ceny i opisy pokoi?",
+    "a": "Przygotowuję panel do edycji opisów, zdjęć i ustalonych elementów oferty, a następnie prowadzę szkolenie z jego obsługi. Miejsce zmiany cen zależy od wybranego silnika rezerwacji i ustalam je z Tobą na początku projektu."
+   },
+   {
+    "q": "Czy strona może sprzedawać vouchery?",
+    "a": "Tak, mogę przygotować prezentację voucherów albo sprzedaż online, jeśli taki zakres ustalimy przed wdrożeniem. Sposób płatności, dostarczenia, realizacji i obsługi zamówienia dopasuję do wybranego procesu."
+   },
+   {
+    "q": "Czy pomożesz po uruchomieniu strony?",
+    "a": "Tak. Zapewniam 60 dni gwarancji i bezpłatnych poprawek po starcie. Po tym okresie mogę przejąć opiekę techniczną w miesięcznym abonamencie bez umowy na rok."
+   }
+  ],
+  "cta": "Opowiedz o obiekcie, a przygotuję wycenę tworzenia strony hotelu lub pensjonatu z rezerwacją bezpośrednią",
+  "deliverables": [
+   {
+    "label": "Prezentacja pokoi",
+    "body": "Przygotowuję edytowalny układ typów pokoi z wyposażeniem, liczbą gości, galerią, ceną i zasadami pobytu. Zakres pokoi ustalamy w briefie."
+   },
+   {
+    "label": "Ścieżka rezerwacji",
+    "body": "Łączę stronę obiektu z ustalonym systemem rezerwacji i przekazuję do niego potrzebne dane, takie jak daty pobytu i liczba osób, jeśli wybrane narzędzie to obsługuje."
+   },
+   {
+    "label": "Oferta sezonowa",
+    "body": "Tworzę w CMS edytowalny wzór pakietu pobytowego z terminem, zakresem świadczeń, ceną i warunkami rezerwacji."
+   },
+   {
+    "label": "Atrakcje i dojazd",
+    "body": "Przygotowuję mapę dojazdu, informacje o parkingu oraz sekcję atrakcji w okolicy. Liczbę i zakres opisów ustalamy w briefie."
+   },
+   {
+    "label": "Wiadomości pobytowe",
+    "body": "Konfiguruję formularze zapytań o pobyty grupowe, imprezy okolicznościowe lub pobyty firmowe, wraz ze zgodami RODO i ochroną przed spamem."
+   }
+  ],
+  "headings": {
+   "pains": "Co nie działa na stronach hoteli i pensjonatów",
+   "mustHave": "Czego wymaga strona hotelu lub pensjonatu",
+   "cases": "Strony dla obiektów noclegowych, które zrobiłem",
+   "stack": "Jak tworzę strony dla hoteli i pensjonatów",
+   "pricing": "Ile kosztuje strona dla hotelu lub pensjonatu",
+   "faq": "Tworzenie stron dla hoteli i pensjonatów: pytania"
+  },
+  "process": [
+   {
+    "step": "01",
+    "title": "Brief",
+    "body": "Typy pokoi, pakiety, sezony i obecny sposób przyjmowania rezerwacji."
+   },
+   {
+    "step": "02",
+    "title": "Silnik rezerwacji",
+    "body": "Dobieramy narzędzie i sprawdzam synchronizację z portalami, z których korzystasz."
+   },
+   {
+    "step": "03",
+    "title": "Projekt",
+    "body": "Zdjęcia dostają główną rolę, cena i zasady odwołania stoją przy przycisku rezerwacji."
+   },
+   {
+    "step": "04",
+    "title": "Wdrożenie",
+    "body": "Motyw, kalendarz dostępności, płatności, opisy okolicy, wersje językowe."
+   },
+   {
+    "step": "05",
+    "title": "Start",
+    "body": "Rezerwacja testowa od początku do końca, Profil Firmy w Google, szkolenie z edycji terminów."
+   }
+  ],
+  "notFor": [
+   "Nie masz dobrych zdjęć obiektu i nie planujesz sesji. To pierwszy argument sprzedażowy.",
+   "Liczysz, że strona zastąpi portale rezerwacyjne od pierwszego miesiąca. Buduje kanał, nie zastępuje rynku.",
+   "Chcesz rezerwacji bez żadnej płatności z góry i bez zasad anulowania. To wraca jako puste terminy."
+  ]
+ },
+ "block": {
+  "heading": "Strona internetowa dla hotelu jako własny kanał sprzedaży pobytów",
+  "intro": [
+   "**W tym poradniku wyjaśniam, jak powinna działać strona internetowa dla hotelu, pensjonatu lub apartamentów, jeśli ma wspierać sprzedaż pobytów obok portali rezerwacyjnych.** Omawiam różnice między silnikiem rezerwacji a channel managerem, wersje językowe, pomiar źródeł rezerwacji, dane obiektu w Google oraz wygodną edycję ofert sezonowych.",
+   "Jeśli porównujesz wykonawców, zwróć uwagę nie tylko na wygląd projektu. Istotne jest także to, jak strona połączy się z narzędziami używanymi w obiekcie, jakie dane będzie można mierzyć i które treści zmienisz samodzielnie. Dobrze zaplanowana witryna nie jest osobnym katalogiem pokoi, lecz częścią całego procesu sprzedaży, od pierwszego wyszukania obiektu po potwierdzenie pobytu."
+  ],
+  "sections": [
+   {
+    "id": "jak-polaczyc-silnik-rezerwacji-channel-manager-i-ceny",
+    "heading": "Jak połączyć silnik rezerwacji, channel manager i ceny",
+    "body": [
+     "Silnik rezerwacji to narzędzie, w którym gość wybiera termin, pokój, liczbę osób i dostępne dodatki, a następnie przechodzi przez proces zamówienia pobytu. Strona internetowa dla hotelu może kierować do zewnętrznego silnika albo wyświetlać jego formularz w obrębie witryny. Sposób integracji zależy od możliwości konkretnego systemu i od tego, jak ma wyglądać ścieżka użytkownika.",
+     "Channel manager pełni inną funkcję. Przekazuje informacje o dostępności i cenach między używanymi kanałami sprzedaży. Jego zadaniem jest ograniczenie sytuacji, w której ten sam pokój pozostaje dostępny jednocześnie na stronie i w kilku portalach mimo dokonanej rezerwacji. Nie każdy mały obiekt potrzebuje jednak rozbudowanego zestawu narzędzi. Najpierw sprawdzam liczbę pokoi, kanały sprzedaży, sposób ustalania cen i to, ile czynności wykonujesz obecnie ręcznie."
+    ],
+    "table": {
+     "caption": "Jak połączyć silnik rezerwacji, channel manager i ceny",
+     "head": [
+      "Element",
+      "Główne zadanie",
+      "Kiedy warto go rozważyć"
+     ],
+     "rows": [
+      [
+       "Silnik rezerwacji",
+       "Obsługa wyboru terminu i pokoju",
+       "Gdy chcesz przyjmować rezerwacje na stronie"
+      ],
+      [
+       "Channel manager",
+       "Synchronizacja dostępności między kanałami",
+       "Gdy sprzedajesz te same pokoje w kilku miejscach"
+      ],
+      [
+       "System zarządzania obiektem",
+       "Obsługa pobytów i pracy recepcji",
+       "Gdy potrzebujesz szerszej organizacji rezerwacji"
+      ],
+      [
+       "Panel strony",
+       "Edycja opisów, pakietów i treści",
+       "Gdy chcesz samodzielnie aktualizować ofertę"
+      ]
+     ]
+    },
+    "outro": [
+     "Parytet cen oznacza spójność zasad cenowych między kanałami, ale nie sprowadza się wyłącznie do jednej liczby przy pokoju. Trzeba porównać także warunki anulowania, zawartość pakietu, śniadanie, możliwość zmiany terminu i dodatkowe świadczenia. Przed integracją ustalam więc, które dane są zarządzane na stronie, a które pozostają w systemie rezerwacyjnym."
+    ]
+   },
+   {
+    "id": "jak-strona-internetowa-dla-hotelu-wspiera-rezerwacje-bezposr",
+    "heading": "Jak strona internetowa dla hotelu wspiera rezerwacje bezpośrednie",
+    "body": [
+     "Portale rezerwacyjne mogą nadal odpowiadać za pozyskiwanie części gości. Własna witryna tworzy obok nich kanał dla osób, które znalazły obiekt w Google, zobaczyły go w mapach, otrzymały polecenie albo wracają po wcześniejszym pobycie. **Rezerwacje bezpośrednie wymagają przede wszystkim jasnej oferty i sprawnej ścieżki zakupu, a nie samego przycisku „Rezerwuj”.**",
+     "Gość powinien móc łatwo porównać warianty pobytu, sprawdzić, co obejmuje cena, oraz poznać warunki zmiany lub anulowania terminu. Ważna jest też ciągłość procesu. Jeśli użytkownik po wyborze pokoju trafia do zewnętrznego narzędzia, powinien rozumieć, że nadal rezerwuje pobyt w tym samym obiekcie. Nazwy pokoi, zdjęcia, ceny i warunki nie mogą wzajemnie sobie przeczyć.",
+     "Nie obiecuję określonego udziału rezerwacji bezpośrednich, ponieważ wynik zależy między innymi od rozpoznawalności obiektu, źródeł ruchu, sezonu, cen i jakości oferty. Mogę natomiast przygotować stronę oraz pomiar, które pozwolą Ci ocenić ten kanał na podstawie danych. Przykłady prezentacji obiektów znajdziesz w realizacjach [Apartamenty Złota Grota](/projekty/apartamenty-zlota-grota) oraz [pensjonat Maciejanka](/projekty/maciejanka)."
+    ]
+   },
+   {
+    "id": "jak-przygotowac-wersje-jezykowe-dla-zagranicznych-gosci",
+    "heading": "Jak przygotować wersje językowe dla zagranicznych gości",
+    "body": [
+     "Wersja językowa nie powinna ograniczać się do automatycznego tłumaczenia strony głównej. Gość z zagranicy potrzebuje zrozumiałych informacji o wyposażeniu pokoju, cenie, zasadach płatności, zameldowaniu, parkingu i anulowaniu pobytu. Jeżeli część treści pozostanie wyłącznie po polsku, użytkownik może przerwać proces przed potwierdzeniem rezerwacji.",
+     "Dla każdego języka przygotowuję osobne adresy podstron. Dzięki temu można udostępnić konkretną wersję pokoju lub pakietu, a wyszukiwarka otrzymuje czytelną strukturę serwisu. Menu językowe powinno prowadzić do odpowiednika aktualnie oglądanej treści, a nie za każdym razem do strony głównej. Osobnej kontroli wymagają również tytuły podstron, opisy w wynikach wyszukiwania i komunikaty formularzy.",
+     "Sprawdzam też, co obsługuje wybrany silnik rezerwacji. Sama strona dla pensjonatu może mieć kompletne tłumaczenie, ale użytkownik po przejściu do rezerwacji nadal musi zobaczyć właściwy język, dostępne metody płatności i zrozumiałe warunki. Tłumaczenia regulaminu oraz treści prawnych powinny pochodzić od osoby uprawnionej do ich przygotowania lub zostać przez nią zatwierdzone. Ja odpowiadam za ich poprawne umieszczenie i powiązanie z procesem rezerwacji."
+    ]
+   },
+   {
+    "id": "jak-mierzyc-zrodla-rezerwacji-bez-zgadywania",
+    "heading": "Jak mierzyć źródła rezerwacji bez zgadywania",
+    "body": [
+     "Pomiar zaczyna się od ustalenia, jakie działania są wartościowe. Może to być rozpoczęcie wyboru terminu, przejście do silnika rezerwacji, wysłanie zapytania albo potwierdzenie pobytu. Zakres zależy od możliwości systemu rezerwacyjnego. Jeżeli działa on w innej domenie, trzeba sprawdzić, czy może przekazać informację o zakończonej transakcji i zachować źródło wizyty.",
+     "Konfiguruję GA4 tak, aby uruchamiał się dopiero po uzyskaniu wymaganej zgody na cookies. Oznacza to, że raport nie obejmie każdej osoby odwiedzającej stronę. **Dane analityczne należy traktować jako materiał do porównywania kanałów i zachowań, a nie jako pełną księgowość rezerwacji.** Liczbę sprzedanych pobytów nadal najlepiej potwierdza system, w którym są one obsługiwane.",
+     "W pomiarze mogę uwzględnić między innymi:"
+    ],
+    "list": [
+     "wejścia z bezpłatnych wyników Google, map, kampanii, mediów społecznościowych i stron odsyłających,",
+     "kliknięcia prowadzące do procesu rezerwacji,",
+     "wysłanie formularza dotyczącego pobytu lub oferty grupowej,",
+     "zdarzenie potwierdzenia rezerwacji, jeżeli wybrany system pozwala je poprawnie przekazać."
+    ],
+    "outro": [
+     "Przed uruchomieniem testuję całą ścieżkę. Sprawdzam przy tym, czy przejście między domenami nie tworzy sztucznego nowego źródła ruchu oraz czy zdarzenia nie zapisują się dwukrotnie."
+    ]
+   },
+   {
+    "id": "jak-polaczyc-dane-obiektu-mapy-i-opinie-google",
+    "heading": "Jak połączyć dane obiektu, mapy i opinie Google",
+    "body": [
+     "Dane strukturalne pomagają opisać wyszukiwarce, czego dotyczy strona i jaki obiekt jest na niej przedstawiony. W kodzie można wskazać między innymi nazwę, adres, dane kontaktowe, lokalizację i typ działalności. Zakres oznaczeń dopasowuję do informacji rzeczywiście widocznych na stronie. **Dane strukturalne powinny potwierdzać treść witryny, a nie dodawać niewidoczne informacje wyłącznie dla wyszukiwarki.**",
+     "Równie ważna jest spójność z Profilem Firmy w Google. Nazwa obiektu, adres, telefon, adres strony oraz położenie na mapie powinny się zgadzać. Profil może prowadzić użytkownika do witryny, wskazać trasę dojazdu i prezentować opinie. Nie obiecuję jednak określonej pozycji w mapach ani wynikach wyszukiwania.",
+     "Opinie można przedstawiać na stronie tylko w sposób zgodny ze źródłem i aktualnymi zasadami używanego rozwiązania. Jeśli integracja automatyczna nie jest dostępna albo byłaby nieuzasadniona, lepiej skierować użytkownika do profilu niż utrzymywać ręcznie kopiowany, nieaktualny zestaw recenzji. Przy wdrożeniu konfiguruję także mapę strony i Search Console, aby można było kontrolować indeksowanie nowych adresów."
+    ]
+   },
+   {
+    "id": "jak-edytowac-pakiety-vouchery-i-oferty-sezonowe",
+    "heading": "Jak edytować pakiety, vouchery i oferty sezonowe",
+    "body": [
+     "Strona apartamentów z rezerwacją często potrzebuje czegoś więcej niż stałej listy pokoi. Pakiety świąteczne, pobyty dla par, oferty rodzinne, vouchery i dodatki mogą zmieniać się w ciągu roku. Przygotowuję dla nich edytowalne pola w panelu WordPress, zgodne z zaakceptowanym projektem. Korzystam z własnego motywu i ACF, bez kreatorów takich jak Elementor, Divi czy Avada w nowych realizacjach.",
+     "Możesz zmienić tytuł, opis, zdjęcia, termin obowiązywania i warunki oferty w zakresie ustalonym na początku projektu. Ceny oraz dostępność nie zawsze powinny być edytowane w tym samym miejscu. Jeśli ich głównym źródłem jest silnik rezerwacji lub inny system obiektu, pozostawienie ich właśnie tam zmniejsza ryzyko rozbieżności.",
+     "Voucher może działać jako prezentacja oferty z formularzem albo jako produkt kupowany i opłacany online. Drugi wariant wymaga ustalenia obsługi płatności, statusów zamówienia, sposobu dostarczenia vouchera, terminu ważności i zasad realizacji. Po publikacji przeprowadzam szkolenie z edycji treści. Zapewniam też 60 dni gwarancji i bezpłatnych poprawek po starcie, a dalszą [opiekę nad stroną WordPress](/uslugi/opieka-wordpress) mogę prowadzić w miesięcznym abonamencie bez umowy na rok."
+    ]
+   }
+  ]
+ }
+}
