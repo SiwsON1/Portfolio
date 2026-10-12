@@ -1,0 +1,202 @@
+{
+ "page": {
+  "slug": "aplikacje-react",
+  "title": "Aplikacje React",
+  "metaTitle": "Programista React: aplikacje i panele dla firm",
+  "metaDescription": "Programista React dla firm: panele, aplikacje za logowaniem i frontend do istniejącego API. React lub Next.js dobieram do funkcji i wymagań projektu.",
+  "h1": "Programista React do aplikacji i paneli dla firm",
+  "lead": "Tworzę w React panele, aplikacje za logowaniem i warstwy użytkownika do istniejących systemów. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+  "intro": [
+   "Jako programista React pracuję przy projektach, w których użytkownik wykonuje konkretne zadania: korzysta z panelu, uzupełnia dane, obsługuje formularze albo pracuje na informacjach pobieranych z API. Jeśli firma ma już zaplecze systemu, mogę zbudować do niego nową warstwę aplikacji bez wymiany całego rozwiązania.",
+   "Sam React wybieram przede wszystkim do aplikacji działających za logowaniem i narzędzi, które nie potrzebują rozbudowanej części publicznej przeznaczonej dla wyszukiwarek. Gdy projekt ma również publiczne podstrony, wymaga generowania treści po stronie serwera albo łączy aplikację z serwisem marketingowym, częściej sięgam po [Next.js](/uslugi/aplikacje-nextjs).",
+   "Przykładem jest [Galabau Darius](/projekty/galabau-darius) dla klienta z Niemiec. W Next.js i React zbudowałem konfigurator wyceny ogrodzeń oraz panel administracyjny z logowaniem przez Clerk i bazą obsługiwaną przez Prisma. Dzięki temu część publiczna i narzędzia dostępne po zalogowaniu działają w jednym projekcie."
+  ],
+  "bullets": [
+   {
+    "title": "React do paneli i aplikacji za logowaniem",
+    "body": "Buduję interfejsy, w których użytkownik pracuje na danych, obsługuje formularze i wykonuje powtarzalne zadania. Nie dokładam Next.js tam, gdzie sam React wystarcza do rozwiązania problemu."
+   },
+   {
+    "title": "Integracja z istniejącym API",
+    "body": "Jeśli masz już zaplecze systemu, mogę zbudować do niego nowy interfejs w React. Porządkuję komunikację z API i obsługę stanów ładowania, błędów oraz aktualizacji danych."
+   },
+   {
+    "title": "Komponenty przygotowane do dalszej rozbudowy",
+    "body": "Powtarzalne elementy interfejsu buduję jako komponenty, dzięki czemu kolejne widoki można rozwijać bez kopiowania tej samej logiki. Biblioteki dobieram do projektu, zamiast dodawać je na zapas."
+   },
+   {
+    "title": "Testy tam, gdzie ograniczają ryzyko",
+    "body": "Sprawdzam przede wszystkim krytyczne ścieżki aplikacji, czyli te miejsca, których awaria blokowałaby użytkownika. Zakres testów dopasowuję do funkcji i ryzyka zmian."
+   }
+  ],
+  "process": [
+   {
+    "step": "01",
+    "title": "Rozpoznanie aplikacji i istniejącego systemu",
+    "body": "Jeśli projekt już działa, najpierw sprawdzam kod, API, zależności i najważniejsze problemy. Przy nowej aplikacji ustalam funkcje, użytkowników i dane potrzebne w poszczególnych widokach."
+   },
+   {
+    "step": "02",
+    "title": "Plan kolejnych etapów",
+    "body": "Dzielę zakres na części, które można kolejno projektować, budować i sprawdzać. Po każdym etapie udostępniam Ci wersję testową, żeby decyzje nie zapadały dopiero przy końcowym wdrożeniu."
+   },
+   {
+    "step": "03",
+    "title": "Budowa, przegląd kodu i przekazanie",
+    "body": "Implementuję komponenty, integracje z API i potrzebne testy. Jeśli pracuję razem z Twoim zespołem, mogę również przeglądać istniejący kod i wspólnie ustalać sposób dalszej rozbudowy."
+   }
+  ],
+  "faq": [
+   {
+    "q": "Co jeśli mamy starszy projekt w React?",
+    "a": "Najpierw sprawdzam wersję Reacta, zależności i miejsca, które mogą utrudnić aktualizację. Nie zakładam z góry przepisywania aplikacji od nowa. Plan zmian przygotowuję dopiero po sprawdzeniu obecnego kodu i sposobu działania systemu."
+   },
+   {
+    "q": "Czy mogę zatrudnić Cię jako freelancera React na godziny?",
+    "a": "Tak, mogę pracować przy określonym zakresie albo rozliczać pracę według uzgodnionej liczby godzin. Przy takim modelu głównym czynnikiem kosztu jest liczba godzin potrzebnych na realizację zadań. Warunki ustalam przed rozpoczęciem współpracy."
+   },
+   {
+    "q": "Czy możemy współpracować długoterminowo?",
+    "a": "Tak. Mogę rozwijać istniejącą aplikację, wdrażać kolejne funkcje i wspierać zespół przy zmianach w interfejsie lub integracjach. Zakres współpracy ustalam tak, żeby było jasne, za które elementy odpowiadam."
+   },
+   {
+    "q": "Czy React pasuje do mojego projektu?",
+    "a": "Oceniam to na podstawie użytkowników, funkcji i sposobu udostępniania aplikacji. React zwykle dobrze pasuje do paneli, konfiguratorów i narzędzi działających za logowaniem. Jeśli projekt ma również publiczne strony widoczne w Google, mogę zaproponować Next.js."
+   },
+   {
+    "q": "Czym różni się aplikacja React od strony w Next.js?",
+    "a": "React wykorzystuję przede wszystkim do budowania interfejsu aplikacji, natomiast Next.js rozszerza go o rozwiązania przydatne dla publicznych stron i funkcji serwerowych. Dobieram technologię do tego, czy projekt jest zamkniętym narzędziem, czy łączy aplikację z częścią marketingową."
+   },
+   {
+    "q": "Ile trwa pierwsza wersja aplikacji?",
+    "a": "Pierwsza wersja aplikacji lub MVP powstaje zwykle w ciągu 6 do 12 tygodni. Dokładny termin podaję po ustaleniu funkcji, integracji, ról użytkowników i dostępności potrzebnych danych."
+   },
+   {
+    "q": "Czy aplikację da się połączyć z moim CRM albo systemem płatności?",
+    "a": "Tak, mogę połączyć aplikację z CRM, płatnościami Stripe lub innym systemem udostępniającym odpowiednie API. Przed rozpoczęciem prac sprawdzam dokumentację, sposób autoryzacji i zakres danych dostępnych w integracji."
+   },
+   {
+    "q": "Kto jest właścicielem kodu?",
+    "a": "Kod i repozytorium należą do Ciebie. Otrzymujesz dostęp do projektu, dzięki czemu jego dalszy rozwój nie jest uzależniony od jednego wykonawcy."
+   },
+   {
+    "q": "Czy zajmujesz się aplikacją po wdrożeniu?",
+    "a": "Tak. Po starcie zapewniam 60 dni gwarancji i bezpłatnych poprawek, a później mogę aktualizować biblioteki, usuwać błędy i rozwijać kolejne funkcje. Szczegółowy zakres opieki ustalam przy rozpoczęciu współpracy."
+   }
+  ],
+  "cta": "Napisz, czego potrzebuje aplikacja, a ustalimy zakres prac"
+ },
+ "block": {
+  "heading": "Tworzenie aplikacji React: co warto ustalić przed wyborem wykonawcy",
+  "intro": [
+   "**W tym poradniku znajdziesz najważniejsze informacje, które pomogą Ci ocenić zakres aplikacji, wybrać odpowiednią technologię i świadomie porównać wykonawców.** Wyjaśniam, jakie rozwiązania buduję w React, kiedy wykorzystuję Next.js, jak planuję pierwszą wersję produktu oraz co wpływa na czas realizacji.",
+   "Tworzenie aplikacji React zaczynam od zrozumienia, kto będzie korzystać z systemu i jakie zadania ma w nim wykonywać. Technologia jest narzędziem, a nie celem samym w sobie. Dlatego przed rozpoczęciem prac ustalam nie tylko listę funkcji, lecz także role użytkowników, źródła danych, potrzebne integracje i elementy, które można bezpiecznie przesunąć do kolejnego etapu."
+  ],
+  "sections": [
+   {
+    "id": "jakie-aplikacje-buduje-w-react",
+    "heading": "Jakie aplikacje buduję w React",
+    "body": [
+     "Aplikacje w React sprawdzają się szczególnie tam, gdzie użytkownik nie tylko czyta treść, ale przede wszystkim pracuje z danymi. Może wypełniać formularze, zmieniać ustawienia, przeglądać zamówienia, przygotowywać wycenę albo zarządzać informacjami dostępnymi po zalogowaniu. Interfejs reaguje na jego działania bez konieczności przeładowywania całej strony, dzięki czemu obsługa złożonych procesów może być wygodniejsza.",
+     "Jako programista React buduję między innymi:"
+    ],
+    "list": [
+     "panele klienta z dostępem do indywidualnych danych, dokumentów lub statusów,",
+     "systemy wewnętrzne wspierające pracę zespołu,",
+     "konfiguratory produktów, usług i wycen,",
+     "narzędzia z logowaniem oraz różnymi poziomami dostępu."
+    ],
+    "outro": [
+     "Przykładem takiego rozwiązania jest [Galabau Darius](/projekty/galabau-darius), czyli projekt wykonany dla klienta z Niemiec. Powstał w nim konfigurator wyceny ogrodzeń na żywo oraz panel administracyjny. Logowanie obsługuje Clerk, dane są powiązane z warstwą przygotowaną przy użyciu Prisma, a aplikacja działa na Vercel. Ten przykład pokazuje, że aplikacja webowa React może łączyć część przeznaczoną dla klientów z narzędziami do obsługi procesu po stronie firmy."
+    ]
+   },
+   {
+    "id": "react-czy-next-js-zalezy-od-roli-aplikacji",
+    "heading": "React czy Next.js zależy od roli aplikacji",
+    "body": [
+     "React służy do budowania interfejsów użytkownika, natomiast Next.js jest frameworkiem opartym na React. Dodaje rozwiązania przydatne między innymi przy tworzeniu publicznych podstron, renderowaniu treści po stronie serwera i łączeniu części aplikacyjnej z serwisem widocznym w wyszukiwarce. Dokładniejsze zestawienie znajdziesz w poradniku [Next.js vs React](/blog/next-js-vs-react-roznice).",
+     "Sam React wybieram przede wszystkim do narzędzi działających za logowaniem. W takim systemie widoki nie muszą być indeksowane przez Google, ponieważ są dostępne tylko dla uprawnionych użytkowników. Może to być panel pracownika, zaplecze do obsługi zamówień albo interfejs współpracujący z istniejącym API."
+    ],
+    "table": {
+     "caption": "React czy Next.js zależy od roli aplikacji",
+     "head": [
+      "Sytuacja w projekcie",
+      "React",
+      "Next.js"
+     ],
+     "rows": [
+      [
+       "Narzędzie działa wyłącznie po zalogowaniu",
+       "Zwykle wystarcza",
+       "Może być użyty, ale nie zawsze jest potrzebny"
+      ],
+      [
+       "Aplikacja korzysta z istniejącego API",
+       "Dobrze pasuje do warstwy interfejsu",
+       "Pasuje, jeśli potrzebne są również funkcje po stronie serwera"
+      ],
+      [
+       "Projekt ma publiczne strony widoczne w Google",
+       "Wymaga dodatkowych decyzji architektonicznych",
+       "Zwykle jest lepszym wyborem"
+      ],
+      [
+       "Część marketingowa i panel mają działać razem",
+       "Możliwe, lecz wymaga szerszej konfiguracji",
+       "Pozwala połączyć oba obszary w jednym projekcie"
+      ]
+     ]
+    },
+    "outro": [
+     "Jeśli system ma obejmować także ofertę, publiczne podstrony lub treści pozyskujące ruch z wyszukiwarki, częściej rekomenduję [tworzenie stron Next.js](/uslugi/aplikacje-nextjs). Dobór technologii wynika więc ze sposobu działania produktu, a nie z założenia, że jeden framework będzie właściwy w każdym projekcie."
+    ]
+   },
+   {
+    "id": "pierwsza-wersja-powinna-sprawdzac-najwazniejsze-zalozenie",
+    "heading": "Pierwsza wersja powinna sprawdzać najważniejsze założenie",
+    "body": [
+     "**MVP to pierwsza użyteczna wersja aplikacji, która pozwala zweryfikować pomysł bez budowania od razu wszystkich planowanych funkcji.** Nie oznacza produktu niedopracowanego. Oznacza świadome ograniczenie zakresu do procesu, który przynosi użytkownikowi konkretną wartość i może zostać sprawdzony w praktyce.",
+     "Przy planowaniu MVP ustalam, kto skorzysta z aplikacji jako pierwszy, jaki problem ma rozwiązać i jakie działania są konieczne do przejścia całej podstawowej ścieżki. Jeżeli powstaje konfigurator, pierwsza wersja może umożliwiać wybór parametrów, obliczenie wyniku i zapisanie zapytania. Rozbudowane raporty, dodatkowe warianty wyglądu czy automatyzacje administracyjne można dodać po sprawdzeniu, jak narzędzie działa w codziennym użyciu.",
+     "Na później odkładam funkcje, które nie są potrzebne do zweryfikowania głównego procesu. Dotyczy to zwykle dodatkowych ról użytkowników, zaawansowanej analityki, wielu metod logowania, rozbudowanych powiadomień lub obsługi rzadkich scenariuszy. Taki podział pomaga szybciej uzyskać działającą aplikację i podejmować kolejne decyzje na podstawie jej rzeczywistego wykorzystania."
+    ]
+   },
+   {
+    "id": "koszt-i-czas-wynikaja-z-zakresu-oraz-zaleznosci",
+    "heading": "Koszt i czas wynikają z zakresu oraz zależności",
+    "body": [
+     "Nie określam kosztu wyłącznie na podstawie liczby widoków. Dwa podobnie wyglądające ekrany mogą wymagać zupełnie innego nakładu pracy. Prosty formularz zapisujący dane różni się od formularza, który sprawdza uprawnienia, pobiera informacje z kilku systemów, obsługuje płatność i uruchamia kolejne działania po stronie serwera.",
+     "Na zakres tworzenia aplikacji React wpływają przede wszystkim:"
+    ],
+    "list": [
+     "liczba ekranów, formularzy i stanów, które trzeba obsłużyć,",
+     "liczba ról użytkowników oraz poziomów dostępu,",
+     "integracje z API i systemami zewnętrznymi,",
+     "płatności, logowanie i odzyskiwanie dostępu,",
+     "projekt oraz struktura bazy danych,",
+     "obsługa błędów, testy i wymagania dotyczące wdrożenia."
+    ],
+    "outro": [
+     "Pierwsza wersja aplikacji lub MVP powstaje zwykle w ciągu **6 do 12 tygodni**. Dokładny termin ustalam po briefie i rozpoznaniu zależności. Istotne jest również to, czy firma ma już gotowe API, dokumentację i dostęp do systemów zewnętrznych. Brak tych elementów nie musi blokować projektu, ale wpływa na sposób planowania prac."
+    ]
+   },
+   {
+    "id": "aplikacja-react-moze-wspolpracowac-z-istniejacymi-systemami",
+    "heading": "Aplikacja React może współpracować z istniejącymi systemami",
+    "body": [
+     "Nowa aplikacja nie musi zastępować całego używanego zaplecza. Jeżeli Twoja firma ma już CRM, bazę danych albo system realizujący część procesów, mogę przygotować interfejs React korzystający z dostępnego API. Użytkownik otrzymuje wtedy nową warstwę do pracy, a dane pozostają powiązane z dotychczasowym rozwiązaniem.",
+     "Możliwe jest także połączenie aplikacji z płatnościami Stripe, systemem logowania oraz bazą danych. W projektach wykorzystuję rozwiązania dobierane do konkretnych wymagań, między innymi Clerk lub NextAuth do uwierzytelniania, a także Postgres z Prisma albo Drizzle do obsługi danych. Wybór zależy od architektury aplikacji, sposobu zarządzania użytkownikami i tego, które elementy są już dostępne.",
+     "Przed rozpoczęciem integracji sprawdzam dokumentację API, sposób autoryzacji, zakres udostępnianych danych i ograniczenia techniczne. Jeżeli system nie ma API albo udostępnia tylko część potrzebnych operacji, ustalam to przed wyceną. Pozwala to oddzielić funkcje możliwe do wdrożenia od tych, które wymagają zmian po stronie zewnętrznego dostawcy."
+    ]
+   },
+   {
+    "id": "utrzymanie-aplikacji-nie-konczy-sie-na-wdrozeniu",
+    "heading": "Utrzymanie aplikacji nie kończy się na wdrożeniu",
+    "body": [
+     "Po uruchomieniu aplikacji mogą pojawić się poprawki, nowe potrzeby użytkowników i kolejne etapy rozwoju. Biblioteki używane w projekcie również wymagają aktualizacji, szczególnie gdy zmiany dotyczą bezpieczeństwa, logowania, płatności albo komunikacji z usługami zewnętrznymi. Zakres opieki warto dopasować do znaczenia aplikacji w codziennym działaniu firmy.",
+     "Po starcie zapewniam **60 dni gwarancji i bezpłatnych poprawek**. Później mogę rozwijać system oraz zajmować się aktualizacjami i poprawkami w ramach opcjonalnej opieki w miesięcznym abonamencie bez umowy na rok. Szczegóły utrzymania, priorytety zgłoszeń i zakres planowanych prac ustalam przy rozpoczęciu współpracy.",
+     "Kod aplikacji i repozytorium należą do Ciebie. Nie uzależniam dostępu do projektu od dalszej współpracy ze mną. Dzięki temu możesz zlecać mi kolejne etapy, włączyć własny zespół albo przekazać rozwój innemu wykonawcy, jeśli zmienią się potrzeby Twojej firmy."
+    ]
+   }
+  ]
+ }
+}
