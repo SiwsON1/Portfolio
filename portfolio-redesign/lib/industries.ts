@@ -1135,158 +1135,158 @@ export const industries: Industry[] = [
     title: "Firmy budowlane",
     keyword: "tworzenie stron dla firm budowlanych",
     metaTitle: "Tworzenie stron dla firm budowlanych: galeria i wyceny",
-    metaDescription: "Tworzenie stron dla firm budowlanych: galeria przed i po, formularz przyjmujący zdjęcia oraz obszar dojazdu. Realizacja 4-6 tygodni.",
+    metaDescription: "Tworzenie stron dla firm budowlanych: galeria realizacji, formularz ze zdjęciami i kalkulator wyceny. WordPress lub Next.js. Termin 4-6 tygodni.",
     h1: "Tworzenie stron dla firm budowlanych",
-    lead: "Buduję strony dla firm remontowych, dekarzy, brukarzy i wykonawców, na których szybko widać realizacje, zakres prac, obszar dojazdu i sposób kontaktu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+    lead: "Projektuję strony dla firm remontowych, dekarzy, brukarzy i wykonawców termomodernizacji, które pokazują wykonane prace i zbierają zapytania z informacjami potrzebnymi do wyceny. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
-      "W tej branży strona musi pokazać efekt pracy, zanim zacznie go opisywać. Tworzenie stron dla firm budowlanych opieram więc na zdjęciach realizacji, czytelnym podziale usług, konkretnym obszarze działania i kontakcie wygodnym również dla osoby, która ogląda serwis na telefonie na placu budowy. [Stronę WordPress](/uslugi/tworzenie-stron-wordpress) mogę przygotować z własnym motywem i prostym panelem do dodawania kolejnych realizacji.",
-      "W projekcie [Dom Bez Wad](/projekty/dom-bez-wad) przygotowałem witrynę prezentującą termomodernizację, ocieplenia i pompy ciepła. Z kolei [Galabau Darius](/projekty/galabau-darius) to aplikacja Next.js z galerią oraz konfiguratorem ogrodzeń, który oblicza cenę na żywo."
+      "Klient pisze „ile kosztuje remont łazienki?”, ale nie podaje metrażu ani nie wysyła zdjęć. Ty dopytujesz, prosisz o wymiary i próbujesz ustalić, czy w ogóle możesz podjąć się zlecenia. Dlatego tworzenie stron dla firm budowlanych zaczynam od dwóch rzeczy: pokazania wykonanych prac i ułatwienia klientowi opisania tego, czego potrzebuje. Przygotuję galerię realizacji, osobne podstrony usług i formularz wyceny, w którym klient poda wymiary, lokalizację oraz dołączy zdjęcia. [Stronę WordPress](/uslugi/tworzenie-stron-wordpress) zbuduję z własnym motywem i prostym panelem, żebyś mógł dodawać kolejne realizacje bez pomocy programisty.",
+      "Mam doświadczenie z projektami dla wykonawców o różnym zakresie działalności. Dla [Dom Bez Wad](/projekty/dom-bez-wad) przygotowałem w 2023 roku stronę WordPress firmy zajmującej się termomodernizacją, ociepleniami i pompami ciepła. Z kolei [Galabau Darius](/projekty/galabau-darius) to aplikacja Next.js dla niemieckiej firmy ogrodniczej, którą zrealizowałem w 2026 roku. Ma galerię prac, panel administracyjny i konfigurator ogrodzeń obliczający cenę na żywo. Jeżeli Twoją usługę można wycenić na podstawie powtarzalnych parametrów, mogę przygotować podobny mechanizm. Jeśli każde zlecenie wymaga indywidualnej oceny, zaprojektuję formularz, który zbierze potrzebne informacje przed pierwszą rozmową."
     ],
     pains: [
       {
-        title: "Brak dowodów wykonania",
-        body: "Sama lista usług nie pokazuje, jak wygląda Twoja praca po zakończeniu zlecenia. Dlatego galerię realizacji buduję tak, żeby można było pokazać efekt przed i po, zakres robót, użyte materiały oraz typ inwestycji bez ujawniania danych klienta."
+        title: "Zapytania o cenę bez wymiarów i zdjęć",
+        body: "Dostajesz wiadomość „ile za dach?” albo „jaka cena za metr ogrodzenia?”, ale nie wiesz, jak duży jest zakres prac. Potem wymieniasz kilka wiadomości, żeby ustalić podstawy. Przygotuję formularz wyceny dopasowany do Twoich usług. Klient wybierze rodzaj prac, poda miejscowość, orientacyjne wymiary, planowany termin i dołączy zdjęcia. Dzięki temu od razu zobaczysz, czego dotyczy zapytanie, i łatwiej ocenisz, czy warto umawiać oględziny. Przy złożonych robotach formularz nie zastąpi wizyty na budowie, ale pomoże zdecydować, co trzeba sprawdzić na miejscu."
       },
       {
-        title: "Niejasny obszar dojazdu",
-        body: "Zapytania spoza obsługiwanego terenu zabierają czas obu stronom. Witryna jasno wskazuje miejscowości, promień dojazdu oraz zasady wyceny realizacji poza podstawowym obszarem."
+        title: "Realizacje zostają w telefonie",
+        body: "Masz zdjęcia wyremontowanych łazienek, ułożonej kostki albo wykonanych dachów, ale wysyłasz je każdemu zainteresowanemu osobno. Zamiast tego przygotuję galerię realizacji z możliwością dodawania zdjęć z telefonu. Każda inwestycja otrzyma osobną podstronę z opisem zakresu prac, zastosowanych materiałów, przybliżoną lokalizacją i czasem wykonania. Możesz pokazać fotografie przed i po, etapy robót oraz gotowy efekt. Nie trzeba publikować dokładnego adresu ani danych inwestora. Gdy klient zapyta o podobną usługę, wyślesz mu odnośnik do konkretnej realizacji."
       },
       {
-        title: "Utrudniony kontakt mobilny",
-        body: "Osoba stojąca na budowie nie będzie szukała numeru w stopce. Przycisk połączenia i krótki formularz kontaktowy pozostają dostępne na każdej podstronie w wersji mobilnej."
+        title: "Telefony z miejsc, do których nie dojeżdżasz",
+        body: "Obsługujesz Wrocław i okoliczne miejscowości, a dzwoni ktoś z drugiego końca kraju. Dopiero w rozmowie okazuje się, że dojazd nie ma sensu. Na stronie pokażę rzeczywisty obszar działania i powiążę go z oferowanymi usługami. Możemy opisać podstawowy zasięg, miejscowości obsługiwane po uzgodnieniu i zasady wyceny dalszych zleceń. Klient zobaczy te informacje przed wysłaniem formularza. Nie będę tworzył dziesiątek niemal identycznych podstron tylko po to, żeby umieścić na nich nazwy kolejnych miast."
       },
       {
-        title: "Sezonowe spadki zapytań",
-        body: "Popyt na część prac zmienia się w ciągu roku. Osobne podstrony usług, lokalne treści i plan publikacji pozwalają wcześniej rozwijać pozycjonowanie na kolejny sezon."
+        title: "Klient nie widzi, co potrafisz wykonać",
+        body: "Sama informacja „usługi remontowo-budowlane” niewiele mówi osobie, która szuka wykonawcy konkretnej pracy. Przygotuję oddzielne opisy usług, materiały o sposobie realizacji i galerię odpowiadającą zakresowi oferty. Jeśli zajmujesz się dachami, pokażemy rodzaje pokryć i obróbek. Jeśli wykonujesz termomodernizację, rozdzielimy ocieplenia od instalacji pomp ciepła. Dodam widoczny numer telefonu, a na telefonie przycisk umożliwiający połączenie jednym dotknięciem. Klient nie będzie musiał przekopywać się przez całą stronę, żeby znaleźć właściwą usługę i kontakt."
       }
     ],
     mustHave: [
       {
-        title: "Galeria przed i po",
-        body: "Zdjęcia można filtrować według rodzaju usługi lub miejsca realizacji. Każda karta otrzymuje opis robót i materiałów bez ujawniania danych klienta."
+        title: "Galeria realizacji z konkretnymi opisami",
+        body: "Każda realizacja otrzyma własną podstronę z zakresem prac, rodzajem zastosowanych materiałów, lokalizacją i czasem wykonania. Zdjęcia przed i po pomogą pokazać zmianę, a fotografie z poszczególnych etapów udokumentują sposób pracy. Przy większej liczbie inwestycji dodam filtrowanie według rodzaju usługi lub lokalizacji. Przygotuję też pola w panelu administracyjnym, dzięki którym samodzielnie uzupełnisz opisy i dodasz fotografie z telefonu, zachowując ten sam układ każdej realizacji."
       },
       {
-        title: "Formularz ze zdjęciami",
-        body: "Klient dołącza fotografie budynku, dachu, ogrodzenia albo terenu już przy pierwszym kontakcie. Formularz strony budowlanej dostarcza materiał potrzebny do wstępnej wyceny zlecenia."
+        title: "Formularz wyceny ze zdjęciami i wymiarami",
+        body: "Zamiast samego pola „wiadomość” przygotuję pytania odpowiednie do Twojej usługi. Klient poda rodzaj inwestycji, miejscowość, planowany termin, podstawowe wymiary i opis oczekiwanych prac. Będzie mógł dołączyć zdjęcia dachu, pomieszczenia, elewacji albo działki. W formularzu uwzględnię również niezbędne zgody dotyczące danych osobowych. Otrzymasz uporządkowane informacje, które pomogą przygotować wstępną odpowiedź i ocenić potrzebę oględzin."
       },
       {
-        title: "Widoczny numer telefonu",
-        body: "Numer jest dostępny w nagłówku i jako przycisk na telefonie. Użytkownik może zadzwonić bez kopiowania danych i przechodzenia do oddzielnej strony kontaktowej."
+        title: "Kontakt dostępny na telefonie",
+        body: "Numer telefonu umieszczę w widocznym miejscu, a w wersji mobilnej przygotuję wygodny przycisk połączenia. Formularz będzie można wypełnić bez korzystania z komputera, również podczas oględzin nieruchomości. Duże zdjęcia realizacji zoptymalizuję pod kątem szybkości ładowania. Przed oddaniem strony sprawdzę wynik Lighthouse z celem 90+ na telefonie oraz LCP poniżej 2,5 sekundy, czyli czas wyświetlenia największego widocznego elementu strony."
       },
       {
-        title: "Zakres i obszar usług",
-        body: "Każda usługa ma własny opis, przykłady oraz obsługiwane lokalizacje. Taka struktura porządkuje ofertę i wspiera widoczność firmy budowlanej w lokalnych wynikach Google."
+        title: "Osobne usługi i rzeczywisty obszar działania",
+        body: "Przygotuję podstrony dla konkretnych usług, takich jak remonty łazienek, układanie kostki, wykonanie ogrodzeń czy ocieplanie budynków, zależnie od Twojej oferty. Każda opisze zakres robót, stosowane materiały, przebieg współpracy i odpowiednie realizacje. Pokażę również miejscowości oraz regiony, w których faktycznie pracujesz. Dane firmy zachowam w spójnej formie na stronie i w Profilu Firmy w Google. Dodam dane strukturalne LocalBusiness, które pomagają wyszukiwarce rozpoznać informacje o lokalnej działalności."
       },
       {
-        title: "Uprawnienia i certyfikaty",
-        body: "Dokumenty, autoryzacje producentów i kwalifikacje trafiają do czytelnej sekcji. Publikujesz wyłącznie aktualne informacje, które inwestor może zweryfikować."
+        title: "Dokumenty potwierdzające kwalifikacje",
+        body: "Klient prywatny może szukać zdjęć podobnego remontu, a inwestor zlecający większe roboty będzie chciał sprawdzić uprawnienia, referencje, polisę OC lub zaplecze wykonawcy. Przygotuję czytelną sekcję na dokumenty, którymi rzeczywiście dysponujesz. Możesz pokazać certyfikaty, autoryzacje producentów, warunki gwarancji i informacje o sprzęcie. Materiały uporządkuję tak, żeby nie trzeba było szukać ich między zdjęciami realizacji. Aktualizację dokumentów uwzględnię w sposobie edycji strony."
       },
       {
-        title: "Wstępna kalkulacja",
-        body: "Konfigurator zbiera wymiary, wariant materiału i dodatkowe wymagania. Wynik może wskazywać orientacyjny zakres kosztów albo stanowić podstawę indywidualnej oferty."
+        title: "Kalkulator wyceny tam, gdzie ma sens",
+        body: "Jeżeli cena zależy od stałych reguł, takich jak długość ogrodzenia, wysokość, materiał czy wybrane dodatki, mogę zbudować kalkulator wyceny. Podobne rozwiązanie wdrożyłem w Galabau Darius, gdzie konfigurator ogrodzeń oblicza cenę na żywo. Nie proponuję jednak automatycznej kalkulacji do każdego rodzaju robót. Przy generalnym remoncie, nietypowym dachu albo skomplikowanej termomodernizacji często potrzebna jest ocena stanu obiektu. Wtedy przygotuję formularz zbierający zdjęcia, wymiary i opis zamiast wyniku sugerującego nieuzasadnioną dokładność."
       }
     ],
     stack: [
       {
         label: "WordPress",
-        body: "Autorski motyw i CMS bez Elementora, Avady i Divi zapewniają prostą obsługę galerii, usług oraz treści lokalnych."
+        body: "Projektuję własny motyw WordPress i wykorzystuję ACF do przygotowania pól edycyjnych zgodnych z projektem. Bez Elementora, Divi i Avady. Sam dodasz realizację, zdjęcia, opis materiałów lub zaktualizujesz zakres usług. Sprawdza się, gdy potrzebujesz strony dla firmy remontowej, dekarskiej czy brukarskiej z wygodnym zarządzaniem treścią."
       },
       {
         label: "Next.js",
-        body: "Sprawdza się przy rozbudowanych konfiguratorach, dynamicznych kalkulacjach i formularzach wyceny wymagających niestandardowej logiki."
+        body: "Wybieram Next.js, gdy strona ma działać również jako aplikacja z rozbudowanym formularzem lub kalkulatorem. Mogę przygotować własne reguły wyceny, konfigurator produktów i panel administracyjny. Takie rozwiązanie zastosowałem w Galabau Darius, wykorzystując między innymi logowanie przez Clerk i hosting Vercel."
       },
       {
         label: "Search Console",
-        body: "Konfiguracja od dnia publikacji pozwala śledzić indeksowanie podstron usług oraz zapytania związane z obsługiwanymi miejscowościami."
+        body: "Podczas wdrożenia przygotowuję mapę strony, strukturę nagłówków i konfiguruję Google Search Console. Dzięki temu możesz sprawdzać indeksowanie podstron usług oraz zapytania, na które pojawia się witryna. Jeśli wdrażamy GA4 do analizy odwiedzin, uruchamiam pomiar dopiero po uzyskaniu zgody na cookies."
       },
       {
         label: "schema.org",
-        body: "Dane strukturalne opisują firmę budowlaną, jej usługi, obszar działania i odpowiedzi w formacie zrozumiałym dla Google."
+        body: "Dodaję dane strukturalne LocalBusiness opisujące lokalną firmę, jej dane kontaktowe i obszar działania. Sprawdzam ich zgodność z informacjami na stronie oraz Profilem Firmy w Google. To techniczne uporządkowanie danych dla wyszukiwarki, a nie obietnica określonych pozycji."
       }
     ],
     pricing: {
       time: "4-6 tygodni",
-      note: "Kwotę za stronę firmy budowlanej ustawiają liczba usług i obsługiwanych lokalizacji, zakres treści oraz sposób pokazania galerii realizacji."
+      note: "Koszt strony zależy od liczby usług i obsługiwanych obszarów, wielkości galerii realizacji, rodzaju formularza lub kalkulatora wyceny oraz potrzebnych wersji językowych. Typowy termin wykonania strony firmowej to 4-6 tygodni, a dokładny zakres, wycenę i harmonogram ustalam po rozmowie i briefie."
     },
     faq: [
       {
         q: "Ile będzie kosztować strona dla mojej firmy budowlanej?",
-        a: "Najwięcej na zakres wpływa liczba usług i sposób zbierania zapytań. Zwykły formularz to mniej pracy niż konfigurator lub formularz przyjmujący rozbudowane dane i zdjęcia. Po rozmowie i briefie przygotuję konkretny zakres oraz termin."
+        a: "Wyceniam projekt po krótkiej rozmowie i briefie. Znaczenie ma liczba usług, obsługiwanych obszarów, wielkość galerii, sposób przygotowania treści oraz rodzaj formularza wyceny. Rozbudowany konfigurator ogrodzeń wymaga innej pracy niż zwykły formularz ze zdjęciami. Osobno uwzględniam ewentualne wersje językowe. Otrzymasz konkretny zakres i termin bez zgadywania kosztu na podstawie samej nazwy branży."
       },
       {
         q: "Ile potrwa strona dla mojej firmy budowlanej?",
-        a: "Typowa strona firmowa zajmuje zwykle 4-6 tygodni. Dużo zależy od tego, czy masz gotowe zdjęcia realizacji i treści do poszczególnych usług."
+        a: "Typowa strona firmowa lub usługowa powstaje w ciągu 4-6 tygodni. Dokładny termin ustalam po briefie, uwzględniając liczbę podstron, funkcje i gotowość materiałów. Jeśli masz już zdjęcia realizacji oraz ustalony zakres usług, łatwiej zaplanować kolejne etapy. Projekt makiet w Figmie i jego akceptacja odbywają się przed kodowaniem."
       },
       {
         q: "Jakie zdjęcia przygotować na stronę?",
-        a: "Najlepiej fotografować podobny kadr przed rozpoczęciem i po zakończeniu prac. Możesz zrobić zdjęcia telefonem, jeśli są ostre i dobrze oświetlone. Ja przygotuję je później do publikacji w lekkich formatach."
+        a: "Najbardziej przydatne są ostre fotografie pokazujące stan przed pracami, poszczególne etapy i gotowy rezultat. Staraj się fotografować podobne ujęcia przed i po remoncie. Możesz korzystać z telefonu, nie potrzebujesz profesjonalnego aparatu. Przydadzą się też zdjęcia detali wykonania, materiałów i większych fragmentów inwestycji. Ja przygotuję fotografie do publikacji w formatach odpowiednich dla strony."
       },
       {
         q: "Czy potrzebuję konfiguratora wyceny?",
-        a: "Nie zawsze. Jeśli cenę da się oprzeć na powtarzalnych parametrach, takich jak powierzchnia, długość lub wariant materiału, konfigurator może mieć sens. Przy złożonych remontach zaproponuję raczej formularz ze zdjęciami i opisem prac."
+        a: "Nie przy każdej usłudze. Kalkulator wyceny proponuję wtedy, gdy możesz określić stałe reguły obliczania ceny, na przykład na podstawie długości ogrodzenia, wysokości, materiału i dodatków. Przy generalnych remontach lub nietypowych dachach lepiej sprawdza się formularz ze zdjęciami i wymiarami. Podczas briefu pomogę Ci wybrać rozwiązanie odpowiadające rzeczywistemu sposobowi wyceniania prac."
       },
       {
         q: "Czy podanie obszaru działania pomoże mojej stronie w Google?",
-        a: "Opisz jasno miejsca, w których rzeczywiście pracujesz, i połącz je z konkretnymi usługami lub realizacjami. Nie obiecuję pozycji w Google, ale przygotuję poprawną strukturę strony, dane strukturalne, mapę strony i Search Console."
+        a: "Jasny opis obszaru działania pozwala klientowi sprawdzić, czy realizujesz zlecenia w jego miejscowości. Przygotuję podstrony usług, informacje o lokalizacjach, dane strukturalne LocalBusiness i spójne dane kontaktowe. Skonfiguruję także mapę strony oraz Search Console. Te działania pomagają uporządkować informacje dla wyszukiwarki, ale nie gwarantują określonej pozycji w Google."
       },
       {
         q: "Czy mogę uruchomić stronę, jeśli nie mam jeszcze galerii realizacji?",
-        a: "Tak. Mogę oprzeć pierwszą wersję na procesie pracy, usługach, uprawnieniach, sprzęcie i dostępnych materiałach. Gdy zbierzesz zdjęcia, dodasz realizacje przez CMS."
+        a: "Tak. Pierwszą wersję możemy oprzeć na dokładnym opisie usług, sposobie wykonywania prac, dostępnych zdjęciach sprzętu, uprawnieniach i materiałach firmowych. Nie będę przedstawiał cudzych inwestycji jako Twoich. Przygotuję strukturę galerii i pola do edycji, żebyś mógł później samodzielnie uzupełniać wykonane realizacje."
       },
       {
         q: "Czy warto przenieść moją starą stronę na WordPress?",
-        a: "Jeśli chcesz samodzielnie dodawać realizacje i rozwijać ofertę, WordPress może być dobrym rozwiązaniem. Przed migracją sprawdzę stare adresy i treści, przygotuję potrzebne przekierowania 301 i wskażę, co warto zachować."
+        a: "Jeśli chcesz wygodnie dodawać realizacje, zmieniać opisy usług i samodzielnie rozwijać ofertę, WordPress może być odpowiednim wyborem. Przed migracją przejrzę dotychczasowe treści i adresy podstron. Przy zmianie adresów przygotuję przekierowania 301, a samą migrację zaplanuję tak, żeby możliwie skrócić przerwę w działaniu. Zmiana DNS może jednak spowodować krótką niedostępność strony."
       },
       {
         q: "Co będę opłacać po uruchomieniu strony?",
-        a: "Poza domeną potrzebujesz hostingu. Pomogę dobrać odpowiedni pakiet, na przykład w Hostingerze albo cyber_folks. Po starcie masz też 60 dni gwarancji i bezpłatnych poprawek, a później możesz prowadzić stronę samodzielnie albo zlecić mi miesięczną opiekę."
+        a: "Do utrzymania strony potrzebujesz domeny oraz hostingu. Pomogę dobrać rozwiązanie do technologii i funkcji witryny, na przykład w Hostingerze, cyber_folks albo na Vercel. Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek. Następnie możesz samodzielnie prowadzić stronę lub zlecić mi opcjonalną miesięczną opiekę bez umowy na rok."
       },
       {
         q: "Czy potrzebuję osobnej podstrony dla każdego miasta?",
-        a: "Nie tworzę takich podstron tylko po to, żeby podmienić nazwę miejscowości. Osobna strona ma sens wtedy, gdy możesz pokazać dla danego miejsca rzeczywiste usługi, realizacje albo informacje przydatne klientowi."
+        a: "Nie. Zamiast tworzyć niemal identyczne teksty z podmienioną nazwą miejscowości, wolę pokazać rzeczywisty obszar działania, konkretne usługi i realizacje z danego regionu. Osobna podstrona lokalna ma sens wtedy, gdy możesz przedstawić informacje rzeczywiście przydatne klientom z tego miejsca. Taką strukturę ustalimy podczas planowania strony."
       },
       {
         q: "Czy mogę sam dodawać nowe realizacje?",
-        a: "Tak, jeśli w projekcie uwzględnimy CMS do zarządzania realizacjami. Przygotuję ustalony układ pól i przeprowadzę szkolenie online z edycji treści, dzięki czemu będziesz mógł uzupełniać galerię bez zmieniania projektu każdej podstrony."
+        a: "Tak. Jeśli uwzględnimy system zarządzania treścią, przygotuję pola na zdjęcia, zakres prac, materiały, lokalizację i czas wykonania. W WordPressie wykorzystuję do tego własny motyw i ACF, dzięki którym nowa realizacja zachowuje ustalony wygląd. Podczas szkolenia online pokażę Ci, jak dodać zdjęcia z telefonu i opublikować kolejną inwestycję."
       },
       {
         q: "Czy domena będzie moja?",
-        a: "Sposób rejestracji domeny i dane abonenta ustalam przy rozpoczęciu współpracy. Przed wdrożeniem jasno określę z Tobą, kto rejestruje domenę, na jakim koncie będzie utrzymywana i kto otrzyma dostęp do jej konfiguracji."
+        a: "Przed rozpoczęciem współpracy ustalimy, na kogo domena zostanie zarejestrowana i kto będzie miał dostęp do jej konfiguracji. Jeżeli masz już domenę, możemy wykorzystać ją przy wdrożeniu. Wyjaśnię też, jakie dostępy będą potrzebne do uruchomienia witryny. Nie musisz przenosić domeny tylko dlatego, że zlecasz mi wykonanie nowej strony."
       },
       {
         q: "Czy są jakieś opłaty co miesiąc?",
-        a: "Zakres stałych opłat ustalam przy rozpoczęciu współpracy, zależnie od wybranego rozwiązania i usług potrzebnych stronie. Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek, a później możesz wybrać opcjonalną opiekę w miesięcznym abonamencie bez umowy na rok."
+        a: "Zależy to od wybranego hostingu, domeny i dodatkowych usług wykorzystywanych przez stronę. Przed wdrożeniem omówię z Tobą potrzebne rozwiązania oraz ich sposób rozliczania. Moja opieka po zakończeniu 60-dniowego okresu gwarancji jest opcjonalna. Jeśli zdecydujesz się na miesięczny abonament, nie wymagam umowy na rok."
       },
       {
         q: "Czy od razu będę wysoko w Google?",
-        a: "Nie obiecuję konkretnej pozycji ani natychmiastowych wyników. Przy wdrożeniu przygotuję strukturę nagłówków, dane strukturalne, mapę strony i Search Console, ale widoczność zależy również od konkurencji, jakości treści, historii domeny oraz dalszego rozwoju serwisu."
+        a: "Nie mogę obiecać konkretnej pozycji ani terminu jej osiągnięcia. Przygotuję poprawną strukturę nagłówków, podstrony usług, dane strukturalne, mapę strony i konfigurację Search Console. Widoczność zależy jednak również od konkurencji, jakości i zakresu treści, historii domeny oraz dalszego rozwoju witryny. Samo uruchomienie strony nie gwarantuje określonego wyniku."
       },
       {
         q: "Kiedy najlepiej zrobić stronę firmy budowlanej?",
-        a: "Najlepiej rozpocząć pracę wtedy, gdy możesz określić zakres usług, obszar działania i zebrać podstawowe materiały. Typowa strona firmowa lub usługowa powstaje w ciągu 4-6 tygodni, dlatego warto uwzględnić ten czas w planie rozwoju firmy oraz pozyskiwania zapytań."
+        a: "Najlepiej wtedy, gdy potrafisz określić swoje główne usługi, obszar działania i masz przynajmniej podstawowe materiały do prezentacji oferty. Nie musisz czekać, aż zbierzesz zdjęcia wszystkich wykonanych inwestycji. Typowy termin realizacji strony firmowej to 4-6 tygodni, więc warto uwzględnić go przed planowanym rozwijaniem oferty lub sezonem, w którym chcesz prezentować określone usługi."
       }
     ],
-    cta: "Opisz usługi i obszar działania, a przygotuję wycenę tworzenia strony dla Twojej firmy budowlanej",
+    cta: "Opisz, jakie prace wykonujesz i gdzie dojeżdżasz, a przygotuję wycenę strony dla Twojej firmy budowlanej.",
     deliverables: [
       {
-        label: "Zakres usług",
-        body: "Przygotowuję podstrony usług z opisem prac, stosowanych materiałów, przebiegu realizacji i obsługiwanego obszaru. Ich liczbę i zakres ustalamy w briefie."
+        label: "Podstrony usług",
+        body: "Przygotuję osobne podstrony dla ustalonych prac, z opisem zakresu, materiałów, przebiegu realizacji i obszaru działania. Połączę je z odpowiednimi zdjęciami oraz możliwością wysłania zapytania. Zamiast ogólnej listy usług klient zobaczy, czym dokładnie się zajmujesz i jakie informacje powinien przygotować przed kontaktem."
       },
       {
-        label: "Karty realizacji",
-        body: "Tworzę w CMS wzór realizacji z lokalizacją, zakresem robót, informacjami o inwestycji i zoptymalizowaną galerią zdjęć."
+        label: "Galeria i karty realizacji",
+        body: "Zbuduję galerię z osobną podstroną każdej inwestycji. Przygotuję pola na zakres robót, materiały, przybliżoną lokalizację, czas wykonania i fotografie. Zoptymalizuję zdjęcia oraz ustalę sposób ich dodawania przez panel zarządzania treścią. Dzięki temu nowe realizacje nie będą wymagały każdorazowego projektowania podstrony."
       },
       {
-        label: "Formularz oględzin",
-        body: "Wdrażam formularz wyceny z wyborem rodzaju inwestycji, miejscowości, planowanego terminu, opisem zakresu, zgodą RODO i możliwością dodania zdjęć lub dokumentów."
+        label: "Formularz lub kalkulator wyceny",
+        body: "Wdrożę formularz z wyborem rodzaju usługi, miejscowością, terminem, wymiarami, opisem i możliwością przesyłania zdjęć. Jeżeli Twoje ceny opierają się na ustalonych regułach, mogę zamiast niego lub obok niego przygotować konfigurator z obliczaniem wyniku. Zakres pól i sposób prezentacji wyceny ustalimy przed projektowaniem."
       },
       {
-        label: "Dokumenty wykonawcy",
-        body: "Przygotowuję sekcję na certyfikaty, uprawnienia, referencje, warunki gwarancji i materiały przeznaczone dla inwestora."
+        label: "Dokumenty i informacje dla inwestora",
+        body: "Przygotuję miejsce na rzeczywiste uprawnienia, certyfikaty, referencje, informacje o sprzęcie, polisę OC i warunki gwarancji. Jeżeli obsługujesz klientów prywatnych i firmy, uporządkuję materiały tak, żeby każda grupa łatwo znalazła potrzebne informacje. Dla działalności na rynku niemieckim uwzględnię niemiecką wersję strony oraz podstrony Impressum i Datenschutz."
       },
       {
-        label: "Obszar działania",
-        body: "Pokazuję miejscowości lub region, w którym pracujesz, oraz zasady kontaktu przy zleceniu spoza podstawowego obszaru. Jeśli firma ma kilka ekip lub oddziałów, sposób kierowania zapytań ustalamy w briefie."
+        label: "Obszar działania i przygotowanie techniczne",
+        body: "Pokażę obsługiwane miejscowości, regiony i zasady dojazdu. Przygotuję dane strukturalne lokalnej firmy, mapę strony i Search Console. Sprawdzę wyświetlanie na telefonach, szybkość ładowania galerii oraz spójność danych kontaktowych z Profilem Firmy w Google. Po uruchomieniu przeprowadzę szkolenie online z edycji treści."
       }
     ],
     headings: {
@@ -1300,34 +1300,34 @@ export const industries: Industry[] = [
     process: [
       {
         step: "01",
-        title: "Brief",
-        body: "Zakres robót, obsługiwane miejscowości i sezonowość zapytań."
+        title: "Brief i zakres prac",
+        body: "Zaczynam od rozmowy o tym, jakie usługi wykonujesz, gdzie dojeżdżasz i jak obecnie otrzymujesz zapytania. Sprawdzamy, jakie informacje klient powinien podać przed wyceną, które prace wymagają oględzin i czy kalkulator ma sens przy Twoim cenniku. Ustalam też liczbę podstron, rodzaje realizacji i ewentualne wersje językowe. Na tej podstawie przygotuję zakres, wycenę i termin wykonania."
       },
       {
         step: "02",
-        title: "Materiały",
-        body: "Zbieramy zdjęcia przed i po, uprawnienia, certyfikaty i referencje."
+        title: "Zdjęcia i materiały",
+        body: "Zbieramy zdjęcia z ukończonych inwestycji, opisy prac, użyte materiały i informacje o obszarze działania. Możesz przekazać fotografie wykonane telefonem, pod warunkiem że są ostre i dobrze pokazują rezultat. Wybieramy zdjęcia przed i po oraz dokumenty, które warto udostępnić inwestorom. Jeżeli brakuje materiałów, ustalimy, co można pokazać na pierwszej wersji strony i jak później rozbudować galerię."
       },
       {
         step: "03",
-        title: "Projekt",
-        body: "Galeria i numer telefonu na pierwszym planie, układ liczony pod ekran telefonu."
+        title: "Projekt strony",
+        body: "Przygotowuję makiety w Figmie, zaczynając od układu wygodnego na telefonie. Pokazuję, gdzie znajdzie się galeria, opisy usług, przycisk połączenia i formularz wyceny. Projekt obejmuje dwie tury poprawek, a kodowanie rozpoczynam po Twojej akceptacji. Możesz wtedy ocenić sposób prezentacji realizacji i ścieżkę kontaktu, zanim powstanie gotowa strona."
       },
       {
         step: "04",
-        title: "Wdrożenie",
-        body: "Motyw, formularz przyjmujący zdjęcia od klienta, podstrony usług i obszaru działania."
+        title: "Wdrożenie i testy",
+        body: "Koduję zaakceptowany projekt w WordPressie albo Next.js. Przygotowuję karty realizacji, formularz przyjmujący zdjęcia, podstrony usług i obszaru działania. W razie potrzeby wdrażam kalkulator wyceny z uzgodnionymi regułami. Testuję formularze, wyświetlanie na telefonach oraz ładowanie dużych fotografii. Przed oddaniem sprawdzam Lighthouse z celem 90+ na telefonie i LCP poniżej 2,5 sekundy."
       },
       {
         step: "05",
-        title: "Start",
-        body: "Search Console, Profil Firmy w Google i szkolenie z dodawania realizacji."
+        title: "Publikacja i szkolenie",
+        body: "Uruchamiam stronę na ustalonej domenie, konfiguruję Search Console, mapę strony oraz dane strukturalne. Sprawdzam informacje o firmie i ich zgodność z Profilem Firmy w Google. Podczas szkolenia online pokażę Ci, jak dodawać kolejne realizacje, zmieniać zdjęcia i aktualizować opisy usług. Po starcie otrzymujesz 60 dni gwarancji i bezpłatnych poprawek. Dalsza opieka jest opcjonalna."
       }
     ],
     notFor: [
-      "Nie masz zdjęć realizacji i nie zamierzasz ich robić. Bez dowodu ta strona nie zadziała.",
-      "Chcesz podstronę pod każde miasto w Polsce. Powielona treść szkodzi zamiast pomagać.",
-      "Liczysz na zapytania bez żadnego budżetu na widoczność. Sama strona to za mało."
+      "Jeśli nie masz żadnych zdjęć prac i nie zamierzasz ich dokumentować, nie proponuję rozbudowanej galerii realizacji, ponieważ nie będziemy mieli materiału pokazującego Twoje doświadczenie.",
+      "Jeśli oczekujesz osobnej podstrony dla każdej miejscowości w Polsce, z identyczną treścią i zmienioną nazwą miasta, nie przygotuję takiej struktury, ponieważ wolę opisywać rzeczywiste usługi, obszary działania i wykonane inwestycje.",
+      "Jeśli oczekujesz gwarantowanych pozycji w Google lub określonej liczby zleceń zaraz po publikacji, nie podejmę się takich obietnic, ponieważ wdrożenie strony nie pozwala przewidzieć tych wyników."
     ]
   },
   {
