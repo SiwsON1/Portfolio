@@ -647,3 +647,40 @@ html.lenis body {
   .post-lead-key { animation: none; background-size: 100% 0.12em; }
 }
 
+
+/* ── Wpis: ilustracja tematu obok leadu (pętla 7 s) ─────────── */
+.pf { --cycle: 7s; }
+.pf-live i { display: block; width: 6px; height: 6px; border-radius: 999px; background: var(--color-peach); animation: flow-blink 1.6s ease-in-out infinite; }
+.pf-gauge { stroke: var(--color-peach-deep); stroke-dasharray: 100; stroke-dashoffset: 100; animation: pf-gauge var(--cycle) cubic-bezier(0.16,1,0.3,1) infinite both; }
+@keyframes pf-gauge { 0% { stroke-dashoffset: 100; stroke: var(--color-peach-deep); } 12% { stroke-dashoffset: 62; stroke: var(--color-peach-deep); } 45% { stroke-dashoffset: 18; stroke: var(--color-overcast); } 88% { stroke-dashoffset: 18; stroke: var(--color-overcast); opacity: 1; } 100% { stroke-dashoffset: 18; opacity: 0; } }
+.pf-swap b { position: absolute; inset: 0; font-weight: 400; animation-duration: var(--cycle); animation-iteration-count: infinite; animation-fill-mode: both; animation-delay: inherit; }
+.pf-bad { color: var(--color-peach-deep); animation-name: pf-out; }
+.pf-good { color: var(--color-ink); animation-name: pf-in; }
+@keyframes pf-out { 0%, 30% { opacity: 1; transform: none; } 40%, 100% { opacity: 0; transform: translateY(-6px); } }
+@keyframes pf-in { 0%, 34% { opacity: 0; transform: translateY(6px); } 45%, 88% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.pf-load { transform-origin: left; animation: pf-load var(--cycle) cubic-bezier(0.25,1,0.5,1) infinite both; }
+@keyframes pf-load { 0% { transform: scaleX(0); } 50%, 88% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+.pf-done { animation: pf-done var(--cycle) ease infinite both; }
+@keyframes pf-done { 0%, 52% { opacity: 0; } 58%, 88% { opacity: 1; } 100% { opacity: 0; } }
+.pf-block { animation: pf-block var(--cycle) cubic-bezier(0.16,1,0.3,1) infinite both; }
+@keyframes pf-block { 0% { opacity: 0; transform: translateY(8px); } 8%, 86% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; transform: none; } }
+.pf-btn { animation: pf-btn var(--cycle) ease infinite both; }
+@keyframes pf-btn { 0%, 66% { transform: none; filter: none; } 70% { transform: scale(0.94); } 74% { transform: none; filter: brightness(1.15); } 100% { transform: none; } }
+.pf-saved { animation: pf-saved var(--cycle) ease infinite both; }
+@keyframes pf-saved { 0%, 72% { opacity: 0; transform: translateX(-6px); } 78%, 90% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.pf-type { width: 0; animation: pf-type var(--cycle) steps(28, end) infinite both; }
+@keyframes pf-type { 0% { width: 0; } 10%, 90% { width: var(--w); } 100% { width: var(--w); opacity: 0; } }
+.pf-skel { animation: pf-block var(--cycle) cubic-bezier(0.16,1,0.3,1) infinite both; }
+.pf-dots { animation: pf-dots var(--cycle) ease infinite both; animation-delay: 0.9s; }
+@keyframes pf-dots { 0%, 2% { opacity: 0; } 4%, 13% { opacity: 1; } 15%, 100% { opacity: 0; } }
+.pf-dots i { display: block; width: 5px; height: 5px; border-radius: 999px; background: var(--color-ink-faint); animation: pf-bounce 900ms ease-in-out infinite; }
+.pf-dots i:nth-child(2) { animation-delay: 150ms; }
+.pf-dots i:nth-child(3) { animation-delay: 300ms; }
+@keyframes pf-bounce { 50% { transform: translateY(-3px); opacity: 0.5; } }
+.pf-faq { animation: pf-done var(--cycle) ease infinite both; animation-delay: 1.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .pf *, .pf { animation: none !important; }
+  .pf-type { width: var(--w); }
+  .pf-gauge { stroke-dashoffset: 18; stroke: var(--color-overcast); }
+  .pf-bad, .pf-dots { opacity: 0; }
+}

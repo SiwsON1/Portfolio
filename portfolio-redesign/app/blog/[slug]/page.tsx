@@ -8,6 +8,7 @@ import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ListenControl } from "@/components/blog/ListenControl";
 import { PostHero } from "@/components/blog/PostHero";
+import { PostFeature } from "@/components/blog/PostFeature";
 import { ReadingRail } from "@/components/blog/ReadingRail";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
@@ -149,21 +150,26 @@ export default async function PostPage({
               ))}
             </h1>
             <span aria-hidden className="post-title-rule" style={{ animationDelay: `${260 + p.title.split(" ").length * 55}ms` }} />
-            {p.lead ? (
-              <p
-                className="post-lead mt-10 max-w-3xl text-ink"
-                style={{ fontSize: "clamp(1.125rem, 1rem + 0.5vw, 1.5rem)", lineHeight: 1.55, animationDelay: `${420 + p.title.split(" ").length * 55}ms` }}
-              >
-                {leadWithKeyword(p.lead, p.keyword)}
-              </p>
-            ) : (
-              <p
-                className="mt-10 max-w-3xl text-ink-mute"
-                style={{ fontSize: "clamp(1.125rem, 1rem + 0.4vw, 1.4rem)", lineHeight: 1.55 }}
-              >
-                {p.excerpt}
-              </p>
-            )}
+            <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(17rem,22rem)] lg:gap-12">
+              <div className="post-lead lg:order-2" style={{ animationDelay: `${520 + p.title.split(" ").length * 55}ms` }}>
+                <PostFeature kind={p.hero?.kind ?? "nextjs"} />
+              </div>
+              {p.lead ? (
+                <p
+                  className="post-lead max-w-3xl text-ink"
+                  style={{ fontSize: "clamp(1.125rem, 1rem + 0.5vw, 1.5rem)", lineHeight: 1.55, animationDelay: `${420 + p.title.split(" ").length * 55}ms` }}
+                >
+                  {leadWithKeyword(p.lead, p.keyword)}
+                </p>
+              ) : (
+                <p
+                  className="max-w-3xl text-ink-mute"
+                  style={{ fontSize: "clamp(1.125rem, 1rem + 0.4vw, 1.4rem)", lineHeight: 1.55 }}
+                >
+                  {p.excerpt}
+                </p>
+              )}
+            </div>
             <ul className="mt-8 flex flex-wrap gap-1.5 text-[10px] font-mono uppercase tracking-[0.14em] text-ink-faint">
               {p.tags.map((t) => (
                 <li
