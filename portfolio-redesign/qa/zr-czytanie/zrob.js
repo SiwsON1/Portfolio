@@ -9,7 +9,7 @@ const fakeSpeech = () => {
   const fake = {
     getVoices: () => [voice],
     addEventListener: () => {},
-    speak: (u) => { clearTimeout(timer); timer = setTimeout(() => u.onend && u.onend(), 1200); },
+    speak: (u) => { clearTimeout(timer); let n = 0; const tick = () => { if (n++ < 8) { u.onboundary && u.onboundary({ name: 'word' }); timer = setTimeout(tick, 220); } else u.onend && u.onend(); }; timer = setTimeout(tick, 150); },
     cancel: () => clearTimeout(timer),
     pause: () => {}, resume: () => {},
   };
@@ -31,7 +31,9 @@ const fakeSpeech = () => {
     await p.waitForTimeout(500);
     await p.screenshot({ path: `${OUT}${w}-1-start.png` });
     await btn.click();
-    await p.waitForTimeout(2500);
+    await p.waitForTimeout(1200);
+    await p.evaluate(() => document.querySelector('.flow-cover')?.scrollIntoView({ block: 'center' }));
+    await p.waitForTimeout(700);
     await p.screenshot({ path: `${OUT}${w}-2-czyta.png` });
     await p.evaluate(() => document.getElementById('section-2')?.scrollIntoView());
     await p.waitForTimeout(1500);

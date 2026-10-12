@@ -11,11 +11,12 @@ export type ReaderState = {
   total: number;
   section: string;
   rate: number;
+  caption: string;
 };
 
 const RATES = [1, 1.25, 1.5];
 const listeners = new Set<() => void>();
-let state: ReaderState = { supported: false, status: "idle", index: 0, total: 0, section: "", rate: 1 };
+let state: ReaderState = { supported: false, status: "idle", index: 0, total: 0, section: "", rate: 1, caption: "" };
 let blocks: HTMLElement[] = [];
 let voice: SpeechSynthesisVoice | null = null;
 let current: SpeechSynthesisUtterance | null = null;
@@ -30,7 +31,7 @@ export function subscribe(l: () => void) {
   return () => listeners.delete(l);
 }
 export const getSnapshot = () => state;
-const SERVER_STATE: ReaderState = { supported: false, status: "idle", index: 0, total: 0, section: "", rate: 1 };
+const SERVER_STATE: ReaderState = { supported: false, status: "idle", index: 0, total: 0, section: "", rate: 1, caption: "" };
 export const getServerSnapshot = () => SERVER_STATE;
 
 /** Najlepszy polski głos: najpierw neuronowe (Edge „Online (Natural)”, Google), potem dowolny pl. */
@@ -81,20 +82,48 @@ function mark(i: number) {
   }
 }
 
-function speak(i: number) {
+/** Tekst akapitu do czytania, bez numerów i etykiet zapisanych czcionką mono. */
+function readable(el: HTMLElement) {
+  const c = el.cloneNode(true) as HTMLElement;
+  c.querySelectorAll(".font-mono, [aria-hidden]").forEach((n) => n.remove());
+  return (c.textContent ?? "").replace(/\s+/g, " ").trim();
+}
+
+/** Zdania akapitu: osobna wypowiedź na zdanie daje napisy i krótsze kawałki dla syntezatora. */
+function sentences(text: string) {
+  // Kropka między cyframi („2,5”, „1.5”) i po skrótach typu „np.” nie kończy zdania.
+  return text.match(/(?:[^.!?…]|\.(?=\d)|(?<=\b(?:np|m|in|tzw|ok|tj|dr|ul|nr))\.)+[.!?…]+[)"”]*|[^.!?…]+$/g)?.map((x) => x.trim()).filter(Boolean) ?? [text];
+}
+
+/** Puls przy każdym słowie (zdarzenie boundary); ilustracja nad wpisem faluje mocniej. Bez re-renderu Reacta. */
+const pulses = new Set<() => void>();
+export function onWord(cb: () => void) {
+  pulses.add(cb);
+  return () => {
+    pulses.delete(cb);
+  };
+}
+
+function speak(i: number, s = 0) {
   if (i >= blocks.length) return stop();
   const el = blocks[i];
-  const u = new SpeechSynthesisUtterance(el.innerText.replace(/\s+/g, " ").trim());
+  const parts = sentences(readable(el));
+  if (s >= parts.length) return speak(i + 1);
+  const u = new SpeechSynthesisUtterance(parts[s]);
   if (voice) u.voice = voice;
   u.lang = voice?.lang ?? "pl-PL";
   u.rate = state.rate;
+  u.onboundary = (e) => {
+    if (e.name === "word" || e.name === undefined) pulses.forEach((p) => p());
+  };
   u.onend = () => {
     if (current !== u || state.status !== "playing") return;
-    speak(i + 1);
+    speak(i, s + 1);
   };
   current = u;
-  set({ status: "playing", index: i, section: sectionOf(el) });
-  mark(i);
+  set({ status: "playing", index: i, section: sectionOf(el), caption: parts[s] });
+  if (s === 0) mark(i);
+  pulses.forEach((p) => p());
   window.speechSynthesis.speak(u);
 }
 
@@ -116,7 +145,7 @@ export function stop() {
   current = null;
   if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
   blocks.forEach((b) => b.classList.remove("is-reading"));
-  set({ status: "idle", index: 0, section: "" });
+  set({ status: "idle", index: 0, section: "", caption: "" });
 }
 
 export function cycleRate() {

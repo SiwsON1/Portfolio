@@ -84,7 +84,7 @@ export function ListenControl({ minutes }: { minutes: number }) {
 
   return (
     <>
-      <div ref={anchor} className="mt-10 flex items-center gap-4">
+      <div ref={anchor} className="mt-6 flex items-center gap-4">
         <PlayRing size={52} progress={progress} playing={playing} onClick={toggle} label={playing ? "Wstrzymaj czytanie" : "Posłuchaj wpisu"} />
         <div className="min-w-0">
           <p className="flex items-center gap-2 text-ink">

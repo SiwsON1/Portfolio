@@ -6,8 +6,8 @@ import { services } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
 import { ListenControl } from "@/components/blog/ListenControl";
+import { FlowCover } from "@/components/blog/FlowCover";
 import { ReadingRail } from "@/components/blog/ReadingRail";
-import { PostHero } from "@/components/blog/PostHero";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
@@ -99,7 +99,6 @@ export default async function PostPage({
 
   return (
     <article className="relative">
-      {p.hero && <PostHero kind={p.hero.kind} />}
 
       <header className="relative px-6 pt-20 pb-16 md:px-10 md:pt-32 md:pb-24 overflow-hidden">
         {!p.hero && (
@@ -165,7 +164,8 @@ export default async function PostPage({
                 </li>
               ))}
             </ul>
-            {hasNewSchema && <ListenControl minutes={p.readingMinutes} />}
+            <FlowCover kind={p.hero?.kind} />
+            <ListenControl minutes={p.readingMinutes} />
           </div>
         </div>
       </header>

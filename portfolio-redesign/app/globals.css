@@ -617,3 +617,17 @@ html.lenis body {
   .rail-label, .listen-mini { transition: none; }
 }
 
+
+/* ── Wpis: ilustracja z płynącymi liniami i napisami ─────────── */
+.flow-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--color-ink-faint); }
+.flow-dot.is-on { background: var(--color-peach); box-shadow: 0 0 10px oklch(78% 0.13 50 / 0.9); animation: flow-blink 1.6s ease-in-out infinite; }
+@keyframes flow-blink { 50% { opacity: 0.35; } }
+.flow-caption { background: linear-gradient(to top, oklch(14% 0.02 280 / 0.92) 25%, oklch(14% 0.02 280 / 0)); opacity: 0; transform: translateY(10px); transition: opacity 500ms ease, transform 600ms cubic-bezier(0.16,1,0.3,1); }
+.flow-caption[data-show="true"] { opacity: 1; transform: none; }
+.flow-caption-text { animation: flow-cap 520ms cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes flow-cap { from { opacity: 0; transform: translateY(8px); filter: blur(3px); } to { opacity: 1; transform: none; filter: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .flow-dot.is-on, .flow-caption-text { animation: none; }
+  .flow-caption { transition: none; }
+}
+
