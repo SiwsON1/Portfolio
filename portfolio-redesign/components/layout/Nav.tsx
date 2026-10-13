@@ -157,10 +157,10 @@ export function Nav() {
         }
         @keyframes msNavTextBreath {
           0%, 100% {
-            letter-spacing: 0em;
+            transform: scaleX(1);
           }
           50% {
-            letter-spacing: 0.005em;
+            transform: scaleX(1.005);
           }
         }
 
@@ -176,7 +176,8 @@ export function Nav() {
         .ms-nav-text {
           display: inline-block;
           animation: msNavTextBreath 5s ease-in-out infinite;
-          will-change: letter-spacing;
+          transform-origin: left center;
+          will-change: transform;
         }
 
         @media (prefers-reduced-motion: reduce) {

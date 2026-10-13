@@ -129,9 +129,35 @@ function OrbitalParticles() {
 }
 
 export function WireframeCanvas() {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ x: 0, y: 0, isDragging: false });
   const dragStart = useRef({ x: 0, y: 0, rotX: 0, rotY: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  const [active, setActive] = useState(true);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+
+    let inView = true;
+    const updateActive = () => setActive(inView && !document.hidden);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inView = entry.isIntersecting;
+        updateActive();
+      },
+      { rootMargin: "100px" },
+    );
+
+    observer.observe(wrapper);
+    document.addEventListener("visibilitychange", updateActive);
+    updateActive();
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", updateActive);
+    };
+  }, []);
 
   // Mouse tracking AKTYWUJE SIĘ DOPIERO PO CHWYCIE planety (pointerdown).
   // Po puszczeniu nasłuchiwacz odpina się — bez ruchu globalnego.
@@ -172,12 +198,14 @@ export function WireframeCanvas() {
 
   return (
     <div
+      ref={wrapperRef}
       className="relative w-full h-full overflow-visible select-none"
       style={{ cursor: isDragging ? "grabbing" : "grab", touchAction: "none" }}
       onPointerDown={onPointerDown}
       data-cursor="CHWYĆ"
     >
       <Canvas
+        frameloop={active ? "always" : "never"}
         dpr={[1, 1.6]}
         camera={{ position: [0, 0, 5.5], fov: 45 }}
         gl={{ antialias: true, alpha: true }}

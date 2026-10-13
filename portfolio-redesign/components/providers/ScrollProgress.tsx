@@ -2,23 +2,42 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Cienki peach pasek scroll progress fixed na samym top viewport.
- */
 export function ScrollProgress() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     let raf = 0;
-    const tick = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
+    let max = 0;
+
+    const update = () => {
+      raf = 0;
       const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
       if (ref.current) ref.current.style.transform = `scaleX(${pct / 100})`;
-      raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+
+    const scheduleUpdate = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    const recomputeMax = () => {
+      max = document.documentElement.scrollHeight - window.innerHeight;
+      scheduleUpdate();
+    };
+
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", recomputeMax);
+
+    const resizeObserver = new ResizeObserver(recomputeMax);
+    resizeObserver.observe(document.body);
+    recomputeMax();
+
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", recomputeMax);
+      resizeObserver.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (

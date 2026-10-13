@@ -2,10 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Custom cursor: small dot + halo. Halo morphs to a label on hoverable elements
- * tagged with data-cursor="ZOBACZ" (or any string). Hidden on touch devices.
- */
 export function Cursor() {
   const dot = useRef<HTMLDivElement>(null);
   const halo = useRef<HTMLDivElement>(null);
@@ -25,10 +21,12 @@ export function Cursor() {
     let dy = my;
     let hx = mx;
     let hy = my;
+    let raf = 0;
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
+      if (!raf) raf = requestAnimationFrame(tick);
     };
 
     const onOver = (e: MouseEvent) => {
@@ -43,12 +41,23 @@ export function Cursor() {
     };
 
     const tick = () => {
-      // Dot follows almost instantly
       dx += (mx - dx) * 0.6;
       dy += (my - dy) * 0.6;
-      // Halo lags
       hx += (mx - hx) * 0.16;
       hy += (my - hy) * 0.16;
+
+      const settled =
+        Math.abs(mx - dx) <= 0.1 &&
+        Math.abs(my - dy) <= 0.1 &&
+        Math.abs(mx - hx) <= 0.1 &&
+        Math.abs(my - hy) <= 0.1;
+
+      if (settled) {
+        dx = mx;
+        dy = my;
+        hx = mx;
+        hy = my;
+      }
 
       if (dot.current) {
         dot.current.style.transform = `translate3d(${dx}px, ${dy}px, 0) translate(-50%, -50%)`;
@@ -56,17 +65,25 @@ export function Cursor() {
       if (halo.current) {
         halo.current.style.transform = `translate3d(${hx}px, ${hy}px, 0) translate(-50%, -50%)`;
       }
-      raf = requestAnimationFrame(tick);
+      raf = settled && dot.current && halo.current ? 0 : requestAnimationFrame(tick);
     };
 
-    let raf = requestAnimationFrame(tick);
+    const onVisibilityChange = () => {
+      if (!document.hidden) return;
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    };
+
+    raf = requestAnimationFrame(tick);
     window.addEventListener("mousemove", onMove, { passive: true });
     window.addEventListener("mouseover", onOver, { passive: true });
+    document.addEventListener("visibilitychange", onVisibilityChange);
 
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf) cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseover", onOver);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
     };
   }, []);
 

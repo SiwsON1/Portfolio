@@ -6,15 +6,12 @@ import { useEffect, useState } from "react";
 const STORAGE_KEY = "cookie-consent";
 
 export function CookieBanner() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) {
-      const t = setTimeout(() => setShow(true), 1200);
-      return () => clearTimeout(t);
-    }
+    if (stored) setShow(false);
   }, []);
 
   const accept = (level: "all" | "necessary") => {
@@ -28,50 +25,59 @@ export function CookieBanner() {
   if (!show) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-label="Zgoda na pliki cookie"
-      className="fixed bottom-0 left-0 right-0 z-[140] p-3 md:p-6"
-    >
-      <div className="max-w-5xl mx-auto bg-bg-elev border border-line backdrop-blur-md p-4 md:p-7 shadow-2xl">
-        <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-          <div className="flex-1">
-            <p className="hidden md:block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">
-              Cookie · GDPR
-            </p>
-            <p className="text-ink text-[13px] leading-snug md:text-base md:leading-relaxed">
-              Po Twojej zgodzie strona uruchamia Google Analytics 4 do mierzenia
-              ruchu. Bez zgody zapisuje tylko Twój wybór. Zgodę zmienisz
-              w każdej chwili. Więcej w{" "}
-              <Link
-                href="/polityka-prywatnosci"
-                className="text-peach underline underline-offset-4"
+    <>
+      <div
+        id="cookie-banner"
+        role="dialog"
+        aria-label="Zgoda na pliki cookie"
+        className="cb-enter fixed bottom-0 left-0 right-0 z-[140] p-3 md:p-6"
+        suppressHydrationWarning
+      >
+        <div className="max-w-5xl mx-auto bg-bg-elev border border-line backdrop-blur-md p-4 md:p-7 shadow-2xl">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+            <div className="flex-1">
+              <p className="hidden md:block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">
+                Cookie · GDPR
+              </p>
+              <p className="text-ink text-[13px] leading-snug md:text-base md:leading-relaxed">
+                Po Twojej zgodzie strona uruchamia Google Analytics 4 do mierzenia
+                ruchu. Bez zgody zapisuje tylko Twój wybór. Zgodę zmienisz
+                w każdej chwili. Więcej w{" "}
+                <Link
+                  href="/polityka-prywatnosci"
+                  className="text-peach underline underline-offset-4"
+                >
+                  polityce prywatności
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-2 md:flex md:gap-3 shrink-0">
+              <button
+                type="button"
+                onClick={() => accept("necessary")}
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute hover:text-ink border border-line min-h-11 px-3 md:px-5 py-3 transition-colors"
+                data-cursor=""
               >
-                polityce prywatności
-              </Link>
-              .
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-2 md:flex md:gap-3 shrink-0">
-            <button
-              type="button"
-              onClick={() => accept("necessary")}
-              className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute hover:text-ink border border-line min-h-11 px-3 md:px-5 py-3 transition-colors"
-              data-cursor=""
-            >
-              Tylko niezbędne
-            </button>
-            <button
-              type="button"
-              onClick={() => accept("all")}
-              className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg bg-peach hover:bg-peach-deep min-h-11 px-3 md:px-5 py-3 transition-colors"
-              data-cursor=""
-            >
-              Akceptuj wszystkie
-            </button>
+                Tylko niezbędne
+              </button>
+              <button
+                type="button"
+                onClick={() => accept("all")}
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg bg-peach hover:bg-peach-deep min-h-11 px-3 md:px-5 py-3 transition-colors"
+                data-cursor=""
+              >
+                Akceptuj wszystkie
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `try { var el=document.getElementById("cookie-banner"); if(el) { if(localStorage.getItem("${STORAGE_KEY}")) { el.style.display="none" } else { el.inert=true; setTimeout(function(){ el.inert=false },1200) } } } catch(e) {}`,
+        }}
+      />
+    </>
   );
 }
