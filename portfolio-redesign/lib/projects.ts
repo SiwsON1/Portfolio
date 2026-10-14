@@ -562,7 +562,7 @@ const WP_FIRMOWA = ["tworzenie-stron-wordpress", "nowoczesna-strona-firmowa-2026
 
 /** Usługi (slugi z lib/services.ts), których dana realizacja jest dowodem. Lab celowo pominięty. */
 export const PROJECT_SERVICES: Record<string, string[]> = {
-  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress", "integracje-woocommerce"],
+  lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress", "integracje-woocommerce", "google-merchant-center-woocommerce"],
   kantorymapa: ["aplikacje-nextjs", "strony-jamstack"],
   cojestpolskie: ["strony-jamstack", "nowoczesne-strony-internetowe", "wdrozenia-ai"],
   dobrypupil: ["strony-jamstack"],

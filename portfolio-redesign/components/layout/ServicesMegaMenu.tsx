@@ -103,6 +103,11 @@ const GROUPS: Group[] = [
         line: "Płatności, kurierzy, Allegro i hurtownia bez przepisywania.",
       },
       {
+        slug: "google-merchant-center-woocommerce",
+        title: "Merchant Center i feed",
+        line: "Produkty w Zakupach Google bez odrzuceń.",
+      },
+      {
         slug: "migracja-sklepu-do-woocommerce",
         title: "Migracja sklepu",
         line: "Z Shopera lub PrestaShop do WooCommerce, z przekierowaniami.",

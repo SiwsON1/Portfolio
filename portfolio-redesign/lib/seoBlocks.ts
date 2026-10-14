@@ -3980,4 +3980,152 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       }
     ]
   },
+  "google-merchant-center-woocommerce": {
+    "heading": "Feed produktowy WooCommerce do Google Merchant Center: jak przygotować dane i uniknąć odrzuconych produktów?",
+    "intro": [
+      "W tym poradniku dowiesz się, jakie dane WooCommerce powinien przekazywać do Google Merchant Center, jak przygotować feed produktowy i co sprawdzić, gdy Google odrzuca produkty albo nagle zmniejsza się ich liczba. Wyjaśnię też, kiedy wystarczy gotowa wtyczka, jak obsługiwać warianty i dlaczego kilka feedów podłączonych do jednego katalogu może powodować problemy.",
+      "Sam plik z produktami to tylko część integracji. Jeśli w WooCommerce brakuje identyfikatorów, stany magazynowe są nieaktualne albo import zapisuje rozmiary w niewłaściwy sposób, nawet poprawnie wygenerowany feed przeniesie te problemy do Google. Dlatego przy takich wdrożeniach zaczynam od danych w sklepie, a dopiero później zajmuję się sposobem ich eksportowania."
+    ],
+    "sections": [
+      {
+        "id": "jakie-dane-woocommerce-musi-przekazac-do-google-merchant-cen",
+        "heading": "Jakie dane WooCommerce musi przekazać do Google Merchant Center?",
+        "body": [
+          "Feed produktowy to plik zawierający informacje, na podstawie których Google rozpoznaje produkty i ocenia możliwość ich wyświetlania. Powinien przekazywać aktualne dane zgodne z tym, co klient zobaczy na stronie sklepu. Nie wszystkie pola są wymagane w każdej sytuacji, ale ich poprawność wpływa na przetwarzanie katalogu."
+        ],
+        "table": {
+          "caption": "Jakie dane WooCommerce musi przekazać do Google Merchant Center?",
+          "head": [
+            "Pole",
+            "Skąd w WooCommerce",
+            "Najczęstszy błąd"
+          ],
+          "rows": [
+            [
+              "Identyfikator i SKU",
+              "Identyfikator produktu lub wariantu oraz pole SKU, czyli kod produktu",
+              "Brak SKU, powtarzające się kody albo zmieniające się identyfikatory"
+            ],
+            [
+              "GTIN",
+              "Globalny numer identyfikacyjny produktu zapisany w odpowiednim polu lub atrybucie",
+              "Brak istniejącego numeru, błędny numer albo przypisanie jednego kodu różnym wariantom"
+            ],
+            [
+              "Tytuł produktu",
+              "Nazwa produktu, ewentualnie uzupełniona o cechy wariantu",
+              "Zbyt ogólna nazwa, brak rozmiaru lub koloru potrzebnych do odróżnienia wariantów"
+            ],
+            [
+              "Cena i promocja",
+              "Cena regularna, promocyjna oraz ustawienia promocji",
+              "Inna cena w feedzie niż na stronie albo nieaktualna promocja"
+            ],
+            [
+              "Stan magazynowy",
+              "Ustawienia magazynowe produktu lub konkretnego wariantu",
+              "Produkt oznaczony jako dostępny w feedzie, choć wariant jest niedostępny w sklepie, lub odwrotnie"
+            ],
+            [
+              "Wariant i rozmiar",
+              "Atrybuty produktu zmiennego i ustawienia poszczególnych wariantów",
+              "Rozmiary zapisane niespójnie, brak prawidłowego powiązania wariantów"
+            ],
+            [
+              "Zdjęcie",
+              "Obraz produktu lub wariantu w bibliotece mediów",
+              "Brak zdjęcia, niewłaściwy obraz albo adres niedostępny dla Google"
+            ],
+            [
+              "Kategoria Google",
+              "Mapowanie kategorii WooCommerce na klasyfikację produktów Google",
+              "Zbyt ogólna lub nieodpowiednia kategoria produktu"
+            ]
+          ]
+        },
+        "outro": [
+          "Ważne jest rozróżnienie wewnętrznego identyfikatora WooCommerce od SKU. Pierwszy wskazuje konkretny rekord w sklepie, a drugi jest kodem nadanym produktowi. Sposób ich wykorzystania w eksporcie trzeba ustalić tak, żeby Google otrzymywał stabilne identyfikatory także po kolejnych aktualizacjach.",
+          "Podobnie z GTIN: jeśli producent nadał produktowi taki numer, powinien on zostać prawidłowo przekazany, gdy wymagają tego zasady Google. Nie należy jednak tworzyć fikcyjnych kodów wyłącznie po to, żeby wypełnić pole.",
+          "Przy zleceniu przygotowania feedu sprawdzam te informacje bezpośrednio w WooCommerce i ustalam, które błędy trzeba poprawić przed podłączeniem katalogu."
+        ]
+      },
+      {
+        "id": "czy-do-feedu-produktowego-wystarczy-gotowa-wtyczka-czy-potrz",
+        "heading": "Czy do feedu produktowego wystarczy gotowa wtyczka, czy potrzebujesz własnego rozwiązania?",
+        "body": [
+          "Gotowa wtyczka do generowania feedu jest rozsądnym wyborem, jeśli sklep ma uporządkowane dane i standardową strukturę produktów. Powinna pobierać aktualne ceny, dostępność, zdjęcia i warianty, a następnie udostępniać je w formacie obsługiwanym przez wybrany kanał.",
+          "Przed wyborem sprawdzam jednak, czy rozwiązanie potrafi prawidłowo odczytać pola używane w konkretnym WooCommerce. Sam fakt, że wtyczka generuje plik, nie oznacza jeszcze, że przekazuje właściwe informacje.",
+          "Własna mała wtyczka może być korzystniejsza, gdy sklep wymaga szczególnych reguł. Przykładowo trzeba wykluczyć określone produkty, inaczej budować nazwy wariantów albo pobierać informacje z niestandardowych pól. Wtedy zamiast konfigurować wiele obejść mogę przygotować eksport odpowiadający rzeczywistej strukturze katalogu.",
+          "Tak zrobiłem w LumiKids, gdzie napisałem własny feed jako niewielki mu-plugin, czyli wtyczkę WordPress ładowaną automatycznie. Przygotowany eksport obejmował około 560 pozycji i celowo pomijał produkty bez SKU.",
+          "Mam doświadczenie w tworzeniu ponad 40 własnych wtyczek i mu-pluginów w 9 serwisach, ale nie traktuję własnego kodu jako obowiązkowego elementu każdej integracji.",
+          "Jeśli Twój sklep wymaga podobnego rozwiązania, mogę przygotować [wtyczki WordPress na zamówienie](/uslugi/tworzenie-wtyczek-wordpress), w tym niewielki generator feedu dostosowany do konkretnych danych."
+        ]
+      },
+      {
+        "id": "dlaczego-warianty-i-rozmiary-produktow-sprawiaja-problemy-w",
+        "heading": "Dlaczego warianty i rozmiary produktów sprawiają problemy w feedzie?",
+        "body": [
+          "W sklepie odzieżowym jeden model koszulki może być dostępny w kilku rozmiarach i kolorach. W WooCommerce jest to zazwyczaj produkt zmienny, którego warianty mają własne ustawienia. Dla katalogu Google poszczególne warianty mogą stanowić osobne pozycje, ponieważ klient wybiera konkretną wersję produktu.",
+          "Każdy eksportowany wariant powinien więc otrzymać odpowiedni identyfikator, cenę, dostępność oraz cechy pozwalające go rozróżnić. Samo przesłanie nazwy produktu nadrzędnego nie wystarczy, jeśli klient ma wybierać między różnymi rozmiarami.",
+          "Problemy często zaczynają się przy imporcie produktów. W LumiKids część towarów była dodawana bez SKU, a rozmiary trafiały do WooCommerce jako lokalne atrybuty konkretnego produktu zamiast korzystać ze wspólnej listy rozmiarów sklepu.",
+          "Powodowało to dwa odrębne problemy. Produkty z lokalnie zapisanymi rozmiarami wypadały z filtrów rozmiaru, a brak SKU sprawiał, że przygotowany feed ich nie uwzględniał. Naprawienie samego pliku eksportowego nie rozwiązałoby nieprawidłowej struktury danych.",
+          "Dlatego zgłosiłem potrzebę poprawienia importu. Chodziło o to, żeby kolejne produkty od razu trafiały do WooCommerce z właściwymi identyfikatorami i wspólnymi atrybutami rozmiarów.",
+          "Przy podobnym wdrożeniu sprawdzam nie tylko końcowy feed, ale również sposób tworzenia wariantów, żeby problem nie powracał po następnym imporcie."
+        ]
+      },
+      {
+        "id": "co-zrobic-gdy-merchant-center-odrzuca-produkty-lub-spada-ich",
+        "heading": "Co zrobić, gdy Merchant Center odrzuca produkty lub spada ich liczba?",
+        "body": [
+          "Gdy w Merchant Center pojawiają się odrzucone produkty, ostrzeżenia albo spada liczba aktywnych pozycji, nie zaczynam od ponownego instalowania wtyczki. Najpierw sprawdzam diagnostykę Google, a następnie porównuję zgłoszone problemy z danymi zapisanymi w WooCommerce.",
+          "Warto oddzielić odrzucenie produktu od sytuacji, w której produkt pozostaje w katalogu, ale ma status niedostępnego. Są to różne problemy i wymagają innego postępowania.",
+          "W LumiKids po synchronizacji stanów magazynowych wykonanej przez innego specjalistę liczba aktywnych produktów w Merchant Center spadła z 95 do 76 w reklamach produktowych oraz z 93 do 74 w bezpłatnych informacjach o produktach.",
+          "Diagnoza wykazała, że przyczyną nie był sam feed. Poszczególne warianty miały w WooCommerce status niedostępnych po synchronizacji magazynu. To właśnie tę zmianę należało wyjaśnić.",
+          "Podczas diagnozowania sprawdzam przede wszystkim:"
+        ],
+        "list": [
+          "Komunikaty Merchant Center i produkty, których dotyczą.",
+          "Ceny, stany magazynowe oraz identyfikatory w WooCommerce.",
+          "Dane rzeczywiście przesłane w feedzie i ich zgodność ze stroną produktu.",
+          "Ostatnie zmiany w imporcie, synchronizacji magazynu lub konfiguracji eksportu."
+        ],
+        "outro": [
+          "Nie każda uwaga Google oznacza konieczność zmiany w sklepie. Czasem problem dotyczy informacji w koncie lub zasad wyświetlania produktów. Nie da się więc zagwarantować akceptacji wszystkich pozycji samym poprawieniem feedu.",
+          "Jeśli po aktualizacji magazynu albo imporcie spadła liczba aktywnych produktów, mogę przeanalizować konkretną przyczynę i poprawić dane lub eksport w uzgodnionym zakresie."
+        ]
+      },
+      {
+        "id": "dlaczego-google-i-meta-powinny-miec-po-jednym-zrodle-danych",
+        "heading": "Dlaczego Google i Meta powinny mieć po jednym źródle danych produktowych?",
+        "body": [
+          "Sklep WooCommerce może przekazywać produkty do Google Merchant Center, katalogu Facebooka i Instagrama oraz innych kanałów. Każdy z nich potrzebuje aktualnych informacji, ale niekoniecznie identycznego formatu pliku.",
+          "Zasada jednego źródła na kanał oznacza, że dany katalog powinien mieć jasno określony sposób aktualizowania produktów. Nie oznacza to jednego wspólnego pliku dla wszystkich platform. Chodzi o uniknięcie sytuacji, w której kilka równoległych integracji tworzy te same pozycje z różnymi identyfikatorami.",
+          "W LumiKids katalog Meta w Commerce Managerze korzystał z identyfikatorów wariantów WooCommerce. Kiedy pojawił się trzeci, równoległy feed przygotowany przez inną osobę, odradziłem jego podłączenie.",
+          "Nowe źródło mogłoby zdublować produkty i spowodować rozbieżności między identyfikatorami katalogu a zdarzeniami piksela Meta, czyli informacjami o działaniach użytkowników wykorzystywanymi do pomiaru reklam.",
+          "To ważne, ponieważ samo wyświetlanie produktu w katalogu nie wystarcza. Identyfikator przekazywany przy wyświetleniu produktu, dodaniu do koszyka lub zakupie powinien odpowiadać właściwej pozycji w katalogu.",
+          "W LumiKids wykorzystywałem również zdarzenia serwerowe Meta przez Conversions API, czyli mechanizm przekazywania zdarzeń z serwera, za pomocą darmowej wtyczki Meta for WooCommerce. W konfiguracji pomiaru poprawiłem też przesyłanie zdarzenia wyświetlenia produktu dla produktów z wariantami.",
+          "Jeżeli Twój sklep korzysta z wielu kanałów, mogę uporządkować feed produktowy Meta i Google oraz sprawdzić spójność identyfikatorów bez dokładania kolejnych równoległych źródeł."
+        ]
+      },
+      {
+        "id": "co-przygotowac-przed-podlaczeniem-woocommerce-do-merchant-ce",
+        "heading": "Co przygotować przed podłączeniem WooCommerce do Merchant Center?",
+        "body": [
+          "Nie musisz samodzielnie poprawiać całego katalogu przed rozpoczęciem współpracy. Warto jednak zebrać podstawowe informacje, żebym mógł szybciej ustalić, jak działa sklep i gdzie mogą występować problemy.",
+          "Przydadzą się:"
+        ],
+        "list": [
+          "Dostęp do Merchant Center. Jeśli masz już konto, potrzebuję odpowiednich uprawnień do sprawdzenia diagnostyki i źródeł danych. Jeśli go nie masz, przeprowadzę Cię przez konfigurację konta należącego do Twojej firmy.",
+          "Lista produktów bez SKU lub GTIN. SKU to wewnętrzny kod produktu, a GTIN jest globalnym identyfikatorem nadanym towarowi. Jeśli nie masz gotowej listy, sprawdzę dostępne dane w WooCommerce.",
+          "Zasady promocji. Warto ustalić, skąd pochodzą ceny promocyjne, kiedy obowiązują i czy są aktualizowane automatycznie.",
+          "Informacja o aktualizowaniu stanów magazynowych. Potrzebuję wiedzieć, czy zmieniasz je ręcznie, przez import, czy przez zewnętrzny system.",
+          "Lista kanałów reklamowych i katalogów. Ustalmy, czy potrzebujesz tylko Google, czy również Meta albo innych platform, oraz jakie integracje już działają."
+        ],
+        "outro": [
+          "Szczególnie ważna jest informacja o zewnętrznych systemach magazynowych. Jeśli WooCommerce otrzymuje stany i produkty przez BaseLinker, trzeba uwzględnić ten przepływ danych podczas diagnozy feedu. Samą synchronizację systemów opisuję w osobnej usłudze [integracja WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker).",
+          "Na początku współpracy sprawdzę stan katalogu i obecne integracje, a potem ustalę, czy potrzebujesz nowego feedu, poprawienia istniejącego eksportu, czy przede wszystkim naprawy danych produktów w WooCommerce."
+        ]
+      }
+    ]
+  },
 };

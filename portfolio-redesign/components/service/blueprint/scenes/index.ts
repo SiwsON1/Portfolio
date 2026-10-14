@@ -15,6 +15,7 @@ import { scene as opieka } from "./opieka-wordpress";
 import { scene as speed } from "./przyspieszanie-stron-wordpress";
 import { scene as wtyczki } from "./tworzenie-wtyczek-wordpress";
 import { scene as integracje } from "./integracje-woocommerce";
+import { scene as merchant } from "./google-merchant-center-woocommerce";
 import { scene as migracja } from "./migracja-sklepu-do-woocommerce";
 import { scene as konfigurator } from "./konfigurator-produktu";
 
@@ -36,6 +37,7 @@ export const SCENES: Record<string, Scene> = {
   "przyspieszanie-stron-wordpress": speed,
   "tworzenie-wtyczek-wordpress": wtyczki,
   "integracje-woocommerce": integracje,
+  "google-merchant-center-woocommerce": merchant,
   "migracja-sklepu-do-woocommerce": migracja,
   "konfigurator-produktu": konfigurator,
 };

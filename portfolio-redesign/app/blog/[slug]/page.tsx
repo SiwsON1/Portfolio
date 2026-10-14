@@ -11,6 +11,7 @@ import { PostHero } from "@/components/blog/PostHero";
 import { PostFeature } from "@/components/blog/PostFeature";
 import { ReadingRail } from "@/components/blog/ReadingRail";
 import { AuthorBio } from "@/components/blog/AuthorBio";
+import { InlineServiceCta } from "@/components/blog/InlineServiceCta";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -199,8 +200,8 @@ export default async function PostPage({
             </aside>
             <div id="post-body" className="md:col-span-8 md:col-start-5 prose-bound space-y-16 text-ink leading-relaxed">
               {p.sections!.map((s, i) => (
+                <Fragment key={i}>
                 <section
-                  key={i}
                   id={`section-${i}`}
                   className="scroll-mt-32"
                 >
@@ -277,6 +278,10 @@ export default async function PostPage({
                     </div>
                   )}
                 </section>
+                {i === 1 && p.sections!.length > 3 && relatedServices[0] && (
+                  <InlineServiceCta service={relatedServices[0]} />
+                )}
+                </Fragment>
               ))}
             </div>
           </div>

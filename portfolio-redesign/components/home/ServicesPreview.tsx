@@ -25,6 +25,7 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
       "sklepy-internetowe-woocommerce",
       "integracja-woocommerce-z-baselinker",
       "integracje-woocommerce",
+      "google-merchant-center-woocommerce",
       "migracja-sklepu-do-woocommerce",
       "tworzenie-wtyczek-wordpress",
       "opieka-wordpress",

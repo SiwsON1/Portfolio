@@ -40,6 +40,7 @@ const SLUG_TO_ICON: Record<string, IconKey> = {
   "integracja-woocommerce-z-baselinker": "woocommerce",
   "tworzenie-wtyczek-wordpress": "wordpress",
   "integracje-woocommerce": "woocommerce",
+  "google-merchant-center-woocommerce": "woocommerce",
   "migracja-sklepu-do-woocommerce": "woocommerce",
   "konfigurator-produktu": "nextjs",
   "headless-wordpress": "headless",

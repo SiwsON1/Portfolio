@@ -104,6 +104,12 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "LumiKids sprzedaje przez sklep WooCommerce i równolegle przez Allegro, a zamówienia obsługuje BaseLinker. Zamówienia za pobraniem anulowały się same: integracja cofała ich status, a WooCommerce po godzinie uznawał je za nieopłacone. Przyczynę znalazłem w logu serwera i zablokowałem taką zmianę małą wtyczką, bez wyłączania integracji.",
     highlight: "WooCommerce, Allegro i BaseLinker bez cofanych statusów",
   },
+  "google-merchant-center-woocommerce": {
+    projectSlug: "lumikids",
+    context:
+      "W LumiKids napisałem feed produktowy pod Merchant Center jako małą wtyczkę: każdy rozmiar to osobna pozycja, a produkty bez SKU nie trafiają do Google. Gdy po synchronizacji magazynu liczba aktywnych produktów spadła z 95 do 76, przyczyną okazały się stany wariantów w sklepie, nie feed.",
+    highlight: "Feed z wariantami i diagnoza spadku w Merchant Center",
+  },
   "konfigurator-produktu": {
     projectSlug: "galabau-darius",
     context:
