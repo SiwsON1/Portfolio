@@ -188,7 +188,7 @@ export default async function BranzaPage({
               className="font-display italic text-ink"
               style={{ fontSize: "clamp(1.35rem, 1rem + 1.1vw, 2rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
             >
-              {cases.length > 0 ? cases.map((c) => c.project!.client).join(", ") : "jeszcze żadnej"}
+              {cases.length > 0 ? cases.map((c) => c.project!.client).join(", ") : ind.inProgress ? ind.inProgress.label : "jeszcze żadnej"}
             </dd>
           </div>
         </dl>
@@ -302,6 +302,8 @@ export default async function BranzaPage({
             <h2 className="display text-h1 text-ink">
               {cases.length > 0 ? (
                 editorialHeading(ind.headings.cases)
+              ) : ind.inProgress ? (
+                editorialHeading(ind.inProgress.heading)
               ) : (
                 <>
                   Tej branży <em>jeszcze</em> nie robiłem.
@@ -352,6 +354,14 @@ export default async function BranzaPage({
                 </ul>
               </Link>
             ))}
+          </div>
+        ) : ind.inProgress ? (
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="md:col-span-7 md:col-start-4 prose-bound text-ink-mute text-lg leading-relaxed space-y-5">
+              {ind.inProgress.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">

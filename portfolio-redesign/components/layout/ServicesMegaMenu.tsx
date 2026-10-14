@@ -13,6 +13,7 @@ const INDUSTRY_LINKS = [
   { slug: "tworzenie-stron-dla-kancelarii-prawnych", label: "Kancelarie prawne" },
   { slug: "tworzenie-stron-dla-gabinetow-i-klinik", label: "Gabinety i kliniki" },
   { slug: "tworzenie-sklepow-internetowych-dla-marek-odziezowych", label: "Marki odzieżowe" },
+  { slug: "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi", label: "Części samochodowe" },
   { slug: "tworzenie-stron-dla-producentow-mebli", label: "Producenci mebli" },
   { slug: "tworzenie-stron-dla-hoteli-i-pensjonatow", label: "Hotele i pensjonaty" },
   { slug: "tworzenie-stron-dla-firm-budowlanych", label: "Firmy budowlane" },

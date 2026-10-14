@@ -90,6 +90,23 @@ function Variants() {
   );
 }
 
+function Parts() {
+  return (
+    <g>
+      <path d="M18 74 L18 50 Q18 44 24 44 L84 44 L100 56 L118 60 Q122 61 122 66 L122 74 Z" className="ih-draw" style={{ animationDelay: "0ms" }} />
+      <circle cx="40" cy="76" r="7" className="ih-draw" style={{ animationDelay: "500ms" }} />
+      <circle cx="100" cy="76" r="7" className="ih-draw" style={{ animationDelay: "650ms" }} />
+      <rect x="22" y="96" width="96" height="14" rx="2" className="ih-panel" />
+      <text x="30" y="106" className="ih-mono">OEM 7701 477 834</text>
+      {["Trafic", "Vivaro", "Talento"].map((m, i) => (
+        <text key={m} x={36 + i * 34} y={126} textAnchor="middle" className={i === 0 ? "ih-size-on" : "ih-size"}>
+          {m}
+        </text>
+      ))}
+    </g>
+  );
+}
+
 function Blueprint() {
   return (
     <g>
@@ -224,6 +241,7 @@ const MOTIFS: Record<string, Motif> = {
   "tworzenie-stron-dla-gabinetow-i-klinik": { label: "terminarz · zapisy", scene: <Calendar accentIndex={7} /> },
   "tworzenie-sklepow-internetowych-dla-marek-odziezowych": { label: "warianty · rozmiary", scene: <Variants /> },
   "tworzenie-stron-dla-producentow-mebli": { label: "rysunek · wymiary", scene: <Blueprint /> },
+  "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi": { label: "auto · numer części", scene: <Parts /> },
   "tworzenie-stron-dla-hoteli-i-pensjonatow": { label: "dostępność · pobyt", scene: <Booking /> },
   "tworzenie-stron-dla-firm-budowlanych": { label: "przed · po", scene: <BeforeAfter /> },
   "tworzenie-stron-dla-influencerow": { label: "media kit · zasięgi", scene: <MediaKit /> },

@@ -26,6 +26,8 @@ export type Industry = {
   notFor: string[];
   faq: { q: string; a: string }[];
   cta: string;
+  /** Wdrożenie w toku, którego nie ma jeszcze w realizacjach (bez nazwy klienta). */
+  inProgress?: { label: string; heading: string; body: string[] };
 };
 
 /**
@@ -95,6 +97,11 @@ export const INDUSTRY_CASES: Record<string, { projectSlug: string; note: string 
 
 /** Usługi technologiczne powiązane z branżą. */
 export const INDUSTRY_SERVICES: Record<string, string[]> = {
+  "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi": [
+    "sklepy-internetowe-woocommerce",
+    "integracja-woocommerce-z-baselinker",
+    "google-merchant-center-woocommerce"
+  ],
   "tworzenie-stron-dla-kancelarii-prawnych": [
     "tworzenie-stron-wordpress",
     "nowoczesna-strona-firmowa-2026",
@@ -1729,5 +1736,213 @@ export const industries: Industry[] = [
       "Jeśli dopiero zaczynasz, nie masz jeszcze harmonogramu ani społeczności i potrzebujesz tylko kilku linków, na początek może wystarczyć prostsza wizytówka lub panel odnośników.",
       "Jeśli chcesz prowadzić sklep z własnym magazynem, samodzielną wysyłką i rozbudowaną obsługą zamówień, potraktuję go jako osobny projekt e-commerce, a nie standardowy element strony streamera."
     ]
-  }
+  },
+  {
+    slug: "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi",
+    inProgress: {
+      label: "jedna w toku",
+      heading: "Sklep z częściami, nad którym pracuję",
+      body: [
+        "Przebudowuję sklep z nowymi i używanymi częściami do samochodów dostawczych: około 10 tysięcy produktów na WooCommerce, zamówienia i stany w BaseLinkerze, równoległa sprzedaż na Allegro, OLX, OTOMOTO, Ovoko i eBay. Nazwę pokażę po oddaniu sklepu.",
+        "Ponad tysiąc kategorii z Allegro zebrałem w 16 grup w menu. Reguła rozpoznająca generację, rocznik, silnik i modele bliźniacze z nazw produktów poprawiła przypisania 887 części, a panel w WordPressie pozwala poprawić je ręcznie bez nadpisywania przez automat. Do tego wyszukiwarka po numerze OEM, zapytanie o część po numerze VIN i przekierowania sprzedanych części na grupę w tym samym modelu auta."
+      ]
+    },
+    title: "Części samochodowe",
+    keyword: "sklep internetowy z częściami samochodowymi",
+    metaTitle: "Sklep internetowy z częściami samochodowymi na WooCommerce",
+    metaDescription: "Sklep internetowy z częściami samochodowymi z doborem po aucie i numerze OEM. Tworzę sklepy WooCommerce z katalogiem części i integracją BaseLinker.",
+    h1: "Sklep internetowy z częściami samochodowymi",
+    lead: "Tworzę sklepy z częściami samochodowymi, w których klient może znaleźć odpowiednią część po modelu auta, generacji lub numerze katalogowym, a Ty możesz dalej obsługiwać sprzedaż przez BaseLinker. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+    intro: [
+      "Sklep internetowy z częściami samochodowymi musi rozwiązać problem, którego nie ma w zwykłym sklepie: klient może znać nazwę części, ale nie wiedzieć, czy pasuje ona do jego samochodu. Szuka zderzaka do Trafica, wybiera niewłaściwą generację albo nie wie, że ta sama część występuje również w Vivaro. Jeśli sprzedajesz na Allegro i chcesz uruchomić własny sklep, dochodzi kolejny problem. Kategorie, nazwy i opisy produktów były przygotowane pod aukcje, a nie pod wygodne przeglądanie katalogu. Buduję [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) z wyszukiwaniem po aucie i numerach części. Gdy korzystasz z BaseLinkera, uwzględniam też synchronizację danych, żeby uporządkowany katalog nie rozsypał się przy kolejnej aktualizacji. Szczegóły techniczne opisuję w usłudze [integracja WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker).",
+      "Pracuję nad sklepem z nowymi i używanymi częściami do samochodów dostawczych. Katalog liczy około 10 tysięcy produktów, a dane pochodziły między innymi z Allegro i BaseLinkera. Ponad tysiąc kategorii uporządkowałem w 16 grup części widocznych w menu. Napisałem też reguły rozpoznające modele, generacje i silniki z nazw produktów, dzięki którym poprawiłem przypisania 887 części. Dodałem możliwość ręcznej korekty, której automat nie nadpisuje. Wdrożenie nadal trwa, dlatego opisuję konkretne rozwiązania katalogowe, a nie wyniki sprzedaży."
+    ],
+    pains: [
+      {
+        title: "Klient nie wie, czy część pasuje do jego auta",
+        body: "Masz właściwą część, ale klient jej nie znajduje, bo szuka po modelu samochodu, a produkt ma tylko ogólną nazwę. Nawet prawidłowo nazwany zderzak może występować w kilku generacjach i pasować do bliźniaczych modeli innych marek. Układam katalog tak, żeby klient mógł zacząć od samochodu, a następnie zawęzić wybór do rodzaju części. Na karcie produktu widzi też listę pasujących modeli, zamiast samodzielnie porównywać wszystkie nazwy."
+      },
+      {
+        title: "Kategorie z Allegro tworzą chaos",
+        body: "Produkty importowane z aukcji potrafią mieć różne kategorie dla tego samego rodzaju części. Zderzaki są rozrzucone po kilku działach, a nazwy zawierają informacje o aucie, stanie i numerze magazynowym w jednej linijce. Nie przenoszę takiej struktury bezpośrednio do menu sklepu. Oddzielam grupy części od danych źródłowych i sprawdzam, które informacje można bezpiecznie uporządkować automatycznie, a które wymagają Twojej decyzji."
+      },
+      {
+        title: "Synchronizacja psuje ręcznie poprawiony katalog",
+        body: "Poprawiasz kategorię lub przypisanie auta w WooCommerce, ale po aktualizacji z BaseLinkera zmiana znika. Dlatego projektuję osobną strukturę nawigacji, której synchronizacja nie nadpisuje. Ręczne poprawki dopasowania części również mogą mieć pierwszeństwo przed automatycznym rozpoznawaniem. Dzięki temu nie musisz ciągle porządkować tych samych produktów."
+      },
+      {
+        title: "Sprzedana część nadal pojawia się w wyszukiwarce",
+        body: "W sklepie z częściami używanymi konkretna sztuka może sprzedać się na Allegro, zanim ktoś otworzy jej adres w Twoim sklepie. Usunięcie produktu bez przekierowania prowadzi do błędu 404, czyli niedostępnej strony. Przygotowuję obsługę takich adresów, żeby klient mógł przejść do odpowiedniej grupy części dla swojego modelu i sprawdzić inne dostępne produkty."
+      }
+    ],
+    mustHave: [
+      {
+        title: "Dobór części po modelu samochodu",
+        body: "Klient wybiera markę, model i odpowiednią generację, a następnie grupę części. Tam, gdzie dane na to pozwalają, uwzględniam również rocznik, silnik i modele bliźniacze. Jedna część może mieć przypisanych kilka pasujących samochodów. Nie ograniczam jej sztucznie do jednego modelu tylko dlatego, że występuje on w nazwie aukcji."
+      },
+      {
+        title: "Wyszukiwarka po numerze OEM",
+        body: "Warsztat często zna numer oryginalnej części, ale nie jej nazwę handlową. Wyszukiwarka części po numerze OEM, czyli oznaczeniu nadanym przez producenta, powinna uwzględniać również numery oryginałów i zamienników zapisane w danych produktu. Dzięki temu klient może szukać części po konkretnym oznaczeniu, bez przekopywania kategorii."
+      },
+      {
+        title: "Czytelna karta części",
+        body: "Rozdzielam informacje o przedmiocie, pasujących samochodach, roczniku, stanie i numerze magazynowym. Klient nie musi wyciągać tych danych z długiego opisu skopiowanego z Allegro. Przy częściach używanych szczególnie ważne są zdjęcia rzeczywistego egzemplarza oraz jednoznaczna informacja o jego stanie. Projektuję układ karty tak, aby te dane można było szybko sprawdzić."
+      },
+      {
+        title: "Aktualne stany i zamówienia",
+        body: "Jeśli sprzedajesz równolegle na Allegro, OLX lub innych platformach, własny sklep musi uwzględniać ten sposób pracy. BaseLinker może obsługiwać zamówienia i synchronizację stanów między kanałami. Uwzględniam również to, które pola produktu są aktualizowane z zewnątrz, a które powinny pozostać pod kontrolą sklepu."
+      },
+      {
+        title: "Zachowanie starych adresów",
+        body: "Zmiana kategorii i sposobu przeglądania produktów nie powinna pozostawiać niedziałających odnośników. Przygotowuję przekierowania 301, czyli stałe przekierowania ze starych adresów na odpowiednie nowe strony. Dotyczy to kategorii, marek i sprzedanych części, dla których można wskazać właściwą stronę zastępczą. To pomaga zachować ciągłość nawigacji dla klientów i wyszukiwarek."
+      },
+      {
+        title: "Szybkie zapytanie o niedostępną część",
+        body: "Nie każdy klient zna numer katalogowy i nie każda część będzie od razu dostępna. Formularz z numerem VIN, czyli identyfikatorem konkretnego pojazdu, pozwala zebrać informacje potrzebne do sprawdzenia dopasowania. Mogę dodać także kontakt przez WhatsApp z przygotowaną treścią wiadomości. Klient ma wtedy prostą drogę do zadania pytania, zamiast kończyć poszukiwania."
+      }
+    ],
+    stack: [
+      {
+        label: "WooCommerce",
+        body: "Buduję sklep na WordPressie i WooCommerce, z własnym motywem bez Elementora. Przygotowuję układ pod katalog części, a nie odwrotnie. Osobno projektuję nawigację po samochodach, grupach produktów i kartach części. Dzięki temu możesz zarządzać ofertą w znanym panelu, a niestandardowe funkcje nie muszą wynikać z ograniczeń gotowego szablonu."
+      },
+      {
+        label: "BaseLinker",
+        body: "Uwzględniam BaseLinker jako narzędzie do obsługi zamówień, stanów i sprzedaży na różnych platformach. Sprawdzam, skąd pochodzą dane i które pola są nadpisywane podczas synchronizacji. W razie potrzeby oddzielam strukturę katalogu sklepu od kategorii dostarczanych przez BaseLinker, żeby kolejne aktualizacje nie usuwały przygotowanej nawigacji."
+      },
+      {
+        label: "Wyszukiwarka i dopasowanie do auta",
+        body: "Przygotowuję wyszukiwanie po numerze OEM, oryginałach i zamiennikach oraz filtrowanie po samochodzie. Gdy marka, generacja lub silnik występują tylko w nazwie produktu, mogę opracować reguły ich rozpoznawania. Dodaję możliwość sprawdzenia i ręcznej poprawki przypisań, ponieważ automatyczne rozpoznawanie nazw nie zawsze daje jednoznaczny wynik."
+      },
+      {
+        label: "SEO i przekierowania",
+        body: "Przygotowuję logiczne adresy kategorii i modeli, nagłówki, mapę strony oraz dane strukturalne pomagające wyszukiwarkom rozumieć zawartość. Ustalam przekierowania ze starych adresów i sprawdzam wydajność sklepu na telefonie. Nie obiecuję konkretnych pozycji w Google, ale uwzględniam techniczne podstawy widoczności już przy projektowaniu katalogu."
+      }
+    ],
+    pricing: {
+      time: "6-14 tygodni",
+      note: "Koszt stworzenia sklepu zależy przede wszystkim od stanu danych produktowych i złożoności dopasowania części do samochodów. Znaczenie mają również liczba źródeł danych, sposób synchronizacji z BaseLinkerem, wyszukiwarka numerów katalogowych oraz zakres porządkowania istniejących adresów i kategorii."
+    },
+    faq: [
+      {
+        q: "Czy mogę uruchomić własny sklep, jeśli sprzedaję głównie na Allegro?",
+        a: "Tak. Nie musisz rezygnować z Allegro, żeby prowadzić własny sklep. Możesz zachować dotychczasowe kanały sprzedaży i rozwijać własny katalog, w którym klient szuka części według samochodu. Przy projektowaniu sprawdzam, jak obecnie obsługujesz produkty, zamówienia i stany magazynowe, żeby nie tworzyć drugiego, niezależnego sposobu zarządzania ofertą."
+      },
+      {
+        q: "Czy sklep z częściami samochodowymi może działać na WooCommerce?",
+        a: "Tak. Sklep z częściami samochodowymi na WooCommerce może obsługiwać zarówno standardową sprzedaż, jak i katalog z wyborem marki, modelu, generacji i rodzaju części. Sam WooCommerce nie rozwiązuje jednak automatycznie problemu dopasowania produktów do pojazdów. Potrzebne są odpowiednio przygotowane dane oraz funkcje wyszukiwania."
+      },
+      {
+        q: "Czy klient będzie mógł wyszukać część po modelu auta?",
+        a: "Tak, jeśli katalog zawiera informacje o zgodności produktów z samochodami. Przygotowuję ścieżkę wyboru marki, modelu i grupy części, z uwzględnieniem generacji. Rocznik i silnik również mogą służyć do doprecyzowania wyników, jeśli dostępne dane pozwalają wiarygodnie je przypisać."
+      },
+      {
+        q: "Czy jedna część może być przypisana do kilku modeli samochodów?",
+        a: "Tak. Jest to szczególnie ważne przy samochodach dostawczych. Przykładowo Renault Trafic III, Opel Vivaro B, Fiat Talento i Nissan NV300 mają wiele wspólnych części. Nie oznacza to jednak zgodności każdego elementu. Przygotowuję możliwość przypisania kilku modeli do produktu, a konkretne dopasowania wynikają z danych części."
+      },
+      {
+        q: "Czy wyszukiwarka znajdzie część po numerze OEM?",
+        a: "Mogę przygotować wyszukiwanie po numerze OEM, czyli numerze nadanym części przez producenta pojazdu lub podzespołu. Uwzględniam także numery oryginałów i zamienników zapisane w atrybutach produktów. To przydatne szczególnie dla warsztatów i klientów, którzy znają oznaczenie części, ale nie wiedzą, w jakiej kategorii jej szukać."
+      },
+      {
+        q: "Co jeśli marka i model auta są zapisane tylko w nazwie produktu?",
+        a: "Mogę przygotować reguły odczytujące te informacje z nazw. W realizowanym sklepie z częściami do samochodów dostawczych zastosowałem takie rozwiązanie do rozpoznawania między innymi generacji, roczników i silników. Reguły poprawiły przypisania 887 części. Nie traktuję jednak automatycznego rozpoznawania jako nieomylnego, dlatego przewiduję ręczną kontrolę i korektę."
+      },
+      {
+        q: "Czy mogę ręcznie poprawić błędne przypisanie części do auta?",
+        a: "Tak. Mogę przygotować panel w WordPressie, w którym zmienisz przypisanie konkretnego produktu. W realizowanym sklepie ręczna poprawka jest zapamiętywana i nie zostaje zastąpiona wynikiem automatycznego rozpoznawania nazwy. Dzięki temu raz zweryfikowana część nie wraca do poprzedniego, błędnego przypisania."
+      },
+      {
+        q: "Czy BaseLinker nie nadpisze kategorii uporządkowanych w sklepie?",
+        a: "To zależy od sposobu synchronizacji. W realizowanym przeze mnie sklepie BaseLinker nadpisuje kategorie WooCommerce, dlatego przygotowałem osobne grupy części do budowy nawigacji. Są przechowywane niezależnie od synchronizowanych kategorii. Dzięki temu kolejne aktualizacje produktów nie usuwają uporządkowanego menu."
+      },
+      {
+        q: "Czy mogę sprzedawać w jednym sklepie części nowe i używane?",
+        a: "Tak. Oba rodzaje produktów mogą działać w jednym katalogu. Ważne jest czytelne oznaczenie stanu części, pokazanie właściwych zdjęć i rozróżnienie produktów, które można kupić ponownie, od pojedynczych egzemplarzy z demontażu. Sposób prezentacji dostosowuję do danych, którymi dysponujesz."
+      },
+      {
+        q: "Co dzieje się ze stroną sprzedanej części używanej?",
+        a: "Jeżeli konkretna część została sprzedana i jej karta jest usuwana, mogę przygotować przekierowanie 301. W realizowanym sklepie taki adres prowadzi do grupy części dla tego samego modelu samochodu. Klient nie trafia wtedy na błąd 404, tylko może sprawdzić inne dostępne produkty. Przy projektowaniu ustalam, które adresy należy zachować, a które przekierować."
+      },
+      {
+        q: "Czy mogę przenieść produkty z Allegro do własnego sklepu?",
+        a: "Tak, ale samo przeniesienie produktów nie wystarczy, jeśli ich nazwy, kategorie i opisy są niespójne. Sprawdzam, jak rozdzielić dane o samochodzie, rodzaju części, stanie i numerze magazynowym. Następnie przygotowuję strukturę katalogu odpowiednią dla własnego sklepu. Produkty z niejednoznacznymi danymi wskazuję do weryfikacji zamiast przypisywać je na podstawie zgadywania."
+      },
+      {
+        q: "Czy można podłączyć katalog TecDoc lub hurtownię części?",
+        a: "Mogę ocenić taką możliwość po sprawdzeniu dokumentacji, dostępnych danych i warunków integracji. Nie wdrażałem dotąd połączenia z TecDoc ani hurtownią Inter Cars, dlatego nie przedstawiam tego jako gotowej funkcji. Najpierw trzeba ustalić, jakie dane są dostępne i jak miałyby współpracować z katalogiem WooCommerce."
+      },
+      {
+        q: "Od czego zależy cena stworzenia sklepu z częściami samochodowymi?",
+        a: "Głównym czynnikiem jest stopień uporządkowania danych produktowych. Jeśli produkty mają poprawnie przypisane samochody, kategorie i numery części, mogę wykorzystać te informacje bez rozbudowanego przetwarzania. Jeśli dane są rozproszone między nazwami aukcji, opisami i BaseLinkerem, potrzebne są dodatkowe reguły, kontrola przypisań oraz zabezpieczenie katalogu przed nadpisywaniem."
+      },
+      {
+        q: "Czy mogę sprawdzić sklep przed jego uruchomieniem?",
+        a: "Tak. Pracuję na wersji testowej i po każdym etapie udostępniam Ci link do sprawdzenia zmian. Możesz zweryfikować na własnych produktach, czy wybór auta, wyszukiwarka i karty części działają zgodnie z ustaleniami. Dopiero po odbiorze przygotowuję uruchomienie na właściwej stronie. Pokazuję też, jak obsługiwać katalog i ręcznie poprawiać dane."
+      }
+    ],
+    cta: "Pokaż mi swój katalog części.",
+    deliverables: [
+      {
+        label: "Sklep WooCommerce",
+        body: "Własny motyw, widoki kategorii, lista produktów, karta części, koszyk i proces zamówienia. Układ sklepu dostosowuję do wyszukiwania części i sposobu obsługi Twojej sprzedaży."
+      },
+      {
+        label: "Uporządkowany katalog",
+        body: "Struktura marek, modeli, generacji i grup części. Przygotowuję reguły przypisania produktów, rozdzielam potrzebne dane oraz wskazuję przypadki wymagające ręcznej weryfikacji."
+      },
+      {
+        label: "Wyszukiwanie i zapytania",
+        body: "Wyszukiwarka numerów części, dobór po samochodzie, blok pasujących modeli i uzgodnione formularze zapytań o części, których klient nie znalazł."
+      },
+      {
+        label: "Synchronizacja i adresy",
+        body: "Przygotowanie sklepu do współpracy z istniejącym sposobem obsługi BaseLinkera, ochrona danych katalogowych przed nadpisaniem oraz mapa przekierowań ze starych adresów."
+      },
+      {
+        label: "Testy, szkolenie i poprawki",
+        body: "Wersja testowa do odbioru, sprawdzenie działania sklepu, szkolenie online z edycji treści oraz 60 dni gwarancji i bezpłatnych poprawek po uruchomieniu."
+      }
+    ],
+    headings: {
+      pains: "Co nie działa w sklepach z częściami",
+      mustHave: "Czego wymaga sklep z częściami samochodowymi",
+      cases: "Sklepy z częściami, które robię",
+      stack: "Jak buduję sklep z częściami",
+      pricing: "Ile kosztuje sklep z częściami samochodowymi",
+      faq: "Sklep internetowy z częściami samochodowymi: pytania"
+    },
+    process: [
+      {
+        step: "01",
+        title: "Sprawdzam, jak sprzedajesz części",
+        body: "Zaczynam od rozmowy o Twoim asortymencie, kanałach sprzedaży i problemach klientów. Sprawdzam, czy masz jeden magazyn, jak obsługujesz części używane i nowe oraz gdzie aktualnie zarządzasz produktami. Ustalam, co klient powinien wiedzieć o samochodzie, żeby znaleźć pasującą część. Na tej podstawie przygotowuję zakres prac i wycenę."
+      },
+      {
+        step: "02",
+        title: "Analizuję katalog i źródła danych",
+        body: "Przeglądam przykładowe produkty, kategorie, atrybuty i opisy. Sprawdzam, czy marka, model, generacja i numery części znajdują się w osobnych polach, czy tylko w nazwach aukcji. Rozpoznaję duplikaty i niejednoznaczne przypisania. Ustalam również zasady synchronizacji, zanim zacznę zmieniać strukturę katalogu."
+      },
+      {
+        step: "03",
+        title: "Projektuję sposób szukania części",
+        body: "Przygotowuję makiety w Figmie, obejmujące menu, wybór auta, listę części i kartę produktu. Pokazuję Ci, jak klient przechodzi od modelu samochodu do odpowiedniej grupy. Uwzględniam dwie tury poprawek projektu. Kodowanie rozpoczynam po Twojej akceptacji, żeby nie budować funkcji na podstawie nieuzgodnionych założeń."
+      },
+      {
+        step: "04",
+        title: "Buduję i sprawdzam sklep",
+        body: "Pracuję na wersji testowej, więc zmiany nie trafiają od razu do działającej sprzedaży. Wdrażam katalog, wyszukiwarkę, przypisania pojazdów i uzgodnione mechanizmy synchronizacji. Sprawdzam działanie na przykładach rzeczywistych produktów, szczególnie przy różnych generacjach i modelach bliźniaczych. Po każdym etapie otrzymujesz link do sprawdzenia postępów."
+      },
+      {
+        step: "05",
+        title: "Uruchamiam sklep i pokazuję obsługę",
+        body: "Po odbiorze przygotowuję uruchomienie, sprawdzam przekierowania, zamówienia i działanie katalogu. Pokazuję Ci, jak poprawić przypisanie auta, edytować produkt i rozpoznać dane, których nie należy zmieniać ręcznie. Przeprowadzam szkolenie online. Po starcie obowiązuje 60 dni gwarancji i bezpłatnych poprawek, a dalsza opieka pozostaje opcjonalna."
+      }
+    ],
+    notFor: [
+      "Jeśli potrzebujesz wyłącznie prostego katalogu kilku produktów bez dopasowania do samochodu, rozbudowana wyszukiwarka i przebudowa danych mogą być zbędnym kosztem, dlatego zaproponuję prostszy zakres sklepu.",
+      "Jeśli oczekujesz gotowego podłączenia hurtowni Inter Cars lub katalogu TecDoc, najpierw muszę ocenić dokumentację i możliwości integracji, ponieważ nie mam jeszcze takiego wdrożenia w swoich realizacjach.",
+      "Jeśli zależy Ci tylko na szybkim przeniesieniu aukcji bez sprawdzenia kategorii, zgodności części i synchronizacji, nie będę przedstawiał takiego importu jako gotowego, uporządkowanego sklepu."
+    ]
+  },
 ];
