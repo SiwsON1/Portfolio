@@ -488,6 +488,15 @@ function leadWithKeyword(lead: string, rawKeyword?: string) {
 
 /** Akapit wpisu; akapit zaczynający się od ``` to blok kodu (pierwszy wiersz to język). */
 function renderPara(para: string, key: number) {
+  if (para.startsWith("- ")) {
+    return (
+      <ul key={key} className="space-y-3 pl-5 list-disc marker:text-peach">
+        {para.split("\n").map((item, i) => (
+          <li key={i} className="pl-1">{renderInlineLinks(item.replace(/^- /, ""))}</li>
+        ))}
+      </ul>
+    );
+  }
   if (!para.startsWith("```")) return <p key={key}>{renderInlineLinks(para)}</p>;
   const lines = para.split("\n");
   const lang = lines[0].slice(3).trim();
