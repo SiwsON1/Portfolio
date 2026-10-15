@@ -8,6 +8,9 @@ const redirectedPosts: Record<string, string> = {
 };
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ["three", "@react-three/drei", "@react-three/fiber", "gsap"],
+  },
   async redirects() {
     return [
       {

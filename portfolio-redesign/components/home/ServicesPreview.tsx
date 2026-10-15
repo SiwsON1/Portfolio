@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { services } from "@/lib/services";
+import type { ServiceLink } from "@/lib/services";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-type Service = (typeof services)[number];
+type Service = ServiceLink;
 
 const GROUPS: { main: string; line: string; subs: string[] }[] = [
   {
@@ -26,8 +26,11 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
       "integracja-woocommerce-z-baselinker",
       "integracje-woocommerce",
       "google-merchant-center-woocommerce",
+      "wdrozenie-consent-mode-v2",
       "migracja-sklepu-do-woocommerce",
       "tworzenie-wtyczek-wordpress",
+      "naprawa-sklepu-woocommerce",
+      "audyt-sklepu-woocommerce",
       "opieka-wordpress",
       "przyspieszanie-stron-wordpress",
       "headless-wordpress",
@@ -45,9 +48,8 @@ const GROUPS: { main: string; line: string; subs: string[] }[] = [
   },
 ];
 
-const bySlug = (slug: string) => services.find((x) => x.slug === slug) as Service;
-
-export function ServicesPreview() {
+export function ServicesPreview({ services }: { services: ServiceLink[] }) {
+  const bySlug = (slug: string) => services.find((x) => x.slug === slug) as Service;
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 

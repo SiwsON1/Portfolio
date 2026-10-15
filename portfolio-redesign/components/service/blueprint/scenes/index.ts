@@ -18,8 +18,11 @@ import { scene as integracje } from "./integracje-woocommerce";
 import { scene as merchant } from "./google-merchant-center-woocommerce";
 import { scene as migracja } from "./migracja-sklepu-do-woocommerce";
 import { scene as konfigurator } from "./konfigurator-produktu";
+import { scene as naprawa } from "./naprawa-sklepu-woocommerce";
+import { scene as audyt } from "./audyt-sklepu-woocommerce";
+import { scene as consent } from "./wdrozenie-consent-mode-v2";
 
-/** Scenka per slug usługi (wszystkie 18). Usługa bez scenki dostałaby klasyczny hero (ServiceHeroVisual). */
+/** Scenka per slug usługi (wszystkie 22). Usługa bez scenki dostałaby klasyczny hero (ServiceHeroVisual). */
 export const SCENES: Record<string, Scene> = {
   "tworzenie-stron-wordpress": wordpress,
   "sklepy-internetowe-woocommerce": woocommerce,
@@ -40,4 +43,7 @@ export const SCENES: Record<string, Scene> = {
   "google-merchant-center-woocommerce": merchant,
   "migracja-sklepu-do-woocommerce": migracja,
   "konfigurator-produktu": konfigurator,
+  "naprawa-sklepu-woocommerce": naprawa,
+  "audyt-sklepu-woocommerce": audyt,
+  "wdrozenie-consent-mode-v2": consent,
 };

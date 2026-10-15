@@ -804,9 +804,314 @@ export const services: Service[] = [
     ],
     cta: "Sprawdzę, co blokuje Twoje produkty w Google.",
   },
+  {
+    "slug": "naprawa-sklepu-woocommerce",
+    "title": "Naprawa sklepu WooCommerce",
+    "metaTitle": "Naprawa sklepu WooCommerce i strony WordPress po awarii",
+    "metaDescription": "Naprawa sklepu WooCommerce i strony WordPress. Znajduję przyczynę błędu w logach, naprawiam kasę, płatności i wtyczki. Jednorazowo, bez abonamentu.",
+    "h1": "Naprawa sklepu WooCommerce i strony WordPress dla firm",
+    "headings": {
+      "bullets": "Co naprawiam w sklepie WooCommerce i na stronie WordPress",
+      "process": "Jak wygląda naprawa sklepu krok po kroku",
+      "faq": "Naprawa sklepu WooCommerce: pytania"
+    },
+    "lead": "Naprawiam błędy w działających sklepach WooCommerce i stronach WordPress, od niedziałającej kasy po awarie po aktualizacji. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+    "intro": [
+      "Naprawa sklepu WooCommerce jest potrzebna, gdy klienci nie mogą dokończyć zakupów, płatności kończą się błędem albo zamówienia zmieniają status bez Twojego udziału. Na stronach WordPress usuwam błędy krytyczne po aktualizacji, konflikty wtyczek, problemy z formularzami i wyglądem na telefonach. Przyjmuję też mniejsze poprawki na stronie WordPress, jeśli masz listę rzeczy do zmiany, ale nie masz już kontaktu z poprzednim wykonawcą. Możesz zlecić mi pojedynczą naprawę bez podpisywania umowy na stałą obsługę.",
+      "W sklepie [LumiKids](/projekty/lumikids) zamówienia za pobraniem anulowały się automatycznie, a klientka otrzymywała wiadomość o anulowaniu, choć sama niczego nie zmieniała. Notatki zamówień wskazywały jedynie „system”. Dopiero dziennik dostępu serwera pokazał, że BaseLinker zmieniał status zamówienia na oczekujące na płatność, a WooCommerce po 60 minutach je anulował. Napisałem małą wtyczkę blokującą takie cofnięcie statusu i sprawdziłem ją w sześciu scenariuszach.",
+      "Nie zaczynam od wyłączania wszystkich wtyczek ani przypadkowych zmian w ustawieniach. Najpierw zabezpieczam pliki i bazę danych, potem sprawdzam zapisy błędów serwera, historię żądań i notatki zamówień, zależnie od objawu. Jeśli to możliwe, poprawkę przygotowuję na kopii strony, a przed zakończeniem sprawdzam działanie funkcji, która wcześniej zawodziła. Otrzymujesz też informację, co powodowało problem, co zmieniłem i gdzie znajduje się kopia zapasowa."
+    ],
+    "bullets": [
+      {
+        "title": "Naprawa konkretnej usterki bez abonamentu",
+        "body": "Możesz zgłosić jeden błąd albo przesłać listę poprawek do istniejącego sklepu lub strony. Zajmę się zarówno niedziałającą kasą WooCommerce, jak i nieprawidłowym tłumaczeniem, polem formularza czy wyglądem karty produktu. Nie musisz zamawiać przebudowy całej witryny ani miesięcznej opieki. Po rozpoznaniu ustalimy zakres pracy i termin wykonania."
+      },
+      {
+        "title": "Diagnoza na podstawie zapisów błędów",
+        "body": "Sprawdzam, co wydarzyło się na serwerze w chwili wystąpienia problemu. Dziennik błędów pozwala odnaleźć przyczynę awarii kodu, a log dostępu, czyli historia żądań kierowanych do serwera, pomaga ustalić, czy zmiany wywołała zewnętrzna integracja. Dzięki temu mogę szukać źródła usterki zamiast zmieniać ustawienia metodą prób i błędów. Ma to szczególne znaczenie w sklepie, w którym cały czas pojawiają się zamówienia."
+      },
+      {
+        "title": "Poprawki odporne na aktualizację motywu",
+        "body": "Drobne zmiany w wyglądzie i działaniu strony umieszczam w motywie potomnym, czyli osobnym miejscu na modyfikacje, których aktualizacja głównego motywu nie powinna nadpisać. Gdy poprawka dotyczy działania sklepu, mogę przygotować niewielką własną wtyczkę. Nie trzeba wtedy edytować bezpośrednio plików oryginalnego motywu. Samą zgodność zmian z przyszłymi wersjami nadal trzeba sprawdzać."
+      },
+      {
+        "title": "Test naprawionej funkcji i opis zmian",
+        "body": "Nie kończę pracy na tym, że komunikat błędu zniknął. Jeśli problem dotyczył zamówień, sprawdzam odpowiedni scenariusz zakupowy. Przy błędach formularza weryfikuję jego zachowanie, a przy poprawkach wizualnych sprawdzam zmieniony element. Na koniec opisuję przyczynę usterki, wprowadzone zmiany oraz miejsce przechowywania kopii. Rozmawiasz bezpośrednio ze mną, bo sam piszę kod i wykonuję poprawki."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Zgłoszenie błędu i wstępne rozpoznanie",
+        "body": "Napisz, co przestało działać, kiedy zauważyłeś problem i czy wcześniej były aktualizowane wtyczki, motyw lub ustawienia sklepu. Jeśli możesz, dołącz zrzut ekranu, krótkie nagranie albo numer przykładowego zamówienia. Gdy masz kilka usterek, prześlij je w jednej wiadomości. Odpowiadam z pierwszą oceną w ciągu 24 godzin roboczych. Na tym etapie ustalimy, jakie informacje będą potrzebne do dalszej diagnozy."
+      },
+      {
+        "step": "02",
+        "title": "Kopia zapasowa i ustalenie przyczyny",
+        "body": "Przed wprowadzeniem zmian wykonuję kopię plików i bazy danych. Następnie analizuję zapisy błędów, historię działania sklepu i elementy powiązane z usterką. Sprawdzam, czy problem wynika z kodu, konfliktu wtyczek, motywu albo działania zewnętrznego systemu. Na tej podstawie określam zakres naprawy i termin. Jeśli przyczyna jest bardziej złożona, wyjaśniam, co wymaga dalszego sprawdzenia."
+      },
+      {
+        "step": "03",
+        "title": "Wprowadzenie poprawki w bezpieczny sposób",
+        "body": "Jeśli warunki techniczne na to pozwalają, najpierw pracuję na kopii strony. Poprawiam konkretny fragment kodu, ustawienie albo mechanizm powodujący awarię. Staram się oddzielać własne modyfikacje od plików motywu i wtyczek, które mogą zostać zastąpione przy kolejnej aktualizacji. W działającym sklepie uwzględniam też wpływ zmian na zamówienia, płatności i pozostałe funkcje."
+      },
+      {
+        "step": "04",
+        "title": "Test działania i przekazanie informacji",
+        "body": "Po wdrożeniu odtwarzam sytuację, w której wcześniej pojawiał się błąd. Przy kasie WooCommerce może to być przejście przez zamówienie testowe, a przy usterce strony sprawdzenie konkretnego widoku lub formularza. Weryfikuję również, czy poprawka nie zakłóca powiązanej funkcji. Przekazuję Ci krótki opis wykonanej pracy, przyczyny problemu i lokalizacji kopii zapasowej. Jeśli pojawią się dalsze kwestie wymagające osobnej pracy, omówimy je przed kolejnymi zmianami."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy naprawisz sklep WooCommerce po innym wykonawcy?",
+        "a": "Tak. Nie musiałem tworzyć Twojego sklepu, żeby podjąć się naprawy. Najpierw sprawdzę jego obecną konfigurację i ustalę, skąd bierze się problem. Mogę też zająć się listą zaległych poprawek, jeśli nie masz już kontaktu z poprzednim wykonawcą."
+      },
+      {
+        "q": "Ile kosztuje naprawa sklepu WooCommerce?",
+        "a": "Największy wpływ na koszt ma czas potrzebny do znalezienia przyczyny błędu. Widoczna usterka nie zawsze oznacza, że problem znajduje się w miejscu, w którym występuje. Po wstępnym rozpoznaniu określę zakres prac, a gdy potrzebna będzie głębsza diagnoza, powiem Ci o tym przed jej rozpoczęciem."
+      },
+      {
+        "q": "Czy potrzebujesz dostępu do hostingu, żeby naprawić WordPress?",
+        "a": "Przy wielu awariach tak, ponieważ na hostingu znajdują się pliki strony i dzienniki błędów serwera. Sam dostęp do panelu WordPress może nie wystarczyć, zwłaszcza gdy strona wyświetla błąd krytyczny. Po zapoznaniu się ze zgłoszeniem wskażę, jakich dostępów potrzebuję."
+      },
+      {
+        "q": "Czy naprawisz błąd krytyczny WordPress po aktualizacji?",
+        "a": "Takimi awariami również się zajmuję. Sprawdzam dziennik błędów PHP, czyli zapisy problemów z kodem wykonywanym na serwerze, żeby ustalić, co uniemożliwia uruchomienie strony. Nie zakładam automatycznie, że wystarczy przywrócić poprzednią wersję wtyczki."
+      },
+      {
+        "q": "Co zrobisz, jeśli kasa WooCommerce nie działa albo płatność kończy się błędem?",
+        "a": "Najpierw ustalę, na którym etapie klient nie może dokończyć zamówienia i czy problem dotyczy konkretnej metody płatności lub dostawy. Sprawdzę dostępne zapisy błędów oraz zachowanie formularza zamówienia. Po poprawce przetestuję scenariusz, który wcześniej nie działał."
+      },
+      {
+        "q": "Dlaczego zamówienia WooCommerce anulują się same?",
+        "a": "Przyczyną mogą być ustawienia oczekiwania na płatność albo zmiany statusów wykonywane przez zewnętrzny system. W LumiKids problem powodowało połączenie zmian wysyłanych przez BaseLinkera z mechanizmem anulowania nieopłaconych zamówień w WooCommerce. W Twoim sklepie sprawdzę notatki zamówień i historię żądań do serwera, zanim wskażę przyczynę."
+      },
+      {
+        "q": "Co jeśli przyczyną błędu jest płatna wtyczka lub motyw?",
+        "a": "Najpierw sprawdzę, czy problem da się rozwiązać bez modyfikowania oryginalnych plików. Jeśli potrzebna będzie aktualizacja, pomoc producenta albo dostęp do płatnej wersji, wyjaśnię Ci sytuację. Nie będę zakładał, że można bezpiecznie zmienić cudzy kod bez sprawdzenia skutków takiej zmiany."
+      },
+      {
+        "q": "Czy dasz gwarancję, że błąd nie wróci?",
+        "a": "Nie mogę zagwarantować, że kolejne aktualizacje lub zmiany w zewnętrznych systemach nigdy nie spowodują nowej awarii. Dlatego staram się usuwać przyczynę problemu, a nie tylko ukrywać jego objaw, i sprawdzam poprawkę przed zakończeniem pracy. Przekazuję też opis zmian, który ułatwia późniejsze ustalenie, co zostało naprawione."
+      },
+      {
+        "q": "Czy mogę zlecić tylko kilka poprawek na stronie WordPress?",
+        "a": "Tak, możesz przesłać listę zmian dotyczących tekstów, tłumaczeń, wyglądu, formularzy, pól kasy czy kart produktów. Sprawdzę, które poprawki da się wykonać w ramach jednorazowego zlecenia. Jeśli chodzi o stworzenie całkiem nowej funkcji, ustalimy to jako osobny zakres pracy."
+      },
+      {
+        "q": "Czy zajmiesz się też stałą opieką lub integracją sklepu z BaseLinkerem?",
+        "a": "Ta usługa dotyczy jednorazowych napraw istniejącej strony lub sklepu, także błędów związanych z już podłączonym BaseLinkerem. Regularne aktualizacje i kopie obejmuje osobna usługa: [opieka nad stroną WordPress](/uslugi/opieka-wordpress). Jeśli chcesz dopiero połączyć oba systemy, zobacz [integracja WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker)."
+      }
+    ],
+    "cta": "Opisz, co nie działa w Twoim sklepie lub na stronie, a sprawdzę, od czego zacząć naprawę."
+  },
+  {
+    "slug": "audyt-sklepu-woocommerce",
+    "title": "Audyt sklepu WooCommerce",
+    "metaTitle": "Audyt sklepu WooCommerce i strony WordPress | Marcin Siwonia",
+    "metaDescription": "Audyt sklepu WooCommerce i strony WordPress. Sprawdzam błędy, bezpieczeństwo, zamówienia, integracje i szybkość. Dostajesz listę usterek i zaleceń.",
+    "h1": "Audyt sklepu WooCommerce i strony WordPress dla Twojej firmy",
+    "headings": {
+      "bullets": "Co daje audyt sklepu WooCommerce",
+      "process": "Jak przeprowadzam audyt sklepu",
+      "faq": "Audyt sklepu WooCommerce: pytania"
+    },
+    "lead": "Sprawdzę, co w Twoim sklepie lub na stronie działa nieprawidłowo, co może utrudniać zakupy i jakie problemy rozwiązać w pierwszej kolejności. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+    "intro": [
+      "Zamówień jest mniej, sklep działa coraz wolniej, stany magazynowe nie zgadzają się z BaseLinkerem albo po poprzednim wykonawcy zostały wtyczki, których przeznaczenia nie znasz? Audyt sklepu WooCommerce pozwala sprawdzić, skąd biorą się problemy i które z nich wymagają działania. Nie ograniczam się do automatycznego skanowania strony. Zaglądam do ustawień, dzienników błędów serwera, integracji i procesu zakupowego. Szukam usterek, które mogą powodować utratę zamówień, błędne dane lub problemy z bezpieczeństwem.",
+      "W sklepie [LumiKids](/projekty/lumikids) wykonałem przegląd ukrytych usterek, podczas którego odkryłem, że zewnętrzny program synchronizujący magazyn nadpisywał stany produktów, przywracając do sprzedaży już sprzedane sztuki. Ta sama synchronizacja generowała około 81% wszystkich żądań do serwera, a w czasie jej działania klienci otrzymywali błędy 503 oznaczające przeciążenie serwera. Tych zależności nie dało się rozpoznać po samym wyglądzie sklepu. Potrzebna była analiza tego, co działo się w tle.",
+      "Jestem freelancerem i web developerem, komercyjnie tworzę strony od 2020 roku. Audyt wykonuję osobiście, a Ty rozmawiasz bezpośrednio ze mną. Najpierw ustalam, co Cię niepokoi i jakie systemy są połączone ze stroną. Następnie sprawdzam najważniejsze obszary, od dostępów i kopii zapasowych po działanie kasy na telefonie, SEO techniczne i śledzenie zakupów. Po audycie otrzymujesz listę konkretnych znalezisk, ich konsekwencji oraz zaleceń z priorytetami. Sam audyt jest diagnozą, nie zleceniem na wprowadzanie zmian."
+    ],
+    "bullets": [
+      {
+        "title": "Wiesz, które błędy mogą kosztować Cię zamówienia",
+        "body": "Sprawdzam drogę klienta od karty produktu do potwierdzenia zakupu, w tym koszyk, kasę, metody dostawy i płatności. Zwracam uwagę na problemy widoczne na telefonach, błędnie naliczane opłaty oraz zamówienia, które nie przechodzą prawidłowo przez kolejne etapy. Analizuję również maile wysyłane klientom i statusy zamówień. Dzięki temu dostajesz informację nie tylko o tym, że coś nie działa, ale również w jakich okolicznościach występuje problem i co należy sprawdzić podczas naprawy."
+      },
+      {
+        "title": "Poznajesz problemy ukryte w integracjach i na serwerze",
+        "body": "Jeśli korzystasz z BaseLinkera, Allegro, hurtowni lub zewnętrznego programu magazynowego, sprawdzam, jak ich działanie wpływa na sklep. Analizuję dzienniki serwera pokazujące żądania i błędy, zadania wykonywane automatycznie oraz zgodność stanów i statusów zamówień. Weryfikuję również konta użytkowników, uprawnienia, aktualizacje i stare połączenia z innymi systemami. Takie elementy mogą wyglądać poprawnie w panelu administracyjnym, mimo że w tle regularnie pojawiają się błędy."
+      },
+      {
+        "title": "Otrzymujesz priorytety zamiast długiej listy ostrzeżeń",
+        "body": "Nie każde ostrzeżenie z narzędzia diagnostycznego wymaga natychmiastowej reakcji. Oddzielam problemy pilne, takie jak ryzyko błędnych zamówień lub niepotrzebnie otwarte dostępy, od spraw, które można zaplanować. Przy każdym znalezisku opisuję, co wykryłem, jakie mogą być konsekwencje, jak podejść do naprawy i ile mniej więcej pracy może ona wymagać. Łatwiej wtedy zdecydować, od czego zacząć i na co przeznaczyć budżet."
+      },
+      {
+        "title": "Możesz bezpieczniej zaplanować kolejne prace w sklepie",
+        "body": "Audyt techniczny sklepu przydaje się przed kampanią reklamową, migracją, rozbudową lub przejęciem strony po innym wykonawcy. Sprawdzam obecny stan, żebyś wiedział, jakie problemy istnieją jeszcze przed rozpoczęciem zmian. Ocena obejmuje również szybkość działania, indeksowanie strony przez wyszukiwarki, przekierowania, pomiar zdarzeń i podstawowe kwestie dostępności. Wyniki możesz przekazać swojemu wykonawcy albo wykorzystać do ustalenia zakresu dalszych prac ze mną."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Rozmowa i ustalenie zakresu",
+        "body": "Opisz mi, co dzieje się w Twoim sklepie, jakie problemy zauważasz i co planujesz zrobić w najbliższym czasie. Zapytam o wykorzystywane integracje, wcześniejsze awarie i najważniejsze funkcje sprzedażowe. Inaczej rozłożę akcenty, gdy spada liczba zamówień, a inaczej podczas sprawdzenia sklepu po poprzednim wykonawcy. Na tej podstawie określam zakres audytu, koszt i termin. Pierwszą ocenę zgłoszenia otrzymasz w ciągu 24 godzin roboczych."
+      },
+      {
+        "step": "02",
+        "title": "Zebranie dostępów i sprawdzenie zabezpieczeń",
+        "body": "Ustalamy, jakie dostępy są potrzebne do wybranego zakresu. Najczęściej chodzi o panel WordPress, hosting, dzienniki serwera oraz informacje o połączonych systemach. W zależności od problemu przydatne mogą być również dostępy do BaseLinkera lub Google Search Console, które pokazuje stan witryny w wyszukiwarce. Audyt wykonuję domyślnie w trybie odczytu, bez zmieniania konfiguracji sklepu. Jeśli potrzebny będzie test mogący zapisać dane, wcześniej ustalimy jego warunki."
+      },
+      {
+        "step": "03",
+        "title": "Kontrola techniczna i analiza problemów",
+        "body": "Sprawdzam konfigurację WordPressa i WooCommerce, stan aktualizacji, zabezpieczenia, kopie zapasowe, błędy serwera oraz działanie kluczowych funkcji. Przyglądam się procesowi składania zamówienia na telefonie i zależnościom między sklepem a zewnętrznymi systemami. Korzystam również z narzędzi do pomiaru szybkości, analizy SEO technicznego i dostępności. Jeśli znajdę nieprawidłowość, staram się ustalić jej przyczynę i znaczenie dla działania sklepu, zamiast przepisywać samo ostrzeżenie z programu."
+      },
+      {
+        "step": "04",
+        "title": "Przekazanie wyników i zaleceń",
+        "body": "Przygotowuję listę znalezisk podzieloną na trzy grupy: pilne, do zaplanowania i kosmetyka. Każdy punkt zawiera opis problemu, możliwe konsekwencje, zalecany sposób rozwiązania i orientacyjny nakład pracy. Wskazuję również obszary, które sprawdziłem i w których nie znalazłem nieprawidłowości. Nie musisz zlecać mi późniejszych zmian."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ile kosztuje audyt sklepu WooCommerce?",
+        "a": "Największy wpływ na koszt ma liczba integracji i obszarów, które trzeba sprawdzić. Sklep z samymi płatnościami i dostawami wymaga innego zakresu pracy niż sklep połączony z BaseLinkerem, Allegro i zewnętrznym magazynem. Po poznaniu konfiguracji i Twoich problemów przedstawiam zakres, koszt oraz termin."
+      },
+      {
+        "q": "Czym taki audyt różni się od darmowego PageSpeed albo skanera strony?",
+        "a": "PageSpeed sprawdza przede wszystkim wydajność strony, a skaner dostępności pomaga wykrywać problemy z korzystaniem z niej. Nie powiedzą Ci jednak, dlaczego program magazynowy cofa stany produktów, zamówienia zmieniają status lub serwer przeciąża się podczas synchronizacji. W audycie łączę wyniki narzędzi z analizą ustawień, dzienników serwera i rzeczywistego działania sklepu."
+      },
+      {
+        "q": "Czy audyt coś zmieni w moim sklepie?",
+        "a": "Domyślnie pracuję tylko w trybie odczytu, więc sam audyt nie oznacza zmiany ustawień, usuwania wtyczek ani modyfikowania kodu. Jeżeli do zweryfikowania konkretnego problemu potrzebny będzie test zapisujący dane, wcześniej omówię go z Tobą. Naprawy są osobnym etapem, na który decydujesz się dopiero po poznaniu wyników."
+      },
+      {
+        "q": "Czy potrzebujesz dostępu do hostingu?",
+        "a": "W pełnym audycie technicznym dostęp do hostingu jest bardzo przydatny, ponieważ pozwala sprawdzić dzienniki błędów, ruch programów i stan kopii zapasowych. Sam panel WordPress nie zawsze pokazuje przyczyny problemów występujących na serwerze. Jeśli nie masz dostępu do hostingu, ustalimy, co da się sprawdzić bez niego i jakie będą ograniczenia diagnozy."
+      },
+      {
+        "q": "Czy możesz sprawdzić sklep przejęty po innym wykonawcy?",
+        "a": "Tak, sprawdzenie sklepu po poprzednim wykonawcy to jeden z powodów wykonania audytu. Przyglądam się kontom użytkowników, uprawnieniom, zainstalowanym wtyczkom, aktualizacjom, połączeniom z usługami zewnętrznymi i ogólnemu stanowi technicznemu. W jednym z przejętych serwisów firmowych znalazłem otwartą rejestrację i trzy konta założone przez automatyczne skanery, choć nie doszło tam do włamania."
+      },
+      {
+        "q": "Czy audyt obejmuje BaseLinkera, Allegro i stany magazynowe?",
+        "a": "Tak, jeżeli te systemy są częścią Twojego sklepu, uwzględniam je w ustalonym zakresie. Sprawdzam między innymi synchronizację stanów, przepływ statusów zamówień oraz błędy komunikacji między systemami. Weryfikuję, czy automatyczne operacje nie nadpisują prawidłowych danych lub nie obciążają niepotrzebnie serwera."
+      },
+      {
+        "q": "Czy sprawdzisz również SEO i zgodność z RODO?",
+        "a": "Audyt obejmuje SEO techniczne, czyli między innymi indeksowanie, przekierowania, dane strukturalne i problemy utrudniające wyszukiwarkom odczytywanie strony. Sprawdzam też techniczne działanie mechanizmu zgód na cookies, w tym czy GA4, czyli Google Analytics 4, uruchamia pomiar po wyrażeniu zgody. Nie wykonuję audytu prawnego RODO ani regulaminu sklepu, ponieważ nie jestem prawnikiem."
+      },
+      {
+        "q": "Czy po audycie możesz również naprawić znalezione błędy?",
+        "a": "Tak, w osobnym zleceniu: jednorazowe usterki usuwam w ramach usługi [naprawa sklepu WooCommerce](/uslugi/naprawa-sklepu-woocommerce), a regularne utrzymanie obejmuje [opieka nad stroną WordPress](/uslugi/opieka-wordpress). Najpierw otrzymujesz jednak diagnozę i zalecenia, żebyś mógł zdecydować, które zmiany są potrzebne i kto powinien je wykonać. Możesz zrealizować je samodzielnie, przekazać swojemu wykonawcy albo powierzyć mnie."
+      },
+      {
+        "q": "Czy audyt ma sens, jeśli sklep działa i klienci składają zamówienia?",
+        "a": "Tak, szczególnie przed kampanią reklamową, migracją lub większą rozbudową. Działający sklep może mieć błędy, które nie są widoczne podczas zwykłego przeglądania produktów, na przykład niepotrzebne zadania obciążające serwer, stare uprawnienia lub nieprawidłowe śledzenie zdarzeń. Audyt pomaga rozpoznać takie ryzyka, zanim rozpoczniesz kolejne prace."
+      },
+      {
+        "q": "Co dostanę po audycie i jak szybko poznasz pierwsze problemy?",
+        "a": "Otrzymasz listę znalezisk z opisem zagrożeń, zalecanymi naprawami, orientacyjnym nakładem pracy i priorytetami. Pierwszą ocenę zgłoszenia przekazuję w ciągu 24 godzin roboczych, a termin zakończenia audytu ustalam po rozpoznaniu zakresu. Jeśli jakiś obszar nie będzie możliwy do sprawdzenia, zaznaczę to w wynikach, zamiast zakładać, że działa prawidłowo."
+      }
+    ],
+    "cta": "Opisz mi swój sklep i problemy, które zauważasz, a sprawdzę, jaki zakres audytu będzie potrzebny."
+  },
+  {
+    "slug": "wdrozenie-consent-mode-v2",
+    "title": "Consent Mode v2 i GA4",
+    "metaTitle": "Wdrożenie Consent Mode v2 i GA4 | WordPress, WooCommerce",
+    "metaDescription": "Wdrożenie Consent Mode v2, GA4 i pomiaru zakupów w WordPress i WooCommerce. Sprawdzę zgody, tagi Google i Meta oraz zliczanie konwersji w sklepie.",
+    "h1": "Wdrożenie Consent Mode v2 i GA4 dla WordPress i WooCommerce",
+    "headings": {
+      "bullets": "Co obejmuje wdrożenie Consent Mode v2 i GA4",
+      "process": "Jak wdrażam zgody i pomiar",
+      "faq": "Consent Mode v2 i GA4: pytania"
+    },
+    "lead": "Wdrożę techniczną obsługę zgód na cookies, skonfiguruję GA4 i sprawdzę, czy Google oraz Meta prawidłowo mierzą zdarzenia i zakupy w Twojej witrynie. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
+    "intro": [
+      "Wdrożenie Consent Mode v2 to coś więcej niż dodanie banera z przyciskami „Akceptuję” i „Odrzucam”. Jeśli prowadzisz sklep WooCommerce albo stronę firmową i korzystasz z reklam Google lub Meta, potrzebujesz również poprawnej komunikacji między banerem a narzędziami pomiarowymi. Zdarza się, że baner wyświetla się prawidłowo, ale kod analityczny uruchamia się przed zgodą. Innym razem użytkownik zaakceptuje cookies, a informacja o jego wyborze nie dociera do Google. W obu przypadkach możesz mieć poczucie, że wszystko działa, chociaż rzeczywisty pomiar wygląda inaczej. Sprawdzam te zależności i konfiguruję je zgodnie z wybranym sposobem obsługi zgód.",
+      "Takie rozwiązanie przygotowałem w sklepie [Kosmoteka](/projekty/kosmoteka), który sprzedaje teleskopy na WooCommerce. Napisałem własną wtyczkę łączącą GA4, czyli Google Analytics 4 do analizowania ruchu i zdarzeń, z obsługą Consent Mode v2. Analityka uruchamia się dopiero po uzyskaniu zgody, a wejścia zalogowanych administratorów nie trafiają do statystyk. Zamiast rozbudowanej wtyczki cookies zastosowałem lekki baner. Podobne podejście wykorzystuję na własnej stronie marcinsiwonia.pl, gdzie kod GA4 również ładuje się dopiero po zgodzie użytkownika.",
+      "Jestem web developerem i sam zajmuję się kodem oraz konfiguracją. Najpierw sprawdzam, jak obecnie ładują się skrypty, które wtyczki odpowiadają za analitykę i czy te same zdarzenia nie są wysyłane kilka razy. Następnie ustalam z Tobą zakres, wdrażam potrzebne zmiany i testuję zachowanie strony przed zgodą oraz po jej udzieleniu. Korzystam między innymi z Tag Assistant, czyli narzędzia Google do sprawdzania działania tagów pomiarowych, oraz raportów GA4 i Meta. Nie prowadzę kampanii reklamowych i nie rozstrzygam kwestii prawnych. Mogę natomiast przygotować techniczne wdrożenie, z którego będziesz korzystać Ty lub obsługująca Twoje reklamy agencja."
+    ],
+    "bullets": [
+      {
+        "title": "Zgody na cookies połączone z rzeczywistym działaniem tagów",
+        "body": "Sam baner nie wystarczy, jeśli jego przyciski nie sterują narzędziami pomiarowymi. Konfiguruję Consent Mode v2 tak, aby wybrany przez użytkownika stan zgody był przekazywany do Google. Sprawdzam, które skrypty uruchamiają się przed wyborem, które po zaakceptowaniu oraz co dzieje się po odmowie. Mogę wdrożyć tryb podstawowy, w którym tagi Google czekają na decyzję użytkownika, albo zaawansowany, który przed zgodą dopuszcza ograniczone sygnały bez cookies. Wybór wariantu należy do Ciebie po konsultacji prawnej."
+      },
+      {
+        "title": "GA4 skonfigurowane bez podwójnego pomiaru",
+        "body": "Jeśli kod GA4 jest dodany jednocześnie przez motyw WordPress i wtyczkę, ta sama wizyta lub zdarzenie może zostać policzone więcej niż raz. Sprawdzam miejsca instalacji kodu oraz sposób przekazywania informacji o zgodach. Przy wdrożeniu GA4 kontroluję również, czy zdarzenia rzeczywiście docierają do analityki i czy zachowanie narzędzia odpowiada ustawieniom banera. Nie ograniczam się do sprawdzenia, czy w panelu pojawiają się jakiekolwiek dane."
+      },
+      {
+        "title": "Poprawne śledzenie konwersji WooCommerce",
+        "body": "W sklepie istotne jest nie tylko zarejestrowanie odwiedzin, ale również rozpoznanie zakupu i jego wartości. Sprawdzam, czy zdarzenia zakupowe przekazują potrzebne informacje oraz czy jedna transakcja nie jest rejestrowana wielokrotnie. Dotyczy to zarówno GA4, jak i pomiaru Meta, jeśli korzystasz z obu narzędzi. Gdy w sklepie działają różne wtyczki analityczne, sprawdzam też, czy nie wchodzą ze sobą w konflikt. Dzięki temu możesz oprzeć ocenę działań reklamowych na prawidłowo skonfigurowanym pomiarze, z uwzględnieniem ograniczeń wynikających ze zgód użytkowników."
+      },
+      {
+        "title": "Pixel Meta i pomiar zdarzeń z serwera",
+        "body": "Mogę sprawdzić pixel Meta, czyli kod przekazujący informacje o zdarzeniach z przeglądarki do systemu reklamowego, oraz Conversions API, które przekazuje zdarzenia z serwera. Jeśli korzystasz z obu sposobów, kontroluję ich współpracę i identyfikatory pozwalające rozpoznać to samo zdarzenie. W sklepie LumiKids rozwiązałem problem, w którym jedna wtyczka wyłączała serwerowy pomiar drugiej. Wystarczyła korekta pojedynczego ustawienia, bez kupowania płatnej wersji wtyczki. Sprawdzam więc najpierw istniejącą konfigurację, zamiast od razu proponować kolejne narzędzia."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Sprawdzenie obecnego pomiaru i obsługi zgód",
+        "body": "Zaczynam od rozmowy o Twojej stronie i narzędziach, z których korzystasz. Sprawdzam WordPress, aktywne wtyczki oraz sposób osadzenia kodów analitycznych. Testuję zachowanie banera cookies i wysyłanie danych do Google lub Meta. Jeśli prowadzisz sklep, sprawdzam również drogę zdarzenia zakupowego do narzędzia pomiarowego. Na tej podstawie określam, co wymaga poprawy, a co może pozostać bez zmian. Nie musisz znać technicznych szczegółów obecnej konfiguracji."
+      },
+      {
+        "step": "02",
+        "title": "Ustalenie zakresu i sposobu wdrożenia",
+        "body": "Przedstawiam Ci zakres prac i termin po rozpoznaniu konfiguracji. Ustalamy, czy potrzebujesz samego Consent Mode, również wdrożenia GA4, czy także pomiaru Google Ads i Meta. Wyjaśniam różnicę między podstawowym i zaawansowanym trybem zgody. Domyślnie proponuję ostrożniejszy tryb podstawowy, ale decyzję dotyczącą przetwarzania danych podejmujesz Ty z pomocą prawnika lub osoby odpowiedzialnej za ochronę danych. Ja odpowiadam za techniczne wykonanie ustaleń."
+      },
+      {
+        "step": "03",
+        "title": "Konfiguracja WordPress i narzędzi pomiarowych",
+        "body": "Wprowadzam zmiany w istniejących wtyczkach, ustawieniach lub kodzie strony, zależnie od tego, czego wymaga konkretna instalacja. Podłączam baner do mechanizmu obsługi zgód, konfiguruję GA4 i pozostałe uzgodnione narzędzia. Jeśli używasz Google Tag Managera, czyli systemu zarządzania kodami pomiarowymi bez osobnego wstawiania każdego z nich do strony, mogę pracować w tej konfiguracji. Usuwam konflikty i zbędne powielenia kodów związanych z zakresem wdrożenia."
+      },
+      {
+        "step": "04",
+        "title": "Testy zgód, zdarzeń i zakupów",
+        "body": "Po wdrożeniu sprawdzam różne stany zgody i to, jakie żądania faktycznie wysyła przeglądarka. Weryfikuję ustawienia w Tag Assistant, dane w raportach czasu rzeczywistego GA4 i zdarzenia w narzędziach Meta, jeśli są objęte zleceniem. Przy WooCommerce kontroluję przekazywanie zakupów, ich wartości i ewentualnych duplikatów. Dzięki temu nie musisz przyjmować na słowo, że sam widoczny baner oznacza poprawne działanie całej konfiguracji."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy Consent Mode v2 jest obowiązkowy?",
+        "a": "Polityka Google dotycząca zgody użytkowników z UE wymaga od firm korzystających z produktów Google uzyskania ważnej prawnie zgody na cookies tam, gdzie wymaga tego prawo, oraz na wykorzystywanie danych do personalizacji reklam w EOG, Wielkiej Brytanii i Szwajcarii. Wymaga również przechowywania informacji o zgodzie i wyjaśnienia, jak można ją wycofać. Consent Mode v2 pozwala technicznie przekazywać wybory użytkownika do systemów Google, ale sam nie gwarantuje zgodności z przepisami. Ocenę obowiązków prawnych pozostawiam prawnikowi."
+      },
+      {
+        "q": "Mam już baner cookies. Czy nadal potrzebuję Consent Mode v2?",
+        "a": "To zależy od tego, czy baner rzeczywiście steruje działaniem narzędzi Google i przekazuje im stan zgody. Samo wyświetlenie komunikatu i zapisanie wyboru użytkownika nie oznacza, że GA4 lub tagi reklamowe zachowują się prawidłowo. Mogę sprawdzić obecną konfigurację i ustalić, czego w niej brakuje."
+      },
+      {
+        "q": "Czy wystarczy darmowa wtyczka cookies z repozytorium WordPress?",
+        "a": "Może wystarczyć, jeśli obsługuje potrzebne sygnały zgody i prawidłowo współpracuje z Twoimi narzędziami. Nie zakładam, że każdą wtyczkę trzeba zastąpić płatnym rozwiązaniem. Sprawdzam jej faktyczne działanie, a jeśli powoduje konflikty lub niepotrzebnie obciąża stronę, proponuję odpowiednie zmiany."
+      },
+      {
+        "q": "Czy po wdrożeniu Consent Mode stracę dane w GA4?",
+        "a": "Gdy użytkownik nie wyraża zgody na analityczne pliki cookie, GA4 nie może mierzyć jego aktywności tak samo jak po udzieleniu zgody. Część brakujących informacji może być zastępowana modelowaniem, czyli szacowaniem danych na podstawie dostępnych sygnałów, ale nie jest to równoznaczne z pełnym pomiarem każdej wizyty. Zakres modelowania zależy również od wybranego trybu zgody."
+      },
+      {
+        "q": "Czy zrobisz to w Google Tag Managerze?",
+        "a": "Tak, mogę skonfigurować Consent Mode v2 i tagi w Google Tag Managerze, czyli narzędziu służącym do zarządzania kodami analitycznymi i reklamowymi. Sprawdzę, jak jest połączony z WordPressem, banerem i pozostałymi wtyczkami. Zadbam też o to, aby ten sam kod GA4 nie był uruchamiany równocześnie z kilku miejsc."
+      },
+      {
+        "q": "Czy Consent Mode v2 działa również dla pixela Meta?",
+        "a": "Consent Mode v2 jest mechanizmem przekazywania zgód do narzędzi Google, a nie uniwersalnym ustawieniem wszystkich systemów reklamowych. Pixel Meta, czyli kod rejestrujący zdarzenia dla reklam Meta, wymaga osobnego sprawdzenia sposobu uruchamiania zgodnie z wyborem użytkownika. Mogę objąć jednym zleceniem zarówno Google, jak i integrację Meta, w tym Conversions API do przesyłania zdarzeń z serwera."
+      },
+      {
+        "q": "Dlaczego WooCommerce pokazuje więcej zakupów w GA4 niż faktycznie było zamówień?",
+        "a": "Jedną z możliwych przyczyn jest wielokrotne wysyłanie tego samego zdarzenia zakupu przez różne integracje. Zdarza się również, że dane zakupowe są przekazywane nieprawidłowo lub bez wartości transakcji. Sprawdzam sposób generowania i wysyłania zdarzeń, żeby znaleźć źródło problemu, zamiast zmieniać ustawienia na ślepo."
+      },
+      {
+        "q": "Ile kosztuje wdrożenie Consent Mode v2 i GA4?",
+        "a": "Największy wpływ na koszt ma liczba narzędzi, które trzeba podłączyć i sprawdzić, na przykład GA4, Google Ads, Meta lub inne systemy pomiarowe. Samo uporządkowanie zgód dla GA4 to inny zakres niż poprawianie kilku wzajemnie kolidujących integracji sklepu WooCommerce. Po sprawdzeniu obecnej konfiguracji przedstawię Ci zakres prac, koszt i termin realizacji."
+      },
+      {
+        "q": "Czy napiszesz mi również politykę prywatności i treść banera cookies?",
+        "a": "Nie przygotowuję dokumentów prawnych ani nie oceniam ich zgodności z przepisami, ponieważ nie jestem prawnikiem. Treść banera, politykę prywatności i zasady uzyskiwania zgód ustalisz z prawnikiem lub osobą odpowiedzialną za ochronę danych. Mogę wykorzystać dostarczone treści i wdrożyć ich techniczną obsługę w WordPressie."
+      },
+      {
+        "q": "Co muszę przygotować i kiedy możesz zacząć?",
+        "a": "Na początek wystarczy adres strony i informacja, z jakich narzędzi analitycznych oraz reklamowych korzystasz. Do wdrożenia mogą być potrzebne dostępy do panelu WordPress, GA4, Google Ads lub Meta, zależnie od zakresu prac. Pierwszą ocenę otrzymasz w ciągu 24 godzin roboczych, a termin realizacji ustalimy po rozpoznaniu konfiguracji. Jeśli chcesz sprawdzić cały sklep, a nie tylko pomiar, zobacz [audyt sklepu WooCommerce](/uslugi/audyt-sklepu-woocommerce), a produktami w Zakupach Google zajmuję się w usłudze [Google Merchant Center dla WooCommerce](/uslugi/google-merchant-center-woocommerce)."
+      }
+    ],
+    "cta": "Podeślij adres strony, a sprawdzę, czy zgody i pomiar zakupów działają poprawnie."
+  },
 ];
 
-export const servicesIndex = services.map((s) => ({
+export type ServiceLink = { slug: string; title: string };
+
+export const servicesIndex: ServiceLink[] = services.map((s) => ({
   slug: s.slug,
   title: s.title,
 }));

@@ -42,8 +42,36 @@ export function Hero() {
     const titleEl = titleRef.current;
     let started = false;
     let idleId = 0;
+    let fallbackId: ReturnType<typeof setTimeout> | undefined;
+    let capId: ReturnType<typeof setTimeout> | undefined;
+    let waitingForLoad = false;
+    let sceneScheduled = false;
     // Wejście rusza dopiero po intro: wcześniej grało pod zasłoną, a ukryty nagłówek opóźniał LCP.
     // Scena 3D montuje się w wolnej chwili, żeby nie blokować wątku przy pierwszym renderze.
+    const mountScene = () => {
+      setSceneReady(true);
+      if (!reduce) {
+        gsap.from(portraitRef.current, {
+          autoAlpha: 0,
+          scale: 0.85,
+          duration: 1.8,
+          ease: "expo.out",
+          delay: 0.1,
+        });
+      }
+    };
+    const mountSceneWhenIdle = () => {
+      if (sceneScheduled) return;
+      sceneScheduled = true;
+      const requestIdle = (
+        window as Window & { requestIdleCallback?: typeof window.requestIdleCallback }
+      ).requestIdleCallback;
+      if (requestIdle) {
+        idleId = requestIdle(mountScene, { timeout: 1200 });
+      } else {
+        fallbackId = setTimeout(mountScene, 1000);
+      }
+    };
     const start = () => {
       if (started) return;
       started = true;
@@ -56,21 +84,30 @@ export function Hero() {
           ease: "expo.out",
           delay: 0.2,
         });
-        gsap.from(portraitRef.current, {
-          autoAlpha: 0,
-          scale: 0.85,
-          duration: 1.8,
-          ease: "expo.out",
-          delay: 0.1,
-        });
       }
-      const ric = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 200));
-      idleId = ric(() => setSceneReady(true), { timeout: 1200 });
     };
     const introPlaying = (window as unknown as { __msIntro?: string }).__msIntro === "playing";
-    const failsafe = introPlaying ? window.setTimeout(start, 6000) : 0;
-    if (introPlaying) window.addEventListener("ms-intro-done", start, { once: true });
-    else start();
+    const afterIntro = () => {
+      start();
+      mountSceneWhenIdle();
+    };
+    const afterLoad = () => {
+      waitingForLoad = false;
+      mountSceneWhenIdle();
+    };
+    const failsafe = introPlaying ? window.setTimeout(afterIntro, 6000) : 0;
+    if (introPlaying) {
+      window.addEventListener("ms-intro-done", afterIntro, { once: true });
+    } else {
+      start();
+      if (document.readyState === "complete") mountSceneWhenIdle();
+      else {
+        waitingForLoad = true;
+        window.addEventListener("load", afterLoad, { once: true });
+        // Zdarzenie load czeka też na obrazki niżej na stronie; kula nie może przez to znikać na kilka sekund.
+        capId = setTimeout(mountSceneWhenIdle, 1500);
+      }
+    }
 
     const wordEl = wordRef.current;
     const iconEl = iconRef.current;
@@ -99,8 +136,11 @@ export function Hero() {
     return () => {
       window.clearInterval(id);
       window.clearTimeout(failsafe);
-      window.removeEventListener("ms-intro-done", start);
-      window.cancelIdleCallback?.(idleId);
+      clearTimeout(fallbackId);
+      clearTimeout(capId);
+      window.removeEventListener("ms-intro-done", afterIntro);
+      if (waitingForLoad) window.removeEventListener("load", afterLoad);
+      if (idleId) window.cancelIdleCallback(idleId);
     };
   }, []);
 

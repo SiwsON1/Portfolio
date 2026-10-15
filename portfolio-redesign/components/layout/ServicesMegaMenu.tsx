@@ -42,6 +42,16 @@ const GROUPS: Group[] = [
         line: "Strona lub aplikacja od zera, na przykład Kantorymapa.",
       },
       {
+        slug: "naprawa-sklepu-woocommerce",
+        title: "Naprawa sklepu",
+        line: "Błędy kasy, statusów i wtyczek. Przyczyna z logów.",
+      },
+      {
+        slug: "audyt-sklepu-woocommerce",
+        title: "Audyt sklepu",
+        line: "Lista usterek z priorytetami, zanim coś zmienisz.",
+      },
+      {
         slug: "opieka-wordpress",
         title: "Opieka WordPress",
         line: "Aktualizacje, backupy, monitoring. Abonament bez umowy na rok.",
@@ -107,6 +117,11 @@ const GROUPS: Group[] = [
         slug: "google-merchant-center-woocommerce",
         title: "Merchant Center i feed",
         line: "Produkty w Zakupach Google bez odrzuceń.",
+      },
+      {
+        slug: "wdrozenie-consent-mode-v2",
+        title: "Consent Mode v2 i GA4",
+        line: "Tagi czekają na zgodę, zakupy liczą się raz.",
       },
       {
         slug: "migracja-sklepu-do-woocommerce",
@@ -177,8 +192,8 @@ export function ServicesMegaMenu({
         <div
           className={`relative bg-bg border-b border-line transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-4"
+              ? "visible opacity-100 translate-y-0 pointer-events-auto"
+              : "invisible opacity-0 -translate-y-4"
           }`}
         >
           {/* Spacer pod nav (taki sam height jak nav) */}

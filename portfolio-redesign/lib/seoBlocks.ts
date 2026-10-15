@@ -4277,4 +4277,446 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
       }
     ]
   },
+  "naprawa-sklepu-woocommerce": {
+    "heading": "Naprawa strony WordPress i błędów WooCommerce. Co warto wiedzieć przed zgłoszeniem?",
+    "intro": [
+      "W tym poradniku znajdziesz najczęstsze objawy awarii WordPress i WooCommerce, miejsca, w których szukam ich przyczyn, oraz wskazówki, jak przygotować zgłoszenie naprawy. Wyjaśniam też, dlaczego wyłączanie wtyczek na próbę może pogorszyć sytuację i jak sprawdzam, czy poprawka rzeczywiście rozwiązała problem.",
+      "Nie każda usterka wymaga przebudowy strony. Czasem wystarczy poprawienie jednego fragmentu kodu, ustawienia lub mechanizmu odpowiedzialnego za zamówienia. Ważne, żeby ustalić, co faktycznie zawodzi, zamiast usuwać widoczny objaw bez poznania jego przyczyny. Szczególnie w sklepie, który cały czas przyjmuje zamówienia."
+    ],
+    "sections": [
+      {
+        "id": "najczestsze-awarie-wordpress-i-woocommerce-gdzie-szukam-przy",
+        "heading": "Najczęstsze awarie WordPress i WooCommerce. Gdzie szukam przyczyny?",
+        "body": [
+          "Błąd widoczny na ekranie nie zawsze wskazuje element, który go wywołał. Jeśli klient nie może zapłacić, przyczyna może leżeć w bramce płatniczej, konflikcie wtyczek albo komunikacji z serwerem. Podobnie biały ekran WordPress nie musi oznaczać uszkodzenia całej strony.",
+          "Poniższa tabela pokazuje typowe kierunki diagnozy. Nie są to gotowe rozpoznania, ponieważ ten sam objaw może mieć kilka różnych przyczyn."
+        ],
+        "table": {
+          "caption": "Najczęstsze awarie WordPress i WooCommerce. Gdzie szukam przyczyny?",
+          "head": [
+            "Objaw",
+            "Najczęstsza możliwa przyczyna",
+            "Gdzie sprawdzam"
+          ],
+          "rows": [
+            [
+              "Biały ekran lub błąd krytyczny WordPress po aktualizacji",
+              "Niezgodność kodu wtyczki, motywu lub wersji PHP",
+              "Dziennik błędów PHP, czyli zapis problemów z kodem na serwerze"
+            ],
+            [
+              "Kasa WooCommerce nie przechodzi do końca",
+              "Błąd formularza, konflikt skryptów lub problem z przeliczaniem zamówienia",
+              "Zachowanie pól kasy, komunikaty błędów, dziennik serwera"
+            ],
+            [
+              "Płatność wraca z błędem",
+              "Problem komunikacji z operatorem płatności lub konfiguracją wtyczki",
+              "Komunikaty bramki płatniczej, dostępne dzienniki i status zamówienia"
+            ],
+            [
+              "Zamówienia same zmieniają status",
+              "Automatyczne reguły WooCommerce lub zewnętrzna integracja",
+              "Notatki zamówień i log dostępu, czyli historia żądań do serwera"
+            ],
+            [
+              "Maile do klientów nie dochodzą",
+              "Błąd wysyłki lub konfiguracji poczty",
+              "Dzienniki wysyłki, ustawienia poczty i przebieg zamówienia"
+            ],
+            [
+              "Stany magazynowe się rozjeżdżają",
+              "Synchronizacja magazynu lub nieprawidłowe aktualizowanie wariantów",
+              "Historia zmian, ustawienia integracji i zapisy synchronizacji"
+            ],
+            [
+              "Formularz nie wysyła wiadomości",
+              "Błąd walidacji, skryptu lub obsługi poczty",
+              "Działanie formularza, komunikaty i dziennik błędów"
+            ],
+            [
+              "Wersja mobilna się rozsypuje",
+              "Konflikt stylów lub skryptów po zmianie motywu czy wtyczki",
+              "Widok na telefonie, narzędzia przeglądarki i zmienione pliki"
+            ]
+          ]
+        },
+        "outro": [
+          "W sklepie Kosmoteka, sprzedającym teleskopy, większość kart produktów zaczęła zwracać błąd 500, czyli komunikat o błędzie serwera. Stało się to po zmianie we własnej wtyczce obsługującej zdjęcia. Przyczynę znalazłem w dzienniku błędów, a poprawkę wgrałem tego samego dnia.",
+          "Jeśli zgłaszasz podobną awarię, nie musisz sam ustalać, która wtyczka zawiodła. Wystarczy, że pokażesz mi objaw i opiszesz okoliczności jego wystąpienia."
+        ]
+      },
+      {
+        "id": "co-zrobic-zanim-zglosisz-awarie-strony-lub-sklepu",
+        "heading": "Co zrobić, zanim zgłosisz awarię strony lub sklepu?",
+        "body": [
+          "Gdy sklep przestaje działać, pierwszym odruchem bywa aktualizowanie wszystkiego, wyłączanie kolejnych wtyczek albo przywracanie przypadkowej kopii. Takie działania mogą utrudnić późniejszą diagnozę. Zmieniają stan strony, a czasem usuwają informacje potrzebne do odtworzenia problemu.",
+          "Jeśli nie masz pewności, co spowodowało awarię, nie wykonuj kolejnych aktualizacji i nie kasuj wtyczek na próbę. Nie usuwaj też problematycznych zamówień ani ich notatek. Przy błędach dotyczących płatności unikaj wielokrotnego ponawiania rzeczywistych transakcji wyłącznie w celu sprawdzenia, czy problem nadal występuje.",
+          "Przed wysłaniem zgłoszenia przygotuj:"
+        ],
+        "list": [
+          "**Moment wystąpienia błędu.** Zapisz, kiedy problem pojawił się pierwszy raz i czy występuje stale, czy tylko w określonych sytuacjach.",
+          "**Ostatnie zmiany.** Wspomnij o aktualizacji WordPress, zmianie motywu, instalacji wtyczki, ustawieniach płatności albo podłączeniu zewnętrznego systemu.",
+          "**Zrzut lub nagranie ekranu.** Pokaż komunikat błędu i czynności, które do niego prowadzą. Nagranie jest szczególnie pomocne przy formularzach.",
+          "**Numer przykładowego zamówienia.** Jeśli problem dotyczy statusów, płatności lub wysyłki, wskaż zamówienie, na którym można prześledzić usterkę.",
+          "**Informację o dostępach.** Sprawdź, czy masz dostęp do panelu WordPress i hostingu. Nie musisz przesyłać haseł w pierwszej wiadomości."
+        ],
+        "outro": [
+          "Nie musisz przygotowywać technicznego raportu. Opis „po zmianie dostawy strona przewija się na górę i nie mogę wpisać adresu” jest bardziej przydatny niż ogólne „WooCommerce nie działa”.",
+          "Na podstawie takiego zgłoszenia mogę rozpocząć rozpoznanie i ustalić, jakie dostępy będą potrzebne do naprawy."
+        ]
+      },
+      {
+        "id": "dlaczego-nie-wylaczam-wtyczek-po-kolei-w-dzialajacym-sklepie",
+        "heading": "Dlaczego nie wyłączam wtyczek po kolei w działającym sklepie?",
+        "body": [
+          "Wyłączanie wtyczek bywa przydatne podczas diagnozowania konfliktu, ale robienie tego na żywym sklepie bez przygotowania może zakłócić zakupy, płatności, dostawy albo synchronizację zamówień. Co więcej, problem nie zawsze wynika z konfliktu dwóch wtyczek.",
+          "Dobrym przykładem są anulowane zamówienia za pobraniem w LumiKids. Klientka otrzymywała wiadomość, że zamówienie zostało anulowane, mimo że sama tego nie robiła. W notatkach zamówienia widniała informacja „system”, która nie wskazywała rzeczywistego sprawcy.",
+          "Sprawdziłem log dostępu serwera, czyli chronologiczną historię żądań kierowanych do sklepu. Okazało się, że kilka minut po złożeniu zamówienia BaseLinker wysyłał przez API, czyli mechanizm komunikacji między systemami, zmianę statusu na „oczekujące na płatność”. Po 60 minutach WooCommerce traktował zamówienie jako nieopłacone i automatycznie je anulował.",
+          "Samo wyłączenie przypadkowej wtyczki nie wyjaśniłoby tego ciągu zdarzeń. Problem wynikał ze współdziałania dwóch systemów i ich reguł obsługi statusów.",
+          "Przygotowałem niewielką wtyczkę ochronną, która blokowała cofnięcie statusu zamówienia za pobraniem. Sprawdziłem rozwiązanie w sześciu scenariuszach i przekazałem też wskazówkę dotyczącą ustawień statusów w BaseLinkerze.",
+          "Dlatego przy naprawie zaczynam od kopii zapasowej i analizy zapisów błędów. W sklepie sprawdzam również historię zamówień, zamiast ograniczać diagnozę do tego, co widać na ekranie. Po tej realizacji przy każdej pracy w sklepie sprawdzam raport zamówień z ostatnich 30 dni.",
+          "Jeśli podejrzewasz konflikt wtyczek lub integracji, mogę zbadać przyczynę bez rozpoczynania od przypadkowego wyłączania funkcji potrzebnych klientom."
+        ]
+      },
+      {
+        "id": "kasa-woocommerce-nie-dziala-poprawnie-nawet-drobny-blad-moze",
+        "heading": "Kasa WooCommerce nie działa poprawnie? Nawet drobny błąd może przeszkadzać w zakupie",
+        "body": [
+          "Nie każda usterka kasy powoduje wyraźny komunikat błędu. Czasem klient może kontynuować zamówienie, ale formularz zachowuje się nieprzewidywalnie, wyświetla nieprawidłowe informacje albo nalicza inną opłatę, niż powinien.",
+          "W LumiKids otrzymałem nagranie pokazujące trzy problemy w procesie zakupowym. Każdy miał inną przyczynę i wymagał innej poprawki.",
+          "Pierwszy problem dotyczył pola adresu. Po naciśnięciu spacji otwierała się lista krajów, a strona przewijała się na górę. Przy każdym przeliczeniu kasy, na przykład po zmianie kodu pocztowego lub sposobu dostawy, formularz był ponownie rysowany. W efekcie kursor znikał z pola, w którym klient właśnie pisał.",
+          "Poprawiłem zachowanie formularza za pomocą skryptu, który zapamiętuje aktywne pole i pozycję kursora, a następnie przywraca je po przeliczeniu. Dzięki temu klient może kontynuować wpisywanie danych w odpowiednim miejscu.",
+          "Drugi problem pojawiał się po zakupie. Na stronie podziękowania wyświetlał się angielski tekst mimo polskiej wersji sklepu. Okazało się, że komunikat nie pochodził bezpośrednio z WooCommerce. Motyw sklepu nadpisywał polskie tłumaczenie, dlatego poprawka wymagała nadania odpowiedniemu tłumaczeniu wyższego pierwszeństwa.",
+          "Trzeci problem dotyczył opłaty za pobranie. Jej wysokość różniła się zależnie od wybranego kuriera, chociaż miała obowiązywać jedna ustalona dopłata. Poprawiłem sposób naliczania tak, aby dostawa z pobraniem miała stałą kwotę, a dodatkowa opłata była obliczana automatycznie.",
+          "Te trzy przykłady pokazują, dlaczego naprawa kasy WooCommerce wymaga sprawdzenia konkretnej sytuacji, a nie tylko informacji, że strona zamówienia się otwiera.",
+          "Jeśli klienci zgłaszają trudności z formularzem, płatnością lub dostawą, prześlij mi nagranie albo opis kroków prowadzących do błędu. Na tej podstawie mogę odtworzyć problem i przygotować poprawkę."
+        ]
+      },
+      {
+        "id": "jak-robie-poprawki-wordpress-zeby-aktualizacja-ich-nie-skaso",
+        "heading": "Jak robię poprawki WordPress, żeby aktualizacja ich nie skasowała?",
+        "body": [
+          "Bezpośrednie edytowanie plików głównego motywu może przynieść szybki efekt, ale kolejna aktualizacja potrafi zastąpić je nowymi wersjami. Wtedy wcześniej wprowadzona zmiana znika i trzeba wykonywać ją ponownie.",
+          "Dlatego przy drobnych modyfikacjach wyglądu stosuję motyw potomny. To osobny zestaw plików przechowujący własne zmiany, który pozwala aktualizować główny motyw bez automatycznego nadpisywania tych poprawek.",
+          "Gdy zmiana dotyczy działania WooCommerce, na przykład statusów zamówień, pól kasy czy określonej reguły, odpowiedniejsza może być mała wtyczka. Dzięki temu logika poprawki nie jest bezpośrednio związana z plikami motywu.",
+          "Takie rozdzielenie nie oznacza, że przyszłe aktualizacje nigdy niczego nie zepsują. Zmiany w samym WordPress, WooCommerce lub innych wtyczkach mogą wymagać ponownego sprawdzenia zgodności. Chodzi o to, żeby nie tracić własnych modyfikacji tylko dlatego, że został zaktualizowany motyw.",
+          "Naprawa istniejącej funkcji to jednak coś innego niż budowa rozbudowanego rozwiązania od początku. Jeśli potrzebujesz nowego mechanizmu obsługi sklepu, zobacz usługę [wtyczki WordPress na zamówienie](/uslugi/tworzenie-wtyczek-wordpress).",
+          "W ramach jednorazowego zlecenia mogę poprawić konkretny element istniejącej strony i umieścić zmianę w miejscu, które ułatwi jej późniejsze utrzymanie."
+        ]
+      },
+      {
+        "id": "jak-sprawdzam-naprawe-i-kiedy-wystarczy-jednorazowe-zlecenie",
+        "heading": "Jak sprawdzam naprawę i kiedy wystarczy jednorazowe zlecenie?",
+        "body": [
+          "Samo zniknięcie komunikatu błędu nie oznacza jeszcze, że problem został rozwiązany. Jeśli wcześniej zamówienia anulowały się automatycznie, trzeba sprawdzić ich statusy. Jeśli kasa gubiła kursor, należy odtworzyć sytuację, w której formularz ponownie przelicza dane.",
+          "Dlatego po wprowadzeniu poprawki testuję funkcję, której dotyczyło zgłoszenie. Przy problemach z zakupami może to być zamówienie testowe. Przy błędzie formularza sprawdzam wysłanie wiadomości, a przy zmianie wyglądu weryfikuję poprawiony element na odpowiednich ekranach.",
+          "Zanim rozpocznę naprawę, wykonuję kopię plików i bazy danych. Jeśli to możliwe, przygotowuję i sprawdzam zmianę na wersji testowej, żeby ograniczyć ingerencję w działającą stronę.",
+          "Po zakończeniu przekazuję krótki opis obejmujący:"
+        ],
+        "list": [
+          "przyczynę problemu, którą udało się ustalić;",
+          "wprowadzone zmiany;",
+          "sposób sprawdzenia naprawionej funkcji;",
+          "informację, gdzie znajduje się kopia zapasowa."
+        ],
+        "outro": [
+          "Jednorazowa naprawa wystarczy, gdy masz konkretny błąd albo zamkniętą listę poprawek i nie potrzebujesz regularnego zarządzania stroną. Możesz wrócić do mnie przy kolejnym zgłoszeniu, ale nie musisz od razu zamawiać abonamentu.",
+          "Stała opieka ma sens w innej sytuacji: gdy chcesz regularnie aktualizować stronę, wykonywać kopie i zajmować się jej bieżącym utrzymaniem. Podobnie osobnym zadaniem jest optymalizacja wolno działającego serwisu. Jeśli głównym problemem są długie czasy ładowania, odpowiednią usługą będzie [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress).",
+          "Jeżeli Twoja strona lub sklep ma konkretną usterkę, opisz objaw, moment jego wystąpienia i ostatnie zmiany. Odpowiem z pierwszą oceną w ciągu 24 godzin roboczych, a po rozpoznaniu ustalimy zakres i termin naprawy."
+        ]
+      }
+    ]
+  },
+  "audyt-sklepu-woocommerce": {
+    "heading": "Audyt techniczny sklepu WooCommerce i strony WordPress: co sprawdzić?",
+    "intro": [
+      "W tym poradniku pokazuję, co sprawdzam podczas audytu technicznego sklepu WooCommerce, jakie usterki można znaleźć i jak ocenić, które wymagają pilnej naprawy. Wyjaśniam również, dlaczego poprawnie wyglądający sklep może mieć problemy z zamówieniami, synchronizacją magazynu, bezpieczeństwem lub pomiarem sprzedaży.",
+      "Nie każdy problem widać w panelu WordPressa. Czasem produkty wyświetlają się prawidłowo, płatności działają, a mimo to zewnętrzny program nadpisuje stany magazynowe albo niepotrzebnie obciąża serwer. Dlatego audyt sklepu internetowego traktuję jako sprawdzenie całego procesu sprzedaży i jego zaplecza technicznego, a nie tylko test szybkości czy przegląd zainstalowanych wtyczek."
+    ],
+    "sections": [
+      {
+        "id": "co-sprawdzam-podczas-audytu-sklepu-woocommerce",
+        "heading": "Co sprawdzam podczas audytu sklepu WooCommerce?",
+        "body": [
+          "Zakres audytu dopasowuję do sposobu działania sklepu. Inne elementy są najważniejsze w prostym sklepie z kilkoma metodami dostawy, a inne w sprzedaży prowadzonej równocześnie przez WooCommerce, Allegro i BaseLinkera.",
+          "Poniższa tabela pokazuje obszary, które mogę objąć kontrolą, oraz przykłady usterek, których szukam."
+        ],
+        "table": {
+          "caption": "Co sprawdzam podczas audytu sklepu WooCommerce?",
+          "head": [
+            "Obszar",
+            "Co sprawdzam",
+            "Przykład problemu, który znajduję"
+          ],
+          "rows": [
+            [
+              "Dostępy i bezpieczeństwo",
+              "Konta, role użytkowników, klucze dostępu do integracji i zbędne wtyczki",
+              "Nieużywany klucz, który nadal pozwala zmieniać dane sklepu"
+            ],
+            [
+              "Aktualizacje i PHP",
+              "Wersje WordPressa, WooCommerce, wtyczek i PHP, czyli oprogramowania uruchamiającego sklep na serwerze",
+              "Nieaktualne rozszerzenie lub niezgodność wersji"
+            ],
+            [
+              "Kopie zapasowe",
+              "Sposób wykonywania kopii plików i bazy danych",
+              "Kopia trzymana tylko na tym samym serwerze albo niepotrzebnie rozdmuchany eksport bazy"
+            ],
+            [
+              "Logi błędów",
+              "Dzienniki serwera pokazujące awarie i żądania kierowane do sklepu",
+              "Powtarzające się błędy niewidoczne w panelu"
+            ],
+            [
+              "Kasa i płatności",
+              "Koszyk, formularz zamówienia, dostawy, płatności i działanie na telefonie",
+              "Formularz utrudniający klientowi wpisanie adresu"
+            ],
+            [
+              "Maile do klientów",
+              "Wysyłkę wiadomości o zamówieniach i zmianach ich statusów",
+              "Brak potwierdzenia zakupu"
+            ],
+            [
+              "Integracje i magazyn",
+              "Połączenia z BaseLinkerem, Allegro, hurtowniami i magazynem",
+              "Synchronizacja przywracająca sprzedane produkty na stan"
+            ],
+            [
+              "Statusy zamówień",
+              "Zmiany statusów i działanie automatycznych procesów",
+              "Zamówienie zmienia status bez działania sprzedawcy"
+            ],
+            [
+              "Szybkość",
+              "Wyniki Lighthouse, czyli narzędzia mierzącego wydajność, oraz zachowanie strony na telefonie",
+              "Wolne ładowanie kasy lub przeciążenie serwera"
+            ],
+            [
+              "SEO techniczne",
+              "Indeksowanie, przekierowania i dane strukturalne opisujące produkty wyszukiwarce",
+              "Ważna strona wyłączona z indeksowania"
+            ],
+            [
+              "Śledzenie i zgody",
+              "GA4, czyli narzędzie Google do analizy ruchu, pixel reklamowy i działanie zgód na cookies",
+              "Zdarzenia zakupowe zliczane nieprawidłowo"
+            ],
+            [
+              "Dostępność",
+              "Korzystanie z formularzy, przycisków i treści przez osoby z różnymi potrzebami",
+              "Pole formularza bez czytelnej etykiety"
+            ]
+          ]
+        },
+        "outro": [
+          "Nie zakładam, że w każdym sklepie znajdę problemy we wszystkich obszarach. W audycie ważne jest również potwierdzenie, że konkretna funkcja działa prawidłowo.",
+          "Po takim przeglądzie otrzymujesz informacje odnoszące się do Twojej konfiguracji, zamiast uniwersalnej listy zaleceń, która pasowałaby do dowolnej strony."
+        ]
+      },
+      {
+        "id": "kiedy-audyt-sklepu-internetowego-ma-najwiekszy-sens",
+        "heading": "Kiedy audyt sklepu internetowego ma największy sens?",
+        "body": [
+          "Nie trzeba czekać na całkowitą awarię sklepu. Audyt jest szczególnie przydatny wtedy, gdy planujesz zmianę albo zauważasz objawy, których nie potrafisz powiązać z konkretną przyczyną.",
+          "Najczęstsze sytuacje, w których przeprowadzam taką kontrolę, to:"
+        ],
+        "list": [
+          "**Przejęcie sklepu po innym wykonawcy.** Chcesz wiedzieć, jakie konta, wtyczki, integracje i niestandardowe rozwiązania pozostały w serwisie oraz czy wymagają uporządkowania.",
+          "**Przygotowanie kampanii reklamowej.** Zanim skierujesz dodatkowy ruch do sklepu, sprawdź kasę, płatności, szybkość i poprawność pomiaru zakupów.",
+          "**Migracja lub przebudowa.** Przegląd sklepu przed migracją pomaga rozpoznać istniejące błędy, zależności między systemami i elementy wymagające uwzględnienia podczas przenoszenia.",
+          "**Spadek zamówień bez jasnej przyczyny.** Sprawdzam techniczne przeszkody w zakupach i poprawność śledzenia, choć sam audyt nie rozstrzyga wszystkich przyczyn zmian sprzedaży.",
+          "**Seria trudnych do wyjaśnienia błędów.** Jeśli zamówienia zmieniają status, magazyn pokazuje niewłaściwe ilości albo strona okresowo przestaje działać, potrzebna jest analiza powtarzających się zdarzeń."
+        ],
+        "outro": [
+          "Audyt strony WordPress ma sens także przed rozbudową serwisu firmowego. Pozwala sprawdzić zabezpieczenia, konfigurację i stan techniczny, zanim pojawią się kolejne funkcje.",
+          "Jeśli opiszesz mi obecną sytuację, pomogę ustalić, które obszary powinny znaleźć się w zakresie zlecenia."
+        ]
+      },
+      {
+        "id": "dlaczego-panel-wordpressa-nie-pokazuje-wszystkich-usterek",
+        "heading": "Dlaczego panel WordPressa nie pokazuje wszystkich usterek?",
+        "body": [
+          "W panelu WooCommerce możesz zobaczyć zamówienia, produkty i historię zmian statusów. Nie zawsze dowiesz się jednak, jaki zewnętrzny program wywołał konkretną operację albo dlaczego sklep co pewien czas przestaje odpowiadać.",
+          "Dobrym przykładem jest przegląd sklepu LumiKids. Zewnętrzny program synchronizujący magazyn co godzinę nadpisywał stany wariantów produktów. W rezultacie sprzedana sztuka mogła ponownie pojawić się jako dostępna. Powstawało ryzyko sprzedaży ostatniej sztuki dwa razy.",
+          "Analiza dziennika dostępu do serwera pokazała drugi problem związany z tą samą synchronizacją. Generowała ona około 81% wszystkich żądań kierowanych do serwera. W tych samych sekundach klienci otrzymywali błąd 503, czyli informację, że przeciążony serwer nie może obsłużyć żądania. Problem dotyczył również strony głównej.",
+          "Znalazłem też inne zadanie, które co pięć minut pytało sklep o zamówienia i za każdym razem otrzymywało odmowę. Samo żądanie nie zawierało nazwy programu, dlatego nie można było jednoznacznie wskazać jego źródła.",
+          "Takie przypadki pokazują, dlaczego analizuję nie tylko wygląd sklepu, ale również ruch programów i dzienniki błędów. Pozwalają one zestawić konkretne zdarzenia z momentami przeciążenia lub nieprawidłowego działania.",
+          "W ramach audytu wskazuję te zależności i opisuję możliwe działania naprawcze, bez samodzielnego zmieniania działającej integracji."
+        ]
+      },
+      {
+        "id": "jak-stare-wtyczki-i-niepotrzebne-dostepy-wplywaja-na-bezpiec",
+        "heading": "Jak stare wtyczki i niepotrzebne dostępy wpływają na bezpieczeństwo?",
+        "body": [
+          "Po kilku latach rozwijania sklepu łatwo stracić orientację, kto ma dostęp do panelu, jakie programy mogą modyfikować zamówienia i które wtyczki są nadal potrzebne. Dlatego podczas audytu bezpieczeństwa WordPress sprawdzam także elementy, których właściciel zwykle nie widzi podczas codziennej obsługi.",
+          "W LumiKids znalazłem stary, nieużywany klucz API, czyli dane pozwalające zewnętrznemu programowi komunikować się ze sklepem. Klucz miał pełne uprawnienia, mimo że nie był już potrzebny. Każdy program, który go znał, mógł więc nadal odczytywać i zmieniać dane sklepu.",
+          "Na serwerze znajdowały się również nieaktywne wtyczki, w tym menedżer plików, oraz zaległe aktualizacje. Sama obecność nieaktywnej wtyczki nie oznacza włamania, ale trzeba sprawdzić, czy powinna nadal pozostawać na dysku.",
+          "W innym, przejętym po poprzednim wykonawcy serwisie firmowym znalazłem otwartą rejestrację użytkowników, trzy konta utworzone przez automatyczne skanery, publicznie widoczny login administratora oraz niezabezpieczony punkt zdalnego dostępu. Nie doszło tam do włamania, ale konfiguracja wymagała uwagi.",
+          "Sprawdzam także pozostałości po starych rozszerzeniach. W jednym ze sklepów w bazie danych pozostało ponad 300 tysięcy wpisów po niepołączonej wtyczce, zajmujących około 107 MB. Nie spowalniały każdej podstrony, lecz niepotrzebnie powiększały kopie zapasowe i eksport bazy.",
+          "W wynikach audytu oddzielam rzeczywiste zagrożenia od elementów wymagających jedynie uporządkowania, żebyś wiedział, co zlecić do usunięcia."
+        ]
+      },
+      {
+        "id": "czy-ga4-i-pixel-prawidlowo-mierza-zakupy-oraz-respektuja-zgo",
+        "heading": "Czy GA4 i pixel prawidłowo mierzą zakupy oraz respektują zgody?",
+        "body": [
+          "Działający sklep nie oznacza automatycznie poprawnych danych o sprzedaży. Możesz widzieć zamówienia w WooCommerce, a jednocześnie mieć niepełny pomiar zdarzeń reklamowych, nieprawidłowo skonfigurowane narzędzia analityczne albo kilka rozszerzeń wykonujących podobne zadania.",
+          "W LumiKids podczas przeglądu śledzenia znalazłem dwie wtyczki do Facebooka działające jednocześnie: oficjalną wtyczkę Meta i Pixel Manager. Pixel, czyli kod mierzący działania użytkowników na potrzeby reklam Meta, działał w przeglądarce. Zdarzenia z serwera przez Conversions API, czyli dodatkowy sposób przekazywania informacji o zakupach do Meta, nie były jednak wysyłane wcale.",
+          "Przyczyna okazała się prosta, choć niewidoczna w panelu: Pixel Manager z wpisanym własnym pixelem po cichu wyłączał całą oficjalną wtyczkę Meta, razem z wysyłką zdarzeń z serwera. Wystarczyło wyczyścić jedno pole. Płatna wersja wtyczki okazała się niepotrzebna, a zdarzenia z obu źródeł nie liczą się podwójnie, bo mają wspólny identyfikator.",
+          "Sprawdzam również GA4, czyli Google Analytics 4, które służy do analizowania ruchu i zachowań klientów. Ważne jest nie tylko to, czy kod został dodany do strony, ale także czy pomiar uruchamia się po wyrażeniu odpowiedniej zgody na cookies.",
+          "Weryfikuję techniczne działanie mechanizmów śledzenia i zgód, ale nie wykonuję oceny prawnej zgodności sklepu z RODO.",
+          "Jeśli zlecisz mi audyt, sprawdzę konfigurację pomiaru i wskażę problemy, które mogą utrudniać interpretowanie danych o zakupach."
+        ]
+      },
+      {
+        "id": "co-otrzymujesz-po-audycie-i-jak-ustalam-priorytety-napraw",
+        "heading": "Co otrzymujesz po audycie i jak ustalam priorytety napraw?",
+        "body": [
+          "Efektem audytu jest lista konkretnych znalezisk. Nie przekazuję wyłącznie wyniku automatycznego skanera ani zestawienia ostrzeżeń bez wyjaśnienia ich znaczenia.",
+          "Każde znalezisko opisuję pod kątem tego, co wykryłem, czym może grozić, jak można rozwiązać problem i ile mniej więcej pracy wymaga naprawa.",
+          "Stosuję trzy poziomy priorytetów. Pilne oznacza problem, którym trzeba zająć się w pierwszej kolejności, na przykład błędną synchronizację stanów lub zbędny dostęp z pełnymi uprawnieniami. Do zaplanowania trafiają sprawy wymagające poprawy, ale niekoniecznie natychmiastowej interwencji. Kosmetyka obejmuje drobniejsze nieprawidłowości, które mają mniejsze znaczenie dla działania sklepu.",
+          "Zaznaczam także obszary, które sprawdziłem i w których nie wykryłem problemów. Jeżeli jakiejś funkcji nie mogłem zweryfikować z powodu braku dostępu, opisuję to ograniczenie.",
+          "Do rozpoczęcia rozmowy wystarczy opis sklepu i zauważonych objawów. Podczas ustalania zakresu wskażę, jakie dostępy będą potrzebne. Zwykle przydają się panel WordPress, hosting, BaseLinker, jeśli go używasz, oraz Google Search Console, które pokazuje informacje o obecności strony w wyszukiwarce.",
+          "Po otrzymaniu wyników sam decydujesz, co dalej. Możesz przekazać zalecenia dotychczasowemu wykonawcy, wdrożyć część zmian samodzielnie albo zlecić mi osobne naprawy. Jeśli problem dotyczy przede wszystkim wydajności, osobnym zleceniem może być [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress). Podstawowe problemy z dostępnością możesz też wstępnie sprawdzić przez mój [bezpłatny skaner dostępności](/sprawdz-dostepnosc).",
+          "Jeżeli chcesz zlecić audyt, napisz mi, co Cię niepokoi i jakie systemy są połączone ze sklepem. Na tej podstawie ustalę zakres przeglądu, potrzebne dostępy i termin wykonania."
+        ]
+      }
+    ]
+  },
+  "wdrozenie-consent-mode-v2": {
+    "heading": "Jak wdrożyć Consent Mode v2 w WordPress i WooCommerce i poprawnie mierzyć konwersje?",
+    "intro": [
+      "W tym poradniku wyjaśniam, jak działa Consent Mode v2, czym różnią się jego tryby, jak połączyć go z GA4 i na co zwrócić uwagę przy pomiarze zakupów w WooCommerce. Pokazuję też, dlaczego sam baner cookies nie wystarczy i jak sprawdzić, czy wybór użytkownika rzeczywiście wpływa na działanie narzędzi Google oraz Meta.",
+      "Jeśli prowadzisz sklep internetowy lub stronę firmową, prawdopodobnie interesuje Cię przede wszystkim to, czy reklamy przynoszą zamówienia i zapytania. Do tego potrzebujesz danych, ale również prawidłowej obsługi zgód. Nawet jeśli masz już GA4 i baner cookies, nie oznacza to automatycznie, że wszystko jest poprawnie połączone. Właśnie takie zależności sprawdzam podczas technicznego wdrożenia."
+    ],
+    "sections": [
+      {
+        "id": "jakie-cztery-zgody-obsluguje-consent-mode-v2",
+        "heading": "Jakie cztery zgody obsługuje Consent Mode v2?",
+        "body": [
+          "Consent Mode v2 to mechanizm Google, który pozwala narzędziom analitycznym i reklamowym uwzględniać wybory użytkownika dotyczące przetwarzania danych. Każda zgoda może mieć stan granted, czyli udzielona, albo denied, czyli odmowa. Dzięki temu narzędzia Google otrzymują informację, czy mogą korzystać z określonych rodzajów danych.",
+          "W wersji v2 do wcześniejszych zgód ad_storage i analytics_storage dodano ad_user_data oraz ad_personalization. Te dwa dodatkowe sygnały są szczególnie istotne, jeśli wykorzystujesz Google Ads do pomiaru konwersji, personalizacji reklam lub remarketingu, czyli ponownego kierowania reklam do osób, które wcześniej odwiedziły Twoją stronę."
+        ],
+        "table": {
+          "caption": "Jakie cztery zgody obsługuje Consent Mode v2?",
+          "head": [
+            "Zgoda",
+            "Co obejmuje",
+            "Co się dzieje przy odmowie"
+          ],
+          "rows": [
+            [
+              "ad_storage",
+              "Zapisywanie i odczytywanie reklamowych plików cookie",
+              "Google nie zapisuje nowych reklamowych plików cookie ani nie odczytuje istniejących."
+            ],
+            [
+              "analytics_storage",
+              "Pliki cookie wykorzystywane w analityce, między innymi do mierzenia aktywności podczas wizyty",
+              "Analityczne pliki cookie nie są zapisywane ani odczytywane."
+            ],
+            [
+              "ad_user_data",
+              "Przesyłanie danych użytkownika do Google w celach reklamowych",
+              "Google nie otrzymuje zgody na wykorzystanie tych danych. Wyłączane są między innymi konwersje rozszerzone korzystające z odpowiednio przekształconych danych użytkownika."
+            ],
+            [
+              "ad_personalization",
+              "Wykorzystywanie danych do personalizacji reklam",
+              "Dane użytkownika nie mogą zasilać remarketingu i personalizacji reklam."
+            ]
+          ]
+        },
+        "outro": [
+          "Szczególnie ważne jest rozróżnienie zgody na analitykę od zgody na reklamy. Użytkownik może zaakceptować pomiar statystyczny, ale nie zgodzić się na wykorzystywanie danych do personalizacji reklam. Techniczna konfiguracja powinna przekazywać te wybory we właściwy sposób.",
+          "Podczas wdrożenia sprawdzam więc nie tylko wygląd banera, ale przede wszystkim to, czy wszystkie cztery sygnały są poprawnie ustawiane i docierają do Google."
+        ]
+      },
+      {
+        "id": "tryb-podstawowy-czy-zaawansowany-consent-mode-v2",
+        "heading": "Tryb podstawowy czy zaawansowany Consent Mode v2?",
+        "body": [
+          "Google opisuje dwa sposoby wdrożenia Consent Mode v2: podstawowy i zaawansowany. Różnią się tym, co dzieje się przed decyzją użytkownika w banerze cookies. Ma to znaczenie zarówno dla przepływu danych, jak i sposobu modelowania konwersji.",
+          "W trybie podstawowym tagi Google, czyli fragmenty kodu odpowiedzialne za pomiar, pozostają zablokowane do momentu wyboru użytkownika. Przed decyzją nie są wysyłane żadne dane, nawet informacja o stanie zgody. Dopiero po udzieleniu odpowiedniej zgody uruchamiany jest właściwy pomiar.",
+          "W trybie zaawansowanym tagi Google ładują się od początku, ale domyślne stany zgód są ustawione na denied. Przed zgodą mogą wysyłać tak zwane pingi bez cookies, czyli ograniczone sygnały pozwalające Google modelować wyniki bez korzystania z reklamowych i analitycznych plików cookie. Po udzieleniu zgody pomiar może działać w pełniejszym zakresie.",
+          "Różnica dotyczy również modelowania konwersji:"
+        ],
+        "list": [
+          "**Tryb podstawowy** korzysta z ogólnego modelowania, które jest mniej dokładne.",
+          "**Tryb zaawansowany** pozwala na modelowanie dopasowane do konkretnego reklamodawcy dzięki dodatkowym sygnałom."
+        ],
+        "outro": [
+          "Nie oznacza to, że tryb zaawansowany jest automatycznie właściwym wyborem dla każdej firmy. Decyzja o dopuszczalnym przetwarzaniu danych należy do właściciela witryny i powinna uwzględniać konsultację z prawnikiem lub osobą odpowiedzialną za ochronę danych.",
+          "Przy nowych wdrożeniach domyślnie proponuję ostrożniejszy tryb podstawowy. Jeśli wybierzesz inne rozwiązanie po analizie prawnej, mogę wdrożyć je technicznie i sprawdzić jego rzeczywiste działanie."
+        ]
+      },
+      {
+        "id": "jakie-bledy-najczesciej-psuja-pomiar-w-wordpress-i-woocommer",
+        "heading": "Jakie błędy najczęściej psują pomiar w WordPress i WooCommerce?",
+        "body": [
+          "WordPress pozwala dodawać narzędzia analityczne przez wtyczki, ustawienia motywu lub bezpośrednio przez kod. To wygodne, ale powoduje też sytuacje, w których kilka niezależnych elementów próbuje obsługiwać ten sam pomiar.",
+          "Podczas sprawdzania konfiguracji zwracam uwagę na następujące problemy:"
+        ],
+        "list": [
+          "**Tag GA4 dodany dwa razy.** Kod analityczny znajduje się jednocześnie we wtyczce i motywie strony. Może to prowadzić do powielania zdarzeń.",
+          "**Tagi uruchamiane przed zgodą.** Baner cookies jest widoczny, ale narzędzia wysyłają dane jeszcze przed wyborem użytkownika.",
+          "**Zgoda nie dociera do Google.** Baner zapisuje decyzję, lecz odpowiednie sygnały Consent Mode v2 nie są przekazywane do tagów.",
+          "**Zdublowane zakupy.** Jedna transakcja w WooCommerce trafia do narzędzia analitycznego lub reklamowego jako kilka zdarzeń zakupowych.",
+          "**Zakup bez wartości.** GA4 albo Meta rejestruje zdarzenie zakupu, ale nie otrzymuje kwoty transakcji potrzebnej do oceny wyników reklam.",
+          "**Ciężka wtyczka cookies.** Rozbudowane rozwiązanie dodaje niepotrzebne obciążenie do strony, mimo że jej potrzeby związane z obsługą zgód są prostsze."
+        ],
+        "outro": [
+          "Nie każdy z tych problemów jest widoczny w panelu administracyjnym. Przykładowo GA4 może pokazywać aktywnych użytkowników, chociaż ten sam kod został dodany dwukrotnie. Baner może też poprawnie zapamiętywać kliknięcie, ale nie sterować wszystkimi narzędziami pomiarowymi.",
+          "Dlatego przy zleceniu dotyczącym Consent Mode i GA4 zaczynam od sprawdzenia faktycznie wysyłanych zdarzeń oraz konfiguracji kodu, a nie od instalowania kolejnej wtyczki."
+        ]
+      },
+      {
+        "id": "dlaczego-pixel-meta-i-conversions-api-moga-przestac-wspolpra",
+        "heading": "Dlaczego pixel Meta i Conversions API mogą przestać współpracować?",
+        "body": [
+          "W WooCommerce można mierzyć zdarzenia reklamowe Meta na dwa sposoby. Pixel Meta to kod działający w przeglądarce użytkownika, który przekazuje informacje o zdarzeniach, takich jak wyświetlenie produktu czy zakup. Conversions API to rozwiązanie pozwalające przesyłać zdarzenia z serwera sklepu do Meta.",
+          "Oba sposoby mogą działać razem, ale wymagają poprawnej konfiguracji. Jeśli to samo zdarzenie jest przesyłane z przeglądarki i serwera, powinno mieć wspólny identyfikator. Dzięki temu Meta może rozpoznać, że chodzi o jeden zakup, a nie dwie różne transakcje.",
+          "Z takim problemem pracowałem przy sklepie [LumiKids](/projekty/lumikids). Działały tam jednocześnie oficjalna wtyczka Meta i Pixel Manager. Pixel przeglądarkowy wysyłał zdarzenia, jednak zdarzenia serwerowe przez Conversions API nie docierały do Meta.",
+          "Przyczyną nie był brak płatnej wersji narzędzia. W jednym z pól Pixel Managera wpisany był własny pixel, co powodowało wyłączenie oficjalnej wtyczki Meta. Usunięcie wpisu z tego pola przywróciło działanie integracji bez dodatkowego zakupu. Zdarzenia z przeglądarki i serwera mają wspólny identyfikator, dzięki czemu Meta rozpoznaje je jako jedno zdarzenie.",
+          "Ten przykład pokazuje, dlaczego przy problemach z pomiarem Meta sprawdzam współpracę istniejących wtyczek i ich ustawienia, zanim zaproponuję wymianę narzędzia lub dodatkową integrację."
+        ]
+      },
+      {
+        "id": "czy-lekki-baner-cookies-moze-zastapic-rozbudowana-wtyczke",
+        "heading": "Czy lekki baner cookies może zastąpić rozbudowaną wtyczkę?",
+        "body": [
+          "Baner cookies musi przede wszystkim umożliwiać użytkownikowi dokonanie wyboru i prawidłowo współpracować z mechanizmem obsługi zgód. Sama liczba funkcji wtyczki nie przesądza o tym, czy rozwiązanie odpowiada potrzebom konkretnego sklepu.",
+          "W projekcie Kosmoteka przygotowałem własną wtyczkę łączącą GA4 z trybem zgody Consent Mode v2 i banerem cookies. Analityka uruchamia się dopiero po zgodzie użytkownika. Dodałem również pomijanie zalogowanych administratorów, dzięki czemu wejścia właściciela sklepu nie są doliczane do danych o odwiedzających.",
+          "Lekki baner zastąpił tam ciężką wtyczkę cookies. Nie trzeba było utrzymywać rozbudowanego rozwiązania tylko po to, aby obsługiwać potrzebne funkcje.",
+          "Podobną zasadę zastosowałem na marcinsiwonia.pl. Kod GA4 ładuje się dopiero po zgodzie, natomiast sam baner znajduje się w kodzie strony od początku. Dzięki temu nie musi pojawiać się z opóźnieniem i przesuwać widocznej treści.",
+          "Nie oznacza to, że każda gotowa wtyczka cookies jest niewłaściwa. Jeśli obecne rozwiązanie prawidłowo obsługuje zgody i nie powoduje problemów, jego wymiana może być niepotrzebna.",
+          "Kiedy zlecasz mi wdrożenie Consent Mode v2 w WordPressie, oceniam więc również istniejący baner. Jeśli jego rozbudowanie nie jest uzasadnione potrzebami strony, mogę zaproponować lżejszą implementację. Gdy problem dotyczy wydajności całej witryny, a nie tylko obsługi cookies, odpowiednim zakresem prac jest [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress)."
+        ]
+      },
+      {
+        "id": "jak-sprawdzam-poprawnosc-wdrozenia-i-czego-potrzebuje-od-cie",
+        "heading": "Jak sprawdzam poprawność wdrożenia i czego potrzebuję od Ciebie?",
+        "body": [
+          "Po zapisaniu ustawień nie zakładam, że pomiar działa poprawnie tylko dlatego, że GA4 lub Meta pokazuje jakieś zdarzenia. Testuję zachowanie strony przy różnych wyborach użytkownika i sprawdzam, co rzeczywiście trafia do narzędzi analitycznych.",
+          "Korzystam przy tym z kilku sposobów weryfikacji:"
+        ],
+        "list": [
+          "**Tag Assistant:** podglądam działanie tagów Google, czyli kodów odpowiedzialnych za analitykę i pomiar reklam, oraz przekazywane stany zgód.",
+          "**Zakładka sieci w przeglądarce:** sprawdzam żądania wysyłane do Google, w tym parametry gcs i gcd, które pomagają zweryfikować informacje o zgodzie.",
+          "**Raport czasu rzeczywistego GA4:** kontroluję, czy zdarzenia docierają do analityki po wykonaniu odpowiednich działań.",
+          "**Menedżer zdarzeń Meta:** weryfikuję zdarzenia otrzymywane z przeglądarki i serwera, jeśli integracja Meta wchodzi w zakres zlecenia."
+        ],
+        "outro": [
+          "Przy WooCommerce sprawdzam również zdarzenie zakupu, przekazywaną wartość transakcji i możliwe duplikaty. Szczególnie ważne jest ustalenie, czy różne wtyczki nie wysyłają tego samego zakupu niezależnie od siebie.",
+          "Do rozpoczęcia rozmowy potrzebuję adresu strony i informacji, z których narzędzi korzystasz. Podczas realizacji mogą być potrzebne dostępy do panelu WordPress, GA4, Google Ads i Meta, zależnie od uzgodnionego zakresu. Jeśli masz już konfigurację w Google Tag Managerze, czyli systemie zarządzania kodami pomiarowymi, również ją sprawdzę.",
+          "Treści banera cookies, politykę prywatności i decyzje dotyczące rodzaju zgód dostarczasz na podstawie obecnej dokumentacji lub ustaleń z prawnikiem. Nie opracowuję dokumentów prawnych ani nie potwierdzam zgodności witryny z RODO.",
+          "Na podstawie tych informacji ustalam zakres technicznego wdrożenia, wprowadzam zmiany i pokazuję Ci wyniki testów. Dzięki temu możesz przekazać agencji reklamowej poprawnie skonfigurowany pomiar, zamiast polegać wyłącznie na tym, że baner cookies wyświetla się na stronie."
+        ]
+      }
+    ]
+  },
 };

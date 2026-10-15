@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ServicesIndexList } from "@/components/service/ServicesIndexList";
-import { services } from "@/lib/services";
+import { services, servicesIndex } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd } from "@/lib/schema";
 
@@ -51,7 +51,7 @@ export default function UslugiPage() {
         </div>
       </header>
 
-      <ServicesIndexList />
+      <ServicesIndexList services={servicesIndex} />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(itemListSchema) }} />

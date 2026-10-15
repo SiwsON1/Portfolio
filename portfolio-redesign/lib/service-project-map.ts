@@ -122,4 +122,22 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
       "Na cojestpolskie.pl model AI robi pierwszy research właściciela marki, ale nic nie trafia na stronę bez kontroli: skrypty porównują wynik z odpisem KRS i Centralnym Rejestrem Beneficjentów Rzeczywistych, a wpis bez potwierdzenia w rejestrze zostaje w szkicach. Model przyspiesza pracę, rejestry ją sprawdzają.",
     highlight: "Research AI z kontrolą w KRS i CRBR",
   },
+  "naprawa-sklepu-woocommerce": {
+    projectSlug: "lumikids",
+    context:
+      "W LumiKids naprawiałem błędy, które kosztowały zamówienia: pobrania anulowane przez cofnięty status z BaseLinkera (przyczyna znaleziona w logu serwera, blokada małą wtyczką), spację otwierającą listę krajów w polu adresu, angielskie podziękowanie po zakupie nadpisywane przez motyw i źle liczoną opłatę za pobranie.",
+    highlight: "Pobrania, kasa i tłumaczenia naprawione u źródła",
+  },
+  "audyt-sklepu-woocommerce": {
+    projectSlug: "lumikids",
+    context:
+      "Przegląd ukrytych usterek w LumiKids, tylko odczyt: zewnętrzna synchronizacja magazynu cofała sprzedane sztuki na stan i robiła około 81% ruchu serwera, w tych samych sekundach klienci dostawali błąd 503. Do tego stary klucz API z pełnym dostępem i nieaktywny menedżer plików na serwerze.",
+    highlight: "Cofane stany i przeciążenie serwera znalezione w logach",
+  },
+  "wdrozenie-consent-mode-v2": {
+    projectSlug: "kosmoteka",
+    context:
+      "W Kosmotece napisałem własną wtyczkę GA4 z trybem zgody: analityka startuje dopiero po zgodzie w banerze (Consent Mode v2), wejścia zalogowanych administratorów się nie liczą, a lekki baner zastąpił ciężką wtyczkę cookies.",
+    highlight: "GA4 po zgodzie i lekki baner zamiast ciężkiej wtyczki",
+  },
 };

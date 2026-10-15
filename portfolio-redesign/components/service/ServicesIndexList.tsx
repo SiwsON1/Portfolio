@@ -5,16 +5,16 @@ import Link from "next/link";
 import { type MouseEvent, useEffect, useMemo, useRef, useState } from "react";
 import { projects, type Project } from "@/lib/projects";
 import { SERVICE_CASE_MAP } from "@/lib/service-project-map";
-import { services } from "@/lib/services";
+import type { ServiceLink } from "@/lib/services";
 
 type ServicePreview = {
-  service: (typeof services)[number];
+  service: ServiceLink;
   project: Project | null;
 };
 
 const padNumber = (value: number) => String(value).padStart(2, "0");
 
-export function ServicesIndexList() {
+export function ServicesIndexList({ services }: { services: ServiceLink[] }) {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ export function ServicesIndexList() {
             (candidate) => candidate.slug === SERVICE_CASE_MAP[service.slug]?.projectSlug
           ) ?? null,
       })),
-    []
+    [services]
   );
 
   const projectsToPreview = useMemo<Project[]>(() => {

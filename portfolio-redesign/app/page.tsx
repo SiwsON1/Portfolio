@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { ProjectsCabinet } from "@/components/home/ProjectsCabinet";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
+import { servicesIndex } from "@/lib/services";
 import { TechStack } from "@/components/home/TechStack";
 import { AboutTease } from "@/components/home/AboutTease";
 import { Process } from "@/components/home/Process";
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       <Hero />
       <ProjectsCabinet />
-      <ServicesPreview />
+      <ServicesPreview services={servicesIndex} />
       <Process />
       <TechStack />
       <AboutTease />

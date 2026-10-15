@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -10,17 +11,27 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 1.5,
+      autoRaf: false,
     });
 
-    let raf = 0;
     const tick = (time: number) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(tick);
+      lenis.raf(time * 1000);
     };
-    raf = requestAnimationFrame(tick);
+    const updateScrollTrigger = () => {
+      const globals = (
+        gsap.core as unknown as { globals: () => Record<string, unknown> }
+      ).globals();
+      const scrollTrigger = globals.ScrollTrigger as { update?: () => void } | undefined;
+      scrollTrigger?.update?.();
+    };
+
+    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.add(tick);
+    lenis.on("scroll", updateScrollTrigger);
 
     return () => {
-      cancelAnimationFrame(raf);
+      lenis.off("scroll", updateScrollTrigger);
+      gsap.ticker.remove(tick);
       lenis.destroy();
     };
   }, []);
