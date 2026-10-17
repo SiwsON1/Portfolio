@@ -871,6 +871,14 @@ export const services: Service[] = [
         "a": "Największy wpływ na koszt ma czas potrzebny do znalezienia przyczyny błędu. Widoczna usterka nie zawsze oznacza, że problem znajduje się w miejscu, w którym występuje. Po wstępnym rozpoznaniu określę zakres prac, a gdy potrzebna będzie głębsza diagnoza, powiem Ci o tym przed jej rozpoczęciem."
       },
       {
+        "q": "Ile trwa naprawa sklepu WooCommerce?",
+        "a": "Zależy od tego, jak szybko uda się znaleźć przyczynę. Gdy dziennik błędów wskazuje konkretny plik lub wtyczkę, poprawka bywa gotowa tego samego dnia: w sklepie Kosmoteka błąd 500 na kartach produktów znalazłem w logu i poprawkę wgrałem tego samego dnia. Usterki wywoływane przez zewnętrzne systemy, takie jak BaseLinker, wymagają zwykle obserwacji kilku zamówień, więc trwają dłużej. Termin podaję po wstępnym rozpoznaniu."
+      },
+      {
+        "q": "Czy na czas naprawy trzeba wyłączyć sprzedaż?",
+        "a": "Zwykle nie. Diagnoza polega na czytaniu logów i ustawień, więc sklep działa dalej, a poprawkę, jeśli to możliwe, przygotowuję najpierw na kopii strony. Gdy zmiana wymaga chwilowego wyłączenia kasy lub trybu konserwacji, uzgadniamy porę z najmniejszym ruchem."
+      },
+      {
         "q": "Czy potrzebujesz dostępu do hostingu, żeby naprawić WordPress?",
         "a": "Przy wielu awariach tak, ponieważ na hostingu znajdują się pliki strony i dzienniki błędów serwera. Sam dostęp do panelu WordPress może nie wystarczyć, zwłaszcza gdy strona wyświetla błąd krytyczny. Po zapoznaniu się ze zgłoszeniem wskażę, jakich dostępów potrzebuję."
       },
@@ -910,7 +918,7 @@ export const services: Service[] = [
     "title": "Audyt sklepu WooCommerce",
     "metaTitle": "Audyt sklepu WooCommerce i strony WordPress | Marcin Siwonia",
     "metaDescription": "Audyt sklepu WooCommerce i strony WordPress. Sprawdzam błędy, bezpieczeństwo, zamówienia, integracje i szybkość. Dostajesz listę usterek i zaleceń.",
-    "h1": "Audyt sklepu WooCommerce i strony WordPress dla Twojej firmy",
+    "h1": "Audyt sklepu WooCommerce i strony WordPress",
     "headings": {
       "bullets": "Co daje audyt sklepu WooCommerce",
       "process": "Jak przeprowadzam audyt sklepu",
@@ -944,7 +952,7 @@ export const services: Service[] = [
       {
         "step": "01",
         "title": "Rozmowa i ustalenie zakresu",
-        "body": "Opisz mi, co dzieje się w Twoim sklepie, jakie problemy zauważasz i co planujesz zrobić w najbliższym czasie. Zapytam o wykorzystywane integracje, wcześniejsze awarie i najważniejsze funkcje sprzedażowe. Inaczej rozłożę akcenty, gdy spada liczba zamówień, a inaczej podczas sprawdzenia sklepu po poprzednim wykonawcy. Na tej podstawie określam zakres audytu, koszt i termin. Pierwszą ocenę zgłoszenia otrzymasz w ciągu 24 godzin roboczych."
+        "body": "Opisz mi, co dzieje się w Twoim sklepie, jakie problemy zauważasz i co planujesz zrobić w najbliższym czasie. Zapytam o wykorzystywane integracje, wcześniejsze awarie i najważniejsze funkcje sprzedażowe. Inaczej rozłożę akcenty, gdy spada liczba zamówień, a inaczej podczas sprawdzenia sklepu po poprzednim wykonawcy. Na tej podstawie określam zakres audytu, koszt i termin."
       },
       {
         "step": "02",
@@ -1067,6 +1075,18 @@ export const services: Service[] = [
       {
         "q": "Czy Consent Mode v2 jest obowiązkowy?",
         "a": "Polityka Google dotycząca zgody użytkowników z UE wymaga od firm korzystających z produktów Google uzyskania ważnej prawnie zgody na cookies tam, gdzie wymaga tego prawo, oraz na wykorzystywanie danych do personalizacji reklam w EOG, Wielkiej Brytanii i Szwajcarii. Wymaga również przechowywania informacji o zgodzie i wyjaśnienia, jak można ją wycofać. Consent Mode v2 pozwala technicznie przekazywać wybory użytkownika do systemów Google, ale sam nie gwarantuje zgodności z przepisami. Ocenę obowiązków prawnych pozostawiam prawnikowi."
+      },
+      {
+        "q": "Czym Consent Mode v2 różni się od pierwszej wersji?",
+        "a": "Pierwsza wersja przekazywała do Google dwa sygnały: analytics_storage dla analityki i ad_storage dla cookies reklamowych. Wersja 2, ogłoszona pod koniec 2023 roku, dodała dwa kolejne: ad_user_data, czyli zgodę na wysyłanie danych użytkownika do Google w celach reklamowych, oraz ad_personalization, czyli zgodę na reklamy spersonalizowane i remarketing. Od marca 2024 roku Google oczekuje tych sygnałów od reklamodawców kierujących reklamy do użytkowników z EOG, a bez nich listy remarketingowe i część pomiaru konwersji przestają działać."
+      },
+      {
+        "q": "Czy potrzebuję platformy zgód certyfikowanej przez Google?",
+        "a": "Certyfikowana platforma CMP, zgodna ze standardem IAB TCF, jest wymagana od wydawców wyświetlających reklamy AdSense, Ad Managera lub AdMob użytkownikom z EOG i Wielkiej Brytanii. Jeśli sam nie sprzedajesz powierzchni reklamowej, a jedynie korzystasz z GA4 i Google Ads, certyfikat nie jest warunkiem, ale baner musi poprawnie przekazywać cztery sygnały Consent Mode v2. Mogę wtedy użyć lekkiego banera albo istniejącej wtyczki, jeśli robi to prawidłowo."
+      },
+      {
+        "q": "Jak odwiedzający może później zmienić lub wycofać zgodę?",
+        "a": "Dodaję stały link, zwykle w stopce, który ponownie otwiera ustawienia zgód. Zmiana wyboru wysyła do Google aktualizację stanu zgody, więc po wycofaniu tagi przestają zapisywać cookies analityczne i reklamowe. Sprawdzam to w tych samych testach co pierwszą zgodę."
       },
       {
         "q": "Mam już baner cookies. Czy nadal potrzebuję Consent Mode v2?",

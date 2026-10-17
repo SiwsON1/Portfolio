@@ -4423,7 +4423,7 @@ export const SEO_BLOCKS: Record<string, SeoBlock> = {
         "outro": [
           "Jednorazowa naprawa wystarczy, gdy masz konkretny błąd albo zamkniętą listę poprawek i nie potrzebujesz regularnego zarządzania stroną. Możesz wrócić do mnie przy kolejnym zgłoszeniu, ale nie musisz od razu zamawiać abonamentu.",
           "Stała opieka ma sens w innej sytuacji: gdy chcesz regularnie aktualizować stronę, wykonywać kopie i zajmować się jej bieżącym utrzymaniem. Podobnie osobnym zadaniem jest optymalizacja wolno działającego serwisu. Jeśli głównym problemem są długie czasy ładowania, odpowiednią usługą będzie [przyspieszenie strony WordPress](/uslugi/przyspieszanie-stron-wordpress).",
-          "Jeżeli Twoja strona lub sklep ma konkretną usterkę, opisz objaw, moment jego wystąpienia i ostatnie zmiany. Odpowiem z pierwszą oceną w ciągu 24 godzin roboczych, a po rozpoznaniu ustalimy zakres i termin naprawy."
+          "Jeżeli Twoja strona lub sklep ma konkretną usterkę, opisz objaw, moment jego wystąpienia i ostatnie zmiany, a po rozpoznaniu ustalimy zakres i termin naprawy."
         ]
       }
     ]

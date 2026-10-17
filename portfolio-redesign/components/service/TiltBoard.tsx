@@ -81,14 +81,14 @@ export function TiltBoard({ children, caption, duration = 7600, className = "" }
         <div key={run} className="contents">{children}</div>
       </div>
       <div className="mt-12 flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute md:mt-14">
-        <p className="flex items-center gap-2.5 whitespace-nowrap">
-          <span aria-hidden className="hwC-live inline-block h-1.5 w-1.5 rounded-full bg-peach" />
+        <p className="flex min-w-0 items-center gap-2.5">
+          <span aria-hidden className="hwC-live inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-peach" />
           <span>{caption}</span>
         </p>
         <button
           type="button"
           onClick={() => setRun((n) => n + 1)}
-          className={`hwC-replay inline-flex min-h-11 items-center gap-2 whitespace-nowrap transition-[opacity,color] duration-300 hover:text-peach focus-visible:text-peach ${done ? "opacity-100" : "pointer-events-none opacity-0"}`}
+          className={`hwC-replay inline-flex min-h-11 shrink-0 items-center gap-2 whitespace-nowrap transition-[opacity,color] duration-300 hover:text-peach focus-visible:text-peach ${done ? "opacity-100" : "pointer-events-none opacity-0"}`}
           aria-hidden={!done}
           tabIndex={done ? 0 : -1}
         >
