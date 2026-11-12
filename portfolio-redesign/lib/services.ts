@@ -18,9 +18,9 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-wordpress",
     title: "Tworzenie stron WordPress",
-    metaTitle: "Tworzenie stron WordPress Wrocław: własny motyw, edycja bez kodu",
+    metaTitle: "Tworzenie stron WordPress: własny motyw, edycja bez kodu",
     metaDescription:
-      "Tworzę strony WordPress dla firm z Wrocławia i całej Polski. Własny motyw, wygodna edycja treści, szybkie ładowanie, SEO i szkolenie z obsługi.",
+      "Tworzę strony WordPress dla firm. Własny motyw, wygodna edycja treści, szybkie ładowanie, SEO i szkolenie. Sprawdź, jak wygląda współpraca ze mną.",
     h1: "Tworzenie stron WordPress z edycją bez kodu",
     headings: { bullets: "Co zawiera strona WordPress ode mnie", process: "Jak powstaje strona WordPress", faq: "Tworzenie stron WordPress: pytania" },
     lead:
@@ -60,9 +60,9 @@ export const services: Service[] = [
   {
     slug: "sklepy-internetowe-woocommerce",
     title: "Sklepy internetowe WooCommerce",
-    metaTitle: "Sklepy WooCommerce Wrocław: wdrożenie, BaseLinker, integracje",
+    metaTitle: "Sklepy WooCommerce: wdrożenie, integracje i optymalizacja",
     metaDescription:
-      "Tworzę sklepy WooCommerce dla firm z Wrocławia i całej Polski. Własny motyw, płatności, InPost, BaseLinker i Allegro. Zobacz moje realizacje.",
+      "Sklepy WooCommerce na własnym motywie. Wdrożę płatności, InPost, BaseLinker, Google Merchant i funkcje sprzedażowe. Zleć mi swój sklep internetowy.",
     h1: "Sklepy internetowe WooCommerce dla firm w całej Polsce",
     headings: { bullets: "Co zawiera wdrożenie sklepu WooCommerce", process: "Jak powstaje sklep WooCommerce", faq: "Sklepy WooCommerce: pytania" },
     lead:
