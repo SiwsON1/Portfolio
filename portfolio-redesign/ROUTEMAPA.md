@@ -154,6 +154,20 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-11-12: **poprawki skanera z 15.09 wdrożone** (14c9407, 17 testów). **E5 zrobione:** `scripts/skan-listy.mjs <lista.json> <katalog>`
+  skanuje strony główne listy sklepów i daje ranking z akapitem dowodu (tylko testy ≥ 85% precyzji: html-lang, document-title,
+  image-alt, link-name, meta-viewport). Pierwszy przebieg: 114 sklepów, 97 z błędami, wynik w
+  `Desktop\research-zarobki\data\outreach-wcag-2026-11-12\ranking.md`. Przed mailem sprawdzić wielkość firmy (mikro zwolnione).
+  Tego samego dnia: tytuły usług WordPress i WooCommerce z „Wrocław” (zapytania lokalne z GSC na pozycjach 24-30),
+  headless pod „migracja WordPress na Next.js”, Części Jaworscy jako przykład Allegro na `/uslugi/integracje-woocommerce`.
+  Uwaga z GSC: zapytania o meble (289 wyświetleń, pozycje 1-7, 0 kliknięć) i długie pytania w stylu czatu wyglądają na ruch narzędzi, nie ludzi.
+- 2026-09-15: **pomiar trafności skanera względem axe-core** na 295 stronach 110 sklepów
+  (`scripts/benchmark-wcag-scan.mjs`, raport `plans/skaner-wcag-trafnosc-2026-09-15.md`). Obrazki bez alt
+  57% → 85% precyzji (nazwa z `title`/`aria-label`, pomijanie elementów ukrytych w HTML i honeypotów).
+  Nowe testy: zagnieżdżone elementy w przyciskach, błędne listy (17 testów). Odrzucone po pomiarze:
+  aria-hidden-focus i listitem. W mailu do sklepu jako przykłady pokazywać najpierw testy ≥ 85% precyzji.
+  Wdrożone 12.11. Dalej: skan kilku stron sklepu (E4) i wsadowy skan listy pod outreach (E5),
+  plan `plans/skaner-wcag-rozwoj-2026-09-15.md`.
 - 2026-09-13 (cz. 3): **narzędzie `/sprawdz-dostepnosc` (punkt 1.2)**: 15 testów statycznego HTML
   (`lib/wcag-scan/`), ochrona SSRF z testami (także IPv6 osadzone i NAT64), limity: 5 skanów/10 min na IP,
   maile raportu 2/h na IP i 2/doba na odbiorcę, adres strony w mailu bez hiperłącza (ochrona przed phishingiem
