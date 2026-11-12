@@ -158,7 +158,7 @@ dlatego oba kierunki idą razem.
   skanuje strony główne listy sklepów i daje ranking z akapitem dowodu (tylko testy ≥ 85% precyzji: html-lang, document-title,
   image-alt, link-name, meta-viewport). Pierwszy przebieg: 114 sklepów, 97 z błędami, wynik w
   `Desktop\research-zarobki\data\outreach-wcag-2026-11-12\ranking.md`. Przed mailem sprawdzić wielkość firmy (mikro zwolnione).
-  Tego samego dnia: tytuły usług WordPress i WooCommerce z „Wrocław” (zapytania lokalne z GSC na pozycjach 24-30),
+  Tego samego dnia: „Wrocław” dodany i COFNIĘTY z tytułów usług (user: nie ryzykować pozycji ogólnopolskich, ewentualnie osobna strona lokalna),
   headless pod „migracja WordPress na Next.js”, Części Jaworscy jako przykład Allegro na `/uslugi/integracje-woocommerce`.
   Uwaga z GSC: zapytania o meble (289 wyświetleń, pozycje 1-7, 0 kliknięć) i długie pytania w stylu czatu wyglądają na ruch narzędzi, nie ludzi.
 - 2026-09-15: **pomiar trafności skanera względem axe-core** na 295 stronach 110 sklepów
