@@ -154,6 +154,7 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-11-12: **strona lokalna `/strony-wordpress-wroclaw`** (ca414c9) na szablonie branży z polem `local` (poza hubem /branze i listą branż w llms, jest w sitemap). Tekst: Mistrz Kategorii, brief `plans/wroclaw/brief.txt`. Realizacje: Złota Grota, Jaworscy, Piontek. Link z usługi tworzenie-stron-wordpress. Tytuły usług ogólnopolskich bez Wrocławia (decyzja usera). Sprawdzić w GSC za 3-4 tyg. frazy „strony wordpress wrocław”, „wordpress wrocław”.
 - 2026-11-12: **poprawki skanera z 15.09 wdrożone** (14c9407, 17 testów). **E5 zrobione:** `scripts/skan-listy.mjs <lista.json> <katalog>`
   skanuje strony główne listy sklepów i daje ranking z akapitem dowodu (tylko testy ≥ 85% precyzji: html-lang, document-title,
   image-alt, link-name, meta-viewport). Pierwszy przebieg: 114 sklepów, 97 z błędami, wynik w
