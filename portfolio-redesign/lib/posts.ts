@@ -1213,7 +1213,7 @@ posts.push(
     keyword: "Server-Side Rendering",
     relatedServices: ["aplikacje-nextjs", "next-js-software-house", "tworzenie-stron-www"],
     hero: { kind: "performance" },
-    metaTitle: "Server-Side Rendering (SSR): co to jest i jak działa?",
+    metaTitle: "SSR, czyli Server-Side Rendering: co to jest i jak działa",
     metaDescription:
       "SSR to renderowanie strony na serwerze przed wysłaniem HTML do przeglądarki. Sprawdź, jak działa, jakie ma zalety i wady oraz kiedy warto go używać.",
     lead:
@@ -1911,15 +1911,15 @@ posts.push(
     readingMinutes: 7,
     tags: ["Vercel", "hosting"],
     keyword: "Vercel hosting",
-    metaTitle: "Vercel hosting: co to jest i czy warto (vs Hostinger)",
+    metaTitle: "Vercel hosting: co to jest, ile kosztuje i czy warto",
     metaDescription:
-      "Vercel: hosting od twórców Next.js. Edge functions, automatic SSL, preview per PR, free tier 100 GB/mc. Vs polski hosting (Hostinger): kiedy warto.",
+      "Vercel to hosting od twórców Next.js. Sprawdź, czym różni się od zwykłego hostingu, kiedy wystarczy darmowy plan Hobby, a kiedy potrzebny jest Pro.",
     hero: { kind: "performance" },
     relatedServices: ["aplikacje-nextjs", "tworzenie-stron-www", "next-js-software-house"],
     body: [
       "Vercel to platforma deploymentowa stworzona przez Guillermo Raucha: tego samego który stworzył Next.js. Logika: dostarczyć optymalny hosting dla Next.js apps, ale działa też dla każdego frontend frameworka (Astro, SvelteKit, Vue, vanilla HTML).",
       "Co Vercel daje out-of-the-box: globalny CDN (100+ edge locations), edge functions (Workers), automatic SSL (Let's Encrypt), preview deployments per pull request (każdy PR dostaje własny URL do testów), zero-config deploy z GitHub.",
-      "Free tier: 100 GB bandwidth/mc, unlimited static requests, 100 GB-hours of edge function execution. To wystarcza dla 90% małych i średnich stron firmowych.",
+      "Free tier: 100 GB bandwidth/mc, unlimited static requests, 100 GB-hours of edge function execution. Plan Hobby jest jednak przeznaczony tylko do projektów prywatnych i niekomercyjnych.",
       "Pro tier (20$/mc): 1 TB bandwidth, większy compute, password protection na preview, analytics, image optimization 5000/mc.",
       "Enterprise: custom pricing, SLA, SOC 2, dedicated support.",
       "Korzyści Vercel vs tradycyjny hosting (Hostinger, OVH):",
@@ -1930,7 +1930,7 @@ posts.push(
       "Praktyczna rekomendacja: projekt prywatny możesz zacząć na darmowym planie Hobby, ale strona firmowa to użytek komercyjny, więc od startu potrzebuje planu Pro albo innego hostingu, np. własnego serwera.",
     ],
     faq: [
-      { q: "Czy Vercel jest darmowy?", a: "Free tier: 100 GB bandwidth/mc, unlimited static requests, 100 GB-hours edge function execution. Wystarcza dla 90% małych i średnich stron firmowych." },
+      { q: "Czy Vercel jest darmowy?", a: "Plan Hobby jest darmowy, ale tylko do projektów prywatnych i niekomercyjnych. Strona firmowa to użytek komercyjny, więc potrzebuje planu Pro (20 USD miesięcznie za osobę w zespole) albo innego hostingu." },
       { q: "Kiedy potrzebny Pro plan?", a: "Powyżej 50k wizyt/mc lub gdy chcesz: analytics built-in, password protection na preview URLs, większy compute, image optimization 5000/mc, support priority. Cena: 20$/mc (~80 zł)." },
       { q: "Vercel vs Hostinger: co wybrać?", a: "Vercel dla każdego projektu Next.js (natywna integracja, edge deployment globalny, git push = deploy). Hostinger dla WordPress, klientów wymagających cPanel/FTP, projektów PHP/Laravel." },
       { q: "Czy Vercel obsługuje email?", a: "Nie. Vercel hostuje tylko strony i funkcje. Maile firmowe (kontakt@domena.pl) trzeba postawić osobno: Google Workspace, Microsoft 365, cyber_folks lub inny dostawca SMTP." },

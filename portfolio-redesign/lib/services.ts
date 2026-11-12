@@ -18,9 +18,9 @@ export const services: Service[] = [
   {
     slug: "tworzenie-stron-wordpress",
     title: "Tworzenie stron WordPress",
-    metaTitle: "Tworzenie stron WordPress: własny motyw, edycja bez kodu",
+    metaTitle: "Tworzenie stron WordPress Wrocław: własny motyw, edycja bez kodu",
     metaDescription:
-      "Tworzę strony WordPress dla firm. Własny motyw, wygodna edycja treści, szybkie ładowanie, SEO i szkolenie. Sprawdź, jak wygląda współpraca ze mną.",
+      "Tworzę strony WordPress dla firm z Wrocławia i całej Polski. Własny motyw, wygodna edycja treści, szybkie ładowanie, SEO i szkolenie z obsługi.",
     h1: "Tworzenie stron WordPress z edycją bez kodu",
     headings: { bullets: "Co zawiera strona WordPress ode mnie", process: "Jak powstaje strona WordPress", faq: "Tworzenie stron WordPress: pytania" },
     lead:
@@ -60,9 +60,9 @@ export const services: Service[] = [
   {
     slug: "sklepy-internetowe-woocommerce",
     title: "Sklepy internetowe WooCommerce",
-    metaTitle: "Sklepy WooCommerce: wdrożenie, integracje i optymalizacja",
+    metaTitle: "Sklepy WooCommerce Wrocław: wdrożenie, BaseLinker, integracje",
     metaDescription:
-      "Sklepy WooCommerce na własnym motywie. Wdrożę płatności, InPost, BaseLinker, Google Merchant i funkcje sprzedażowe. Zleć mi swój sklep internetowy.",
+      "Tworzę sklepy WooCommerce dla firm z Wrocławia i całej Polski. Własny motyw, płatności, InPost, BaseLinker i Allegro. Zobacz moje realizacje.",
     h1: "Sklepy internetowe WooCommerce dla firm w całej Polsce",
     headings: { bullets: "Co zawiera wdrożenie sklepu WooCommerce", process: "Jak powstaje sklep WooCommerce", faq: "Sklepy WooCommerce: pytania" },
     lead:
@@ -104,9 +104,9 @@ export const services: Service[] = [
   {
     slug: "headless-wordpress",
     title: "Headless WordPress",
-    metaTitle: "Headless WordPress dla firm: WordPress i Next.js",
+    metaTitle: "Headless WordPress: migracja z WordPressa na Next.js dla firm",
     metaDescription:
-      "Headless WordPress dla firm. Zachowaj znany panel edycji treści, zyskaj szybki front w Next.js. Przeniosę stronę, zadbam o SEO, podgląd i publikację zmian.",
+      "Przeniosę stronę z WordPressa na Next.js, a redakcja zostanie w znanym panelu. Szybszy front, zadbane SEO przy przenosinach i podgląd zmian.",
     h1: "Headless WordPress dla firm z istniejącym panelem treści",
     lead:
       "Zostaw WordPressa redakcji, a stronę dla klientów przenieś na Next.js. Zbuduję osobny, szybki front bez zmuszania Twojego zespołu do nauki nowego panelu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
