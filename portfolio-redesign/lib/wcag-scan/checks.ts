@@ -57,6 +57,19 @@ function hasNamingAttribute(element: HTMLElement): boolean {
     hasText(element.getAttribute("title"));
 }
 
+// Element ukryty przed technologiami asystującymi już w samym HTML (bez liczenia CSS z arkuszy).
+// Tak jak axe-core pomijamy go w testach nazw: honeypoty formularzy, szablony, treść noscript.
+function isHiddenInMarkup(element: HTMLElement): boolean {
+  for (let current: HTMLElement | null = element; current && current.tagName; current = current.parentNode as HTMLElement | null) {
+    if (["TEMPLATE", "NOSCRIPT", "SCRIPT"].includes(current.tagName)) return true;
+    if (current.hasAttribute("hidden") || current.hasAttribute("inert")) return true;
+    if (current.getAttribute("aria-hidden")?.toLowerCase() === "true") return true;
+    const style = (current.getAttribute("style") ?? "").toLowerCase().replace(/\s+/g, "");
+    if (style.includes("display:none") || style.includes("visibility:hidden")) return true;
+  }
+  return false;
+}
+
 function hasAccessibleContent(element: HTMLElement): boolean {
   return hasText(element.textContent) ||
     hasNamingAttribute(element) ||
@@ -79,9 +92,11 @@ export function runChecks(html: string, _pageUrl: string): ScanIssue[] {
     "Dodaj w sekcji head krótki i jednoznaczny element title opisujący stronę."));
 
   const images = root.querySelectorAll("img");
+  // Jak axe-core: nazwę obrazka daje też aria-label, aria-labelledby i title.
   const missingAlt = images.filter((image) =>
-    !image.hasAttribute("alt") && image.getAttribute("role") !== "presentation" &&
-    image.getAttribute("aria-hidden")?.toLowerCase() !== "true");
+    !image.hasAttribute("alt") && !hasNamingAttribute(image) &&
+    !["presentation", "none"].includes(image.getAttribute("role")?.toLowerCase() ?? "") &&
+    !isHiddenInMarkup(image));
   results.push(issue("image-alt", "Obrazki bez tekstu alternatywnego", "1.1.1", "krytyczny", missingAlt,
     "Dodaj do każdego informacyjnego obrazka opisowy atrybut alt, a dekoracyjnemu ustaw pusty alt."));
 
@@ -96,6 +111,9 @@ export function runChecks(html: string, _pageUrl: string): ScanIssue[] {
   const unlabeled = controls.filter((control) => {
     if (control.tagName === "INPUT" && ["hidden", "submit", "button", "image", "reset"].includes((control.getAttribute("type") ?? "text").toLowerCase())) return false;
     if (hasNamingAttribute(control)) return false;
+    if (isHiddenInMarkup(control)) return false;
+    // Pułapka na boty: pole wyjęte z kolejności Tab i schowane poza ekranem.
+    if (control.getAttribute("tabindex") === "-1" && /(?:^|[^a-z])(?:left|top)\s*:\s*-\d{3,}/i.test(control.parentNode ? (control.parentNode as HTMLElement).getAttribute?.("style") ?? "" : "")) return false;
     // Tak jak axe-core: placeholder daje polu dostępną nazwę, choć gorszą niż etykieta.
     if (hasText(control.getAttribute("placeholder"))) return false;
     if (control.closest("label")) return false;
@@ -105,11 +123,11 @@ export function runChecks(html: string, _pageUrl: string): ScanIssue[] {
   results.push(issue("input-label", "Pola formularza bez etykiety", "1.3.1, 4.1.2", "krytyczny", unlabeled,
     "Połącz każde pole z widoczną etykietą label albo nadaj mu jednoznaczną dostępną nazwę."));
 
-  const unnamedLinks = root.querySelectorAll("a[href]").filter((link) => !hasAccessibleContent(link));
+  const unnamedLinks = root.querySelectorAll("a[href]").filter((link) => !hasAccessibleContent(link) && !isHiddenInMarkup(link));
   results.push(issue("link-name", "Linki bez dostępnej nazwy", "2.4.4", "poważny", unnamedLinks,
     "Dodaj do każdego linku zrozumiały tekst lub dostępną nazwę opisującą jego cel."));
 
-  const unnamedButtons = root.querySelectorAll("button").filter((button) => !hasAccessibleContent(button));
+  const unnamedButtons = root.querySelectorAll("button").filter((button) => !hasAccessibleContent(button) && !isHiddenInMarkup(button));
   results.push(issue("button-name", "Przyciski bez dostępnej nazwy", "4.1.2", "krytyczny", unnamedButtons,
     "Dodaj do każdego przycisku widoczny tekst lub jednoznaczny atrybut aria-label."));
 
@@ -168,6 +186,30 @@ export function runChecks(html: string, _pageUrl: string): ScanIssue[] {
   const autoplayMedia = root.querySelectorAll("video[autoplay], audio[autoplay]").filter((media) => !media.hasAttribute("muted"));
   results.push(issue("media-autoplay", "Multimedia odtwarzane automatycznie", "1.4.2", "poważny", autoplayMedia,
     "Usuń autoplay albo wycisz automatycznie uruchamiane multimedia i zapewnij kontrolę odtwarzania."));
+
+  const FOCUSABLE = "a[href], button, input, select, textarea, [tabindex]";
+  const isFocusable = (element: HTMLElement): boolean => {
+    if (element.hasAttribute("disabled")) return false;
+    if (element.tagName === "INPUT" && element.getAttribute("type")?.toLowerCase() === "hidden") return false;
+    const tabindex = element.getAttribute("tabindex");
+    return tabindex == null || !tabindex.trim().startsWith("-");
+  };
+
+  // Kontrolki, których dzieci są prezentacyjne (jak w axe-core): nie mogą zawierać elementów z fokusem.
+  const nestedInteractive = root.querySelectorAll(
+    "button, [role=button], [role=tab], [role=checkbox], [role=radio], [role=switch], [role=option], [role=menuitemcheckbox], [role=menuitemradio]",
+  ).filter((control) => !isHiddenInMarkup(control) && control.querySelectorAll(FOCUSABLE).some(isFocusable));
+  results.push(issue("nested-interactive", "Elementy interaktywne zagnieżdżone w przycisku", "4.1.2", "poważny", nestedInteractive,
+    "Wyjmij link lub przycisk z wnętrza innego przycisku albo zamień zewnętrzny element na zwykły kontener."));
+
+  // Bez testów aria-hidden-focus i listitem: pomiar 15.09.2026 dał 10% i 32% zgodności z axe
+  // (ukryte przez CSS okienka i przestawianie elementów przez parser przy błędnym HTML).
+  const badLists = root.querySelectorAll("ul, ol").filter((list) =>
+    !list.getAttribute("role") && !isHiddenInMarkup(list) &&
+    list.childNodes.some((child) => (child as HTMLElement).tagName &&
+      !["LI", "SCRIPT", "TEMPLATE", "STYLE", "META", "LINK", "NOSCRIPT"].includes((child as HTMLElement).tagName)));
+  results.push(issue("list", "Listy z niedozwolonymi elementami", "1.3.1", "poważny", badLists,
+    "Umieść wewnątrz ul i ol wyłącznie elementy li, a pozostałe elementy przenieś do środka li."));
 
   const invalidRoles = root.querySelectorAll("[role]").filter((element) => {
     const roles = (element.getAttribute("role") ?? "").trim().toLowerCase().split(/\s+/).filter(Boolean);

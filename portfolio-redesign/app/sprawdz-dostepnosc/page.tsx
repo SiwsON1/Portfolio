@@ -6,7 +6,7 @@ import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 const TITLE = "Sprawdź dostępność strony: darmowy test WCAG online";
 const DESCRIPTION =
-  "Sprawdź dostępność strony w kilka sekund. Darmowy test 15 wymagań WCAG 2.1 w kodzie HTML: obrazki bez opisu, pola bez etykiet, blokada powiększania i więcej.";
+  "Sprawdź dostępność strony w kilka sekund. Darmowy test 17 wymagań WCAG 2.1 w kodzie HTML: obrazki bez opisu, pola bez etykiet, blokada powiększania i więcej.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -32,6 +32,8 @@ const CHECKS: { name: string; wcag: string }[] = [
   { name: "Blokada powiększania na telefonie", wcag: "1.4.4" },
   { name: "Automatycznie odtwarzany dźwięk", wcag: "1.4.2" },
   { name: "Nieprawidłowe role ARIA", wcag: "4.1.2" },
+  { name: "Linki i pola wewnątrz przycisków", wcag: "4.1.2" },
+  { name: "Listy z niedozwolonymi elementami", wcag: "1.3.1" },
 ];
 
 const FAQ: { q: string; a: string }[] = [
@@ -86,7 +88,7 @@ export default function SprawdzDostepnoscPage() {
             Sprawdź <em>dostępność</em> strony
           </h1>
           <p className="mt-8 prose-bound text-lead text-ink-mute">
-            Darmowy test sprawdza w kodzie strony 15 wymagań WCAG 2.1, których brak najczęściej blokuje osoby
+            Darmowy test sprawdza w kodzie strony 17 wymagań WCAG 2.1, których brak najczęściej blokuje osoby
             korzystające z czytnika ekranu albo powiększenia. Wynik dostajesz od razu, a pełny raport na e-mail.
           </p>
         </div>

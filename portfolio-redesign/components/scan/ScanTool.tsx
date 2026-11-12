@@ -8,7 +8,7 @@ import "./ScanTool.css";
 type Phase = "idle" | "loading" | "result" | "error";
 type SendPhase = "idle" | "sending" | "sent" | "error";
 
-const STEPS = ["Pobieram stronę", "Czytam kod HTML", "Sprawdzam 15 testów"];
+const STEPS = ["Pobieram stronę", "Czytam kod HTML", "Sprawdzam 17 testów"];
 
 const SEVERITY_ORDER: ScanSeverity[] = ["krytyczny", "poważny", "umiarkowany"];
 const SEVERITY_PLURAL: Record<ScanSeverity, string> = {
@@ -29,7 +29,7 @@ function IssueRow({ issue, index }: { issue: ScanIssue; index: number }) {
       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-peach">{issue.severity}</span>
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">
-          WCAG {issue.wcag} · {issue.count} {issue.count === 1 ? "wystąpienie" : "wystąpień"}
+          WCAG {issue.wcag} · {issue.count} {issue.count === 1 ? "wystąpienie" : [2, 3, 4].includes(issue.count % 10) && ![12, 13, 14].includes(issue.count % 100) ? "wystąpienia" : "wystąpień"}
         </span>
       </div>
       <h3
@@ -239,7 +239,7 @@ export function ScanTool() {
             </div>
           ) : (
             <p className="scan-reveal mt-16 max-w-2xl text-lg text-ink-mute" data-i={1}>
-              W kodzie tej strony nie wykryłem żadnego z 15 sprawdzanych problemów. To dobry znak, ale nie dowód
+              W kodzie tej strony nie wykryłem żadnego z 17 sprawdzanych problemów. To dobry znak, ale nie dowód
               dostępności: reszta kryteriów wymaga testu klawiaturą i czytnikiem ekranu.
             </p>
           )}
