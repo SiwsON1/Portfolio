@@ -1860,11 +1860,11 @@ export const industries: Industry[] = [
       },
       {
         q: "Czy mogę ręcznie poprawić błędne przypisanie części do auta?",
-        a: "Tak. Mogę przygotować panel w WordPressie, w którym zmienisz przypisanie konkretnego produktu. W realizowanym sklepie ręczna poprawka jest zapamiętywana i nie zostaje zastąpiona wynikiem automatycznego rozpoznawania nazwy. Dzięki temu raz zweryfikowana część nie wraca do poprzedniego, błędnego przypisania."
+        a: "Tak. Mogę przygotować panel w WordPressie, w którym zmienisz przypisanie konkretnego produktu. W sklepie Części Jaworscy ręczna poprawka jest zapamiętywana i nie zostaje zastąpiona wynikiem automatycznego rozpoznawania nazwy. Dzięki temu raz zweryfikowana część nie wraca do poprzedniego, błędnego przypisania."
       },
       {
         q: "Czy BaseLinker nie nadpisze kategorii uporządkowanych w sklepie?",
-        a: "To zależy od sposobu synchronizacji. W realizowanym przeze mnie sklepie BaseLinker nadpisuje kategorie WooCommerce, dlatego przygotowałem osobne grupy części do budowy nawigacji. Są przechowywane niezależnie od synchronizowanych kategorii. Dzięki temu kolejne aktualizacje produktów nie usuwają uporządkowanego menu."
+        a: "To zależy od sposobu synchronizacji. W sklepie Części Jaworscy BaseLinker nadpisuje kategorie WooCommerce, dlatego przygotowałem osobne grupy części do budowy nawigacji. Są przechowywane niezależnie od synchronizowanych kategorii. Dzięki temu kolejne aktualizacje produktów nie usuwają uporządkowanego menu."
       },
       {
         q: "Czy mogę sprzedawać w jednym sklepie części nowe i używane?",
