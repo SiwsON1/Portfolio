@@ -104,9 +104,9 @@ export const services: Service[] = [
   {
     slug: "headless-wordpress",
     title: "Headless WordPress",
-    metaTitle: "Headless WordPress: migracja z WordPressa na Next.js dla firm",
+    metaTitle: "Headless WordPress dla firm: WordPress i Next.js",
     metaDescription:
-      "Przeniosę stronę z WordPressa na Next.js, a redakcja zostanie w znanym panelu. Szybszy front, zadbane SEO przy przenosinach i podgląd zmian.",
+      "Headless WordPress dla firm. Zachowaj znany panel edycji treści, zyskaj szybki front w Next.js. Przeniosę stronę, zadbam o SEO, podgląd i publikację zmian.",
     h1: "Headless WordPress dla firm z istniejącym panelem treści",
     lead:
       "Zostaw WordPressa redakcji, a stronę dla klientów przenieś na Next.js. Zbuduję osobny, szybki front bez zmuszania Twojego zespołu do nauki nowego panelu. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
