@@ -314,23 +314,24 @@ export default async function BranzaPage({
         </div>
 
         {cases.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-line">
+          <div className={cases.length > 1 ? "grid grid-cols-1 md:grid-cols-2 gap-px bg-line" : "border-y border-line"}>
             {cases.map((c) => (
               <Link
                 key={c.projectSlug}
                 href={`/projekty/${c.project!.slug}`}
-                className="group block bg-bg p-6 md:p-8 hover:bg-bg-elev transition-colors duration-700"
+                className={`group block bg-bg p-6 md:p-8 hover:bg-bg-elev transition-colors duration-700 ${cases.length === 1 ? "md:grid md:grid-cols-12 md:gap-10 md:items-center" : ""}`}
                 data-cursor="CASE"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-bg-elev mb-7">
+                <div className={`relative aspect-[16/10] overflow-hidden bg-bg-elev mb-7 ${cases.length === 1 ? "md:col-span-7 md:mb-0" : ""}`}>
                   <Image
                     src={c.project!.image}
                     alt={`${c.project!.client}, ${c.project!.title}`}
                     fill
                     className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-                    sizes="(max-width: 768px) 100vw, 45vw"
+                    sizes="(max-width: 768px) 100vw, 55vw"
                   />
                 </div>
+                <div className={cases.length === 1 ? "md:col-span-5" : undefined}>
                 <p className="eyebrow mb-3">
                   {c.project!.client} · {c.project!.year}
                 </p>
@@ -352,6 +353,7 @@ export default async function BranzaPage({
                     </li>
                   ))}
                 </ul>
+                </div>
               </Link>
             ))}
           </div>

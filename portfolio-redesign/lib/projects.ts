@@ -16,6 +16,24 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "czesci-jaworscy",
+    title: "Sklep z częściami do samochodów dostawczych",
+    client: "Części Jaworscy",
+    year: 2026,
+    category: "commercial",
+    image: "/projects-fresh/czesci-jaworscy-card.webp",
+    url: "https://czescijaworscy.pl/",
+    description:
+      "Przebudowa sklepu WooCommerce z nowymi i używanymi częściami do busów Renault, Ford, Opel, Nissan i Fiat: ponad 11 tysięcy produktów, dobór części po marce, modelu i generacji, wyszukiwarka po numerze OEM, zapytanie po VIN, BaseLinker i Allegro bez przerwy w sprzedaży, przeniesienie sklepu na nowy serwer.",
+    body: [
+      "Części Jaworscy z Pakszyna pod Gnieznem sprzedają nowe i używane części do samochodów dostawczych: Renault Trafic i Master, Ford Transit, Opel Vivaro i Movano, Nissan Primastar, Fiat Ducato i ich bliźniaki. Sprzedaż idzie równolegle przez własny sklep na WooCommerce i przez Allegro, a zamówienia i stany obsługuje BaseLinker. Właściciel chciał nowego wyglądu, doboru części po aucie i szukajki po numerach, bez ruszania tej integracji.",
+      "Katalog liczy ponad 11 tysięcy produktów, a dane pochodziły z aukcji: ponad tysiąc kategorii z Allegro, marka i model często tylko w nazwie, opisy zaczynające się od powitania na aukcji. Zebrałem kategorie w 16 grup części widocznych w menu i napisałem własną wtyczkę z drzewem pojazdów (marka, model, generacja) w osobnej taksonomii, żeby synchronizacja z BaseLinkerem jej nie nadpisywała. Reguły rozpoznające generację, rocznik, silnik i modele bliźniacze z nazw poprawiły przypisania 887 części, a panel pozwala poprawić je ręcznie.",
+      "Front to własny motyw PHP bez Elementora: strona główna z doborem po aucie, numerze OEM i VIN, strony marek i modeli z miniaturami aut, filtry po rodzaju części, stronie i producencie, koszyk w wysuwanym panelu, pasek zakupu na telefonie i formularz zapytania o część po numerze VIN. Sprzedana część używana nie kończy się błędem 404, tylko przekierowaniem na grupę części do tego samego modelu.",
+      "Na koniec przeniosłem sklep od poprzedniego wykonawcy na nowy hosting: baza z ponad tysiącem zamówień, ponad 200 tysięcy plików zdjęć we wszystkich rozmiarach, DNS przez Cloudflare z gotowym planem powrotu, BaseLinker przepięty na nowe klucze REST API i sprawdzony testowym zamówieniem. Do tego płatności Przelewy24, Google Analytics z trybem zgody i Microsoft Clarity. Sklep jest pod moją stałą opieką i SEO.",
+    ],
+    stack: ["WordPress", "WooCommerce", "Własny motyw PHP", "BaseLinker", "SEO"],
+  },
+  {
     slug: "lumikids",
     title: "Sklep z odzieżą dziecięcą i młodzieżową",
     client: "LumiKids",
@@ -548,6 +566,7 @@ export const projects: Project[] = [
  * Galabau celowo POMIJAMY (klient nie chce się chwalić). Order = od najmocniejszego.
  */
 export const FEATURED_SLUGS = [
+  "czesci-jaworscy",
   "kancelaria-mpiontek",
   "kosmoteka",
   "kantorymapa",
@@ -562,6 +581,13 @@ const WP_FIRMOWA = ["tworzenie-stron-wordpress", "nowoczesna-strona-firmowa-2026
 
 /** Usługi (slugi z lib/services.ts), których dana realizacja jest dowodem. Lab celowo pominięty. */
 export const PROJECT_SERVICES: Record<string, string[]> = {
+  "czesci-jaworscy": [
+    "sklepy-internetowe-woocommerce",
+    "integracja-woocommerce-z-baselinker",
+    "integracje-woocommerce",
+    "tworzenie-wtyczek-wordpress",
+    "opieka-wordpress",
+  ],
   lumikids: ["sklepy-internetowe-woocommerce", "opieka-wordpress", "tworzenie-wtyczek-wordpress", "integracje-woocommerce", "google-merchant-center-woocommerce"],
   kantorymapa: ["aplikacje-nextjs", "strony-jamstack"],
   cojestpolskie: ["strony-jamstack", "nowoczesne-strony-internetowe", "wdrozenia-ai"],

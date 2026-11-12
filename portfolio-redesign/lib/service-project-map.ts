@@ -23,10 +23,10 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
     highlight: "WordPress, własne style, SEO od startu",
   },
   "sklepy-internetowe-woocommerce": {
-    projectSlug: "kosmoteka",
+    projectSlug: "czesci-jaworscy",
     context:
-      "Kosmoteka.pl to sklep z teleskopami, lornetkami i mikroskopami na WordPressie z WooCommerce. Zrobiłem autorski wygląd kart produktów, poradniki zakupowe, integrację z hurtownią oraz bramki płatności i wysyłki. Zdjęcia sprzętu mają przezroczyste tło zamiast białego, więc katalog wygląda spójnie.",
-    highlight: "WooCommerce, integracja z hurtownią, autorskie karty produktów",
+      "Części Jaworscy sprzedają części do busów przez WooCommerce i Allegro, z zamówieniami w BaseLinkerze. Przebudowałem sklep z ponad 11 tysiącami produktów: własny motyw, dobór części po marce, modelu i generacji, wyszukiwarka po numerze OEM i zapytanie po VIN, a potem przeniosłem go na nowy serwer bez utraty zamówień i zdjęć.",
+    highlight: "WooCommerce, ponad 11 tys. części, dobór po aucie i OEM",
   },
   "nowoczesne-strony-internetowe": {
     projectSlug: "cojestpolskie",
@@ -86,11 +86,10 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
     highlight: "GeneratePress, LiteSpeed Cache, własna obsługa zdjęć",
   },
   "integracja-woocommerce-z-baselinker": {
-    projectSlug: "kosmoteka",
+    projectSlug: "czesci-jaworscy",
     context:
-      "Kosmoteka.pl, sklep z teleskopami na WooCommerce, ma w BaseLinkerze skonfigurowane powiązania magazynów. Katalog hurtowni zostaje w jej magazynie, a do sklepu trafiają tylko wybrane pozycje skopiowane do Magazynu BaseLinker. Stany i ceny aktualizują się z pliku hurtowni, produkty w WooCommerce powstają przez REST API.",
-    highlight:
-      "WooCommerce + BaseLinker + powiązania magazynów z hurtownią",
+      "W sklepie Części Jaworscy BaseLinker obsługuje zamówienia ze sklepu i z Allegro. Przy przebudowie katalogu drzewo pojazdów trafiło do osobnej taksonomii, żeby synchronizacja kategorii go nie nadpisała. Po przeniesieniu sklepu na nowy serwer przepiąłem integrację na nowe klucze WooCommerce REST API i sprawdziłem ją testowym zamówieniem.",
+    highlight: "BaseLinker nietknięty przy przebudowie i przeprowadzce sklepu",
   },
   "tworzenie-wtyczek-wordpress": {
     projectSlug: "lumikids",

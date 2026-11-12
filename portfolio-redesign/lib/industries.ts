@@ -92,7 +92,13 @@ export const INDUSTRY_CASES: Record<string, { projectSlug: string; note: string 
     }
   ],
   "tworzenie-stron-dla-influencerow": [],
-  "tworzenie-stron-dla-streamerow": []
+  "tworzenie-stron-dla-streamerow": [],
+  "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi": [
+    {
+      "projectSlug": "czesci-jaworscy",
+      "note": "Części do busów Renault, Ford, Opel, Nissan i Fiat: ponad 11 tysięcy produktów, dobór po marce, modelu i generacji, numer OEM i VIN, BaseLinker i Allegro bez zmian."
+    }
+  ]
 };
 
 /** Usługi technologiczne powiązane z branżą. */
@@ -1739,14 +1745,6 @@ export const industries: Industry[] = [
   },
   {
     slug: "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi",
-    inProgress: {
-      label: "jedna w toku",
-      heading: "Sklep z częściami, nad którym pracuję",
-      body: [
-        "Przebudowuję sklep z nowymi i używanymi częściami do samochodów dostawczych: około 10 tysięcy produktów na WooCommerce, zamówienia i stany w BaseLinkerze, równoległa sprzedaż na Allegro, OLX, OTOMOTO, Ovoko i eBay. Nazwę pokażę po oddaniu sklepu.",
-        "Ponad tysiąc kategorii z Allegro zebrałem w 16 grup w menu. Reguła rozpoznająca generację, rocznik, silnik i modele bliźniacze z nazw produktów poprawiła przypisania 887 części, a panel w WordPressie pozwala poprawić je ręcznie bez nadpisywania przez automat. Do tego wyszukiwarka po numerze OEM, zapytanie o część po numerze VIN i przekierowania sprzedanych części na grupę w tym samym modelu auta."
-      ]
-    },
     title: "Części samochodowe",
     keyword: "sklep internetowy z częściami samochodowymi",
     metaTitle: "Sklep internetowy z częściami samochodowymi na WooCommerce",
@@ -1755,7 +1753,7 @@ export const industries: Industry[] = [
     lead: "Tworzę sklepy z częściami samochodowymi, w których klient może znaleźć odpowiednią część po modelu auta, generacji lub numerze katalogowym, a Ty możesz dalej obsługiwać sprzedaż przez BaseLinker. Pracuję z Wrocławia, zdalnie z firmami z całej Polski i z Niemiec.",
     intro: [
       "Sklep internetowy z częściami samochodowymi musi rozwiązać problem, którego nie ma w zwykłym sklepie: klient może znać nazwę części, ale nie wiedzieć, czy pasuje ona do jego samochodu. Szuka zderzaka do Trafica, wybiera niewłaściwą generację albo nie wie, że ta sama część występuje również w Vivaro. Jeśli sprzedajesz na Allegro i chcesz uruchomić własny sklep, dochodzi kolejny problem. Kategorie, nazwy i opisy produktów były przygotowane pod aukcje, a nie pod wygodne przeglądanie katalogu. Buduję [sklepy WooCommerce](/uslugi/sklepy-internetowe-woocommerce) z wyszukiwaniem po aucie i numerach części. Gdy korzystasz z BaseLinkera, uwzględniam też synchronizację danych, żeby uporządkowany katalog nie rozsypał się przy kolejnej aktualizacji. Szczegóły techniczne opisuję w usłudze [integracja WooCommerce z BaseLinker](/uslugi/integracja-woocommerce-z-baselinker).",
-      "Pracuję nad sklepem z nowymi i używanymi częściami do samochodów dostawczych. Katalog liczy około 10 tysięcy produktów, a dane pochodziły między innymi z Allegro i BaseLinkera. Ponad tysiąc kategorii uporządkowałem w 16 grup części widocznych w menu. Napisałem też reguły rozpoznające modele, generacje i silniki z nazw produktów, dzięki którym poprawiłem przypisania 887 części. Dodałem możliwość ręcznej korekty, której automat nie nadpisuje. Wdrożenie nadal trwa, dlatego opisuję konkretne rozwiązania katalogowe, a nie wyniki sprzedaży."
+      "Przebudowałem sklep [Części Jaworscy](/projekty/czesci-jaworscy) z nowymi i używanymi częściami do samochodów dostawczych. Katalog liczy ponad 11 tysięcy produktów, a dane pochodziły między innymi z Allegro i BaseLinkera. Ponad tysiąc kategorii uporządkowałem w 16 grup części widocznych w menu. Napisałem też reguły rozpoznające modele, generacje i silniki z nazw produktów, dzięki którym poprawiłem przypisania 887 części. Dodałem możliwość ręcznej korekty, której automat nie nadpisuje. Na koniec przeniosłem sklep na nowy serwer razem z zamówieniami, zdjęciami i integracją z BaseLinkerem."
     ],
     pains: [
       {
@@ -1846,7 +1844,7 @@ export const industries: Industry[] = [
       },
       {
         q: "Co jeśli marka i model auta są zapisane tylko w nazwie produktu?",
-        a: "Mogę przygotować reguły odczytujące te informacje z nazw. W realizowanym sklepie z częściami do samochodów dostawczych zastosowałem takie rozwiązanie do rozpoznawania między innymi generacji, roczników i silników. Reguły poprawiły przypisania 887 części. Nie traktuję jednak automatycznego rozpoznawania jako nieomylnego, dlatego przewiduję ręczną kontrolę i korektę."
+        a: "Mogę przygotować reguły odczytujące te informacje z nazw. W sklepie Części Jaworscy z częściami do samochodów dostawczych zastosowałem takie rozwiązanie do rozpoznawania między innymi generacji, roczników i silników. Reguły poprawiły przypisania 887 części. Nie traktuję jednak automatycznego rozpoznawania jako nieomylnego, dlatego przewiduję ręczną kontrolę i korektę."
       },
       {
         q: "Czy mogę ręcznie poprawić błędne przypisanie części do auta?",
@@ -1862,7 +1860,7 @@ export const industries: Industry[] = [
       },
       {
         q: "Co dzieje się ze stroną sprzedanej części używanej?",
-        a: "Jeżeli konkretna część została sprzedana i jej karta jest usuwana, mogę przygotować przekierowanie 301. W realizowanym sklepie taki adres prowadzi do grupy części dla tego samego modelu samochodu. Klient nie trafia wtedy na błąd 404, tylko może sprawdzić inne dostępne produkty. Przy projektowaniu ustalam, które adresy należy zachować, a które przekierować."
+        a: "Jeżeli konkretna część została sprzedana i jej karta jest usuwana, mogę przygotować przekierowanie 301. W sklepie Części Jaworscy taki adres prowadzi do grupy części dla tego samego modelu samochodu. Klient nie trafia wtedy na błąd 404, tylko może sprawdzić inne dostępne produkty. Przy projektowaniu ustalam, które adresy należy zachować, a które przekierować."
       },
       {
         q: "Czy mogę przenieść produkty z Allegro do własnego sklepu?",
