@@ -6,6 +6,8 @@
 
 export type Industry = {
   slug: string;
+  /** Strona lokalna (miasto), nie branża: bez numeracji i nawigacji między branżami, poza hubem /branze. */
+  local?: { city: string };
   title: string;
   keyword: string;
   metaTitle: string;
@@ -93,6 +95,11 @@ export const INDUSTRY_CASES: Record<string, { projectSlug: string; note: string 
   ],
   "tworzenie-stron-dla-influencerow": [],
   "tworzenie-stron-dla-streamerow": [],
+  "strony-wordpress-wroclaw": [
+    { "projectSlug": "apartamenty-zlota-grota", "note": "Apartamenty z jacuzzi na Starym Mieście we Wrocławiu: strona WordPress z rezerwacją bezpośrednią i samodzielnym zameldowaniem." },
+    { "projectSlug": "czesci-jaworscy", "note": "Sklep WooCommerce z ponad 11 tysiącami części do busów, BaseLinkerem i Allegro, przeniesiony na nowy serwer." },
+    { "projectSlug": "kancelaria-mpiontek", "note": "Strona WordPress kancelarii adwokackiej z Łodzi, cała współpraca prowadzona zdalnie." }
+  ],
   "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi": [
     {
       "projectSlug": "czesci-jaworscy",
@@ -103,6 +110,11 @@ export const INDUSTRY_CASES: Record<string, { projectSlug: string; note: string 
 
 /** Usługi technologiczne powiązane z branżą. */
 export const INDUSTRY_SERVICES: Record<string, string[]> = {
+  "strony-wordpress-wroclaw": [
+    "tworzenie-stron-wordpress",
+    "sklepy-internetowe-woocommerce",
+    "tworzenie-wtyczek-wordpress"
+  ],
   "tworzenie-sklepu-internetowego-z-czesciami-samochodowymi": [
     "sklepy-internetowe-woocommerce",
     "integracja-woocommerce-z-baselinker",
@@ -1943,4 +1955,75 @@ export const industries: Industry[] = [
       "Jeśli zależy Ci tylko na szybkim przeniesieniu aukcji bez sprawdzenia kategorii, zgodności części i synchronizacji, nie będę przedstawiał takiego importu jako gotowego, uporządkowanego sklepu."
     ]
   },
+  {
+    slug: "strony-wordpress-wroclaw",
+    title: "Strony WordPress Wrocław",
+    local: { city: "Wrocław" },
+    keyword: "strony WordPress Wrocław",
+    metaTitle: "Strony WordPress Wrocław | Marcin Siwonia, freelancer",
+    metaDescription: "Tworzę strony WordPress we Wrocławiu na własnym motywie, bez Elementora. Zobacz realizacje, sklepy WooCommerce i zasady bezpośredniej współpracy.",
+    h1: "Strony WordPress Wrocław",
+    lead: "Tworzę strony WordPress dla firm z Wrocławia na własnym motywie, bez Elementora i ciężkich kreatorów. Sam piszę kod, rozmawiam z klientem i dbam o szybkość strony, techniczne SEO oraz wygodną edycję treści.",
+    intro: [
+      "Strony WordPress we Wrocławiu tworzę jako niezależny programista z działalnością w tym mieście. Nazywam się Marcin Siwonia i komercyjnie tworzę strony internetowe od 2020 roku. W latach 2020-2022 pracowałem jako frontend developer w software house we Wrocławiu, a od końca 2022 roku działam jako freelancer. Projektuję i programuję strony WordPress, sklepy WooCommerce oraz rozwiązania na zamówienie. Nie przekazuję projektu anonimowemu zespołowi: od pierwszej rozmowy po wdrożenie masz kontakt bezpośrednio ze mną. Współpracuję z firmami z Wrocławia, całej Polski i Niemiec.",
+      "Jedną z moich wrocławskich realizacji jest strona [Apartamentów Złota Grota](/projekty/apartamenty-zlota-grota) na Starym Mieście. Przygotowałem stronę WordPress dla apartamentów z jacuzzi, z rezerwacją bezpośrednią bez prowizji dla portalu i samodzielnym zameldowaniem. Realizuję też większe projekty sprzedażowe. Dla firmy [Części Jaworscy](/projekty/czesci-jaworscy) z Pakszyna pod Gnieznem przebudowałem sklep WooCommerce z ponad 11 tysiącami części do busów: dobór części po marce, modelu i generacji, wyszukiwarka po numerze OEM, BaseLinker i Allegro bez przerwy w sprzedaży, a na koniec przeniesienie sklepu na nowy serwer z ponad tysiącem zamówień.",
+    ],
+    pains: [
+      { title: "Wolna strona na telefonie", body: "Strona otwiera się długo, szczególnie na telefonie. Ciężki motyw i rozbudowany kreator potrafią spowolnić ją jeszcze bardziej. Tworzę strony na własnym motywie WordPress, bez Elementora. Przed oddaniem projektu dążę do wyniku Lighthouse 90+ na telefonie i LCP poniżej 2,5 sekundy." },
+      { title: "Każda zmiana treści wymaga programisty", body: "Zmiana opisu usługi, nagłówka czy zdjęcia nie powinna wymagać edytowania kodu. Przygotowuję strony WordPress, w których treściami zarządzasz sam w panelu. Po wdrożeniu przeprowadzam szkolenie z obsługi, żeby codzienne zmiany nie wymagały mojego udziału." },
+      { title: "Strona bez technicznych podstaw SEO", body: "Brak uporządkowanych nagłówków, mapy strony czy danych strukturalnych utrudnia wyszukiwarkom zrozumienie witryny. Przy tworzeniu strony zajmuję się technicznymi podstawami SEO i konfiguracją Google Search Console. Nie obiecuję konkretnych pozycji w Google, bo samo wdrożenie techniczne ich nie gwarantuje." },
+      { title: "Trudny kontakt z wykonawcą", body: "Współpraca komplikuje się, gdy ustalenia przechodzą przez kilka osób, a programista nie uczestniczy w rozmowach. U mnie rozmawiasz bezpośrednio z osobą, która pisze kod. Prowadzę ograniczoną liczbę projektów jednocześnie, a po każdym etapie udostępniam link do wersji testowej." },
+    ],
+    mustHave: [
+      { title: "Strona na własnym motywie", body: "Sam programuję motyw dopasowany do projektu, bez Elementora i ciężkich kreatorów. Nie opieram realizacji na gotowym szablonie, do którego trzeba dopasowywać treści. Dostajesz stronę WordPress, której kod przygotowuję osobiście." },
+      { title: "Samodzielna edycja treści", body: "Po wdrożeniu zarządzasz treściami z poziomu panelu WordPress. Nie musisz znać programowania, żeby zmienić teksty czy zdjęcia. W ramach oddania strony przeprowadzam szkolenie z jej obsługi." },
+      { title: "Optymalizacja wydajności", body: "Przed oddaniem strony pracuję nad wynikiem Lighthouse 90+ na telefonie i LCP poniżej 2,5 sekundy. To cele techniczne realizacji, a nie obietnica identycznych pomiarów w każdych warunkach. Mogę też przyspieszyć istniejącą stronę WordPress." },
+      { title: "Techniczne podstawy SEO", body: "Przygotowuję strukturę nagłówków, mapę strony, dane strukturalne i Google Search Console. Zajmuję się elementami technicznymi, na które mam wpływ przy wdrożeniu. Nie deklaruję gwarantowanego miejsca w wynikach wyszukiwania." },
+      { title: "Dostępność i obsługa klawiaturą", body: "Przy tworzeniu strony uwzględniam zasady dostępności WCAG, między innymi obsługę klawiaturą i czytelność formularzy. Ze strony mają wygodnie korzystać także osoby, które nie używają myszy." },
+      { title: "Bezpośredni kontakt i podgląd postępów", body: "Od rozmowy o zakresie po oddanie strony współpracujesz ze mną, bez opiekuna klienta i pośredników. Po każdym etapie przesyłam link do wersji testowej, na której sprawdzasz postępy. Cały projekt mogę przeprowadzić zdalnie, także dla firmy spoza Wrocławia." },
+    ],
+    stack: [
+      { label: "WordPress na własnym motywie", body: "Tworzę strony internetowe WordPress dla firm, które chcą samodzielnie zarządzać treścią i nie potrzebują ciężkiego kreatora wizualnego. Piszę własny motyw zamiast budować stronę w Elementorze. Pracuję też z Next.js, a technologię dobieram do zakresu projektu." },
+      { label: "Sklepy WooCommerce", body: "Tworzę sklepy WooCommerce dla firm z Wrocławia i zdalnie dla firm z innych miejscowości. Wdrażam płatności oraz integracje z InPostem, BaseLinkerem i Allegro. Przykładem jest przebudowa sklepu Części Jaworscy z ponad 11 tysiącami produktów, wyszukiwarką numerów OEM i doborem części do konkretnych modeli busów." },
+      { label: "Wtyczki WordPress na zamówienie", body: "Tworzę wtyczki WordPress dopasowane do potrzeb projektu. Jeśli standardowe funkcje WordPressa lub WooCommerce nie wystarczają, przygotowuję brakujące rozwiązanie w kodzie. Zakres działania wtyczki ustalam na podstawie wymagań konkretnego projektu." },
+      { label: "SEO techniczne i wydajność", body: "Zajmuję się przyspieszaniem stron WordPress i technicznymi elementami SEO: wynikiem Lighthouse, LCP, strukturą nagłówków, mapą strony, danymi strukturalnymi i Google Search Console. Uwzględniam też dostępność WCAG, w tym nawigację klawiaturą i czytelne formularze." },
+    ],
+    pricing: {
+      time: "2-6 tygodni",
+      note: "Koszt strony WordPress zależy od zakresu projektu, potrzebnych funkcji, liczby podstron i integracji z innymi systemami. Inaczej wyceniam stronę firmową z edycją treści, a inaczej sklep WooCommerce z wyszukiwarką produktów, integracją z BaseLinkerem czy wtyczką na zamówienie. Wycenę przygotowuję po rozmowie o wymaganiach, kiedy wiem, co mam zaprogramować. Prosta wizytówka zajmuje zwykle 2-3 tygodnie, typowa strona firmowa 4-6 tygodni, a sklep dłużej.",
+    },
+    headings: {
+      pains: "Kiedy firmowa strona WordPress wymaga zmian?",
+      mustHave: "Co dostajesz, zamawiając stronę WordPress we Wrocławiu",
+      cases: "Strony WordPress i sklepy z mojego portfolio",
+      stack: "WordPress we Wrocławiu: strony, sklepy i wtyczki",
+      pricing: "Ile trwa i od czego zależy koszt strony WordPress we Wrocławiu?",
+      faq: "Strony WordPress Wrocław: pytania",
+    },
+    process: [
+      { step: "01", title: "Rozmowa o projekcie", body: "Zaczynam od rozmowy online o firmie, zakresie strony i funkcjach, których potrzebujesz. Ustalam, czy chodzi o stronę firmową, sklep WooCommerce czy rozwiązanie na zamówienie. Rozmawiam bezpośrednio z osobą decyzyjną, żeby ustalenia nie przechodziły przez pośredników." },
+      { step: "02", title: "Zakres i termin", body: "Na podstawie rozmowy określam zakres prac i termin realizacji. Termin podaję po poznaniu wymagań, a nie przed ustaleniem, co dokładnie mam przygotować." },
+      { step: "03", title: "Programowanie strony", body: "Sam piszę kod i przygotowuję motyw WordPress bez Elementora. Jeśli realizacja obejmuje sklep, zajmuję się też funkcjami WooCommerce i uzgodnionymi integracjami. Nie przekazuję programowania innemu zespołowi." },
+      { step: "04", title: "Wersja testowa", body: "Po każdym etapie udostępniam link do wersji testowej, na której sprawdzasz postępy i zgłaszasz uwagi. Przed oddaniem sprawdzam wydajność, techniczne SEO i dostępność strony." },
+      { step: "05", title: "Wdrożenie i szkolenie", body: "Po zakończeniu prac uruchamiam stronę i pokazuję, jak samodzielnie edytować treści w panelu. Jeśli potrzebujesz dalszego wsparcia, mogę zająć się stroną po wdrożeniu, bez umowy na rok." },
+    ],
+    notFor: [
+      "Zleceń polegających wyłącznie na podmianie tekstów w gotowym motywie z Elementorem. Tworzę strony na własnym motywie i sam odpowiadam za kod.",
+      "Projektów, w których nie mogę rozmawiać z osobą podejmującą decyzje. Bezpośredni kontakt jest częścią mojego sposobu pracy.",
+      "Stron „na wczoraj” bez przygotowanych treści. Termin ustalam po rozmowie o zakresie, z czasem na przygotowanie i sprawdzenie wdrożenia.",
+    ],
+    faq: [
+      { q: "Ile kosztuje strona WordPress we Wrocławiu?", a: "Koszt zależy od zakresu strony, wymaganych funkcji i integracji. Prosta strona firmowa i rozbudowany sklep WooCommerce to zupełnie inna ilość pracy. Każde zlecenie wyceniam indywidualnie po rozmowie o wymaganiach, dlatego nie podaję jednej ceny dla wszystkich stron." },
+      { q: "Czy muszę spotkać się osobiście, żeby zamówić stronę?", a: "Nie. Cały proces prowadzę online, od pierwszej rozmowy po szkolenie z obsługi WordPressa. Po każdym etapie udostępniam link do wersji testowej. Tak współpracuję również z klientami spoza Wrocławia, na przykład z Łodzi, gdzie przygotowałem stronę WordPress dla [kancelarii adwokackiej Marii Piontek](/projekty/kancelaria-mpiontek)." },
+      { q: "Freelancer czy agencja z Wrocławia: co wybrać?", a: "To zależy od zakresu projektu i sposobu współpracy, którego potrzebujesz. W agencji nad realizacją pracuje kilka osób, a u mnie rozmawiasz bezpośrednio z programistą, który robi stronę. W latach 2020-2022 pracowałem jako frontend developer w software house we Wrocławiu, a od końca 2022 roku działam samodzielnie. Prowadzę ograniczoną liczbę projektów jednocześnie i nie udaję wieloosobowego zespołu." },
+      { q: "Ile trwa zrobienie strony WordPress?", a: "Prosta wizytówka firmowa zajmuje zwykle 2-3 tygodnie, a typowa strona firmowa 4-6 tygodni. Sklep WooCommerce wymaga więcej czasu, szczególnie gdy potrzebne są integracje, niestandardowe funkcje albo przeniesienie istniejącego sklepu. Dokładny termin podaję po omówieniu zakresu prac." },
+      { q: "Czy zajmiesz się stroną po wdrożeniu?", a: "Tak. Prowadzę [stałą opiekę nad stronami WordPress](/uslugi/opieka-wordpress) bez umowy na rok i przyspieszam istniejące witryny. Po oddaniu nowej strony przeprowadzam szkolenie, żebyś mógł samodzielnie zarządzać treściami." },
+      { q: "Czy przeniesiesz moją obecną stronę na nowy WordPress bez utraty pozycji?", a: "Przy przebudowie dbam o techniczne podstawy SEO: strukturę nagłówków, mapę strony, dane strukturalne i Google Search Console. Zakres przenosin, w tym przekierowania starych adresów, ustalam po zapoznaniu się z obecną witryną. Zachowania pozycji w Google nie mogę jednak zagwarantować, bo zależy ono także od czynników poza samą stroną." },
+      { q: "Czy tworzysz sklepy WooCommerce z integracją BaseLinker i Allegro?", a: "Tak. Robię sklepy WooCommerce z integracjami BaseLinker, Allegro, InPost i systemami płatności. W sklepie Części Jaworscy przebudowałem katalog ponad 11 tysięcy części do busów, wdrożyłem wyszukiwanie po numerze OEM i dobór części po pojeździe. Prace przebiegły bez przerwy w sprzedaży, a przeniesienie na nowy serwer objęło ponad tysiąc zamówień. Więcej opisuję na stronie [sklepy internetowe WooCommerce](/uslugi/sklepy-internetowe-woocommerce)." },
+      { q: "Czy zrobisz stronę WordPress dla firmy spoza Wrocławia?", a: "Tak. Mam działalność we Wrocławiu, ale pracuję z firmami z całej Polski i z Niemiec. Wszystkie ustalenia prowadzę online, a postępy pokazuję na wersjach testowych. Zakres usługi opisuję szerzej na stronie [tworzenie stron WordPress](/uslugi/tworzenie-stron-wordpress)." },
+    ],
+    cta: "Opisz mi swoją stronę albo sklep WooCommerce, a porozmawiamy o zakresie, terminie i wycenie projektu.",
+  },
 ];
+
+export const branchIndustries = industries.filter((i) => !i.local);

@@ -1,7 +1,7 @@
 import { services } from "@/lib/services";
 import { posts } from "@/lib/posts";
 import { projects } from "@/lib/projects";
-import { industries } from "@/lib/industries";
+import { branchIndustries } from "@/lib/industries";
 import { PERSON_ID, SITE_URL } from "@/lib/schema";
 
 const PILLAR_SLUGS = [
@@ -45,7 +45,7 @@ ${services.map((s) => `- [${s.title}](${SITE_URL}/uslugi/${s.slug}): ${s.metaDes
 - [Test dostępności strony](${SITE_URL}/sprawdz-dostepnosc): darmowy test online 17 wymagań WCAG 2.1 w kodzie HTML podanej strony, wynik od razu, pełny raport na e-mail. Nie sprawdza kontrastu ani obsługi klawiaturą, nie potwierdza zgodności z przepisami.
 
 ## Strony dla branż
-${industries.map((i) => `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, realizacja ${i.pricing.time}`).join("\n")}
+${branchIndustries.map((i) => `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, realizacja ${i.pricing.time}`).join("\n")}
 
 ## Najważniejsze artykuły
 ${pillarPosts.map((p) => `- [${p!.title}](${SITE_URL}/blog/${p!.slug}): ${p!.excerpt}`).join("\n")}

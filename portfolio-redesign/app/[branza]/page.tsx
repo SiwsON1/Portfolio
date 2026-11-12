@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { industries, INDUSTRY_CASES, INDUSTRY_SERVICES } from "@/lib/industries";
+import { branchIndustries, industries, INDUSTRY_CASES, INDUSTRY_SERVICES } from "@/lib/industries";
 import { services } from "@/lib/services";
 import { projects } from "@/lib/projects";
 import { plainText, renderInlineLinks } from "@/lib/renderInlineLinks";
@@ -71,9 +71,9 @@ export default async function BranzaPage({
   const ind = industries.find((x) => x.slug === branza);
   if (!ind) notFound();
 
-  const idx = industries.findIndex((x) => x.slug === branza);
-  const next = industries[(idx + 1) % industries.length];
-  const prev = industries[(idx - 1 + industries.length) % industries.length];
+  const idx = branchIndustries.findIndex((x) => x.slug === branza);
+  const next = branchIndustries[(idx + 1) % branchIndustries.length];
+  const prev = branchIndustries[(idx - 1 + branchIndustries.length) % branchIndustries.length];
 
   const cases = (INDUSTRY_CASES[ind.slug] ?? [])
     .map((c) => ({ ...c, project: projects.find((p) => p.slug === c.projectSlug) }))
@@ -96,11 +96,18 @@ export default async function BranzaPage({
     url: `${SITE_URL}/${ind.slug}`,
   };
 
-  const breadcrumbs = breadcrumbsSchema([
-    { name: "Strona główna", path: "/" },
-    { name: "Branże", path: "/branze" },
-    { name: ind.title, path: `/${ind.slug}` },
-  ]);
+  const breadcrumbs = breadcrumbsSchema(
+    ind.local
+      ? [
+          { name: "Strona główna", path: "/" },
+          { name: ind.title, path: `/${ind.slug}` },
+        ]
+      : [
+          { name: "Strona główna", path: "/" },
+          { name: "Branże", path: "/branze" },
+          { name: ind.title, path: `/${ind.slug}` },
+        ]
+  );
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -126,18 +133,20 @@ export default async function BranzaPage({
         />
 
         <div className="relative flex items-center justify-between mb-16 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
-          <Link href="/branze" className="hover:text-peach transition-colors" data-cursor="WSTECZ">
-            ← Wszystkie branże
+          <Link href={ind.local ? "/uslugi" : "/branze"} className="hover:text-peach transition-colors" data-cursor="WSTECZ">
+            {ind.local ? "← Wszystkie usługi" : "← Wszystkie branże"}
           </Link>
-          <span>
-            Branża {String(idx + 1).padStart(2, "0")} / {String(industries.length).padStart(2, "0")}
-          </span>
+          {!ind.local && (
+            <span>
+              Branża {String(idx + 1).padStart(2, "0")} / {String(branchIndustries.length).padStart(2, "0")}
+            </span>
+          )}
           <span className="hidden md:inline">{ind.title}</span>
         </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-2">
-            <p className="eyebrow">Branża</p>
+            <p className="eyebrow">{ind.local?.city ?? "Branża"}</p>
           </div>
           <div className="md:col-span-7">
             <h1
@@ -182,7 +191,7 @@ export default async function BranzaPage({
           </div>
           <div className="py-7 sm:pl-8">
             <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
-              Realizacje w tej branży
+              {ind.local ? "Realizacje" : "Realizacje w tej branży"}
             </dt>
             <dd
               className="font-display italic text-ink"
@@ -315,14 +324,16 @@ export default async function BranzaPage({
 
         {cases.length > 0 ? (
           <div className={cases.length > 1 ? "grid grid-cols-1 md:grid-cols-2 gap-px bg-line" : "border-y border-line"}>
-            {cases.map((c) => (
+            {cases.map((c, i) => {
+              const wide = cases.length % 2 === 1 && i === cases.length - 1;
+              return (
               <Link
                 key={c.projectSlug}
                 href={`/projekty/${c.project!.slug}`}
-                className={`group block bg-bg p-6 md:p-8 hover:bg-bg-elev transition-colors duration-700 ${cases.length === 1 ? "md:grid md:grid-cols-12 md:gap-10 md:items-center" : ""}`}
+                className={`group block bg-bg p-6 md:p-8 hover:bg-bg-elev transition-colors duration-700 ${wide ? `md:grid md:grid-cols-12 md:gap-10 md:items-center${cases.length > 1 ? " md:col-span-2" : ""}` : ""}`}
                 data-cursor="CASE"
               >
-                <div className={`relative aspect-[16/10] overflow-hidden bg-bg-elev mb-7 ${cases.length === 1 ? "md:col-span-7 md:mb-0" : ""}`}>
+                <div className={`relative aspect-[16/10] overflow-hidden bg-bg-elev mb-7 ${wide ? "md:col-span-7 md:mb-0" : ""}`}>
                   <Image
                     src={c.project!.image}
                     alt={`${c.project!.client}, ${c.project!.title}`}
@@ -331,7 +342,7 @@ export default async function BranzaPage({
                     sizes="(max-width: 768px) 100vw, 55vw"
                   />
                 </div>
-                <div className={cases.length === 1 ? "md:col-span-5" : undefined}>
+                <div className={wide ? "md:col-span-5" : undefined}>
                 <p className="eyebrow mb-3">
                   {c.project!.client} · {c.project!.year}
                 </p>
@@ -355,7 +366,8 @@ export default async function BranzaPage({
                 </ul>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         ) : ind.inProgress ? (
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -440,8 +452,8 @@ export default async function BranzaPage({
             </h2>
           </div>
         </div>
-        <ol className="relative grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6">
-          <div aria-hidden className="hidden md:block absolute left-0 right-0 top-[7px] h-px bg-line" />
+        <ol className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
+          <div aria-hidden className="hidden lg:block absolute left-0 right-0 top-[7px] h-px bg-line" />
           {ind.process.map((step) => (
             <li key={step.step} className="relative">
               <div className="flex items-center gap-3 mb-5">
@@ -656,38 +668,40 @@ export default async function BranzaPage({
       </section>
 
       {/* PREV / NEXT */}
-      <nav className="grid grid-cols-1 md:grid-cols-2 border-t border-line">
-        <Link
-          href={`/${prev.slug}`}
-          className="group relative px-6 py-12 md:px-10 md:py-16 hover:bg-bg-elev transition-colors duration-500 border-b md:border-b-0 md:border-r border-line"
-          data-cursor="POPRZEDNIA"
-        >
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
-            ← Poprzednia branża
-          </p>
-          <p
-            className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
-            style={{ fontSize: "clamp(1.5rem, 1rem + 1.5vw, 2.5rem)", letterSpacing: "-0.025em", lineHeight: 1.05 }}
+      {!ind.local && (
+        <nav className="grid grid-cols-1 md:grid-cols-2 border-t border-line">
+          <Link
+            href={`/${prev.slug}`}
+            className="group relative px-6 py-12 md:px-10 md:py-16 hover:bg-bg-elev transition-colors duration-500 border-b md:border-b-0 md:border-r border-line"
+            data-cursor="POPRZEDNIA"
           >
-            {prev.title}
-          </p>
-        </Link>
-        <Link
-          href={`/${next.slug}`}
-          className="group relative px-6 py-12 md:px-10 md:py-16 hover:bg-bg-elev transition-colors duration-500 text-right"
-          data-cursor="NASTĘPNA"
-        >
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
-            Następna branża →
-          </p>
-          <p
-            className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
-            style={{ fontSize: "clamp(1.5rem, 1rem + 1.5vw, 2.5rem)", letterSpacing: "-0.025em", lineHeight: 1.05 }}
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
+              ← Poprzednia branża
+            </p>
+            <p
+              className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
+              style={{ fontSize: "clamp(1.5rem, 1rem + 1.5vw, 2.5rem)", letterSpacing: "-0.025em", lineHeight: 1.05 }}
+            >
+              {prev.title}
+            </p>
+          </Link>
+          <Link
+            href={`/${next.slug}`}
+            className="group relative px-6 py-12 md:px-10 md:py-16 hover:bg-bg-elev transition-colors duration-500 text-right"
+            data-cursor="NASTĘPNA"
           >
-            {next.title}
-          </p>
-        </Link>
-      </nav>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-3">
+              Następna branża →
+            </p>
+            <p
+              className="font-display italic text-ink group-hover:text-peach transition-colors duration-500"
+              style={{ fontSize: "clamp(1.5rem, 1rem + 1.5vw, 2.5rem)", letterSpacing: "-0.025em", lineHeight: 1.05 }}
+            >
+              {next.title}
+            </p>
+          </Link>
+        </nav>
+      )}
 
       <script
         type="application/ld+json"

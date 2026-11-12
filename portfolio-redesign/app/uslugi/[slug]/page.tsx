@@ -16,7 +16,7 @@ import { SeoBlock } from "@/components/service/SeoBlock";
 import { areaServed, jsonLd, personRef, SITE_URL } from "@/lib/schema";
 import { MobileReveal } from "@/components/service/MobileReveal";
 import { PluginArchive } from "@/components/service/PluginArchive";
-import { industries, INDUSTRY_SERVICES } from "@/lib/industries";
+import { branchIndustries, INDUSTRY_SERVICES } from "@/lib/industries";
 
 /** Kursywa na dwóch ostatnich słowach, jak w nagłówkach stron branżowych. */
 function editorial(text: string) {
@@ -95,8 +95,8 @@ export default async function UslugaPage({
   // Strona www jest ogólnym węzłem, więc linkuje do wszystkich branż.
   const forIndustries =
     s.slug === "tworzenie-stron-www"
-      ? industries
-      : industries.filter((ind) => INDUSTRY_SERVICES[ind.slug]?.includes(s.slug));
+      ? branchIndustries
+      : branchIndustries.filter((ind) => INDUSTRY_SERVICES[ind.slug]?.includes(s.slug));
 
   const faqSchema = {
     "@context": "https://schema.org",

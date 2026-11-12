@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { industries, INDUSTRY_CASES } from "@/lib/industries";
+import { branchIndustries, INDUSTRY_CASES } from "@/lib/industries";
 import { projects } from "@/lib/projects";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { jsonLd } from "@/lib/schema";
@@ -35,14 +35,14 @@ export default function StronyDlaPage() {
           <p className="mt-8 prose-bound text-ink-mute text-lead">
             Kancelaria pyta o tajemnicę zawodową, gabinet o rejestrację pacjentów, producent mebli
             o katalog dla hurtowni, a streamer o to, czy strona pokaże, że jest na żywo. Poniżej
-            osiem branż z zakresem, terminami i realizacjami, jeśli takie mam. Jeśli Twojej tu
+            {branchIndustries.length} branż z zakresem, terminami i realizacjami, jeśli takie mam. Jeśli Twojej tu
             nie ma, napisz: zakres i tak ustalam indywidualnie.
           </p>
         </div>
       </header>
 
       <ol className="border-t border-line">
-        {industries.map((ind, i) => {
+        {branchIndustries.map((ind, i) => {
           const cases = (INDUSTRY_CASES[ind.slug] ?? [])
             .map((c) => projects.find((p) => p.slug === c.projectSlug))
             .filter(Boolean);

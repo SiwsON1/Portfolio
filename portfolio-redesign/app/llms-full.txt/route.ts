@@ -1,4 +1,4 @@
-import { industries } from "@/lib/industries";
+import { branchIndustries } from "@/lib/industries";
 import { posts } from "@/lib/posts";
 import { services } from "@/lib/services";
 import { PERSON_ID, SITE_URL } from "@/lib/schema";
@@ -63,7 +63,7 @@ ${WCAG_PRAWO.map((fact) => `- ${fact.atrybut}: ${fact.wartosc}`).join("\n")}
 
 ${faqMarkdown(WCAG_FAQ)}`;
 
-  const industryContent = industries.map((industry) => `## ${industry.title}
+  const industryContent = branchIndustries.map((industry) => `## ${industry.title}
 
 URL: ${SITE_URL}/${industry.slug}
 

@@ -1,0 +1,93 @@
+META_TITLE: Strony WordPress Wrocław | Marcin Siwonia, freelancer
+
+META_DESCRIPTION: Tworzę strony WordPress we Wrocławiu na własnym motywie, bez Elementora. Zobacz realizacje, sklepy WooCommerce i poznaj zasady bezpośredniej współpracy.
+
+H1: Strony WordPress Wrocław
+
+LEAD: Tworzę strony WordPress dla firm z Wrocławia na własnym motywie, bez Elementora i ciężkich kreatorów. Sam piszę kod, rozmawiam z klientem i dbam o szybkość strony, techniczne SEO oraz wygodną edycję treści.
+
+WSTĘP_1: Strony WordPress Wrocław to usługa, którą realizuję jako niezależny programista z działalnością we Wrocławiu. Nazywam się Marcin Siwonia i komercyjnie tworzę strony internetowe od 2020 roku. W latach 2020 do 2022 pracowałem jako frontend developer w software house we Wrocławiu, a od końca 2022 roku działam jako freelancer. Projektuję i programuję strony WordPress, sklepy WooCommerce oraz rozwiązania na zamówienie. Nie przekazuję projektu anonimowemu zespołowi. Od pierwszej rozmowy po wdrożenie masz kontakt bezpośrednio ze mną. Współpracuję z firmami z Wrocławia, całej Polski i Niemiec.
+
+WSTĘP_2: Jedną z moich wrocławskich realizacji jest strona Apartamentów Złota Grota na Starym Mieście. Przygotowałem WordPress dla apartamentów z jacuzzi, z możliwością bezpośredniej rezerwacji bez prowizji dla portalu i samodzielnego zameldowania. Realizuję też większe projekty sprzedażowe. Dla firmy Części Jaworscy z Pakszyna pod Gnieznem przebudowałem sklep WooCommerce z ponad 11 tysiącami części do busów. Wdrożyłem dobór części po marce, modelu i generacji, wyszukiwanie po numerze OEM oraz integracje z BaseLinkerem i Allegro. Przebudowa odbyła się bez przerwy w sprzedaży, a przeniesienie sklepu na nowy serwer objęło ponad tysiąc zamówień.
+
+H2_PROBLEMY: Kiedy firmowa strona WordPress wymaga zmian?
+
+PROBLEM_1: Wolna strona na telefonie | Strona otwiera się długo, szczególnie na urządzeniach mobilnych. Ciężki motyw i rozbudowany kreator mogą dodatkowo obciążać jej działanie. Tworzę strony na własnym motywie WordPress, bez Elementora. Przed oddaniem projektu dążę do wyniku Lighthouse 90+ na telefonie i LCP poniżej 2,5 sekundy.
+
+PROBLEM_2: Każda zmiana treści wymaga pomocy programisty | Zmiana opisu usługi, nagłówka czy zdjęcia nie powinna wymagać edytowania kodu. Przygotowuję strony WordPress z możliwością samodzielnego zarządzania treściami w panelu. Po wdrożeniu przeprowadzam szkolenie z obsługi, żeby klient mógł wprowadzać codzienne zmiany bez mojego udziału.
+
+PROBLEM_3: Strona nie jest przygotowana pod techniczne SEO | Brak uporządkowanych nagłówków, mapy strony czy danych strukturalnych utrudnia wyszukiwarkom interpretowanie witryny. Podczas tworzenia strony zajmuję się technicznymi podstawami SEO i Google Search Console. Nie obiecuję konkretnych pozycji w Google, ponieważ samo wdrożenie techniczne nie gwarantuje wyników wyszukiwania.
+
+PROBLEM_4: Kontakt z wykonawcą jest utrudniony | Współpraca komplikuje się, gdy ustalenia przechodzą przez kilka osób, a programista nie uczestniczy w rozmowach. U mnie kontaktujesz się bezpośrednio z osobą, która pisze kod. Prowadzę ograniczoną liczbę projektów jednocześnie, a po każdym etapie udostępniam link do wersji testowej.
+
+H2_CO_DOSTAJESZ: Tworzenie stron WordPress Wrocław. Co otrzymujesz w ramach współpracy?
+
+ELEMENT_1: Stronę WordPress na własnym motywie | Sam programuję motyw dopasowany do projektu, bez Elementora i ciężkich kreatorów stron. Nie opieram realizacji na gotowym szablonie, w którym trzeba dopasowywać treści do narzuconych elementów. Otrzymujesz stronę zbudowaną w WordPressie, której kod przygotowuję osobiście.
+
+ELEMENT_2: Samodzielną edycję treści | Po wdrożeniu możesz zarządzać treściami strony z poziomu panelu WordPress. Nie musisz znać języków programowania, żeby zmienić teksty. Przeprowadzam też szkolenie z obsługi, podczas którego poznajesz sposób pracy z przygotowaną stroną.
+
+ELEMENT_3: Optymalizację wydajności | Przed oddaniem strony pracuję nad osiągnięciem wyniku Lighthouse 90+ na telefonie oraz LCP poniżej 2,5 sekundy. Te wartości traktuję jako cele techniczne realizacji, a nie obietnicę identycznych pomiarów w każdych warunkach. Mogę również przyspieszyć istniejącą stronę WordPress.
+
+ELEMENT_4: Techniczne podstawy SEO | Przygotowuję strukturę nagłówków, mapę strony, dane strukturalne oraz Google Search Console. Zajmuję się elementami technicznymi, na które mam wpływ podczas wdrożenia. Nie deklaruję gwarantowanego miejsca w wynikach wyszukiwania.
+
+ELEMENT_5: Dostępność i obsługę klawiaturą | Uwzględniam zasady dostępności WCAG podczas tworzenia strony. Zwracam uwagę między innymi na obsługę klawiaturą i czytelność formularzy. Strona ma być możliwa do obsłużenia również przez osoby, które nie korzystają z myszy.
+
+ELEMENT_6: Bezpośredni kontakt i podgląd postępów | Od rozmowy o zakresie po oddanie strony współpracujesz ze mną, bez opiekuna klienta i pośredników. Po każdym etapie przesyłam link do wersji testowej, na której możesz sprawdzić postępy. Cały projekt mogę przeprowadzić zdalnie, również dla firmy spoza Wrocławia.
+
+H2_TECHNOLOGIE: WordPress Wrocław. Strony, sklepy i rozwiązania na zamówienie
+
+TECH_1: WordPress na własnym motywie | Tworzę strony internetowe WordPress dla firm, które chcą samodzielnie zarządzać treścią i nie potrzebują ciężkiego kreatora wizualnego. Piszę własny motyw zamiast budować stronę w Elementorze. Pracuję również z technologią Next.js, a dobór rozwiązania zależy od zakresu projektu.
+
+TECH_2: Sklepy WooCommerce | Zajmuję się tworzeniem sklepów WooCommerce we Wrocławiu i zdalnie dla firm z innych miejscowości. Wdrażam płatności oraz integracje z InPostem, BaseLinkerem i Allegro. Przykładem jest przebudowa sklepu Części Jaworscy z ponad 11 tysiącami produktów, wyszukiwarką numerów OEM i doborem części do konkretnych modeli busów.
+
+TECH_3: Wtyczki WordPress na zamówienie | Tworzę wtyczki WordPress dopasowane do potrzeb projektu. Jeśli standardowe funkcje WordPressa lub WooCommerce nie obejmują potrzebnego rozwiązania, mogę przygotować je w kodzie. Zakres działania wtyczki ustalam na podstawie wymagań konkretnego projektu.
+
+TECH_4: SEO techniczne i wydajność WordPress | Zajmuję się optymalizacją szybkości stron WordPress oraz technicznymi elementami SEO. Pracuję nad wynikami Lighthouse, LCP, strukturą nagłówków, mapą strony, danymi strukturalnymi i Google Search Console. Uwzględniam również dostępność WCAG, w tym nawigację klawiaturą i czytelne formularze.
+
+H2_PROCES: Jak wygląda tworzenie strony WordPress we Wrocławiu?
+
+KROK_1: Rozmowa o projekcie | Zaczynam od rozmowy online o firmie, zakresie strony i funkcjach, których potrzebujesz. Ustalam, czy projekt dotyczy strony firmowej, sklepu WooCommerce czy rozwiązania na zamówienie. Rozmawiam bezpośrednio z osobą decyzyjną, żeby ustalenia nie przechodziły przez kolejnych pośredników.
+
+KROK_2: Ustalenie zakresu i terminu | Na podstawie rozmowy określam zakres prac oraz termin realizacji. Strona firmowa zajmuje zwykle kilka tygodni, natomiast sklep internetowy wymaga więcej czasu. Termin podaję po poznaniu wymagań, a nie przed ustaleniem, co dokładnie mam przygotować.
+
+KROK_3: Programowanie strony | Sam piszę kod i przygotowuję motyw WordPress bez Elementora. Jeśli realizacja obejmuje sklep, zajmuję się również funkcjami WooCommerce i uzgodnionymi integracjami. Nie przekazuję programowania innemu zespołowi.
+
+KROK_4: Wersja testowa i sprawdzenie działania | Po każdym etapie udostępniam link do wersji testowej. Możesz sprawdzić postępy i odnieść się do przygotowanych elementów. Przed oddaniem zajmuję się wydajnością, technicznym SEO i dostępnością strony.
+
+KROK_5: Wdrożenie i szkolenie | Po zakończeniu prac oddaję stronę i przeprowadzam szkolenie z obsługi WordPressa. Pokazuję, jak samodzielnie edytować treści w panelu. Jeśli potrzebujesz dalszego wsparcia, mogę również zajmować się stroną po wdrożeniu, bez konieczności podpisywania umowy na rok.
+
+H2_CZAS_I_KOSZT: Ile trwa i od czego zależy koszt strony WordPress we Wrocławiu?
+
+CZAS: Stronę firmową realizuję zwykle w kilka tygodni. Sklep WooCommerce wymaga więcej czasu, szczególnie gdy obejmuje integracje lub przebudowę istniejącej sprzedaży. Konkretny termin określam po rozmowie o zakresie.
+
+KOSZT_OPIS: Koszt tworzenia strony WordPress zależy od zakresu projektu, potrzebnych funkcji, stopnia rozbudowania witryny i integracji z innymi systemami. Inaczej wyceniam stronę firmową z możliwością edycji treści, a inaczej sklep WooCommerce z wyszukiwarką produktów, integracją z BaseLinkerem czy dedykowaną wtyczką. Wyceny dokonuję po rozmowie o wymaganiach, kiedy wiem, co mam zaprogramować.
+
+H2_DLA_KOGO_NIE: Jakich projektów WordPress nie przyjmuję?
+
+NIE_1: Gotowy motyw z Elementorem do podmiany tekstów | Nie podejmuję się zleceń polegających wyłącznie na zmianie treści w gotowym motywie z Elementorem. Tworzę strony na własnym motywie WordPress i sam odpowiadam za kod.
+
+NIE_2: Projekt bez kontaktu z osobą decyzyjną | Nie przyjmuję zleceń, w których nie mogę rozmawiać z osobą podejmującą decyzje. Bezpośredni kontakt jest częścią mojego sposobu pracy i pozwala ustalać zakres projektu bez pośredników.
+
+NIE_3: Strona na wczoraj bez przygotowanych treści | Nie przyjmuję projektów wymagających natychmiastowej realizacji, gdy nie ma jeszcze treści do strony. Termin ustalam po rozmowie o zakresie i uwzględniam czas potrzebny na przygotowanie oraz sprawdzenie wdrożenia.
+
+H2_FAQ: Strony WordPress Wrocław. Najczęściej zadawane pytania
+
+FAQ: Ile kosztuje strona WordPress we Wrocławiu? | Koszt zależy od zakresu strony, wymaganych funkcji i integracji. Prosta strona firmowa oraz rozbudowany sklep WooCommerce to różne projekty pod względem ilości pracy. Każde zlecenie wyceniam indywidualnie po rozmowie o wymaganiach. Nie podaję jednej ceny dla wszystkich stron.
+
+FAQ: Czy muszę spotkać się osobiście, żeby zamówić stronę? | Nie. Cały proces mogę przeprowadzić online, od pierwszej rozmowy po szkolenie z obsługi WordPressa. Po każdym etapie udostępniam link do wersji testowej. Tak współpracuję również z klientami spoza Wrocławia, między innymi z Łodzi, gdzie przygotowałem stronę WordPress dla kancelarii adwokackiej Marii Piontek.
+
+FAQ: Freelancer czy agencja z Wrocławia: co wybrać? | Zależy od zakresu projektu i sposobu współpracy, którego potrzebujesz. W agencji nad realizacją mogą pracować różne osoby, natomiast u mnie rozmawiasz bezpośrednio z programistą, który przygotowuje stronę. W latach 2020 do 2022 pracowałem jako frontend developer w software house we Wrocławiu, a od końca 2022 roku działam samodzielnie. Prowadzę ograniczoną liczbę projektów jednocześnie i nie przedstawiam się jako wieloosobowy zespół.
+
+FAQ: Ile trwa zrobienie strony WordPress? | Typowa strona firmowa zajmuje mi kilka tygodni. Przy sklepie WooCommerce czas jest dłuższy, szczególnie gdy potrzebne są integracje, niestandardowe funkcje lub przeniesienie istniejącego sklepu. Dokładny termin podaję po omówieniu zakresu prac.
+
+FAQ: Czy zajmiesz się stroną po wdrożeniu? | Tak. Oferuję stałą opiekę nad stronami WordPress bez konieczności podpisywania umowy na rok. Mogę też zajmować się przyspieszaniem istniejących witryn. Po oddaniu nowej strony przeprowadzam szkolenie, żeby klient mógł samodzielnie zarządzać treściami.
+
+FAQ: Czy przeniesiesz moją obecną stronę na nowy WordPress bez utraty pozycji? | Mogę omówić przebudowę i przeniesienie strony w ramach projektu WordPress. Zajmuję się technicznymi podstawami SEO, w tym strukturą nagłówków, mapą strony, danymi strukturalnymi i Google Search Console. Nie mogę jednak zagwarantować zachowania obecnych pozycji w Google. Zakres migracji i wymagane prace ustalam po zapoznaniu się z istniejącą witryną.
+
+FAQ: Czy tworzysz sklepy WooCommerce z integracją BaseLinker i Allegro? | Tak. Realizuję sklepy WooCommerce z integracjami BaseLinker, Allegro, InPost i systemami płatności. W sklepie Części Jaworscy przebudowałem sprzedaż ponad 11 tysięcy części do busów, wdrożyłem wyszukiwanie po numerze OEM i dobór części po pojeździe. Prace przebiegły bez przerwy w sprzedaży, a migracja na nowy serwer objęła ponad tysiąc zamówień.
+
+FAQ: Czy mogę zamówić stronę WordPress, jeśli moja firma nie jest z Wrocławia? | Tak. Mam działalność we Wrocławiu, ale pracuję z firmami z całej Polski oraz z Niemiec. Wszystkie ustalenia mogę prowadzić online, a postępy udostępniam na wersjach testowych. Przykładem takiej współpracy jest strona WordPress kancelarii adwokackiej Marii Piontek z Łodzi.
+
+CTA: Opisz mi swoją stronę lub sklep WooCommerce, a porozmawiamy o zakresie, terminie i indywidualnej wycenie projektu.
+
+Do uzupełnienia: Brakuje informacji o dokładnym zakresie stałej opieki nad stroną, zasadach rozliczania projektów, liczbie i sposobie zgłaszania poprawek, odpowiedzialności za przygotowanie treści i materiałów graficznych, hostingu i domenie, zakresie szkolenia, zasadach przekazania kodu i dostępów oraz procedurze migracji istniejącej strony z zachowaniem adresów URL i przekierowań. Do rozbudowy sekcji realizacji przydałyby się adresy stron Złota Grota, Części Jaworscy i kancelarii Marii Piontek, materiały pokazujące efekty prac oraz potwierdzone wyniki wydajności. Do potwierdzenia pozostaje również, czy deklarowane cele Lighthouse 90+ i LCP poniżej 2,5 sekundy obowiązują dla każdego typu projektu, a także jaki dokładnie zakres zgodności z WCAG obejmuje usługa.

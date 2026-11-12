@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { projects, PROJECT_SERVICES } from "@/lib/projects";
 import { services, type Service } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
-import { industries, INDUSTRY_CASES } from "@/lib/industries";
+import { branchIndustries, INDUSTRY_CASES } from "@/lib/industries";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
 
 /** Opis 120-160 znaków: długie skracane do pełnych zdań, krótkie uzupełniane o stack. */
@@ -90,7 +90,7 @@ export default async function ProjektPage({
   const projectServices = (PROJECT_SERVICES[p.slug] ?? [])
     .map((slug) => services.find((s) => s.slug === slug))
     .filter((s): s is Service => Boolean(s));
-  const projectIndustries = industries.filter((ind) =>
+  const projectIndustries = branchIndustries.filter((ind) =>
     (INDUSTRY_CASES[ind.slug] ?? []).some((c) => c.projectSlug === p.slug)
   );
 

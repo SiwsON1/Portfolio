@@ -1,0 +1,44 @@
+TRYB: LANDING USŁUGI LOKALNEJ (nie kategoria sklepu, nie produkt). Pisz w 1. osobie liczby pojedynczej (freelancer, nie agencja).
+
+Fraza główna: strony WordPress Wrocław. Warianty frazy z wyników wyszukiwania: tworzenie stron WordPress Wrocław, strony internetowe WordPress Wrocław, WordPress Wrocław, sklepy WooCommerce Wrocław, tworzenie sklepów WooCommerce Wrocław, tworzenie wtyczek WordPress Wrocław.
+Strona: marcinsiwonia.pl, Marcin Siwonia, freelancer, programista WordPress i Next.js.
+
+FAKTY (używaj tylko tych, nic nie dopisuj, żadnych cen ani kwot w zł):
+- Mam działalność we Wrocławiu. W latach 2020-2022 pracowałem jako frontend developer w software house we Wrocławiu, od końca 2022 działam jako freelancer. Komercyjnie tworzę strony od 2020 roku.
+- Pracuję z firmami z Wrocławia i z całej Polski oraz z Niemiec, cały projekt da się przeprowadzić zdalnie: rozmowa online, po każdym etapie link do wersji testowej, szkolenie z obsługi.
+- Sam piszę kod i rozmawiam z klientem bezpośrednio, bez pośredników i bez udawania wieloosobowego zespołu. Prowadzę ograniczoną liczbę projektów naraz.
+- Strony WordPress robię na własnym motywie, bez Elementora i ciężkich kreatorów. Klient sam edytuje treści w panelu.
+- Cele techniczne przed oddaniem: Lighthouse 90+ na telefonie, LCP poniżej 2,5 s. Techniczne SEO: nagłówki, mapa strony, dane strukturalne, Google Search Console. Dostępność wg WCAG (obsługa klawiaturą, czytelne formularze). Bez obiecywania pozycji w Google.
+- Robię też sklepy WooCommerce (płatności, InPost, BaseLinker, Allegro), wtyczki WordPress na zamówienie, przyspieszanie stron WordPress i stałą opiekę bez umowy na rok.
+- Realizacja z Wrocławia: Apartamenty Złota Grota na Starym Mieście we Wrocławiu, strona WordPress z apartamentami z jacuzzi, rezerwacją bezpośrednią bez prowizji dla portalu i samodzielnym zameldowaniem.
+- Realizacja sklepu: Części Jaworscy (Pakszyn pod Gnieznem), przebudowa sklepu WooCommerce z ponad 11 tysiącami części do busów, dobór części po marce, modelu i generacji, wyszukiwarka po numerze OEM, BaseLinker i Allegro bez przerwy w sprzedaży, przeniesienie sklepu na nowy serwer z ponad tysiącem zamówień.
+- Przykład pracy zdalnej: Kancelaria adwokacka Marii Piontek z Łodzi, strona WordPress.
+- Typowy czas: strona firmowa kilka tygodni, sklep dłużej, termin podaję po rozmowie o zakresie.
+- Nie biorę: projektów na gotowym motywie z Elementorem do „podmiany tekstów”, zleceń bez dostępu do decyzyjnej osoby, stron „na wczoraj” bez treści.
+
+Dodaj do FAQ te pytania z konkurencji: „Ile kosztuje strona WordPress we Wrocławiu?” (bez kwot: od czego zależy, wycena po rozmowie), „Czy muszę spotkać się osobiście, żeby zamówić stronę?” (nie trzeba, wszystko online; NIE obiecuj spotkań na żywo), „Freelancer czy agencja z Wrocławia: co wybrać?”, „Ile trwa zrobienie strony WordPress?”, „Czy zajmiesz się stroną po wdrożeniu?”, „Czy przeniesiesz moją obecną stronę na nowy WordPress bez utraty pozycji?”.
+
+FORMAT ODPOWIEDZI (zwykły tekst, dokładnie te etykiety, bez HTML, bez myślników w zdaniach, bez słowa „warto”, H2 w języku frazy):
+META_TITLE: (max 60 znaków, zaczyna się od „Strony WordPress Wrocław”)
+META_DESCRIPTION: (140-155 znaków)
+H1: Strony WordPress Wrocław
+LEAD: (1-2 zdania)
+WSTĘP_1: (akapit z frazą w pierwszym zdaniu)
+WSTĘP_2: (akapit z realizacjami Złota Grota i Części Jaworscy)
+H2_PROBLEMY: 
+PROBLEM_1..4: tytuł | treść (każdy 2-4 zdania, typowe problemy firm z Wrocławia ze stroną WordPress)
+H2_CO_DOSTAJESZ:
+ELEMENT_1..6: tytuł | treść (2-4 zdania)
+H2_TECHNOLOGIE:
+TECH_1..4: nazwa | treść (WordPress z własnym motywem, WooCommerce, wtyczki na zamówienie, SEO i wydajność)
+H2_PROCES:
+KROK_1..5: tytuł | treść
+H2_CZAS_I_KOSZT:
+CZAS: (krótko, np. „4-8 tygodni”)
+KOSZT_OPIS: (od czego zależy koszt, bez kwot)
+H2_DLA_KOGO_NIE:
+NIE_1..3:
+H2_FAQ:
+FAQ: pytanie | odpowiedź (8 pytań, w tym wszystkie z listy wyżej)
+CTA: (1 zdanie)
+Do uzupełnienia: (czego brakuje w faktach)
