@@ -1,7 +1,7 @@
 import { services } from "@/lib/services";
 import { posts } from "@/lib/posts";
 import { projects } from "@/lib/projects";
-import { branchIndustries } from "@/lib/industries";
+import { branchIndustries, industries } from "@/lib/industries";
 import { PERSON_ID, SITE_URL } from "@/lib/schema";
 
 const PILLAR_SLUGS = [
@@ -46,6 +46,9 @@ ${services.map((s) => `- [${s.title}](${SITE_URL}/uslugi/${s.slug}): ${s.metaDes
 
 ## Strony dla branż
 ${branchIndustries.map((i) => `- [${i.title}](${SITE_URL}/${i.slug}): ${i.keyword}, realizacja ${i.pricing.time}`).join("\n")}
+
+## Strony lokalne
+${industries.filter((i) => i.local).map((i) => `- [${i.title}](${SITE_URL}/${i.slug}): ${i.metaDescription}`).join("\n")}
 
 ## Najważniejsze artykuły
 ${pillarPosts.map((p) => `- [${p!.title}](${SITE_URL}/blog/${p!.slug}): ${p!.excerpt}`).join("\n")}

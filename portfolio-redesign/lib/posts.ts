@@ -2838,7 +2838,7 @@ posts.push({
   excerpt:
     "WooCommerce pozwala zmienić stronę na WordPressie w sklep internetowy. Wyjaśniam, co oferuje w standardzie, za co trzeba dopłacić i jak wygląda uruchomienie sprzedaży w Polsce.",
   date: "2026-09-27",
-  updatedAt: "2026-09-26",
+  updatedAt: "2026-11-12",
   readingMinutes: 8,
   tags: ["WooCommerce","WordPress","e-commerce"],
   keyword: "WooCommerce co to jest",
@@ -2938,7 +2938,7 @@ posts.push({
   excerpt:
     "BaseLinker porządkuje obsługę sprzedaży prowadzonej w sklepie internetowym i na marketplace'ach. Wyjaśniam, co łączy, ile kosztuje i kiedy jego wdrożenie ma sens.",
   date: "2026-09-27",
-  updatedAt: "2026-09-26",
+  updatedAt: "2026-11-12",
   readingMinutes: 7,
   tags: ["BaseLinker","WooCommerce","e-commerce"],
   keyword: "BaseLinker co to jest",
@@ -3031,7 +3031,7 @@ posts.push({
   excerpt:
     "Hosting przechowuje pliki, bazę danych i pocztę powiązaną ze stroną. Wyjaśniam, jak odróżnić go od domeny, porównać dostępne rodzaje i ocenić rzeczywisty koszt odnowienia.",
   date: "2026-09-27",
-  updatedAt: "2026-09-26",
+  updatedAt: "2026-09-27",
   readingMinutes: 7,
   tags: ["hosting","WordPress","domena"],
   keyword: "hosting strony internetowej co to jest",
