@@ -27,3 +27,18 @@ A (od razu): linki usługa->wpis i blog->usługi sklepowe, Wrocław z realizacji
 B (treść usług): opieka zakres i czas reakcji (fakty od usera), sklepy porównanie z SaaS, wtyczki własność kodu (potwierdzenie usera).
 C (nowe treści): wpis „Ile kosztuje sklep WooCommerce” (52 wyśw., poz. 15-27) przez Mistrza Blogowania.
 D (decyzja usera): ceny „od X zł” przynajmniej na opiece.
+
+## Runda 2 (13.11): prędkość, techniczne SEO, typy stron, blog
+
+Zrobione i LIVE (a003d48): linki aplikacje-nextjs -> wpis o koszcie, sklepy -> woocommerce-co-to-jest + naprawa + migracja, Złota Grota -> Wrocław (tylko realizacje z miasta), updatedAt 3 wpisów, strony lokalne w llms.txt, OG testu dostępności.
+
+Techniczne SEO (crawl.mjs, 101 stron): 200 wszędzie, canonical OK, 0 noindex, title/desc OK, 1 H1, 0 złych linków, 0 sierot. Do poprawy: brak lastmod dla 72 stron (usługi, branże, realizacje), realizacje cienkie 150-330 słów.
+
+Prędkość (Lighthouse mobile lokalnie, lh-batch.sh, psi/): nasze usługi 67-82, wpis 76, home 56 (intro, decyzja usera). Konkurencja 35-77, wyjątek intexstudio 91. CLS 0,163 na /uslugi/tworzenie-stron-wordpress: całe hero przesuwa się w 3,7 s (źródła: hwC-glow, svc-in, nagłówek), do diagnozy (Codex).
+
+Typy stron (agy-geo-wynik.md, 15 fraz): poradnik krok po kroku 23/75 w top 5 i 39 cytatów AI, porównanie X vs Y 15/23, „ile kosztuje” 12/17, cennik 7/11, kalkulator 5/7. Strony miejskie freelancerów w obcych miastach: 0 w top 5 -> nie robimy kolejnych miast.
+
+Popyt z podpowiedzi Google (blog-ac/): EAA co to/kogo dotyczy (11), umowa na stronę (9), prawa autorskie do strony (5+4), ile kosztuje sklep (6+3+3), własny sklep czy Allegro (5), deklaracja dostępności (wiele po 3-4), czy aktualizacja WordPress bezpieczna (4), woocommerce czy shoper/shopify (3).
+
+Kolejka wpisów (Mistrz Blogowania, po jednym): 1 EAA kogo dotyczy + dane ze skanu 110 sklepów, 2 ile kosztuje sklep WooCommerce, 3 WooCommerce, Shoper czy Shopify, 4 umowa na stronę i prawa autorskie, 5 deklaracja dostępności, 6 własny sklep czy Allegro, 7 aktualizacja WordPress bezpiecznie.
+Bez wpisu (kanibalizacja money pages): migracja z Shopera -> rozbudowa usługi migracji o etapy; BaseLinker jak połączyć -> później, po sprawdzeniu GSC usługi.
