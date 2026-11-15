@@ -20,10 +20,11 @@ import { branchIndustries, INDUSTRY_SERVICES } from "@/lib/industries";
 
 /** Kursywa na dwóch ostatnich słowach, jak w nagłówkach stron branżowych. */
 function editorial(text: string) {
-  const words = text.replace(/\.$/, "").split(" ");
+  const end = /[?!]$/.test(text) ? text.slice(-1) : ".";
+  const words = text.replace(/[.?!]$/, "").split(" ");
   return (
     <>
-      {words.slice(0, -2).join(" ")} <em>{words.slice(-2).join(" ")}</em>.
+      {words.slice(0, -2).join(" ")} <em>{words.slice(-2).join(" ")}</em>{end}
     </>
   );
 }
@@ -84,6 +85,21 @@ export default async function UslugaPage({
     areaServed,
     inLanguage: "pl-PL",
     url: `${SITE_URL}/uslugi/${s.slug}`,
+    ...(s.pricing && {
+      offers: s.pricing.plans.map((p) => ({
+        "@type": "Offer",
+        name: p.name,
+        price: p.price,
+        priceCurrency: "PLN",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: p.price,
+          priceCurrency: "PLN",
+          unitText: "miesiąc",
+          valueAddedTaxIncluded: true,
+        },
+      })),
+    }),
   };
 
   const breadcrumbs = breadcrumbsSchema([
@@ -416,6 +432,59 @@ export default async function UslugaPage({
           ))}
         </div>
       </section>
+
+      {s.pricing && (
+        <section id="cennik" className="scroll-mt-24 px-6 py-16 md:px-10 md:py-32 border-t border-line">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
+            <aside className="md:col-span-3">
+              <p className="eyebrow mb-2">Cennik</p>
+              <p className="hidden lg:block text-ink-faint text-sm font-mono">Ceny końcowe, miesięcznie.</p>
+            </aside>
+            <div className="md:col-span-9">
+              <h2 className="display text-h1 text-ink">{editorial(s.pricing.heading)}</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-line">
+            {s.pricing.plans.map((p) => (
+              <div
+                key={p.name}
+                className={`relative flex flex-col p-6 sm:p-10 ${p.featured ? "bg-bg-elev" : "bg-bg"}`}
+              >
+                {p.featured && <div aria-hidden className="absolute top-0 left-0 right-0 h-px bg-peach" />}
+                <div className="flex items-baseline justify-between gap-4 mb-6">
+                  <h3 className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute">{p.name}</h3>
+                  {p.featured && (
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-peach">Najczęściej</span>
+                  )}
+                </div>
+                <p className="text-ink mb-8 flex items-baseline gap-2 flex-wrap">
+                  {p.from && <span className="font-mono text-xs uppercase tracking-[0.18em] text-ink-mute">od</span>}
+                  <span
+                    className="font-display"
+                    style={{ fontSize: "clamp(3rem, 2rem + 3vw, 4.5rem)", lineHeight: 1, letterSpacing: "-0.04em" }}
+                  >
+                    {p.price}
+                  </span>
+                  <span className="text-ink-mute">{p.unit}</span>
+                </p>
+                <ul className="space-y-3 mb-8 text-ink-mute leading-relaxed">
+                  {p.features.map((f) => (
+                    <li key={f} className="flex gap-3">
+                      <span aria-hidden className="text-peach shrink-0">+</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-auto pt-6 border-t border-line text-sm text-ink">
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint mb-2">Czas reakcji</span>
+                  {p.response}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-ink-mute leading-relaxed">{renderInlineLinks(s.pricing.note)}</p>
+        </section>
+      )}
 
       {/* PROCES — vertical timeline */}
       <section className="px-6 py-16 md:px-10 md:py-32 border-t border-line">

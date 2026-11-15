@@ -12,6 +12,12 @@
   cta: string;
   /** Nagłówki H2 sekcji z frazą usługi; bez nich strona pokazuje ogólne. */
   headings?: { bullets?: string; process?: string; faq?: string };
+  /** Cennik pakietów. Tylko na usługach, gdzie user zgodził się na ceny (decyzja 01.09: domyślnie bez cen). */
+  pricing?: {
+    heading: string;
+    note: string;
+    plans: { name: string; price: number; from?: boolean; unit: string; featured?: boolean; features: string[]; response: string }[];
+  };
 };
 
 export const services: Service[] = [
@@ -475,7 +481,7 @@ export const services: Service[] = [
     title: "Opieka nad stroną WordPress",
     metaTitle: "Opieka nad stroną WordPress: abonament bez umowy na rok",
     metaDescription:
-      "Opieka nad stroną WordPress bez umowy na rok. Aktualizuję, zabezpieczam i monitoruję Twoją stronę lub sklep WooCommerce. Sprawdź zakres opieki.",
+      "Opieka nad stroną WordPress od 249 zł miesięcznie, cena końcowa, bez umowy na rok. Aktualizacje z kopią, monitoring i opieka nad sklepami WooCommerce.",
     h1: "Opieka nad stroną WordPress dla firm bez własnego działu IT",
     headings: { bullets: "Co obejmuje opieka nad stroną WordPress", process: "Jak zaczynam opiekę nad stroną", faq: "Opieka nad stroną WordPress: pytania" },
     lead:
@@ -496,9 +502,18 @@ export const services: Service[] = [
       { step: "02", title: "Porządki i przygotowanie stałej opieki", body: "Usuwam uzgodnione zaległości, porządkuję dostępy i ustawienia zabezpieczeń, konfiguruję kopie zapasowe oraz monitoring. Sprawdzam, czy kopia rzeczywiście pozwala odtworzyć stronę i czy najważniejsze funkcje działają poprawnie. Ustalamy również, które zadania wchodzą w miesięczny abonament, ile czasu przeznaczamy na drobne zmiany i jak obsługujemy zgłoszenia. Jeśli potrzebne są większe naprawy przed rozpoczęciem opieki, wyceniam je osobno." },
       { step: "03", title: "Regularna opieka i obsługa zgłoszeń", body: "Wykonuję uzgodnione aktualizacje WordPressa i wtyczek, kontroluję działanie serwisu, kopie zapasowe i zabezpieczenia. Po zmianach sprawdzam najważniejsze elementy strony, a przy sklepach również funkcje zakupowe objęte zakresem opieki. Realizuję drobne poprawki z banku godzin i zajmuję się zgłoszonymi błędami. Jeśli pojawi się potrzeba większej rozbudowy, ustalamy ją oddzielnie." },
     ],
+    pricing: {
+      heading: "Ile kosztuje opieka nad stroną WordPress?",
+      note: "Podane kwoty są cenami końcowymi: jestem zwolniony z VAT, więc nic do nich nie doliczasz. Każda godzina ponad pakiet kosztuje 150 zł. Nie wymagam umowy na rok, opiekę wypowiadasz z miesięcznym wyprzedzeniem. Jeśli strona wymaga najpierw większych napraw, wyceniam je osobno, a wolne ładowanie rozwiązuję zleceniem [przyspieszenia strony WordPress](/uslugi/przyspieszanie-stron-wordpress).",
+      plans: [
+        { name: "Strona firmowa", price: 249, unit: "zł / mies.", features: ["Aktualizacje WordPressa, motywu i wtyczek 2 razy w miesiącu, z kopią przed i sprawdzeniem po", "Codzienna kopia zapasowa poza serwerem", "Monitoring dostępności strony", "1 godzina drobnych zmian w miesiącu"], response: "Do 1 dnia roboczego" },
+        { name: "Sklep WooCommerce", price: 449, unit: "zł / mies.", featured: true, features: ["Wszystko z pakietu strony firmowej", "Testowe zamówienie po każdej aktualizacji", "Kontrola płatności i statusów zamówień", "2 godziny drobnych zmian w miesiącu"], response: "Awaria sklepu: tego samego dnia roboczego" },
+        { name: "Sklep z integracjami", price: 749, from: true, unit: "zł / mies.", features: ["Wszystko z pakietu sklepu WooCommerce", "Pilnowanie synchronizacji stanów i zamówień z BaseLinkerem, Allegro i Google Merchant", "Miesięczny raport anulowań, cofniętych statusów i nieudanych płatności", "4 godziny drobnych zmian w miesiącu"], response: "Do 4 godzin w dni robocze, 9-17" },
+      ],
+    },
     faq: [
-      { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Najważniejszy jest zakres odpowiedzialności. Innej obsługi potrzebuje strona firmowa z formularzem kontaktowym, a innej sklep WooCommerce z płatnościami, zamówieniami i integracjami z zewnętrznymi systemami. Po krótkiej rozmowie i sprawdzeniu instalacji proponuję zakres opieki oraz miesięczne rozliczenie. Większe naprawy i nowe funkcje wyceniam osobno." },
-      { q: "Jak szybko reagujesz na awarię?", a: "Zasady obsługi pilnych zgłoszeń ustalamy przed rozpoczęciem współpracy. Monitoring pomaga wychwycić problemy z dostępnością, ale nie każdy błąd powoduje całkowite wyłączenie strony. Po otrzymaniu zgłoszenia oceniam jego wpływ na działanie serwisu i ustalam dalsze kroki. Nie deklaruję całodobowej dostępności bez wcześniejszego uzgodnienia takich warunków." },
+      { q: "Ile kosztuje opieka nad stroną WordPress?", a: "Opieka nad stroną firmową kosztuje 249 zł miesięcznie, nad sklepem WooCommerce 449 zł, a nad sklepem z integracjami, takimi jak BaseLinker, Allegro czy Google Merchant, od 749 zł. To ceny końcowe: jestem zwolniony z VAT, więc nic do nich nie doliczasz. Każda godzina ponad pakiet kosztuje 150 zł. Większe naprawy i nowe funkcje wyceniam osobno przed rozpoczęciem pracy." },
+      { q: "Jak szybko reagujesz na awarię?", a: "Przy stronie firmowej odpowiadam na zgłoszenie w ciągu jednego dnia roboczego. Awarię sklepu WooCommerce zaczynam sprawdzać tego samego dnia roboczego, a w pakiecie sklepu z integracjami reaguję w ciągu 4 godzin w dni robocze między 9 a 17. Monitoring dostępności wychwytuje część problemów, zanim je zgłosisz. Nie deklaruję całodobowego dyżuru." },
       { q: "Czy muszę podpisywać umowę na rok?", a: "Nie. Opiekę rozliczam miesięcznie i nie wymagam zobowiązania na cały rok. Zakres prac oraz zasady rozliczania ustalamy przed rozpoczęciem współpracy. Jeśli stała obsługa przestanie być potrzebna, możesz z niej zrezygnować zgodnie z ustalonym okresem rozliczeniowym." },
       { q: "Czy przejmiesz stronę wykonaną przez inną agencję lub freelancera?", a: "Tak. Najpierw sprawdzam konta użytkowników, motyw, wtyczki, hosting, kopie zapasowe oraz dostępne zabezpieczenia. Weryfikuję również rozszerzenia spoza oficjalnego repozytorium WordPressa i zbędne punkty dostępu. Jeśli znajdę problemy wymagające naprawy przed rozpoczęciem stałej opieki, opisuję je i ustalam z Tobą osobny zakres prac." },
       { q: "Moja strona została zhakowana. Czy ją naprawisz?", a: "Najpierw sprawdzam skalę problemu, podejrzane pliki, konta użytkowników i możliwe źródło włamania. Usunięcie skutków ataku traktuję jako osobne zlecenie. Porządkuję dostępy i zabezpieczenia, a po przywróceniu poprawnego działania strony możemy ustalić stałą opiekę. Nie zakładam z góry, że nietypowy ruch oznacza włamanie. Najpierw weryfikuję, co rzeczywiście się wydarzyło." },

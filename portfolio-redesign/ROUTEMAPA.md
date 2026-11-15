@@ -154,6 +154,12 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-11-15: **CENY na `/uslugi/opieka-wordpress` (decyzja usera, wyjątek od zasady z 01.09):** 249 zł strona firmowa, 449 zł sklep,
+  od 749 zł sklep z integracjami, godzina ponad pakiet 150 zł; ceny końcowe (zwolnienie z VAT). Czasy reakcji: 1 dzień roboczy /
+  ten sam dzień roboczy / 4 h w dni robocze 9-17. Sekcja `pricing` w typie `Service` (karty + schema Offer), inne usługi dalej bez cen.
+  Niszowe frazy (autocomplete `plans/nisze-2026-11-15/`, `plans/migracje-2026-11-15/`, GSC): kolejka stron: migracja z Shopera do Woo,
+  migracja z PrestaShop do Woo (zatwierdzone), „BaseLinker nie pobiera zamówień” (najwięcej podpowiedzi), integracja WooCommerce z Allegro
+  (GSC 32 wyśw., poz. 34), Subiekt GT/nexo tylko jeśli user ma doświadczenie.
 - 2026-11-15: **strona lokalna `/sklepy-woocommerce-wroclaw`** (szablon branży z `local`, jak strona WordPress Wrocław). Powód: GSC 3 mies.
   „tworzenie sklepów woocommerce wrocław” 34, „sklepy wordpress wrocław” 30, „sklepy woocommerce wrocław” 8, pozycje 10-24 na ogólnej usłudze;
   w SERP same lokalne landingi agencji + reklamy. Top 3 (artso, universaltech, ameti): 500-700 słów, bez liczb, bez BaseLinkera/Allegro,
