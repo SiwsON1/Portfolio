@@ -154,6 +154,13 @@ dlatego oba kierunki idą razem.
 
 ## Status
 
+- 2026-11-15: **strona lokalna `/sklepy-woocommerce-wroclaw`** (szablon branży z `local`, jak strona WordPress Wrocław). Powód: GSC 3 mies.
+  „tworzenie sklepów woocommerce wrocław” 34, „sklepy wordpress wrocław” 30, „sklepy woocommerce wrocław” 8, pozycje 10-24 na ogólnej usłudze;
+  w SERP same lokalne landingi agencji + reklamy. Top 3 (artso, universaltech, ameti): 500-700 słów, bez liczb, bez BaseLinkera/Allegro,
+  bez porównania z Shoperem, dwa z trzech mają biuro poza Wrocławiem. Tekst: Mistrz Kategorii (brief `plans/wroclaw-sklepy/brief.txt`),
+  realizacje Jaworscy, Kosmoteka, LumiKids. FAQ strony WordPress Wrocław o sklepach linkuje teraz tutaj (rozdział intencji strona/sklep).
+  Sprawdzić w GSC ok. 15.12. Ustalenia z GSC tego dnia: hotele (2300 słów) i opieka (rozbudowana) NIE do przepisywania, pozycje 20-30
+  to brak autorytetu, nie treści; opiece brakuje tylko ceny i czasu reakcji (decyzja usera).
 - 2026-11-12: **strona lokalna `/strony-wordpress-wroclaw`** (ca414c9) na szablonie branży z polem `local` (poza hubem /branze i listą branż w llms, jest w sitemap). Tekst: Mistrz Kategorii, brief `plans/wroclaw/brief.txt`. Realizacje: Złota Grota, Jaworscy, Piontek. Link z usługi tworzenie-stron-wordpress. Tytuły usług ogólnopolskich bez Wrocławia (decyzja usera). Sprawdzić w GSC za 3-4 tyg. frazy „strony wordpress wrocław”, „wordpress wrocław”.
 - 2026-11-12: **poprawki skanera z 15.09 wdrożone** (14c9407, 17 testów). **E5 zrobione:** `scripts/skan-listy.mjs <lista.json> <katalog>`
   skanuje strony główne listy sklepów i daje ranking z akapitem dowodu (tylko testy ≥ 85% precyzji: html-lang, document-title,

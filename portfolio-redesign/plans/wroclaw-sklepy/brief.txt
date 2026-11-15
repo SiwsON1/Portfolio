@@ -1,0 +1,51 @@
+TRYB: LANDING USŁUGI LOKALNEJ (nie kategoria sklepu, nie produkt). Pisz w 1. osobie liczby pojedynczej (freelancer, nie agencja).
+
+Fraza główna: sklepy WooCommerce Wrocław. Warianty frazy z wyników wyszukiwania (użyj naturalnie, każdy najwyżej raz lub dwa): tworzenie sklepów WooCommerce Wrocław, sklepy internetowe WooCommerce Wrocław, wdrożenie WooCommerce Wrocław, sklepy WordPress Wrocław, programista WooCommerce Wrocław, tworzenie sklepów internetowych Wrocław.
+Strona: marcinsiwonia.pl, Marcin Siwonia, freelancer, programista WordPress, WooCommerce i Next.js.
+Ta strona dotyczy WYŁĄCZNIE sklepów internetowych. Zwykłe strony firmowe opisuje osobna strona „Strony WordPress Wrocław”, nie pisz o nich.
+
+FAKTY (używaj tylko tych, nic nie dopisuj, żadnych cen ani kwot w zł, żadnych procentów wzrostu sprzedaży):
+- Mam działalność we Wrocławiu. W latach 2020-2022 pracowałem jako frontend developer w software house we Wrocławiu, od końca 2022 działam jako freelancer. Komercyjnie tworzę strony i sklepy od 2020 roku.
+- Pracuję z firmami z Wrocławia, z całej Polski i z Niemiec. Cały projekt da się przeprowadzić zdalnie: rozmowa online, po każdym etapie link do wersji testowej, szkolenie online z obsługi sklepu.
+- Sam piszę kod i rozmawiam z klientem bezpośrednio, bez pośredników i bez handlowca. Prowadzę ograniczoną liczbę projektów naraz.
+- Nowe sklepy buduję na własnym motywie WordPress, bez Elementora i bez gotowego szablonu. Kartę produktu, koszyk i panel edycji przygotowuję pod konkretny sklep. Klient sam zmienia produkty, ceny, zdjęcia i treści.
+- Integracje, które wdrażam: Przelewy24, Stripe, BLIK, InPost, BaseLinker, Allegro (przez BaseLinkera), Google Merchant Center (Zakupy Google), GA4 z Consent Mode v2. Niestandardowe funkcje piszę jako własne wtyczki: mam ponad 40 własnych wtyczek i mu-pluginów w 9 serwisach.
+- Przykładowe funkcje, które wdrożyłem w sklepach: przypomnienia o porzuconym koszyku z linkiem przywracającym zawartość, prośby o opinię 7 dni po realizacji zamówienia z jednorazowym kodem rabatowym, opinie z oznaczeniem zweryfikowanego zakupu, ochrona zamówień za pobraniem przed błędną zmianą statusu przez integrację (mogła anulować opłacone zamówienie), feed produktowy do Zakupów Google.
+- SEO techniczne sklepu: struktura kategorii, adresy, mapa strony, dane strukturalne produktów (marka, SKU, EAN, MPN), przekierowania 301 przy zmianach w katalogu. Bez obiecywania pozycji w Google.
+- Cel przed oddaniem: Lighthouse 90+ na telefonie, LCP poniżej 2,5 s. Projekt widoków w Figmie z myślą o telefonach, dwie tury poprawek przed kodowaniem.
+- Po uruchomieniu 60 dni gwarancji i bezpłatnych poprawek. Potem opcjonalna opieka techniczna w miesięcznym abonamencie, bez umowy na rok.
+- Czas: mniejszy sklep zwykle 6-8 tygodni, średni projekt z B2B, wersjami językowymi i migracją 10-14 tygodni. Dokładny termin po rozmowie o zakresie.
+- Przejmuję istniejące sklepy po innych wykonawcach: naprawa tego, co nie działa, migracja z innej platformy na WooCommerce z przekierowaniami 301.
+- Realizacja 1: Części Jaworscy (Pakszyn pod Gnieznem), sklep WooCommerce z ponad 11 tysiącami części do busów Renault, Ford, Opel, Nissan i Fiat. Dobór części po marce, modelu i generacji, wyszukiwarka po numerze OEM, BaseLinker i Allegro bez przerwy w sprzedaży, przeniesienie sklepu od poprzedniego wykonawcy na nowy serwer z ponad tysiącem zamówień.
+- Realizacja 2: Kosmoteka, sklep z teleskopami i sprzętem obserwacyjnym. Karty produktów z logo marek i parametrami technicznymi, przycisk zakupu widoczny przy przewijaniu na telefonie, automatyczne zdjęcia produktów z przezroczystym tłem, połączenie z katalogiem hurtowni przez BaseLinker.
+- Realizacja 3: LumiKids, sklep z odzieżą dziecięcą sprzedający też na Allegro. Porzucone koszyki, opinie po zakupie, feed do Zakupów Google, warianty rozmiarów ze stanem magazynowym.
+- WooCommerce na tle Shopera i Shopify (tylko te argumenty): WooCommerce to wtyczka do WordPressa, sklep i kod należą do klienta, działa na wybranym przez klienta hostingu, bez abonamentu za samą platformę sklepową i bez ograniczeń w dopisywaniu własnych funkcji. Platformy abonamentowe (Shoper, Shopify) dają szybszy start i hosting w cenie, ale własne funkcje ogranicza to, co pozwala platforma i jej aplikacje. Uczciwie: dla bardzo małego sklepu z kilkoma produktami bez integracji platforma abonamentowa bywa prostsza.
+- Nie biorę: sklepów na gotowym motywie z Elementorem do „podmiany zdjęć”, projektów bez osoby decyzyjnej, startu „na jutro” bez produktów i zdjęć.
+
+Dodaj do FAQ te pytania z konkurencji (dosłownie albo bardzo blisko): „Ile kosztuje sklep WooCommerce we Wrocławiu?” (bez kwot: od czego zależy, wycena po rozmowie i briefie), „Czy przejmujesz sklepy po poprzedniej agencji?”, „Czy zajmujesz się też SEO, czy tylko programowaniem?”, „Jak szybko możesz zacząć?”, „Czy pracujesz tylko z firmami z Wrocławia?” (nie, cała Polska i Niemcy zdalnie; NIE obiecuj spotkań na żywo), „WooCommerce, Shoper czy Shopify: co wybrać?”, „Czy połączysz sklep z BaseLinkerem i Allegro?”, „Ile trwa wdrożenie sklepu WooCommerce?”.
+
+FORMAT ODPOWIEDZI (zwykły tekst, dokładnie te etykiety, bez HTML, bez myślników i półpauz w zdaniach, bez słowa „warto”, H2 w języku frazy, każdy H2 inny):
+META_TITLE: (max 60 znaków, zaczyna się od „Sklepy WooCommerce Wrocław”)
+META_DESCRIPTION: (140-155 znaków)
+H1: Sklepy WooCommerce Wrocław
+LEAD: (1-2 zdania)
+WSTĘP_1: (akapit z frazą w pierwszym zdaniu, kim jestem i jak pracuję)
+WSTĘP_2: (akapit z realizacjami Części Jaworscy i Kosmoteka, z liczbami z faktów)
+WSTĘP_3: (akapit o integracjach: płatności, InPost, BaseLinker, Allegro, Zakupy Google)
+H2_PROBLEMY:
+PROBLEM_1..4: tytuł | treść (każdy 2-4 zdania, typowe problemy sklepów: rozjechane stany i zamówienia między sklepem a Allegro, wolny sklep na telefonie, gotowy szablon blokujący potrzebne funkcje, wykonawca, który zniknął po wdrożeniu)
+H2_CO_DOSTAJESZ:
+ELEMENT_1..6: tytuł | treść (2-4 zdania)
+H2_TECHNOLOGIE:
+TECH_1..4: nazwa | treść (WooCommerce na własnym motywie; integracje sprzedażowe; własne wtyczki; WooCommerce zamiast Shopera czy Shopify, wg faktów wyżej)
+H2_PROCES:
+KROK_1..5: tytuł | treść
+H2_CZAS_I_KOSZT:
+CZAS: (krótko, np. „6-14 tygodni”)
+KOSZT_OPIS: (od czego zależy koszt, bez kwot)
+H2_DLA_KOGO_NIE:
+NIE_1..3:
+H2_FAQ:
+FAQ: pytanie | odpowiedź (9 pytań, w tym wszystkie z listy wyżej)
+CTA: (1 zdanie)
+Do uzupełnienia: (czego brakuje w faktach)

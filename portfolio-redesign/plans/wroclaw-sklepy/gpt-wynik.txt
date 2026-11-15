@@ -1,0 +1,97 @@
+META_TITLE: Sklepy WooCommerce Wrocław | Marcin Siwonia
+
+META_DESCRIPTION: Tworzę sklepy WooCommerce we Wrocławiu na własnym motywie WordPress. Integruję płatności, InPost, BaseLinker i Allegro. 60 dni gwarancji po wdrożeniu.
+
+H1: Sklepy WooCommerce Wrocław
+
+LEAD: Projektuję i programuję sklepy WooCommerce na własnym motywie WordPress, bez Elementora i gotowych szablonów. Od projektu w Figmie po integracje i uruchomienie pracujesz bezpośrednio ze mną.
+
+WSTĘP_1: Sklepy WooCommerce Wrocław to usługa, którą realizuję jako niezależny programista WordPress i WooCommerce. Nazywam się Marcin Siwonia, prowadzę działalność we Wrocławiu i komercyjnie tworzę strony oraz sklepy od 2020 roku. W latach 2020 do 2022 pracowałem jako frontend developer w miejscowym software house, a od końca 2022 działam jako freelancer. Sam projektuję rozwiązania, piszę kod i rozmawiam z klientem. Nie przekazuję projektu handlowcowi ani kolejnemu wykonawcy. Prowadzę ograniczoną liczbę realizacji jednocześnie, a po każdym etapie udostępniam link do wersji testowej.
+
+WSTĘP_2: W sklepie Części Jaworscy z Pakszyna pod Gnieznem pracowałem nad katalogiem ponad 11 tysięcy części do busów Renault, Ford, Opel, Nissan i Fiat. Wdrożyłem dobór części według marki, modelu i generacji oraz wyszukiwarkę po numerze OEM. Przeniosłem sklep z ponad tysiącem zamówień od poprzedniego wykonawcy na nowy serwer, zachowując ciągłość sprzedaży przez BaseLinkera i Allegro. W Kosmotece, sklepie z teleskopami i sprzętem obserwacyjnym, przygotowałem karty produktów z logo marek i parametrami technicznymi, przycisk zakupu widoczny podczas przewijania na telefonie oraz automatyczne zdjęcia produktów z przezroczystym tłem. Połączyłem też sklep z katalogiem hurtowni przez BaseLinker.
+
+WSTĘP_3: Wdrażam płatności Przelewy24, Stripe i BLIK, dostawy InPost oraz integracje z BaseLinkerem i Allegro. Przygotowuję feed produktowy do Google Merchant Center, aby produkty mogły trafiać do Zakupów Google. Konfiguruję również GA4 z Consent Mode v2. W sklepie LumiKids, który sprzedaje odzież dziecięcą także na Allegro, wdrożyłem przypomnienia o porzuconych koszykach, opinie po zakupie, feed produktowy oraz warianty rozmiarów ze stanami magazynowymi.
+
+H2_PROBLEMY: Jakie problemy rozwiązuję w sklepach WooCommerce we Wrocławiu?
+
+PROBLEM_1: Stany magazynowe i zamówienia nie zgadzają się z Allegro | Sklep sprzedaje ten sam produkt przez własną witrynę i Allegro, ale informacje o zamówieniach oraz dostępności wymagają uporządkowania. Wdrażam połączenie WooCommerce z BaseLinkerem i Allegro. Przygotowałem również zabezpieczenie zamówień za pobraniem przed błędną zmianą statusu przez integrację, która mogła anulować opłacone zamówienie.
+
+PROBLEM_2: Sklep działa wolno na telefonie | Klient przegląda produkty na telefonie, ale musi czekać na załadowanie kolejnych widoków. Projektuję interfejs najpierw z myślą o urządzeniach mobilnych i piszę własny motyw WordPress bez Elementora. Przed oddaniem sklepu dążę do wyniku Lighthouse 90+ na telefonie oraz LCP poniżej 2,5 sekundy.
+
+PROBLEM_3: Gotowy szablon ogranicza potrzebne funkcje | Karta produktu wymaga dodatkowych parametrów, a dostępny szablon nie pozwala wygodnie ich przedstawić. Buduję widoki produktu i koszyka pod konkretny katalog. Gdy standardowe możliwości WooCommerce nie wystarczają, programuję własną wtyczkę zamiast uzależniać funkcję od ograniczeń gotowego motywu.
+
+PROBLEM_4: Poprzedni wykonawca zniknął po wdrożeniu | Sklep już działa, ale błędów i zmian nie ma kto obsłużyć. Przejmuję realizacje po innych wykonawcach, analizuję istniejące rozwiązania i naprawiam to, co nie działa. Po uruchomieniu własnego wdrożenia zapewniam 60 dni gwarancji i bezpłatnych poprawek, a później mogę prowadzić opcjonalną opiekę techniczną.
+
+H2_CO_DOSTAJESZ: Co otrzymujesz przy tworzeniu sklepu WooCommerce we Wrocławiu?
+
+ELEMENT_1: Indywidualny projekt sklepu w Figmie | Przygotowuję widoki sklepu z myślą o telefonach, zanim rozpocznę programowanie. Pokazuję projekt do oceny i uwzględniam dwie tury poprawek przed kodowaniem. Karta produktu oraz koszyk powstają z uwzględnieniem konkretnego katalogu i sposobu sprzedaży.
+
+ELEMENT_2: Własny motyw WordPress bez Elementora | Programuję nowy sklep na autorskim motywie, bez gotowego szablonu. Przygotowuję również panel edycji do potrzeb właściciela sklepu. Po wdrożeniu możesz samodzielnie zmieniać produkty, ceny, zdjęcia i treści bez angażowania mnie do każdej aktualizacji.
+
+ELEMENT_3: Integracje płatności, dostaw i kanałów sprzedaży | Podłączam Przelewy24, Stripe, BLIK i InPost. Integruję WooCommerce z BaseLinkerem, a przez niego z Allegro. Mogę również przygotować połączenie z katalogiem hurtowni, tak jak zrobiłem to w sklepie Kosmoteka.
+
+ELEMENT_4: Funkcje dopasowane do procesu zakupowego | Programuję rozwiązania, których nie zapewnia standardowa konfiguracja sklepu. Wdrożyłem przypomnienia o porzuconym koszyku z linkiem przywracającym jego zawartość oraz prośby o opinię wysyłane 7 dni po realizacji zamówienia z jednorazowym kodem rabatowym. Przygotowałem też opinie oznaczone jako zweryfikowany zakup. Mam ponad 40 własnych wtyczek i mu-pluginów działających w 9 serwisach.
+
+ELEMENT_5: Techniczne SEO sklepu internetowego | Przygotowuję strukturę kategorii, adresy produktów, mapę strony i dane strukturalne zawierające markę, SKU, EAN oraz MPN. Przy zmianach w katalogu wdrażam przekierowania 301. Zajmuję się techniczną stroną SEO, ale nie obiecuję konkretnych pozycji w wynikach Google.
+
+ELEMENT_6: Szkolenie i wsparcie po uruchomieniu | Pokazuję online, jak obsługiwać zamówienia oraz samodzielnie edytować produkty i treści. Po uruchomieniu zapewniam 60 dni gwarancji i bezpłatnych poprawek. Później możesz wybrać opiekę techniczną w miesięcznym abonamencie bez konieczności podpisywania umowy na rok.
+
+H2_TECHNOLOGIE: WooCommerce, integracje i własny kod sklepu
+
+TECH_1: WooCommerce na własnym motywie WordPress | Tworzenie sklepów WooCommerce Wrocław opieram na własnym kodzie zamiast Elementora i gotowych szablonów. WooCommerce obsługuje sprzedaż, a autorski motyw pozwala mi przygotować kartę produktu, koszyk i panel edycji pod konkretny sklep. Właściciel może samodzielnie zarządzać katalogiem.
+
+TECH_2: Integracje sprzedażowe | Łączę WooCommerce z Przelewy24, Stripe, BLIK, InPost, BaseLinkerem i Allegro. Przygotowuję feed produktowy dla Google Merchant Center oraz konfigurację GA4 z Consent Mode v2. Wdrożenie WooCommerce Wrocław może obejmować również przeniesienie istniejącego katalogu z innej platformy i przekierowania 301.
+
+TECH_3: Własne wtyczki WooCommerce | Gdy sklep potrzebuje niestandardowej funkcji, piszę dedykowaną wtyczkę. Wśród moich realizacji są mechanizmy odzyskiwania porzuconych koszyków, automatyczne prośby o opinie, oznaczenia zweryfikowanych zakupów i ochrona statusów zamówień przed błędami integracji. Ponad 40 własnych wtyczek i mu-pluginów wykorzystuję w 9 serwisach.
+
+TECH_4: WooCommerce zamiast Shopera czy Shopify | WooCommerce jest wtyczką do WordPressa. Sklep i jego kod należą do klienta, działają na wybranym przez niego hostingu, a sama platforma sklepowa nie wymaga abonamentu. Mogę dopisywać własne funkcje bez ograniczeń narzucanych przez platformę. Shoper i Shopify pozwalają szybciej rozpocząć sprzedaż i zapewniają hosting w abonamencie, ale niestandardowe rozwiązania ograniczają możliwości platformy i jej aplikacji. Dla bardzo małego sklepu z kilkoma produktami i bez integracji takie rozwiązanie może być prostsze.
+
+H2_PROCES: Jak przebiega projekt i wdrożenie sklepu WooCommerce?
+
+KROK_1: Rozmowa o sklepie i zakresie prac | Rozmawiam z Tobą online o katalogu produktów, procesie zamawiania, integracjach i potrzebnych funkcjach. Ustalam, czy projekt dotyczy nowego sklepu, przejęcia istniejącego wdrożenia czy migracji na WooCommerce. Na podstawie rozmowy i briefu przygotowuję wycenę oraz termin realizacji.
+
+KROK_2: Projekt widoków w Figmie | Projektuję wygląd sklepu ze szczególnym uwzględnieniem telefonów. Przygotowuję widoki produktów i koszyka, a następnie udostępniam je do oceny. Przed rozpoczęciem kodowania przewiduję dwie tury poprawek.
+
+KROK_3: Programowanie motywu i funkcji | Piszę własny motyw WordPress i przygotowuję WooCommerce pod uzgodniony katalog. Tworzę potrzebne funkcje, a gdy wymaga tego projekt, również autorskie wtyczki. Po etapie prac udostępniam link do wersji testowej, aby można było sprawdzić postępy.
+
+KROK_4: Integracje i przygotowanie do uruchomienia | Wdrażam ustalone płatności, dostawy, połączenia sprzedażowe i elementy SEO technicznego. Sprawdzam działanie sklepu, a w przypadku migracji przygotowuję przekierowania 301. Przed oddaniem dążę do Lighthouse 90+ na telefonie oraz LCP poniżej 2,5 sekundy.
+
+KROK_5: Uruchomienie, szkolenie i gwarancja | Uruchamiam sklep i przeprowadzam szkolenie online z obsługi produktów, zamówień oraz treści. Przez pierwsze 60 dni zapewniam gwarancję i bezpłatne poprawki. Po tym okresie możesz skorzystać z opcjonalnej opieki technicznej rozliczanej miesięcznie.
+
+H2_CZAS_I_KOSZT: Ile trwa i od czego zależy koszt sklepu WooCommerce?
+
+CZAS: Mniejszy sklep realizuję zwykle w 6 do 8 tygodni. Średni projekt obejmujący funkcje B2B, wersje językowe i migrację zajmuje zazwyczaj 10 do 14 tygodni. Dokładny termin określam po rozmowie o zakresie prac.
+
+KOSZT_OPIS: Koszt zależy od wielkości katalogu, liczby indywidualnych widoków, zakresu integracji, niestandardowych funkcji oraz tego, czy buduję sklep od początku, czy przejmuję istniejące rozwiązanie. Znaczenie mają również funkcje B2B, wersje językowe i migracja danych. Nie podaję jednej stawki dla każdego sklepu, ponieważ wdrożenie prostego katalogu i rozbudowanego systemu sprzedaży wymaga innego zakresu pracy. Przygotowuję indywidualną wycenę po rozmowie i otrzymaniu briefu.
+
+H2_DLA_KOGO_NIE: Kiedy nie podejmuję się tworzenia sklepu WooCommerce?
+
+NIE_1: Nie realizuję projektów polegających wyłącznie na podmianie zdjęć i treści w gotowym motywie z Elementorem. Nowe sklepy buduję na własnym motywie WordPress.
+
+NIE_2: Nie podejmuję projektów, w których nie ma osoby decyzyjnej odpowiedzialnej za akceptację zakresu i kolejnych etapów prac.
+
+NIE_3: Nie przyjmuję zleceń wymagających uruchomienia sklepu na następny dzień, gdy nie są jeszcze przygotowane produkty i zdjęcia.
+
+H2_FAQ: Sklepy WooCommerce Wrocław, najczęstsze pytania
+
+FAQ_1: Ile kosztuje sklep WooCommerce we Wrocławiu? | Wycenę przygotowuję indywidualnie po rozmowie i briefie. Uwzględniam wielkość katalogu, projekt widoków, liczbę integracji, funkcje niestandardowe i ewentualną migrację danych. Rozbudowany sklep z B2B i wersjami językowymi wymaga innego zakresu prac niż mniejszy sklep bez dodatkowych funkcji.
+
+FAQ_2: Czy przejmujesz sklepy po poprzedniej agencji? | Tak. Przejmuję sklepy po innych wykonawcach i naprawiam elementy, które nie działają prawidłowo. Mogę również przenieść sklep z innej platformy na WooCommerce z przekierowaniami 301. W przypadku Części Jaworscy przeniosłem sklep z ponad tysiącem zamówień na nowy serwer, zachowując ciągłość sprzedaży przez BaseLinkera i Allegro.
+
+FAQ_3: Czy zajmujesz się też SEO, czy tylko programowaniem? | Zajmuję się również technicznym SEO sklepów WooCommerce. Przygotowuję strukturę kategorii, adresy URL, mapę strony, dane strukturalne produktów z marką, SKU, EAN i MPN oraz przekierowania 301. Nie obiecuję konkretnych pozycji w Google.
+
+FAQ_4: Jak szybko możesz zacząć? | Prowadzę ograniczoną liczbę projektów jednocześnie, dlatego termin rozpoczęcia zależy od aktualnej dostępności. Mogę go określić po rozmowie o zakresie prac. Nie przyjmuję projektów wymagających natychmiastowego startu bez przygotowanych produktów i zdjęć.
+
+FAQ_5: Czy pracujesz tylko z firmami z Wrocławia? | Nie. Prowadzę działalność we Wrocławiu, ale współpracuję również z firmami z całej Polski i Niemiec. Cały proces mogę przeprowadzić zdalnie. Rozmawiam z klientem online, po każdym etapie udostępniam wersję testową, a po uruchomieniu prowadzę szkolenie przez internet. Jeśli szukasz programisty WooCommerce we Wrocławiu, nie musisz organizować spotkań stacjonarnych, aby przeprowadzić projekt.
+
+FAQ_6: WooCommerce, Shoper czy Shopify: co wybrać? | WooCommerce wybieram do projektów, w których istotna jest własność sklepu i kodu, możliwość korzystania z wybranego hostingu oraz swoboda programowania dodatkowych funkcji. Nie ma abonamentu za samą platformę sklepową. Shoper i Shopify zapewniają szybszy start i hosting w abonamencie, ale rozwój niestandardowych funkcji zależy od ograniczeń platformy i dostępnych aplikacji. Przy kilku produktach i braku integracji platforma abonamentowa może być prostszym rozwiązaniem.
+
+FAQ_7: Czy połączysz sklep z BaseLinkerem i Allegro? | Tak. Wdrażam integrację WooCommerce z BaseLinkerem oraz połączenie z Allegro przez BaseLinkera. Takie rozwiązania wykorzystałem między innymi w sklepach Części Jaworscy i LumiKids. Mam również doświadczenie w zabezpieczaniu statusów zamówień przed błędnymi zmianami wprowadzanymi przez integrację.
+
+FAQ_8: Ile trwa wdrożenie sklepu WooCommerce? | Mniejszy sklep zajmuje zwykle 6 do 8 tygodni. Przy średnim projekcie obejmującym B2B, wersje językowe i migrację przewiduję zazwyczaj 10 do 14 tygodni. Dokładny harmonogram ustalam po poznaniu zakresu. Projekt obejmuje przygotowanie widoków w Figmie, dwie tury poprawek przed kodowaniem, programowanie, integracje, uruchomienie i szkolenie.
+
+FAQ_9: Czy po uruchomieniu sklepu zapewniasz wsparcie techniczne? | Tak. Przez 60 dni od uruchomienia zapewniam gwarancję i bezpłatne poprawki. Po tym okresie możesz skorzystać z opcjonalnej opieki technicznej w miesięcznym abonamencie. Nie wymagam podpisywania umowy na cały rok.
+
+CTA: Opisz mi swój sklep, katalog produktów i potrzebne integracje, a przygotuję wycenę oraz termin wdrożenia WooCommerce.
+
+Do uzupełnienia: Linki do realizacji Części Jaworscy, Kosmoteka i LumiKids, adresy podstron portfolio, docelowy formularz lub adres kontaktowy dla CTA, zakres informacji wymaganych w briefie, dokładny zakres 60 dni gwarancji i późniejszej opieki technicznej oraz aktualna dostępność terminów rozpoczęcia prac. Przydatne będą również konkretne wyniki Lighthouse i LCP z ukończonych sklepów, jeżeli są udokumentowane.
