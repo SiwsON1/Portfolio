@@ -75,9 +75,9 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "opieka-wordpress": {
     projectSlug: "lumikids",
     context:
-      "Sklep LumiKids działa na WordPressie z WooCommerce i jest pod stałą opieką: aktualizacje wtyczek testowane przed wgraniem na produkcję, backupy poza hostingiem, monitoring dostępności i drobne poprawki w banku godzin. Sklep sprzedaje codziennie, więc każda aktualizacja przechodzi test pełnej ścieżki zakupowej.",
+      "Sklep LumiKids działa na WordPressie z WooCommerce i jest pod moją stałą opieką. Przy każdej pracy nad sklepem przeglądam raport zamówień z ostatnich 30 dni: anulowania, cofnięte statusy i nieudane płatności. Dzięki temu znalazłem zamówienia za pobraniem anulowane przez zewnętrzną integrację i zabezpieczyłem je własną wtyczką. Co miesiąc robię też kopię całego sklepu.",
     highlight:
-      "WordPress + WooCommerce pod stałą opieką, testy po każdej aktualizacji",
+      "WordPress + WooCommerce pod stałą opieką, kontrola zamówień z 30 dni",
   },
   "przyspieszanie-stron-wordpress": {
     projectSlug: "kosmoteka",
@@ -100,7 +100,7 @@ export const SERVICE_CASE_MAP: Record<string, ServiceCaseHint> = {
   "integracje-woocommerce": {
     projectSlug: "lumikids",
     context:
-      "LumiKids sprzedaje przez sklep WooCommerce i równolegle przez Allegro, a zamówienia obsługuje BaseLinker. Zamówienia za pobraniem anulowały się same: integracja cofała ich status, a WooCommerce po godzinie uznawał je za nieopłacone. Przyczynę znalazłem w logu serwera i zablokowałem taką zmianę małą wtyczką, bez wyłączania integracji.",
+      "LumiKids sprzedaje przez sklep WooCommerce i równolegle przez Allegro, a zamówienia obsługiwał wtedy BaseLinker. Zamówienia za pobraniem anulowały się same: integracja cofała ich status, a WooCommerce po godzinie uznawał je za nieopłacone. Przyczynę znalazłem w logu serwera i zablokowałem taką zmianę małą wtyczką, bez wyłączania integracji.",
     highlight: "WooCommerce, Allegro i BaseLinker bez cofanych statusów",
   },
   "google-merchant-center-woocommerce": {

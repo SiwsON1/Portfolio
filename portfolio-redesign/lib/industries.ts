@@ -694,7 +694,7 @@ export const industries: Industry[] = [
       },
       {
         q: "Czy mogę sprzedawać jednocześnie w sklepie i na Allegro?",
-        a: "Tak. Mogę skonfigurować WooCommerce do sprzedaży równoległej z Allegro, bezpośrednio lub przez BaseLinker. W LumiKids oba kanały działają równolegle, a zamówienia przechodzą przez BaseLinker. Przy Twoim wdrożeniu ustalam źródło danych o stanach, cenach, produktach i zamówieniach oraz sprawdzam poprawność ich wymiany."
+        a: "Tak. Mogę skonfigurować WooCommerce do sprzedaży równoległej z Allegro, bezpośrednio lub przez BaseLinker. W LumiKids oba kanały działają równolegle. Przy Twoim wdrożeniu ustalam źródło danych o stanach, cenach, produktach i zamówieniach oraz sprawdzam poprawność ich wymiany."
       },
       {
         q: "Jak pokazywać promocje zgodnie z dyrektywą Omnibus?",
