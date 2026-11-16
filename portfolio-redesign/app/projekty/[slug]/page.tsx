@@ -7,6 +7,7 @@ import { services, type Service } from "@/lib/services";
 import { breadcrumbsSchema } from "@/lib/breadcrumbs";
 import { industries, INDUSTRY_CASES } from "@/lib/industries";
 import { jsonLd, personRef, SITE_URL } from "@/lib/schema";
+import { renderInlineLinks } from "@/lib/renderInlineLinks";
 
 /** Opis 120-160 znaków: długie skracane do pełnych zdań, krótkie uzupełniane o stack. */
 function metaDescription(p: (typeof projects)[number]): string {
@@ -265,9 +266,19 @@ export default async function ProjektPage({
                     O projekcie
                   </p>
                   <div className="space-y-6 text-ink-mute">
-                    {p.body.map((para, i) => (
-                      <p key={i}>{para}</p>
-                    ))}
+                    {p.body.map((para, i) =>
+                      para.startsWith("## ") ? (
+                        <h2
+                          key={i}
+                          className="font-display italic text-ink pt-4"
+                          style={{ fontSize: "clamp(1.5rem, 1.1rem + 1vw, 2rem)", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+                        >
+                          {para.slice(3)}
+                        </h2>
+                      ) : (
+                        <p key={i}>{renderInlineLinks(para)}</p>
+                      ),
+                    )}
                   </div>
                 </div>
               </>
